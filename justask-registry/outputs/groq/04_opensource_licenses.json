@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "generated_at": "2026-01-01T02:31:01.711783+00:00",
+    "source_file": "01_scraped_models.json",
+    "processor": "step_04_extract_opensource_licenses.py",
+    "approach": "3-category processing: Meta (skipped), Google (hardcoded), Others (HF-scraped)",
+    "categories": {
+      "google": "Hardcoded licenses from 07_google_models_licenses.json",
+      "opensource": "HF-scraped with license_info_text=info, official license URLs",
+      "custom": "HF-scraped with blank info fields, HF URL as license_url"
+    },
+    "dependencies": [
+      "02_groq_to_hf_mappings.json",
+      "07_google_models_licenses.json",
+      "06_license_name_standardization.json",
+      "05_opensource_license_urls.json"
+    ],
+    "total_models": 4,
+    "description": "Models with Google hardcoded and HuggingFace-scraped license information"
+  },
+  "models": [
+    {
+      "model_id": "openai/gpt-oss-120b",
+      "model_provider": "Groq",
+      "hf_id": "openai/gpt-oss-120b",
+      "category": "opensource",
+      "raw_license_name": "apache-2.0",
+      "license_info_text": "info",
+      "license_info_url": "https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE",
+      "license_name": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "model_id": "openai/gpt-oss-20b",
+      "model_provider": "Groq",
+      "hf_id": "openai/gpt-oss-20b",
+      "category": "opensource",
+      "raw_license_name": "apache-2.0",
+      "license_info_text": "info",
+      "license_info_url": "https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE",
+      "license_name": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "model_id": "whisper-large-v3",
+      "model_provider": "Groq",
+      "hf_id": "openai/whisper-large-v3",
+      "category": "opensource",
+      "raw_license_name": "apache-2.0",
+      "license_info_text": "info",
+      "license_info_url": "https://huggingface.co/openai/whisper-large-v3/blob/main/README.md",
+      "license_name": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "model_id": "whisper-large-v3-turbo",
+      "model_provider": "Groq",
+      "hf_id": "openai/whisper-large-v3-turbo",
+      "category": "opensource",
+      "raw_license_name": "mit",
+      "license_info_text": "info",
+      "license_info_url": "https://huggingface.co/openai/whisper-large-v3-turbo/blob/main/README.md",
+      "license_name": "MIT",
+      "license_url": "https://opensource.org/licenses/MIT"
+    }
+  ]
+}

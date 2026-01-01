@@ -1,0 +1,89 @@
+================================================================================
+GROQ PIPELINE NORMALIZATION REPORT
+Generated: 2026-01-01 02:31:02
+================================================================================
+
+SUMMARY:
+  Total models extracted: 7
+  Models filtered out: 0
+  Models normalized: 7
+  Models unchanged: 0
+  Success rate: 100.0%
+
+MODELS NORMALIZED: 7
+----------------------------------------
+   1. GROQ - Llama 3.1 8b
+      Model Name: llama-3.1-8b-instant -> Llama 3.1 8b
+      Input Modalities: Text
+      Output Modalities: Text
+      License:  -> Llama-3.1
+      Rate Limits: 250K TPM
+TPM
+1K RPM
+RPM
+
+   2. GROQ - Llama 3.3 70b Versatile
+      Model Name: llama-3.3-70b-versatile -> Llama 3.3 70b Versatile
+      Input Modalities: Text
+      Output Modalities: Text
+      License:  -> Llama-3.3
+      Rate Limits: 300K TPM
+TPM
+1K RPM
+RPM
+
+   3. GROQ - Llama Guard 4 12b
+      Model Name: meta-llama/llama-guard-4-12b -> Llama Guard 4 12b
+      Input Modalities: Text, Image
+      Output Modalities: Text
+      License:  -> Llama-4
+      Rate Limits: 30K TPM
+TPM
+100 RPM
+RPM
+
+   4. GROQ - Gpt Oss 120b
+      Model Name: openai/gpt-oss-120b -> Gpt Oss 120b
+      Input Modalities: Text
+      Output Modalities: Text
+      License: info -> Apache-2.0
+      Rate Limits: 250K TPM
+TPM
+1K RPM
+RPM
+
+   5. GROQ - Gpt Oss 20b
+      Model Name: openai/gpt-oss-20b -> Gpt Oss 20b
+      Input Modalities: Text
+      Output Modalities: Text
+      License: info -> Apache-2.0
+      Rate Limits: 250K TPM
+TPM
+1K RPM
+RPM
+
+   6. GROQ - Whisper Large V3
+      Model Name: whisper-large-v3 -> Whisper Large V3
+      Input Modalities: Audio
+      Output Modalities: Text
+      License: info -> Apache-2.0
+      Rate Limits: 200K ASH
+ASH
+300 RPM
+RPM
+
+   7. GROQ - Whisper Large V3 Turbo
+      Model Name: whisper-large-v3-turbo -> Whisper Large V3 Turbo
+      Input Modalities: Audio
+      Output Modalities: Text
+      License: info -> MIT
+      Rate Limits: 400K ASH
+ASH
+400 RPM
+RPM
+
+PROVIDER SUMMARY:
+----------------------------------------
+  Groq: 7 models
+
+Total providers: 1

@@ -1,0 +1,65 @@
+name: OpenRouter Pipeline
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Groq Pipeline"]
+    types:
+      - completed
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    # Only run if manually triggered or if Groq pipeline succeeded
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+        cache-dependency-path: justask-registry/requirements.txt
+
+    - name: Install dependencies
+      working-directory: justask-registry
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Clear old outputs
+      run: |
+        rm -f justask-registry/outputs/openrouter/*.json justask-registry/outputs/openrouter/*.txt || true
+
+    - name: Run OpenRouter pipeline
+      working-directory: justask-registry
+      env:
+        OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        HUGGINGFACE_API_KEY: ${{ secrets.HUGGINGFACE_API_KEY }}
+        PIPELINE_SUPABASE_URL: ${{ secrets.PIPELINE_SUPABASE_URL }}
+      run: |
+        python -m src.main openrouter
+
+    - name: Commit outputs to repo
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add justask-registry/outputs/openrouter/
+        git diff --staged --quiet || git commit -m "Update OpenRouter pipeline outputs [skip ci]"
+        git push
+
+    - name: Upload outputs
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: openrouter-pipeline-outputs
+        path: justask-registry/outputs/openrouter/
+        retention-days: 7

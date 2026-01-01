@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd justask-dashboard && npm install && npm run build",
+  "outputDirectory": "justask-dashboard/dist",
+  "installCommand": "echo 'skip'",
+  "framework": null
+}

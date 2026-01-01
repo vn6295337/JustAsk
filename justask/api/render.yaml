@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: justask-api
+    runtime: node
+    region: oregon
+    plan: free
+
+    buildCommand: npm install
+    startCommand: npm start
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: SELECTOR_SERVICE_URL
+        value: https://justask-router.onrender.com
+
+    healthCheckPath: /api/health
+    healthCheckInterval: 300  # Check every 5 minutes
+
+    autoDeploy: true
+
+    maxInstances: 1
+    minInstances: 1

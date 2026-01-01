@@ -1,0 +1,9 @@
+{
+  "embedding_models": {
+    "search_patterns": ["embedding", "embed"],
+    "default_modalities": {
+      "input_modalities": "Text",
+      "output_modalities": "Text Embeddings"
+    }
+  }
+}

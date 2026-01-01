@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "extraction_timestamp": "2026-01-01T02:30:54.104315",
+    "source_base_url": "https://console.groq.com/docs/model/",
+    "total_models": 7
+  },
+  "modalities": {
+    "llama-3.1-8b-instant": {
+      "model_id": "llama-3.1-8b-instant",
+      "input_modalities": [
+        "Text"
+      ],
+      "output_modalities": [
+        "Text"
+      ]
+    },
+    "llama-3.3-70b-versatile": {
+      "model_id": "llama-3.3-70b-versatile",
+      "input_modalities": [
+        "Text"
+      ],
+      "output_modalities": [
+        "Text"
+      ]
+    },
+    "meta-llama/llama-guard-4-12b": {
+      "model_id": "meta-llama/llama-guard-4-12b",
+      "input_modalities": [
+        "Text",
+        "Image"
+      ],
+      "output_modalities": [
+        "Text"
+      ]
+    },
+    "openai/gpt-oss-120b": {
+      "model_id": "openai/gpt-oss-120b",
+      "input_modalities": [
+        "Text"
+      ],
+      "output_modalities": [
+        "Text"
+      ]
+    },
+    "openai/gpt-oss-20b": {
+      "model_id": "openai/gpt-oss-20b",
+      "input_modalities": [
+        "Text"
+      ],
+      "output_modalities": [
+        "Text"
+      ]
+    },
+    "whisper-large-v3": {
+      "model_id": "whisper-large-v3",
+      "input_modalities": [
+        "Audio"
+      ],
+      "output_modalities": [
+        "Text"
+      ]
+    },
+    "whisper-large-v3-turbo": {
+      "model_id": "whisper-large-v3-turbo",
+      "input_modalities": [
+        "Audio"
+      ],
+      "output_modalities": [
+        "Text"
+      ]
+    }
+  }
+}

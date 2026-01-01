@@ -1,0 +1,290 @@
+================================================================================
+COLLATED OPENSOURCE LICENSE INFORMATION REPORT
+Generated: 2026-01-01 08:01:42 IST
+================================================================================
+
+SUMMARY:
+  Total models        : 19
+  Input sources       : 3 pipeline stage files
+  Processor           : step_11_collate_opensource.py
+  Output              : 11_collated_opensource_licenses.json
+
+PIPELINE STAGE COVERAGE:
+  Step 05 (License Info URLs)    : 19 models
+  Step 08 Opensource Names       : 19 models
+  Step 09 Opensource URLs        : 19 models
+
+OPENSOURCE LICENSE DISTRIBUTION:
+  13 models: Apache-2.0
+   5 models: MIT
+   1 models: Llama-3.1
+
+Total unique license types: 3
+
+DETAILED OPENSOURCE MODEL INFORMATION:
+================================================================================
+
+MODEL 1: alibaba/tongyi-deepresearch-30b-a3b
+--------------------------------------------------
+  ID: alibaba/tongyi-deepresearch-30b-a3b:free
+  Original Name: Tongyi DeepResearch 30B A3B (free)
+  HuggingFace ID: Alibaba-NLP/Tongyi-DeepResearch-30B-A3B
+  Canonical Slug: alibaba/tongyi-deepresearch-30b-a3b
+  Clean Model Name: Tongyi DeepResearch 30B A3B
+  License Info Text: info
+  License Info URL: https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B/blob/main/README.md
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 2: allenai/olmo-3-32b-think-20251121
+--------------------------------------------------
+  ID: allenai/olmo-3-32b-think:free
+  Original Name: AllenAI: Olmo 3 32B Think (free)
+  HuggingFace ID: allenai/Olmo-3-32B-Think
+  Canonical Slug: allenai/olmo-3-32b-think-20251121
+  Clean Model Name: Olmo 3 32B Think
+  License Info Text: info
+  License Info URL: https://huggingface.co/allenai/Olmo-3-32B-Think/blob/main/README.md
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 3: allenai/olmo-3.1-32b-think-20251215
+--------------------------------------------------
+  ID: allenai/olmo-3.1-32b-think:free
+  Original Name: AllenAI: Olmo 3.1 32B Think (free)
+  HuggingFace ID: allenai/Olmo-3.1-32B-Think
+  Canonical Slug: allenai/olmo-3.1-32b-think-20251215
+  Clean Model Name: Olmo 3.1 32B Think
+  License Info Text: info
+  License Info URL: https://huggingface.co/allenai/Olmo-3.1-32B-Think/blob/main/README.md
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 4: arcee-ai/trinity-mini-20251201
+--------------------------------------------------
+  ID: arcee-ai/trinity-mini:free
+  Original Name: Arcee AI: Trinity Mini (free)
+  HuggingFace ID: arcee-ai/Trinity-Mini
+  Canonical Slug: arcee-ai/trinity-mini-20251201
+  Clean Model Name: Trinity Mini
+  License Info Text: info
+  License Info URL: https://huggingface.co/arcee-ai/Trinity-Mini/blob/main/README.md
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 5: mistralai/mistral-7b-instruct
+--------------------------------------------------
+  ID: mistralai/mistral-7b-instruct:free
+  Original Name: Mistral: Mistral 7B Instruct (free)
+  HuggingFace ID: mistralai/Mistral-7B-Instruct-v0.3
+  Canonical Slug: mistralai/mistral-7b-instruct
+  Clean Model Name: Mistral 7B Instruct
+  License Info Text: info
+  License Info URL: https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3/blob/main/README.md
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 6: mistralai/mistral-small-3.1-24b-instruct-2503
+--------------------------------------------------
+  ID: mistralai/mistral-small-3.1-24b-instruct:free
+  Original Name: Mistral: Mistral Small 3.1 24B (free)
+  HuggingFace ID: mistralai/Mistral-Small-3.1-24B-Instruct-2503
+  Canonical Slug: mistralai/mistral-small-3.1-24b-instruct-2503
+  Clean Model Name: Mistral Small 3.1 24B
+  License Info Text: info
+  License Info URL: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/blob/main/README.md
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 7: nex-agi/deepseek-v3.1-nex-n1
+--------------------------------------------------
+  ID: nex-agi/deepseek-v3.1-nex-n1:free
+  Original Name: Nex AGI: DeepSeek V3.1 Nex N1 (free)
+  HuggingFace ID: nex-agi/DeepSeek-V3.1-Nex-N1
+  Canonical Slug: nex-agi/deepseek-v3.1-nex-n1
+  Clean Model Name: DeepSeek V3.1 Nex N1
+  License Info Text: info
+  License Info URL: https://huggingface.co/nex-agi/DeepSeek-V3.1-Nex-N1/blob/main/README.md
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 8: openai/gpt-oss-120b
+--------------------------------------------------
+  ID: openai/gpt-oss-120b:free
+  Original Name: OpenAI: gpt-oss-120b (free)
+  HuggingFace ID: openai/gpt-oss-120b
+  Canonical Slug: openai/gpt-oss-120b
+  Clean Model Name: GPT OSS 120B
+  License Info Text: info
+  License Info URL: https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 9: openai/gpt-oss-20b
+--------------------------------------------------
+  ID: openai/gpt-oss-20b:free
+  Original Name: OpenAI: gpt-oss-20b (free)
+  HuggingFace ID: openai/gpt-oss-20b
+  Canonical Slug: openai/gpt-oss-20b
+  Clean Model Name: GPT OSS 20B
+  License Info Text: info
+  License Info URL: https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 10: qwen/qwen-2-vl-7b-instruct
+--------------------------------------------------
+  ID: qwen/qwen-2.5-vl-7b-instruct:free
+  Original Name: Qwen: Qwen2.5-VL 7B Instruct (free)
+  HuggingFace ID: Qwen/Qwen2.5-VL-7B-Instruct
+  Canonical Slug: qwen/qwen-2-vl-7b-instruct
+  Clean Model Name: Qwen2.5-VL 7B Instruct
+  License Info Text: info
+  License Info URL: https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct/blob/main/README.md
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 11: qwen/qwen3-4b-04-28
+--------------------------------------------------
+  ID: qwen/qwen3-4b:free
+  Original Name: Qwen: Qwen3 4B (free)
+  HuggingFace ID: Qwen/Qwen3-4B
+  Canonical Slug: qwen/qwen3-4b-04-28
+  Clean Model Name: Qwen3 4B
+  License Info Text: info
+  License Info URL: https://huggingface.co/Qwen/Qwen3-4B/blob/main/LICENSE
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 12: qwen/qwen3-coder-480b-a35b-07-25
+--------------------------------------------------
+  ID: qwen/qwen3-coder:free
+  Original Name: Qwen: Qwen3 Coder 480B A35B (free)
+  HuggingFace ID: Qwen/Qwen3-Coder-480B-A35B-Instruct
+  Canonical Slug: qwen/qwen3-coder-480b-a35b-07-25
+  Clean Model Name: Qwen3 Coder 480B A35B
+  License Info Text: info
+  License Info URL: https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct/blob/main/LICENSE
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 13: venice/uncensored
+--------------------------------------------------
+  ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
+  Original Name: Venice: Uncensored (free)
+  HuggingFace ID: cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition
+  Canonical Slug: venice/uncensored
+  Clean Model Name: Uncensored
+  License Info Text: info
+  License Info URL: https://huggingface.co/cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition/blob/main/README.md
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 14: nousresearch/hermes-3-llama-3.1-405b
+--------------------------------------------------
+  ID: nousresearch/hermes-3-llama-3.1-405b:free
+  Original Name: Nous: Hermes 3 405B Instruct (free)
+  HuggingFace ID: NousResearch/Hermes-3-Llama-3.1-405B
+  Canonical Slug: nousresearch/hermes-3-llama-3.1-405b
+  Clean Model Name: Hermes 3 405B Instruct
+  License Info Text: info
+  License Info URL: https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-405B/blob/main/README.md
+  License Name: Llama-3.1
+  License URL: https://www.llama.com/llama3_1/license/
+
+================================================================================
+
+MODEL 15: deepseek/deepseek-r1-0528
+--------------------------------------------------
+  ID: deepseek/deepseek-r1-0528:free
+  Original Name: DeepSeek: R1 0528 (free)
+  HuggingFace ID: deepseek-ai/DeepSeek-R1-0528
+  Canonical Slug: deepseek/deepseek-r1-0528
+  Clean Model Name: R1 0528
+  License Info Text: info
+  License Info URL: https://huggingface.co/deepseek-ai/DeepSeek-R1-0528/blob/main/LICENSE
+  License Name: MIT
+  License URL: https://opensource.org/licenses/MIT
+
+================================================================================
+
+MODEL 16: tngtech/deepseek-r1t-chimera
+--------------------------------------------------
+  ID: tngtech/deepseek-r1t-chimera:free
+  Original Name: TNG: DeepSeek R1T Chimera (free)
+  HuggingFace ID: tngtech/DeepSeek-R1T-Chimera
+  Canonical Slug: tngtech/deepseek-r1t-chimera
+  Clean Model Name: DeepSeek R1T Chimera
+  License Info Text: info
+  License Info URL: https://huggingface.co/tngtech/DeepSeek-R1T-Chimera/blob/main/README.md
+  License Name: MIT
+  License URL: https://opensource.org/licenses/MIT
+
+================================================================================
+
+MODEL 17: tngtech/deepseek-r1t2-chimera
+--------------------------------------------------
+  ID: tngtech/deepseek-r1t2-chimera:free
+  Original Name: TNG: DeepSeek R1T2 Chimera (free)
+  HuggingFace ID: tngtech/DeepSeek-TNG-R1T2-Chimera
+  Canonical Slug: tngtech/deepseek-r1t2-chimera
+  Clean Model Name: DeepSeek R1T2 Chimera
+  License Info Text: info
+  License Info URL: https://huggingface.co/tngtech/DeepSeek-TNG-R1T2-Chimera/blob/main/README.md
+  License Name: MIT
+  License URL: https://opensource.org/licenses/MIT
+
+================================================================================
+
+MODEL 18: xiaomi/mimo-v2-flash-20251210
+--------------------------------------------------
+  ID: xiaomi/mimo-v2-flash:free
+  Original Name: Xiaomi: MiMo-V2-Flash (free)
+  HuggingFace ID: XiaomiMiMo/MiMo-V2-Flash
+  Canonical Slug: xiaomi/mimo-v2-flash-20251210
+  Clean Model Name: MiMo-V2-Flash
+  License Info Text: info
+  License Info URL: https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash/blob/main/README.md
+  License Name: MIT
+  License URL: https://opensource.org/licenses/MIT
+
+================================================================================
+
+MODEL 19: z-ai/glm-4.5-air
+--------------------------------------------------
+  ID: z-ai/glm-4.5-air:free
+  Original Name: Z.AI: GLM 4.5 Air (free)
+  HuggingFace ID: zai-org/GLM-4.5-Air
+  Canonical Slug: z-ai/glm-4.5-air
+  Clean Model Name: GLM 4.5 Air
+  License Info Text: info
+  License Info URL: https://huggingface.co/zai-org/GLM-4.5-Air/blob/main/README.md
+  License Name: MIT
+  License URL: https://opensource.org/licenses/MIT
+

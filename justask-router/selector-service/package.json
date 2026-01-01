@@ -1,0 +1,51 @@
+{
+  "name": "justask-router",
+  "version": "1.0.0",
+  "description": "JustAsk Router - Dynamic AI model selection service",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "db:populate:rate-limits": "node scripts/db/populate_rate_limits.js",
+    "db:populate:scores": "node scripts/db/populate_model_selection_score.js",
+    "debug:check-metrics": "node scripts/debug/check_aa_metrics_table.js",
+    "debug:mapping": "node scripts/debug/debug_aa_mapping.js",
+    "debug:find-with-metrics": "node scripts/debug/find_models_with_aa_metrics.js",
+    "debug:find-unmapped": "node scripts/debug/find_unmapped_models.js",
+    "validate:api": "node scripts/validate/test_aa_api.js",
+    "validate:parsing": "node scripts/validate/test_intelligence_parsing.js",
+    "validate:scoring": "node scripts/validate/validate_scoring.js"
+  },
+  "keywords": [
+    "ai",
+    "model-selection",
+    "llm",
+    "intelligent-routing",
+    "rate-limiting",
+    "supabase"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": ">=9.6.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
+  }
+}
