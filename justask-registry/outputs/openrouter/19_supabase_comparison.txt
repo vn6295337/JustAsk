@@ -1,5 +1,5 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-01-01 08:01:46 IST
+Generated: 2026-01-02 07:34:11 IST
 ================================================================================
 
 SUMMARY STATISTICS
