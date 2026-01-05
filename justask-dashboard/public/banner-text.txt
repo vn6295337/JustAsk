@@ -1,1 +1,1 @@
-This Week - OpenRouter free tier: Removed qwen3-235b-a22b
+This Week - OpenRouter free tier: Removed tongyi-deepresearch-30B-A3B
