@@ -1,28 +1,28 @@
 ================================================================================
 RAW MODALITIES EXTRACTION REPORT
-Generated: 2026-01-04 07:43:55 IST
+Generated: 2026-01-05 07:43:39 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 34
+  Total models : 32
   Input        : 02_filtered_models.json
   Processor    : step_14_extract_modalities.py
   Output       : 14_raw_modalities.json
 
 RAW INPUT MODALITIES DISTRIBUTION:
-  28 models: text
+  26 models: text
    5 models: text, image
    1 models: image, text, video
 
 Total unique input types: 3
 
 RAW OUTPUT MODALITIES DISTRIBUTION:
-  34 models: text
+  32 models: text
 
 Total unique output types: 1
 
 RAW MODALITY COMBINATIONS (INPUT → OUTPUT):
-  28 models: text → text
+  26 models: text → text
    5 models: text, image → text
    1 models: image, text, video → text
 
@@ -331,31 +331,7 @@ MODEL 25: deepseek/deepseek-r1-0528
 
 ================================================================================
 
-MODEL 26: tngtech/tng-r1t-chimera
---------------------------------------------------
-  ID: tngtech/tng-r1t-chimera:free
-  Original Name: TNG: R1T Chimera (free)
-  HuggingFace ID: None
-  Canonical Slug: tngtech/tng-r1t-chimera
-  Clean Model Name: R1T Chimera
-  Raw Input Modalities: text
-  Raw Output Modalities: text
-
-================================================================================
-
-MODEL 27: alibaba/tongyi-deepresearch-30b-a3b
---------------------------------------------------
-  ID: alibaba/tongyi-deepresearch-30b-a3b:free
-  Original Name: Tongyi DeepResearch 30B A3B (free)
-  HuggingFace ID: Alibaba-NLP/Tongyi-DeepResearch-30B-A3B
-  Canonical Slug: alibaba/tongyi-deepresearch-30b-a3b
-  Clean Model Name: Tongyi DeepResearch 30B A3B
-  Raw Input Modalities: text
-  Raw Output Modalities: text
-
-================================================================================
-
-MODEL 28: arcee-ai/trinity-mini-20251201
+MODEL 26: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID: arcee-ai/trinity-mini:free
   Original Name: Arcee AI: Trinity Mini (free)
@@ -367,7 +343,7 @@ MODEL 28: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 29: venice/uncensored
+MODEL 27: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -379,7 +355,7 @@ MODEL 29: venice/uncensored
 
 ================================================================================
 
-MODEL 30: google/gemma-3-12b-it
+MODEL 28: google/gemma-3-12b-it
 --------------------------------------------------
   ID: google/gemma-3-12b-it:free
   Original Name: Google: Gemma 3 12B (free)
@@ -391,7 +367,7 @@ MODEL 30: google/gemma-3-12b-it
 
 ================================================================================
 
-MODEL 31: google/gemma-3-27b-it
+MODEL 29: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
@@ -403,7 +379,7 @@ MODEL 31: google/gemma-3-27b-it
 
 ================================================================================
 
-MODEL 32: google/gemma-3-4b-it
+MODEL 30: google/gemma-3-4b-it
 --------------------------------------------------
   ID: google/gemma-3-4b-it:free
   Original Name: Google: Gemma 3 4B (free)
@@ -415,7 +391,7 @@ MODEL 32: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 33: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 31: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID: mistralai/mistral-small-3.1-24b-instruct:free
   Original Name: Mistral: Mistral Small 3.1 24B (free)
@@ -427,7 +403,7 @@ MODEL 33: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 34: qwen/qwen-2-vl-7b-instruct
+MODEL 32: qwen/qwen-2-vl-7b-instruct
 --------------------------------------------------
   ID: qwen/qwen-2.5-vl-7b-instruct:free
   Original Name: Qwen: Qwen2.5-VL 7B Instruct (free)

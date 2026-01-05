@@ -1,16 +1,16 @@
 ================================================================================
 OTHER LICENSE INFO URLS REPORT
-Generated: 2026-01-04 07:43:44 IST
+Generated: 2026-01-05 07:43:29 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 24
+  Total models : 23
   Input        : 02_filtered_models.json
   Processor    : step_05_fetch_hf_license_urls.py
   Output       : 05_hf_license_urls.json
 
 LICENSE INFO URL BREAKDOWN:
-  17 models: README.md file
+  16 models: README.md file
    7 models: LICENSE file
 
 Total categories: 2
@@ -198,16 +198,7 @@ MODEL 20: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 21: alibaba/tongyi-deepresearch-30b-a3b
---------------------------------------------------
-  ID              : alibaba/tongyi-deepresearch-30b-a3b:free
-  Canonical Slug  : alibaba/tongyi-deepresearch-30b-a3b
-  HuggingFace ID  : Alibaba-NLP/Tongyi-DeepResearch-30B-A3B
-  License Info URL: https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B/blob/main/README.md
-
-================================================================================
-
-MODEL 22: venice/uncensored
+MODEL 21: venice/uncensored
 --------------------------------------------------
   ID              : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Canonical Slug  : venice/uncensored
@@ -216,7 +207,7 @@ MODEL 22: venice/uncensored
 
 ================================================================================
 
-MODEL 23: xiaomi/mimo-v2-flash-20251210
+MODEL 22: xiaomi/mimo-v2-flash-20251210
 --------------------------------------------------
   ID              : xiaomi/mimo-v2-flash:free
   Canonical Slug  : xiaomi/mimo-v2-flash-20251210
@@ -225,7 +216,7 @@ MODEL 23: xiaomi/mimo-v2-flash-20251210
 
 ================================================================================
 
-MODEL 24: z-ai/glm-4.5-air
+MODEL 23: z-ai/glm-4.5-air
 --------------------------------------------------
   ID              : z-ai/glm-4.5-air:free
   Canonical Slug  : z-ai/glm-4.5-air

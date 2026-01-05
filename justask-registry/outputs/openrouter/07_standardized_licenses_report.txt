@@ -1,22 +1,22 @@
 ================================================================================
 STANDARDIZED OTHER LICENSE NAMES REPORT
-Generated: 2026-01-04 07:43:51 IST
+Generated: 2026-01-05 07:43:35 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 24
+  Total models : 23
   Input        : 06_hf_license_names.json
   Config       : license_standardization_rules.json
   Processor    : step_07_standardize_license_names.py
   Output       : 07_standardized_licenses.json
 
 STANDARDIZATION RESULTS:
-  Models with license transformations: 23
+  Models with license transformations: 22
   Models unchanged: 1
-  Transformation rate: 95.8%
+  Transformation rate: 95.7%
 
 STANDARDIZED LICENSE DISTRIBUTION:
-  Apache-2.0: 13 models
+  Apache-2.0: 12 models
   Llama-3.1: 1 models
   MIT: 5 models
   Modified MIT: 1 models
@@ -150,17 +150,7 @@ MODEL 11: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 12: alibaba/tongyi-deepresearch-30b-a3b
---------------------------------------------------
-  ID                     : alibaba/tongyi-deepresearch-30b-a3b:free
-  Canonical Slug         : alibaba/tongyi-deepresearch-30b-a3b
-  HuggingFace ID         : Alibaba-NLP/Tongyi-DeepResearch-30B-A3B
-  Raw License            : apache-2.0
-  Standardized License   : Apache-2.0
-
-================================================================================
-
-MODEL 13: venice/uncensored
+MODEL 12: venice/uncensored
 --------------------------------------------------
   ID                     : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Canonical Slug         : venice/uncensored
@@ -170,7 +160,7 @@ MODEL 13: venice/uncensored
 
 ================================================================================
 
-MODEL 14: nousresearch/hermes-3-llama-3.1-405b
+MODEL 13: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID                     : nousresearch/hermes-3-llama-3.1-405b:free
   Canonical Slug         : nousresearch/hermes-3-llama-3.1-405b
@@ -180,7 +170,7 @@ MODEL 14: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 15: deepseek/deepseek-r1-0528
+MODEL 14: deepseek/deepseek-r1-0528
 --------------------------------------------------
   ID                     : deepseek/deepseek-r1-0528:free
   Canonical Slug         : deepseek/deepseek-r1-0528
@@ -190,7 +180,7 @@ MODEL 15: deepseek/deepseek-r1-0528
 
 ================================================================================
 
-MODEL 16: tngtech/deepseek-r1t-chimera
+MODEL 15: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID                     : tngtech/deepseek-r1t-chimera:free
   Canonical Slug         : tngtech/deepseek-r1t-chimera
@@ -200,7 +190,7 @@ MODEL 16: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 17: tngtech/deepseek-r1t2-chimera
+MODEL 16: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID                     : tngtech/deepseek-r1t2-chimera:free
   Canonical Slug         : tngtech/deepseek-r1t2-chimera
@@ -210,7 +200,7 @@ MODEL 17: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 18: xiaomi/mimo-v2-flash-20251210
+MODEL 17: xiaomi/mimo-v2-flash-20251210
 --------------------------------------------------
   ID                     : xiaomi/mimo-v2-flash:free
   Canonical Slug         : xiaomi/mimo-v2-flash-20251210
@@ -220,7 +210,7 @@ MODEL 18: xiaomi/mimo-v2-flash-20251210
 
 ================================================================================
 
-MODEL 19: z-ai/glm-4.5-air
+MODEL 18: z-ai/glm-4.5-air
 --------------------------------------------------
   ID                     : z-ai/glm-4.5-air:free
   Canonical Slug         : z-ai/glm-4.5-air
@@ -230,7 +220,7 @@ MODEL 19: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 20: moonshotai/kimi-k2
+MODEL 19: moonshotai/kimi-k2
 --------------------------------------------------
   ID                     : moonshotai/kimi-k2:free
   Canonical Slug         : moonshotai/kimi-k2
@@ -240,7 +230,7 @@ MODEL 20: moonshotai/kimi-k2
 
 ================================================================================
 
-MODEL 21: nvidia/nemotron-3-nano-30b-a3b
+MODEL 20: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID                     : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug         : nvidia/nemotron-3-nano-30b-a3b
@@ -250,7 +240,7 @@ MODEL 21: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 22: nvidia/nemotron-nano-12b-v2-vl
+MODEL 21: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug         : nvidia/nemotron-nano-12b-v2-vl
@@ -260,7 +250,7 @@ MODEL 22: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 23: nvidia/nemotron-nano-9b-v2
+MODEL 22: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug         : nvidia/nemotron-nano-9b-v2

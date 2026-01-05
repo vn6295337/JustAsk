@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-01-04 07:43:51 IST",
-    "total_models": 24,
+    "generated_at": "2026-01-05 07:43:35 IST",
+    "total_models": 23,
     "pipeline_stage": "G_standardize_other_license_names_from_hf"
   },
   "models": [
@@ -68,14 +68,6 @@
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16",
       "raw_extracted_license": "nvidia-open-model-license",
       "standardized_license_name": "NVIDIA"
-    },
-    {
-      "id": "alibaba/tongyi-deepresearch-30b-a3b:free",
-      "canonical_slug": "alibaba/tongyi-deepresearch-30b-a3b",
-      "name": "Tongyi DeepResearch 30B A3B (free)",
-      "hugging_face_id": "Alibaba-NLP/Tongyi-DeepResearch-30B-A3B",
-      "raw_extracted_license": "apache-2.0",
-      "standardized_license_name": "Apache-2.0"
     },
     {
       "id": "nvidia/nemotron-nano-9b-v2:free",
