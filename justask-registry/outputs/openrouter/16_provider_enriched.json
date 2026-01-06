@@ -1,30 +1,10 @@
 {
   "metadata": {
-    "generated_at": "2026-01-05 07:43:39 IST",
-    "total_models": 32,
+    "generated_at": "2026-01-06 07:33:59 IST",
+    "total_models": 31,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
-    {
-      "id": "allenai/olmo-3.1-32b-think:free",
-      "canonical_slug": "allenai/olmo-3.1-32b-think-20251215",
-      "provider_slug": "olmo-3.1-32b-think-20251215",
-      "original_name": "AllenAI: Olmo 3.1 32B Think (free)",
-      "hugging_face_id": "allenai/Olmo-3.1-32B-Think",
-      "clean_model_name": "Olmo 3.1 32B Think",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model",
-      "inference_provider": "OpenRouter",
-      "model_provider": "Ai2",
-      "model_provider_country": "United States",
-      "model_family": "ai2",
-      "official_url": "https://allenai.org/"
-    },
     {
       "id": "xiaomi/mimo-v2-flash:free",
       "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
@@ -126,12 +106,12 @@
       "official_url": "https://www.arcee.ai/"
     },
     {
-      "id": "allenai/olmo-3-32b-think:free",
-      "canonical_slug": "allenai/olmo-3-32b-think-20251121",
-      "provider_slug": "olmo-3-32b-think-20251121",
-      "original_name": "AllenAI: Olmo 3 32B Think (free)",
-      "hugging_face_id": "allenai/Olmo-3-32B-Think",
-      "clean_model_name": "Olmo 3 32B Think",
+      "id": "tngtech/tng-r1t-chimera:free",
+      "canonical_slug": "tngtech/tng-r1t-chimera",
+      "provider_slug": "tng-r1t-chimera",
+      "original_name": "TNG: R1T Chimera (free)",
+      "hugging_face_id": null,
+      "clean_model_name": "R1T Chimera",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text",
       "enhanced_input_modalities": "text",
@@ -140,10 +120,10 @@
       "standardized_output_modalities": "Text",
       "google_enhancement_status": "no_google_model",
       "inference_provider": "OpenRouter",
-      "model_provider": "Ai2",
-      "model_provider_country": "United States",
-      "model_family": "ai2",
-      "official_url": "https://allenai.org/"
+      "model_provider": "TNG Technology",
+      "model_provider_country": "Germany",
+      "model_family": "tng technology",
+      "official_url": "https://tngtech.com"
     },
     {
       "id": "kwaipilot/kat-coder-pro:free",

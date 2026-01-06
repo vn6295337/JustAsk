@@ -1,16 +1,16 @@
 ================================================================================
 OTHER MODEL LICENSE NAME EXTRACTIONS REPORT
-Generated: 2026-01-05 07:43:35 IST
+Generated: 2026-01-06 07:33:55 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 23
+  Total models : 21
   Input        : 05_hf_license_urls.json
   Processor    : step_06_fetch_hf_license_names.py
   Output       : 06_hf_license_names.json
 
 LICENSE DISTRIBUTION:
-  apache-2.0: 12
+  apache-2.0: 10
   llama3: 1
   mit: 5
   modified-mit: 1
@@ -22,16 +22,7 @@ Total license types: 6
 DETAILED MODEL EXTRACTION RESULTS:
 ================================================================================
 
-MODEL 1: allenai/olmo-3.1-32b-think-20251215
---------------------------------------------------
-  ID               : allenai/olmo-3.1-32b-think:free
-  Canonical Slug   : allenai/olmo-3.1-32b-think-20251215
-  HuggingFace ID   : allenai/Olmo-3.1-32B-Think
-  Extracted License: apache-2.0
-
-================================================================================
-
-MODEL 2: xiaomi/mimo-v2-flash-20251210
+MODEL 1: xiaomi/mimo-v2-flash-20251210
 --------------------------------------------------
   ID               : xiaomi/mimo-v2-flash:free
   Canonical Slug   : xiaomi/mimo-v2-flash-20251210
@@ -40,7 +31,7 @@ MODEL 2: xiaomi/mimo-v2-flash-20251210
 
 ================================================================================
 
-MODEL 3: nvidia/nemotron-3-nano-30b-a3b
+MODEL 2: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID               : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug   : nvidia/nemotron-3-nano-30b-a3b
@@ -49,7 +40,7 @@ MODEL 3: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 4: mistralai/devstral-2512
+MODEL 3: mistralai/devstral-2512
 --------------------------------------------------
   ID               : mistralai/devstral-2512:free
   Canonical Slug   : mistralai/devstral-2512
@@ -58,7 +49,7 @@ MODEL 4: mistralai/devstral-2512
 
 ================================================================================
 
-MODEL 5: nex-agi/deepseek-v3.1-nex-n1
+MODEL 4: nex-agi/deepseek-v3.1-nex-n1
 --------------------------------------------------
   ID               : nex-agi/deepseek-v3.1-nex-n1:free
   Canonical Slug   : nex-agi/deepseek-v3.1-nex-n1
@@ -67,7 +58,7 @@ MODEL 5: nex-agi/deepseek-v3.1-nex-n1
 
 ================================================================================
 
-MODEL 6: arcee-ai/trinity-mini-20251201
+MODEL 5: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID               : arcee-ai/trinity-mini:free
   Canonical Slug   : arcee-ai/trinity-mini-20251201
@@ -76,16 +67,7 @@ MODEL 6: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 7: allenai/olmo-3-32b-think-20251121
---------------------------------------------------
-  ID               : allenai/olmo-3-32b-think:free
-  Canonical Slug   : allenai/olmo-3-32b-think-20251121
-  HuggingFace ID   : allenai/Olmo-3-32B-Think
-  Extracted License: apache-2.0
-
-================================================================================
-
-MODEL 8: nvidia/nemotron-nano-12b-v2-vl
+MODEL 6: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID               : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug   : nvidia/nemotron-nano-12b-v2-vl
@@ -94,7 +76,7 @@ MODEL 8: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 9: nvidia/nemotron-nano-9b-v2
+MODEL 7: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID               : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug   : nvidia/nemotron-nano-9b-v2
@@ -103,7 +85,7 @@ MODEL 9: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 10: openai/gpt-oss-120b
+MODEL 8: openai/gpt-oss-120b
 --------------------------------------------------
   ID               : openai/gpt-oss-120b:free
   Canonical Slug   : openai/gpt-oss-120b
@@ -112,7 +94,7 @@ MODEL 10: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 11: openai/gpt-oss-20b
+MODEL 9: openai/gpt-oss-20b
 --------------------------------------------------
   ID               : openai/gpt-oss-20b:free
   Canonical Slug   : openai/gpt-oss-20b
@@ -121,7 +103,7 @@ MODEL 11: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 12: z-ai/glm-4.5-air
+MODEL 10: z-ai/glm-4.5-air
 --------------------------------------------------
   ID               : z-ai/glm-4.5-air:free
   Canonical Slug   : z-ai/glm-4.5-air
@@ -130,7 +112,7 @@ MODEL 12: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 13: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 11: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID               : qwen/qwen3-coder:free
   Canonical Slug   : qwen/qwen3-coder-480b-a35b-07-25
@@ -139,7 +121,7 @@ MODEL 13: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 14: moonshotai/kimi-k2
+MODEL 12: moonshotai/kimi-k2
 --------------------------------------------------
   ID               : moonshotai/kimi-k2:free
   Canonical Slug   : moonshotai/kimi-k2
@@ -148,7 +130,7 @@ MODEL 14: moonshotai/kimi-k2
 
 ================================================================================
 
-MODEL 15: venice/uncensored
+MODEL 13: venice/uncensored
 --------------------------------------------------
   ID               : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Canonical Slug   : venice/uncensored
@@ -157,7 +139,7 @@ MODEL 15: venice/uncensored
 
 ================================================================================
 
-MODEL 16: tngtech/deepseek-r1t2-chimera
+MODEL 14: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID               : tngtech/deepseek-r1t2-chimera:free
   Canonical Slug   : tngtech/deepseek-r1t2-chimera
@@ -166,7 +148,7 @@ MODEL 16: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 17: deepseek/deepseek-r1-0528
+MODEL 15: deepseek/deepseek-r1-0528
 --------------------------------------------------
   ID               : deepseek/deepseek-r1-0528:free
   Canonical Slug   : deepseek/deepseek-r1-0528
@@ -175,7 +157,7 @@ MODEL 17: deepseek/deepseek-r1-0528
 
 ================================================================================
 
-MODEL 18: qwen/qwen3-4b-04-28
+MODEL 16: qwen/qwen3-4b-04-28
 --------------------------------------------------
   ID               : qwen/qwen3-4b:free
   Canonical Slug   : qwen/qwen3-4b-04-28
@@ -184,7 +166,7 @@ MODEL 18: qwen/qwen3-4b-04-28
 
 ================================================================================
 
-MODEL 19: tngtech/deepseek-r1t-chimera
+MODEL 17: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID               : tngtech/deepseek-r1t-chimera:free
   Canonical Slug   : tngtech/deepseek-r1t-chimera
@@ -193,7 +175,7 @@ MODEL 19: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 20: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 18: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID               : mistralai/mistral-small-3.1-24b-instruct:free
   Canonical Slug   : mistralai/mistral-small-3.1-24b-instruct-2503
@@ -202,7 +184,7 @@ MODEL 20: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 21: qwen/qwen-2-vl-7b-instruct
+MODEL 19: qwen/qwen-2-vl-7b-instruct
 --------------------------------------------------
   ID               : qwen/qwen-2.5-vl-7b-instruct:free
   Canonical Slug   : qwen/qwen-2-vl-7b-instruct
@@ -211,7 +193,7 @@ MODEL 21: qwen/qwen-2-vl-7b-instruct
 
 ================================================================================
 
-MODEL 22: nousresearch/hermes-3-llama-3.1-405b
+MODEL 20: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID               : nousresearch/hermes-3-llama-3.1-405b:free
   Canonical Slug   : nousresearch/hermes-3-llama-3.1-405b
@@ -220,7 +202,7 @@ MODEL 22: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 23: mistralai/mistral-7b-instruct
+MODEL 21: mistralai/mistral-7b-instruct
 --------------------------------------------------
   ID               : mistralai/mistral-7b-instruct:free
   Canonical Slug   : mistralai/mistral-7b-instruct

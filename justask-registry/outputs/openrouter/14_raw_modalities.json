@@ -1,19 +1,10 @@
 {
   "metadata": {
-    "generated_at": "2026-01-05 07:43:39 IST",
-    "total_models": 32,
+    "generated_at": "2026-01-06 07:33:59 IST",
+    "total_models": 31,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
-    {
-      "id": "allenai/olmo-3.1-32b-think:free",
-      "canonical_slug": "allenai/olmo-3.1-32b-think-20251215",
-      "original_name": "AllenAI: Olmo 3.1 32B Think (free)",
-      "hugging_face_id": "allenai/Olmo-3.1-32B-Think",
-      "clean_model_name": "Olmo 3.1 32B Think",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
     {
       "id": "xiaomi/mimo-v2-flash:free",
       "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
@@ -60,11 +51,11 @@
       "raw_output_modalities": "text"
     },
     {
-      "id": "allenai/olmo-3-32b-think:free",
-      "canonical_slug": "allenai/olmo-3-32b-think-20251121",
-      "original_name": "AllenAI: Olmo 3 32B Think (free)",
-      "hugging_face_id": "allenai/Olmo-3-32B-Think",
-      "clean_model_name": "Olmo 3 32B Think",
+      "id": "tngtech/tng-r1t-chimera:free",
+      "canonical_slug": "tngtech/tng-r1t-chimera",
+      "original_name": "TNG: R1T Chimera (free)",
+      "hugging_face_id": null,
+      "clean_model_name": "R1T Chimera",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text"
     },

@@ -1,66 +1,10 @@
 {
   "metadata": {
-    "generated_at": "2026-01-05 07:43:17 IST",
-    "total_models": 32,
+    "generated_at": "2026-01-06 07:33:40 IST",
+    "total_models": 31,
     "pipeline_stage": "B_filter_models"
   },
   "models": [
-    {
-      "id": "allenai/olmo-3.1-32b-think:free",
-      "canonical_slug": "allenai/olmo-3.1-32b-think-20251215",
-      "hugging_face_id": "allenai/Olmo-3.1-32B-Think",
-      "name": "AllenAI: Olmo 3.1 32B Think (free)",
-      "created": 1765907719,
-      "description": "Olmo 3.1 32B Think is a large-scale, 32-billion-parameter model designed for deep reasoning, complex multi-step logic, and advanced instruction following. Building on the Olmo 3 series, version 3.1 delivers refined reasoning behavior and stronger performance across demanding evaluations and nuanced conversational tasks. Developed by Ai2 under the Apache 2.0 license, Olmo 3.1 32B Think continues the Olmo initiative\u2019s commitment to openness, providing full transparency across model weights, code, and training methodology.",
-      "context_length": 65536,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
-      },
-      "top_provider": {
-        "context_length": 65536,
-        "max_completion_tokens": 65536,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "logit_bias",
-        "max_tokens",
-        "min_p",
-        "presence_penalty",
-        "reasoning",
-        "repetition_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 0.6,
-        "top_p": 0.95,
-        "frequency_penalty": null
-      }
-    },
     {
       "id": "xiaomi/mimo-v2-flash:free",
       "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
@@ -317,13 +261,13 @@
       }
     },
     {
-      "id": "allenai/olmo-3-32b-think:free",
-      "canonical_slug": "allenai/olmo-3-32b-think-20251121",
-      "hugging_face_id": "allenai/Olmo-3-32B-Think",
-      "name": "AllenAI: Olmo 3 32B Think (free)",
-      "created": 1763758276,
-      "description": "Olmo 3 32B Think is a large-scale, 32-billion-parameter model purpose-built for deep reasoning, complex logic chains and advanced instruction-following scenarios. Its capacity enables strong performance on demanding evaluation tasks and highly nuanced conversational reasoning. Developed by Ai2 under the Apache 2.0 license, Olmo 3 32B Think embodies the Olmo initiative\u2019s commitment to openness, offering full transparency across weights, code and training methodology.",
-      "context_length": 65536,
+      "id": "tngtech/tng-r1t-chimera:free",
+      "canonical_slug": "tngtech/tng-r1t-chimera",
+      "hugging_face_id": null,
+      "name": "TNG: R1T Chimera (free)",
+      "created": 1764184161,
+      "description": "TNG-R1T-Chimera is an experimental LLM with a faible for creative storytelling and character interaction. It is a derivate of the original TNG/DeepSeek-R1T-Chimera released in April 2025 and is available exclusively via Chutes and OpenRouter.\n\nCharacteristics and improvements include:\n\nWe think that it has a creative and pleasant personality.\nIt has a preliminary EQ-Bench3 value of about 1305.\nIt is quite a bit more intelligent than the original, albeit a slightly slower.\nIt is much more think-token consistent, i.e. reasoning and answer blocks are properly delineated.\nTool calling is much improved.\n\nTNG Tech, the model authors, ask that users follow the careful guidelines that Microsoft has created for their \"MAI-DS-R1\" DeepSeek-based model. These guidelines are available on Hugging Face (https://huggingface.co/microsoft/MAI-DS-R1).",
+      "context_length": 163840,
       "architecture": {
         "modality": "text->text",
         "input_modalities": [
@@ -344,7 +288,7 @@
         "internal_reasoning": "0"
       },
       "top_provider": {
-        "context_length": 65536,
+        "context_length": 163840,
         "max_completion_tokens": 65536,
         "is_moderated": false
       },
@@ -352,9 +296,7 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logit_bias",
         "max_tokens",
-        "min_p",
         "presence_penalty",
         "reasoning",
         "repetition_penalty",
@@ -363,12 +305,14 @@
         "stop",
         "structured_outputs",
         "temperature",
+        "tool_choice",
+        "tools",
         "top_k",
         "top_p"
       ],
       "default_parameters": {
-        "temperature": 0.6,
-        "top_p": 0.95,
+        "temperature": null,
+        "top_p": null,
         "frequency_penalty": null
       }
     },
@@ -401,7 +345,7 @@
       },
       "top_provider": {
         "context_length": 256000,
-        "max_completion_tokens": 32768,
+        "max_completion_tokens": 128000,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -707,7 +651,6 @@
         "frequency_penalty",
         "max_tokens",
         "presence_penalty",
-        "repetition_penalty",
         "seed",
         "stop",
         "temperature",

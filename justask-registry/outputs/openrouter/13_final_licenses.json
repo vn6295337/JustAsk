@@ -1,34 +1,10 @@
 {
   "metadata": {
-    "generated_at": "2026-01-05 07:43:39 IST",
-    "total_models": 35,
+    "generated_at": "2026-01-06 07:33:58 IST",
+    "total_models": 33,
     "pipeline_stage": "M_final_list_of_licenses"
   },
   "models": [
-    {
-      "id": "allenai/olmo-3-32b-think:free",
-      "canonical_slug": "allenai/olmo-3-32b-think-20251121",
-      "original_name": "AllenAI: Olmo 3 32B Think (free)",
-      "hugging_face_id": "allenai/Olmo-3-32B-Think",
-      "clean_model_name": "Olmo 3 32B Think",
-      "license_info_text": "info",
-      "license_info_url": "https://huggingface.co/allenai/Olmo-3-32B-Think/blob/main/README.md",
-      "license_name": "Apache-2.0",
-      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_category": "opensource"
-    },
-    {
-      "id": "allenai/olmo-3.1-32b-think:free",
-      "canonical_slug": "allenai/olmo-3.1-32b-think-20251215",
-      "original_name": "AllenAI: Olmo 3.1 32B Think (free)",
-      "hugging_face_id": "allenai/Olmo-3.1-32B-Think",
-      "clean_model_name": "Olmo 3.1 32B Think",
-      "license_info_text": "info",
-      "license_info_url": "https://huggingface.co/allenai/Olmo-3.1-32B-Think/blob/main/README.md",
-      "license_name": "Apache-2.0",
-      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_category": "opensource"
-    },
     {
       "id": "amazon/nova-2-lite-v1:free",
       "canonical_slug": "amazon/nova-2-lite-v1",

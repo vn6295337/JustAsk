@@ -1,39 +1,39 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-01-05 07:43:17 IST
+Generated: 2026-01-06 07:33:40 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
   Total models processed: 350
-  Models passed all filters: 32
-  Models excluded: 318
-  Success rate: 9.1%
+  Models passed all filters: 31
+  Models excluded: 319
+  Success rate: 8.9%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
     Input: 350 models
-    Excluded: 317 models (non-free pricing)
-    Remaining: 33 models
-
-  Step 2 - Billing Description Filter:
-    Input: 33 models
-    Excluded: 0 models (billing requirements in description)
-    Remaining: 33 models
-
-  Step 3 - Keyword Filter:
-    Input: 33 models
-    Excluded: 1 models (preview/experimental/beta)
+    Excluded: 318 models (non-free pricing)
     Remaining: 32 models
 
-  Step 4 - Deduplication Filter:
+  Step 2 - Billing Description Filter:
     Input: 32 models
+    Excluded: 0 models (billing requirements in description)
+    Remaining: 32 models
+
+  Step 3 - Keyword Filter:
+    Input: 32 models
+    Excluded: 1 models (preview/experimental/beta)
+    Remaining: 31 models
+
+  Step 4 - Deduplication Filter:
+    Input: 31 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 32 models
+    Final: 31 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 317 models with non-free pricing (details omitted due to volume)
+Excluded 318 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -109,6 +109,21 @@ PROVIDER: MISTRAL (3 models)
       Pricing: prompt=0, completion=0, request=0
 
 
+PROVIDER: TNG (3 models)
+--------------------------------------------------
+   1. TNG: DeepSeek R1T Chimera (free)
+      ID: tngtech/deepseek-r1t-chimera:free
+      Pricing: prompt=0, completion=0, request=0
+
+   2. TNG: DeepSeek R1T2 Chimera (free)
+      ID: tngtech/deepseek-r1t2-chimera:free
+      Pricing: prompt=0, completion=0, request=0
+
+   3. TNG: R1T Chimera (free)
+      ID: tngtech/tng-r1t-chimera:free
+      Pricing: prompt=0, completion=0, request=0
+
+
 PROVIDER: QWEN (3 models)
 --------------------------------------------------
    1. Qwen: Qwen2.5-VL 7B Instruct (free)
@@ -139,17 +154,6 @@ PROVIDER: META (3 models)
       Pricing: prompt=0, completion=0, request=0
 
 
-PROVIDER: ALLENAI (2 models)
---------------------------------------------------
-   1. AllenAI: Olmo 3 32B Think (free)
-      ID: allenai/olmo-3-32b-think:free
-      Pricing: prompt=0, completion=0, request=0
-
-   2. AllenAI: Olmo 3.1 32B Think (free)
-      ID: allenai/olmo-3.1-32b-think:free
-      Pricing: prompt=0, completion=0, request=0
-
-
 PROVIDER: OPENAI (2 models)
 --------------------------------------------------
    1. OpenAI: gpt-oss-120b (free)
@@ -158,17 +162,6 @@ PROVIDER: OPENAI (2 models)
 
    2. OpenAI: gpt-oss-20b (free)
       ID: openai/gpt-oss-20b:free
-      Pricing: prompt=0, completion=0, request=0
-
-
-PROVIDER: TNG (2 models)
---------------------------------------------------
-   1. TNG: DeepSeek R1T Chimera (free)
-      ID: tngtech/deepseek-r1t-chimera:free
-      Pricing: prompt=0, completion=0, request=0
-
-   2. TNG: DeepSeek R1T2 Chimera (free)
-      ID: tngtech/deepseek-r1t2-chimera:free
       Pricing: prompt=0, completion=0, request=0
 
 
@@ -237,11 +230,11 @@ PROVIDER: NOUS (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 17
-  Total models passed all filters: 32
-  Models excluded by pricing: 317
+  Total providers: 16
+  Total models passed all filters: 31
+  Models excluded by pricing: 318
   Models excluded by billing description: 0
   Models excluded by keywords: 1
   Models excluded by deduplication: 0
-  Total exclusions: 318
+  Total exclusions: 319
   ✓ All filtered models accounted for
