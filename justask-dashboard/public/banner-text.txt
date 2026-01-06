@@ -1,1 +1,1 @@
-This Week - OpenRouter free tier: Removed tongyi-deepresearch-30B-A3B
+This Week - OpenRouter free tier: Removed tongyi-deepresearch-30B-A3B, olmo-3-32B-think, olmo-3.1-32B-think
