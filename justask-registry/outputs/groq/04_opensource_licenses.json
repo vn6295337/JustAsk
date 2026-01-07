@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-06T02:03:14.089747+00:00",
+    "generated_at": "2026-01-07T02:02:46.223334+00:00",
     "source_file": "01_scraped_models.json",
     "processor": "step_04_extract_opensource_licenses.py",
     "approach": "3-category processing: Meta (skipped), Google (hardcoded), Others (HF-scraped)",
