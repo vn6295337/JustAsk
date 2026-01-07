@@ -1,18 +1,18 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-01-06 07:34:02 IST
+Generated: 2026-01-07 07:33:38 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 32
+   • Total unique model names: 30
    • Total records in pipeline: 30
-   • Total records in Supabase: 32
+   • Total records in Supabase: 30
    • Models in both systems: 30
    • Models with differences: 0
    • Models in pipeline only (not in Supabase): 0
-   • Models in Supabase only (not in pipeline): 2
+   • Models in Supabase only (not in pipeline): 0
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
    • inference_provider:
@@ -57,8 +57,6 @@ SUMMARY STATISTICS
 
 3. CATEGORIZED BREAKDOWN:
    • Existing models with differences: 0
-   • Deprecated models (Supabase only): 2
-     Models: Olmo 3 32B Think, Olmo 3.1 32B Think
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
@@ -541,46 +539,6 @@ license_name              | NVIDIA                    | NVIDIA
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
-
-================================================================================
-
-MODEL: Olmo 3 32B Think
---------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
---------------------------------------------------------------------------------
-inference_provider        |                           | OpenRouter               
-model_provider            |                           | Ai2                      
-human_readable_name       |                           | Olmo 3 32B Think         
-model_provider_country    |                           | United States            
-official_url              |                           | https://allenai.org/     
-input_modalities          |                           | Text                     
-output_modalities         |                           | Text                     
-license_info_text         |                           | info                     
-license_info_url          |                           | https://huggingface.co/..
-license_name              |                           | Apache-2.0               
-license_url               |                           | https://www.apache.org/..
-rate_limits               |                           | 20 requests/min 50/day   
-provider_api_access       |                           | https://openrouter.ai/s..
-
-================================================================================
-
-MODEL: Olmo 3.1 32B Think
---------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
---------------------------------------------------------------------------------
-inference_provider        |                           | OpenRouter               
-model_provider            |                           | Ai2                      
-human_readable_name       |                           | Olmo 3.1 32B Think       
-model_provider_country    |                           | United States            
-official_url              |                           | https://allenai.org/     
-input_modalities          |                           | Text                     
-output_modalities         |                           | Text                     
-license_info_text         |                           | info                     
-license_info_url          |                           | https://huggingface.co/..
-license_name              |                           | Apache-2.0               
-license_url               |                           | https://www.apache.org/..
-rate_limits               |                           | 20 requests/min 50/day   
-provider_api_access       |                           | https://openrouter.ai/s..
 
 ================================================================================
 

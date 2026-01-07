@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-01-06 07:33:39 IST
+Generated: 2026-01-07 07:33:13 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 350
+  Total models: 347
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  56 models
@@ -284,14 +284,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - hermes-4-405b
     - hermes-4-70b
 
-  Microsoft       :   6 models
-    - phi-3-medium-128k-instruct
-    - phi-3-mini-128k-instruct
-    - phi-3.5-mini-128k-instruct
-    - phi-4
-    - phi-4-multimodal-instruct
-    - phi-4-reasoning-plus
-
   AllenAI         :   5 models
     - olmo-2-0325-32b-instruct
     - olmo-3-32b-think
@@ -348,6 +340,11 @@ PROVIDER BREAKDOWN (Descending Order):
     - cogito-v2-preview-llama-405b
     - cogito-v2-preview-llama-70b
     - cogito-v2.1-671b
+
+  Microsoft       :   3 models
+    - phi-4
+    - phi-4-multimodal-instruct
+    - phi-4-reasoning-plus
 
   AionLabs        :   3 models
     - aion-1.0
