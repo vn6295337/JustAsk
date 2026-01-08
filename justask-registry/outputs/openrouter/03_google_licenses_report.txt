@@ -1,6 +1,6 @@
 ================================================================================
 GOOGLE MODELS LICENSE EXTRACTION REPORT
-Generated: 2026-01-07 07:33:14 IST
+Generated: 2026-01-08 07:33:28 IST
 ================================================================================
 
 SUMMARY:
@@ -36,7 +36,7 @@ MODEL 2: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
-  HuggingFace ID: 
+  HuggingFace ID: google/gemma-3-27b-it
   Canonical Slug: google/gemma-3-27b-it
   Clean Model Name: Gemma 3 27B
   License Info Text: 

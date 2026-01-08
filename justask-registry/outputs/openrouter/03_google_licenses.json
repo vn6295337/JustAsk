@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-07 07:33:14 IST",
+    "generated_at": "2026-01-08 07:33:28 IST",
     "total_models": 5,
     "pipeline_stage": "C_extract_google_licenses"
   },
@@ -53,7 +53,7 @@
       "id": "google/gemma-3-27b-it:free",
       "canonical_slug": "google/gemma-3-27b-it",
       "original_name": "Google: Gemma 3 27B (free)",
-      "hugging_face_id": "",
+      "hugging_face_id": "google/gemma-3-27b-it",
       "clean_model_name": "Gemma 3 27B",
       "license_info_text": "",
       "license_info_url": "",

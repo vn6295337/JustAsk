@@ -1,6 +1,6 @@
 ================================================================================
 RAW MODALITIES EXTRACTION REPORT
-Generated: 2026-01-07 07:33:35 IST
+Generated: 2026-01-08 07:33:46 IST
 ================================================================================
 
 SUMMARY:
@@ -359,7 +359,7 @@ MODEL 28: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
-  HuggingFace ID: 
+  HuggingFace ID: google/gemma-3-27b-it
   Canonical Slug: google/gemma-3-27b-it
   Clean Model Name: Gemma 3 27B IT
   Raw Input Modalities: text, image
