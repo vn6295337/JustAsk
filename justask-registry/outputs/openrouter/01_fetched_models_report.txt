@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-01-08 07:33:28 IST
+Generated: 2026-01-09 07:34:57 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 347
+  Total models: 348
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  56 models
@@ -252,6 +252,14 @@ PROVIDER BREAKDOWN (Descending Order):
     - grok-4.1-fast
     - grok-code-fast-1
 
+  AllenAI         :   6 models
+    - olmo-2-0325-32b-instruct
+    - olmo-3-32b-think
+    - olmo-3-7b-instruct
+    - olmo-3-7b-think
+    - olmo-3.1-32b-instruct
+    - olmo-3.1-32b-think
+
   Arcee AI        :   6 models
     - coder-large
     - maestro-reasoning
@@ -283,13 +291,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - hermes-3-llama-3.1-70b
     - hermes-4-405b
     - hermes-4-70b
-
-  AllenAI         :   5 models
-    - olmo-2-0325-32b-instruct
-    - olmo-3-32b-think
-    - olmo-3-7b-instruct
-    - olmo-3-7b-think
-    - olmo-3.1-32b-think
 
   Amazon          :   5 models
     - nova-2-lite-v1

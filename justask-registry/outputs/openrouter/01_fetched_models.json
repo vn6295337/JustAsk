@@ -1,10 +1,65 @@
 {
   "metadata": {
-    "generated_at": "2026-01-08 07:33:28 IST",
-    "total_models": 347,
+    "generated_at": "2026-01-09 07:34:57 IST",
+    "total_models": 348,
     "pipeline_stage": "A_fetch_api_models"
   },
   "models": [
+    {
+      "id": "allenai/olmo-3.1-32b-instruct",
+      "canonical_slug": "allenai/olmo-3.1-32b-instruct-20251215",
+      "hugging_face_id": "allenai/Olmo-3.1-32B-Instruct",
+      "name": "AllenAI: Olmo 3.1 32B Instruct",
+      "created": 1767728554,
+      "description": "Olmo 3.1 32B Instruct is a large-scale, 32-billion-parameter instruction-tuned language model engineered for high-performance conversational AI, multi-turn dialogue, and practical instruction following. As part of the Olmo 3.1 family, this variant emphasizes responsiveness to complex user directions and robust chat interactions while retaining strong capabilities on reasoning and coding benchmarks. Developed by Ai2 under the Apache 2.0 license, Olmo 3.1 32B Instruct reflects the Olmo initiative\u2019s commitment to openness and transparency.",
+      "context_length": 65536,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000002",
+        "completion": "0.0000006",
+        "request": "0",
+        "image": "0",
+        "web_search": "0",
+        "internal_reasoning": "0"
+      },
+      "top_provider": {
+        "context_length": 65536,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "frequency_penalty": null
+      }
+    },
     {
       "id": "bytedance-seed/seed-1.6-flash",
       "canonical_slug": "bytedance-seed/seed-1.6-flash-20250625",
@@ -131,12 +186,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000012",
-        "completion": "0.00000048",
+        "prompt": "0.00000028",
+        "completion": "0.0000012",
         "request": "0",
         "image": "0",
         "web_search": "0",
-        "internal_reasoning": "0"
+        "internal_reasoning": "0",
+        "input_cache_read": "0.00000014"
       },
       "top_provider": {
         "context_length": 196608,
@@ -191,8 +247,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000016",
-        "completion": "0.0000008",
+        "prompt": "0.0000004",
+        "completion": "0.0000015",
         "request": "0",
         "image": "0",
         "web_search": "0",
@@ -200,7 +256,7 @@
       },
       "top_provider": {
         "context_length": 202752,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 65535,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -2548,8 +2604,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000032",
-        "completion": "0.00000048",
+        "prompt": "0.0000004",
+        "completion": "0.00000175",
         "request": "0",
         "image": "0",
         "web_search": "0",
@@ -2557,7 +2613,7 @@
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 65535,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -3034,8 +3090,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.0000001",
+        "prompt": "0.00000001",
+        "completion": "0.00000002",
         "request": "0",
         "image": "0",
         "web_search": "0",
@@ -3081,8 +3137,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000005",
-        "completion": "0.0000001",
+        "prompt": "0.00000001",
+        "completion": "0.00000002",
         "request": "0",
         "image": "0",
         "web_search": "0",
@@ -4464,8 +4520,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000012",
-        "completion": "0.00000056",
+        "prompt": "0.0000002",
+        "completion": "0.0000012",
         "request": "0",
         "image": "0",
         "web_search": "0",
@@ -5059,8 +5115,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.0000006",
+        "prompt": "0.00000009",
+        "completion": "0.0000011",
         "request": "0",
         "image": "0",
         "web_search": "0",
@@ -6513,8 +6569,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000002",
-        "completion": "0.0000001",
+        "prompt": "0.000000039",
+        "completion": "0.00000019",
         "request": "0",
         "image": "0",
         "web_search": "0",
@@ -6680,8 +6736,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.000000016",
-        "completion": "0.00000006",
+        "prompt": "0.00000002",
+        "completion": "0.0000001",
         "request": "0",
         "image": "0",
         "web_search": "0",
@@ -6689,7 +6745,7 @@
       },
       "top_provider": {
         "context_length": 131072,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 131072,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -7138,7 +7194,11 @@
         "top_k",
         "top_p"
       ],
-      "default_parameters": {}
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      }
     },
     {
       "id": "z-ai/glm-4-32b",
@@ -8681,7 +8741,11 @@
         "top_logprobs",
         "top_p"
       ],
-      "default_parameters": {}
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      }
     },
     {
       "id": "x-ai/grok-3",
@@ -8881,7 +8945,11 @@
         "repetition_penalty",
         "temperature"
       ],
-      "default_parameters": {}
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      }
     },
     {
       "id": "deepseek/deepseek-r1-0528",
@@ -8937,7 +9005,11 @@
         "top_logprobs",
         "top_p"
       ],
-      "default_parameters": {}
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      }
     },
     {
       "id": "anthropic/claude-opus-4",
@@ -9889,7 +9961,11 @@
         "top_k",
         "top_p"
       ],
-      "default_parameters": {}
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      }
     },
     {
       "id": "qwen/qwen3-8b",
@@ -9944,7 +10020,11 @@
         "top_logprobs",
         "top_p"
       ],
-      "default_parameters": {}
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      }
     },
     {
       "id": "qwen/qwen3-14b",
@@ -10226,7 +10306,7 @@
         "output_modalities": [
           "text"
         ],
-        "tokenizer": "Other",
+        "tokenizer": "GPT",
         "instruct_type": null
       },
       "pricing": {
@@ -10254,7 +10334,11 @@
         "tool_choice",
         "tools"
       ],
-      "default_parameters": {}
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      }
     },
     {
       "id": "openai/o3",
@@ -10684,7 +10768,11 @@
         "top_logprobs",
         "top_p"
       ],
-      "default_parameters": {}
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      }
     },
     {
       "id": "x-ai/grok-3-beta",
@@ -11559,7 +11647,7 @@
       "name": "Google: Gemma 3 27B",
       "created": 1741756359,
       "description": "Gemma 3 introduces multimodality, supporting vision-language input and text outputs. It handles context windows up to 128k tokens, understands over 140 languages, and offers improved math, reasoning, and chat capabilities, including structured outputs and function calling. Gemma 3 27B is Google's latest open source model, successor to [Gemma 2](google/gemma-2-27b-it)",
-      "context_length": 131072,
+      "context_length": 96000,
       "architecture": {
         "modality": "text+image->text",
         "input_modalities": [
@@ -11573,16 +11661,16 @@
         "instruct_type": "gemma"
       },
       "pricing": {
-        "prompt": "0.000000036",
-        "completion": "0.000000064",
+        "prompt": "0.00000004",
+        "completion": "0.00000015",
         "request": "0",
         "image": "0",
         "web_search": "0",
         "internal_reasoning": "0"
       },
       "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": null,
+        "context_length": 96000,
+        "max_completion_tokens": 96000,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -12200,7 +12288,11 @@
         "tool_choice",
         "tools"
       ],
-      "default_parameters": {}
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      }
     },
     {
       "id": "google/gemini-2.0-flash-001",
@@ -14320,6 +14412,8 @@
         "seed",
         "stop",
         "temperature",
+        "tool_choice",
+        "tools",
         "top_k",
         "top_p"
       ],

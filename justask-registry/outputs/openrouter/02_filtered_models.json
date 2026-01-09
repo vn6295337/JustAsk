@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-08 07:33:28 IST",
+    "generated_at": "2026-01-09 07:34:58 IST",
     "total_models": 31,
     "pipeline_stage": "B_filter_models"
   },
@@ -883,7 +883,11 @@
         "repetition_penalty",
         "temperature"
       ],
-      "default_parameters": {}
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      }
     },
     {
       "id": "google/gemma-3n-e4b-it:free",
