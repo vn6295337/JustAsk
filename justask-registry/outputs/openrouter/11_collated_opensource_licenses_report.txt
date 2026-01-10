@@ -1,6 +1,6 @@
 ================================================================================
 COLLATED OPENSOURCE LICENSE INFORMATION REPORT
-Generated: 2026-01-09 07:35:18 IST
+Generated: 2026-01-10 07:31:01 IST
 ================================================================================
 
 SUMMARY:
@@ -24,7 +24,21 @@ Total unique license types: 3
 DETAILED OPENSOURCE MODEL INFORMATION:
 ================================================================================
 
-MODEL 1: arcee-ai/trinity-mini-20251201
+MODEL 1: allenai/molmo-2-8b-20260109
+--------------------------------------------------
+  ID: allenai/molmo-2-8b
+  Original Name: AllenAI: Molmo2 8B
+  HuggingFace ID: allenai/Molmo2-8B
+  Canonical Slug: allenai/molmo-2-8b-20260109
+  Clean Model Name: Molmo2 8B
+  License Info Text: info
+  License Info URL: https://huggingface.co/allenai/Molmo2-8B/blob/main/README.md
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 2: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID: arcee-ai/trinity-mini:free
   Original Name: Arcee AI: Trinity Mini (free)
@@ -38,7 +52,7 @@ MODEL 1: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 2: mistralai/mistral-7b-instruct
+MODEL 3: mistralai/mistral-7b-instruct
 --------------------------------------------------
   ID: mistralai/mistral-7b-instruct:free
   Original Name: Mistral: Mistral 7B Instruct (free)
@@ -52,7 +66,7 @@ MODEL 2: mistralai/mistral-7b-instruct
 
 ================================================================================
 
-MODEL 3: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 4: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID: mistralai/mistral-small-3.1-24b-instruct:free
   Original Name: Mistral: Mistral Small 3.1 24B (free)
@@ -61,20 +75,6 @@ MODEL 3: mistralai/mistral-small-3.1-24b-instruct-2503
   Clean Model Name: Mistral Small 3.1 24B
   License Info Text: info
   License Info URL: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/blob/main/README.md
-  License Name: Apache-2.0
-  License URL: https://www.apache.org/licenses/LICENSE-2.0
-
-================================================================================
-
-MODEL 4: nex-agi/deepseek-v3.1-nex-n1
---------------------------------------------------
-  ID: nex-agi/deepseek-v3.1-nex-n1:free
-  Original Name: Nex AGI: DeepSeek V3.1 Nex N1 (free)
-  HuggingFace ID: nex-agi/DeepSeek-V3.1-Nex-N1
-  Canonical Slug: nex-agi/deepseek-v3.1-nex-n1
-  Clean Model Name: DeepSeek V3.1 Nex N1
-  License Info Text: info
-  License Info URL: https://huggingface.co/nex-agi/DeepSeek-V3.1-Nex-N1/blob/main/README.md
   License Name: Apache-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
 

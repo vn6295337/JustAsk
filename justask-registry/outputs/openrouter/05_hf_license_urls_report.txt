@@ -1,6 +1,6 @@
 ================================================================================
 OTHER LICENSE INFO URLS REPORT
-Generated: 2026-01-09 07:35:08 IST
+Generated: 2026-01-10 07:30:51 IST
 ================================================================================
 
 SUMMARY:
@@ -81,7 +81,16 @@ MODEL 7: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 8: arcee-ai/trinity-mini-20251201
+MODEL 8: allenai/molmo-2-8b-20260109
+--------------------------------------------------
+  ID              : allenai/molmo-2-8b
+  Canonical Slug  : allenai/molmo-2-8b-20260109
+  HuggingFace ID  : allenai/Molmo2-8B
+  License Info URL: https://huggingface.co/allenai/Molmo2-8B/blob/main/README.md
+
+================================================================================
+
+MODEL 9: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID              : arcee-ai/trinity-mini:free
   Canonical Slug  : arcee-ai/trinity-mini-20251201
@@ -90,7 +99,7 @@ MODEL 8: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 9: mistralai/mistral-7b-instruct
+MODEL 10: mistralai/mistral-7b-instruct
 --------------------------------------------------
   ID              : mistralai/mistral-7b-instruct:free
   Canonical Slug  : mistralai/mistral-7b-instruct
@@ -99,7 +108,7 @@ MODEL 9: mistralai/mistral-7b-instruct
 
 ================================================================================
 
-MODEL 10: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 11: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID              : mistralai/mistral-small-3.1-24b-instruct:free
   Canonical Slug  : mistralai/mistral-small-3.1-24b-instruct-2503
@@ -108,7 +117,7 @@ MODEL 10: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 11: nvidia/nemotron-3-nano-30b-a3b
+MODEL 12: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID              : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug  : nvidia/nemotron-3-nano-30b-a3b
@@ -117,7 +126,7 @@ MODEL 11: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 12: nvidia/nemotron-nano-12b-v2-vl
+MODEL 13: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID              : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug  : nvidia/nemotron-nano-12b-v2-vl
@@ -126,21 +135,12 @@ MODEL 12: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 13: nvidia/nemotron-nano-9b-v2
+MODEL 14: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID              : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug  : nvidia/nemotron-nano-9b-v2
   HuggingFace ID  : nvidia/NVIDIA-Nemotron-Nano-9B-v2
   License Info URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md
-
-================================================================================
-
-MODEL 14: nex-agi/deepseek-v3.1-nex-n1
---------------------------------------------------
-  ID              : nex-agi/deepseek-v3.1-nex-n1:free
-  Canonical Slug  : nex-agi/deepseek-v3.1-nex-n1
-  HuggingFace ID  : nex-agi/DeepSeek-V3.1-Nex-N1
-  License Info URL: https://huggingface.co/nex-agi/DeepSeek-V3.1-Nex-N1/blob/main/README.md
 
 ================================================================================
 

@@ -1,10 +1,21 @@
 {
   "metadata": {
-    "generated_at": "2026-01-09 07:35:18 IST",
+    "generated_at": "2026-01-10 07:31:01 IST",
     "total_models": 16,
     "pipeline_stage": "K_collate_opensource_licenses"
   },
   "models": [
+    {
+      "id": "allenai/molmo-2-8b",
+      "canonical_slug": "allenai/molmo-2-8b-20260109",
+      "original_name": "AllenAI: Molmo2 8B",
+      "hugging_face_id": "allenai/Molmo2-8B",
+      "clean_model_name": "Molmo2 8B",
+      "license_info_text": "info",
+      "license_info_url": "https://huggingface.co/allenai/Molmo2-8B/blob/main/README.md",
+      "license_name": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
     {
       "id": "arcee-ai/trinity-mini:free",
       "canonical_slug": "arcee-ai/trinity-mini-20251201",
@@ -46,17 +57,6 @@
       "clean_model_name": "Mistral Small 3.1 24B",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/blob/main/README.md",
-      "license_name": "Apache-2.0",
-      "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
-    },
-    {
-      "id": "nex-agi/deepseek-v3.1-nex-n1:free",
-      "canonical_slug": "nex-agi/deepseek-v3.1-nex-n1",
-      "original_name": "Nex AGI: DeepSeek V3.1 Nex N1 (free)",
-      "hugging_face_id": "nex-agi/DeepSeek-V3.1-Nex-N1",
-      "clean_model_name": "DeepSeek V3.1 Nex N1",
-      "license_info_text": "info",
-      "license_info_url": "https://huggingface.co/nex-agi/DeepSeek-V3.1-Nex-N1/blob/main/README.md",
       "license_name": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },

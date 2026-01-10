@@ -1,10 +1,64 @@
 {
   "metadata": {
-    "generated_at": "2026-01-09 07:34:58 IST",
+    "generated_at": "2026-01-10 07:30:42 IST",
     "total_models": 31,
     "pipeline_stage": "B_filter_models"
   },
   "models": [
+    {
+      "id": "allenai/molmo-2-8b",
+      "canonical_slug": "allenai/molmo-2-8b-20260109",
+      "hugging_face_id": "allenai/Molmo2-8B",
+      "name": "AllenAI: Molmo2 8B",
+      "created": 1767996672,
+      "description": "Molmo2-8B is an open vision-language model developed by the Allen Institute for AI (Ai2) as part of the Molmo2 family, supporting image, video, and multi-image understanding and grounding. It is based on Qwen3-8B and uses SigLIP 2 as its vision backbone, outperforming other open-weight, open-data models on short videos, counting, and captioning, while remaining competitive on long-video tasks.",
+      "context_length": 36864,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0",
+        "request": "0",
+        "image": "0",
+        "web_search": "0",
+        "internal_reasoning": "0"
+      },
+      "top_provider": {
+        "context_length": 36864,
+        "max_completion_tokens": 36864,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "logit_bias",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "repetition_penalty",
+        "seed",
+        "stop",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      }
+    },
     {
       "id": "xiaomi/mimo-v2-flash:free",
       "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
@@ -154,57 +208,6 @@
       ],
       "default_parameters": {
         "temperature": 0.3,
-        "top_p": null,
-        "frequency_penalty": null
-      }
-    },
-    {
-      "id": "nex-agi/deepseek-v3.1-nex-n1:free",
-      "canonical_slug": "nex-agi/deepseek-v3.1-nex-n1",
-      "hugging_face_id": "nex-agi/DeepSeek-V3.1-Nex-N1",
-      "name": "Nex AGI: DeepSeek V3.1 Nex N1 (free)",
-      "created": 1765204393,
-      "description": "DeepSeek V3.1 Nex-N1 is the flagship release of the Nex-N1 series \u2014 a post-trained model designed to highlight agent autonomy, tool use, and real-world productivity. \n\nNex-N1 demonstrates competitive performance across all evaluation scenarios, showing particularly strong results in practical coding and HTML generation tasks.",
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "DeepSeek",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0",
-        "input_cache_read": "0",
-        "input_cache_write": "0"
-      },
-      "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": 163840,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "response_format",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": null,
         "top_p": null,
         "frequency_penalty": null
       }

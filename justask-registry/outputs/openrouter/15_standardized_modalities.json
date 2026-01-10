@@ -1,10 +1,24 @@
 {
   "metadata": {
-    "generated_at": "2026-01-09 07:35:19 IST",
+    "generated_at": "2026-01-10 07:31:02 IST",
     "total_models": 31,
     "pipeline_stage": "O_standardize_raw_modalities"
   },
   "models": [
+    {
+      "id": "allenai/molmo-2-8b",
+      "canonical_slug": "allenai/molmo-2-8b-20260109",
+      "original_name": "AllenAI: Molmo2 8B",
+      "hugging_face_id": "allenai/Molmo2-8B",
+      "clean_model_name": "Molmo2 8B",
+      "raw_input_modalities": "text, image, video",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text, image, video",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text, Image, Video",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model"
+    },
     {
       "id": "xiaomi/mimo-v2-flash:free",
       "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
@@ -39,20 +53,6 @@
       "original_name": "Mistral: Devstral 2 2512 (free)",
       "hugging_face_id": "mistralai/Devstral-2-123B-Instruct-2512",
       "clean_model_name": "Devstral 2 2512",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model"
-    },
-    {
-      "id": "nex-agi/deepseek-v3.1-nex-n1:free",
-      "canonical_slug": "nex-agi/deepseek-v3.1-nex-n1",
-      "original_name": "Nex AGI: DeepSeek V3.1 Nex N1 (free)",
-      "hugging_face_id": "nex-agi/DeepSeek-V3.1-Nex-N1",
-      "clean_model_name": "DeepSeek V3.1 Nex N1",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text",
       "enhanced_input_modalities": "text",

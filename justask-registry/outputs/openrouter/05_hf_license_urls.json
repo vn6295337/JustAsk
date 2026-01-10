@@ -1,10 +1,17 @@
 {
   "metadata": {
-    "generated_at": "2026-01-09 07:35:08 IST",
+    "generated_at": "2026-01-10 07:30:51 IST",
     "total_models": 21,
     "pipeline_stage": "E_fetch_other_license_info_urls_from_hf"
   },
   "models": [
+    {
+      "id": "allenai/molmo-2-8b",
+      "canonical_slug": "allenai/molmo-2-8b-20260109",
+      "name": "AllenAI: Molmo2 8B",
+      "hugging_face_id": "allenai/Molmo2-8B",
+      "license_info_url": "https://huggingface.co/allenai/Molmo2-8B/blob/main/README.md"
+    },
     {
       "id": "xiaomi/mimo-v2-flash:free",
       "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
@@ -25,13 +32,6 @@
       "name": "Mistral: Devstral 2 2512 (free)",
       "hugging_face_id": "mistralai/Devstral-2-123B-Instruct-2512",
       "license_info_url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512/blob/main/LICENSE"
-    },
-    {
-      "id": "nex-agi/deepseek-v3.1-nex-n1:free",
-      "canonical_slug": "nex-agi/deepseek-v3.1-nex-n1",
-      "name": "Nex AGI: DeepSeek V3.1 Nex N1 (free)",
-      "hugging_face_id": "nex-agi/DeepSeek-V3.1-Nex-N1",
-      "license_info_url": "https://huggingface.co/nex-agi/DeepSeek-V3.1-Nex-N1/blob/main/README.md"
     },
     {
       "id": "arcee-ai/trinity-mini:free",

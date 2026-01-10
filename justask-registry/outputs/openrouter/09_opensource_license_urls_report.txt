@@ -1,6 +1,6 @@
 ================================================================================
 OPENSOURCE LICENSE URLS ENRICHMENT REPORT
-Generated: 2026-01-09 07:35:15 IST
+Generated: 2026-01-10 07:30:59 IST
 ================================================================================
 
 SUMMARY:
@@ -25,7 +25,17 @@ Total mapping types: 3
 DETAILED MODEL LICENSE URL MAPPINGS:
 ================================================================================
 
-MODEL 1: arcee-ai/trinity-mini-20251201
+MODEL 1: allenai/molmo-2-8b-20260109
+--------------------------------------------------
+  ID                     : allenai/molmo-2-8b
+  Canonical Slug         : allenai/molmo-2-8b-20260109
+  HuggingFace ID         : allenai/Molmo2-8B
+  License Name           : Apache-2.0
+  Official License URL   : https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 2: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID                     : arcee-ai/trinity-mini:free
   Canonical Slug         : arcee-ai/trinity-mini-20251201
@@ -35,7 +45,7 @@ MODEL 1: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 2: mistralai/mistral-7b-instruct
+MODEL 3: mistralai/mistral-7b-instruct
 --------------------------------------------------
   ID                     : mistralai/mistral-7b-instruct:free
   Canonical Slug         : mistralai/mistral-7b-instruct
@@ -45,21 +55,11 @@ MODEL 2: mistralai/mistral-7b-instruct
 
 ================================================================================
 
-MODEL 3: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 4: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID                     : mistralai/mistral-small-3.1-24b-instruct:free
   Canonical Slug         : mistralai/mistral-small-3.1-24b-instruct-2503
   HuggingFace ID         : mistralai/Mistral-Small-3.1-24B-Instruct-2503
-  License Name           : Apache-2.0
-  Official License URL   : https://www.apache.org/licenses/LICENSE-2.0
-
-================================================================================
-
-MODEL 4: nex-agi/deepseek-v3.1-nex-n1
---------------------------------------------------
-  ID                     : nex-agi/deepseek-v3.1-nex-n1:free
-  Canonical Slug         : nex-agi/deepseek-v3.1-nex-n1
-  HuggingFace ID         : nex-agi/DeepSeek-V3.1-Nex-N1
   License Name           : Apache-2.0
   Official License URL   : https://www.apache.org/licenses/LICENSE-2.0
 

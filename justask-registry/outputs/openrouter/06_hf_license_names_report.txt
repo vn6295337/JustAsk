@@ -1,6 +1,6 @@
 ================================================================================
 OTHER MODEL LICENSE NAME EXTRACTIONS REPORT
-Generated: 2026-01-09 07:35:14 IST
+Generated: 2026-01-10 07:30:58 IST
 ================================================================================
 
 SUMMARY:
@@ -22,7 +22,16 @@ Total license types: 6
 DETAILED MODEL EXTRACTION RESULTS:
 ================================================================================
 
-MODEL 1: xiaomi/mimo-v2-flash-20251210
+MODEL 1: allenai/molmo-2-8b-20260109
+--------------------------------------------------
+  ID               : allenai/molmo-2-8b
+  Canonical Slug   : allenai/molmo-2-8b-20260109
+  HuggingFace ID   : allenai/Molmo2-8B
+  Extracted License: apache-2.0
+
+================================================================================
+
+MODEL 2: xiaomi/mimo-v2-flash-20251210
 --------------------------------------------------
   ID               : xiaomi/mimo-v2-flash:free
   Canonical Slug   : xiaomi/mimo-v2-flash-20251210
@@ -31,7 +40,7 @@ MODEL 1: xiaomi/mimo-v2-flash-20251210
 
 ================================================================================
 
-MODEL 2: nvidia/nemotron-3-nano-30b-a3b
+MODEL 3: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID               : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug   : nvidia/nemotron-3-nano-30b-a3b
@@ -40,21 +49,12 @@ MODEL 2: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 3: mistralai/devstral-2512
+MODEL 4: mistralai/devstral-2512
 --------------------------------------------------
   ID               : mistralai/devstral-2512:free
   Canonical Slug   : mistralai/devstral-2512
   HuggingFace ID   : mistralai/Devstral-2-123B-Instruct-2512
   Extracted License: other
-
-================================================================================
-
-MODEL 4: nex-agi/deepseek-v3.1-nex-n1
---------------------------------------------------
-  ID               : nex-agi/deepseek-v3.1-nex-n1:free
-  Canonical Slug   : nex-agi/deepseek-v3.1-nex-n1
-  HuggingFace ID   : nex-agi/DeepSeek-V3.1-Nex-N1
-  Extracted License: apache-2.0
 
 ================================================================================
 

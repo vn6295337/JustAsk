@@ -1,6 +1,6 @@
 ================================================================================
 DATABASE DATA FINALIZATION REPORT
-Generated: 2026-01-09 07:35:19 IST
+Generated: 2026-01-10 07:31:03 IST
 ================================================================================
 
 SUMMARY:
@@ -45,12 +45,12 @@ PROVIDER DISTRIBUTION (FINALIZED DATA):
    3 models: NVIDIA
    2 models: OpenAI
    2 models: TNG Technology
+   1 models: Ai2
    1 models: Arcee
    1 models: Cognitive Computations
    1 models: DeepSeek
    1 models: Kwaipilot
    1 models: Moonshot AI
-   1 models: Nex AGI
    1 models: Nous Research
    1 models: Xiaomi
    1 models: Z.AI

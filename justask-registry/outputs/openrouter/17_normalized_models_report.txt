@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-01-09 07:35:19 IST
+Generated: 2026-01-10 07:31:02 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -64,7 +64,17 @@ Missing license url: 1 (3.2%)
 COMPLETE MODEL RECORDS:
 ==================================================
 
-  1. Qwen2.5-VL 7B Instruct
+  1. Molmo2 8B
+     Provider           : Ai2 (United States)
+     Modalities         : Text, Image, Video → Text
+     License            : Apache-2.0
+     License Info       : info
+     License URL        : https://www.apache.org/licenses/LICENSE-2.0
+     Official URL       : https://allenai.org/
+     Rate Limits        : 20 requests/min 50/day
+     Provider API Access: https://openrouter.ai/settings/keys
+
+  2. Qwen2.5-VL 7B Instruct
      Provider           : Alibaba Cloud (China)
      Modalities         : Text, Image → Text
      License            : Apache-2.0
@@ -74,7 +84,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
-  2. Qwen3 4B
+  3. Qwen3 4B
      Provider           : Alibaba Cloud (China)
      Modalities         : Text → Text
      License            : Apache-2.0
@@ -84,7 +94,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
-  3. Qwen3 Coder 480B A35B
+  4. Qwen3 Coder 480B A35B
      Provider           : Alibaba Cloud (China)
      Modalities         : Text → Text
      License            : Apache-2.0
@@ -94,7 +104,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
-  4. Trinity Mini
+  5. Trinity Mini
      Provider           : Arcee (United States)
      Modalities         : Text → Text
      License            : Apache-2.0
@@ -104,7 +114,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
-  5. Uncensored
+  6. Uncensored
      Provider           : Cognitive Computations (United States)
      Modalities         : Text → Text
      License            : Apache-2.0
@@ -114,7 +124,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
-  6. R1 0528
+  7. R1 0528
      Provider           : DeepSeek (China)
      Modalities         : Text → Text
      License            : MIT
@@ -124,7 +134,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
-  7. Gemma 3 12B IT
+  8. Gemma 3 12B IT
      Provider           : Google (United States)
      Modalities         : Text, Image → Text
      License            : Gemma
@@ -134,7 +144,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
-  8. Gemma 3 27B IT
+  9. Gemma 3 27B IT
      Provider           : Google (United States)
      Modalities         : Text, Image → Text
      License            : Gemma
@@ -144,7 +154,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
-  9. Gemma 3 4B IT
+ 10. Gemma 3 4B IT
      Provider           : Google (United States)
      Modalities         : Text, Image → Text
      License            : Gemma
@@ -154,7 +164,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 10. Gemma 3n E2B IT
+ 11. Gemma 3n E2B IT
      Provider           : Google (United States)
      Modalities         : Text, Image, Audio, Video → Text
      License            : Gemma
@@ -164,7 +174,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 11. Gemma 3n E4B IT
+ 12. Gemma 3n E4B IT
      Provider           : Google (United States)
      Modalities         : Text, Image, Audio, Video → Text
      License            : Gemma
@@ -174,7 +184,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 12. KAT-Coder-Pro V1
+ 13. KAT-Coder-Pro V1
      Provider           : Kwaipilot (China)
      Modalities         : Text → Text
      License            : Apache-2.0
@@ -184,7 +194,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 13. Llama 3.1 405B Instruct
+ 14. Llama 3.1 405B Instruct
      Provider           : Meta (United States)
      Modalities         : Text → Text
      License            : Llama-3.1
@@ -194,7 +204,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 14. Llama 3.2 3B Instruct
+ 15. Llama 3.2 3B Instruct
      Provider           : Meta (United States)
      Modalities         : Text → Text
      License            : Llama-3.2
@@ -204,7 +214,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 15. Llama 3.3 70B Instruct
+ 16. Llama 3.3 70B Instruct
      Provider           : Meta (United States)
      Modalities         : Text → Text
      License            : Llama-3.3
@@ -214,7 +224,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 16. Devstral 2 2512
+ 17. Devstral 2 2512
      Provider           : Mistral AI (France)
      Modalities         : Text → Text
      License            : Modified MIT
@@ -224,7 +234,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 17. Mistral 7B Instruct
+ 18. Mistral 7B Instruct
      Provider           : Mistral AI (France)
      Modalities         : Text → Text
      License            : Apache-2.0
@@ -234,7 +244,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 18. Mistral Small 3.1 24B
+ 19. Mistral Small 3.1 24B
      Provider           : Mistral AI (France)
      Modalities         : Text, Image → Text
      License            : Apache-2.0
@@ -244,7 +254,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 19. Kimi K2 0711
+ 20. Kimi K2 0711
      Provider           : Moonshot AI (China)
      Modalities         : Text → Text
      License            : Modified MIT
@@ -254,7 +264,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 20. Nemotron 3 Nano 30B A3B
+ 21. Nemotron 3 Nano 30B A3B
      Provider           : NVIDIA (United States)
      Modalities         : Text → Text
      License            : NVIDIA
@@ -264,7 +274,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 21. Nemotron Nano 12B 2 VL
+ 22. Nemotron Nano 12B 2 VL
      Provider           : NVIDIA (United States)
      Modalities         : Text, Image, Video → Text
      License            : NVIDIA
@@ -274,23 +284,13 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 22. Nemotron Nano 9B V2
+ 23. Nemotron Nano 9B V2
      Provider           : NVIDIA (United States)
      Modalities         : Text → Text
      License            : NVIDIA
      License Info       : 
      License URL        : https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md
      Official URL       : https://build.nvidia.com/
-     Rate Limits        : 20 requests/min 50/day
-     Provider API Access: https://openrouter.ai/settings/keys
-
- 23. DeepSeek V3.1 Nex N1
-     Provider           : Nex AGI (China)
-     Modalities         : Text → Text
-     License            : Apache-2.0
-     License Info       : info
-     License URL        : https://www.apache.org/licenses/LICENSE-2.0
-     Official URL       : https://nex.sii.edu.cn/en/
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 

@@ -1,23 +1,23 @@
 {
   "metadata": {
-    "generated_at": "2026-01-09 07:35:15 IST",
+    "generated_at": "2026-01-10 07:30:58 IST",
     "total_models": 16,
     "pipeline_stage": "H_bucketize_other_license_names"
   },
   "models": [
+    {
+      "id": "allenai/molmo-2-8b",
+      "canonical_slug": "allenai/molmo-2-8b-20260109",
+      "name": "AllenAI: Molmo2 8B",
+      "hugging_face_id": "allenai/Molmo2-8B",
+      "license_name": "Apache-2.0"
+    },
     {
       "id": "xiaomi/mimo-v2-flash:free",
       "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
       "name": "Xiaomi: MiMo-V2-Flash (free)",
       "hugging_face_id": "XiaomiMiMo/MiMo-V2-Flash",
       "license_name": "MIT"
-    },
-    {
-      "id": "nex-agi/deepseek-v3.1-nex-n1:free",
-      "canonical_slug": "nex-agi/deepseek-v3.1-nex-n1",
-      "name": "Nex AGI: DeepSeek V3.1 Nex N1 (free)",
-      "hugging_face_id": "nex-agi/DeepSeek-V3.1-Nex-N1",
-      "license_name": "Apache-2.0"
     },
     {
       "id": "arcee-ai/trinity-mini:free",
