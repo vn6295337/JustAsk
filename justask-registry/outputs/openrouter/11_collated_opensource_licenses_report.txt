@@ -1,6 +1,6 @@
 ================================================================================
 COLLATED OPENSOURCE LICENSE INFORMATION REPORT
-Generated: 2026-01-10 07:31:01 IST
+Generated: 2026-01-11 07:43:30 IST
 ================================================================================
 
 SUMMARY:
@@ -26,8 +26,8 @@ DETAILED OPENSOURCE MODEL INFORMATION:
 
 MODEL 1: allenai/molmo-2-8b-20260109
 --------------------------------------------------
-  ID: allenai/molmo-2-8b
-  Original Name: AllenAI: Molmo2 8B
+  ID: allenai/molmo-2-8b:free
+  Original Name: AllenAI: Molmo2 8B (free)
   HuggingFace ID: allenai/Molmo2-8B
   Canonical Slug: allenai/molmo-2-8b-20260109
   Clean Model Name: Molmo2 8B

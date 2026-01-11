@@ -1,6 +1,6 @@
 ================================================================================
 OTHER MODEL LICENSE NAME EXTRACTIONS REPORT
-Generated: 2026-01-10 07:30:58 IST
+Generated: 2026-01-11 07:43:27 IST
 ================================================================================
 
 SUMMARY:
@@ -24,7 +24,7 @@ DETAILED MODEL EXTRACTION RESULTS:
 
 MODEL 1: allenai/molmo-2-8b-20260109
 --------------------------------------------------
-  ID               : allenai/molmo-2-8b
+  ID               : allenai/molmo-2-8b:free
   Canonical Slug   : allenai/molmo-2-8b-20260109
   HuggingFace ID   : allenai/Molmo2-8B
   Extracted License: apache-2.0

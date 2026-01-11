@@ -1,14 +1,14 @@
 {
   "metadata": {
-    "generated_at": "2026-01-10 07:30:58 IST",
+    "generated_at": "2026-01-11 07:43:27 IST",
     "total_models": 21,
     "pipeline_stage": "F_fetch_other_license_names_from_hf"
   },
   "models": [
     {
-      "id": "allenai/molmo-2-8b",
+      "id": "allenai/molmo-2-8b:free",
       "canonical_slug": "allenai/molmo-2-8b-20260109",
-      "name": "AllenAI: Molmo2 8B",
+      "name": "AllenAI: Molmo2 8B (free)",
       "hugging_face_id": "allenai/Molmo2-8B",
       "extracted_license": "apache-2.0"
     },
