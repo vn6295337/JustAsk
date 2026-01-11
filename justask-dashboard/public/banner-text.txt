@@ -1,1 +1,1 @@
-This Week - OpenRouter free tier: Removed tongyi-deepresearch-30B-A3B, olmo-3-32B-think, olmo-3.1-32B-think
+This Week - OpenRouter free tier: Added molmo2-8B. Removed deepSeek-v3.1-nex-n1, kat-coder-pro-v1.
