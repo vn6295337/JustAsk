@@ -1,6 +1,6 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-01-12 07:39:34 IST
+Generated: 2026-01-13 07:31:01 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
@@ -98,7 +98,7 @@ PROVIDER: MISTRAL (3 models)
 --------------------------------------------------
    1. Mistral: Devstral 2 2512 (free)
       ID: mistralai/devstral-2512:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    2. Mistral: Mistral 7B Instruct (free)
       ID: mistralai/mistral-7b-instruct:free
