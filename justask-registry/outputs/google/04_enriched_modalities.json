@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated": "2026-01-13 07:29:28 IST",
+    "generated": "2026-01-14 07:36:48 IST",
     "total_models": 23,
     "enrichment_source": "Google Pipeline 04_enrich_modalities"
   },
@@ -429,10 +429,10 @@
         "predictLongRunning"
       ],
       "provider_slug": "veo-3.0-generate-001",
-      "input_modalities": "Text, Image",
-      "output_modalities": "Audio, Video",
-      "modality_source": "scraped",
-      "match_priority": 1
+      "input_modalities": "Unknown",
+      "output_modalities": "Unknown",
+      "modality_source": "unknown",
+      "match_priority": 0
     },
     {
       "name": "models/veo-3.0-fast-generate-001",
@@ -445,10 +445,10 @@
         "predictLongRunning"
       ],
       "provider_slug": "veo-3.0-fast-generate-001",
-      "input_modalities": "Text, Image",
-      "output_modalities": "Audio, Video",
-      "modality_source": "scraped",
-      "match_priority": 1
+      "input_modalities": "Unknown",
+      "output_modalities": "Unknown",
+      "modality_source": "unknown",
+      "match_priority": 0
     }
   ]
 }
