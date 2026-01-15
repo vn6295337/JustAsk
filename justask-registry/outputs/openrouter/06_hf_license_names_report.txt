@@ -1,23 +1,22 @@
 ================================================================================
 OTHER MODEL LICENSE NAME EXTRACTIONS REPORT
-Generated: 2026-01-14 07:38:49 IST
+Generated: 2026-01-15 07:33:30 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 21
+  Total models : 17
   Input        : 05_hf_license_urls.json
   Processor    : step_06_fetch_hf_license_names.py
   Output       : 06_hf_license_names.json
 
 LICENSE DISTRIBUTION:
-  apache-2.0: 10
-  llama3: 1
+  apache-2.0: 7
   mit: 5
   modified-mit: 1
   nvidia-open-model-license: 3
   other: 1
 
-Total license types: 6
+Total license types: 5
 
 DETAILED MODEL EXTRACTION RESULTS:
 ================================================================================
@@ -130,16 +129,7 @@ MODEL 12: moonshotai/kimi-k2
 
 ================================================================================
 
-MODEL 13: venice/uncensored
---------------------------------------------------
-  ID               : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
-  Canonical Slug   : venice/uncensored
-  HuggingFace ID   : cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition
-  Extracted License: apache-2.0
-
-================================================================================
-
-MODEL 14: tngtech/deepseek-r1t2-chimera
+MODEL 13: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID               : tngtech/deepseek-r1t2-chimera:free
   Canonical Slug   : tngtech/deepseek-r1t2-chimera
@@ -148,7 +138,7 @@ MODEL 14: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 15: deepseek/deepseek-r1-0528
+MODEL 14: deepseek/deepseek-r1-0528
 --------------------------------------------------
   ID               : deepseek/deepseek-r1-0528:free
   Canonical Slug   : deepseek/deepseek-r1-0528
@@ -157,16 +147,7 @@ MODEL 15: deepseek/deepseek-r1-0528
 
 ================================================================================
 
-MODEL 16: qwen/qwen3-4b-04-28
---------------------------------------------------
-  ID               : qwen/qwen3-4b:free
-  Canonical Slug   : qwen/qwen3-4b-04-28
-  HuggingFace ID   : Qwen/Qwen3-4B
-  Extracted License: apache-2.0
-
-================================================================================
-
-MODEL 17: tngtech/deepseek-r1t-chimera
+MODEL 15: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID               : tngtech/deepseek-r1t-chimera:free
   Canonical Slug   : tngtech/deepseek-r1t-chimera
@@ -175,16 +156,7 @@ MODEL 17: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 18: mistralai/mistral-small-3.1-24b-instruct-2503
---------------------------------------------------
-  ID               : mistralai/mistral-small-3.1-24b-instruct:free
-  Canonical Slug   : mistralai/mistral-small-3.1-24b-instruct-2503
-  HuggingFace ID   : mistralai/Mistral-Small-3.1-24B-Instruct-2503
-  Extracted License: apache-2.0
-
-================================================================================
-
-MODEL 19: qwen/qwen-2-vl-7b-instruct
+MODEL 16: qwen/qwen-2-vl-7b-instruct
 --------------------------------------------------
   ID               : qwen/qwen-2.5-vl-7b-instruct:free
   Canonical Slug   : qwen/qwen-2-vl-7b-instruct
@@ -193,16 +165,7 @@ MODEL 19: qwen/qwen-2-vl-7b-instruct
 
 ================================================================================
 
-MODEL 20: nousresearch/hermes-3-llama-3.1-405b
---------------------------------------------------
-  ID               : nousresearch/hermes-3-llama-3.1-405b:free
-  Canonical Slug   : nousresearch/hermes-3-llama-3.1-405b
-  HuggingFace ID   : NousResearch/Hermes-3-Llama-3.1-405B
-  Extracted License: llama3
-
-================================================================================
-
-MODEL 21: mistralai/mistral-7b-instruct
+MODEL 17: mistralai/mistral-7b-instruct
 --------------------------------------------------
   ID               : mistralai/mistral-7b-instruct:free
   Canonical Slug   : mistralai/mistral-7b-instruct

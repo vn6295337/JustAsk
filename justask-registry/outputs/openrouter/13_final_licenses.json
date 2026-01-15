@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-01-14 07:38:53 IST",
-    "total_models": 33,
+    "generated_at": "2026-01-15 07:33:35 IST",
+    "total_models": 28,
     "pipeline_stage": "M_final_list_of_licenses"
   },
   "models": [
@@ -138,18 +138,6 @@
       "source_category": "meta"
     },
     {
-      "id": "meta-llama/llama-3.2-3b-instruct:free",
-      "canonical_slug": "meta-llama/llama-3.2-3b-instruct",
-      "original_name": "Meta: Llama 3.2 3B Instruct (free)",
-      "hugging_face_id": "meta-llama/Llama-3.2-3B-Instruct",
-      "clean_model_name": "Llama 3.2 3B Instruct",
-      "license_info_text": "",
-      "license_info_url": "",
-      "license_name": "Llama-3.2",
-      "license_url": "https://www.llama.com/llama3_2/license/",
-      "source_category": "meta"
-    },
-    {
       "id": "meta-llama/llama-3.3-70b-instruct:free",
       "canonical_slug": "meta-llama/llama-3.3-70b-instruct",
       "original_name": "Meta: Llama 3.3 70B Instruct (free)",
@@ -186,18 +174,6 @@
       "source_category": "opensource"
     },
     {
-      "id": "mistralai/mistral-small-3.1-24b-instruct:free",
-      "canonical_slug": "mistralai/mistral-small-3.1-24b-instruct-2503",
-      "original_name": "Mistral: Mistral Small 3.1 24B (free)",
-      "hugging_face_id": "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
-      "clean_model_name": "Mistral Small 3.1 24B",
-      "license_info_text": "info",
-      "license_info_url": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/blob/main/README.md",
-      "license_name": "Apache-2.0",
-      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_category": "opensource"
-    },
-    {
       "id": "moonshotai/kimi-k2:free",
       "canonical_slug": "moonshotai/kimi-k2",
       "original_name": "MoonshotAI: Kimi K2 0711 (free)",
@@ -208,18 +184,6 @@
       "license_name": "Modified MIT",
       "license_url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct/blob/main/LICENSE",
       "source_category": "custom"
-    },
-    {
-      "id": "nousresearch/hermes-3-llama-3.1-405b:free",
-      "canonical_slug": "nousresearch/hermes-3-llama-3.1-405b",
-      "original_name": "Nous: Hermes 3 405B Instruct (free)",
-      "hugging_face_id": "NousResearch/Hermes-3-Llama-3.1-405B",
-      "clean_model_name": "Hermes 3 405B Instruct",
-      "license_info_text": "info",
-      "license_info_url": "https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-405B/blob/main/README.md",
-      "license_name": "Llama-3.1",
-      "license_url": "https://www.llama.com/llama3_1/license/",
-      "source_category": "opensource"
     },
     {
       "id": "nvidia/nemotron-3-nano-30b-a3b:free",
@@ -294,18 +258,6 @@
       "source_category": "opensource"
     },
     {
-      "id": "qwen/qwen3-4b:free",
-      "canonical_slug": "qwen/qwen3-4b-04-28",
-      "original_name": "Qwen: Qwen3 4B (free)",
-      "hugging_face_id": "Qwen/Qwen3-4B",
-      "clean_model_name": "Qwen3 4B",
-      "license_info_text": "info",
-      "license_info_url": "https://huggingface.co/Qwen/Qwen3-4B/blob/main/LICENSE",
-      "license_name": "Apache-2.0",
-      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_category": "opensource"
-    },
-    {
       "id": "qwen/qwen3-coder:free",
       "canonical_slug": "qwen/qwen3-coder-480b-a35b-07-25",
       "original_name": "Qwen: Qwen3 Coder 480B A35B (free)",
@@ -339,18 +291,6 @@
       "license_info_url": "https://huggingface.co/tngtech/DeepSeek-TNG-R1T2-Chimera/blob/main/README.md",
       "license_name": "MIT",
       "license_url": "https://opensource.org/licenses/MIT",
-      "source_category": "opensource"
-    },
-    {
-      "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
-      "canonical_slug": "venice/uncensored",
-      "original_name": "Venice: Uncensored (free)",
-      "hugging_face_id": "cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition",
-      "clean_model_name": "Uncensored",
-      "license_info_text": "info",
-      "license_info_url": "https://huggingface.co/cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition/blob/main/README.md",
-      "license_name": "Apache-2.0",
-      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
       "source_category": "opensource"
     },
     {

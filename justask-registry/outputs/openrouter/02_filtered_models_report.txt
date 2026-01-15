@@ -1,39 +1,39 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-01-14 07:38:30 IST
+Generated: 2026-01-15 07:33:17 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 348
-  Models passed all filters: 30
-  Models excluded: 318
-  Success rate: 8.6%
+  Total models processed: 339
+  Models passed all filters: 25
+  Models excluded: 314
+  Success rate: 7.4%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 348 models
-    Excluded: 317 models (non-free pricing)
-    Remaining: 31 models
+    Input: 339 models
+    Excluded: 313 models (non-free pricing)
+    Remaining: 26 models
 
   Step 2 - Billing Description Filter:
-    Input: 31 models
+    Input: 26 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 31 models
+    Remaining: 26 models
 
   Step 3 - Keyword Filter:
-    Input: 31 models
+    Input: 26 models
     Excluded: 1 models (preview/experimental/beta)
-    Remaining: 30 models
+    Remaining: 25 models
 
   Step 4 - Deduplication Filter:
-    Input: 30 models
+    Input: 25 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 30 models
+    Final: 25 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 317 models with non-free pricing (details omitted due to volume)
+Excluded 313 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -94,21 +94,6 @@ PROVIDER: NVIDIA (3 models)
       Pricing: prompt=0, completion=0, request=0
 
 
-PROVIDER: MISTRAL (3 models)
---------------------------------------------------
-   1. Mistral: Devstral 2 2512 (free)
-      ID: mistralai/devstral-2512:free
-      Pricing: prompt=0, completion=0, request=N/A
-
-   2. Mistral: Mistral 7B Instruct (free)
-      ID: mistralai/mistral-7b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
-
-   3. Mistral: Mistral Small 3.1 24B (free)
-      ID: mistralai/mistral-small-3.1-24b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
-
-
 PROVIDER: TNG (3 models)
 --------------------------------------------------
    1. TNG: DeepSeek R1T Chimera (free)
@@ -124,33 +109,14 @@ PROVIDER: TNG (3 models)
       Pricing: prompt=0, completion=0, request=0
 
 
-PROVIDER: QWEN (3 models)
+PROVIDER: MISTRAL (2 models)
 --------------------------------------------------
-   1. Qwen: Qwen2.5-VL 7B Instruct (free)
-      ID: qwen/qwen-2.5-vl-7b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
+   1. Mistral: Devstral 2 2512 (free)
+      ID: mistralai/devstral-2512:free
+      Pricing: prompt=0, completion=0, request=N/A
 
-   2. Qwen: Qwen3 4B (free)
-      ID: qwen/qwen3-4b:free
-      Pricing: prompt=0, completion=0, request=0
-
-   3. Qwen: Qwen3 Coder 480B A35B (free)
-      ID: qwen/qwen3-coder:free
-      Pricing: prompt=0, completion=0, request=0
-
-
-PROVIDER: META (3 models)
---------------------------------------------------
-   1. Meta: Llama 3.1 405B Instruct (free)
-      ID: meta-llama/llama-3.1-405b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
-
-   2. Meta: Llama 3.2 3B Instruct (free)
-      ID: meta-llama/llama-3.2-3b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
-
-   3. Meta: Llama 3.3 70B Instruct (free)
-      ID: meta-llama/llama-3.3-70b-instruct:free
+   2. Mistral: Mistral 7B Instruct (free)
+      ID: mistralai/mistral-7b-instruct:free
       Pricing: prompt=0, completion=0, request=0
 
 
@@ -162,6 +128,28 @@ PROVIDER: OPENAI (2 models)
 
    2. OpenAI: gpt-oss-20b (free)
       ID: openai/gpt-oss-20b:free
+      Pricing: prompt=0, completion=0, request=0
+
+
+PROVIDER: QWEN (2 models)
+--------------------------------------------------
+   1. Qwen: Qwen2.5-VL 7B Instruct (free)
+      ID: qwen/qwen-2.5-vl-7b-instruct:free
+      Pricing: prompt=0, completion=0, request=0
+
+   2. Qwen: Qwen3 Coder 480B A35B (free)
+      ID: qwen/qwen3-coder:free
+      Pricing: prompt=0, completion=0, request=0
+
+
+PROVIDER: META (2 models)
+--------------------------------------------------
+   1. Meta: Llama 3.1 405B Instruct (free)
+      ID: meta-llama/llama-3.1-405b-instruct:free
+      Pricing: prompt=0, completion=0, request=0
+
+   2. Meta: Llama 3.3 70B Instruct (free)
+      ID: meta-llama/llama-3.3-70b-instruct:free
       Pricing: prompt=0, completion=0, request=0
 
 
@@ -200,13 +188,6 @@ PROVIDER: MOONSHOTAI (1 models)
       Pricing: prompt=0, completion=0, request=0
 
 
-PROVIDER: VENICE (1 models)
---------------------------------------------------
-   1. Venice: Uncensored (free)
-      ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
-      Pricing: prompt=0, completion=0, request=0
-
-
 PROVIDER: DEEPSEEK (1 models)
 --------------------------------------------------
    1. DeepSeek: R1 0528 (free)
@@ -214,20 +195,13 @@ PROVIDER: DEEPSEEK (1 models)
       Pricing: prompt=0, completion=0, request=0
 
 
-PROVIDER: NOUS (1 models)
---------------------------------------------------
-   1. Nous: Hermes 3 405B Instruct (free)
-      ID: nousresearch/hermes-3-llama-3.1-405b:free
-      Pricing: prompt=0, completion=0, request=0
-
-
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 15
-  Total models passed all filters: 30
-  Models excluded by pricing: 317
+  Total providers: 13
+  Total models passed all filters: 25
+  Models excluded by pricing: 313
   Models excluded by billing description: 0
   Models excluded by keywords: 1
   Models excluded by deduplication: 0
-  Total exclusions: 318
+  Total exclusions: 314
   ✓ All filtered models accounted for
