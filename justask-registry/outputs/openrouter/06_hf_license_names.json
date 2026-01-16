@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-01-15 07:33:30 IST",
-    "total_models": 17,
+    "generated_at": "2026-01-16 07:35:11 IST",
+    "total_models": 21,
     "pipeline_stage": "F_fetch_other_license_names_from_hf"
   },
   "models": [
@@ -48,6 +48,13 @@
       "extracted_license": "nvidia-open-model-license"
     },
     {
+      "id": "qwen/qwen3-next-80b-a3b-instruct:free",
+      "canonical_slug": "qwen/qwen3-next-80b-a3b-instruct-2509",
+      "name": "Qwen: Qwen3 Next 80B A3B Instruct (free)",
+      "hugging_face_id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+      "extracted_license": "apache-2.0"
+    },
+    {
       "id": "nvidia/nemotron-nano-9b-v2:free",
       "canonical_slug": "nvidia/nemotron-nano-9b-v2",
       "name": "NVIDIA: Nemotron Nano 9B V2 (free)",
@@ -90,6 +97,13 @@
       "extracted_license": "modified-mit"
     },
     {
+      "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
+      "canonical_slug": "venice/uncensored",
+      "name": "Venice: Uncensored (free)",
+      "hugging_face_id": "cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition",
+      "extracted_license": "apache-2.0"
+    },
+    {
       "id": "tngtech/deepseek-r1t2-chimera:free",
       "canonical_slug": "tngtech/deepseek-r1t2-chimera",
       "name": "TNG: DeepSeek R1T2 Chimera (free)",
@@ -104,11 +118,25 @@
       "extracted_license": "mit"
     },
     {
+      "id": "qwen/qwen3-4b:free",
+      "canonical_slug": "qwen/qwen3-4b-04-28",
+      "name": "Qwen: Qwen3 4B (free)",
+      "hugging_face_id": "Qwen/Qwen3-4B",
+      "extracted_license": "apache-2.0"
+    },
+    {
       "id": "tngtech/deepseek-r1t-chimera:free",
       "canonical_slug": "tngtech/deepseek-r1t-chimera",
       "name": "TNG: DeepSeek R1T Chimera (free)",
       "hugging_face_id": "tngtech/DeepSeek-R1T-Chimera",
       "extracted_license": "mit"
+    },
+    {
+      "id": "mistralai/mistral-small-3.1-24b-instruct:free",
+      "canonical_slug": "mistralai/mistral-small-3.1-24b-instruct-2503",
+      "name": "Mistral: Mistral Small 3.1 24B (free)",
+      "hugging_face_id": "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+      "extracted_license": "apache-2.0"
     },
     {
       "id": "qwen/qwen-2.5-vl-7b-instruct:free",
@@ -118,11 +146,11 @@
       "extracted_license": "apache-2.0"
     },
     {
-      "id": "mistralai/mistral-7b-instruct:free",
-      "canonical_slug": "mistralai/mistral-7b-instruct",
-      "name": "Mistral: Mistral 7B Instruct (free)",
-      "hugging_face_id": "mistralai/Mistral-7B-Instruct-v0.3",
-      "extracted_license": "apache-2.0"
+      "id": "nousresearch/hermes-3-llama-3.1-405b:free",
+      "canonical_slug": "nousresearch/hermes-3-llama-3.1-405b",
+      "name": "Nous: Hermes 3 405B Instruct (free)",
+      "hugging_face_id": "NousResearch/Hermes-3-Llama-3.1-405B",
+      "extracted_license": "llama3"
     }
   ]
 }

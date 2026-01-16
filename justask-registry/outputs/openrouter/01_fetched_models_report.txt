@@ -1,15 +1,14 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-01-15 07:33:17 IST
+Generated: 2026-01-16 07:34:58 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 339
+  Total models: 328
 
 PROVIDER BREAKDOWN (Descending Order):
-  OpenAI          :  57 models
+  OpenAI          :  56 models
     - chatgpt-4o-latest
-    - codex-mini
     - gpt-3.5-turbo
     - gpt-3.5-turbo-0613
     - gpt-3.5-turbo-16k
@@ -66,17 +65,10 @@ PROVIDER BREAKDOWN (Descending Order):
     - o4-mini-deep-research
     - o4-mini-high
 
-  Qwen            :  39 models
+  Qwen            :  30 models
     - qwen-2.5-7b-instruct
     - qwen-2.5-vl-7b-instruct
     - qwen-2.5-vl-7b-instruct:free
-    - qwen-max
-    - qwen-plus
-    - qwen-plus-2025-07-28
-    - qwen-plus-2025-07-28:thinking
-    - qwen-turbo
-    - qwen-vl-max
-    - qwen-vl-plus
     - qwen2.5-coder-7b-instruct
     - qwen2.5-vl-32b-instruct
     - qwen2.5-vl-72b-instruct
@@ -88,15 +80,14 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3-30b-a3b-instruct-2507
     - qwen3-30b-a3b-thinking-2507
     - qwen3-32b
+    - qwen3-4b:free
     - qwen3-8b
     - qwen3-coder
     - qwen3-coder-30b-a3b-instruct
-    - qwen3-coder-flash
-    - qwen3-coder-plus
     - qwen3-coder:exacto
     - qwen3-coder:free
-    - qwen3-max
     - qwen3-next-80b-a3b-instruct
+    - qwen3-next-80b-a3b-instruct:free
     - qwen3-next-80b-a3b-thinking
     - qwen3-vl-235b-a22b-instruct
     - qwen3-vl-235b-a22b-thinking
@@ -104,16 +95,14 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3-vl-30b-a3b-thinking
     - qwen3-vl-32b-instruct
     - qwen3-vl-8b-instruct
-    - qwen3-vl-8b-thinking
     - qwq-32b
 
-  Mistral         :  30 models
+  Mistral         :  29 models
     - codestral-2508
     - devstral-2512
     - devstral-2512:free
     - devstral-medium
     - devstral-small
-    - devstral-small-2505
     - ministral-14b-2512
     - ministral-3b
     - ministral-3b-2512
@@ -123,7 +112,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - mistral-7b-instruct-v0.1
     - mistral-7b-instruct-v0.2
     - mistral-7b-instruct-v0.3
-    - mistral-7b-instruct:free
     - mistral-large-2512
     - mistral-medium-3
     - mistral-medium-3.1
@@ -131,6 +119,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - mistral-saba
     - mistral-small-24b-instruct-2501
     - mistral-small-3.1-24b-instruct
+    - mistral-small-3.1-24b-instruct:free
     - mistral-small-3.2-24b-instruct
     - mistral-small-creative
     - mixtral-8x22b-instruct
@@ -145,9 +134,9 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemini-2.0-flash-lite-001
     - gemini-2.5-flash
     - gemini-2.5-flash-image
-    - gemini-2.5-flash-image-preview
     - gemini-2.5-flash-lite
     - gemini-2.5-flash-lite-preview-09-2025
+    - gemini-2.5-flash-preview-09-2025
     - gemini-2.5-pro
     - gemini-2.5-pro-preview
     - gemini-2.5-pro-preview-05-06
@@ -177,7 +166,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - llama-3.2-11b-vision-instruct
     - llama-3.2-1b-instruct
     - llama-3.2-3b-instruct
-    - llama-3.2-90b-vision-instruct
+    - llama-3.2-3b-instruct:free
     - llama-3.3-70b-instruct
     - llama-3.3-70b-instruct:free
     - llama-4-maverick
@@ -185,11 +174,10 @@ PROVIDER BREAKDOWN (Descending Order):
     - llama-guard-2-8b
     - llama-guard-4-12b
 
-  DeepSeek        :  14 models
+  DeepSeek        :  13 models
     - deepseek-chat
     - deepseek-chat-v3-0324
     - deepseek-chat-v3.1
-    - deepseek-prover-v2
     - deepseek-r1
     - deepseek-r1-0528
     - deepseek-r1-0528:free
@@ -279,6 +267,14 @@ PROVIDER BREAKDOWN (Descending Order):
     - kimi-k2-thinking
     - kimi-k2:free
 
+  Nous            :   6 models
+    - deephermes-3-mistral-24b-preview
+    - hermes-3-llama-3.1-405b
+    - hermes-3-llama-3.1-405b:free
+    - hermes-3-llama-3.1-70b
+    - hermes-4-405b
+    - hermes-4-70b
+
   Amazon          :   5 models
     - nova-2-lite-v1
     - nova-lite-v1
@@ -299,13 +295,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - ernie-4.5-300b-a47b
     - ernie-4.5-vl-28b-a3b
     - ernie-4.5-vl-424b-a47b
-
-  Nous            :   5 models
-    - deephermes-3-mistral-24b-preview
-    - hermes-3-llama-3.1-405b
-    - hermes-3-llama-3.1-70b
-    - hermes-4-405b
-    - hermes-4-70b
 
   MiniMax         :   4 models
     - minimax-01
@@ -336,11 +325,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - cogito-v2-preview-llama-70b
     - cogito-v2.1-671b
 
-  Microsoft       :   3 models
-    - phi-4
-    - phi-4-multimodal-instruct
-    - phi-4-reasoning-plus
-
   AionLabs        :   3 models
     - aion-1.0
     - aion-1.0-mini
@@ -349,6 +333,10 @@ PROVIDER BREAKDOWN (Descending Order):
   ByteDance Seed  :   2 models
     - seed-1.6
     - seed-1.6-flash
+
+  Xiaomi          :   2 models
+    - mimo-v2-flash
+    - mimo-v2-flash:free
 
   Relace          :   2 models
     - relace-apply-3
@@ -369,9 +357,6 @@ PROVIDER BREAKDOWN (Descending Order):
   Inflection      :   2 models
     - inflection-3-pi
     - inflection-3-productivity
-
-  Xiaomi          :   1 models
-    - mimo-v2-flash:free
 
   Nex AGI         :   1 models
     - deepseek-v3.1-nex-n1
@@ -400,6 +385,9 @@ PROVIDER BREAKDOWN (Descending Order):
   ByteDance       :   1 models
     - ui-tars-1.5-7b
 
+  Venice          :   1 models
+    - dolphin-mistral-24b-venice-edition:free
+
   Tencent         :   1 models
     - hunyuan-a13b-instruct
 
@@ -408,6 +396,9 @@ PROVIDER BREAKDOWN (Descending Order):
 
   AlfredPros      :   1 models
     - codellama-7b-instruct-solidity
+
+  Microsoft       :   1 models
+    - phi-4
 
   NeverSleep      :   1 models
     - llama-3.1-lumimaid-8b
@@ -421,4 +412,4 @@ PROVIDER BREAKDOWN (Descending Order):
   Mancer          :   1 models
     - weaver
 
-Total providers: 48
+Total providers: 49

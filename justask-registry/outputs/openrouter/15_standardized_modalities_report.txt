@@ -1,39 +1,39 @@
 ================================================================================
 STANDARDIZED MODALITIES REPORT
-Generated: 2026-01-15 07:33:35 IST
+Generated: 2026-01-16 07:35:14 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 25
+  Total models : 30
   Input        : 14_raw_modalities.json
   Config       : modality_standardization.json
   Processor    : step_15_standardize_modalities.py
   Output       : 15_standardized_modalities.json
 
 STANDARDIZED INPUT MODALITIES DISTRIBUTION:
-  17 models: Text
-   4 models: Text, Image
+  21 models: Text
+   5 models: Text, Image
    2 models: Text, Image, Audio, Video
    2 models: Text, Image, Video
 
 Total unique input types: 4
 
 STANDARDIZED OUTPUT MODALITIES DISTRIBUTION:
-  25 models: Text
+  30 models: Text
 
 Total unique output types: 1
 
 STANDARDIZED MODALITY COMBINATIONS (INPUT → OUTPUT):
-  17 models: Text → Text
-   4 models: Text, Image → Text
+  21 models: Text → Text
+   5 models: Text, Image → Text
    2 models: Text, Image, Audio, Video → Text
    2 models: Text, Image, Video → Text
 
 Total unique combinations: 4
 
 STANDARDIZATION IMPACT ANALYSIS:
-  Input modalities changed: 25 models
-  Output modalities changed: 25 models
+  Input modalities changed: 30 models
+  Output modalities changed: 30 models
   Input modalities unchanged: 0 models
   Output modalities unchanged: 0 models
 
@@ -124,7 +124,21 @@ MODEL 6: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 7: moonshotai/kimi-k2
+MODEL 7: nousresearch/hermes-3-llama-3.1-405b
+--------------------------------------------------
+  ID: nousresearch/hermes-3-llama-3.1-405b:free
+  Original Name: Nous: Hermes 3 405B Instruct (free)
+  HuggingFace ID: NousResearch/Hermes-3-Llama-3.1-405B
+  Canonical Slug: nousresearch/hermes-3-llama-3.1-405b
+  Clean Model Name: Hermes 3 405B Instruct
+  Raw Input Modalities: text
+  Raw Output Modalities: text
+  Standardized Input Modalities: Text
+  Standardized Output Modalities: Text
+
+================================================================================
+
+MODEL 8: moonshotai/kimi-k2
 --------------------------------------------------
   ID: moonshotai/kimi-k2:free
   Original Name: MoonshotAI: Kimi K2 0711 (free)
@@ -138,7 +152,7 @@ MODEL 7: moonshotai/kimi-k2
 
 ================================================================================
 
-MODEL 8: meta-llama/llama-3.1-405b-instruct
+MODEL 9: meta-llama/llama-3.1-405b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.1-405b-instruct:free
   Original Name: Meta: Llama 3.1 405B Instruct (free)
@@ -152,7 +166,21 @@ MODEL 8: meta-llama/llama-3.1-405b-instruct
 
 ================================================================================
 
-MODEL 9: meta-llama/llama-3.3-70b-instruct
+MODEL 10: meta-llama/llama-3.2-3b-instruct
+--------------------------------------------------
+  ID: meta-llama/llama-3.2-3b-instruct:free
+  Original Name: Meta: Llama 3.2 3B Instruct (free)
+  HuggingFace ID: meta-llama/Llama-3.2-3B-Instruct
+  Canonical Slug: meta-llama/llama-3.2-3b-instruct
+  Clean Model Name: Llama 3.2 3B Instruct
+  Raw Input Modalities: text
+  Raw Output Modalities: text
+  Standardized Input Modalities: Text
+  Standardized Output Modalities: Text
+
+================================================================================
+
+MODEL 11: meta-llama/llama-3.3-70b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.3-70b-instruct:free
   Original Name: Meta: Llama 3.3 70B Instruct (free)
@@ -166,7 +194,7 @@ MODEL 9: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 10: xiaomi/mimo-v2-flash-20251210
+MODEL 12: xiaomi/mimo-v2-flash-20251210
 --------------------------------------------------
   ID: xiaomi/mimo-v2-flash:free
   Original Name: Xiaomi: MiMo-V2-Flash (free)
@@ -180,21 +208,7 @@ MODEL 10: xiaomi/mimo-v2-flash-20251210
 
 ================================================================================
 
-MODEL 11: mistralai/mistral-7b-instruct
---------------------------------------------------
-  ID: mistralai/mistral-7b-instruct:free
-  Original Name: Mistral: Mistral 7B Instruct (free)
-  HuggingFace ID: mistralai/Mistral-7B-Instruct-v0.3
-  Canonical Slug: mistralai/mistral-7b-instruct
-  Clean Model Name: Mistral 7B Instruct
-  Raw Input Modalities: text
-  Raw Output Modalities: text
-  Standardized Input Modalities: Text
-  Standardized Output Modalities: Text
-
-================================================================================
-
-MODEL 12: nvidia/nemotron-3-nano-30b-a3b
+MODEL 13: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -208,7 +222,7 @@ MODEL 12: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 13: nvidia/nemotron-nano-9b-v2
+MODEL 14: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -222,7 +236,21 @@ MODEL 13: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 14: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 15: qwen/qwen3-4b-04-28
+--------------------------------------------------
+  ID: qwen/qwen3-4b:free
+  Original Name: Qwen: Qwen3 4B (free)
+  HuggingFace ID: Qwen/Qwen3-4B
+  Canonical Slug: qwen/qwen3-4b-04-28
+  Clean Model Name: Qwen3 4B
+  Raw Input Modalities: text
+  Raw Output Modalities: text
+  Standardized Input Modalities: Text
+  Standardized Output Modalities: Text
+
+================================================================================
+
+MODEL 16: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -236,7 +264,21 @@ MODEL 14: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 15: deepseek/deepseek-r1-0528
+MODEL 17: qwen/qwen3-next-80b-a3b-instruct-2509
+--------------------------------------------------
+  ID: qwen/qwen3-next-80b-a3b-instruct:free
+  Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
+  HuggingFace ID: Qwen/Qwen3-Next-80B-A3B-Instruct
+  Canonical Slug: qwen/qwen3-next-80b-a3b-instruct-2509
+  Clean Model Name: Qwen3 Next 80B A3B Instruct
+  Raw Input Modalities: text
+  Raw Output Modalities: text
+  Standardized Input Modalities: Text
+  Standardized Output Modalities: Text
+
+================================================================================
+
+MODEL 18: deepseek/deepseek-r1-0528
 --------------------------------------------------
   ID: deepseek/deepseek-r1-0528:free
   Original Name: DeepSeek: R1 0528 (free)
@@ -250,7 +292,7 @@ MODEL 15: deepseek/deepseek-r1-0528
 
 ================================================================================
 
-MODEL 16: tngtech/tng-r1t-chimera
+MODEL 19: tngtech/tng-r1t-chimera
 --------------------------------------------------
   ID: tngtech/tng-r1t-chimera:free
   Original Name: TNG: R1T Chimera (free)
@@ -264,7 +306,7 @@ MODEL 16: tngtech/tng-r1t-chimera
 
 ================================================================================
 
-MODEL 17: arcee-ai/trinity-mini-20251201
+MODEL 20: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID: arcee-ai/trinity-mini:free
   Original Name: Arcee AI: Trinity Mini (free)
@@ -278,7 +320,21 @@ MODEL 17: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 18: google/gemma-3-12b-it
+MODEL 21: venice/uncensored
+--------------------------------------------------
+  ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
+  Original Name: Venice: Uncensored (free)
+  HuggingFace ID: cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition
+  Canonical Slug: venice/uncensored
+  Clean Model Name: Uncensored
+  Raw Input Modalities: text
+  Raw Output Modalities: text
+  Standardized Input Modalities: Text
+  Standardized Output Modalities: Text
+
+================================================================================
+
+MODEL 22: google/gemma-3-12b-it
 --------------------------------------------------
   ID: google/gemma-3-12b-it:free
   Original Name: Google: Gemma 3 12B (free)
@@ -292,7 +348,7 @@ MODEL 18: google/gemma-3-12b-it
 
 ================================================================================
 
-MODEL 19: google/gemma-3-27b-it
+MODEL 23: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
@@ -306,7 +362,7 @@ MODEL 19: google/gemma-3-27b-it
 
 ================================================================================
 
-MODEL 20: google/gemma-3-4b-it
+MODEL 24: google/gemma-3-4b-it
 --------------------------------------------------
   ID: google/gemma-3-4b-it:free
   Original Name: Google: Gemma 3 4B (free)
@@ -320,7 +376,21 @@ MODEL 20: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 21: qwen/qwen-2-vl-7b-instruct
+MODEL 25: mistralai/mistral-small-3.1-24b-instruct-2503
+--------------------------------------------------
+  ID: mistralai/mistral-small-3.1-24b-instruct:free
+  Original Name: Mistral: Mistral Small 3.1 24B (free)
+  HuggingFace ID: mistralai/Mistral-Small-3.1-24B-Instruct-2503
+  Canonical Slug: mistralai/mistral-small-3.1-24b-instruct-2503
+  Clean Model Name: Mistral Small 3.1 24B
+  Raw Input Modalities: text, image
+  Raw Output Modalities: text
+  Standardized Input Modalities: Text, Image
+  Standardized Output Modalities: Text
+
+================================================================================
+
+MODEL 26: qwen/qwen-2-vl-7b-instruct
 --------------------------------------------------
   ID: qwen/qwen-2.5-vl-7b-instruct:free
   Original Name: Qwen: Qwen2.5-VL 7B Instruct (free)
@@ -334,7 +404,7 @@ MODEL 21: qwen/qwen-2-vl-7b-instruct
 
 ================================================================================
 
-MODEL 22: google/gemma-3n-e2b-it
+MODEL 27: google/gemma-3n-e2b-it
 --------------------------------------------------
   ID: google/gemma-3n-e2b-it:free
   Original Name: Google: Gemma 3n 2B (free)
@@ -348,7 +418,7 @@ MODEL 22: google/gemma-3n-e2b-it
 
 ================================================================================
 
-MODEL 23: google/gemma-3n-e4b-it
+MODEL 28: google/gemma-3n-e4b-it
 --------------------------------------------------
   ID: google/gemma-3n-e4b-it:free
   Original Name: Google: Gemma 3n 4B (free)
@@ -362,7 +432,7 @@ MODEL 23: google/gemma-3n-e4b-it
 
 ================================================================================
 
-MODEL 24: allenai/molmo-2-8b-20260109
+MODEL 29: allenai/molmo-2-8b-20260109
 --------------------------------------------------
   ID: allenai/molmo-2-8b:free
   Original Name: AllenAI: Molmo2 8B (free)
@@ -376,7 +446,7 @@ MODEL 24: allenai/molmo-2-8b-20260109
 
 ================================================================================
 
-MODEL 25: nvidia/nemotron-nano-12b-v2-vl
+MODEL 30: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)

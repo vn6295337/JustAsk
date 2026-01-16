@@ -1,24 +1,25 @@
 ================================================================================
 COLLATED OPENSOURCE LICENSE INFORMATION REPORT
-Generated: 2026-01-15 07:33:34 IST
+Generated: 2026-01-16 07:35:13 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 12
+  Total models        : 16
   Input sources       : 3 pipeline stage files
   Processor           : step_11_collate_opensource.py
   Output              : 11_collated_opensource_licenses.json
 
 PIPELINE STAGE COVERAGE:
-  Step 05 (License Info URLs)    : 12 models
-  Step 08 Opensource Names       : 12 models
-  Step 09 Opensource URLs        : 12 models
+  Step 05 (License Info URLs)    : 16 models
+  Step 08 Opensource Names       : 16 models
+  Step 09 Opensource URLs        : 16 models
 
 OPENSOURCE LICENSE DISTRIBUTION:
-   7 models: Apache-2.0
+  10 models: Apache-2.0
    5 models: MIT
+   1 models: Llama-3.1
 
-Total unique license types: 2
+Total unique license types: 3
 
 DETAILED OPENSOURCE MODEL INFORMATION:
 ================================================================================
@@ -51,15 +52,15 @@ MODEL 2: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 3: mistralai/mistral-7b-instruct
+MODEL 3: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
-  ID: mistralai/mistral-7b-instruct:free
-  Original Name: Mistral: Mistral 7B Instruct (free)
-  HuggingFace ID: mistralai/Mistral-7B-Instruct-v0.3
-  Canonical Slug: mistralai/mistral-7b-instruct
-  Clean Model Name: Mistral 7B Instruct
+  ID: mistralai/mistral-small-3.1-24b-instruct:free
+  Original Name: Mistral: Mistral Small 3.1 24B (free)
+  HuggingFace ID: mistralai/Mistral-Small-3.1-24B-Instruct-2503
+  Canonical Slug: mistralai/mistral-small-3.1-24b-instruct-2503
+  Clean Model Name: Mistral Small 3.1 24B
   License Info Text: info
-  License Info URL: https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3/blob/main/README.md
+  License Info URL: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/blob/main/README.md
   License Name: Apache-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
 
@@ -107,7 +108,21 @@ MODEL 6: qwen/qwen-2-vl-7b-instruct
 
 ================================================================================
 
-MODEL 7: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 7: qwen/qwen3-4b-04-28
+--------------------------------------------------
+  ID: qwen/qwen3-4b:free
+  Original Name: Qwen: Qwen3 4B (free)
+  HuggingFace ID: Qwen/Qwen3-4B
+  Canonical Slug: qwen/qwen3-4b-04-28
+  Clean Model Name: Qwen3 4B
+  License Info Text: info
+  License Info URL: https://huggingface.co/Qwen/Qwen3-4B/blob/main/LICENSE
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 8: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -121,7 +136,49 @@ MODEL 7: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 8: deepseek/deepseek-r1-0528
+MODEL 9: qwen/qwen3-next-80b-a3b-instruct-2509
+--------------------------------------------------
+  ID: qwen/qwen3-next-80b-a3b-instruct:free
+  Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
+  HuggingFace ID: Qwen/Qwen3-Next-80B-A3B-Instruct
+  Canonical Slug: qwen/qwen3-next-80b-a3b-instruct-2509
+  Clean Model Name: Qwen3 Next 80B A3B Instruct
+  License Info Text: info
+  License Info URL: https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct/blob/main/LICENSE
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 10: venice/uncensored
+--------------------------------------------------
+  ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
+  Original Name: Venice: Uncensored (free)
+  HuggingFace ID: cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition
+  Canonical Slug: venice/uncensored
+  Clean Model Name: Uncensored
+  License Info Text: info
+  License Info URL: https://huggingface.co/cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition/blob/main/README.md
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 11: nousresearch/hermes-3-llama-3.1-405b
+--------------------------------------------------
+  ID: nousresearch/hermes-3-llama-3.1-405b:free
+  Original Name: Nous: Hermes 3 405B Instruct (free)
+  HuggingFace ID: NousResearch/Hermes-3-Llama-3.1-405B
+  Canonical Slug: nousresearch/hermes-3-llama-3.1-405b
+  Clean Model Name: Hermes 3 405B Instruct
+  License Info Text: info
+  License Info URL: https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-405B/blob/main/README.md
+  License Name: Llama-3.1
+  License URL: https://www.llama.com/llama3_1/license/
+
+================================================================================
+
+MODEL 12: deepseek/deepseek-r1-0528
 --------------------------------------------------
   ID: deepseek/deepseek-r1-0528:free
   Original Name: DeepSeek: R1 0528 (free)
@@ -135,7 +192,7 @@ MODEL 8: deepseek/deepseek-r1-0528
 
 ================================================================================
 
-MODEL 9: tngtech/deepseek-r1t-chimera
+MODEL 13: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t-chimera:free
   Original Name: TNG: DeepSeek R1T Chimera (free)
@@ -149,7 +206,7 @@ MODEL 9: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 10: tngtech/deepseek-r1t2-chimera
+MODEL 14: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t2-chimera:free
   Original Name: TNG: DeepSeek R1T2 Chimera (free)
@@ -163,7 +220,7 @@ MODEL 10: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 11: xiaomi/mimo-v2-flash-20251210
+MODEL 15: xiaomi/mimo-v2-flash-20251210
 --------------------------------------------------
   ID: xiaomi/mimo-v2-flash:free
   Original Name: Xiaomi: MiMo-V2-Flash (free)
@@ -177,7 +234,7 @@ MODEL 11: xiaomi/mimo-v2-flash-20251210
 
 ================================================================================
 
-MODEL 12: z-ai/glm-4.5-air
+MODEL 16: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.AI: GLM 4.5 Air (free)

@@ -1,64 +1,66 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-01-15 07:33:38 IST
+Generated: 2026-01-16 07:35:17 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 29
-   • Total records in pipeline: 24
-   • Total records in Supabase: 29
-   • Models in both systems: 24
+   • Total unique model names: 30
+   • Total records in pipeline: 29
+   • Total records in Supabase: 24
+   • Models in both systems: 23
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 0
-   • Models in Supabase only (not in pipeline): 5
+   • Models in pipeline only (not in Supabase): 6
+   • Models in Supabase only (not in pipeline): 1
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
    • inference_provider:
-     - Exact matches: 24
+     - Exact matches: 23
      - Differences: 0
    • model_provider:
-     - Exact matches: 24
+     - Exact matches: 23
      - Differences: 0
    • human_readable_name:
-     - Exact matches: 24
+     - Exact matches: 23
      - Differences: 0
    • model_provider_country:
-     - Exact matches: 24
+     - Exact matches: 23
      - Differences: 0
    • official_url:
-     - Exact matches: 24
+     - Exact matches: 23
      - Differences: 0
    • input_modalities:
-     - Exact matches: 24
+     - Exact matches: 23
      - Differences: 0
    • output_modalities:
-     - Exact matches: 24
+     - Exact matches: 23
      - Differences: 0
    • license_info_text:
-     - Exact matches: 24
+     - Exact matches: 23
      - Differences: 0
    • license_info_url:
-     - Exact matches: 24
+     - Exact matches: 23
      - Differences: 0
    • license_name:
-     - Exact matches: 24
+     - Exact matches: 23
      - Differences: 0
    • license_url:
-     - Exact matches: 24
+     - Exact matches: 23
      - Differences: 0
    • rate_limits:
-     - Exact matches: 24
+     - Exact matches: 23
      - Differences: 0
    • provider_api_access:
-     - Exact matches: 24
+     - Exact matches: 23
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
+   • New models (pipeline only): 6
+     Models: Hermes 3 405B Instruct, Llama 3.2 3B Instruct, Mistral Small 3.1 24B, Qwen3 4B, Qwen3 Next 80B A3B Instruct, Uncensored
    • Existing models with differences: 0
-   • Deprecated models (Supabase only): 5
-     Models: Hermes 3 405B Instruct, Llama 3.2 3B Instruct, Mistral Small 3.1 24B, Qwen3 4B, Uncensored
+   • Deprecated models (Supabase only): 1
+     Models: Mistral 7B Instruct
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
@@ -288,19 +290,19 @@ MODEL: Hermes 3 405B Instruct
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        |                           | OpenRouter               
-model_provider            |                           | Nous Research            
-human_readable_name       |                           | Hermes 3 405B Instruct   
-model_provider_country    |                           | United States            
-official_url              |                           | https://nousresearch.com/
-input_modalities          |                           | Text                     
-output_modalities         |                           | Text                     
-license_info_text         |                           | info                     
-license_info_url          |                           | https://huggingface.co/..
-license_name              |                           | Llama-3.1                
-license_url               |                           | https://www.llama.com/l..
-rate_limits               |                           | 20 requests/min 50/day   
-provider_api_access       |                           | https://openrouter.ai/s..
+inference_provider        | OpenRouter                |                          
+model_provider            | Nous Research             |                          
+human_readable_name       | Hermes 3 405B Instruct    |                          
+model_provider_country    | United States             |                          
+official_url              | https://nousresearch.com/ |                          
+input_modalities          | Text                      |                          
+output_modalities         | Text                      |                          
+license_info_text         | info                      |                          
+license_info_url          | https://huggingface.co/.. |                          
+license_name              | Llama-3.1                 |                          
+license_url               | https://www.llama.com/l.. |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 
@@ -348,19 +350,19 @@ MODEL: Llama 3.2 3B Instruct
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        |                           | OpenRouter               
-model_provider            |                           | Meta                     
-human_readable_name       |                           | Llama 3.2 3B Instruct    
-model_provider_country    |                           | United States            
-official_url              |                           | https://llama.meta.com/  
-input_modalities          |                           | Text                     
-output_modalities         |                           | Text                     
-license_info_text         |                           | None                     
-license_info_url          |                           | None                     
-license_name              |                           | Llama-3.2                
-license_url               |                           | https://www.llama.com/l..
-rate_limits               |                           | 20 requests/min 50/day   
-provider_api_access       |                           | https://openrouter.ai/s..
+inference_provider        | OpenRouter                |                          
+model_provider            | Meta                      |                          
+human_readable_name       | Llama 3.2 3B Instruct     |                          
+model_provider_country    | United States             |                          
+official_url              | https://llama.meta.com/   |                          
+input_modalities          | Text                      |                          
+output_modalities         | Text                      |                          
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              | Llama-3.2                 |                          
+license_url               | https://www.llama.com/l.. |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 
@@ -408,32 +410,12 @@ MODEL: Mistral 7B Instruct
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                | OpenRouter               
-model_provider            | Mistral AI                | Mistral AI               
-human_readable_name       | Mistral 7B Instruct       | Mistral 7B Instruct      
-model_provider_country    | France                    | France                   
-official_url              | https://mistral.ai/       | https://mistral.ai/      
-input_modalities          | Text                      | Text                     
-output_modalities         | Text                      | Text                     
-license_info_text         | info                      | info                     
-license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | Apache-2.0                | Apache-2.0               
-license_url               | https://www.apache.org/.. | https://www.apache.org/..
-rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
-provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
-
-================================================================================
-
-MODEL: Mistral Small 3.1 24B
---------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
---------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | Mistral AI               
-human_readable_name       |                           | Mistral Small 3.1 24B    
+human_readable_name       |                           | Mistral 7B Instruct      
 model_provider_country    |                           | France                   
 official_url              |                           | https://mistral.ai/      
-input_modalities          |                           | Text, Image              
+input_modalities          |                           | Text                     
 output_modalities         |                           | Text                     
 license_info_text         |                           | info                     
 license_info_url          |                           | https://huggingface.co/..
@@ -441,6 +423,26 @@ license_name              |                           | Apache-2.0
 license_url               |                           | https://www.apache.org/..
 rate_limits               |                           | 20 requests/min 50/day   
 provider_api_access       |                           | https://openrouter.ai/s..
+
+================================================================================
+
+MODEL: Mistral Small 3.1 24B
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | Mistral AI                |                          
+human_readable_name       | Mistral Small 3.1 24B     |                          
+model_provider_country    | France                    |                          
+official_url              | https://mistral.ai/       |                          
+input_modalities          | Text, Image               |                          
+output_modalities         | Text                      |                          
+license_info_text         | info                      |                          
+license_info_url          | https://huggingface.co/.. |                          
+license_name              | Apache-2.0                |                          
+license_url               | https://www.apache.org/.. |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 
@@ -548,19 +550,19 @@ MODEL: Qwen3 4B
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        |                           | OpenRouter               
-model_provider            |                           | Alibaba Cloud            
-human_readable_name       |                           | Qwen3 4B                 
-model_provider_country    |                           | China                    
-official_url              |                           | https://alibabacloud.com/
-input_modalities          |                           | Text                     
-output_modalities         |                           | Text                     
-license_info_text         |                           | info                     
-license_info_url          |                           | https://huggingface.co/..
-license_name              |                           | Apache-2.0               
-license_url               |                           | https://www.apache.org/..
-rate_limits               |                           | 20 requests/min 50/day   
-provider_api_access       |                           | https://openrouter.ai/s..
+inference_provider        | OpenRouter                |                          
+model_provider            | Alibaba Cloud             |                          
+human_readable_name       | Qwen3 4B                  |                          
+model_provider_country    | China                     |                          
+official_url              | https://alibabacloud.com/ |                          
+input_modalities          | Text                      |                          
+output_modalities         | Text                      |                          
+license_info_text         | info                      |                          
+license_info_url          | https://huggingface.co/.. |                          
+license_name              | Apache-2.0                |                          
+license_url               | https://www.apache.org/.. |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 
@@ -581,6 +583,26 @@ license_name              | Apache-2.0                | Apache-2.0
 license_url               | https://www.apache.org/.. | https://www.apache.org/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+
+================================================================================
+
+MODEL: Qwen3 Next 80B A3B Instruct
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | Alibaba Cloud             |                          
+human_readable_name       | Qwen3 Next 80B A3B Inst.. |                          
+model_provider_country    | China                     |                          
+official_url              | https://alibabacloud.com/ |                          
+input_modalities          | Text                      |                          
+output_modalities         | Text                      |                          
+license_info_text         | info                      |                          
+license_info_url          | https://huggingface.co/.. |                          
+license_name              | Apache-2.0                |                          
+license_url               | https://www.apache.org/.. |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 
@@ -628,19 +650,19 @@ MODEL: Uncensored
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        |                           | OpenRouter               
-model_provider            |                           | Cognitive Computations   
-human_readable_name       |                           | Uncensored               
-model_provider_country    |                           | United States            
-official_url              |                           | https://dphn.ai/         
-input_modalities          |                           | Text                     
-output_modalities         |                           | Text                     
-license_info_text         |                           | info                     
-license_info_url          |                           | https://huggingface.co/..
-license_name              |                           | Apache-2.0               
-license_url               |                           | https://www.apache.org/..
-rate_limits               |                           | 20 requests/min 50/day   
-provider_api_access       |                           | https://openrouter.ai/s..
+inference_provider        | OpenRouter                |                          
+model_provider            | Cognitive Computations    |                          
+human_readable_name       | Uncensored                |                          
+model_provider_country    | United States             |                          
+official_url              | https://dphn.ai/          |                          
+input_modalities          | Text                      |                          
+output_modalities         | Text                      |                          
+license_info_text         | info                      |                          
+license_info_url          | https://huggingface.co/.. |                          
+license_name              | Apache-2.0                |                          
+license_url               | https://www.apache.org/.. |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 

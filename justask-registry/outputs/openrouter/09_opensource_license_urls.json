@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-01-15 07:33:31 IST",
-    "total_models": 12,
+    "generated_at": "2026-01-16 07:35:12 IST",
+    "total_models": 16,
     "pipeline_stage": "I_opensource_license_urls"
   },
   "models": [
@@ -26,6 +26,14 @@
       "canonical_slug": "arcee-ai/trinity-mini-20251201",
       "name": "Arcee AI: Trinity Mini (free)",
       "hugging_face_id": "arcee-ai/Trinity-Mini",
+      "license_name": "Apache-2.0",
+      "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "id": "qwen/qwen3-next-80b-a3b-instruct:free",
+      "canonical_slug": "qwen/qwen3-next-80b-a3b-instruct-2509",
+      "name": "Qwen: Qwen3 Next 80B A3B Instruct (free)",
+      "hugging_face_id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
       "license_name": "Apache-2.0",
       "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
@@ -62,6 +70,14 @@
       "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
+      "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
+      "canonical_slug": "venice/uncensored",
+      "name": "Venice: Uncensored (free)",
+      "hugging_face_id": "cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition",
+      "license_name": "Apache-2.0",
+      "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
       "id": "tngtech/deepseek-r1t2-chimera:free",
       "canonical_slug": "tngtech/deepseek-r1t2-chimera",
       "name": "TNG: DeepSeek R1T2 Chimera (free)",
@@ -78,12 +94,28 @@
       "official_license_url": "https://opensource.org/licenses/MIT"
     },
     {
+      "id": "qwen/qwen3-4b:free",
+      "canonical_slug": "qwen/qwen3-4b-04-28",
+      "name": "Qwen: Qwen3 4B (free)",
+      "hugging_face_id": "Qwen/Qwen3-4B",
+      "license_name": "Apache-2.0",
+      "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
       "id": "tngtech/deepseek-r1t-chimera:free",
       "canonical_slug": "tngtech/deepseek-r1t-chimera",
       "name": "TNG: DeepSeek R1T Chimera (free)",
       "hugging_face_id": "tngtech/DeepSeek-R1T-Chimera",
       "license_name": "MIT",
       "official_license_url": "https://opensource.org/licenses/MIT"
+    },
+    {
+      "id": "mistralai/mistral-small-3.1-24b-instruct:free",
+      "canonical_slug": "mistralai/mistral-small-3.1-24b-instruct-2503",
+      "name": "Mistral: Mistral Small 3.1 24B (free)",
+      "hugging_face_id": "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
+      "license_name": "Apache-2.0",
+      "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
       "id": "qwen/qwen-2.5-vl-7b-instruct:free",
@@ -94,12 +126,12 @@
       "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
-      "id": "mistralai/mistral-7b-instruct:free",
-      "canonical_slug": "mistralai/mistral-7b-instruct",
-      "name": "Mistral: Mistral 7B Instruct (free)",
-      "hugging_face_id": "mistralai/Mistral-7B-Instruct-v0.3",
-      "license_name": "Apache-2.0",
-      "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+      "id": "nousresearch/hermes-3-llama-3.1-405b:free",
+      "canonical_slug": "nousresearch/hermes-3-llama-3.1-405b",
+      "name": "Nous: Hermes 3 405B Instruct (free)",
+      "hugging_face_id": "NousResearch/Hermes-3-Llama-3.1-405B",
+      "license_name": "Llama-3.1",
+      "official_license_url": "https://www.llama.com/llama3_1/license/"
     }
   ]
 }
