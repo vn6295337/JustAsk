@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-01-16 07:33:26 IST",
-    "total_models": 54,
+    "generated": "2026-01-17 07:27:21 IST",
+    "total_models": 53,
     "api_source": "Google Generative Language API"
   },
   "models": [
@@ -408,23 +408,6 @@
       "topK": 64,
       "maxTemperature": 2,
       "thinking": true
-    },
-    {
-      "name": "models/gemini-2.5-flash-image-preview",
-      "version": "2.0",
-      "displayName": "Nano Banana",
-      "description": "Gemini 2.5 Flash Preview Image",
-      "inputTokenLimit": 32768,
-      "outputTokenLimit": 32768,
-      "supportedGenerationMethods": [
-        "generateContent",
-        "countTokens",
-        "batchGenerateContent"
-      ],
-      "temperature": 1,
-      "topP": 0.95,
-      "topK": 64,
-      "maxTemperature": 1
     },
     {
       "name": "models/gemini-2.5-flash-image",

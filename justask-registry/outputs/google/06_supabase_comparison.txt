@@ -1,6 +1,6 @@
 FIELD COMPARISON REPORT: GOOGLE PIPELINE vs SUPABASE
 ================================================================================
-Generated: 2026-01-16 07:33:33 IST
+Generated: 2026-01-17 07:27:30 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -33,14 +33,14 @@ SUMMARY STATISTICS
      - Exact matches: 21
      - Differences: 2
      - Specific differences:
-       * Veo 3.0 Generate 001: Pipeline='Unknown' vs Supabase='Text, Image'
        * Veo 3.0 Fast Generate 001: Pipeline='Unknown' vs Supabase='Text, Image'
+       * Veo 3.0 Generate 001: Pipeline='Unknown' vs Supabase='Text, Image'
    • output_modalities:
      - Exact matches: 21
      - Differences: 2
      - Specific differences:
-       * Veo 3.0 Generate 001: Pipeline='Unknown' vs Supabase='Audio, Video'
        * Veo 3.0 Fast Generate 001: Pipeline='Unknown' vs Supabase='Audio, Video'
+       * Veo 3.0 Generate 001: Pipeline='Unknown' vs Supabase='Audio, Video'
    • license_info_text:
      - Exact matches: 23
      - Differences: 0
