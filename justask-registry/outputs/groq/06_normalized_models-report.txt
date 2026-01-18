@@ -1,7 +1,7 @@
 GROQ DATA NORMALIZATION REPORT
 ================================================================================
 
-Generated: 2026-01-17T01:58:42.687370
+Generated: 2026-01-18T02:11:55.111349
 Total Models: 7
 Pipeline Stage: 06_normalize_data
 
