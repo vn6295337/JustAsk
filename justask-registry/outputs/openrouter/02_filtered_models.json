@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-19 07:40:07 IST",
+    "generated_at": "2026-01-20 07:34:56 IST",
     "total_models": 30,
     "pipeline_stage": "B_filter_models"
   },
@@ -14,7 +14,7 @@
       "description": "Molmo2-8B is an open vision-language model developed by the Allen Institute for AI (Ai2) as part of the Molmo2 family, supporting image, video, and multi-image understanding and grounding. It is based on Qwen3-8B and uses SigLIP 2 as its vision backbone, outperforming other open-weight, open-data models on short videos, counting, and captioning, while remaining competitive on long-video tasks.",
       "context_length": 36864,
       "architecture": {
-        "modality": "text+image->text",
+        "modality": "text+image+video->text",
         "input_modalities": [
           "text",
           "image",
@@ -330,7 +330,7 @@
       "description": "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, combining transformer-level accuracy with Mamba\u2019s memory-efficient sequence modeling for significantly higher throughput and lower latency.\n\nThe model supports inputs of text and multi-image documents, producing natural-language outputs. It is trained on high-quality NVIDIA-curated synthetic datasets optimized for optical-character recognition, chart reasoning, and multimodal comprehension.\n\nNemotron Nano 2 VL achieves leading results on OCRBench v2 and scores \u2248 74 average across MMMU, MathVista, AI2D, OCRBench, OCR-Reasoning, ChartQA, DocVQA, and Video-MME\u2014surpassing prior open VL baselines. With Efficient Video Sampling (EVS), it handles long-form videos while reducing inference cost.\n\nOpen-weights, training data, and fine-tuning recipes are released under a permissive NVIDIA open license, with deployment supported across NeMo, NIM, and major inference runtimes.",
       "context_length": 128000,
       "architecture": {
-        "modality": "text+image->text",
+        "modality": "text+image+video->text",
         "input_modalities": [
           "image",
           "text",

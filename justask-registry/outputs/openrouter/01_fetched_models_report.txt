@@ -1,13 +1,13 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-01-19 07:40:07 IST
+Generated: 2026-01-20 07:34:56 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 339
+  Total models: 342
 
 PROVIDER BREAKDOWN (Descending Order):
-  OpenAI          :  56 models
+  OpenAI          :  58 models
     - chatgpt-4o-latest
     - gpt-3.5-turbo
     - gpt-3.5-turbo-0613
@@ -48,6 +48,8 @@ PROVIDER BREAKDOWN (Descending Order):
     - gpt-5.2-chat
     - gpt-5.2-codex
     - gpt-5.2-pro
+    - gpt-audio
+    - gpt-audio-mini
     - gpt-oss-120b
     - gpt-oss-120b:exacto
     - gpt-oss-120b:free
@@ -213,7 +215,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - claude-sonnet-4
     - claude-sonnet-4.5
 
-  Z.AI            :   9 models
+  Z.AI            :  10 models
     - glm-4-32b
     - glm-4.5
     - glm-4.5-air
@@ -223,6 +225,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - glm-4.6:exacto
     - glm-4.6v
     - glm-4.7
+    - glm-4.7-flash
 
   NVIDIA          :   9 models
     - llama-3.1-nemotron-70b-instruct
