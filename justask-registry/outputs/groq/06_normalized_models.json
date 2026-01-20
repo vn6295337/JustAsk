@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-19T02:09:43.274237",
+    "generated_at": "2026-01-20T02:04:34.168254",
     "total_models": 7,
     "pipeline_stage": "06_normalize_data",
     "source_files": [
@@ -26,8 +26,8 @@
       "license_url": "https://www.llama.com/llama3_1/license/",
       "rate_limits": "250K TPM\nTPM\n1K RPM\nRPM",
       "provider_api_access": "https://console.groq.com/keys",
-      "created_at": "2026-01-19T02:09:05+00:00",
-      "updated_at": "2026-01-19T02:09:43.273779+00:00"
+      "created_at": "2026-01-20T02:03:57+00:00",
+      "updated_at": "2026-01-20T02:04:34.167761+00:00"
     },
     {
       "id": 2,
@@ -45,8 +45,8 @@
       "license_url": "https://www.llama.com/llama3_3/license/",
       "rate_limits": "300K TPM\nTPM\n1K RPM\nRPM",
       "provider_api_access": "https://console.groq.com/keys",
-      "created_at": "2026-01-19T02:09:05+00:00",
-      "updated_at": "2026-01-19T02:09:43.273779+00:00"
+      "created_at": "2026-01-20T02:03:57+00:00",
+      "updated_at": "2026-01-20T02:04:34.167761+00:00"
     },
     {
       "id": 3,
@@ -64,8 +64,8 @@
       "license_url": "https://www.llama.com/llama4/license/",
       "rate_limits": "30K TPM\nTPM\n100 RPM\nRPM",
       "provider_api_access": "https://console.groq.com/keys",
-      "created_at": "2026-01-19T02:09:05+00:00",
-      "updated_at": "2026-01-19T02:09:43.273779+00:00"
+      "created_at": "2026-01-20T02:03:57+00:00",
+      "updated_at": "2026-01-20T02:04:34.167761+00:00"
     },
     {
       "id": 4,
@@ -83,8 +83,8 @@
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
       "rate_limits": "250K TPM\nTPM\n1K RPM\nRPM",
       "provider_api_access": "https://console.groq.com/keys",
-      "created_at": "2026-01-19T02:09:05+00:00",
-      "updated_at": "2026-01-19T02:09:43.273779+00:00"
+      "created_at": "2026-01-20T02:03:57+00:00",
+      "updated_at": "2026-01-20T02:04:34.167761+00:00"
     },
     {
       "id": 5,
@@ -102,8 +102,8 @@
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
       "rate_limits": "250K TPM\nTPM\n1K RPM\nRPM",
       "provider_api_access": "https://console.groq.com/keys",
-      "created_at": "2026-01-19T02:09:05+00:00",
-      "updated_at": "2026-01-19T02:09:43.273779+00:00"
+      "created_at": "2026-01-20T02:03:57+00:00",
+      "updated_at": "2026-01-20T02:04:34.167761+00:00"
     },
     {
       "id": 6,
@@ -121,8 +121,8 @@
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
       "rate_limits": "200K ASH\nASH\n300 RPM\nRPM",
       "provider_api_access": "https://console.groq.com/keys",
-      "created_at": "2026-01-19T02:09:05+00:00",
-      "updated_at": "2026-01-19T02:09:43.273779+00:00"
+      "created_at": "2026-01-20T02:03:57+00:00",
+      "updated_at": "2026-01-20T02:04:34.167761+00:00"
     },
     {
       "id": 7,
@@ -140,8 +140,8 @@
       "license_url": "https://opensource.org/licenses/MIT",
       "rate_limits": "400K ASH\nASH\n400 RPM\nRPM",
       "provider_api_access": "https://console.groq.com/keys",
-      "created_at": "2026-01-19T02:09:05+00:00",
-      "updated_at": "2026-01-19T02:09:43.273779+00:00"
+      "created_at": "2026-01-20T02:03:57+00:00",
+      "updated_at": "2026-01-20T02:04:34.167761+00:00"
     }
   ]
 }
