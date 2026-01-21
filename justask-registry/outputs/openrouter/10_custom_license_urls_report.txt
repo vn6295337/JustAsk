@@ -1,37 +1,49 @@
 ================================================================================
 CUSTOM LICENSE URLS ENRICHMENT REPORT
-Generated: 2026-01-20 07:35:14 IST
+Generated: 2026-01-21 07:38:15 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 5
+  Total models : 7
   Input        : 08_custom_licenses.json
   Priority     : LICENSE → README.md → Base repository
   Processor    : step_10_custom_license_urls.py
   Output       : 10_custom_license_urls.json
 
 LICENSE URL TYPE DISTRIBUTION:
-  LICENSE file: 2 models
-  README.md file: 3 models
+  LICENSE file: 3 models
+  README.md file: 4 models
 
 Total URL types: 2
 
 URL RESOLUTION STATISTICS:
-  Successful URL resolutions: 5
+  Successful URL resolutions: 7
   Failed URL resolutions: 0
   Success rate: 100.0%
 
 CUSTOM LICENSE DISTRIBUTION:
   Modified MIT: 1 models
   NVIDIA: 3 models
+  lfm1.0: 2 models
   other: 1 models
 
-Total license types: 3
+Total license types: 4
 
 DETAILED MODEL LICENSE URL MAPPINGS:
 ================================================================================
 
-MODEL 1: mistralai/devstral-2512
+MODEL 1: liquid/lfm-2.5-1.2b-instruct-20260120
+--------------------------------------------------
+  ID                     : liquid/lfm-2.5-1.2b-instruct:free
+  Canonical Slug         : liquid/lfm-2.5-1.2b-instruct-20260120
+  HuggingFace ID         : LiquidAI/LFM2.5-1.2B-Instruct
+  License Name           : lfm1.0
+  License URL            : https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct/blob/main/LICENSE
+  License URL Type       : LICENSE file
+
+================================================================================
+
+MODEL 2: mistralai/devstral-2512
 --------------------------------------------------
   ID                     : mistralai/devstral-2512:free
   Canonical Slug         : mistralai/devstral-2512
@@ -42,7 +54,7 @@ MODEL 1: mistralai/devstral-2512
 
 ================================================================================
 
-MODEL 2: moonshotai/kimi-k2
+MODEL 3: moonshotai/kimi-k2
 --------------------------------------------------
   ID                     : moonshotai/kimi-k2:free
   Canonical Slug         : moonshotai/kimi-k2
@@ -53,7 +65,18 @@ MODEL 2: moonshotai/kimi-k2
 
 ================================================================================
 
-MODEL 3: nvidia/nemotron-3-nano-30b-a3b
+MODEL 4: liquid/lfm-2.5-1.2b-thinking-20260120
+--------------------------------------------------
+  ID                     : liquid/lfm-2.5-1.2b-thinking:free
+  Canonical Slug         : liquid/lfm-2.5-1.2b-thinking-20260120
+  HuggingFace ID         : LiquidAI/LFM2.5-1.2B-Thinking
+  License Name           : lfm1.0
+  License URL            : https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/README.md
+  License URL Type       : README.md file
+
+================================================================================
+
+MODEL 5: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID                     : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug         : nvidia/nemotron-3-nano-30b-a3b
@@ -64,7 +87,7 @@ MODEL 3: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 4: nvidia/nemotron-nano-12b-v2-vl
+MODEL 6: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug         : nvidia/nemotron-nano-12b-v2-vl
@@ -75,7 +98,7 @@ MODEL 4: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 5: nvidia/nemotron-nano-9b-v2
+MODEL 7: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug         : nvidia/nemotron-nano-9b-v2

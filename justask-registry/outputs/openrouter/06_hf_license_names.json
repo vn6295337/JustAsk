@@ -1,10 +1,24 @@
 {
   "metadata": {
-    "generated_at": "2026-01-20 07:35:12 IST",
-    "total_models": 21,
+    "generated_at": "2026-01-21 07:38:11 IST",
+    "total_models": 23,
     "pipeline_stage": "F_fetch_other_license_names_from_hf"
   },
   "models": [
+    {
+      "id": "liquid/lfm-2.5-1.2b-thinking:free",
+      "canonical_slug": "liquid/lfm-2.5-1.2b-thinking-20260120",
+      "name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
+      "hugging_face_id": "LiquidAI/LFM2.5-1.2B-Thinking",
+      "extracted_license": "lfm1.0"
+    },
+    {
+      "id": "liquid/lfm-2.5-1.2b-instruct:free",
+      "canonical_slug": "liquid/lfm-2.5-1.2b-instruct-20260120",
+      "name": "LiquidAI: LFM2.5-1.2B-Instruct (free)",
+      "hugging_face_id": "LiquidAI/LFM2.5-1.2B-Instruct",
+      "extracted_license": "lfm1.0"
+    },
     {
       "id": "allenai/molmo-2-8b:free",
       "canonical_slug": "allenai/molmo-2-8b-20260109",

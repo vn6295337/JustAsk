@@ -1,24 +1,25 @@
 ================================================================================
 COLLATED CUSTOM LICENSE INFORMATION REPORT
-Generated: 2026-01-20 07:35:15 IST
+Generated: 2026-01-21 07:38:15 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 5
+  Total models        : 7
   Input sources       : 10_custom_license_urls.json + 05_hf_license_urls.json
   Processor           : step_12_collate_custom.py
   Output              : 12_collated_custom_licenses.json
 
 CUSTOM LICENSE DISTRIBUTION:
    3 models: NVIDIA
+   2 models: lfm1.0
    1 models: Modified MIT
    1 models: other
 
-Total unique license types: 3
+Total unique license types: 4
 
 LICENSE URL TYPE DISTRIBUTION:
-   2 models: LICENSE file
-   3 models: README.md file
+   3 models: LICENSE file
+   4 models: README.md file
 
 Total URL types: 2
 
@@ -81,7 +82,35 @@ MODEL 4: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 5: mistralai/devstral-2512
+MODEL 5: liquid/lfm-2.5-1.2b-instruct-20260120
+--------------------------------------------------
+  ID: liquid/lfm-2.5-1.2b-instruct:free
+  Original Name: LiquidAI: LFM2.5-1.2B-Instruct (free)
+  HuggingFace ID: LiquidAI/LFM2.5-1.2B-Instruct
+  Canonical Slug: liquid/lfm-2.5-1.2b-instruct-20260120
+  Clean Model Name: LFM2.5-1.2B-Instruct
+  License Info Text: 
+  License Info URL: 
+  License Name: lfm1.0
+  License URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct/blob/main/LICENSE
+
+================================================================================
+
+MODEL 6: liquid/lfm-2.5-1.2b-thinking-20260120
+--------------------------------------------------
+  ID: liquid/lfm-2.5-1.2b-thinking:free
+  Original Name: LiquidAI: LFM2.5-1.2B-Thinking (free)
+  HuggingFace ID: LiquidAI/LFM2.5-1.2B-Thinking
+  Canonical Slug: liquid/lfm-2.5-1.2b-thinking-20260120
+  Clean Model Name: LFM2.5-1.2B-Thinking
+  License Info Text: 
+  License Info URL: 
+  License Name: lfm1.0
+  License URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/README.md
+
+================================================================================
+
+MODEL 7: mistralai/devstral-2512
 --------------------------------------------------
   ID: mistralai/devstral-2512:free
   Original Name: Mistral: Devstral 2 2512 (free)

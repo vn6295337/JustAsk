@@ -1,10 +1,50 @@
 {
   "metadata": {
-    "generated_at": "2026-01-20 07:35:16 IST",
-    "total_models": 30,
+    "generated_at": "2026-01-21 07:38:16 IST",
+    "total_models": 32,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
+    {
+      "id": "liquid/lfm-2.5-1.2b-thinking:free",
+      "canonical_slug": "liquid/lfm-2.5-1.2b-thinking-20260120",
+      "provider_slug": "lfm-2.5-1.2b-thinking-20260120",
+      "original_name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
+      "hugging_face_id": "LiquidAI/LFM2.5-1.2B-Thinking",
+      "clean_model_name": "LFM2.5-1.2B-Thinking",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "Unknown",
+      "model_provider_country": "Unknown",
+      "model_family": "liquid",
+      "official_url": "Unknown"
+    },
+    {
+      "id": "liquid/lfm-2.5-1.2b-instruct:free",
+      "canonical_slug": "liquid/lfm-2.5-1.2b-instruct-20260120",
+      "provider_slug": "lfm-2.5-1.2b-instruct-20260120",
+      "original_name": "LiquidAI: LFM2.5-1.2B-Instruct (free)",
+      "hugging_face_id": "LiquidAI/LFM2.5-1.2B-Instruct",
+      "clean_model_name": "LFM2.5-1.2B-Instruct",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "Unknown",
+      "model_provider_country": "Unknown",
+      "model_family": "liquid",
+      "official_url": "Unknown"
+    },
     {
       "id": "allenai/molmo-2-8b:free",
       "canonical_slug": "allenai/molmo-2-8b-20260109",

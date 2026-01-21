@@ -1,11 +1,11 @@
 ================================================================================
 DATABASE DATA FINALIZATION REPORT
-Generated: 2026-01-20 07:35:16 IST
+Generated: 2026-01-21 07:38:17 IST
 ================================================================================
 
 SUMMARY:
-  Input models         : 30
-  Models kept          : 29
+  Input models         : 32
+  Models kept          : 31
   Models removed       : 1
   Input                : 17_normalized_models.json
   Config               : remove_models.json
@@ -45,6 +45,7 @@ PROVIDER DISTRIBUTION (FINALIZED DATA):
    2 models: Mistral AI
    2 models: OpenAI
    2 models: TNG Technology
+   2 models: Unknown
    1 models: Ai2
    1 models: Arcee
    1 models: Cognitive Computations
@@ -54,9 +55,9 @@ PROVIDER DISTRIBUTION (FINALIZED DATA):
    1 models: Xiaomi
    1 models: Z.AI
 
-Total providers: 15
+Total providers: 16
 
 FAMILY DISTRIBUTION (FINALIZED DATA):
-  29 models: Unknown
+  31 models: Unknown
 
 Total families: 1

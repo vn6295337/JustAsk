@@ -1,10 +1,28 @@
 {
   "metadata": {
-    "generated_at": "2026-01-20 07:35:14 IST",
-    "total_models": 5,
+    "generated_at": "2026-01-21 07:38:15 IST",
+    "total_models": 7,
     "pipeline_stage": "J_custom_license_urls"
   },
   "models": [
+    {
+      "id": "liquid/lfm-2.5-1.2b-thinking:free",
+      "canonical_slug": "liquid/lfm-2.5-1.2b-thinking-20260120",
+      "name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
+      "hugging_face_id": "LiquidAI/LFM2.5-1.2B-Thinking",
+      "license_name": "lfm1.0",
+      "license_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/README.md",
+      "license_url_type": "README.md file"
+    },
+    {
+      "id": "liquid/lfm-2.5-1.2b-instruct:free",
+      "canonical_slug": "liquid/lfm-2.5-1.2b-instruct-20260120",
+      "name": "LiquidAI: LFM2.5-1.2B-Instruct (free)",
+      "hugging_face_id": "LiquidAI/LFM2.5-1.2B-Instruct",
+      "license_name": "lfm1.0",
+      "license_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct/blob/main/LICENSE",
+      "license_url_type": "LICENSE file"
+    },
     {
       "id": "nvidia/nemotron-3-nano-30b-a3b:free",
       "canonical_slug": "nvidia/nemotron-3-nano-30b-a3b",

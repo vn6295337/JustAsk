@@ -1,17 +1,17 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-01-20 07:35:18 IST
+Generated: 2026-01-21 07:38:19 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 29
-   • Total records in pipeline: 29
+   • Total unique model names: 31
+   • Total records in pipeline: 31
    • Total records in Supabase: 29
    • Models in both systems: 29
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 0
+   • Models in pipeline only (not in Supabase): 2
    • Models in Supabase only (not in pipeline): 0
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
@@ -56,6 +56,8 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
+   • New models (pipeline only): 2
+     Models: LFM2.5-1.2B-Instruct, LFM2.5-1.2B-Thinking
    • Existing models with differences: 0
 
 ================================================================================
@@ -319,6 +321,46 @@ license_name              | Modified MIT              | Modified MIT
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+
+================================================================================
+
+MODEL: LFM2.5-1.2B-Instruct
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | Unknown                   |                          
+human_readable_name       | LFM2.5-1.2B-Instruct      |                          
+model_provider_country    | Unknown                   |                          
+official_url              | Unknown                   |                          
+input_modalities          | Text                      |                          
+output_modalities         | Text                      |                          
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              | lfm1.0                    |                          
+license_url               | https://huggingface.co/.. |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
+
+================================================================================
+
+MODEL: LFM2.5-1.2B-Thinking
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | Unknown                   |                          
+human_readable_name       | LFM2.5-1.2B-Thinking      |                          
+model_provider_country    | Unknown                   |                          
+official_url              | Unknown                   |                          
+input_modalities          | Text                      |                          
+output_modalities         | Text                      |                          
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              | lfm1.0                    |                          
+license_url               | https://huggingface.co/.. |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 

@@ -1,10 +1,24 @@
 {
   "metadata": {
-    "generated_at": "2026-01-20 07:35:08 IST",
-    "total_models": 21,
+    "generated_at": "2026-01-21 07:38:04 IST",
+    "total_models": 23,
     "pipeline_stage": "E_fetch_other_license_info_urls_from_hf"
   },
   "models": [
+    {
+      "id": "liquid/lfm-2.5-1.2b-thinking:free",
+      "canonical_slug": "liquid/lfm-2.5-1.2b-thinking-20260120",
+      "name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
+      "hugging_face_id": "LiquidAI/LFM2.5-1.2B-Thinking",
+      "license_info_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/README.md"
+    },
+    {
+      "id": "liquid/lfm-2.5-1.2b-instruct:free",
+      "canonical_slug": "liquid/lfm-2.5-1.2b-instruct-20260120",
+      "name": "LiquidAI: LFM2.5-1.2B-Instruct (free)",
+      "hugging_face_id": "LiquidAI/LFM2.5-1.2B-Instruct",
+      "license_info_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct/blob/main/LICENSE"
+    },
     {
       "id": "allenai/molmo-2-8b:free",
       "canonical_slug": "allenai/molmo-2-8b-20260109",

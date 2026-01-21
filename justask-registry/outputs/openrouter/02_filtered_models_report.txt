@@ -1,34 +1,34 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-01-20 07:34:56 IST
+Generated: 2026-01-21 07:37:52 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 342
-  Models passed all filters: 30
+  Total models processed: 344
+  Models passed all filters: 32
   Models excluded: 312
-  Success rate: 8.8%
+  Success rate: 9.3%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 342 models
+    Input: 344 models
     Excluded: 311 models (non-free pricing)
-    Remaining: 31 models
+    Remaining: 33 models
 
   Step 2 - Billing Description Filter:
-    Input: 31 models
+    Input: 33 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 31 models
+    Remaining: 33 models
 
   Step 3 - Keyword Filter:
-    Input: 31 models
+    Input: 33 models
     Excluded: 1 models (preview/experimental/beta)
-    Remaining: 30 models
+    Remaining: 32 models
 
   Step 4 - Deduplication Filter:
-    Input: 30 models
+    Input: 32 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 30 models
+    Final: 32 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
@@ -143,6 +143,17 @@ PROVIDER: META (3 models)
       Pricing: prompt=0, completion=0, request=0
 
 
+PROVIDER: LIQUIDAI (2 models)
+--------------------------------------------------
+   1. LiquidAI: LFM2.5-1.2B-Instruct (free)
+      ID: liquid/lfm-2.5-1.2b-instruct:free
+      Pricing: prompt=0, completion=0, request=0
+
+   2. LiquidAI: LFM2.5-1.2B-Thinking (free)
+      ID: liquid/lfm-2.5-1.2b-thinking:free
+      Pricing: prompt=0, completion=0, request=0
+
+
 PROVIDER: MISTRAL (2 models)
 --------------------------------------------------
    1. Mistral: Devstral 2 2512 (free)
@@ -223,8 +234,8 @@ PROVIDER: NOUS (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 15
-  Total models passed all filters: 30
+  Total providers: 16
+  Total models passed all filters: 32
   Models excluded by pricing: 311
   Models excluded by billing description: 0
   Models excluded by keywords: 1
