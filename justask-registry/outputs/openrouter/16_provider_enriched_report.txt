@@ -1,6 +1,6 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-01-22 07:39:06 IST
+Generated: 2026-01-22 12:47:13 IST
 ================================================================================
 
 SUMMARY:
@@ -10,18 +10,7 @@ SUMMARY:
   Processor         : step_16_enrich_provider.py
   Output            : 16_provider_enriched.json
 
-ACTION ITEMS - UNKNOWN MAPPINGS:
-==================================================
-UNKNOWN PROVIDERS (2 models):
-  Add these provider mappings to provider_enrichment.json:
-    "liquid": ["Provider Name", "Country"],
-    "liquid": ["Provider Name", "Country"],
-
-UNKNOWN OFFICIAL URLS (2 unique families):
-  Add these URL mappings to family_official_urls:
-    "liquid": "https://official-url-here",
-
-==================================================
+✓ ALL PROVIDERS AND FAMILIES MAPPED SUCCESSFULLY
 
 MODEL PROVIDER DISTRIBUTION:
    5 models: Google
@@ -29,9 +18,9 @@ MODEL PROVIDER DISTRIBUTION:
    3 models: Meta
    3 models: NVIDIA
    3 models: TNG Technology
+   2 models: Liquid AI
    2 models: Mistral AI
    2 models: OpenAI
-   2 models: Unknown
    1 models: Ai2
    1 models: Arcee
    1 models: Cognitive Computations
@@ -44,13 +33,12 @@ MODEL PROVIDER DISTRIBUTION:
 Total unique model providers: 16
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
-  17 models: United States
+  19 models: United States
    8 models: China
    3 models: Germany
    2 models: France
-   2 models: Unknown
 
-Total unique countries: 5
+Total unique countries: 4
 
 MODEL FAMILY DISTRIBUTION:
    5 models: gemma
@@ -58,7 +46,7 @@ MODEL FAMILY DISTRIBUTION:
    3 models: meta
    3 models: nvidia
    3 models: tng technology
-   2 models: liquid
+   2 models: liquid ai
    2 models: mistral ai
    2 models: openai
    1 models: ai2
@@ -264,10 +252,10 @@ MODEL 14: liquid/lfm-2.5-1.2b-instruct-20260120
   HuggingFace ID: LiquidAI/LFM2.5-1.2B-Instruct
   Canonical Slug: liquid/lfm-2.5-1.2b-instruct-20260120
   Clean Model Name: LFM2.5-1.2B-Instruct
-  Model Provider: Unknown
-  Model Provider Country: Unknown
-  Model Family: liquid
-  Official URL: Unknown
+  Model Provider: Liquid AI
+  Model Provider Country: United States
+  Model Family: liquid ai
+  Official URL: https://www.liquid.ai/
 
 ================================================================================
 
@@ -278,10 +266,10 @@ MODEL 15: liquid/lfm-2.5-1.2b-thinking-20260120
   HuggingFace ID: LiquidAI/LFM2.5-1.2B-Thinking
   Canonical Slug: liquid/lfm-2.5-1.2b-thinking-20260120
   Clean Model Name: LFM2.5-1.2B-Thinking
-  Model Provider: Unknown
-  Model Provider Country: Unknown
-  Model Family: liquid
-  Official URL: Unknown
+  Model Provider: Liquid AI
+  Model Provider Country: United States
+  Model Family: liquid ai
+  Official URL: https://www.liquid.ai/
 
 ================================================================================
 

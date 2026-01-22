@@ -1,5 +1,5 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-01-22 07:39:08 IST
+Generated: 2026-01-22 12:47:15 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -329,10 +329,10 @@ MODEL: LFM2.5-1.2B-Instruct
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
 inference_provider        | OpenRouter                |                          
-model_provider            | Unknown                   |                          
+model_provider            | Liquid AI                 |                          
 human_readable_name       | LFM2.5-1.2B-Instruct      |                          
-model_provider_country    | Unknown                   |                          
-official_url              | Unknown                   |                          
+model_provider_country    | United States             |                          
+official_url              | https://www.liquid.ai/    |                          
 input_modalities          | Text                      |                          
 output_modalities         | Text                      |                          
 license_info_text         |                           |                          
@@ -349,10 +349,10 @@ MODEL: LFM2.5-1.2B-Thinking
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
 inference_provider        | OpenRouter                |                          
-model_provider            | Unknown                   |                          
+model_provider            | Liquid AI                 |                          
 human_readable_name       | LFM2.5-1.2B-Thinking      |                          
-model_provider_country    | Unknown                   |                          
-official_url              | Unknown                   |                          
+model_provider_country    | United States             |                          
+official_url              | https://www.liquid.ai/    |                          
 input_modalities          | Text                      |                          
 output_modalities         | Text                      |                          
 license_info_text         |                           |                          

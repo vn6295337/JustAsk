@@ -1,6 +1,6 @@
 ================================================================================
 DATABASE DATA FINALIZATION REPORT
-Generated: 2026-01-22 07:39:06 IST
+Generated: 2026-01-22 12:47:13 IST
 ================================================================================
 
 SUMMARY:
@@ -42,10 +42,10 @@ PROVIDER DISTRIBUTION (FINALIZED DATA):
    4 models: Alibaba Cloud
    3 models: Meta
    3 models: NVIDIA
+   2 models: Liquid AI
    2 models: Mistral AI
    2 models: OpenAI
    2 models: TNG Technology
-   2 models: Unknown
    1 models: Ai2
    1 models: Arcee
    1 models: Cognitive Computations
