@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-22 12:46:52 IST",
+    "generated_at": "2026-01-23 07:35:02 IST",
     "total_models": 32,
     "pipeline_stage": "B_filter_models"
   },
@@ -884,9 +884,8 @@
       "pricing": {
         "prompt": "0",
         "completion": "0",
-        "request": "0",
         "image": "0",
-        "web_search": "0",
+        "audio": "0",
         "internal_reasoning": "0"
       },
       "top_provider": {
@@ -1028,9 +1027,8 @@
       "pricing": {
         "prompt": "0",
         "completion": "0",
-        "request": "0",
         "image": "0",
-        "web_search": "0",
+        "audio": "0",
         "internal_reasoning": "0"
       },
       "top_provider": {
@@ -1227,9 +1225,8 @@
       "pricing": {
         "prompt": "0",
         "completion": "0",
-        "request": "0",
         "image": "0",
-        "web_search": "0",
+        "audio": "0",
         "internal_reasoning": "0"
       },
       "top_provider": {
@@ -1272,9 +1269,8 @@
       "pricing": {
         "prompt": "0",
         "completion": "0",
-        "request": "0",
         "image": "0",
-        "web_search": "0",
+        "audio": "0",
         "internal_reasoning": "0"
       },
       "top_provider": {

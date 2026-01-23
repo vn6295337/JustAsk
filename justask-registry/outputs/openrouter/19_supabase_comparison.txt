@@ -1,5 +1,5 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-01-22 12:47:15 IST
+Generated: 2026-01-23 07:35:28 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -8,56 +8,54 @@ SUMMARY STATISTICS
 1. OVERALL STATISTICS:
    • Total unique model names: 31
    • Total records in pipeline: 31
-   • Total records in Supabase: 29
-   • Models in both systems: 29
+   • Total records in Supabase: 31
+   • Models in both systems: 31
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 2
+   • Models in pipeline only (not in Supabase): 0
    • Models in Supabase only (not in pipeline): 0
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
    • inference_provider:
-     - Exact matches: 29
+     - Exact matches: 31
      - Differences: 0
    • model_provider:
-     - Exact matches: 29
+     - Exact matches: 31
      - Differences: 0
    • human_readable_name:
-     - Exact matches: 29
+     - Exact matches: 31
      - Differences: 0
    • model_provider_country:
-     - Exact matches: 29
+     - Exact matches: 31
      - Differences: 0
    • official_url:
-     - Exact matches: 29
+     - Exact matches: 31
      - Differences: 0
    • input_modalities:
-     - Exact matches: 29
+     - Exact matches: 31
      - Differences: 0
    • output_modalities:
-     - Exact matches: 29
+     - Exact matches: 31
      - Differences: 0
    • license_info_text:
-     - Exact matches: 29
+     - Exact matches: 31
      - Differences: 0
    • license_info_url:
-     - Exact matches: 29
+     - Exact matches: 31
      - Differences: 0
    • license_name:
-     - Exact matches: 29
+     - Exact matches: 31
      - Differences: 0
    • license_url:
-     - Exact matches: 29
+     - Exact matches: 31
      - Differences: 0
    • rate_limits:
-     - Exact matches: 29
+     - Exact matches: 31
      - Differences: 0
    • provider_api_access:
-     - Exact matches: 29
+     - Exact matches: 31
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 2
-     Models: LFM2.5-1.2B-Instruct, LFM2.5-1.2B-Thinking
    • Existing models with differences: 0
 
 ================================================================================
@@ -328,19 +326,19 @@ MODEL: LFM2.5-1.2B-Instruct
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                |                          
-model_provider            | Liquid AI                 |                          
-human_readable_name       | LFM2.5-1.2B-Instruct      |                          
-model_provider_country    | United States             |                          
-official_url              | https://www.liquid.ai/    |                          
-input_modalities          | Text                      |                          
-output_modalities         | Text                      |                          
-license_info_text         |                           |                          
-license_info_url          |                           |                          
-license_name              | lfm1.0                    |                          
-license_url               | https://huggingface.co/.. |                          
-rate_limits               | 20 requests/min 50/day    |                          
-provider_api_access       | https://openrouter.ai/s.. |                          
+inference_provider        | OpenRouter                | OpenRouter               
+model_provider            | Liquid AI                 | Liquid AI                
+human_readable_name       | LFM2.5-1.2B-Instruct      | LFM2.5-1.2B-Instruct     
+model_provider_country    | United States             | United States            
+official_url              | https://www.liquid.ai/    | https://www.liquid.ai/   
+input_modalities          | Text                      | Text                     
+output_modalities         | Text                      | Text                     
+license_info_text         |                           | None                     
+license_info_url          |                           | None                     
+license_name              | lfm1.0                    | lfm1.0                   
+license_url               | https://huggingface.co/.. | https://huggingface.co/..
+rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
+provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
 
 ================================================================================
 
@@ -348,19 +346,19 @@ MODEL: LFM2.5-1.2B-Thinking
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                |                          
-model_provider            | Liquid AI                 |                          
-human_readable_name       | LFM2.5-1.2B-Thinking      |                          
-model_provider_country    | United States             |                          
-official_url              | https://www.liquid.ai/    |                          
-input_modalities          | Text                      |                          
-output_modalities         | Text                      |                          
-license_info_text         |                           |                          
-license_info_url          |                           |                          
-license_name              | lfm1.0                    |                          
-license_url               | https://huggingface.co/.. |                          
-rate_limits               | 20 requests/min 50/day    |                          
-provider_api_access       | https://openrouter.ai/s.. |                          
+inference_provider        | OpenRouter                | OpenRouter               
+model_provider            | Liquid AI                 | Liquid AI                
+human_readable_name       | LFM2.5-1.2B-Thinking      | LFM2.5-1.2B-Thinking     
+model_provider_country    | United States             | United States            
+official_url              | https://www.liquid.ai/    | https://www.liquid.ai/   
+input_modalities          | Text                      | Text                     
+output_modalities         | Text                      | Text                     
+license_info_text         |                           | None                     
+license_info_url          |                           | None                     
+license_name              | lfm1.0                    | lfm1.0                   
+license_url               | https://huggingface.co/.. | https://huggingface.co/..
+rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
+provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
 
 ================================================================================
 

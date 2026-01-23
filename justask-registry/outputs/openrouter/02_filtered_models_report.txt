@@ -1,6 +1,6 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-01-22 12:46:52 IST
+Generated: 2026-01-23 07:35:02 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
@@ -12,17 +12,17 @@ SEQUENTIAL FILTERING SUMMARY:
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
     Input: 345 models
-    Excluded: 312 models (non-free pricing)
-    Remaining: 33 models
+    Excluded: 313 models (non-free pricing)
+    Remaining: 32 models
 
   Step 2 - Billing Description Filter:
-    Input: 33 models
+    Input: 32 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 33 models
+    Remaining: 32 models
 
   Step 3 - Keyword Filter:
-    Input: 33 models
-    Excluded: 1 models (preview/experimental/beta)
+    Input: 32 models
+    Excluded: 0 models (preview/experimental/beta)
     Remaining: 32 models
 
   Step 4 - Deduplication Filter:
@@ -33,7 +33,7 @@ STEP-BY-STEP FILTERING BREAKDOWN:
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 312 models with non-free pricing (details omitted due to volume)
+Excluded 313 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -43,9 +43,7 @@ No models found with billing requirements in description.
 ================================================================================
 STEP 3 - KEYWORD FILTER RESULTS (DETAILED)
 ================================================================================
-EXCLUDED FOR: EXPERIMENTAL VERSION (1 models)
---------------------------------------------------
-   1. Google: Gemini 2.0 Flash Experimental (free)
+No models excluded for keywords.
 
 ================================================================================
 STEP 4 - DEDUPLICATION FILTER RESULTS (DETAILED)
@@ -60,7 +58,7 @@ PROVIDER: GOOGLE (5 models)
 --------------------------------------------------
    1. Google: Gemma 3 12B (free)
       ID: google/gemma-3-12b-it:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    2. Google: Gemma 3 27B (free)
       ID: google/gemma-3-27b-it:free
@@ -68,15 +66,15 @@ PROVIDER: GOOGLE (5 models)
 
    3. Google: Gemma 3 4B (free)
       ID: google/gemma-3-4b-it:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    4. Google: Gemma 3n 2B (free)
       ID: google/gemma-3n-e2b-it:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    5. Google: Gemma 3n 4B (free)
       ID: google/gemma-3n-e4b-it:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: QWEN (4 models)
@@ -236,9 +234,9 @@ PROVIDER: NOUS (1 models)
 FINAL SUMMARY:
   Total providers: 16
   Total models passed all filters: 32
-  Models excluded by pricing: 312
+  Models excluded by pricing: 313
   Models excluded by billing description: 0
-  Models excluded by keywords: 1
+  Models excluded by keywords: 0
   Models excluded by deduplication: 0
   Total exclusions: 313
   ✓ All filtered models accounted for
