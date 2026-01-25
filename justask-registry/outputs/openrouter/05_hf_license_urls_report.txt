@@ -1,6 +1,6 @@
 ================================================================================
 OTHER LICENSE INFO URLS REPORT
-Generated: 2026-01-24 07:31:12 IST
+Generated: 2026-01-25 07:52:10 IST
 ================================================================================
 
 SUMMARY:
@@ -10,8 +10,8 @@ SUMMARY:
   Output       : 05_hf_license_urls.json
 
 LICENSE INFO URL BREAKDOWN:
-  14 models: README.md file
-   9 models: LICENSE file
+  13 models: README.md file
+  10 models: LICENSE file
 
 Total categories: 2
 
@@ -36,7 +36,16 @@ MODEL 2: liquid/lfm-2.5-1.2b-instruct-20260120
 
 ================================================================================
 
-MODEL 3: mistralai/devstral-2512
+MODEL 3: liquid/lfm-2.5-1.2b-thinking-20260120
+--------------------------------------------------
+  ID              : liquid/lfm-2.5-1.2b-thinking:free
+  Canonical Slug  : liquid/lfm-2.5-1.2b-thinking-20260120
+  HuggingFace ID  : LiquidAI/LFM2.5-1.2B-Thinking
+  License Info URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE
+
+================================================================================
+
+MODEL 4: mistralai/devstral-2512
 --------------------------------------------------
   ID              : mistralai/devstral-2512:free
   Canonical Slug  : mistralai/devstral-2512
@@ -45,7 +54,7 @@ MODEL 3: mistralai/devstral-2512
 
 ================================================================================
 
-MODEL 4: moonshotai/kimi-k2
+MODEL 5: moonshotai/kimi-k2
 --------------------------------------------------
   ID              : moonshotai/kimi-k2:free
   Canonical Slug  : moonshotai/kimi-k2
@@ -54,7 +63,7 @@ MODEL 4: moonshotai/kimi-k2
 
 ================================================================================
 
-MODEL 5: openai/gpt-oss-120b
+MODEL 6: openai/gpt-oss-120b
 --------------------------------------------------
   ID              : openai/gpt-oss-120b:free
   Canonical Slug  : openai/gpt-oss-120b
@@ -63,7 +72,7 @@ MODEL 5: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 6: openai/gpt-oss-20b
+MODEL 7: openai/gpt-oss-20b
 --------------------------------------------------
   ID              : openai/gpt-oss-20b:free
   Canonical Slug  : openai/gpt-oss-20b
@@ -72,7 +81,7 @@ MODEL 6: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 7: qwen/qwen3-4b-04-28
+MODEL 8: qwen/qwen3-4b-04-28
 --------------------------------------------------
   ID              : qwen/qwen3-4b:free
   Canonical Slug  : qwen/qwen3-4b-04-28
@@ -81,7 +90,7 @@ MODEL 7: qwen/qwen3-4b-04-28
 
 ================================================================================
 
-MODEL 8: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 9: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID              : qwen/qwen3-coder:free
   Canonical Slug  : qwen/qwen3-coder-480b-a35b-07-25
@@ -90,7 +99,7 @@ MODEL 8: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 9: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 10: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID              : qwen/qwen3-next-80b-a3b-instruct:free
   Canonical Slug  : qwen/qwen3-next-80b-a3b-instruct-2509
@@ -99,7 +108,7 @@ MODEL 9: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 10: allenai/molmo-2-8b-20260109
+MODEL 11: allenai/molmo-2-8b-20260109
 --------------------------------------------------
   ID              : allenai/molmo-2-8b:free
   Canonical Slug  : allenai/molmo-2-8b-20260109
@@ -108,21 +117,12 @@ MODEL 10: allenai/molmo-2-8b-20260109
 
 ================================================================================
 
-MODEL 11: arcee-ai/trinity-mini-20251201
+MODEL 12: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID              : arcee-ai/trinity-mini:free
   Canonical Slug  : arcee-ai/trinity-mini-20251201
   HuggingFace ID  : arcee-ai/Trinity-Mini
   License Info URL: https://huggingface.co/arcee-ai/Trinity-Mini/blob/main/README.md
-
-================================================================================
-
-MODEL 12: liquid/lfm-2.5-1.2b-thinking-20260120
---------------------------------------------------
-  ID              : liquid/lfm-2.5-1.2b-thinking:free
-  Canonical Slug  : liquid/lfm-2.5-1.2b-thinking-20260120
-  HuggingFace ID  : LiquidAI/LFM2.5-1.2B-Thinking
-  License Info URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/README.md
 
 ================================================================================
 

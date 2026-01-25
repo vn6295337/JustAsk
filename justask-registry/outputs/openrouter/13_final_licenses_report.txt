@@ -1,6 +1,6 @@
 ================================================================================
 FINAL CONSOLIDATED LICENSE LIST REPORT
-Generated: 2026-01-24 07:31:21 IST
+Generated: 2026-01-25 07:52:22 IST
 ================================================================================
 
 SUMMARY:
@@ -134,7 +134,7 @@ MODEL 7: liquid/lfm-2.5-1.2b-thinking-20260120
   License Info Text: 
   License Info URL: 
   License Name: lfm1.0
-  License URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/README.md
+  License URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE
   Source Category: custom
 
 ================================================================================

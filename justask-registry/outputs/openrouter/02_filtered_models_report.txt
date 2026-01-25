@@ -1,28 +1,28 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-01-24 07:30:58 IST
+Generated: 2026-01-25 07:51:51 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 345
+  Total models processed: 346
   Models passed all filters: 32
-  Models excluded: 313
-  Success rate: 9.3%
+  Models excluded: 314
+  Success rate: 9.2%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 345 models
+    Input: 346 models
     Excluded: 313 models (non-free pricing)
-    Remaining: 32 models
+    Remaining: 33 models
 
   Step 2 - Billing Description Filter:
-    Input: 32 models
+    Input: 33 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 32 models
+    Remaining: 33 models
 
   Step 3 - Keyword Filter:
-    Input: 32 models
-    Excluded: 0 models (preview/experimental/beta)
+    Input: 33 models
+    Excluded: 1 models (preview/experimental/beta)
     Remaining: 32 models
 
   Step 4 - Deduplication Filter:
@@ -43,7 +43,9 @@ No models found with billing requirements in description.
 ================================================================================
 STEP 3 - KEYWORD FILTER RESULTS (DETAILED)
 ================================================================================
-No models excluded for keywords.
+EXCLUDED FOR: EXPERIMENTAL VERSION (1 models)
+--------------------------------------------------
+   1. Google: Gemini 2.0 Flash Experimental (free)
 
 ================================================================================
 STEP 4 - DEDUPLICATION FILTER RESULTS (DETAILED)
@@ -62,7 +64,7 @@ PROVIDER: GOOGLE (5 models)
 
    2. Google: Gemma 3 27B (free)
       ID: google/gemma-3-27b-it:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    3. Google: Gemma 3 4B (free)
       ID: google/gemma-3-4b-it:free
@@ -81,7 +83,7 @@ PROVIDER: QWEN (4 models)
 --------------------------------------------------
    1. Qwen: Qwen2.5-VL 7B Instruct (free)
       ID: qwen/qwen-2.5-vl-7b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    2. Qwen: Qwen3 4B (free)
       ID: qwen/qwen3-4b:free
@@ -130,7 +132,7 @@ PROVIDER: META (3 models)
 --------------------------------------------------
    1. Meta: Llama 3.1 405B Instruct (free)
       ID: meta-llama/llama-3.1-405b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    2. Meta: Llama 3.2 3B Instruct (free)
       ID: meta-llama/llama-3.2-3b-instruct:free
@@ -138,18 +140,18 @@ PROVIDER: META (3 models)
 
    3. Meta: Llama 3.3 70B Instruct (free)
       ID: meta-llama/llama-3.3-70b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: LIQUIDAI (2 models)
 --------------------------------------------------
    1. LiquidAI: LFM2.5-1.2B-Instruct (free)
       ID: liquid/lfm-2.5-1.2b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    2. LiquidAI: LFM2.5-1.2B-Thinking (free)
       ID: liquid/lfm-2.5-1.2b-thinking:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: MISTRAL (2 models)
@@ -220,7 +222,7 @@ PROVIDER: DEEPSEEK (1 models)
 --------------------------------------------------
    1. DeepSeek: R1 0528 (free)
       ID: deepseek/deepseek-r1-0528:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: NOUS (1 models)
@@ -236,7 +238,7 @@ FINAL SUMMARY:
   Total models passed all filters: 32
   Models excluded by pricing: 313
   Models excluded by billing description: 0
-  Models excluded by keywords: 0
+  Models excluded by keywords: 1
   Models excluded by deduplication: 0
-  Total exclusions: 313
+  Total exclusions: 314
   ✓ All filtered models accounted for

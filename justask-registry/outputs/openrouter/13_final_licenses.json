@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-24 07:31:21 IST",
+    "generated_at": "2026-01-25 07:52:22 IST",
     "total_models": 35,
     "pipeline_stage": "M_final_list_of_licenses"
   },
@@ -146,7 +146,7 @@
       "license_info_text": "",
       "license_info_url": "",
       "license_name": "lfm1.0",
-      "license_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/README.md",
+      "license_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE",
       "source_category": "custom"
     },
     {

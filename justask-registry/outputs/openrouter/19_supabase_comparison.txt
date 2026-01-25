@@ -1,5 +1,5 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-01-24 07:31:25 IST
+Generated: 2026-01-25 07:52:26 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -10,7 +10,7 @@ SUMMARY STATISTICS
    • Total records in pipeline: 31
    • Total records in Supabase: 31
    • Models in both systems: 31
-   • Models with differences: 0
+   • Models with differences: 1
    • Models in pipeline only (not in Supabase): 0
    • Models in Supabase only (not in pipeline): 0
 
@@ -46,8 +46,10 @@ SUMMARY STATISTICS
      - Exact matches: 31
      - Differences: 0
    • license_url:
-     - Exact matches: 31
-     - Differences: 0
+     - Exact matches: 30
+     - Differences: 1
+     - Specific differences:
+       * LFM2.5-1.2B-Thinking: Pipeline='https://huggingface....' vs Supabase='https://huggingface....'
    • rate_limits:
      - Exact matches: 31
      - Differences: 0
@@ -56,7 +58,8 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • Existing models with differences: 0
+   • Existing models with differences: 1
+     Models: LFM2.5-1.2B-Thinking
 
 ================================================================================
 DETAILED COMPARISON BY MODEL

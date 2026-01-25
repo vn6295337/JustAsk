@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-24 07:31:21 IST",
+    "generated_at": "2026-01-25 07:52:21 IST",
     "total_models": 7,
     "pipeline_stage": "J_custom_license_urls"
   },
@@ -11,8 +11,8 @@
       "name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
       "hugging_face_id": "LiquidAI/LFM2.5-1.2B-Thinking",
       "license_name": "lfm1.0",
-      "license_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/README.md",
-      "license_url_type": "README.md file"
+      "license_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE",
+      "license_url_type": "LICENSE file"
     },
     {
       "id": "liquid/lfm-2.5-1.2b-instruct:free",

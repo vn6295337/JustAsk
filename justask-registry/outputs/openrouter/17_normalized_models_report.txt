@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-01-24 07:31:22 IST
+Generated: 2026-01-25 07:52:23 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -213,7 +213,7 @@ COMPLETE MODEL RECORDS:
      Modalities         : Text → Text
      License            : lfm1.0
      License Info       : 
-     License URL        : https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/README.md
+     License URL        : https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE
      Official URL       : https://www.liquid.ai/
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys

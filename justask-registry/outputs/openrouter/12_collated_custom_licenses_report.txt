@@ -1,6 +1,6 @@
 ================================================================================
 COLLATED CUSTOM LICENSE INFORMATION REPORT
-Generated: 2026-01-24 07:31:21 IST
+Generated: 2026-01-25 07:52:22 IST
 ================================================================================
 
 SUMMARY:
@@ -18,8 +18,8 @@ CUSTOM LICENSE DISTRIBUTION:
 Total unique license types: 4
 
 LICENSE URL TYPE DISTRIBUTION:
-   3 models: LICENSE file
-   4 models: README.md file
+   4 models: LICENSE file
+   3 models: README.md file
 
 Total URL types: 2
 
@@ -106,7 +106,7 @@ MODEL 6: liquid/lfm-2.5-1.2b-thinking-20260120
   License Info Text: 
   License Info URL: 
   License Name: lfm1.0
-  License URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/README.md
+  License URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE
 
 ================================================================================
 
