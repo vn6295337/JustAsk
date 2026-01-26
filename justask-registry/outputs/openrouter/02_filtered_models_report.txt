@@ -1,6 +1,6 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-01-25 07:51:51 IST
+Generated: 2026-01-26 07:44:35 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
@@ -87,30 +87,30 @@ PROVIDER: QWEN (4 models)
 
    2. Qwen: Qwen3 4B (free)
       ID: qwen/qwen3-4b:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    3. Qwen: Qwen3 Coder 480B A35B (free)
       ID: qwen/qwen3-coder:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    4. Qwen: Qwen3 Next 80B A3B Instruct (free)
       ID: qwen/qwen3-next-80b-a3b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: NVIDIA (3 models)
 --------------------------------------------------
    1. NVIDIA: Nemotron 3 Nano 30B A3B (free)
       ID: nvidia/nemotron-3-nano-30b-a3b:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    2. NVIDIA: Nemotron Nano 12B 2 VL (free)
       ID: nvidia/nemotron-nano-12b-v2-vl:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    3. NVIDIA: Nemotron Nano 9B V2 (free)
       ID: nvidia/nemotron-nano-9b-v2:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: TNG (3 models)
@@ -136,7 +136,7 @@ PROVIDER: META (3 models)
 
    2. Meta: Llama 3.2 3B Instruct (free)
       ID: meta-llama/llama-3.2-3b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    3. Meta: Llama 3.3 70B Instruct (free)
       ID: meta-llama/llama-3.3-70b-instruct:free
@@ -162,18 +162,18 @@ PROVIDER: MISTRAL (2 models)
 
    2. Mistral: Mistral Small 3.1 24B (free)
       ID: mistralai/mistral-small-3.1-24b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: OPENAI (2 models)
 --------------------------------------------------
    1. OpenAI: gpt-oss-120b (free)
       ID: openai/gpt-oss-120b:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    2. OpenAI: gpt-oss-20b (free)
       ID: openai/gpt-oss-20b:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: ALLENAI (1 models)
@@ -187,35 +187,35 @@ PROVIDER: XIAOMI (1 models)
 --------------------------------------------------
    1. Xiaomi: MiMo-V2-Flash (free)
       ID: xiaomi/mimo-v2-flash:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: ARCEE AI (1 models)
 --------------------------------------------------
    1. Arcee AI: Trinity Mini (free)
       ID: arcee-ai/trinity-mini:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: Z.AI (1 models)
 --------------------------------------------------
    1. Z.AI: GLM 4.5 Air (free)
       ID: z-ai/glm-4.5-air:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: MOONSHOTAI (1 models)
 --------------------------------------------------
    1. MoonshotAI: Kimi K2 0711 (free)
       ID: moonshotai/kimi-k2:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: VENICE (1 models)
 --------------------------------------------------
    1. Venice: Uncensored (free)
       ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: DEEPSEEK (1 models)
@@ -229,7 +229,7 @@ PROVIDER: NOUS (1 models)
 --------------------------------------------------
    1. Nous: Hermes 3 405B Instruct (free)
       ID: nousresearch/hermes-3-llama-3.1-405b:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 ================================================================================
