@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-01-26 07:44:59 IST",
-    "total_models": 35,
+    "generated_at": "2026-01-27 07:43:07 IST",
+    "total_models": 34,
     "pipeline_stage": "M_final_list_of_licenses"
   },
   "models": [
@@ -400,18 +400,6 @@
       "license_name": "xAI",
       "license_url": "https://x.ai/legal",
       "source_category": "proprietary"
-    },
-    {
-      "id": "xiaomi/mimo-v2-flash:free",
-      "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
-      "original_name": "Xiaomi: MiMo-V2-Flash (free)",
-      "hugging_face_id": "XiaomiMiMo/MiMo-V2-Flash",
-      "clean_model_name": "MiMo-V2-Flash",
-      "license_info_text": "info",
-      "license_info_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash/blob/main/README.md",
-      "license_name": "MIT",
-      "license_url": "https://opensource.org/licenses/MIT",
-      "source_category": "opensource"
     },
     {
       "id": "z-ai/glm-4.5-air:free",

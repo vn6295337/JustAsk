@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-01-26 07:44:59 IST",
-    "total_models": 32,
+    "generated_at": "2026-01-27 07:43:07 IST",
+    "total_models": 31,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
@@ -30,15 +30,6 @@
       "hugging_face_id": "allenai/Molmo2-8B",
       "clean_model_name": "Molmo2 8B",
       "raw_input_modalities": "text, image, video",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "xiaomi/mimo-v2-flash:free",
-      "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
-      "original_name": "Xiaomi: MiMo-V2-Flash (free)",
-      "hugging_face_id": "XiaomiMiMo/MiMo-V2-Flash",
-      "clean_model_name": "MiMo-V2-Flash",
-      "raw_input_modalities": "text",
       "raw_output_modalities": "text"
     },
     {

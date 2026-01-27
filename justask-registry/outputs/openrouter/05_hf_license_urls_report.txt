@@ -1,16 +1,16 @@
 ================================================================================
 OTHER LICENSE INFO URLS REPORT
-Generated: 2026-01-26 07:44:49 IST
+Generated: 2026-01-27 07:42:57 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 23
+  Total models : 22
   Input        : 02_filtered_models.json
   Processor    : step_05_fetch_hf_license_urls.py
   Output       : 05_hf_license_urls.json
 
 LICENSE INFO URL BREAKDOWN:
-  13 models: README.md file
+  12 models: README.md file
   10 models: LICENSE file
 
 Total categories: 2
@@ -207,16 +207,7 @@ MODEL 21: venice/uncensored
 
 ================================================================================
 
-MODEL 22: xiaomi/mimo-v2-flash-20251210
---------------------------------------------------
-  ID              : xiaomi/mimo-v2-flash:free
-  Canonical Slug  : xiaomi/mimo-v2-flash-20251210
-  HuggingFace ID  : XiaomiMiMo/MiMo-V2-Flash
-  License Info URL: https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash/blob/main/README.md
-
-================================================================================
-
-MODEL 23: z-ai/glm-4.5-air
+MODEL 22: z-ai/glm-4.5-air
 --------------------------------------------------
   ID              : z-ai/glm-4.5-air:free
   Canonical Slug  : z-ai/glm-4.5-air

@@ -1,34 +1,34 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-01-26 07:44:35 IST
+Generated: 2026-01-27 07:41:54 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 346
-  Models passed all filters: 32
+  Total models processed: 345
+  Models passed all filters: 31
   Models excluded: 314
-  Success rate: 9.2%
+  Success rate: 9.0%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 346 models
+    Input: 345 models
     Excluded: 313 models (non-free pricing)
-    Remaining: 33 models
-
-  Step 2 - Billing Description Filter:
-    Input: 33 models
-    Excluded: 0 models (billing requirements in description)
-    Remaining: 33 models
-
-  Step 3 - Keyword Filter:
-    Input: 33 models
-    Excluded: 1 models (preview/experimental/beta)
     Remaining: 32 models
 
-  Step 4 - Deduplication Filter:
+  Step 2 - Billing Description Filter:
     Input: 32 models
+    Excluded: 0 models (billing requirements in description)
+    Remaining: 32 models
+
+  Step 3 - Keyword Filter:
+    Input: 32 models
+    Excluded: 1 models (preview/experimental/beta)
+    Remaining: 31 models
+
+  Step 4 - Deduplication Filter:
+    Input: 31 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 32 models
+    Final: 31 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
@@ -183,13 +183,6 @@ PROVIDER: ALLENAI (1 models)
       Pricing: prompt=0, completion=0, request=0
 
 
-PROVIDER: XIAOMI (1 models)
---------------------------------------------------
-   1. Xiaomi: MiMo-V2-Flash (free)
-      ID: xiaomi/mimo-v2-flash:free
-      Pricing: prompt=0, completion=0, request=N/A
-
-
 PROVIDER: ARCEE AI (1 models)
 --------------------------------------------------
    1. Arcee AI: Trinity Mini (free)
@@ -234,8 +227,8 @@ PROVIDER: NOUS (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 16
-  Total models passed all filters: 32
+  Total providers: 15
+  Total models passed all filters: 31
   Models excluded by pricing: 313
   Models excluded by billing description: 0
   Models excluded by keywords: 1

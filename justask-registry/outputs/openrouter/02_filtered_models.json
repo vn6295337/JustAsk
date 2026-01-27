@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-01-26 07:44:35 IST",
-    "total_models": 32,
+    "generated_at": "2026-01-27 07:41:54 IST",
+    "total_models": 31,
     "pipeline_stage": "B_filter_models"
   },
   "models": [
@@ -157,55 +157,6 @@
         "frequency_penalty": null
       },
       "expiration_date": null
-    },
-    {
-      "id": "xiaomi/mimo-v2-flash:free",
-      "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
-      "hugging_face_id": "XiaomiMiMo/MiMo-V2-Flash",
-      "name": "Xiaomi: MiMo-V2-Flash (free)",
-      "created": 1765731308,
-      "description": "MiMo-V2-Flash is an open-source foundation language model developed by Xiaomi. It is a Mixture-of-Experts model with 309B total parameters and 15B active parameters, adopting hybrid attention architecture. MiMo-V2-Flash supports a hybrid-thinking toggle and a 256K context window, and excels at reasoning, coding, and agent scenarios. On SWE-bench Verified and SWE-bench Multilingual, MiMo-V2-Flash ranks as the top #1 open-source model globally, delivering performance comparable to Claude Sonnet 4.5 while costing only about 3.5% as much.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config).",
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 65536,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "max_tokens",
-        "presence_penalty",
-        "reasoning",
-        "response_format",
-        "stop",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": null,
-        "top_p": 0.95,
-        "frequency_penalty": null
-      },
-      "expiration_date": "2026-01-26"
     },
     {
       "id": "nvidia/nemotron-3-nano-30b-a3b:free",

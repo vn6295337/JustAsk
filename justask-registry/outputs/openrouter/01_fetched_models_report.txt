@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-01-26 07:44:35 IST
+Generated: 2026-01-27 07:41:54 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 346
+  Total models: 345
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  58 models
@@ -355,10 +355,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - seed-1.6
     - seed-1.6-flash
 
-  Xiaomi          :   2 models
-    - mimo-v2-flash
-    - mimo-v2-flash:free
-
   Relace          :   2 models
     - relace-apply-3
     - relace-search
@@ -381,6 +377,9 @@ PROVIDER BREAKDOWN (Descending Order):
 
   Writer          :   1 models
     - palmyra-x5
+
+  Xiaomi          :   1 models
+    - mimo-v2-flash
 
   Nex AGI         :   1 models
     - deepseek-v3.1-nex-n1

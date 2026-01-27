@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-01-26 07:44:59 IST
+Generated: 2026-01-27 07:43:07 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 32
+  Total models      : 31
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -27,14 +27,13 @@ MODEL PROVIDER DISTRIBUTION:
    1 models: DeepSeek
    1 models: Moonshot AI
    1 models: Nous Research
-   1 models: Xiaomi
    1 models: Z.AI
 
-Total unique model providers: 16
+Total unique model providers: 15
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
   19 models: United States
-   8 models: China
+   7 models: China
    3 models: Germany
    2 models: France
 
@@ -55,10 +54,9 @@ MODEL FAMILY DISTRIBUTION:
    1 models: deepseek
    1 models: moonshot ai
    1 models: nous research
-   1 models: xiaomi
    1 models: z.ai
 
-Total unique model families: 16
+Total unique model families: 15
 
 DETAILED PROVIDER ENRICHED MODEL INFORMATION:
 ================================================================================
@@ -483,21 +481,7 @@ MODEL 30: tngtech/tng-r1t-chimera
 
 ================================================================================
 
-MODEL 31: xiaomi/mimo-v2-flash-20251210
---------------------------------------------------
-  ID: xiaomi/mimo-v2-flash:free
-  Original Name: Xiaomi: MiMo-V2-Flash (free)
-  HuggingFace ID: XiaomiMiMo/MiMo-V2-Flash
-  Canonical Slug: xiaomi/mimo-v2-flash-20251210
-  Clean Model Name: MiMo-V2-Flash
-  Model Provider: Xiaomi
-  Model Provider Country: China
-  Model Family: xiaomi
-  Official URL: https://mimo.xiaomi.com/
-
-================================================================================
-
-MODEL 32: z-ai/glm-4.5-air
+MODEL 31: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.AI: GLM 4.5 Air (free)

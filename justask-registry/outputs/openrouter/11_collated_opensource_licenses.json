@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-01-26 07:44:58 IST",
-    "total_models": 16,
+    "generated_at": "2026-01-27 07:43:06 IST",
+    "total_models": 15,
     "pipeline_stage": "K_collate_opensource_licenses"
   },
   "models": [
@@ -158,17 +158,6 @@
       "license_info_url": "https://huggingface.co/cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition/blob/main/README.md",
       "license_name": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
-    },
-    {
-      "id": "xiaomi/mimo-v2-flash:free",
-      "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
-      "original_name": "Xiaomi: MiMo-V2-Flash (free)",
-      "hugging_face_id": "XiaomiMiMo/MiMo-V2-Flash",
-      "clean_model_name": "MiMo-V2-Flash",
-      "license_info_text": "info",
-      "license_info_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash/blob/main/README.md",
-      "license_name": "MIT",
-      "license_url": "https://opensource.org/licenses/MIT"
     },
     {
       "id": "z-ai/glm-4.5-air:free",

@@ -1,10 +1,10 @@
 ================================================================================
 FINAL CONSOLIDATED LICENSE LIST REPORT
-Generated: 2026-01-26 07:44:59 IST
+Generated: 2026-01-27 07:43:07 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 35
+  Total models        : 34
   Input sources       : 4 pipeline stage files
   Processor           : step_13_final_licenses.py
   Output              : 13_final_licenses.json
@@ -13,13 +13,13 @@ SOURCE CATEGORY DISTRIBUTION:
   Custom: 7 models
   Google: 5 models
   Meta: 3 models
-  Opensource: 16 models
+  Opensource: 15 models
   Proprietary: 4 models
 
 FINAL LICENSE DISTRIBUTION:
   11 models: Apache-2.0
    5 models: Gemma
-   5 models: MIT
+   4 models: MIT
    3 models: NVIDIA
    2 models: Llama-3.1
    2 models: Modified MIT
@@ -469,22 +469,7 @@ MODEL 29: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 30: xiaomi/mimo-v2-flash-20251210
---------------------------------------------------
-  ID: xiaomi/mimo-v2-flash:free
-  Original Name: Xiaomi: MiMo-V2-Flash (free)
-  HuggingFace ID: XiaomiMiMo/MiMo-V2-Flash
-  Canonical Slug: xiaomi/mimo-v2-flash-20251210
-  Clean Model Name: MiMo-V2-Flash
-  License Info Text: info
-  License Info URL: https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash/blob/main/README.md
-  License Name: MIT
-  License URL: https://opensource.org/licenses/MIT
-  Source Category: opensource
-
-================================================================================
-
-MODEL 31: z-ai/glm-4.5-air
+MODEL 30: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.AI: GLM 4.5 Air (free)
@@ -499,7 +484,7 @@ MODEL 31: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 32: amazon/nova-2-lite-v1
+MODEL 31: amazon/nova-2-lite-v1
 --------------------------------------------------
   ID: amazon/nova-2-lite-v1:free
   Original Name: Amazon/Nova 2 Lite V1
@@ -514,7 +499,7 @@ MODEL 32: amazon/nova-2-lite-v1
 
 ================================================================================
 
-MODEL 33: kwaipilot/kat-coder-pro-v1
+MODEL 32: kwaipilot/kat-coder-pro-v1
 --------------------------------------------------
   ID: kwaipilot/kat-coder-pro-v1:free
   Original Name: Kwaipilot/Kat Coder Pro V1
@@ -529,7 +514,7 @@ MODEL 33: kwaipilot/kat-coder-pro-v1
 
 ================================================================================
 
-MODEL 34: x-ai/grok-4-fast
+MODEL 33: x-ai/grok-4-fast
 --------------------------------------------------
   ID: x-ai/grok-4-fast:free
   Original Name: X Ai/Grok 4 Fast
@@ -544,7 +529,7 @@ MODEL 34: x-ai/grok-4-fast
 
 ================================================================================
 
-MODEL 35: x-ai/grok-4.1-fast
+MODEL 34: x-ai/grok-4.1-fast
 --------------------------------------------------
   ID: x-ai/grok-4.1-fast:free
   Original Name: X Ai/Grok 4.1 Fast
