@@ -1,10 +1,24 @@
 {
   "metadata": {
-    "generated_at": "2026-01-22 07:39:06 IST",
-    "total_models": 32,
+    "generated_at": "2026-01-28 07:37:54 IST",
+    "total_models": 31,
     "pipeline_stage": "O_standardize_raw_modalities"
   },
   "models": [
+    {
+      "id": "upstage/solar-pro-3:free",
+      "canonical_slug": "upstage/solar-pro-3",
+      "original_name": "Upstage: Solar Pro 3 (free)",
+      "hugging_face_id": "",
+      "clean_model_name": "Solar Pro 3",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model"
+    },
     {
       "id": "liquid/lfm-2.5-1.2b-thinking:free",
       "canonical_slug": "liquid/lfm-2.5-1.2b-thinking-20260120",
@@ -48,39 +62,11 @@
       "google_enhancement_status": "no_google_model"
     },
     {
-      "id": "xiaomi/mimo-v2-flash:free",
-      "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
-      "original_name": "Xiaomi: MiMo-V2-Flash (free)",
-      "hugging_face_id": "XiaomiMiMo/MiMo-V2-Flash",
-      "clean_model_name": "MiMo-V2-Flash",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model"
-    },
-    {
       "id": "nvidia/nemotron-3-nano-30b-a3b:free",
       "canonical_slug": "nvidia/nemotron-3-nano-30b-a3b",
       "original_name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
       "clean_model_name": "Nemotron 3 Nano 30B A3B",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model"
-    },
-    {
-      "id": "mistralai/devstral-2512:free",
-      "canonical_slug": "mistralai/devstral-2512",
-      "original_name": "Mistral: Devstral 2 2512 (free)",
-      "hugging_face_id": "mistralai/Devstral-2-123B-Instruct-2512",
-      "clean_model_name": "Devstral 2 2512",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text",
       "enhanced_input_modalities": "text",

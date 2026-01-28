@@ -1,10 +1,10 @@
 ================================================================================
 OPENSOURCE LICENSE MODELS REPORT
-Generated: 2026-01-22 07:38:58 IST
+Generated: 2026-01-28 07:37:49 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 16
+  Total models : 15
   Input        : 07_standardized_licenses.json
   Reference    : opensource_license_urls.json
   Processor    : step_08_bucketize_licenses.py
@@ -13,7 +13,7 @@ SUMMARY:
 OPENSOURCE LICENSE DISTRIBUTION:
   Apache-2.0: 10 models
   Llama-3.1: 1 models
-  MIT: 5 models
+  MIT: 4 models
 
 Total license types: 3
 
@@ -146,16 +146,7 @@ MODEL 14: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 15: xiaomi/mimo-v2-flash-20251210
---------------------------------------------------
-  ID              : xiaomi/mimo-v2-flash:free
-  Canonical Slug  : xiaomi/mimo-v2-flash-20251210
-  HuggingFace ID  : XiaomiMiMo/MiMo-V2-Flash
-  License Name    : MIT
-
-================================================================================
-
-MODEL 16: z-ai/glm-4.5-air
+MODEL 15: z-ai/glm-4.5-air
 --------------------------------------------------
   ID              : z-ai/glm-4.5-air:free
   Canonical Slug  : z-ai/glm-4.5-air

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-01-22 07:38:57 IST",
-    "total_models": 23,
+    "generated_at": "2026-01-28 07:37:49 IST",
+    "total_models": 21,
     "pipeline_stage": "G_standardize_other_license_names_from_hf"
   },
   "models": [
@@ -30,28 +30,12 @@
       "standardized_license_name": "Apache-2.0"
     },
     {
-      "id": "xiaomi/mimo-v2-flash:free",
-      "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
-      "name": "Xiaomi: MiMo-V2-Flash (free)",
-      "hugging_face_id": "XiaomiMiMo/MiMo-V2-Flash",
-      "raw_extracted_license": "mit",
-      "standardized_license_name": "MIT"
-    },
-    {
       "id": "nvidia/nemotron-3-nano-30b-a3b:free",
       "canonical_slug": "nvidia/nemotron-3-nano-30b-a3b",
       "name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
       "raw_extracted_license": "nvidia-open-model-license",
       "standardized_license_name": "NVIDIA"
-    },
-    {
-      "id": "mistralai/devstral-2512:free",
-      "canonical_slug": "mistralai/devstral-2512",
-      "name": "Mistral: Devstral 2 2512 (free)",
-      "hugging_face_id": "mistralai/Devstral-2-123B-Instruct-2512",
-      "raw_extracted_license": "other",
-      "standardized_license_name": "other"
     },
     {
       "id": "arcee-ai/trinity-mini:free",

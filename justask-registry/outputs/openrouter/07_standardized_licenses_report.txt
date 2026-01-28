@@ -1,30 +1,29 @@
 ================================================================================
 STANDARDIZED OTHER LICENSE NAMES REPORT
-Generated: 2026-01-22 07:38:57 IST
+Generated: 2026-01-28 07:37:49 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 23
+  Total models : 21
   Input        : 06_hf_license_names.json
   Config       : license_standardization_rules.json
   Processor    : step_07_standardize_license_names.py
   Output       : 07_standardized_licenses.json
 
 STANDARDIZATION RESULTS:
-  Models with license transformations: 20
-  Models unchanged: 3
-  Transformation rate: 87.0%
+  Models with license transformations: 19
+  Models unchanged: 2
+  Transformation rate: 90.5%
 
 STANDARDIZED LICENSE DISTRIBUTION:
   Apache-2.0: 10 models
   Llama-3.1: 1 models
-  MIT: 5 models
+  MIT: 4 models
   Modified MIT: 1 models
   NVIDIA: 3 models
   lfm1.0: 2 models
-  other: 1 models
 
-Total license types: 7
+Total license types: 6
 
 LICENSE NAME TRANSFORMATIONS:
   'apache-2.0' → 'Apache-2.0'
@@ -35,10 +34,9 @@ LICENSE NAME TRANSFORMATIONS:
 
 Total unique transformations: 5
 
-MODELS WITH NO LICENSE CHANGES (3 models):
+MODELS WITH NO LICENSE CHANGES (2 models):
   LiquidAI: LFM2.5-1.2B-Thinking (free): 'lfm1.0'
   LiquidAI: LFM2.5-1.2B-Instruct (free): 'lfm1.0'
-  Mistral: Devstral 2 2512 (free): 'other'
 
 DETAILED MODEL STANDARDIZATION RESULTS:
 ================================================================================
@@ -183,17 +181,7 @@ MODEL 14: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 15: xiaomi/mimo-v2-flash-20251210
---------------------------------------------------
-  ID                     : xiaomi/mimo-v2-flash:free
-  Canonical Slug         : xiaomi/mimo-v2-flash-20251210
-  HuggingFace ID         : XiaomiMiMo/MiMo-V2-Flash
-  Raw License            : mit
-  Standardized License   : MIT
-
-================================================================================
-
-MODEL 16: z-ai/glm-4.5-air
+MODEL 15: z-ai/glm-4.5-air
 --------------------------------------------------
   ID                     : z-ai/glm-4.5-air:free
   Canonical Slug         : z-ai/glm-4.5-air
@@ -203,7 +191,7 @@ MODEL 16: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 17: moonshotai/kimi-k2
+MODEL 16: moonshotai/kimi-k2
 --------------------------------------------------
   ID                     : moonshotai/kimi-k2:free
   Canonical Slug         : moonshotai/kimi-k2
@@ -213,7 +201,7 @@ MODEL 17: moonshotai/kimi-k2
 
 ================================================================================
 
-MODEL 18: nvidia/nemotron-3-nano-30b-a3b
+MODEL 17: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID                     : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug         : nvidia/nemotron-3-nano-30b-a3b
@@ -223,7 +211,7 @@ MODEL 18: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 19: nvidia/nemotron-nano-12b-v2-vl
+MODEL 18: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug         : nvidia/nemotron-nano-12b-v2-vl
@@ -233,7 +221,7 @@ MODEL 19: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 20: nvidia/nemotron-nano-9b-v2
+MODEL 19: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug         : nvidia/nemotron-nano-9b-v2

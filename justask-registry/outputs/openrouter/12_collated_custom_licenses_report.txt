@@ -1,10 +1,10 @@
 ================================================================================
 COLLATED CUSTOM LICENSE INFORMATION REPORT
-Generated: 2026-01-22 07:39:05 IST
+Generated: 2026-01-28 07:37:53 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 7
+  Total models        : 6
   Input sources       : 10_custom_license_urls.json + 05_hf_license_urls.json
   Processor           : step_12_collate_custom.py
   Output              : 12_collated_custom_licenses.json
@@ -13,13 +13,12 @@ CUSTOM LICENSE DISTRIBUTION:
    3 models: NVIDIA
    2 models: lfm1.0
    1 models: Modified MIT
-   1 models: other
 
-Total unique license types: 4
+Total unique license types: 3
 
 LICENSE URL TYPE DISTRIBUTION:
    3 models: LICENSE file
-   4 models: README.md file
+   3 models: README.md file
 
 Total URL types: 2
 
@@ -106,19 +105,5 @@ MODEL 6: liquid/lfm-2.5-1.2b-thinking-20260120
   License Info Text: 
   License Info URL: 
   License Name: lfm1.0
-  License URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/README.md
-
-================================================================================
-
-MODEL 7: mistralai/devstral-2512
---------------------------------------------------
-  ID: mistralai/devstral-2512:free
-  Original Name: Mistral: Devstral 2 2512 (free)
-  HuggingFace ID: mistralai/Devstral-2-123B-Instruct-2512
-  Canonical Slug: mistralai/devstral-2512
-  Clean Model Name: Devstral 2 2512
-  License Info Text: 
-  License Info URL: 
-  License Name: other
-  License URL: https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512/blob/main/LICENSE
+  License URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE
 

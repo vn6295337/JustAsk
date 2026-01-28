@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-01-22 07:38:50 IST",
-    "total_models": 23,
+    "generated_at": "2026-01-28 07:37:42 IST",
+    "total_models": 21,
     "pipeline_stage": "E_fetch_other_license_info_urls_from_hf"
   },
   "models": [
@@ -10,7 +10,7 @@
       "canonical_slug": "liquid/lfm-2.5-1.2b-thinking-20260120",
       "name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
       "hugging_face_id": "LiquidAI/LFM2.5-1.2B-Thinking",
-      "license_info_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/README.md"
+      "license_info_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE"
     },
     {
       "id": "liquid/lfm-2.5-1.2b-instruct:free",
@@ -27,25 +27,11 @@
       "license_info_url": "https://huggingface.co/allenai/Molmo2-8B/blob/main/README.md"
     },
     {
-      "id": "xiaomi/mimo-v2-flash:free",
-      "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
-      "name": "Xiaomi: MiMo-V2-Flash (free)",
-      "hugging_face_id": "XiaomiMiMo/MiMo-V2-Flash",
-      "license_info_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash/blob/main/README.md"
-    },
-    {
       "id": "nvidia/nemotron-3-nano-30b-a3b:free",
       "canonical_slug": "nvidia/nemotron-3-nano-30b-a3b",
       "name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
       "license_info_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md"
-    },
-    {
-      "id": "mistralai/devstral-2512:free",
-      "canonical_slug": "mistralai/devstral-2512",
-      "name": "Mistral: Devstral 2 2512 (free)",
-      "hugging_face_id": "mistralai/Devstral-2-123B-Instruct-2512",
-      "license_info_url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512/blob/main/LICENSE"
     },
     {
       "id": "arcee-ai/trinity-mini:free",

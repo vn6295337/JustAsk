@@ -1,11 +1,11 @@
 ================================================================================
 DATABASE DATA FINALIZATION REPORT
-Generated: 2026-01-22 07:39:06 IST
+Generated: 2026-01-28 07:37:55 IST
 ================================================================================
 
 SUMMARY:
-  Input models         : 32
-  Models kept          : 31
+  Input models         : 31
+  Models kept          : 30
   Models removed       : 1
   Input                : 17_normalized_models.json
   Config               : remove_models.json
@@ -42,22 +42,22 @@ PROVIDER DISTRIBUTION (FINALIZED DATA):
    4 models: Alibaba Cloud
    3 models: Meta
    3 models: NVIDIA
-   2 models: Mistral AI
+   2 models: Liquid AI
    2 models: OpenAI
    2 models: TNG Technology
-   2 models: Unknown
    1 models: Ai2
    1 models: Arcee
    1 models: Cognitive Computations
    1 models: DeepSeek
+   1 models: Mistral AI
    1 models: Moonshot AI
    1 models: Nous Research
-   1 models: Xiaomi
+   1 models: Unknown
    1 models: Z.AI
 
 Total providers: 16
 
 FAMILY DISTRIBUTION (FINALIZED DATA):
-  31 models: Unknown
+  30 models: Unknown
 
 Total families: 1

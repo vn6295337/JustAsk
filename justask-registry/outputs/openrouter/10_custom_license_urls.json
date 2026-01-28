@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-01-22 07:39:04 IST",
-    "total_models": 7,
+    "generated_at": "2026-01-28 07:37:53 IST",
+    "total_models": 6,
     "pipeline_stage": "J_custom_license_urls"
   },
   "models": [
@@ -11,8 +11,8 @@
       "name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
       "hugging_face_id": "LiquidAI/LFM2.5-1.2B-Thinking",
       "license_name": "lfm1.0",
-      "license_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/README.md",
-      "license_url_type": "README.md file"
+      "license_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE",
+      "license_url_type": "LICENSE file"
     },
     {
       "id": "liquid/lfm-2.5-1.2b-instruct:free",
@@ -31,15 +31,6 @@
       "license_name": "NVIDIA",
       "license_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md",
       "license_url_type": "README.md file"
-    },
-    {
-      "id": "mistralai/devstral-2512:free",
-      "canonical_slug": "mistralai/devstral-2512",
-      "name": "Mistral: Devstral 2 2512 (free)",
-      "hugging_face_id": "mistralai/Devstral-2-123B-Instruct-2512",
-      "license_name": "other",
-      "license_url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512/blob/main/LICENSE",
-      "license_url_type": "LICENSE file"
     },
     {
       "id": "nvidia/nemotron-nano-12b-v2-vl:free",

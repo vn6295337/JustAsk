@@ -1,22 +1,22 @@
 ================================================================================
 COLLATED OPENSOURCE LICENSE INFORMATION REPORT
-Generated: 2026-01-22 07:39:05 IST
+Generated: 2026-01-28 07:37:53 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 16
+  Total models        : 15
   Input sources       : 3 pipeline stage files
   Processor           : step_11_collate_opensource.py
   Output              : 11_collated_opensource_licenses.json
 
 PIPELINE STAGE COVERAGE:
-  Step 05 (License Info URLs)    : 16 models
-  Step 08 Opensource Names       : 16 models
-  Step 09 Opensource URLs        : 16 models
+  Step 05 (License Info URLs)    : 15 models
+  Step 08 Opensource Names       : 15 models
+  Step 09 Opensource URLs        : 15 models
 
 OPENSOURCE LICENSE DISTRIBUTION:
   10 models: Apache-2.0
-   5 models: MIT
+   4 models: MIT
    1 models: Llama-3.1
 
 Total unique license types: 3
@@ -220,21 +220,7 @@ MODEL 14: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 15: xiaomi/mimo-v2-flash-20251210
---------------------------------------------------
-  ID: xiaomi/mimo-v2-flash:free
-  Original Name: Xiaomi: MiMo-V2-Flash (free)
-  HuggingFace ID: XiaomiMiMo/MiMo-V2-Flash
-  Canonical Slug: xiaomi/mimo-v2-flash-20251210
-  Clean Model Name: MiMo-V2-Flash
-  License Info Text: info
-  License Info URL: https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash/blob/main/README.md
-  License Name: MIT
-  License URL: https://opensource.org/licenses/MIT
-
-================================================================================
-
-MODEL 16: z-ai/glm-4.5-air
+MODEL 15: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.AI: GLM 4.5 Air (free)

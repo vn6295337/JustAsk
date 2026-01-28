@@ -1,18 +1,18 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-01-22 07:39:08 IST
+Generated: 2026-01-28 07:37:57 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 31
-   • Total records in pipeline: 31
-   • Total records in Supabase: 29
+   • Total unique model names: 32
+   • Total records in pipeline: 30
+   • Total records in Supabase: 31
    • Models in both systems: 29
-   • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 2
-   • Models in Supabase only (not in pipeline): 0
+   • Models with differences: 1
+   • Models in pipeline only (not in Supabase): 1
+   • Models in Supabase only (not in pipeline): 2
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
    • inference_provider:
@@ -46,8 +46,10 @@ SUMMARY STATISTICS
      - Exact matches: 29
      - Differences: 0
    • license_url:
-     - Exact matches: 29
-     - Differences: 0
+     - Exact matches: 28
+     - Differences: 1
+     - Specific differences:
+       * LFM2.5-1.2B-Thinking: Pipeline='https://huggingface....' vs Supabase='https://huggingface....'
    • rate_limits:
      - Exact matches: 29
      - Differences: 0
@@ -56,9 +58,12 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 2
-     Models: LFM2.5-1.2B-Instruct, LFM2.5-1.2B-Thinking
-   • Existing models with differences: 0
+   • New models (pipeline only): 1
+     Models: Solar Pro 3
+   • Existing models with differences: 1
+     Models: LFM2.5-1.2B-Thinking
+   • Deprecated models (Supabase only): 2
+     Models: Devstral 2 2512, MiMo-V2-Flash
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
@@ -108,19 +113,19 @@ MODEL: Devstral 2 2512
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                | OpenRouter               
-model_provider            | Mistral AI                | Mistral AI               
-human_readable_name       | Devstral 2 2512           | Devstral 2 2512          
-model_provider_country    | France                    | France                   
-official_url              | https://mistral.ai/       | https://mistral.ai/      
-input_modalities          | Text                      | Text                     
-output_modalities         | Text                      | Text                     
+inference_provider        |                           | OpenRouter               
+model_provider            |                           | Mistral AI               
+human_readable_name       |                           | Devstral 2 2512          
+model_provider_country    |                           | France                   
+official_url              |                           | https://mistral.ai/      
+input_modalities          |                           | Text                     
+output_modalities         |                           | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | Modified MIT              | Modified MIT             
-license_url               | https://huggingface.co/.. | https://huggingface.co/..
-rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
-provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+license_name              |                           | Modified MIT             
+license_url               |                           | https://huggingface.co/..
+rate_limits               |                           | 20 requests/min 50/day   
+provider_api_access       |                           | https://openrouter.ai/s..
 
 ================================================================================
 
@@ -328,19 +333,19 @@ MODEL: LFM2.5-1.2B-Instruct
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                |                          
-model_provider            | Unknown                   |                          
-human_readable_name       | LFM2.5-1.2B-Instruct      |                          
-model_provider_country    | Unknown                   |                          
-official_url              | Unknown                   |                          
-input_modalities          | Text                      |                          
-output_modalities         | Text                      |                          
-license_info_text         |                           |                          
-license_info_url          |                           |                          
-license_name              | lfm1.0                    |                          
-license_url               | https://huggingface.co/.. |                          
-rate_limits               | 20 requests/min 50/day    |                          
-provider_api_access       | https://openrouter.ai/s.. |                          
+inference_provider        | OpenRouter                | OpenRouter               
+model_provider            | Liquid AI                 | Liquid AI                
+human_readable_name       | LFM2.5-1.2B-Instruct      | LFM2.5-1.2B-Instruct     
+model_provider_country    | United States             | United States            
+official_url              | https://www.liquid.ai/    | https://www.liquid.ai/   
+input_modalities          | Text                      | Text                     
+output_modalities         | Text                      | Text                     
+license_info_text         |                           | None                     
+license_info_url          |                           | None                     
+license_name              | lfm1.0                    | lfm1.0                   
+license_url               | https://huggingface.co/.. | https://huggingface.co/..
+rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
+provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
 
 ================================================================================
 
@@ -348,19 +353,19 @@ MODEL: LFM2.5-1.2B-Thinking
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                |                          
-model_provider            | Unknown                   |                          
-human_readable_name       | LFM2.5-1.2B-Thinking      |                          
-model_provider_country    | Unknown                   |                          
-official_url              | Unknown                   |                          
-input_modalities          | Text                      |                          
-output_modalities         | Text                      |                          
-license_info_text         |                           |                          
-license_info_url          |                           |                          
-license_name              | lfm1.0                    |                          
-license_url               | https://huggingface.co/.. |                          
-rate_limits               | 20 requests/min 50/day    |                          
-provider_api_access       | https://openrouter.ai/s.. |                          
+inference_provider        | OpenRouter                | OpenRouter               
+model_provider            | Liquid AI                 | Liquid AI                
+human_readable_name       | LFM2.5-1.2B-Thinking      | LFM2.5-1.2B-Thinking     
+model_provider_country    | United States             | United States            
+official_url              | https://www.liquid.ai/    | https://www.liquid.ai/   
+input_modalities          | Text                      | Text                     
+output_modalities         | Text                      | Text                     
+license_info_text         |                           | None                     
+license_info_url          |                           | None                     
+license_name              | lfm1.0                    | lfm1.0                   
+license_url               | https://huggingface.co/.. | https://huggingface.co/..
+rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
+provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
 
 ================================================================================
 
@@ -428,19 +433,19 @@ MODEL: MiMo-V2-Flash
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                | OpenRouter               
-model_provider            | Xiaomi                    | Xiaomi                   
-human_readable_name       | MiMo-V2-Flash             | MiMo-V2-Flash            
-model_provider_country    | China                     | China                    
-official_url              | https://mimo.xiaomi.com/  | https://mimo.xiaomi.com/ 
-input_modalities          | Text                      | Text                     
-output_modalities         | Text                      | Text                     
-license_info_text         | info                      | info                     
-license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | MIT                       | MIT                      
-license_url               | https://opensource.org/.. | https://opensource.org/..
-rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
-provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+inference_provider        |                           | OpenRouter               
+model_provider            |                           | Xiaomi                   
+human_readable_name       |                           | MiMo-V2-Flash            
+model_provider_country    |                           | China                    
+official_url              |                           | https://mimo.xiaomi.com/ 
+input_modalities          |                           | Text                     
+output_modalities         |                           | Text                     
+license_info_text         |                           | info                     
+license_info_url          |                           | https://huggingface.co/..
+license_name              |                           | MIT                      
+license_url               |                           | https://opensource.org/..
+rate_limits               |                           | 20 requests/min 50/day   
+provider_api_access       |                           | https://openrouter.ai/s..
 
 ================================================================================
 
@@ -641,6 +646,26 @@ license_name              | MIT                       | MIT
 license_url               | https://opensource.org/.. | https://opensource.org/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+
+================================================================================
+
+MODEL: Solar Pro 3
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | Unknown                   |                          
+human_readable_name       | Solar Pro 3               |                          
+model_provider_country    | Unknown                   |                          
+official_url              | Unknown                   |                          
+input_modalities          | Text                      |                          
+output_modalities         | Text                      |                          
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              |                           |                          
+license_url               |                           |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 

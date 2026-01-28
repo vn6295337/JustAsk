@@ -1,10 +1,56 @@
 {
   "metadata": {
-    "generated_at": "2026-01-22 07:38:34 IST",
-    "total_models": 32,
+    "generated_at": "2026-01-28 07:37:21 IST",
+    "total_models": 31,
     "pipeline_stage": "B_filter_models"
   },
   "models": [
+    {
+      "id": "upstage/solar-pro-3:free",
+      "canonical_slug": "upstage/solar-pro-3",
+      "hugging_face_id": "",
+      "name": "Upstage: Solar Pro 3 (free)",
+      "created": 1769481200,
+      "description": "Solar Pro 3 is Upstage's powerful Mixture-of-Experts (MoE) language model. With 102B total parameters and 12B active parameters per forward pass, it delivers exceptional performance while maintaining computational efficiency. Optimized for Korean with English and Japanese support.",
+      "context_length": 128000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "top_provider": {
+        "context_length": 128000,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      },
+      "expiration_date": "2026-03-02"
+    },
     {
       "id": "liquid/lfm-2.5-1.2b-thinking:free",
       "canonical_slug": "liquid/lfm-2.5-1.2b-thinking-20260120",
@@ -26,11 +72,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 32768,
@@ -80,11 +122,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 32768,
@@ -134,11 +172,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 36864,
@@ -167,59 +201,6 @@
       "expiration_date": null
     },
     {
-      "id": "xiaomi/mimo-v2-flash:free",
-      "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
-      "hugging_face_id": "XiaomiMiMo/MiMo-V2-Flash",
-      "name": "Xiaomi: MiMo-V2-Flash (free)",
-      "created": 1765731308,
-      "description": "MiMo-V2-Flash is an open-source foundation language model developed by Xiaomi. It is a Mixture-of-Experts model with 309B total parameters and 15B active parameters, adopting hybrid attention architecture. MiMo-V2-Flash supports a hybrid-thinking toggle and a 256K context window, and excels at reasoning, coding, and agent scenarios. On SWE-bench Verified and SWE-bench Multilingual, MiMo-V2-Flash ranks as the top #1 open-source model globally, delivering performance comparable to Claude Sonnet 4.5 while costing only about 3.5% as much.\n\nUsers can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our docs](https://openrouter.ai/docs/use-cases/reasoning-tokens#enable-reasoning-with-default-config).",
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
-      },
-      "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": 65536,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "max_tokens",
-        "presence_penalty",
-        "reasoning",
-        "response_format",
-        "stop",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": null,
-        "top_p": 0.95,
-        "frequency_penalty": null
-      },
-      "expiration_date": "2026-01-26"
-    },
-    {
       "id": "nvidia/nemotron-3-nano-30b-a3b:free",
       "canonical_slug": "nvidia/nemotron-3-nano-30b-a3b",
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
@@ -240,11 +221,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 256000,
@@ -270,55 +247,6 @@
       "expiration_date": null
     },
     {
-      "id": "mistralai/devstral-2512:free",
-      "canonical_slug": "mistralai/devstral-2512",
-      "hugging_face_id": "mistralai/Devstral-2-123B-Instruct-2512",
-      "name": "Mistral: Devstral 2 2512 (free)",
-      "created": 1765285419,
-      "description": "Devstral 2 is a state-of-the-art open-source model by Mistral AI specializing in agentic coding. It is a 123B-parameter dense transformer model supporting a 256K context window.\n\nDevstral 2 supports exploring codebases and orchestrating changes across multiple files while maintaining architecture-level context. It tracks framework dependencies, detects failures, and retries with corrections\u2014solving challenges like bug fixing and modernizing legacy systems. The model can be fine-tuned to prioritize specific languages or optimize for large enterprise codebases. It is available under a modified MIT license.",
-      "context_length": 262144,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Mistral",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 262144,
-        "max_completion_tokens": null,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": 0.3,
-        "top_p": null,
-        "frequency_penalty": null
-      },
-      "expiration_date": "2026-01-27"
-    },
-    {
       "id": "arcee-ai/trinity-mini:free",
       "canonical_slug": "arcee-ai/trinity-mini-20251201",
       "hugging_face_id": "arcee-ai/Trinity-Mini",
@@ -339,11 +267,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 131072,
@@ -391,11 +315,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 163840,
@@ -450,11 +370,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 128000,
@@ -500,11 +416,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 262144,
@@ -549,11 +461,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 128000,
@@ -597,11 +505,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 131072,
@@ -647,11 +551,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 131072,
@@ -697,11 +597,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 131072,
@@ -746,11 +642,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 262000,
@@ -794,11 +686,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 32768,
@@ -836,11 +724,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 32768,
@@ -883,11 +767,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 8192,
@@ -929,11 +809,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 163840,
@@ -978,11 +854,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 163840,
@@ -1027,11 +899,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 8192,
@@ -1073,11 +941,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 40960,
@@ -1124,11 +988,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 163840,
@@ -1174,11 +1034,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 128000,
@@ -1226,11 +1082,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 32768,
@@ -1271,11 +1123,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 32768,
@@ -1315,11 +1163,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 131072,
@@ -1368,11 +1212,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 131072,
@@ -1417,11 +1257,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 131072,
@@ -1463,11 +1299,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 32768,
@@ -1506,11 +1338,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 131072,
@@ -1551,11 +1379,7 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 131072,

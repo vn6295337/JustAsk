@@ -1,18 +1,18 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-01-22 07:38:34 IST
+Generated: 2026-01-28 07:37:21 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 345
-  Models passed all filters: 32
-  Models excluded: 313
-  Success rate: 9.3%
+  Total models processed: 347
+  Models passed all filters: 31
+  Models excluded: 316
+  Success rate: 8.9%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 345 models
-    Excluded: 312 models (non-free pricing)
+    Input: 347 models
+    Excluded: 314 models (non-free pricing)
     Remaining: 33 models
 
   Step 2 - Billing Description Filter:
@@ -22,18 +22,18 @@ STEP-BY-STEP FILTERING BREAKDOWN:
 
   Step 3 - Keyword Filter:
     Input: 33 models
-    Excluded: 1 models (preview/experimental/beta)
-    Remaining: 32 models
+    Excluded: 2 models (preview/experimental/beta)
+    Remaining: 31 models
 
   Step 4 - Deduplication Filter:
-    Input: 32 models
+    Input: 31 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 32 models
+    Final: 31 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 312 models with non-free pricing (details omitted due to volume)
+Excluded 314 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -46,6 +46,10 @@ STEP 3 - KEYWORD FILTER RESULTS (DETAILED)
 EXCLUDED FOR: EXPERIMENTAL VERSION (1 models)
 --------------------------------------------------
    1. Google: Gemini 2.0 Flash Experimental (free)
+
+EXCLUDED FOR: PREVIEW/EXPERIMENTAL VERSION (1 models)
+--------------------------------------------------
+   1. Arcee AI: Trinity Large Preview (free)
 
 ================================================================================
 STEP 4 - DEDUPLICATION FILTER RESULTS (DETAILED)
@@ -60,185 +64,181 @@ PROVIDER: GOOGLE (5 models)
 --------------------------------------------------
    1. Google: Gemma 3 12B (free)
       ID: google/gemma-3-12b-it:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    2. Google: Gemma 3 27B (free)
       ID: google/gemma-3-27b-it:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    3. Google: Gemma 3 4B (free)
       ID: google/gemma-3-4b-it:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    4. Google: Gemma 3n 2B (free)
       ID: google/gemma-3n-e2b-it:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    5. Google: Gemma 3n 4B (free)
       ID: google/gemma-3n-e4b-it:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: QWEN (4 models)
 --------------------------------------------------
    1. Qwen: Qwen2.5-VL 7B Instruct (free)
       ID: qwen/qwen-2.5-vl-7b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    2. Qwen: Qwen3 4B (free)
       ID: qwen/qwen3-4b:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    3. Qwen: Qwen3 Coder 480B A35B (free)
       ID: qwen/qwen3-coder:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    4. Qwen: Qwen3 Next 80B A3B Instruct (free)
       ID: qwen/qwen3-next-80b-a3b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: NVIDIA (3 models)
 --------------------------------------------------
    1. NVIDIA: Nemotron 3 Nano 30B A3B (free)
       ID: nvidia/nemotron-3-nano-30b-a3b:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    2. NVIDIA: Nemotron Nano 12B 2 VL (free)
       ID: nvidia/nemotron-nano-12b-v2-vl:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    3. NVIDIA: Nemotron Nano 9B V2 (free)
       ID: nvidia/nemotron-nano-9b-v2:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: TNG (3 models)
 --------------------------------------------------
    1. TNG: DeepSeek R1T Chimera (free)
       ID: tngtech/deepseek-r1t-chimera:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    2. TNG: DeepSeek R1T2 Chimera (free)
       ID: tngtech/deepseek-r1t2-chimera:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    3. TNG: R1T Chimera (free)
       ID: tngtech/tng-r1t-chimera:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: META (3 models)
 --------------------------------------------------
    1. Meta: Llama 3.1 405B Instruct (free)
       ID: meta-llama/llama-3.1-405b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    2. Meta: Llama 3.2 3B Instruct (free)
       ID: meta-llama/llama-3.2-3b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    3. Meta: Llama 3.3 70B Instruct (free)
       ID: meta-llama/llama-3.3-70b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: LIQUIDAI (2 models)
 --------------------------------------------------
    1. LiquidAI: LFM2.5-1.2B-Instruct (free)
       ID: liquid/lfm-2.5-1.2b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    2. LiquidAI: LFM2.5-1.2B-Thinking (free)
       ID: liquid/lfm-2.5-1.2b-thinking:free
-      Pricing: prompt=0, completion=0, request=0
-
-
-PROVIDER: MISTRAL (2 models)
---------------------------------------------------
-   1. Mistral: Devstral 2 2512 (free)
-      ID: mistralai/devstral-2512:free
       Pricing: prompt=0, completion=0, request=N/A
-
-   2. Mistral: Mistral Small 3.1 24B (free)
-      ID: mistralai/mistral-small-3.1-24b-instruct:free
-      Pricing: prompt=0, completion=0, request=0
 
 
 PROVIDER: OPENAI (2 models)
 --------------------------------------------------
    1. OpenAI: gpt-oss-120b (free)
       ID: openai/gpt-oss-120b:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    2. OpenAI: gpt-oss-20b (free)
       ID: openai/gpt-oss-20b:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
+
+
+PROVIDER: UPSTAGE (1 models)
+--------------------------------------------------
+   1. Upstage: Solar Pro 3 (free)
+      ID: upstage/solar-pro-3:free
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: ALLENAI (1 models)
 --------------------------------------------------
    1. AllenAI: Molmo2 8B (free)
       ID: allenai/molmo-2-8b:free
-      Pricing: prompt=0, completion=0, request=0
-
-
-PROVIDER: XIAOMI (1 models)
---------------------------------------------------
-   1. Xiaomi: MiMo-V2-Flash (free)
-      ID: xiaomi/mimo-v2-flash:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: ARCEE AI (1 models)
 --------------------------------------------------
    1. Arcee AI: Trinity Mini (free)
       ID: arcee-ai/trinity-mini:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: Z.AI (1 models)
 --------------------------------------------------
    1. Z.AI: GLM 4.5 Air (free)
       ID: z-ai/glm-4.5-air:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: MOONSHOTAI (1 models)
 --------------------------------------------------
    1. MoonshotAI: Kimi K2 0711 (free)
       ID: moonshotai/kimi-k2:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: VENICE (1 models)
 --------------------------------------------------
    1. Venice: Uncensored (free)
       ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: DEEPSEEK (1 models)
 --------------------------------------------------
    1. DeepSeek: R1 0528 (free)
       ID: deepseek/deepseek-r1-0528:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
+
+
+PROVIDER: MISTRAL (1 models)
+--------------------------------------------------
+   1. Mistral: Mistral Small 3.1 24B (free)
+      ID: mistralai/mistral-small-3.1-24b-instruct:free
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 PROVIDER: NOUS (1 models)
 --------------------------------------------------
    1. Nous: Hermes 3 405B Instruct (free)
       ID: nousresearch/hermes-3-llama-3.1-405b:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
 
 ================================================================================
 FINAL SUMMARY:
   Total providers: 16
-  Total models passed all filters: 32
-  Models excluded by pricing: 312
+  Total models passed all filters: 31
+  Models excluded by pricing: 314
   Models excluded by billing description: 0
-  Models excluded by keywords: 1
+  Models excluded by keywords: 2
   Models excluded by deduplication: 0
-  Total exclusions: 313
+  Total exclusions: 316
   ✓ All filtered models accounted for

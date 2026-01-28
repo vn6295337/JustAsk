@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-01-22 07:38:58 IST",
-    "total_models": 7,
+    "generated_at": "2026-01-28 07:37:49 IST",
+    "total_models": 6,
     "pipeline_stage": "H_bucketize_other_license_names"
   },
   "models": [
@@ -25,13 +25,6 @@
       "name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
       "license_name": "NVIDIA"
-    },
-    {
-      "id": "mistralai/devstral-2512:free",
-      "canonical_slug": "mistralai/devstral-2512",
-      "name": "Mistral: Devstral 2 2512 (free)",
-      "hugging_face_id": "mistralai/Devstral-2-123B-Instruct-2512",
-      "license_name": "other"
     },
     {
       "id": "nvidia/nemotron-nano-12b-v2-vl:free",

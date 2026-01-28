@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-01-22 07:39:05 IST",
-    "total_models": 35,
+    "generated_at": "2026-01-28 07:37:54 IST",
+    "total_models": 34,
     "pipeline_stage": "M_final_list_of_licenses"
   },
   "models": [
@@ -146,7 +146,7 @@
       "license_info_text": "",
       "license_info_url": "",
       "license_name": "lfm1.0",
-      "license_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/README.md",
+      "license_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE",
       "source_category": "custom"
     },
     {
@@ -188,14 +188,14 @@
     {
       "id": "mistralai/devstral-2512:free",
       "canonical_slug": "mistralai/devstral-2512",
-      "original_name": "Mistral: Devstral 2 2512 (free)",
-      "hugging_face_id": "mistralai/Devstral-2-123B-Instruct-2512",
-      "clean_model_name": "Devstral 2 2512",
+      "original_name": "Mistralai/Devstral 2512",
+      "hugging_face_id": "",
+      "clean_model_name": "Devstral 2512",
       "license_info_text": "",
       "license_info_url": "",
       "license_name": "Modified MIT",
       "license_url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512/blob/main/LICENSE",
-      "source_category": "custom"
+      "source_category": "proprietary"
     },
     {
       "id": "mistralai/mistral-small-3.1-24b-instruct:free",
@@ -400,18 +400,6 @@
       "license_name": "xAI",
       "license_url": "https://x.ai/legal",
       "source_category": "proprietary"
-    },
-    {
-      "id": "xiaomi/mimo-v2-flash:free",
-      "canonical_slug": "xiaomi/mimo-v2-flash-20251210",
-      "original_name": "Xiaomi: MiMo-V2-Flash (free)",
-      "hugging_face_id": "XiaomiMiMo/MiMo-V2-Flash",
-      "clean_model_name": "MiMo-V2-Flash",
-      "license_info_text": "info",
-      "license_info_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash/blob/main/README.md",
-      "license_name": "MIT",
-      "license_url": "https://opensource.org/licenses/MIT",
-      "source_category": "opensource"
     },
     {
       "id": "z-ai/glm-4.5-air:free",

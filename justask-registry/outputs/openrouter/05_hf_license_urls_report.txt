@@ -1,16 +1,16 @@
 ================================================================================
 OTHER LICENSE INFO URLS REPORT
-Generated: 2026-01-22 07:38:50 IST
+Generated: 2026-01-28 07:37:42 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 23
+  Total models : 21
   Input        : 02_filtered_models.json
   Processor    : step_05_fetch_hf_license_urls.py
   Output       : 05_hf_license_urls.json
 
 LICENSE INFO URL BREAKDOWN:
-  14 models: README.md file
+  12 models: README.md file
    9 models: LICENSE file
 
 Total categories: 2
@@ -36,12 +36,12 @@ MODEL 2: liquid/lfm-2.5-1.2b-instruct-20260120
 
 ================================================================================
 
-MODEL 3: mistralai/devstral-2512
+MODEL 3: liquid/lfm-2.5-1.2b-thinking-20260120
 --------------------------------------------------
-  ID              : mistralai/devstral-2512:free
-  Canonical Slug  : mistralai/devstral-2512
-  HuggingFace ID  : mistralai/Devstral-2-123B-Instruct-2512
-  License Info URL: https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512/blob/main/LICENSE
+  ID              : liquid/lfm-2.5-1.2b-thinking:free
+  Canonical Slug  : liquid/lfm-2.5-1.2b-thinking-20260120
+  HuggingFace ID  : LiquidAI/LFM2.5-1.2B-Thinking
+  License Info URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE
 
 ================================================================================
 
@@ -117,16 +117,7 @@ MODEL 11: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 12: liquid/lfm-2.5-1.2b-thinking-20260120
---------------------------------------------------
-  ID              : liquid/lfm-2.5-1.2b-thinking:free
-  Canonical Slug  : liquid/lfm-2.5-1.2b-thinking-20260120
-  HuggingFace ID  : LiquidAI/LFM2.5-1.2B-Thinking
-  License Info URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/README.md
-
-================================================================================
-
-MODEL 13: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 12: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID              : mistralai/mistral-small-3.1-24b-instruct:free
   Canonical Slug  : mistralai/mistral-small-3.1-24b-instruct-2503
@@ -135,7 +126,7 @@ MODEL 13: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 14: nvidia/nemotron-3-nano-30b-a3b
+MODEL 13: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID              : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug  : nvidia/nemotron-3-nano-30b-a3b
@@ -144,7 +135,7 @@ MODEL 14: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 15: nvidia/nemotron-nano-12b-v2-vl
+MODEL 14: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID              : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug  : nvidia/nemotron-nano-12b-v2-vl
@@ -153,7 +144,7 @@ MODEL 15: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 16: nvidia/nemotron-nano-9b-v2
+MODEL 15: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID              : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug  : nvidia/nemotron-nano-9b-v2
@@ -162,7 +153,7 @@ MODEL 16: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 17: nousresearch/hermes-3-llama-3.1-405b
+MODEL 16: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID              : nousresearch/hermes-3-llama-3.1-405b:free
   Canonical Slug  : nousresearch/hermes-3-llama-3.1-405b
@@ -171,7 +162,7 @@ MODEL 17: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 18: qwen/qwen-2-vl-7b-instruct
+MODEL 17: qwen/qwen-2-vl-7b-instruct
 --------------------------------------------------
   ID              : qwen/qwen-2.5-vl-7b-instruct:free
   Canonical Slug  : qwen/qwen-2-vl-7b-instruct
@@ -180,7 +171,7 @@ MODEL 18: qwen/qwen-2-vl-7b-instruct
 
 ================================================================================
 
-MODEL 19: tngtech/deepseek-r1t-chimera
+MODEL 18: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID              : tngtech/deepseek-r1t-chimera:free
   Canonical Slug  : tngtech/deepseek-r1t-chimera
@@ -189,7 +180,7 @@ MODEL 19: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 20: tngtech/deepseek-r1t2-chimera
+MODEL 19: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID              : tngtech/deepseek-r1t2-chimera:free
   Canonical Slug  : tngtech/deepseek-r1t2-chimera
@@ -198,7 +189,7 @@ MODEL 20: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 21: venice/uncensored
+MODEL 20: venice/uncensored
 --------------------------------------------------
   ID              : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Canonical Slug  : venice/uncensored
@@ -207,16 +198,7 @@ MODEL 21: venice/uncensored
 
 ================================================================================
 
-MODEL 22: xiaomi/mimo-v2-flash-20251210
---------------------------------------------------
-  ID              : xiaomi/mimo-v2-flash:free
-  Canonical Slug  : xiaomi/mimo-v2-flash-20251210
-  HuggingFace ID  : XiaomiMiMo/MiMo-V2-Flash
-  License Info URL: https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash/blob/main/README.md
-
-================================================================================
-
-MODEL 23: z-ai/glm-4.5-air
+MODEL 21: z-ai/glm-4.5-air
 --------------------------------------------------
   ID              : z-ai/glm-4.5-air:free
   Canonical Slug  : z-ai/glm-4.5-air
