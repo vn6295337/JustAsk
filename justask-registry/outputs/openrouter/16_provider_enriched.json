@@ -1,10 +1,30 @@
 {
   "metadata": {
-    "generated_at": "2026-01-27 07:43:07 IST",
+    "generated_at": "2026-01-28 07:37:54 IST",
     "total_models": 31,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
+    {
+      "id": "upstage/solar-pro-3:free",
+      "canonical_slug": "upstage/solar-pro-3",
+      "provider_slug": "solar-pro-3",
+      "original_name": "Upstage: Solar Pro 3 (free)",
+      "hugging_face_id": "",
+      "clean_model_name": "Solar Pro 3",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "Unknown",
+      "model_provider_country": "Unknown",
+      "model_family": "upstage",
+      "official_url": "Unknown"
+    },
     {
       "id": "liquid/lfm-2.5-1.2b-thinking:free",
       "canonical_slug": "liquid/lfm-2.5-1.2b-thinking-20260120",
@@ -84,26 +104,6 @@
       "model_provider_country": "United States",
       "model_family": "nvidia",
       "official_url": "https://build.nvidia.com/"
-    },
-    {
-      "id": "mistralai/devstral-2512:free",
-      "canonical_slug": "mistralai/devstral-2512",
-      "provider_slug": "devstral-2512",
-      "original_name": "Mistral: Devstral 2 2512 (free)",
-      "hugging_face_id": "mistralai/Devstral-2-123B-Instruct-2512",
-      "clean_model_name": "Devstral 2 2512",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model",
-      "inference_provider": "OpenRouter",
-      "model_provider": "Mistral AI",
-      "model_provider_country": "France",
-      "model_family": "mistral ai",
-      "official_url": "https://mistral.ai/"
     },
     {
       "id": "arcee-ai/trinity-mini:free",

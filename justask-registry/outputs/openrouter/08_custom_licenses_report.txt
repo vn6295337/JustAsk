@@ -1,10 +1,10 @@
 ================================================================================
 CUSTOM LICENSE MODELS REPORT
-Generated: 2026-01-27 07:43:03 IST
+Generated: 2026-01-28 07:37:49 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 7
+  Total models : 6
   Input        : 07_standardized_licenses.json
   Reference    : opensource_license_urls.json
   Processor    : step_08_bucketize_licenses.py
@@ -14,9 +14,8 @@ CUSTOM LICENSE DISTRIBUTION:
   Modified MIT: 1 models
   NVIDIA: 3 models
   lfm1.0: 2 models
-  other: 1 models
 
-Total license types: 4
+Total license types: 3
 
 DETAILED CUSTOM LICENSE MODEL LISTINGS:
 ================================================================================
@@ -72,13 +71,4 @@ MODEL 6: liquid/lfm-2.5-1.2b-thinking-20260120
   Canonical Slug  : liquid/lfm-2.5-1.2b-thinking-20260120
   HuggingFace ID  : LiquidAI/LFM2.5-1.2B-Thinking
   License Name    : lfm1.0
-
-================================================================================
-
-MODEL 7: mistralai/devstral-2512
---------------------------------------------------
-  ID              : mistralai/devstral-2512:free
-  Canonical Slug  : mistralai/devstral-2512
-  HuggingFace ID  : mistralai/Devstral-2-123B-Instruct-2512
-  License Name    : other
 

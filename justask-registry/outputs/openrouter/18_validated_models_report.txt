@@ -1,6 +1,6 @@
 ================================================================================
 DATABASE DATA FINALIZATION REPORT
-Generated: 2026-01-27 07:43:08 IST
+Generated: 2026-01-28 07:37:55 IST
 ================================================================================
 
 SUMMARY:
@@ -43,18 +43,19 @@ PROVIDER DISTRIBUTION (FINALIZED DATA):
    3 models: Meta
    3 models: NVIDIA
    2 models: Liquid AI
-   2 models: Mistral AI
    2 models: OpenAI
    2 models: TNG Technology
    1 models: Ai2
    1 models: Arcee
    1 models: Cognitive Computations
    1 models: DeepSeek
+   1 models: Mistral AI
    1 models: Moonshot AI
    1 models: Nous Research
+   1 models: Unknown
    1 models: Z.AI
 
-Total providers: 15
+Total providers: 16
 
 FAMILY DISTRIBUTION (FINALIZED DATA):
   30 models: Unknown

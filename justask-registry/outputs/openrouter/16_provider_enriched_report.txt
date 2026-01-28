@@ -1,6 +1,6 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-01-27 07:43:07 IST
+Generated: 2026-01-28 07:37:54 IST
 ================================================================================
 
 SUMMARY:
@@ -10,7 +10,17 @@ SUMMARY:
   Processor         : step_16_enrich_provider.py
   Output            : 16_provider_enriched.json
 
-✓ ALL PROVIDERS AND FAMILIES MAPPED SUCCESSFULLY
+ACTION ITEMS - UNKNOWN MAPPINGS:
+==================================================
+UNKNOWN PROVIDERS (1 models):
+  Add these provider mappings to provider_enrichment.json:
+    "upstage": ["Provider Name", "Country"],
+
+UNKNOWN OFFICIAL URLS (1 unique families):
+  Add these URL mappings to family_official_urls:
+    "upstage": "https://official-url-here",
+
+==================================================
 
 MODEL PROVIDER DISTRIBUTION:
    5 models: Google
@@ -19,25 +29,27 @@ MODEL PROVIDER DISTRIBUTION:
    3 models: NVIDIA
    3 models: TNG Technology
    2 models: Liquid AI
-   2 models: Mistral AI
    2 models: OpenAI
    1 models: Ai2
    1 models: Arcee
    1 models: Cognitive Computations
    1 models: DeepSeek
+   1 models: Mistral AI
    1 models: Moonshot AI
    1 models: Nous Research
+   1 models: Unknown
    1 models: Z.AI
 
-Total unique model providers: 15
+Total unique model providers: 16
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
   19 models: United States
    7 models: China
    3 models: Germany
-   2 models: France
+   1 models: France
+   1 models: Unknown
 
-Total unique countries: 4
+Total unique countries: 5
 
 MODEL FAMILY DISTRIBUTION:
    5 models: gemma
@@ -46,17 +58,18 @@ MODEL FAMILY DISTRIBUTION:
    3 models: nvidia
    3 models: tng technology
    2 models: liquid ai
-   2 models: mistral ai
    2 models: openai
    1 models: ai2
    1 models: arcee
    1 models: cognitive computations
    1 models: deepseek
+   1 models: mistral ai
    1 models: moonshot ai
    1 models: nous research
+   1 models: upstage
    1 models: z.ai
 
-Total unique model families: 15
+Total unique model families: 16
 
 DETAILED PROVIDER ENRICHED MODEL INFORMATION:
 ================================================================================
@@ -313,21 +326,7 @@ MODEL 18: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 19: mistralai/devstral-2512
---------------------------------------------------
-  ID: mistralai/devstral-2512:free
-  Original Name: Mistral: Devstral 2 2512 (free)
-  HuggingFace ID: mistralai/Devstral-2-123B-Instruct-2512
-  Canonical Slug: mistralai/devstral-2512
-  Clean Model Name: Devstral 2 2512
-  Model Provider: Mistral AI
-  Model Provider Country: France
-  Model Family: mistral ai
-  Official URL: https://mistral.ai/
-
-================================================================================
-
-MODEL 20: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 19: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID: mistralai/mistral-small-3.1-24b-instruct:free
   Original Name: Mistral: Mistral Small 3.1 24B (free)
@@ -341,7 +340,7 @@ MODEL 20: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 21: moonshotai/kimi-k2
+MODEL 20: moonshotai/kimi-k2
 --------------------------------------------------
   ID: moonshotai/kimi-k2:free
   Original Name: MoonshotAI: Kimi K2 0711 (free)
@@ -355,7 +354,7 @@ MODEL 21: moonshotai/kimi-k2
 
 ================================================================================
 
-MODEL 22: nousresearch/hermes-3-llama-3.1-405b
+MODEL 21: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -369,7 +368,7 @@ MODEL 22: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 23: nvidia/nemotron-3-nano-30b-a3b
+MODEL 22: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -383,7 +382,7 @@ MODEL 23: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 24: nvidia/nemotron-nano-12b-v2-vl
+MODEL 23: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
@@ -397,7 +396,7 @@ MODEL 24: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 25: nvidia/nemotron-nano-9b-v2
+MODEL 24: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -411,7 +410,7 @@ MODEL 25: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 26: openai/gpt-oss-120b
+MODEL 25: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -425,7 +424,7 @@ MODEL 26: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 27: openai/gpt-oss-20b
+MODEL 26: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -439,7 +438,7 @@ MODEL 27: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 28: tngtech/deepseek-r1t-chimera
+MODEL 27: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t-chimera:free
   Original Name: TNG: DeepSeek R1T Chimera (free)
@@ -453,7 +452,7 @@ MODEL 28: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 29: tngtech/deepseek-r1t2-chimera
+MODEL 28: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t2-chimera:free
   Original Name: TNG: DeepSeek R1T2 Chimera (free)
@@ -467,7 +466,7 @@ MODEL 29: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 30: tngtech/tng-r1t-chimera
+MODEL 29: tngtech/tng-r1t-chimera
 --------------------------------------------------
   ID: tngtech/tng-r1t-chimera:free
   Original Name: TNG: R1T Chimera (free)
@@ -478,6 +477,20 @@ MODEL 30: tngtech/tng-r1t-chimera
   Model Provider Country: Germany
   Model Family: tng technology
   Official URL: https://tngtech.com
+
+================================================================================
+
+MODEL 30: upstage/solar-pro-3
+--------------------------------------------------
+  ID: upstage/solar-pro-3:free
+  Original Name: Upstage: Solar Pro 3 (free)
+  HuggingFace ID: 
+  Canonical Slug: upstage/solar-pro-3
+  Clean Model Name: Solar Pro 3
+  Model Provider: Unknown
+  Model Provider Country: Unknown
+  Model Family: upstage
+  Official URL: Unknown
 
 ================================================================================
 

@@ -1,6 +1,6 @@
 ================================================================================
 RAW MODALITIES EXTRACTION REPORT
-Generated: 2026-01-27 07:43:07 IST
+Generated: 2026-01-28 07:37:54 IST
 ================================================================================
 
 SUMMARY:
@@ -69,19 +69,7 @@ MODEL 3: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 4: mistralai/devstral-2512
---------------------------------------------------
-  ID: mistralai/devstral-2512:free
-  Original Name: Mistral: Devstral 2 2512 (free)
-  HuggingFace ID: mistralai/Devstral-2-123B-Instruct-2512
-  Canonical Slug: mistralai/devstral-2512
-  Clean Model Name: Devstral 2 2512
-  Raw Input Modalities: text
-  Raw Output Modalities: text
-
-================================================================================
-
-MODEL 5: z-ai/glm-4.5-air
+MODEL 4: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.AI: GLM 4.5 Air (free)
@@ -93,7 +81,7 @@ MODEL 5: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 6: openai/gpt-oss-120b
+MODEL 5: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -105,7 +93,7 @@ MODEL 6: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 7: openai/gpt-oss-20b
+MODEL 6: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -117,7 +105,7 @@ MODEL 7: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 8: google/gemma-3n-e2b-it
+MODEL 7: google/gemma-3n-e2b-it
 --------------------------------------------------
   ID: google/gemma-3n-e2b-it:free
   Original Name: Google: Gemma 3n 2B (free)
@@ -129,7 +117,7 @@ MODEL 8: google/gemma-3n-e2b-it
 
 ================================================================================
 
-MODEL 9: google/gemma-3n-e4b-it
+MODEL 8: google/gemma-3n-e4b-it
 --------------------------------------------------
   ID: google/gemma-3n-e4b-it:free
   Original Name: Google: Gemma 3n 4B (free)
@@ -141,7 +129,7 @@ MODEL 9: google/gemma-3n-e4b-it
 
 ================================================================================
 
-MODEL 10: nousresearch/hermes-3-llama-3.1-405b
+MODEL 9: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -153,7 +141,7 @@ MODEL 10: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 11: moonshotai/kimi-k2
+MODEL 10: moonshotai/kimi-k2
 --------------------------------------------------
   ID: moonshotai/kimi-k2:free
   Original Name: MoonshotAI: Kimi K2 0711 (free)
@@ -165,7 +153,7 @@ MODEL 11: moonshotai/kimi-k2
 
 ================================================================================
 
-MODEL 12: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 11: liquid/lfm-2.5-1.2b-instruct-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-instruct:free
   Original Name: LiquidAI: LFM2.5-1.2B-Instruct (free)
@@ -177,7 +165,7 @@ MODEL 12: liquid/lfm-2.5-1.2b-instruct-20260120
 
 ================================================================================
 
-MODEL 13: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 12: liquid/lfm-2.5-1.2b-thinking-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-thinking:free
   Original Name: LiquidAI: LFM2.5-1.2B-Thinking (free)
@@ -189,7 +177,7 @@ MODEL 13: liquid/lfm-2.5-1.2b-thinking-20260120
 
 ================================================================================
 
-MODEL 14: meta-llama/llama-3.1-405b-instruct
+MODEL 13: meta-llama/llama-3.1-405b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.1-405b-instruct:free
   Original Name: Meta: Llama 3.1 405B Instruct (free)
@@ -201,7 +189,7 @@ MODEL 14: meta-llama/llama-3.1-405b-instruct
 
 ================================================================================
 
-MODEL 15: meta-llama/llama-3.2-3b-instruct
+MODEL 14: meta-llama/llama-3.2-3b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.2-3b-instruct:free
   Original Name: Meta: Llama 3.2 3B Instruct (free)
@@ -213,7 +201,7 @@ MODEL 15: meta-llama/llama-3.2-3b-instruct
 
 ================================================================================
 
-MODEL 16: meta-llama/llama-3.3-70b-instruct
+MODEL 15: meta-llama/llama-3.3-70b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.3-70b-instruct:free
   Original Name: Meta: Llama 3.3 70B Instruct (free)
@@ -225,7 +213,7 @@ MODEL 16: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 17: nvidia/nemotron-3-nano-30b-a3b
+MODEL 16: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -237,7 +225,7 @@ MODEL 17: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 18: nvidia/nemotron-nano-9b-v2
+MODEL 17: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -249,7 +237,7 @@ MODEL 18: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 19: qwen/qwen3-4b-04-28
+MODEL 18: qwen/qwen3-4b-04-28
 --------------------------------------------------
   ID: qwen/qwen3-4b:free
   Original Name: Qwen: Qwen3 4B (free)
@@ -261,7 +249,7 @@ MODEL 19: qwen/qwen3-4b-04-28
 
 ================================================================================
 
-MODEL 20: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 19: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -273,7 +261,7 @@ MODEL 20: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 21: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 20: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID: qwen/qwen3-next-80b-a3b-instruct:free
   Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
@@ -285,7 +273,7 @@ MODEL 21: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 22: deepseek/deepseek-r1-0528
+MODEL 21: deepseek/deepseek-r1-0528
 --------------------------------------------------
   ID: deepseek/deepseek-r1-0528:free
   Original Name: DeepSeek: R1 0528 (free)
@@ -297,13 +285,25 @@ MODEL 22: deepseek/deepseek-r1-0528
 
 ================================================================================
 
-MODEL 23: tngtech/tng-r1t-chimera
+MODEL 22: tngtech/tng-r1t-chimera
 --------------------------------------------------
   ID: tngtech/tng-r1t-chimera:free
   Original Name: TNG: R1T Chimera (free)
   HuggingFace ID: None
   Canonical Slug: tngtech/tng-r1t-chimera
   Clean Model Name: R1T Chimera
+  Raw Input Modalities: text
+  Raw Output Modalities: text
+
+================================================================================
+
+MODEL 23: upstage/solar-pro-3
+--------------------------------------------------
+  ID: upstage/solar-pro-3:free
+  Original Name: Upstage: Solar Pro 3 (free)
+  HuggingFace ID: 
+  Canonical Slug: upstage/solar-pro-3
+  Clean Model Name: Solar Pro 3
   Raw Input Modalities: text
   Raw Output Modalities: text
 

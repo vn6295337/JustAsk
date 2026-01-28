@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-01-27 07:43:03 IST",
-    "total_models": 22,
+    "generated_at": "2026-01-28 07:37:49 IST",
+    "total_models": 21,
     "pipeline_stage": "G_standardize_other_license_names_from_hf"
   },
   "models": [
@@ -36,14 +36,6 @@
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
       "raw_extracted_license": "nvidia-open-model-license",
       "standardized_license_name": "NVIDIA"
-    },
-    {
-      "id": "mistralai/devstral-2512:free",
-      "canonical_slug": "mistralai/devstral-2512",
-      "name": "Mistral: Devstral 2 2512 (free)",
-      "hugging_face_id": "mistralai/Devstral-2-123B-Instruct-2512",
-      "raw_extracted_license": "other",
-      "standardized_license_name": "other"
     },
     {
       "id": "arcee-ai/trinity-mini:free",

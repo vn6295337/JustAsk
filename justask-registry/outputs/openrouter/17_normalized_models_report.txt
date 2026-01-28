@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-01-27 07:43:08 IST
+Generated: 2026-01-28 07:37:55 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -10,7 +10,6 @@ MISSING OR EMPTY VALUES:
 ------------------------------
 
 LICENSE INFO TEXT (16 models):
-  - Devstral 2 2512
   - Gemma 3 12B IT
   - Gemma 3 27B IT
   - Gemma 3 4B IT
@@ -26,9 +25,9 @@ LICENSE INFO TEXT (16 models):
   - Nemotron Nano 12B 2 VL
   - Nemotron Nano 9B V2
   - R1T Chimera
+  - Solar Pro 3
 
 LICENSE INFO URL (16 models):
-  - Devstral 2 2512
   - Gemma 3 12B IT
   - Gemma 3 27B IT
   - Gemma 3 4B IT
@@ -44,24 +43,30 @@ LICENSE INFO URL (16 models):
   - Nemotron Nano 12B 2 VL
   - Nemotron Nano 9B V2
   - R1T Chimera
+  - Solar Pro 3
 
-LICENSE NAME (1 models):
+LICENSE NAME (2 models):
   - R1T Chimera
+  - Solar Pro 3
 
-LICENSE URL (1 models):
+LICENSE URL (2 models):
   - R1T Chimera
+  - Solar Pro 3
 
 UNKNOWN OR 'NOT FOUND' VALUES:
 ------------------------------
-✓ No unknown values found
+
+MODEL PROVIDER (1 models):
+  - Solar Pro 3
 
 DATA QUALITY SUMMARY:
 ------------------------------
 Total models: 31
 Missing license info text: 16 (51.6%)
 Missing license info url: 16 (51.6%)
-Missing license name: 1 (3.2%)
-Missing license url: 1 (3.2%)
+Missing license name: 2 (6.5%)
+Missing license url: 2 (6.5%)
+Unknown model provider: 1 (3.2%)
 
 ================================================================================
 
@@ -248,17 +253,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 19. Devstral 2 2512
-     Provider           : Mistral AI (France)
-     Modalities         : Text → Text
-     License            : Modified MIT
-     License Info       : 
-     License URL        : https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512/blob/main/LICENSE
-     Official URL       : https://mistral.ai/
-     Rate Limits        : 20 requests/min 50/day
-     Provider API Access: https://openrouter.ai/settings/keys
-
- 20. Mistral Small 3.1 24B
+ 19. Mistral Small 3.1 24B
      Provider           : Mistral AI (France)
      Modalities         : Text, Image → Text
      License            : Apache-2.0
@@ -268,7 +263,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 21. Kimi K2 0711
+ 20. Kimi K2 0711
      Provider           : Moonshot AI (China)
      Modalities         : Text → Text
      License            : Modified MIT
@@ -278,7 +273,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 22. Nemotron 3 Nano 30B A3B
+ 21. Nemotron 3 Nano 30B A3B
      Provider           : NVIDIA (United States)
      Modalities         : Text → Text
      License            : NVIDIA
@@ -288,7 +283,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 23. Nemotron Nano 12B 2 VL
+ 22. Nemotron Nano 12B 2 VL
      Provider           : NVIDIA (United States)
      Modalities         : Text, Image, Video → Text
      License            : NVIDIA
@@ -298,7 +293,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 24. Nemotron Nano 9B V2
+ 23. Nemotron Nano 9B V2
      Provider           : NVIDIA (United States)
      Modalities         : Text → Text
      License            : NVIDIA
@@ -308,7 +303,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 25. Hermes 3 405B Instruct
+ 24. Hermes 3 405B Instruct
      Provider           : Nous Research (United States)
      Modalities         : Text → Text
      License            : Llama-3.1
@@ -318,7 +313,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 26. GPT OSS 120B
+ 25. GPT OSS 120B
      Provider           : OpenAI (United States)
      Modalities         : Text → Text
      License            : Apache-2.0
@@ -328,7 +323,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 27. GPT OSS 20B
+ 26. GPT OSS 20B
      Provider           : OpenAI (United States)
      Modalities         : Text → Text
      License            : Apache-2.0
@@ -338,7 +333,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 28. DeepSeek R1T Chimera
+ 27. DeepSeek R1T Chimera
      Provider           : TNG Technology (Germany)
      Modalities         : Text → Text
      License            : MIT
@@ -348,7 +343,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 29. DeepSeek R1T2 Chimera
+ 28. DeepSeek R1T2 Chimera
      Provider           : TNG Technology (Germany)
      Modalities         : Text → Text
      License            : MIT
@@ -358,13 +353,23 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 30. R1T Chimera
+ 29. R1T Chimera
      Provider           : TNG Technology (Germany)
      Modalities         : Text → Text
      License            : 
      License Info       : 
      License URL        : 
      Official URL       : https://tngtech.com
+     Rate Limits        : 20 requests/min 50/day
+     Provider API Access: https://openrouter.ai/settings/keys
+
+ 30. Solar Pro 3
+     Provider           : Unknown (Unknown)
+     Modalities         : Text → Text
+     License            : 
+     License Info       : 
+     License URL        : 
+     Official URL       : Unknown
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 

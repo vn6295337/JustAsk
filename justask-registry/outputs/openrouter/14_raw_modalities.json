@@ -1,10 +1,19 @@
 {
   "metadata": {
-    "generated_at": "2026-01-27 07:43:07 IST",
+    "generated_at": "2026-01-28 07:37:54 IST",
     "total_models": 31,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
+    {
+      "id": "upstage/solar-pro-3:free",
+      "canonical_slug": "upstage/solar-pro-3",
+      "original_name": "Upstage: Solar Pro 3 (free)",
+      "hugging_face_id": "",
+      "clean_model_name": "Solar Pro 3",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text"
+    },
     {
       "id": "liquid/lfm-2.5-1.2b-thinking:free",
       "canonical_slug": "liquid/lfm-2.5-1.2b-thinking-20260120",
@@ -38,15 +47,6 @@
       "original_name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
       "clean_model_name": "Nemotron 3 Nano 30B A3B",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "mistralai/devstral-2512:free",
-      "canonical_slug": "mistralai/devstral-2512",
-      "original_name": "Mistral: Devstral 2 2512 (free)",
-      "hugging_face_id": "mistralai/Devstral-2-123B-Instruct-2512",
-      "clean_model_name": "Devstral 2 2512",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text"
     },
