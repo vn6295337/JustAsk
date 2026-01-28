@@ -1,69 +1,62 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-01-28 09:56:06 IST
+Generated: 2026-01-28 10:17:50 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 32
+   • Total unique model names: 30
    • Total records in pipeline: 30
-   • Total records in Supabase: 31
-   • Models in both systems: 29
-   • Models with differences: 1
-   • Models in pipeline only (not in Supabase): 1
-   • Models in Supabase only (not in pipeline): 2
+   • Total records in Supabase: 30
+   • Models in both systems: 30
+   • Models with differences: 0
+   • Models in pipeline only (not in Supabase): 0
+   • Models in Supabase only (not in pipeline): 0
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
    • inference_provider:
-     - Exact matches: 29
+     - Exact matches: 30
      - Differences: 0
    • model_provider:
-     - Exact matches: 29
+     - Exact matches: 30
      - Differences: 0
    • human_readable_name:
-     - Exact matches: 29
+     - Exact matches: 30
      - Differences: 0
    • model_provider_country:
-     - Exact matches: 29
+     - Exact matches: 30
      - Differences: 0
    • official_url:
-     - Exact matches: 29
+     - Exact matches: 30
      - Differences: 0
    • input_modalities:
-     - Exact matches: 29
+     - Exact matches: 30
      - Differences: 0
    • output_modalities:
-     - Exact matches: 29
+     - Exact matches: 30
      - Differences: 0
    • license_info_text:
-     - Exact matches: 29
+     - Exact matches: 30
      - Differences: 0
    • license_info_url:
-     - Exact matches: 29
+     - Exact matches: 30
      - Differences: 0
    • license_name:
-     - Exact matches: 29
+     - Exact matches: 30
      - Differences: 0
    • license_url:
-     - Exact matches: 28
-     - Differences: 1
-     - Specific differences:
-       * LFM2.5-1.2B-Thinking: Pipeline='https://huggingface....' vs Supabase='https://huggingface....'
+     - Exact matches: 30
+     - Differences: 0
    • rate_limits:
-     - Exact matches: 29
+     - Exact matches: 30
      - Differences: 0
    • provider_api_access:
-     - Exact matches: 29
+     - Exact matches: 30
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 1
-     Models: Solar Pro 3
-   • Existing models with differences: 1
-     Models: LFM2.5-1.2B-Thinking
-   • Deprecated models (Supabase only): 2
-     Models: Devstral 2 2512, MiMo-V2-Flash
+   • Existing models with differences: 0
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
@@ -106,26 +99,6 @@ license_name              | MIT                       | MIT
 license_url               | https://opensource.org/.. | https://opensource.org/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
-
-================================================================================
-
-MODEL: Devstral 2 2512
---------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
---------------------------------------------------------------------------------
-inference_provider        |                           | OpenRouter               
-model_provider            |                           | Mistral AI               
-human_readable_name       |                           | Devstral 2 2512          
-model_provider_country    |                           | France                   
-official_url              |                           | https://mistral.ai/      
-input_modalities          |                           | Text                     
-output_modalities         |                           | Text                     
-license_info_text         |                           | None                     
-license_info_url          |                           | None                     
-license_name              |                           | Modified MIT             
-license_url               |                           | https://huggingface.co/..
-rate_limits               |                           | 20 requests/min 50/day   
-provider_api_access       |                           | https://openrouter.ai/s..
 
 ================================================================================
 
@@ -429,26 +402,6 @@ provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s.
 
 ================================================================================
 
-MODEL: MiMo-V2-Flash
---------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
---------------------------------------------------------------------------------
-inference_provider        |                           | OpenRouter               
-model_provider            |                           | Xiaomi                   
-human_readable_name       |                           | MiMo-V2-Flash            
-model_provider_country    |                           | China                    
-official_url              |                           | https://mimo.xiaomi.com/ 
-input_modalities          |                           | Text                     
-output_modalities         |                           | Text                     
-license_info_text         |                           | info                     
-license_info_url          |                           | https://huggingface.co/..
-license_name              |                           | MIT                      
-license_url               |                           | https://opensource.org/..
-rate_limits               |                           | 20 requests/min 50/day   
-provider_api_access       |                           | https://openrouter.ai/s..
-
-================================================================================
-
 MODEL: Mistral Small 3.1 24B
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
@@ -653,19 +606,19 @@ MODEL: Solar Pro 3
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                |                          
-model_provider            | Upstage AI                |                          
-human_readable_name       | Solar Pro 3               |                          
-model_provider_country    | South Korea               |                          
-official_url              | https://www.upstage.ai/   |                          
-input_modalities          | Text                      |                          
-output_modalities         | Text                      |                          
-license_info_text         |                           |                          
-license_info_url          |                           |                          
-license_name              | Upstage                   |                          
-license_url               | https://www.upstage.ai/.. |                          
-rate_limits               | 20 requests/min 50/day    |                          
-provider_api_access       | https://openrouter.ai/s.. |                          
+inference_provider        | OpenRouter                | OpenRouter               
+model_provider            | Upstage AI                | Upstage AI               
+human_readable_name       | Solar Pro 3               | Solar Pro 3              
+model_provider_country    | South Korea               | South Korea              
+official_url              | https://www.upstage.ai/   | https://www.upstage.ai/  
+input_modalities          | Text                      | Text                     
+output_modalities         | Text                      | Text                     
+license_info_text         |                           | None                     
+license_info_url          |                           | None                     
+license_name              | Upstage                   | Upstage                  
+license_url               | https://www.upstage.ai/.. | https://www.upstage.ai/..
+rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
+provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
 
 ================================================================================
 
