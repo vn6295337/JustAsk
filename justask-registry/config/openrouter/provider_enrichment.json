@@ -39,7 +39,9 @@
     "ai2": ["Ai2", "United States"],
     "allenai": ["Ai2", "United States"],
     "nex-agi": ["Nex AGI", "China"],
-    "xiaomi": ["Xiaomi", "China"]
+    "xiaomi": ["Xiaomi", "China"],
+    "upstage": ["Upstage AI", "South Korea"],
+    "upstage-ai": ["Upstage AI", "South Korea"]
   },
   "model_family_patterns": {
     "gemma": ["gemma", "gemma-2", "gemma-3", "gemma-3n"],
@@ -59,7 +61,8 @@
     "Dolphin": ["uncensored"],
     "nova": ["nova"],
     "olmo": ["olmo"],
-    "mimo": ["mimo"]
+    "mimo": ["mimo"],
+    "solar": ["solar"]
   },
   "special_mappings": {
     "oss_models": {
@@ -118,6 +121,10 @@
     "nex agi": "https://nex.sii.edu.cn/en/",
     "nex-agi": "https://nex.sii.edu.cn/en/",
     "xiaomi": "https://mimo.xiaomi.com/",
-    "mimo": "https://mimo.xiaomi.com/"
+    "mimo": "https://mimo.xiaomi.com/",
+    "solar": "https://www.upstage.ai/",
+    "upstage": "https://www.upstage.ai/",
+    "upstage ai": "https://www.upstage.ai/",
+    "upstage-ai": "https://www.upstage.ai/"
   }
 }
