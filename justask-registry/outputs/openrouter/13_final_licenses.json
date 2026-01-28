@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-01-28 07:37:54 IST",
-    "total_models": 34,
+    "generated_at": "2026-01-28 09:56:03 IST",
+    "total_models": 35,
     "pipeline_stage": "M_final_list_of_licenses"
   },
   "models": [
@@ -364,6 +364,18 @@
       "license_name": "MIT",
       "license_url": "https://opensource.org/licenses/MIT",
       "source_category": "opensource"
+    },
+    {
+      "id": "upstage/solar-pro-3:free",
+      "canonical_slug": "upstage/solar-pro-3",
+      "original_name": "Upstage/Solar Pro 3",
+      "hugging_face_id": "",
+      "clean_model_name": "Solar Pro 3",
+      "license_info_text": "",
+      "license_info_url": "",
+      "license_name": "Upstage",
+      "license_url": "https://www.upstage.ai/terms-of-service",
+      "source_category": "proprietary"
     },
     {
       "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",

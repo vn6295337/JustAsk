@@ -1,6 +1,6 @@
 ================================================================================
 DATABASE DATA FINALIZATION REPORT
-Generated: 2026-01-28 07:37:55 IST
+Generated: 2026-01-28 09:56:04 IST
 ================================================================================
 
 SUMMARY:
@@ -52,7 +52,7 @@ PROVIDER DISTRIBUTION (FINALIZED DATA):
    1 models: Mistral AI
    1 models: Moonshot AI
    1 models: Nous Research
-   1 models: Unknown
+   1 models: Upstage AI
    1 models: Z.AI
 
 Total providers: 16
