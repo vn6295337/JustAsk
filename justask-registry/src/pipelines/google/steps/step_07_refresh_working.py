@@ -81,7 +81,7 @@ except ImportError:
     print("⚠️ python-dotenv not installed")
 
 # Configuration
-JSON_FILE = get_input_file_path('05_normalized_models.json')
+JSON_FILE = Path(get_input_file_path('05_normalized_models.json'))
 LOG_FILE = get_output_file_path('07_refresh_working_report.txt')
 
 # Database configuration
