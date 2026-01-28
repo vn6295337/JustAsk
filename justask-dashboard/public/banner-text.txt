@@ -1,1 +1,1 @@
-This Week - OpenRouter free tier: Added molmo2-8b, qwen3-next-80b-a3b-instruct, lfm2.5-1.2b-instruct, lfm2.5-1.2b-thinking. Removed and readded deepSeek-v3.1-nex-n1, kat-coder-pro-v1, hermes-3-405b-instruct, llama-3.2-3b-instruct, mistral-small-3.1-24b, qwen3-4b, uncensored. Removed mistral-7b-instruct.
+This Week - Openrouter: Added solar-pro-3. Removed devstral, mimo. | Google: Removed embedding-001, embedding-gecko-001, text-embedding-004.
