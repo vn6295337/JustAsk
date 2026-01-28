@@ -1,10 +1,10 @@
 ================================================================================
 FINAL CONSOLIDATED LICENSE LIST REPORT
-Generated: 2026-01-28 07:37:54 IST
+Generated: 2026-01-28 09:56:03 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 34
+  Total models        : 35
   Input sources       : 4 pipeline stage files
   Processor           : step_13_final_licenses.py
   Output              : 13_final_licenses.json
@@ -14,7 +14,7 @@ SOURCE CATEGORY DISTRIBUTION:
   Google: 5 models
   Meta: 3 models
   Opensource: 15 models
-  Proprietary: 5 models
+  Proprietary: 6 models
 
 FINAL LICENSE DISTRIBUTION:
   11 models: Apache-2.0
@@ -28,8 +28,9 @@ FINAL LICENSE DISTRIBUTION:
    1 models: AWS
    1 models: Llama-3.2
    1 models: Llama-3.3
+   1 models: Upstage
 
-Total unique license types: 11
+Total unique license types: 12
 
 DETAILED FINAL MODEL INFORMATION:
 ================================================================================
@@ -514,7 +515,22 @@ MODEL 32: mistralai/devstral-2512
 
 ================================================================================
 
-MODEL 33: x-ai/grok-4-fast
+MODEL 33: upstage/solar-pro-3
+--------------------------------------------------
+  ID: upstage/solar-pro-3:free
+  Original Name: Upstage/Solar Pro 3
+  HuggingFace ID: 
+  Canonical Slug: upstage/solar-pro-3
+  Clean Model Name: Solar Pro 3
+  License Info Text: 
+  License Info URL: 
+  License Name: Upstage
+  License URL: https://www.upstage.ai/terms-of-service
+  Source Category: proprietary
+
+================================================================================
+
+MODEL 34: x-ai/grok-4-fast
 --------------------------------------------------
   ID: x-ai/grok-4-fast:free
   Original Name: X Ai/Grok 4 Fast
@@ -529,7 +545,7 @@ MODEL 33: x-ai/grok-4-fast
 
 ================================================================================
 
-MODEL 34: x-ai/grok-4.1-fast
+MODEL 35: x-ai/grok-4.1-fast
 --------------------------------------------------
   ID: x-ai/grok-4.1-fast:free
   Original Name: X Ai/Grok 4.1 Fast

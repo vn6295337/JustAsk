@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-01-28 07:37:55 IST
+Generated: 2026-01-28 09:56:04 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -45,28 +45,23 @@ LICENSE INFO URL (16 models):
   - R1T Chimera
   - Solar Pro 3
 
-LICENSE NAME (2 models):
+LICENSE NAME (1 models):
   - R1T Chimera
-  - Solar Pro 3
 
-LICENSE URL (2 models):
+LICENSE URL (1 models):
   - R1T Chimera
-  - Solar Pro 3
 
 UNKNOWN OR 'NOT FOUND' VALUES:
 ------------------------------
-
-MODEL PROVIDER (1 models):
-  - Solar Pro 3
+✓ No unknown values found
 
 DATA QUALITY SUMMARY:
 ------------------------------
 Total models: 31
 Missing license info text: 16 (51.6%)
 Missing license info url: 16 (51.6%)
-Missing license name: 2 (6.5%)
-Missing license url: 2 (6.5%)
-Unknown model provider: 1 (3.2%)
+Missing license name: 1 (3.2%)
+Missing license url: 1 (3.2%)
 
 ================================================================================
 
@@ -364,12 +359,12 @@ COMPLETE MODEL RECORDS:
      Provider API Access: https://openrouter.ai/settings/keys
 
  30. Solar Pro 3
-     Provider           : Unknown (Unknown)
+     Provider           : Upstage AI (South Korea)
      Modalities         : Text → Text
-     License            : 
+     License            : Upstage
      License Info       : 
-     License URL        : 
-     Official URL       : Unknown
+     License URL        : https://www.upstage.ai/terms-of-service
+     Official URL       : https://www.upstage.ai/
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 

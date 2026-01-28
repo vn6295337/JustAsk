@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-28 07:37:54 IST",
+    "generated_at": "2026-01-28 09:56:04 IST",
     "total_models": 31,
     "pipeline_stage": "P_enrich_provider_info"
   },
@@ -20,10 +20,10 @@
       "standardized_output_modalities": "Text",
       "google_enhancement_status": "no_google_model",
       "inference_provider": "OpenRouter",
-      "model_provider": "Unknown",
-      "model_provider_country": "Unknown",
-      "model_family": "upstage",
-      "official_url": "Unknown"
+      "model_provider": "Upstage AI",
+      "model_provider_country": "South Korea",
+      "model_family": "upstage ai",
+      "official_url": "https://www.upstage.ai/"
     },
     {
       "id": "liquid/lfm-2.5-1.2b-thinking:free",
