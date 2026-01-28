@@ -1,6 +1,6 @@
 FIELD COMPARISON REPORT: GOOGLE PIPELINE vs SUPABASE
 ================================================================================
-Generated: 2026-01-28 07:35:48 IST
+Generated: 2026-01-28 10:15:33 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -9,7 +9,7 @@ SUMMARY STATISTICS
 1. OVERALL STATISTICS:
    • Total models processed: 23
    • Models in both systems: 20
-   • Models with differences: 2
+   • Models with differences: 0
    • Models in pipeline only (not in Supabase): 0
    • Models in Supabase only (not in pipeline): 3
 
@@ -30,17 +30,11 @@ SUMMARY STATISTICS
      - Exact matches: 20
      - Differences: 0
    • input_modalities:
-     - Exact matches: 18
-     - Differences: 2
-     - Specific differences:
-       * Veo 3.0 Generate 001: Pipeline='Unknown' vs Supabase='Text, Image'
-       * Veo 3.0 Fast Generate 001: Pipeline='Unknown' vs Supabase='Text, Image'
+     - Exact matches: 20
+     - Differences: 0
    • output_modalities:
-     - Exact matches: 18
-     - Differences: 2
-     - Specific differences:
-       * Veo 3.0 Generate 001: Pipeline='Unknown' vs Supabase='Audio, Video'
-       * Veo 3.0 Fast Generate 001: Pipeline='Unknown' vs Supabase='Audio, Video'
+     - Exact matches: 20
+     - Differences: 0
    • license_info_text:
      - Exact matches: 20
      - Differences: 0
@@ -61,8 +55,7 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • Existing models with differences: 2
-     Models: Veo 3.0 Fast Generate 001, Veo 3.0 Generate 001
+   • Existing models with differences: 0
    • Deprecated models (Supabase only): 3
      Models: Embedding 001, Embedding Gecko 001, Text Embedding 004
 
@@ -499,8 +492,8 @@ model_provider            | Google                                             |
 human_readable_name       | Veo 3.0 Fast Generate 001                          | Veo 3.0 Fast Generate 001                         
 model_provider_country    | United States                                      | United States                                     
 official_url              | https://deepmind.google/models/veo/                | https://deepmind.google/models/veo/               
-input_modalities          | Unknown                                            | Text, Image                                       
-output_modalities         | Unknown                                            | Audio, Video                                      
+input_modalities          | Text, Image                                        | Text, Image                                       
+output_modalities         | Audio, Video                                       | Audio, Video                                      
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
 license_name              | Gemini                                             | Gemini                                            
@@ -519,8 +512,8 @@ model_provider            | Google                                             |
 human_readable_name       | Veo 3.0 Generate 001                               | Veo 3.0 Generate 001                              
 model_provider_country    | United States                                      | United States                                     
 official_url              | https://deepmind.google/models/veo/                | https://deepmind.google/models/veo/               
-input_modalities          | Unknown                                            | Text, Image                                       
-output_modalities         | Unknown                                            | Audio, Video                                      
+input_modalities          | Text, Image                                        | Text, Image                                       
+output_modalities         | Audio, Video                                       | Audio, Video                                      
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
 license_name              | Gemini                                             | Gemini                                            
