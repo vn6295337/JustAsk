@@ -1,6 +1,6 @@
 === GOOGLE MODELS MODALITY ENRICHMENT REPORT ===
 
-Generated: 2026-01-28 07:35:45 IST
+Generated: 2026-01-28 10:15:31 IST
 
 === SUMMARY ===
 Total Models: 20
@@ -9,7 +9,7 @@ Priority 2 Matches (Normalized): 5
 Embedding Matches: 1
 Gemma Pattern Matches: 6
 Unique Model Matches: 1
-No Matches: 2
+No Matches: 0
 Overall Match Rate: 90.0%
 
 === PRIORITY 1 MATCHES (EXACT) ===
@@ -33,14 +33,6 @@ Overall Match Rate: 90.0%
  5. gemini-2.5-flash-lite
     Input: Text, Image, Audio, Video, PDF
     Output: Text
-
- 6. veo-3.0-generate-001
-    Input: Unknown
-    Output: Unknown
-
- 7. veo-3.0-fast-generate-001
-    Input: Unknown
-    Output: Unknown
 
 === PRIORITY 2 MATCHES (NORMALIZED) ===
 
@@ -117,8 +109,3 @@ Overall Match Rate: 90.0%
  1. aqa
     Input: Text
     Output: Text
-
-=== NO MATCHES ===
-
- 1. veo-3.0-generate-001
- 2. veo-3.0-fast-generate-001
