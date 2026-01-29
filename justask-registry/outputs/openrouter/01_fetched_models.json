@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-01-28 10:17:15 IST",
+    "generated_at": "2026-01-29 07:59:18 IST",
     "total_models": 347,
     "pipeline_stage": "A_fetch_api_models"
   },
@@ -71,8 +71,8 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000006",
-        "completion": "0.000003"
+        "prompt": "0.00000057",
+        "completion": "0.00000285"
       },
       "top_provider": {
         "context_length": 262144,
@@ -1141,12 +1141,12 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000006",
-        "completion": "0.00000024"
+        "prompt": "0.00000005",
+        "completion": "0.0000002"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 262144,
+        "max_completion_tokens": null,
         "is_moderated": false
       },
       "per_request_limits": null,
