@@ -1,16 +1,16 @@
 === GOOGLE MODELS MODALITY ENRICHMENT REPORT ===
 
-Generated: 2026-01-28 10:15:31 IST
+Generated: 2026-01-29 07:57:45 IST
 
 === SUMMARY ===
-Total Models: 20
+Total Models: 22
 Priority 1 Matches (Exact): 5
 Priority 2 Matches (Normalized): 5
-Embedding Matches: 1
+Embedding Matches: 3
 Gemma Pattern Matches: 6
 Unique Model Matches: 1
 No Matches: 0
-Overall Match Rate: 90.0%
+Overall Match Rate: 90.9%
 
 === PRIORITY 1 MATCHES (EXACT) ===
 
@@ -68,7 +68,15 @@ Overall Match Rate: 90.0%
 
 === EMBEDDING MATCHES ===
 
- 1. gemini-embedding-001
+ 1. embedding-001
+    Input: Text
+    Output: Text Embeddings
+
+ 2. text-embedding-004
+    Input: Text
+    Output: Text Embeddings
+
+ 3. gemini-embedding-001
     Input: Text
     Output: Text Embeddings
 
