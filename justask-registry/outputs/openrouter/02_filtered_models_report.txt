@@ -1,28 +1,28 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-01-29 07:59:19 IST
+Generated: 2026-01-30 07:59:08 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 347
+  Total models processed: 346
   Models passed all filters: 31
-  Models excluded: 316
-  Success rate: 8.9%
+  Models excluded: 315
+  Success rate: 9.0%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 347 models
+    Input: 346 models
     Excluded: 314 models (non-free pricing)
-    Remaining: 33 models
+    Remaining: 32 models
 
   Step 2 - Billing Description Filter:
-    Input: 33 models
+    Input: 32 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 33 models
+    Remaining: 32 models
 
   Step 3 - Keyword Filter:
-    Input: 33 models
-    Excluded: 2 models (preview/experimental/beta)
+    Input: 32 models
+    Excluded: 1 models (preview/experimental/beta)
     Remaining: 31 models
 
   Step 4 - Deduplication Filter:
@@ -43,10 +43,6 @@ No models found with billing requirements in description.
 ================================================================================
 STEP 3 - KEYWORD FILTER RESULTS (DETAILED)
 ================================================================================
-EXCLUDED FOR: EXPERIMENTAL VERSION (1 models)
---------------------------------------------------
-   1. Google: Gemini 2.0 Flash Experimental (free)
-
 EXCLUDED FOR: PREVIEW/EXPERIMENTAL VERSION (1 models)
 --------------------------------------------------
    1. Arcee AI: Trinity Large Preview (free)
@@ -238,7 +234,7 @@ FINAL SUMMARY:
   Total models passed all filters: 31
   Models excluded by pricing: 314
   Models excluded by billing description: 0
-  Models excluded by keywords: 2
+  Models excluded by keywords: 1
   Models excluded by deduplication: 0
-  Total exclusions: 316
+  Total exclusions: 315
   ✓ All filtered models accounted for
