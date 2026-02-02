@@ -1,10 +1,10 @@
 ================================================================================
 COLLATED CUSTOM LICENSE INFORMATION REPORT
-Generated: 2026-02-01 08:19:39 IST
+Generated: 2026-02-02 08:09:09 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 6
+  Total models        : 5
   Input sources       : 10_custom_license_urls.json + 05_hf_license_urls.json
   Processor           : step_12_collate_custom.py
   Output              : 12_collated_custom_licenses.json
@@ -12,12 +12,11 @@ SUMMARY:
 CUSTOM LICENSE DISTRIBUTION:
    3 models: NVIDIA
    2 models: lfm1.0
-   1 models: Modified MIT
 
-Total unique license types: 3
+Total unique license types: 2
 
 LICENSE URL TYPE DISTRIBUTION:
-   3 models: LICENSE file
+   2 models: LICENSE file
    3 models: README.md file
 
 Total URL types: 2
@@ -25,21 +24,7 @@ Total URL types: 2
 DETAILED CUSTOM MODEL INFORMATION:
 ================================================================================
 
-MODEL 1: moonshotai/kimi-k2
---------------------------------------------------
-  ID: moonshotai/kimi-k2:free
-  Original Name: MoonshotAI: Kimi K2 0711 (free)
-  HuggingFace ID: moonshotai/Kimi-K2-Instruct
-  Canonical Slug: moonshotai/kimi-k2
-  Clean Model Name: Kimi K2 0711
-  License Info Text: 
-  License Info URL: 
-  License Name: Modified MIT
-  License URL: https://huggingface.co/moonshotai/Kimi-K2-Instruct/blob/main/LICENSE
-
-================================================================================
-
-MODEL 2: nvidia/nemotron-3-nano-30b-a3b
+MODEL 1: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -53,7 +38,7 @@ MODEL 2: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 3: nvidia/nemotron-nano-12b-v2-vl
+MODEL 2: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
@@ -67,7 +52,7 @@ MODEL 3: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 4: nvidia/nemotron-nano-9b-v2
+MODEL 3: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -81,7 +66,7 @@ MODEL 4: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 5: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 4: liquid/lfm-2.5-1.2b-instruct-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-instruct:free
   Original Name: LiquidAI: LFM2.5-1.2B-Instruct (free)
@@ -95,7 +80,7 @@ MODEL 5: liquid/lfm-2.5-1.2b-instruct-20260120
 
 ================================================================================
 
-MODEL 6: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 5: liquid/lfm-2.5-1.2b-thinking-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-thinking:free
   Original Name: LiquidAI: LFM2.5-1.2B-Thinking (free)

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-01 08:19:39 IST",
-    "total_models": 35,
+    "generated_at": "2026-02-02 08:09:09 IST",
+    "total_models": 34,
     "pipeline_stage": "M_final_list_of_licenses"
   },
   "models": [
@@ -208,18 +208,6 @@
       "license_name": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
       "source_category": "opensource"
-    },
-    {
-      "id": "moonshotai/kimi-k2:free",
-      "canonical_slug": "moonshotai/kimi-k2",
-      "original_name": "MoonshotAI: Kimi K2 0711 (free)",
-      "hugging_face_id": "moonshotai/Kimi-K2-Instruct",
-      "clean_model_name": "Kimi K2 0711",
-      "license_info_text": "",
-      "license_info_url": "",
-      "license_name": "Modified MIT",
-      "license_url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct/blob/main/LICENSE",
-      "source_category": "custom"
     },
     {
       "id": "nousresearch/hermes-3-llama-3.1-405b:free",

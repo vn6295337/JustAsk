@@ -1,32 +1,31 @@
 ================================================================================
 CUSTOM LICENSE URLS ENRICHMENT REPORT
-Generated: 2026-02-01 08:19:39 IST
+Generated: 2026-02-02 08:09:09 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 6
+  Total models : 5
   Input        : 08_custom_licenses.json
   Priority     : LICENSE → README.md → Base repository
   Processor    : step_10_custom_license_urls.py
   Output       : 10_custom_license_urls.json
 
 LICENSE URL TYPE DISTRIBUTION:
-  LICENSE file: 3 models
+  LICENSE file: 2 models
   README.md file: 3 models
 
 Total URL types: 2
 
 URL RESOLUTION STATISTICS:
-  Successful URL resolutions: 6
+  Successful URL resolutions: 5
   Failed URL resolutions: 0
   Success rate: 100.0%
 
 CUSTOM LICENSE DISTRIBUTION:
-  Modified MIT: 1 models
   NVIDIA: 3 models
   lfm1.0: 2 models
 
-Total license types: 3
+Total license types: 2
 
 DETAILED MODEL LICENSE URL MAPPINGS:
 ================================================================================
@@ -53,18 +52,7 @@ MODEL 2: liquid/lfm-2.5-1.2b-thinking-20260120
 
 ================================================================================
 
-MODEL 3: moonshotai/kimi-k2
---------------------------------------------------
-  ID                     : moonshotai/kimi-k2:free
-  Canonical Slug         : moonshotai/kimi-k2
-  HuggingFace ID         : moonshotai/Kimi-K2-Instruct
-  License Name           : Modified MIT
-  License URL            : https://huggingface.co/moonshotai/Kimi-K2-Instruct/blob/main/LICENSE
-  License URL Type       : LICENSE file
-
-================================================================================
-
-MODEL 4: nvidia/nemotron-3-nano-30b-a3b
+MODEL 3: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID                     : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug         : nvidia/nemotron-3-nano-30b-a3b
@@ -75,7 +63,7 @@ MODEL 4: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 5: nvidia/nemotron-nano-12b-v2-vl
+MODEL 4: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug         : nvidia/nemotron-nano-12b-v2-vl
@@ -86,7 +74,7 @@ MODEL 5: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-nano-9b-v2
+MODEL 5: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug         : nvidia/nemotron-nano-9b-v2

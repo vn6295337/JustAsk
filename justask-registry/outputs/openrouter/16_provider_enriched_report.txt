@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-02-01 08:19:40 IST
+Generated: 2026-02-02 08:09:10 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 31
+  Total models      : 30
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -25,16 +25,15 @@ MODEL PROVIDER DISTRIBUTION:
    1 models: Cognitive Computations
    1 models: DeepSeek
    1 models: Mistral AI
-   1 models: Moonshot AI
    1 models: Nous Research
    1 models: Upstage AI
    1 models: Z.AI
 
-Total unique model providers: 16
+Total unique model providers: 15
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
   19 models: United States
-   7 models: China
+   6 models: China
    3 models: Germany
    1 models: France
    1 models: South Korea
@@ -54,12 +53,11 @@ MODEL FAMILY DISTRIBUTION:
    1 models: cognitive computations
    1 models: deepseek
    1 models: mistral ai
-   1 models: moonshot ai
    1 models: nous research
    1 models: upstage ai
    1 models: z.ai
 
-Total unique model families: 16
+Total unique model families: 15
 
 DETAILED PROVIDER ENRICHED MODEL INFORMATION:
 ================================================================================
@@ -330,21 +328,7 @@ MODEL 19: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 20: moonshotai/kimi-k2
---------------------------------------------------
-  ID: moonshotai/kimi-k2:free
-  Original Name: MoonshotAI: Kimi K2 0711 (free)
-  HuggingFace ID: moonshotai/Kimi-K2-Instruct
-  Canonical Slug: moonshotai/kimi-k2
-  Clean Model Name: Kimi K2 0711
-  Model Provider: Moonshot AI
-  Model Provider Country: China
-  Model Family: moonshot ai
-  Official URL: https://www.moonshot.ai/
-
-================================================================================
-
-MODEL 21: nousresearch/hermes-3-llama-3.1-405b
+MODEL 20: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -358,7 +342,7 @@ MODEL 21: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 22: nvidia/nemotron-3-nano-30b-a3b
+MODEL 21: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -372,7 +356,7 @@ MODEL 22: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 23: nvidia/nemotron-nano-12b-v2-vl
+MODEL 22: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
@@ -386,7 +370,7 @@ MODEL 23: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 24: nvidia/nemotron-nano-9b-v2
+MODEL 23: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -400,7 +384,7 @@ MODEL 24: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 25: openai/gpt-oss-120b
+MODEL 24: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -414,7 +398,7 @@ MODEL 25: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 26: openai/gpt-oss-20b
+MODEL 25: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -428,7 +412,7 @@ MODEL 26: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 27: tngtech/deepseek-r1t-chimera
+MODEL 26: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t-chimera:free
   Original Name: TNG: DeepSeek R1T Chimera (free)
@@ -442,7 +426,7 @@ MODEL 27: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 28: tngtech/deepseek-r1t2-chimera
+MODEL 27: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t2-chimera:free
   Original Name: TNG: DeepSeek R1T2 Chimera (free)
@@ -456,7 +440,7 @@ MODEL 28: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 29: tngtech/tng-r1t-chimera
+MODEL 28: tngtech/tng-r1t-chimera
 --------------------------------------------------
   ID: tngtech/tng-r1t-chimera:free
   Original Name: TNG: R1T Chimera (free)
@@ -470,7 +454,7 @@ MODEL 29: tngtech/tng-r1t-chimera
 
 ================================================================================
 
-MODEL 30: upstage/solar-pro-3
+MODEL 29: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage: Solar Pro 3 (free)
@@ -484,7 +468,7 @@ MODEL 30: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 31: z-ai/glm-4.5-air
+MODEL 30: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.AI: GLM 4.5 Air (free)

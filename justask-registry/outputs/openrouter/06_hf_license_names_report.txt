@@ -1,10 +1,10 @@
 ================================================================================
 OTHER MODEL LICENSE NAME EXTRACTIONS REPORT
-Generated: 2026-02-01 08:19:34 IST
+Generated: 2026-02-02 08:09:04 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 21
+  Total models : 20
   Input        : 05_hf_license_urls.json
   Processor    : step_06_fetch_hf_license_names.py
   Output       : 06_hf_license_names.json
@@ -14,10 +14,9 @@ LICENSE DISTRIBUTION:
   lfm1.0: 2
   llama3: 1
   mit: 4
-  modified-mit: 1
   nvidia-open-model-license: 3
 
-Total license types: 6
+Total license types: 5
 
 DETAILED MODEL EXTRACTION RESULTS:
 ================================================================================
@@ -130,16 +129,7 @@ MODEL 12: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 13: moonshotai/kimi-k2
---------------------------------------------------
-  ID               : moonshotai/kimi-k2:free
-  Canonical Slug   : moonshotai/kimi-k2
-  HuggingFace ID   : moonshotai/Kimi-K2-Instruct
-  Extracted License: modified-mit
-
-================================================================================
-
-MODEL 14: venice/uncensored
+MODEL 13: venice/uncensored
 --------------------------------------------------
   ID               : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Canonical Slug   : venice/uncensored
@@ -148,7 +138,7 @@ MODEL 14: venice/uncensored
 
 ================================================================================
 
-MODEL 15: tngtech/deepseek-r1t2-chimera
+MODEL 14: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID               : tngtech/deepseek-r1t2-chimera:free
   Canonical Slug   : tngtech/deepseek-r1t2-chimera
@@ -157,7 +147,7 @@ MODEL 15: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 16: deepseek/deepseek-r1-0528
+MODEL 15: deepseek/deepseek-r1-0528
 --------------------------------------------------
   ID               : deepseek/deepseek-r1-0528:free
   Canonical Slug   : deepseek/deepseek-r1-0528
@@ -166,7 +156,7 @@ MODEL 16: deepseek/deepseek-r1-0528
 
 ================================================================================
 
-MODEL 17: qwen/qwen3-4b-04-28
+MODEL 16: qwen/qwen3-4b-04-28
 --------------------------------------------------
   ID               : qwen/qwen3-4b:free
   Canonical Slug   : qwen/qwen3-4b-04-28
@@ -175,7 +165,7 @@ MODEL 17: qwen/qwen3-4b-04-28
 
 ================================================================================
 
-MODEL 18: tngtech/deepseek-r1t-chimera
+MODEL 17: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID               : tngtech/deepseek-r1t-chimera:free
   Canonical Slug   : tngtech/deepseek-r1t-chimera
@@ -184,7 +174,7 @@ MODEL 18: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 19: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 18: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID               : mistralai/mistral-small-3.1-24b-instruct:free
   Canonical Slug   : mistralai/mistral-small-3.1-24b-instruct-2503
@@ -193,7 +183,7 @@ MODEL 19: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 20: qwen/qwen-2-vl-7b-instruct
+MODEL 19: qwen/qwen-2-vl-7b-instruct
 --------------------------------------------------
   ID               : qwen/qwen-2.5-vl-7b-instruct:free
   Canonical Slug   : qwen/qwen-2-vl-7b-instruct
@@ -202,7 +192,7 @@ MODEL 20: qwen/qwen-2-vl-7b-instruct
 
 ================================================================================
 
-MODEL 21: nousresearch/hermes-3-llama-3.1-405b
+MODEL 20: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID               : nousresearch/hermes-3-llama-3.1-405b:free
   Canonical Slug   : nousresearch/hermes-3-llama-3.1-405b

@@ -1,16 +1,16 @@
 ================================================================================
 FINAL CONSOLIDATED LICENSE LIST REPORT
-Generated: 2026-02-01 08:19:39 IST
+Generated: 2026-02-02 08:09:09 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 35
+  Total models        : 34
   Input sources       : 4 pipeline stage files
   Processor           : step_13_final_licenses.py
   Output              : 13_final_licenses.json
 
 SOURCE CATEGORY DISTRIBUTION:
-  Custom: 6 models
+  Custom: 5 models
   Google: 5 models
   Meta: 3 models
   Opensource: 15 models
@@ -22,12 +22,12 @@ FINAL LICENSE DISTRIBUTION:
    4 models: MIT
    3 models: NVIDIA
    2 models: Llama-3.1
-   2 models: Modified MIT
    2 models: lfm1.0
    2 models: xAI
    1 models: AWS
    1 models: Llama-3.2
    1 models: Llama-3.3
+   1 models: Modified MIT
    1 models: Upstage
 
 Total unique license types: 12
@@ -35,22 +35,7 @@ Total unique license types: 12
 DETAILED FINAL MODEL INFORMATION:
 ================================================================================
 
-MODEL 1: moonshotai/kimi-k2
---------------------------------------------------
-  ID: moonshotai/kimi-k2:free
-  Original Name: MoonshotAI: Kimi K2 0711 (free)
-  HuggingFace ID: moonshotai/Kimi-K2-Instruct
-  Canonical Slug: moonshotai/kimi-k2
-  Clean Model Name: Kimi K2 0711
-  License Info Text: 
-  License Info URL: 
-  License Name: Modified MIT
-  License URL: https://huggingface.co/moonshotai/Kimi-K2-Instruct/blob/main/LICENSE
-  Source Category: custom
-
-================================================================================
-
-MODEL 2: nvidia/nemotron-3-nano-30b-a3b
+MODEL 1: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -65,7 +50,7 @@ MODEL 2: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 3: nvidia/nemotron-nano-12b-v2-vl
+MODEL 2: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
@@ -80,7 +65,7 @@ MODEL 3: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 4: nvidia/nemotron-nano-9b-v2
+MODEL 3: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -95,7 +80,7 @@ MODEL 4: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 5: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 4: liquid/lfm-2.5-1.2b-instruct-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-instruct:free
   Original Name: LiquidAI: LFM2.5-1.2B-Instruct (free)
@@ -110,7 +95,7 @@ MODEL 5: liquid/lfm-2.5-1.2b-instruct-20260120
 
 ================================================================================
 
-MODEL 6: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 5: liquid/lfm-2.5-1.2b-thinking-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-thinking:free
   Original Name: LiquidAI: LFM2.5-1.2B-Thinking (free)
@@ -125,7 +110,7 @@ MODEL 6: liquid/lfm-2.5-1.2b-thinking-20260120
 
 ================================================================================
 
-MODEL 7: google/gemma-3-12b-it
+MODEL 6: google/gemma-3-12b-it
 --------------------------------------------------
   ID: google/gemma-3-12b-it:free
   Original Name: Google: Gemma 3 12B (free)
@@ -140,7 +125,7 @@ MODEL 7: google/gemma-3-12b-it
 
 ================================================================================
 
-MODEL 8: google/gemma-3-27b-it
+MODEL 7: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
@@ -155,7 +140,7 @@ MODEL 8: google/gemma-3-27b-it
 
 ================================================================================
 
-MODEL 9: google/gemma-3-4b-it
+MODEL 8: google/gemma-3-4b-it
 --------------------------------------------------
   ID: google/gemma-3-4b-it:free
   Original Name: Google: Gemma 3 4B (free)
@@ -170,7 +155,7 @@ MODEL 9: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 10: google/gemma-3n-e2b-it
+MODEL 9: google/gemma-3n-e2b-it
 --------------------------------------------------
   ID: google/gemma-3n-e2b-it:free
   Original Name: Google: Gemma 3n 2B (free)
@@ -185,7 +170,7 @@ MODEL 10: google/gemma-3n-e2b-it
 
 ================================================================================
 
-MODEL 11: google/gemma-3n-e4b-it
+MODEL 10: google/gemma-3n-e4b-it
 --------------------------------------------------
   ID: google/gemma-3n-e4b-it:free
   Original Name: Google: Gemma 3n 4B (free)
@@ -200,7 +185,7 @@ MODEL 11: google/gemma-3n-e4b-it
 
 ================================================================================
 
-MODEL 12: meta-llama/llama-3.1-405b-instruct
+MODEL 11: meta-llama/llama-3.1-405b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.1-405b-instruct:free
   Original Name: Meta: Llama 3.1 405B Instruct (free)
@@ -215,7 +200,7 @@ MODEL 12: meta-llama/llama-3.1-405b-instruct
 
 ================================================================================
 
-MODEL 13: meta-llama/llama-3.2-3b-instruct
+MODEL 12: meta-llama/llama-3.2-3b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.2-3b-instruct:free
   Original Name: Meta: Llama 3.2 3B Instruct (free)
@@ -230,7 +215,7 @@ MODEL 13: meta-llama/llama-3.2-3b-instruct
 
 ================================================================================
 
-MODEL 14: meta-llama/llama-3.3-70b-instruct
+MODEL 13: meta-llama/llama-3.3-70b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.3-70b-instruct:free
   Original Name: Meta: Llama 3.3 70B Instruct (free)
@@ -245,7 +230,7 @@ MODEL 14: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 15: allenai/molmo-2-8b-20260109
+MODEL 14: allenai/molmo-2-8b-20260109
 --------------------------------------------------
   ID: allenai/molmo-2-8b:free
   Original Name: AllenAI: Molmo2 8B (free)
@@ -260,7 +245,7 @@ MODEL 15: allenai/molmo-2-8b-20260109
 
 ================================================================================
 
-MODEL 16: arcee-ai/trinity-mini-20251201
+MODEL 15: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID: arcee-ai/trinity-mini:free
   Original Name: Arcee AI: Trinity Mini (free)
@@ -275,7 +260,7 @@ MODEL 16: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 17: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 16: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID: mistralai/mistral-small-3.1-24b-instruct:free
   Original Name: Mistral: Mistral Small 3.1 24B (free)
@@ -290,7 +275,7 @@ MODEL 17: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 18: openai/gpt-oss-120b
+MODEL 17: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -305,7 +290,7 @@ MODEL 18: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 19: openai/gpt-oss-20b
+MODEL 18: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -320,7 +305,7 @@ MODEL 19: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 20: qwen/qwen-2-vl-7b-instruct
+MODEL 19: qwen/qwen-2-vl-7b-instruct
 --------------------------------------------------
   ID: qwen/qwen-2.5-vl-7b-instruct:free
   Original Name: Qwen: Qwen2.5-VL 7B Instruct (free)
@@ -335,7 +320,7 @@ MODEL 20: qwen/qwen-2-vl-7b-instruct
 
 ================================================================================
 
-MODEL 21: qwen/qwen3-4b-04-28
+MODEL 20: qwen/qwen3-4b-04-28
 --------------------------------------------------
   ID: qwen/qwen3-4b:free
   Original Name: Qwen: Qwen3 4B (free)
@@ -350,7 +335,7 @@ MODEL 21: qwen/qwen3-4b-04-28
 
 ================================================================================
 
-MODEL 22: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 21: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -365,7 +350,7 @@ MODEL 22: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 23: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 22: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID: qwen/qwen3-next-80b-a3b-instruct:free
   Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
@@ -380,7 +365,7 @@ MODEL 23: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 24: venice/uncensored
+MODEL 23: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -395,7 +380,7 @@ MODEL 24: venice/uncensored
 
 ================================================================================
 
-MODEL 25: nousresearch/hermes-3-llama-3.1-405b
+MODEL 24: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -410,7 +395,7 @@ MODEL 25: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 26: deepseek/deepseek-r1-0528
+MODEL 25: deepseek/deepseek-r1-0528
 --------------------------------------------------
   ID: deepseek/deepseek-r1-0528:free
   Original Name: DeepSeek: R1 0528 (free)
@@ -425,7 +410,7 @@ MODEL 26: deepseek/deepseek-r1-0528
 
 ================================================================================
 
-MODEL 27: tngtech/deepseek-r1t-chimera
+MODEL 26: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t-chimera:free
   Original Name: TNG: DeepSeek R1T Chimera (free)
@@ -440,7 +425,7 @@ MODEL 27: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 28: tngtech/deepseek-r1t2-chimera
+MODEL 27: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t2-chimera:free
   Original Name: TNG: DeepSeek R1T2 Chimera (free)
@@ -455,7 +440,7 @@ MODEL 28: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 29: z-ai/glm-4.5-air
+MODEL 28: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.AI: GLM 4.5 Air (free)
@@ -470,7 +455,7 @@ MODEL 29: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 30: amazon/nova-2-lite-v1
+MODEL 29: amazon/nova-2-lite-v1
 --------------------------------------------------
   ID: amazon/nova-2-lite-v1:free
   Original Name: Amazon/Nova 2 Lite V1
@@ -485,7 +470,7 @@ MODEL 30: amazon/nova-2-lite-v1
 
 ================================================================================
 
-MODEL 31: kwaipilot/kat-coder-pro-v1
+MODEL 30: kwaipilot/kat-coder-pro-v1
 --------------------------------------------------
   ID: kwaipilot/kat-coder-pro-v1:free
   Original Name: Kwaipilot/Kat Coder Pro V1
@@ -500,7 +485,7 @@ MODEL 31: kwaipilot/kat-coder-pro-v1
 
 ================================================================================
 
-MODEL 32: mistralai/devstral-2512
+MODEL 31: mistralai/devstral-2512
 --------------------------------------------------
   ID: mistralai/devstral-2512:free
   Original Name: Mistralai/Devstral 2512
@@ -515,7 +500,7 @@ MODEL 32: mistralai/devstral-2512
 
 ================================================================================
 
-MODEL 33: upstage/solar-pro-3
+MODEL 32: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage/Solar Pro 3
@@ -530,7 +515,7 @@ MODEL 33: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 34: x-ai/grok-4-fast
+MODEL 33: x-ai/grok-4-fast
 --------------------------------------------------
   ID: x-ai/grok-4-fast:free
   Original Name: X Ai/Grok 4 Fast
@@ -545,7 +530,7 @@ MODEL 34: x-ai/grok-4-fast
 
 ================================================================================
 
-MODEL 35: x-ai/grok-4.1-fast
+MODEL 34: x-ai/grok-4.1-fast
 --------------------------------------------------
   ID: x-ai/grok-4.1-fast:free
   Original Name: X Ai/Grok 4.1 Fast

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-01 08:19:34 IST",
-    "total_models": 21,
+    "generated_at": "2026-02-02 08:09:04 IST",
+    "total_models": 20,
     "pipeline_stage": "F_fetch_other_license_names_from_hf"
   },
   "models": [
@@ -88,13 +88,6 @@
       "name": "Qwen: Qwen3 Coder 480B A35B (free)",
       "hugging_face_id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
       "extracted_license": "apache-2.0"
-    },
-    {
-      "id": "moonshotai/kimi-k2:free",
-      "canonical_slug": "moonshotai/kimi-k2",
-      "name": "MoonshotAI: Kimi K2 0711 (free)",
-      "hugging_face_id": "moonshotai/Kimi-K2-Instruct",
-      "extracted_license": "modified-mit"
     },
     {
       "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",

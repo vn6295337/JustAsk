@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-01 08:19:39 IST",
-    "total_models": 6,
+    "generated_at": "2026-02-02 08:09:09 IST",
+    "total_models": 5,
     "pipeline_stage": "J_custom_license_urls"
   },
   "models": [
@@ -49,15 +49,6 @@
       "license_name": "NVIDIA",
       "license_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md",
       "license_url_type": "README.md file"
-    },
-    {
-      "id": "moonshotai/kimi-k2:free",
-      "canonical_slug": "moonshotai/kimi-k2",
-      "name": "MoonshotAI: Kimi K2 0711 (free)",
-      "hugging_face_id": "moonshotai/Kimi-K2-Instruct",
-      "license_name": "Modified MIT",
-      "license_url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct/blob/main/LICENSE",
-      "license_url_type": "LICENSE file"
     }
   ]
 }

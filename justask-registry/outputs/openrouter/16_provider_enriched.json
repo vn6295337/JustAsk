@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-01 08:19:40 IST",
-    "total_models": 31,
+    "generated_at": "2026-02-02 08:09:10 IST",
+    "total_models": 30,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
@@ -284,26 +284,6 @@
       "model_provider_country": "China",
       "model_family": "alibaba cloud",
       "official_url": "https://alibabacloud.com/"
-    },
-    {
-      "id": "moonshotai/kimi-k2:free",
-      "canonical_slug": "moonshotai/kimi-k2",
-      "provider_slug": "kimi-k2",
-      "original_name": "MoonshotAI: Kimi K2 0711 (free)",
-      "hugging_face_id": "moonshotai/Kimi-K2-Instruct",
-      "clean_model_name": "Kimi K2 0711",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model",
-      "inference_provider": "OpenRouter",
-      "model_provider": "Moonshot AI",
-      "model_provider_country": "China",
-      "model_family": "moonshot ai",
-      "official_url": "https://www.moonshot.ai/"
     },
     {
       "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
