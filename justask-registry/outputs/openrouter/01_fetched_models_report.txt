@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-02-02 08:08:46 IST
+Generated: 2026-02-03 08:05:46 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 346
+  Total models: 347
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  58 models
@@ -350,6 +350,10 @@ PROVIDER BREAKDOWN (Descending Order):
     - aion-1.0-mini
     - aion-rp-llama-3.1-8b
 
+  StepFun         :   2 models
+    - step-3.5-flash:free
+    - step3
+
   ByteDance Seed  :   2 models
     - seed-1.6
     - seed-1.6-flash
@@ -403,9 +407,6 @@ PROVIDER BREAKDOWN (Descending Order):
 
   Meituan         :   1 models
     - longcat-flash-chat
-
-  StepFun         :   1 models
-    - step3
 
   ByteDance       :   1 models
     - ui-tars-1.5-7b

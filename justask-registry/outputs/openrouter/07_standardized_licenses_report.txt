@@ -1,22 +1,22 @@
 ================================================================================
 STANDARDIZED OTHER LICENSE NAMES REPORT
-Generated: 2026-02-02 08:09:04 IST
+Generated: 2026-02-03 08:06:12 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 20
+  Total models : 21
   Input        : 06_hf_license_names.json
   Config       : license_standardization_rules.json
   Processor    : step_07_standardize_license_names.py
   Output       : 07_standardized_licenses.json
 
 STANDARDIZATION RESULTS:
-  Models with license transformations: 18
+  Models with license transformations: 19
   Models unchanged: 2
-  Transformation rate: 90.0%
+  Transformation rate: 90.5%
 
 STANDARDIZED LICENSE DISTRIBUTION:
-  Apache-2.0: 10 models
+  Apache-2.0: 11 models
   Llama-3.1: 1 models
   MIT: 4 models
   NVIDIA: 3 models
@@ -129,7 +129,17 @@ MODEL 9: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 10: venice/uncensored
+MODEL 10: stepfun/step-3.5-flash
+--------------------------------------------------
+  ID                     : stepfun/step-3.5-flash:free
+  Canonical Slug         : stepfun/step-3.5-flash
+  HuggingFace ID         : stepfun-ai/Step-3.5-Flash
+  Raw License            : apache-2.0
+  Standardized License   : Apache-2.0
+
+================================================================================
+
+MODEL 11: venice/uncensored
 --------------------------------------------------
   ID                     : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Canonical Slug         : venice/uncensored
@@ -139,7 +149,7 @@ MODEL 10: venice/uncensored
 
 ================================================================================
 
-MODEL 11: nousresearch/hermes-3-llama-3.1-405b
+MODEL 12: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID                     : nousresearch/hermes-3-llama-3.1-405b:free
   Canonical Slug         : nousresearch/hermes-3-llama-3.1-405b
@@ -149,7 +159,7 @@ MODEL 11: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 12: deepseek/deepseek-r1-0528
+MODEL 13: deepseek/deepseek-r1-0528
 --------------------------------------------------
   ID                     : deepseek/deepseek-r1-0528:free
   Canonical Slug         : deepseek/deepseek-r1-0528
@@ -159,7 +169,7 @@ MODEL 12: deepseek/deepseek-r1-0528
 
 ================================================================================
 
-MODEL 13: tngtech/deepseek-r1t-chimera
+MODEL 14: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID                     : tngtech/deepseek-r1t-chimera:free
   Canonical Slug         : tngtech/deepseek-r1t-chimera
@@ -169,7 +179,7 @@ MODEL 13: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 14: tngtech/deepseek-r1t2-chimera
+MODEL 15: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID                     : tngtech/deepseek-r1t2-chimera:free
   Canonical Slug         : tngtech/deepseek-r1t2-chimera
@@ -179,7 +189,7 @@ MODEL 14: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 15: z-ai/glm-4.5-air
+MODEL 16: z-ai/glm-4.5-air
 --------------------------------------------------
   ID                     : z-ai/glm-4.5-air:free
   Canonical Slug         : z-ai/glm-4.5-air
@@ -189,7 +199,7 @@ MODEL 15: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 16: nvidia/nemotron-3-nano-30b-a3b
+MODEL 17: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID                     : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug         : nvidia/nemotron-3-nano-30b-a3b
@@ -199,7 +209,7 @@ MODEL 16: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 17: nvidia/nemotron-nano-12b-v2-vl
+MODEL 18: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug         : nvidia/nemotron-nano-12b-v2-vl
@@ -209,7 +219,7 @@ MODEL 17: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 18: nvidia/nemotron-nano-9b-v2
+MODEL 19: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug         : nvidia/nemotron-nano-9b-v2

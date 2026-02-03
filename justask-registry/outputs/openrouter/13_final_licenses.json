@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-02 08:09:09 IST",
-    "total_models": 34,
+    "generated_at": "2026-02-03 08:06:16 IST",
+    "total_models": 35,
     "pipeline_stage": "M_final_list_of_licenses"
   },
   "models": [
@@ -325,6 +325,18 @@
       "clean_model_name": "Qwen3 Next 80B A3B Instruct",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct/blob/main/LICENSE",
+      "license_name": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_category": "opensource"
+    },
+    {
+      "id": "stepfun/step-3.5-flash:free",
+      "canonical_slug": "stepfun/step-3.5-flash",
+      "original_name": "StepFun: Step 3.5 Flash (free)",
+      "hugging_face_id": "stepfun-ai/Step-3.5-Flash",
+      "clean_model_name": "Step 3.5 Flash",
+      "license_info_text": "info",
+      "license_info_url": "https://huggingface.co/stepfun-ai/Step-3.5-Flash/blob/main/README.md",
       "license_name": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
       "source_category": "opensource"

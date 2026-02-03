@@ -1,39 +1,39 @@
 ================================================================================
 STANDARDIZED MODALITIES REPORT
-Generated: 2026-02-02 08:09:10 IST
+Generated: 2026-02-03 08:06:17 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 30
+  Total models : 32
   Input        : 14_raw_modalities.json
   Config       : modality_standardization.json
   Processor    : step_15_standardize_modalities.py
   Output       : 15_standardized_modalities.json
 
 STANDARDIZED INPUT MODALITIES DISTRIBUTION:
-  21 models: Text
-   5 models: Text, Image
+  22 models: Text
+   6 models: Text, Image
    2 models: Text, Image, Audio, Video
    2 models: Text, Image, Video
 
 Total unique input types: 4
 
 STANDARDIZED OUTPUT MODALITIES DISTRIBUTION:
-  30 models: Text
+  32 models: Text
 
 Total unique output types: 1
 
 STANDARDIZED MODALITY COMBINATIONS (INPUT → OUTPUT):
-  21 models: Text → Text
-   5 models: Text, Image → Text
+  22 models: Text → Text
+   6 models: Text, Image → Text
    2 models: Text, Image, Audio, Video → Text
    2 models: Text, Image, Video → Text
 
 Total unique combinations: 4
 
 STANDARDIZATION IMPACT ANALYSIS:
-  Input modalities changed: 30 models
-  Output modalities changed: 30 models
+  Input modalities changed: 32 models
+  Output modalities changed: 32 models
   Input modalities unchanged: 0 models
   Output modalities unchanged: 0 models
 
@@ -306,7 +306,21 @@ MODEL 19: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 20: arcee-ai/trinity-mini-20251201
+MODEL 20: stepfun/step-3.5-flash
+--------------------------------------------------
+  ID: stepfun/step-3.5-flash:free
+  Original Name: StepFun: Step 3.5 Flash (free)
+  HuggingFace ID: stepfun-ai/Step-3.5-Flash
+  Canonical Slug: stepfun/step-3.5-flash
+  Clean Model Name: Step 3.5 Flash
+  Raw Input Modalities: text
+  Raw Output Modalities: text
+  Standardized Input Modalities: Text
+  Standardized Output Modalities: Text
+
+================================================================================
+
+MODEL 21: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID: arcee-ai/trinity-mini:free
   Original Name: Arcee AI: Trinity Mini (free)
@@ -320,7 +334,7 @@ MODEL 20: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 21: venice/uncensored
+MODEL 22: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -334,7 +348,21 @@ MODEL 21: venice/uncensored
 
 ================================================================================
 
-MODEL 22: google/gemma-3-12b-it
+MODEL 23: openrouter/free
+--------------------------------------------------
+  ID: openrouter/free
+  Original Name: Free Models Router
+  HuggingFace ID: 
+  Canonical Slug: openrouter/free
+  Clean Model Name: Free Models Router
+  Raw Input Modalities: text, image
+  Raw Output Modalities: text
+  Standardized Input Modalities: Text, Image
+  Standardized Output Modalities: Text
+
+================================================================================
+
+MODEL 24: google/gemma-3-12b-it
 --------------------------------------------------
   ID: google/gemma-3-12b-it:free
   Original Name: Google: Gemma 3 12B (free)
@@ -348,7 +376,7 @@ MODEL 22: google/gemma-3-12b-it
 
 ================================================================================
 
-MODEL 23: google/gemma-3-27b-it
+MODEL 25: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
@@ -362,7 +390,7 @@ MODEL 23: google/gemma-3-27b-it
 
 ================================================================================
 
-MODEL 24: google/gemma-3-4b-it
+MODEL 26: google/gemma-3-4b-it
 --------------------------------------------------
   ID: google/gemma-3-4b-it:free
   Original Name: Google: Gemma 3 4B (free)
@@ -376,7 +404,7 @@ MODEL 24: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 25: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 27: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID: mistralai/mistral-small-3.1-24b-instruct:free
   Original Name: Mistral: Mistral Small 3.1 24B (free)
@@ -390,7 +418,7 @@ MODEL 25: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 26: qwen/qwen-2-vl-7b-instruct
+MODEL 28: qwen/qwen-2-vl-7b-instruct
 --------------------------------------------------
   ID: qwen/qwen-2.5-vl-7b-instruct:free
   Original Name: Qwen: Qwen2.5-VL 7B Instruct (free)
@@ -404,7 +432,7 @@ MODEL 26: qwen/qwen-2-vl-7b-instruct
 
 ================================================================================
 
-MODEL 27: google/gemma-3n-e2b-it
+MODEL 29: google/gemma-3n-e2b-it
 --------------------------------------------------
   ID: google/gemma-3n-e2b-it:free
   Original Name: Google: Gemma 3n 2B (free)
@@ -418,7 +446,7 @@ MODEL 27: google/gemma-3n-e2b-it
 
 ================================================================================
 
-MODEL 28: google/gemma-3n-e4b-it
+MODEL 30: google/gemma-3n-e4b-it
 --------------------------------------------------
   ID: google/gemma-3n-e4b-it:free
   Original Name: Google: Gemma 3n 4B (free)
@@ -432,7 +460,7 @@ MODEL 28: google/gemma-3n-e4b-it
 
 ================================================================================
 
-MODEL 29: allenai/molmo-2-8b-20260109
+MODEL 31: allenai/molmo-2-8b-20260109
 --------------------------------------------------
   ID: allenai/molmo-2-8b:free
   Original Name: AllenAI: Molmo2 8B (free)
@@ -446,7 +474,7 @@ MODEL 29: allenai/molmo-2-8b-20260109
 
 ================================================================================
 
-MODEL 30: nvidia/nemotron-nano-12b-v2-vl
+MODEL 32: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)

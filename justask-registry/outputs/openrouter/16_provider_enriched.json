@@ -1,10 +1,50 @@
 {
   "metadata": {
-    "generated_at": "2026-02-02 08:09:10 IST",
-    "total_models": 30,
+    "generated_at": "2026-02-03 08:06:17 IST",
+    "total_models": 32,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
+    {
+      "id": "openrouter/free",
+      "canonical_slug": "openrouter/free",
+      "provider_slug": "free",
+      "original_name": "Free Models Router",
+      "hugging_face_id": "",
+      "clean_model_name": "Free Models Router",
+      "raw_input_modalities": "text, image",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text, image",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text, Image",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "Unknown",
+      "model_provider_country": "Unknown",
+      "model_family": "openrouter",
+      "official_url": "Unknown"
+    },
+    {
+      "id": "stepfun/step-3.5-flash:free",
+      "canonical_slug": "stepfun/step-3.5-flash",
+      "provider_slug": "step-3.5-flash",
+      "original_name": "StepFun: Step 3.5 Flash (free)",
+      "hugging_face_id": "stepfun-ai/Step-3.5-Flash",
+      "clean_model_name": "Step 3.5 Flash",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "Unknown",
+      "model_provider_country": "Unknown",
+      "model_family": "stepfun",
+      "official_url": "Unknown"
+    },
     {
       "id": "upstage/solar-pro-3:free",
       "canonical_slug": "upstage/solar-pro-3",

@@ -1,10 +1,17 @@
 {
   "metadata": {
-    "generated_at": "2026-02-02 08:09:05 IST",
-    "total_models": 15,
+    "generated_at": "2026-02-03 08:06:12 IST",
+    "total_models": 16,
     "pipeline_stage": "H_bucketize_other_license_names"
   },
   "models": [
+    {
+      "id": "stepfun/step-3.5-flash:free",
+      "canonical_slug": "stepfun/step-3.5-flash",
+      "name": "StepFun: Step 3.5 Flash (free)",
+      "hugging_face_id": "stepfun-ai/Step-3.5-Flash",
+      "license_name": "Apache-2.0"
+    },
     {
       "id": "allenai/molmo-2-8b:free",
       "canonical_slug": "allenai/molmo-2-8b-20260109",

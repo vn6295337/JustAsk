@@ -1,10 +1,17 @@
 {
   "metadata": {
-    "generated_at": "2026-02-02 08:09:04 IST",
-    "total_models": 20,
+    "generated_at": "2026-02-03 08:06:11 IST",
+    "total_models": 21,
     "pipeline_stage": "F_fetch_other_license_names_from_hf"
   },
   "models": [
+    {
+      "id": "stepfun/step-3.5-flash:free",
+      "canonical_slug": "stepfun/step-3.5-flash",
+      "name": "StepFun: Step 3.5 Flash (free)",
+      "hugging_face_id": "stepfun-ai/Step-3.5-Flash",
+      "extracted_license": "apache-2.0"
+    },
     {
       "id": "liquid/lfm-2.5-1.2b-thinking:free",
       "canonical_slug": "liquid/lfm-2.5-1.2b-thinking-20260120",

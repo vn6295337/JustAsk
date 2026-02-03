@@ -1,10 +1,17 @@
 {
   "metadata": {
-    "generated_at": "2026-02-02 08:08:59 IST",
-    "total_models": 20,
+    "generated_at": "2026-02-03 08:06:03 IST",
+    "total_models": 21,
     "pipeline_stage": "E_fetch_other_license_info_urls_from_hf"
   },
   "models": [
+    {
+      "id": "stepfun/step-3.5-flash:free",
+      "canonical_slug": "stepfun/step-3.5-flash",
+      "name": "StepFun: Step 3.5 Flash (free)",
+      "hugging_face_id": "stepfun-ai/Step-3.5-Flash",
+      "license_info_url": "https://huggingface.co/stepfun-ai/Step-3.5-Flash/blob/main/README.md"
+    },
     {
       "id": "liquid/lfm-2.5-1.2b-thinking:free",
       "canonical_slug": "liquid/lfm-2.5-1.2b-thinking-20260120",

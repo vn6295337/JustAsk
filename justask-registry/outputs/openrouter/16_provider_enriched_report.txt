@@ -1,16 +1,28 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-02-02 08:09:10 IST
+Generated: 2026-02-03 08:06:17 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 30
+  Total models      : 32
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
   Output            : 16_provider_enriched.json
 
-✓ ALL PROVIDERS AND FAMILIES MAPPED SUCCESSFULLY
+ACTION ITEMS - UNKNOWN MAPPINGS:
+==================================================
+UNKNOWN PROVIDERS (2 models):
+  Add these provider mappings to provider_enrichment.json:
+    "openrouter": ["Provider Name", "Country"],
+    "stepfun": ["Provider Name", "Country"],
+
+UNKNOWN OFFICIAL URLS (2 unique families):
+  Add these URL mappings to family_official_urls:
+    "openrouter": "https://official-url-here",
+    "stepfun": "https://official-url-here",
+
+==================================================
 
 MODEL PROVIDER DISTRIBUTION:
    5 models: Google
@@ -20,6 +32,7 @@ MODEL PROVIDER DISTRIBUTION:
    3 models: TNG Technology
    2 models: Liquid AI
    2 models: OpenAI
+   2 models: Unknown
    1 models: Ai2
    1 models: Arcee
    1 models: Cognitive Computations
@@ -29,16 +42,17 @@ MODEL PROVIDER DISTRIBUTION:
    1 models: Upstage AI
    1 models: Z.AI
 
-Total unique model providers: 15
+Total unique model providers: 16
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
   19 models: United States
    6 models: China
    3 models: Germany
+   2 models: Unknown
    1 models: France
    1 models: South Korea
 
-Total unique countries: 5
+Total unique countries: 6
 
 MODEL FAMILY DISTRIBUTION:
    5 models: gemma
@@ -54,10 +68,12 @@ MODEL FAMILY DISTRIBUTION:
    1 models: deepseek
    1 models: mistral ai
    1 models: nous research
+   1 models: openrouter
+   1 models: stepfun
    1 models: upstage ai
    1 models: z.ai
 
-Total unique model families: 15
+Total unique model families: 17
 
 DETAILED PROVIDER ENRICHED MODEL INFORMATION:
 ================================================================================
@@ -412,7 +428,35 @@ MODEL 25: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 26: tngtech/deepseek-r1t-chimera
+MODEL 26: openrouter/free
+--------------------------------------------------
+  ID: openrouter/free
+  Original Name: Free Models Router
+  HuggingFace ID: 
+  Canonical Slug: openrouter/free
+  Clean Model Name: Free Models Router
+  Model Provider: Unknown
+  Model Provider Country: Unknown
+  Model Family: openrouter
+  Official URL: Unknown
+
+================================================================================
+
+MODEL 27: stepfun/step-3.5-flash
+--------------------------------------------------
+  ID: stepfun/step-3.5-flash:free
+  Original Name: StepFun: Step 3.5 Flash (free)
+  HuggingFace ID: stepfun-ai/Step-3.5-Flash
+  Canonical Slug: stepfun/step-3.5-flash
+  Clean Model Name: Step 3.5 Flash
+  Model Provider: Unknown
+  Model Provider Country: Unknown
+  Model Family: stepfun
+  Official URL: Unknown
+
+================================================================================
+
+MODEL 28: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t-chimera:free
   Original Name: TNG: DeepSeek R1T Chimera (free)
@@ -426,7 +470,7 @@ MODEL 26: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 27: tngtech/deepseek-r1t2-chimera
+MODEL 29: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t2-chimera:free
   Original Name: TNG: DeepSeek R1T2 Chimera (free)
@@ -440,7 +484,7 @@ MODEL 27: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 28: tngtech/tng-r1t-chimera
+MODEL 30: tngtech/tng-r1t-chimera
 --------------------------------------------------
   ID: tngtech/tng-r1t-chimera:free
   Original Name: TNG: R1T Chimera (free)
@@ -454,7 +498,7 @@ MODEL 28: tngtech/tng-r1t-chimera
 
 ================================================================================
 
-MODEL 29: upstage/solar-pro-3
+MODEL 31: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage: Solar Pro 3 (free)
@@ -468,7 +512,7 @@ MODEL 29: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 30: z-ai/glm-4.5-air
+MODEL 32: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.AI: GLM 4.5 Air (free)

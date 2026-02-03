@@ -1,16 +1,16 @@
 ================================================================================
 OTHER LICENSE INFO URLS REPORT
-Generated: 2026-02-02 08:08:59 IST
+Generated: 2026-02-03 08:06:03 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 20
+  Total models : 21
   Input        : 02_filtered_models.json
   Processor    : step_05_fetch_hf_license_urls.py
   Output       : 05_hf_license_urls.json
 
 LICENSE INFO URL BREAKDOWN:
-  12 models: README.md file
+  13 models: README.md file
    8 models: LICENSE file
 
 Total categories: 2
@@ -162,7 +162,16 @@ MODEL 16: qwen/qwen-2-vl-7b-instruct
 
 ================================================================================
 
-MODEL 17: tngtech/deepseek-r1t-chimera
+MODEL 17: stepfun/step-3.5-flash
+--------------------------------------------------
+  ID              : stepfun/step-3.5-flash:free
+  Canonical Slug  : stepfun/step-3.5-flash
+  HuggingFace ID  : stepfun-ai/Step-3.5-Flash
+  License Info URL: https://huggingface.co/stepfun-ai/Step-3.5-Flash/blob/main/README.md
+
+================================================================================
+
+MODEL 18: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID              : tngtech/deepseek-r1t-chimera:free
   Canonical Slug  : tngtech/deepseek-r1t-chimera
@@ -171,7 +180,7 @@ MODEL 17: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 18: tngtech/deepseek-r1t2-chimera
+MODEL 19: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID              : tngtech/deepseek-r1t2-chimera:free
   Canonical Slug  : tngtech/deepseek-r1t2-chimera
@@ -180,7 +189,7 @@ MODEL 18: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 19: venice/uncensored
+MODEL 20: venice/uncensored
 --------------------------------------------------
   ID              : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Canonical Slug  : venice/uncensored
@@ -189,7 +198,7 @@ MODEL 19: venice/uncensored
 
 ================================================================================
 
-MODEL 20: z-ai/glm-4.5-air
+MODEL 21: z-ai/glm-4.5-air
 --------------------------------------------------
   ID              : z-ai/glm-4.5-air:free
   Canonical Slug  : z-ai/glm-4.5-air
