@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-03 08:06:17 IST",
-    "total_models": 32,
+    "generated_at": "2026-02-04 08:00:34 IST",
+    "total_models": 30,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
@@ -586,26 +586,6 @@
       "official_url": "https://llama.meta.com/"
     },
     {
-      "id": "qwen/qwen-2.5-vl-7b-instruct:free",
-      "canonical_slug": "qwen/qwen-2-vl-7b-instruct",
-      "provider_slug": "qwen-2-vl-7b-instruct",
-      "original_name": "Qwen: Qwen2.5-VL 7B Instruct (free)",
-      "hugging_face_id": "Qwen/Qwen2.5-VL-7B-Instruct",
-      "clean_model_name": "Qwen2.5-VL 7B Instruct",
-      "raw_input_modalities": "text, image",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text, image",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text, Image",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model",
-      "inference_provider": "OpenRouter",
-      "model_provider": "Alibaba Cloud",
-      "model_provider_country": "China",
-      "model_family": "alibaba cloud",
-      "official_url": "https://alibabacloud.com/"
-    },
-    {
       "id": "nousresearch/hermes-3-llama-3.1-405b:free",
       "canonical_slug": "nousresearch/hermes-3-llama-3.1-405b",
       "provider_slug": "hermes-3-llama-3.1-405b",
@@ -624,26 +604,6 @@
       "model_provider_country": "United States",
       "model_family": "nous research",
       "official_url": "https://nousresearch.com/"
-    },
-    {
-      "id": "meta-llama/llama-3.1-405b-instruct:free",
-      "canonical_slug": "meta-llama/llama-3.1-405b-instruct",
-      "provider_slug": "llama-3.1-405b-instruct",
-      "original_name": "Meta: Llama 3.1 405B Instruct (free)",
-      "hugging_face_id": "meta-llama/Meta-Llama-3.1-405B-Instruct",
-      "clean_model_name": "Llama 3.1 405B Instruct",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model",
-      "inference_provider": "OpenRouter",
-      "model_provider": "Meta",
-      "model_provider_country": "United States",
-      "model_family": "meta",
-      "official_url": "https://llama.meta.com/"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-03 08:06:17 IST",
-    "total_models": 32,
+    "generated_at": "2026-02-04 08:00:33 IST",
+    "total_models": 30,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
@@ -267,29 +267,11 @@
       "raw_output_modalities": "text"
     },
     {
-      "id": "qwen/qwen-2.5-vl-7b-instruct:free",
-      "canonical_slug": "qwen/qwen-2-vl-7b-instruct",
-      "original_name": "Qwen: Qwen2.5-VL 7B Instruct (free)",
-      "hugging_face_id": "Qwen/Qwen2.5-VL-7B-Instruct",
-      "clean_model_name": "Qwen2.5-VL 7B Instruct",
-      "raw_input_modalities": "text, image",
-      "raw_output_modalities": "text"
-    },
-    {
       "id": "nousresearch/hermes-3-llama-3.1-405b:free",
       "canonical_slug": "nousresearch/hermes-3-llama-3.1-405b",
       "original_name": "Nous: Hermes 3 405B Instruct (free)",
       "hugging_face_id": "NousResearch/Hermes-3-Llama-3.1-405B",
       "clean_model_name": "Hermes 3 405B Instruct",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "meta-llama/llama-3.1-405b-instruct:free",
-      "canonical_slug": "meta-llama/llama-3.1-405b-instruct",
-      "original_name": "Meta: Llama 3.1 405B Instruct (free)",
-      "hugging_face_id": "meta-llama/Meta-Llama-3.1-405B-Instruct",
-      "clean_model_name": "Llama 3.1 405B Instruct",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text"
     }

@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-02-03 08:05:46 IST
+Generated: 2026-02-04 08:00:05 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 347
+  Total models: 346
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  58 models
@@ -70,7 +70,6 @@ PROVIDER BREAKDOWN (Descending Order):
   Qwen            :  41 models
     - qwen-2.5-7b-instruct
     - qwen-2.5-vl-7b-instruct
-    - qwen-2.5-vl-7b-instruct:free
     - qwen-max
     - qwen-plus
     - qwen-plus-2025-07-28
@@ -94,6 +93,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3-coder
     - qwen3-coder-30b-a3b-instruct
     - qwen3-coder-flash
+    - qwen3-coder-next
     - qwen3-coder-plus
     - qwen3-coder:exacto
     - qwen3-coder:free
@@ -166,12 +166,11 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemma-3n-e4b-it
     - gemma-3n-e4b-it:free
 
-  Meta            :  17 models
+  Meta            :  16 models
     - llama-3-70b-instruct
     - llama-3-8b-instruct
     - llama-3.1-405b
     - llama-3.1-405b-instruct
-    - llama-3.1-405b-instruct:free
     - llama-3.1-70b-instruct
     - llama-3.1-8b-instruct
     - llama-3.2-11b-vision-instruct
