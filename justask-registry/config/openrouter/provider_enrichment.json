@@ -41,7 +41,9 @@
     "nex-agi": ["Nex AGI", "China"],
     "xiaomi": ["Xiaomi", "China"],
     "upstage": ["Upstage AI", "South Korea"],
-    "upstage-ai": ["Upstage AI", "South Korea"]
+    "upstage-ai": ["Upstage AI", "South Korea"],
+    "stepfun": ["StepFun", "China"],
+    "openrouter": ["OpenRouter", "United States"]
   },
   "model_family_patterns": {
     "gemma": ["gemma", "gemma-2", "gemma-3", "gemma-3n"],
@@ -125,6 +127,8 @@
     "solar": "https://www.upstage.ai/",
     "upstage": "https://www.upstage.ai/",
     "upstage ai": "https://www.upstage.ai/",
-    "upstage-ai": "https://www.upstage.ai/"
+    "upstage-ai": "https://www.upstage.ai/",
+    "stepfun": "https://stepfun.ai/",
+    "openrouter": "https://openrouter.ai/"
   }
 }
