@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-02-05 08:02:25 IST
+Generated: 2026-02-05 14:20:55 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -53,10 +53,7 @@ LICENSE URL (2 models):
 
 UNKNOWN OR 'NOT FOUND' VALUES:
 ------------------------------
-
-MODEL PROVIDER (2 models):
-  - Free Models Router
-  - Step 3.5 Flash
+✓ No unknown values found
 
 DATA QUALITY SUMMARY:
 ------------------------------
@@ -65,7 +62,6 @@ Missing license info text: 15 (51.7%)
 Missing license info url: 15 (51.7%)
 Missing license name: 2 (6.9%)
 Missing license url: 2 (6.9%)
-Unknown model provider: 2 (6.9%)
 
 ================================================================================
 
@@ -292,53 +288,53 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 23. DeepSeek R1T Chimera
-     Provider           : TNG Technology (Germany)
-     Modalities         : Text → Text
-     License            : MIT
-     License Info       : info
-     License URL        : https://opensource.org/licenses/MIT
-     Official URL       : https://tngtech.com
-     Rate Limits        : 20 requests/min 50/day
-     Provider API Access: https://openrouter.ai/settings/keys
-
- 24. DeepSeek R1T2 Chimera
-     Provider           : TNG Technology (Germany)
-     Modalities         : Text → Text
-     License            : MIT
-     License Info       : info
-     License URL        : https://opensource.org/licenses/MIT
-     Official URL       : https://tngtech.com
-     Rate Limits        : 20 requests/min 50/day
-     Provider API Access: https://openrouter.ai/settings/keys
-
- 25. R1T Chimera
-     Provider           : TNG Technology (Germany)
-     Modalities         : Text → Text
-     License            : 
-     License Info       : 
-     License URL        : 
-     Official URL       : https://tngtech.com
-     Rate Limits        : 20 requests/min 50/day
-     Provider API Access: https://openrouter.ai/settings/keys
-
- 26. Free Models Router
-     Provider           : Unknown (Unknown)
+ 23. Free Models Router
+     Provider           : OpenRouter (United States)
      Modalities         : Text, Image → Text
      License            : 
      License Info       : 
      License URL        : 
-     Official URL       : Unknown
+     Official URL       : https://openrouter.ai/
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 27. Step 3.5 Flash
-     Provider           : Unknown (Unknown)
+ 24. Step 3.5 Flash
+     Provider           : StepFun (China)
      Modalities         : Text → Text
      License            : Apache-2.0
      License Info       : info
      License URL        : https://www.apache.org/licenses/LICENSE-2.0
-     Official URL       : Unknown
+     Official URL       : https://stepfun.ai/
+     Rate Limits        : 20 requests/min 50/day
+     Provider API Access: https://openrouter.ai/settings/keys
+
+ 25. DeepSeek R1T Chimera
+     Provider           : TNG Technology (Germany)
+     Modalities         : Text → Text
+     License            : MIT
+     License Info       : info
+     License URL        : https://opensource.org/licenses/MIT
+     Official URL       : https://tngtech.com
+     Rate Limits        : 20 requests/min 50/day
+     Provider API Access: https://openrouter.ai/settings/keys
+
+ 26. DeepSeek R1T2 Chimera
+     Provider           : TNG Technology (Germany)
+     Modalities         : Text → Text
+     License            : MIT
+     License Info       : info
+     License URL        : https://opensource.org/licenses/MIT
+     Official URL       : https://tngtech.com
+     Rate Limits        : 20 requests/min 50/day
+     Provider API Access: https://openrouter.ai/settings/keys
+
+ 27. R1T Chimera
+     Provider           : TNG Technology (Germany)
+     Modalities         : Text → Text
+     License            : 
+     License Info       : 
+     License URL        : 
+     Official URL       : https://tngtech.com
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 

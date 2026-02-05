@@ -1,6 +1,6 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-02-05 08:02:25 IST
+Generated: 2026-02-05 14:20:55 IST
 ================================================================================
 
 SUMMARY:
@@ -10,19 +10,7 @@ SUMMARY:
   Processor         : step_16_enrich_provider.py
   Output            : 16_provider_enriched.json
 
-ACTION ITEMS - UNKNOWN MAPPINGS:
-==================================================
-UNKNOWN PROVIDERS (2 models):
-  Add these provider mappings to provider_enrichment.json:
-    "openrouter": ["Provider Name", "Country"],
-    "stepfun": ["Provider Name", "Country"],
-
-UNKNOWN OFFICIAL URLS (2 unique families):
-  Add these URL mappings to family_official_urls:
-    "openrouter": "https://official-url-here",
-    "stepfun": "https://official-url-here",
-
-==================================================
+✓ ALL PROVIDERS AND FAMILIES MAPPED SUCCESSFULLY
 
 MODEL PROVIDER DISTRIBUTION:
    5 models: Google
@@ -32,26 +20,26 @@ MODEL PROVIDER DISTRIBUTION:
    2 models: Liquid AI
    2 models: Meta
    2 models: OpenAI
-   2 models: Unknown
    1 models: Arcee
    1 models: Cognitive Computations
    1 models: DeepSeek
    1 models: Mistral AI
    1 models: Nous Research
+   1 models: OpenRouter
+   1 models: StepFun
    1 models: Upstage AI
    1 models: Z.AI
 
-Total unique model providers: 15
+Total unique model providers: 16
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
-  17 models: United States
-   5 models: China
+  18 models: United States
+   6 models: China
    3 models: Germany
-   2 models: Unknown
    1 models: France
    1 models: South Korea
 
-Total unique countries: 6
+Total unique countries: 5
 
 MODEL FAMILY DISTRIBUTION:
    5 models: gemma
@@ -391,10 +379,10 @@ MODEL 23: openrouter/free
   HuggingFace ID: 
   Canonical Slug: openrouter/free
   Clean Model Name: Free Models Router
-  Model Provider: Unknown
-  Model Provider Country: Unknown
+  Model Provider: OpenRouter
+  Model Provider Country: United States
   Model Family: openrouter
-  Official URL: Unknown
+  Official URL: https://openrouter.ai/
 
 ================================================================================
 
@@ -405,10 +393,10 @@ MODEL 24: stepfun/step-3.5-flash
   HuggingFace ID: stepfun-ai/Step-3.5-Flash
   Canonical Slug: stepfun/step-3.5-flash
   Clean Model Name: Step 3.5 Flash
-  Model Provider: Unknown
-  Model Provider Country: Unknown
+  Model Provider: StepFun
+  Model Provider Country: China
   Model Family: stepfun
-  Official URL: Unknown
+  Official URL: https://stepfun.ai/
 
 ================================================================================
 
