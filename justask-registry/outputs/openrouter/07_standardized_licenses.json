@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-04 08:00:28 IST",
-    "total_models": 20,
+    "generated_at": "2026-02-05 08:02:20 IST",
+    "total_models": 19,
     "pipeline_stage": "G_standardize_other_license_names_from_hf"
   },
   "models": [
@@ -28,14 +28,6 @@
       "hugging_face_id": "LiquidAI/LFM2.5-1.2B-Instruct",
       "raw_extracted_license": "lfm1.0",
       "standardized_license_name": "lfm1.0"
-    },
-    {
-      "id": "allenai/molmo-2-8b:free",
-      "canonical_slug": "allenai/molmo-2-8b-20260109",
-      "name": "AllenAI: Molmo2 8B (free)",
-      "hugging_face_id": "allenai/Molmo2-8B",
-      "raw_extracted_license": "apache-2.0",
-      "standardized_license_name": "Apache-2.0"
     },
     {
       "id": "nvidia/nemotron-3-nano-30b-a3b:free",

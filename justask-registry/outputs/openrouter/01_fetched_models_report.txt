@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-02-04 08:00:05 IST
+Generated: 2026-02-05 08:02:05 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 346
+  Total models: 343
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  58 models
@@ -255,7 +255,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - virtuoso-large
 
   AllenAI         :   7 models
-    - molmo-2-8b:free
+    - molmo-2-8b
     - olmo-2-0325-32b-instruct
     - olmo-3-32b-think
     - olmo-3-7b-instruct
@@ -339,11 +339,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - l3.1-euryale-70b
     - l3.3-euryale-70b
 
-  Deep Cogito     :   3 models
-    - cogito-v2-preview-llama-405b
-    - cogito-v2-preview-llama-70b
-    - cogito-v2.1-671b
-
   AionLabs        :   3 models
     - aion-1.0
     - aion-1.0-mini
@@ -394,6 +389,9 @@ PROVIDER BREAKDOWN (Descending Order):
 
   Prime Intellect :   1 models
     - intellect-3
+
+  Deep Cogito     :   1 models
+    - cogito-v2.1-671b
 
   Kwaipilot       :   1 models
     - kat-coder-pro

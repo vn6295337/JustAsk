@@ -1,10 +1,10 @@
 ================================================================================
 FINAL CONSOLIDATED LICENSE LIST REPORT
-Generated: 2026-02-04 08:00:33 IST
+Generated: 2026-02-05 08:02:24 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 33
+  Total models        : 32
   Input sources       : 4 pipeline stage files
   Processor           : step_13_final_licenses.py
   Output              : 13_final_licenses.json
@@ -13,11 +13,11 @@ SOURCE CATEGORY DISTRIBUTION:
   Custom: 5 models
   Google: 5 models
   Meta: 2 models
-  Opensource: 15 models
+  Opensource: 14 models
   Proprietary: 6 models
 
 FINAL LICENSE DISTRIBUTION:
-  11 models: Apache-2.0
+  10 models: Apache-2.0
    5 models: Gemma
    4 models: MIT
    3 models: NVIDIA
@@ -215,22 +215,7 @@ MODEL 12: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 13: allenai/molmo-2-8b-20260109
---------------------------------------------------
-  ID: allenai/molmo-2-8b:free
-  Original Name: AllenAI: Molmo2 8B (free)
-  HuggingFace ID: allenai/Molmo2-8B
-  Canonical Slug: allenai/molmo-2-8b-20260109
-  Clean Model Name: Molmo2 8B
-  License Info Text: info
-  License Info URL: https://huggingface.co/allenai/Molmo2-8B/blob/main/README.md
-  License Name: Apache-2.0
-  License URL: https://www.apache.org/licenses/LICENSE-2.0
-  Source Category: opensource
-
-================================================================================
-
-MODEL 14: arcee-ai/trinity-mini-20251201
+MODEL 13: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID: arcee-ai/trinity-mini:free
   Original Name: Arcee AI: Trinity Mini (free)
@@ -245,7 +230,7 @@ MODEL 14: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 15: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 14: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID: mistralai/mistral-small-3.1-24b-instruct:free
   Original Name: Mistral: Mistral Small 3.1 24B (free)
@@ -260,7 +245,7 @@ MODEL 15: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 16: openai/gpt-oss-120b
+MODEL 15: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -275,7 +260,7 @@ MODEL 16: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 17: openai/gpt-oss-20b
+MODEL 16: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -290,7 +275,7 @@ MODEL 17: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 18: qwen/qwen3-4b-04-28
+MODEL 17: qwen/qwen3-4b-04-28
 --------------------------------------------------
   ID: qwen/qwen3-4b:free
   Original Name: Qwen: Qwen3 4B (free)
@@ -305,7 +290,7 @@ MODEL 18: qwen/qwen3-4b-04-28
 
 ================================================================================
 
-MODEL 19: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 18: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -320,7 +305,7 @@ MODEL 19: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 20: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 19: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID: qwen/qwen3-next-80b-a3b-instruct:free
   Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
@@ -335,7 +320,7 @@ MODEL 20: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 21: stepfun/step-3.5-flash
+MODEL 20: stepfun/step-3.5-flash
 --------------------------------------------------
   ID: stepfun/step-3.5-flash:free
   Original Name: StepFun: Step 3.5 Flash (free)
@@ -350,7 +335,7 @@ MODEL 21: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 22: venice/uncensored
+MODEL 21: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -365,7 +350,7 @@ MODEL 22: venice/uncensored
 
 ================================================================================
 
-MODEL 23: nousresearch/hermes-3-llama-3.1-405b
+MODEL 22: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -380,7 +365,7 @@ MODEL 23: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 24: deepseek/deepseek-r1-0528
+MODEL 23: deepseek/deepseek-r1-0528
 --------------------------------------------------
   ID: deepseek/deepseek-r1-0528:free
   Original Name: DeepSeek: R1 0528 (free)
@@ -395,7 +380,7 @@ MODEL 24: deepseek/deepseek-r1-0528
 
 ================================================================================
 
-MODEL 25: tngtech/deepseek-r1t-chimera
+MODEL 24: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t-chimera:free
   Original Name: TNG: DeepSeek R1T Chimera (free)
@@ -410,7 +395,7 @@ MODEL 25: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 26: tngtech/deepseek-r1t2-chimera
+MODEL 25: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t2-chimera:free
   Original Name: TNG: DeepSeek R1T2 Chimera (free)
@@ -425,7 +410,7 @@ MODEL 26: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 27: z-ai/glm-4.5-air
+MODEL 26: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.AI: GLM 4.5 Air (free)
@@ -440,7 +425,7 @@ MODEL 27: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 28: amazon/nova-2-lite-v1
+MODEL 27: amazon/nova-2-lite-v1
 --------------------------------------------------
   ID: amazon/nova-2-lite-v1:free
   Original Name: Amazon/Nova 2 Lite V1
@@ -455,7 +440,7 @@ MODEL 28: amazon/nova-2-lite-v1
 
 ================================================================================
 
-MODEL 29: kwaipilot/kat-coder-pro-v1
+MODEL 28: kwaipilot/kat-coder-pro-v1
 --------------------------------------------------
   ID: kwaipilot/kat-coder-pro-v1:free
   Original Name: Kwaipilot/Kat Coder Pro V1
@@ -470,7 +455,7 @@ MODEL 29: kwaipilot/kat-coder-pro-v1
 
 ================================================================================
 
-MODEL 30: mistralai/devstral-2512
+MODEL 29: mistralai/devstral-2512
 --------------------------------------------------
   ID: mistralai/devstral-2512:free
   Original Name: Mistralai/Devstral 2512
@@ -485,7 +470,7 @@ MODEL 30: mistralai/devstral-2512
 
 ================================================================================
 
-MODEL 31: upstage/solar-pro-3
+MODEL 30: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage/Solar Pro 3
@@ -500,7 +485,7 @@ MODEL 31: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 32: x-ai/grok-4-fast
+MODEL 31: x-ai/grok-4-fast
 --------------------------------------------------
   ID: x-ai/grok-4-fast:free
   Original Name: X Ai/Grok 4 Fast
@@ -515,7 +500,7 @@ MODEL 32: x-ai/grok-4-fast
 
 ================================================================================
 
-MODEL 33: x-ai/grok-4.1-fast
+MODEL 32: x-ai/grok-4.1-fast
 --------------------------------------------------
   ID: x-ai/grok-4.1-fast:free
   Original Name: X Ai/Grok 4.1 Fast

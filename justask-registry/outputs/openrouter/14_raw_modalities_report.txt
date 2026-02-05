@@ -1,10 +1,10 @@
 ================================================================================
 RAW MODALITIES EXTRACTION REPORT
-Generated: 2026-02-04 08:00:33 IST
+Generated: 2026-02-05 08:02:24 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 30
+  Total models : 29
   Input        : 02_filtered_models.json
   Processor    : step_14_extract_modalities.py
   Output       : 14_raw_modalities.json
@@ -13,12 +13,11 @@ RAW INPUT MODALITIES DISTRIBUTION:
   23 models: text
    5 models: text, image
    1 models: image, text, video
-   1 models: text, image, video
 
-Total unique input types: 4
+Total unique input types: 3
 
 RAW OUTPUT MODALITIES DISTRIBUTION:
-  30 models: text
+  29 models: text
 
 Total unique output types: 1
 
@@ -26,9 +25,8 @@ RAW MODALITY COMBINATIONS (INPUT → OUTPUT):
   23 models: text → text
    5 models: text, image → text
    1 models: image, text, video → text
-   1 models: text, image, video → text
 
-Total unique combinations: 4
+Total unique combinations: 3
 
 DETAILED RAW MODALITY MODEL INFORMATION:
 ================================================================================
@@ -377,17 +375,5 @@ MODEL 29: mistralai/mistral-small-3.1-24b-instruct-2503
   Canonical Slug: mistralai/mistral-small-3.1-24b-instruct-2503
   Clean Model Name: Mistral Small 3.1 24B
   Raw Input Modalities: text, image
-  Raw Output Modalities: text
-
-================================================================================
-
-MODEL 30: allenai/molmo-2-8b-20260109
---------------------------------------------------
-  ID: allenai/molmo-2-8b:free
-  Original Name: AllenAI: Molmo2 8B (free)
-  HuggingFace ID: allenai/Molmo2-8B
-  Canonical Slug: allenai/molmo-2-8b-20260109
-  Clean Model Name: Molmo2 8B
-  Raw Input Modalities: text, image, video
   Raw Output Modalities: text
 
