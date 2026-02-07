@@ -1,10 +1,19 @@
 {
   "metadata": {
-    "generated_at": "2026-02-06 08:02:46 IST",
-    "total_models": 29,
+    "generated_at": "2026-02-07 07:58:08 IST",
+    "total_models": 30,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
+    {
+      "id": "openrouter/pony-alpha",
+      "canonical_slug": "openrouter/pony-alpha",
+      "original_name": "Pony Alpha",
+      "hugging_face_id": "",
+      "clean_model_name": "Pony Alpha",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text"
+    },
     {
       "id": "openrouter/free",
       "canonical_slug": "openrouter/free",

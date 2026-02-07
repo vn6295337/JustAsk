@@ -1,34 +1,34 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-02-06 08:02:29 IST
+Generated: 2026-02-07 07:57:54 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 344
-  Models passed all filters: 29
+  Total models processed: 345
+  Models passed all filters: 30
   Models excluded: 315
-  Success rate: 8.4%
+  Success rate: 8.7%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 344 models
+    Input: 345 models
     Excluded: 314 models (non-free pricing)
-    Remaining: 30 models
+    Remaining: 31 models
 
   Step 2 - Billing Description Filter:
-    Input: 30 models
+    Input: 31 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 30 models
+    Remaining: 31 models
 
   Step 3 - Keyword Filter:
-    Input: 30 models
+    Input: 31 models
     Excluded: 1 models (preview/experimental/beta)
-    Remaining: 29 models
+    Remaining: 30 models
 
   Step 4 - Deduplication Filter:
-    Input: 29 models
+    Input: 30 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 29 models
+    Final: 30 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
@@ -124,6 +124,17 @@ PROVIDER: QWEN (3 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
+PROVIDER: OPENROUTER (2 models)
+--------------------------------------------------
+   1. Free Models Router
+      ID: openrouter/free
+      Pricing: prompt=0, completion=0, request=N/A
+
+   2. Pony Alpha
+      ID: openrouter/pony-alpha
+      Pricing: prompt=0, completion=0, request=0
+
+
 PROVIDER: LIQUIDAI (2 models)
 --------------------------------------------------
    1. LiquidAI: LFM2.5-1.2B-Instruct (free)
@@ -154,13 +165,6 @@ PROVIDER: META (2 models)
 
    2. Meta: Llama 3.3 70B Instruct (free)
       ID: meta-llama/llama-3.3-70b-instruct:free
-      Pricing: prompt=0, completion=0, request=N/A
-
-
-PROVIDER: OPENROUTER (1 models)
---------------------------------------------------
-   1. Free Models Router
-      ID: openrouter/free
       Pricing: prompt=0, completion=0, request=N/A
 
 
@@ -223,7 +227,7 @@ PROVIDER: NOUS (1 models)
 ================================================================================
 FINAL SUMMARY:
   Total providers: 16
-  Total models passed all filters: 29
+  Total models passed all filters: 30
   Models excluded by pricing: 314
   Models excluded by billing description: 0
   Models excluded by keywords: 1

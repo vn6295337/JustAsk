@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-02-06 08:02:47 IST
+Generated: 2026-02-07 07:58:09 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 29
+  Total models      : 30
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -20,12 +20,12 @@ MODEL PROVIDER DISTRIBUTION:
    2 models: Liquid AI
    2 models: Meta
    2 models: OpenAI
+   2 models: OpenRouter
    1 models: Arcee
    1 models: Cognitive Computations
    1 models: DeepSeek
    1 models: Mistral AI
    1 models: Nous Research
-   1 models: OpenRouter
    1 models: StepFun
    1 models: Upstage AI
    1 models: Z.AI
@@ -33,7 +33,7 @@ MODEL PROVIDER DISTRIBUTION:
 Total unique model providers: 16
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
-  18 models: United States
+  19 models: United States
    6 models: China
    3 models: Germany
    1 models: France
@@ -49,12 +49,12 @@ MODEL FAMILY DISTRIBUTION:
    2 models: liquid ai
    2 models: meta
    2 models: openai
+   2 models: openrouter
    1 models: arcee
    1 models: cognitive computations
    1 models: deepseek
    1 models: mistral ai
    1 models: nous research
-   1 models: openrouter
    1 models: stepfun
    1 models: upstage ai
    1 models: z.ai
@@ -386,7 +386,21 @@ MODEL 23: openrouter/free
 
 ================================================================================
 
-MODEL 24: stepfun/step-3.5-flash
+MODEL 24: openrouter/pony-alpha
+--------------------------------------------------
+  ID: openrouter/pony-alpha
+  Original Name: Pony Alpha
+  HuggingFace ID: 
+  Canonical Slug: openrouter/pony-alpha
+  Clean Model Name: Pony Alpha
+  Model Provider: OpenRouter
+  Model Provider Country: United States
+  Model Family: openrouter
+  Official URL: https://openrouter.ai/
+
+================================================================================
+
+MODEL 25: stepfun/step-3.5-flash
 --------------------------------------------------
   ID: stepfun/step-3.5-flash:free
   Original Name: StepFun: Step 3.5 Flash (free)
@@ -400,7 +414,7 @@ MODEL 24: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 25: tngtech/deepseek-r1t-chimera
+MODEL 26: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t-chimera:free
   Original Name: TNG: DeepSeek R1T Chimera (free)
@@ -414,7 +428,7 @@ MODEL 25: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 26: tngtech/deepseek-r1t2-chimera
+MODEL 27: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t2-chimera:free
   Original Name: TNG: DeepSeek R1T2 Chimera (free)
@@ -428,7 +442,7 @@ MODEL 26: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 27: tngtech/tng-r1t-chimera
+MODEL 28: tngtech/tng-r1t-chimera
 --------------------------------------------------
   ID: tngtech/tng-r1t-chimera:free
   Original Name: TNG: R1T Chimera (free)
@@ -442,7 +456,7 @@ MODEL 27: tngtech/tng-r1t-chimera
 
 ================================================================================
 
-MODEL 28: upstage/solar-pro-3
+MODEL 29: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage: Solar Pro 3 (free)
@@ -456,7 +470,7 @@ MODEL 28: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 29: z-ai/glm-4.5-air
+MODEL 30: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.AI: GLM 4.5 Air (free)
