@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-02-06 08:00:47 IST",
-    "total_models": 22,
+    "generated": "2026-02-07 07:56:16 IST",
+    "total_models": 20,
     "filtering_source": "Google Pipeline B-Filter"
   },
   "models": [
@@ -217,28 +217,6 @@
       "topK": 64,
       "maxTemperature": 2,
       "thinking": true
-    },
-    {
-      "name": "models/embedding-001",
-      "version": "001",
-      "displayName": "Embedding 001",
-      "description": "Obtain a distributed representation of a text.",
-      "inputTokenLimit": 2048,
-      "outputTokenLimit": 1,
-      "supportedGenerationMethods": [
-        "embedContent"
-      ]
-    },
-    {
-      "name": "models/text-embedding-004",
-      "version": "004",
-      "displayName": "Text Embedding 004",
-      "description": "Obtain a distributed representation of a text.",
-      "inputTokenLimit": 2048,
-      "outputTokenLimit": 1,
-      "supportedGenerationMethods": [
-        "embedContent"
-      ]
     },
     {
       "name": "models/gemini-embedding-001",

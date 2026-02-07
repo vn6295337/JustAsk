@@ -1,6 +1,6 @@
 FIELD COMPARISON REPORT: GOOGLE PIPELINE vs SUPABASE
 ================================================================================
-Generated: 2026-02-06 08:00:54 IST
+Generated: 2026-02-07 07:56:23 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -8,54 +8,56 @@ SUMMARY STATISTICS
 
 1. OVERALL STATISTICS:
    • Total models processed: 22
-   • Models in both systems: 22
+   • Models in both systems: 20
    • Models with differences: 0
    • Models in pipeline only (not in Supabase): 0
-   • Models in Supabase only (not in pipeline): 0
+   • Models in Supabase only (not in pipeline): 2
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
    • inference_provider:
-     - Exact matches: 22
+     - Exact matches: 20
      - Differences: 0
    • model_provider:
-     - Exact matches: 22
+     - Exact matches: 20
      - Differences: 0
    • human_readable_name:
-     - Exact matches: 22
+     - Exact matches: 20
      - Differences: 0
    • model_provider_country:
-     - Exact matches: 22
+     - Exact matches: 20
      - Differences: 0
    • official_url:
-     - Exact matches: 22
+     - Exact matches: 20
      - Differences: 0
    • input_modalities:
-     - Exact matches: 22
+     - Exact matches: 20
      - Differences: 0
    • output_modalities:
-     - Exact matches: 22
+     - Exact matches: 20
      - Differences: 0
    • license_info_text:
-     - Exact matches: 22
+     - Exact matches: 20
      - Differences: 0
    • license_info_url:
-     - Exact matches: 22
+     - Exact matches: 20
      - Differences: 0
    • license_name:
-     - Exact matches: 22
+     - Exact matches: 20
      - Differences: 0
    • license_url:
-     - Exact matches: 22
+     - Exact matches: 20
      - Differences: 0
    • rate_limits:
-     - Exact matches: 22
+     - Exact matches: 20
      - Differences: 0
    • provider_api_access:
-     - Exact matches: 22
+     - Exact matches: 20
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
    • Existing models with differences: 0
+   • Deprecated models (Supabase only): 2
+     Models: Embedding 001, Text Embedding 004
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
@@ -85,19 +87,19 @@ MODEL: Embedding 001
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             | Google                                            
-model_provider            | Google                                             | Google                                            
-human_readable_name       | Embedding 001                                      | Embedding 001                                     
-model_provider_country    | United States                                      | United States                                     
-official_url              | https://ai.google.dev/gemini-api/docs/embeddings   | https://ai.google.dev/gemini-api/docs/embeddings  
-input_modalities          | Text                                               | Text                                              
-output_modalities         | Text Embeddings                                    | Text Embeddings                                   
-license_info_text         | Google                                             | Google                                            
-license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | Gemini                                             | Gemini                                            
-license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
-rate_limits               | 100 requests/min, 30K tokens/min, 1,000 requests.. | 100 requests/min, 30K tokens/min, 1,000 requests..
-provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
+inference_provider        |                                                    | Google                                            
+model_provider            |                                                    | Google                                            
+human_readable_name       |                                                    | Embedding 001                                     
+model_provider_country    |                                                    | United States                                     
+official_url              |                                                    | https://ai.google.dev/gemini-api/docs/embeddings  
+input_modalities          |                                                    | Text                                              
+output_modalities         |                                                    | Text Embeddings                                   
+license_info_text         |                                                    | Google                                            
+license_info_url          |                                                    | https://developers.google.com/terms               
+license_name              |                                                    | Gemini                                            
+license_url               |                                                    | https://ai.google.dev/gemini-api/terms            
+rate_limits               |                                                    | 100 requests/min, 30K tokens/min, 1,000 requests..
+provider_api_access       |                                                    | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -445,19 +447,19 @@ MODEL: Text Embedding 004
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             | Google                                            
-model_provider            | Google                                             | Google                                            
-human_readable_name       | Text Embedding 004                                 | Text Embedding 004                                
-model_provider_country    | United States                                      | United States                                     
-official_url              | https://ai.google.dev/gemini-api/docs/embeddings   | https://ai.google.dev/gemini-api/docs/embeddings  
-input_modalities          | Text                                               | Text                                              
-output_modalities         | Text Embeddings                                    | Text Embeddings                                   
-license_info_text         | Google                                             | Google                                            
-license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | Gemini                                             | Gemini                                            
-license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
-rate_limits               | 100 requests/min, 30K tokens/min, 1,000 requests.. | 100 requests/min, 30K tokens/min, 1,000 requests..
-provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
+inference_provider        |                                                    | Google                                            
+model_provider            |                                                    | Google                                            
+human_readable_name       |                                                    | Text Embedding 004                                
+model_provider_country    |                                                    | United States                                     
+official_url              |                                                    | https://ai.google.dev/gemini-api/docs/embeddings  
+input_modalities          |                                                    | Text                                              
+output_modalities         |                                                    | Text Embeddings                                   
+license_info_text         |                                                    | Google                                            
+license_info_url          |                                                    | https://developers.google.com/terms               
+license_name              |                                                    | Gemini                                            
+license_url               |                                                    | https://ai.google.dev/gemini-api/terms            
+rate_limits               |                                                    | 100 requests/min, 30K tokens/min, 1,000 requests..
+provider_api_access       |                                                    | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 

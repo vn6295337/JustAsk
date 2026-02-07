@@ -1,11 +1,11 @@
 === GOOGLE MODELS FILTERING REPORT ===
-Generated: 2026-02-06 08:00:47 IST
+Generated: 2026-02-07 07:56:16 IST
 
 === SUMMARY ===
-Total Input Models: 47
-Models Included: 22
+Total Input Models: 45
+Models Included: 20
 Models Excluded: 25
-Filtering Success Rate: 46.8%
+Filtering Success Rate: 44.4%
 
 === EXCLUDED MODELS ===
  1. gemini-2.0-flash-exp-image-generation
@@ -48,15 +48,13 @@ Filtering Success Rate: 46.8%
 11. gemma-3n-e4b-it
 12. gemma-3n-e2b-it
 13. gemini-2.5-flash-lite
-14. embedding-001
-15. text-embedding-004
-16. gemini-embedding-001
-17. aqa
-18. imagen-4.0-generate-001
-19. imagen-4.0-ultra-generate-001
-20. imagen-4.0-fast-generate-001
-21. veo-3.0-generate-001
-22. veo-3.0-fast-generate-001
+14. gemini-embedding-001
+15. aqa
+16. imagen-4.0-generate-001
+17. imagen-4.0-ultra-generate-001
+18. imagen-4.0-fast-generate-001
+19. veo-3.0-generate-001
+20. veo-3.0-fast-generate-001
 
 === EXCLUSION BREAKDOWN ===
 20 models: Experimental/Preview model - production-ready models only

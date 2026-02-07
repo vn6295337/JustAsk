@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-02-06 08:00:52 IST",
-    "total_models": 22,
+    "generated": "2026-02-07 07:56:21 IST",
+    "total_models": 20,
     "enrichment_source": "Google Pipeline 04_enrich_modalities"
   },
   "models": [
@@ -282,38 +282,6 @@
       "output_modalities": "Text",
       "modality_source": "scraped",
       "match_priority": 1
-    },
-    {
-      "name": "models/embedding-001",
-      "version": "001",
-      "displayName": "Embedding 001",
-      "description": "Obtain a distributed representation of a text.",
-      "inputTokenLimit": 2048,
-      "outputTokenLimit": 1,
-      "supportedGenerationMethods": [
-        "embedContent"
-      ],
-      "provider_slug": "embedding-001",
-      "input_modalities": "Text",
-      "output_modalities": "Text Embeddings",
-      "modality_source": "embedding_config",
-      "match_priority": 3
-    },
-    {
-      "name": "models/text-embedding-004",
-      "version": "004",
-      "displayName": "Text Embedding 004",
-      "description": "Obtain a distributed representation of a text.",
-      "inputTokenLimit": 2048,
-      "outputTokenLimit": 1,
-      "supportedGenerationMethods": [
-        "embedContent"
-      ],
-      "provider_slug": "text-embedding-004",
-      "input_modalities": "Text",
-      "output_modalities": "Text Embeddings",
-      "modality_source": "embedding_config",
-      "match_priority": 3
     },
     {
       "name": "models/gemini-embedding-001",
