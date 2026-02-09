@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-02-08 08:25:02 IST
+Generated: 2026-02-09 08:10:04 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 345
+  Total models: 343
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  58 models
@@ -264,14 +264,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - olmo-3.1-32b-instruct
     - olmo-3.1-32b-think
 
-  MoonshotAI      :   6 models
-    - kimi-dev-72b
-    - kimi-k2
-    - kimi-k2-0905
-    - kimi-k2-0905:exacto
-    - kimi-k2-thinking
-    - kimi-k2.5
-
   TNG             :   6 models
     - deepseek-r1t-chimera
     - deepseek-r1t-chimera:free
@@ -287,6 +279,13 @@ PROVIDER BREAKDOWN (Descending Order):
     - hermes-3-llama-3.1-70b
     - hermes-4-405b
     - hermes-4-70b
+
+  MoonshotAI      :   5 models
+    - kimi-k2
+    - kimi-k2-0905
+    - kimi-k2-0905:exacto
+    - kimi-k2-thinking
+    - kimi-k2.5
 
   MiniMax         :   5 models
     - minimax-01
@@ -345,10 +344,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - aion-1.0-mini
     - aion-rp-llama-3.1-8b
 
-  StepFun         :   2 models
-    - step-3.5-flash:free
-    - step3
-
   ByteDance Seed  :   2 models
     - seed-1.6
     - seed-1.6-flash
@@ -372,6 +367,9 @@ PROVIDER BREAKDOWN (Descending Order):
   Inflection      :   2 models
     - inflection-3-pi
     - inflection-3-productivity
+
+  StepFun         :   1 models
+    - step-3.5-flash:free
 
   Upstage         :   1 models
     - solar-pro-3:free
