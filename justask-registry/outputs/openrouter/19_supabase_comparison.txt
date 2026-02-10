@@ -1,17 +1,17 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-02-09 08:10:24 IST
+Generated: 2026-02-10 08:20:35 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 29
-   • Total records in pipeline: 29
+   • Total unique model names: 30
+   • Total records in pipeline: 30
    • Total records in Supabase: 28
    • Models in both systems: 28
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 1
+   • Models in pipeline only (not in Supabase): 2
    • Models in Supabase only (not in pipeline): 0
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
@@ -56,12 +56,32 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 1
-     Models: Pony Alpha
+   • New models (pipeline only): 2
+     Models: Aurora Alpha, Pony Alpha
    • Existing models with differences: 0
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
+================================================================================
+
+MODEL: Aurora Alpha
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | OpenRouter                |                          
+human_readable_name       | Aurora Alpha              |                          
+model_provider_country    | United States             |                          
+official_url              | https://openrouter.ai/    |                          
+input_modalities          | Text                      |                          
+output_modalities         | Text                      |                          
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              |                           |                          
+license_url               |                           |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
+
 ================================================================================
 
 MODEL: DeepSeek R1T Chimera
