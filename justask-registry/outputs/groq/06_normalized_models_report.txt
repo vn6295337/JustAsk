@@ -1,16 +1,16 @@
 ================================================================================
 GROQ PIPELINE NORMALIZATION REPORT
-Generated: 2026-02-10 02:49:45
+Generated: 2026-02-11 02:45:36
 ================================================================================
 
 SUMMARY:
-  Total models extracted: 7
+  Total models extracted: 6
   Models filtered out: 0
-  Models normalized: 7
+  Models normalized: 6
   Models unchanged: 0
   Success rate: 100.0%
 
-MODELS NORMALIZED: 7
+MODELS NORMALIZED: 6
 ----------------------------------------
    1. GROQ - Llama 3.1 8b
       Model Name: llama-3.1-8b-instant -> Llama 3.1 8b
@@ -32,17 +32,7 @@ TPM
 1K RPM
 RPM
 
-   3. GROQ - Llama Guard 4 12b
-      Model Name: meta-llama/llama-guard-4-12b -> Llama Guard 4 12b
-      Input Modalities: Text, Image
-      Output Modalities: Text
-      License:  -> Llama-4
-      Rate Limits: 30K TPM
-TPM
-100 RPM
-RPM
-
-   4. GROQ - Gpt Oss 120b
+   3. GROQ - Gpt Oss 120b
       Model Name: openai/gpt-oss-120b -> Gpt Oss 120b
       Input Modalities: Text
       Output Modalities: Text
@@ -52,7 +42,7 @@ TPM
 1K RPM
 RPM
 
-   5. GROQ - Gpt Oss 20b
+   4. GROQ - Gpt Oss 20b
       Model Name: openai/gpt-oss-20b -> Gpt Oss 20b
       Input Modalities: Text
       Output Modalities: Text
@@ -62,7 +52,7 @@ TPM
 1K RPM
 RPM
 
-   6. GROQ - Whisper Large V3
+   5. GROQ - Whisper Large V3
       Model Name: whisper-large-v3 -> Whisper Large V3
       Input Modalities: Audio
       Output Modalities: Text
@@ -72,7 +62,7 @@ ASH
 300 RPM
 RPM
 
-   7. GROQ - Whisper Large V3 Turbo
+   6. GROQ - Whisper Large V3 Turbo
       Model Name: whisper-large-v3-turbo -> Whisper Large V3 Turbo
       Input Modalities: Audio
       Output Modalities: Text
@@ -84,6 +74,6 @@ RPM
 
 PROVIDER SUMMARY:
 ----------------------------------------
-  Groq: 7 models
+  Groq: 6 models
 
 Total providers: 1

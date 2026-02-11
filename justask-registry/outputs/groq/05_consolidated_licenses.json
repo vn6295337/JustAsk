@@ -1,31 +1,30 @@
 {
   "metadata": {
-    "generated_at": "2026-02-10T02:49:45.650050+00:00",
+    "generated_at": "2026-02-11T02:45:36.293487+00:00",
     "consolidation_processor": "step_05_consolidate_licenses.py",
     "source_files": [
       "03_meta_licenses.json",
       "04_opensource_licenses.json"
     ],
-    "total_models": 7,
+    "total_models": 6,
     "description": "Consolidated license information from all Groq model sources",
     "statistics": {
       "sources": {
-        "meta_models": 3,
+        "meta_models": 2,
         "hf_scraped_models": 4,
-        "total_consolidated": 7
+        "total_consolidated": 6
       },
       "providers": {
-        "Groq": 7
+        "Groq": 6
       },
       "licenses": {
         "Llama-3.1": 1,
         "Llama-3.3": 1,
-        "Llama-4": 1,
         "Apache-2.0": 3,
         "MIT": 1
       },
       "categories": {
-        "meta": 3,
+        "meta": 2,
         "opensource": 4
       }
     }
@@ -33,7 +32,6 @@
   "license_urls": {
     "Llama-3.1": "https://www.llama.com/llama3_1/license/",
     "Llama-3.3": "https://www.llama.com/llama3_3/license/",
-    "Llama-4": "https://www.llama.com/llama4/license/",
     "Apache-2.0": "https://www.apache.org/licenses/LICENSE-2.0",
     "MIT": "https://opensource.org/licenses/MIT"
   },
@@ -50,12 +48,6 @@
         "license_info_url": "",
         "license_name": "Llama-3.3",
         "license_url": "https://www.llama.com/llama3_3/license/"
-      },
-      "llama-guard-4-12b": {
-        "license_info_text": "",
-        "license_info_url": "",
-        "license_name": "Llama-4",
-        "license_url": "https://www.llama.com/llama4/license/"
       },
       "gpt-oss-120b": {
         "license_info_text": "info",

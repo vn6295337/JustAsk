@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "generated_at": "2026-02-10T02:49:37.923663+00:00",
+    "generated_at": "2026-02-11T02:45:28.906233+00:00",
     "source_file": "01_scraped_models.json",
     "processor": "step_03_extract_meta_licenses.py",
-    "total_models": 3,
+    "total_models": 2,
     "description": "Meta/Llama models with official license information"
   },
   "models": [
@@ -22,14 +22,6 @@
       "license_info_url": "",
       "license_name": "Llama-3.3",
       "license_url": "https://www.llama.com/llama3_3/license/"
-    },
-    {
-      "model_id": "meta-llama/llama-guard-4-12b",
-      "model_provider": "Groq",
-      "license_info_text": "",
-      "license_info_url": "",
-      "license_name": "Llama-4",
-      "license_url": "https://www.llama.com/llama4/license/"
     }
   ]
 }

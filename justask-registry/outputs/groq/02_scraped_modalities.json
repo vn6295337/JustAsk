@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "extraction_timestamp": "2026-02-10T02:49:37.620786",
+    "extraction_timestamp": "2026-02-11T02:45:28.639117",
     "source_base_url": "https://console.groq.com/docs/model/",
-    "total_models": 7
+    "total_models": 6
   },
   "modalities": {
     "llama-3.1-8b-instant": {
@@ -18,16 +18,6 @@
       "model_id": "llama-3.3-70b-versatile",
       "input_modalities": [
         "Text"
-      ],
-      "output_modalities": [
-        "Text"
-      ]
-    },
-    "meta-llama/llama-guard-4-12b": {
-      "model_id": "meta-llama/llama-guard-4-12b",
-      "input_modalities": [
-        "Text",
-        "Image"
       ],
       "output_modalities": [
         "Text"
