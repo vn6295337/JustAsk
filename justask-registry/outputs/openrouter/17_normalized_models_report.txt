@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-02-11 08:16:22 IST
+Generated: 2026-02-12 08:11:03 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -9,7 +9,7 @@ DATA QUALITY ISSUES:
 MISSING OR EMPTY VALUES:
 ------------------------------
 
-LICENSE INFO TEXT (17 models):
+LICENSE INFO TEXT (16 models):
   - Aurora Alpha
   - Free Models Router
   - Gemma 3 12B IT
@@ -24,11 +24,10 @@ LICENSE INFO TEXT (17 models):
   - Nemotron 3 Nano 30B A3B
   - Nemotron Nano 12B 2 VL
   - Nemotron Nano 9B V2
-  - Pony Alpha
   - R1T Chimera
   - Solar Pro 3
 
-LICENSE INFO URL (17 models):
+LICENSE INFO URL (16 models):
   - Aurora Alpha
   - Free Models Router
   - Gemma 3 12B IT
@@ -43,20 +42,17 @@ LICENSE INFO URL (17 models):
   - Nemotron 3 Nano 30B A3B
   - Nemotron Nano 12B 2 VL
   - Nemotron Nano 9B V2
-  - Pony Alpha
   - R1T Chimera
   - Solar Pro 3
 
-LICENSE NAME (4 models):
+LICENSE NAME (3 models):
   - Aurora Alpha
   - Free Models Router
-  - Pony Alpha
   - R1T Chimera
 
-LICENSE URL (4 models):
+LICENSE URL (3 models):
   - Aurora Alpha
   - Free Models Router
-  - Pony Alpha
   - R1T Chimera
 
 UNKNOWN OR 'NOT FOUND' VALUES:
@@ -65,11 +61,11 @@ UNKNOWN OR 'NOT FOUND' VALUES:
 
 DATA QUALITY SUMMARY:
 ------------------------------
-Total models: 31
-Missing license info text: 17 (54.8%)
-Missing license info url: 17 (54.8%)
-Missing license name: 4 (12.9%)
-Missing license url: 4 (12.9%)
+Total models: 30
+Missing license info text: 16 (53.3%)
+Missing license info url: 16 (53.3%)
+Missing license name: 3 (10.0%)
+Missing license url: 3 (10.0%)
 
 ================================================================================
 
@@ -316,17 +312,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 25. Pony Alpha
-     Provider           : OpenRouter (United States)
-     Modalities         : Text → Text
-     License            : 
-     License Info       : 
-     License URL        : 
-     Official URL       : https://openrouter.ai/
-     Rate Limits        : 20 requests/min 50/day
-     Provider API Access: https://openrouter.ai/settings/keys
-
- 26. Step 3.5 Flash
+ 25. Step 3.5 Flash
      Provider           : StepFun (China)
      Modalities         : Text → Text
      License            : Apache-2.0
@@ -336,7 +322,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 27. DeepSeek R1T Chimera
+ 26. DeepSeek R1T Chimera
      Provider           : TNG Technology (Germany)
      Modalities         : Text → Text
      License            : MIT
@@ -346,7 +332,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 28. DeepSeek R1T2 Chimera
+ 27. DeepSeek R1T2 Chimera
      Provider           : TNG Technology (Germany)
      Modalities         : Text → Text
      License            : MIT
@@ -356,7 +342,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 29. R1T Chimera
+ 28. R1T Chimera
      Provider           : TNG Technology (Germany)
      Modalities         : Text → Text
      License            : 
@@ -366,7 +352,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 30. Solar Pro 3
+ 29. Solar Pro 3
      Provider           : Upstage AI (South Korea)
      Modalities         : Text → Text
      License            : Upstage
@@ -376,7 +362,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 31. GLM 4.5 Air
+ 30. GLM 4.5 Air
      Provider           : Z.AI (China)
      Modalities         : Text → Text
      License            : MIT

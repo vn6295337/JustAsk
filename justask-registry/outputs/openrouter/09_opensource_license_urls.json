@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-02-11 08:16:17 IST",
+    "generated_at": "2026-02-12 08:11:00 IST",
     "total_models": 14,
     "pipeline_stage": "I_opensource_license_urls"
   },
@@ -48,7 +48,7 @@
     {
       "id": "z-ai/glm-4.5-air:free",
       "canonical_slug": "z-ai/glm-4.5-air",
-      "name": "Z.AI: GLM 4.5 Air (free)",
+      "name": "Z.ai: GLM 4.5 Air (free)",
       "hugging_face_id": "zai-org/GLM-4.5-Air",
       "license_name": "MIT",
       "official_license_url": "https://opensource.org/licenses/MIT"

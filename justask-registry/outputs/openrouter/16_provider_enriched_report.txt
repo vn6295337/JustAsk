@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-02-11 08:16:22 IST
+Generated: 2026-02-12 08:11:03 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 31
+  Total models      : 30
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -16,11 +16,11 @@ MODEL PROVIDER DISTRIBUTION:
    5 models: Google
    3 models: Alibaba Cloud
    3 models: NVIDIA
-   3 models: OpenRouter
    3 models: TNG Technology
    2 models: Liquid AI
    2 models: Meta
    2 models: OpenAI
+   2 models: OpenRouter
    1 models: Arcee
    1 models: Cognitive Computations
    1 models: DeepSeek
@@ -33,7 +33,7 @@ MODEL PROVIDER DISTRIBUTION:
 Total unique model providers: 16
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
-  20 models: United States
+  19 models: United States
    6 models: China
    3 models: Germany
    1 models: France
@@ -45,11 +45,11 @@ MODEL FAMILY DISTRIBUTION:
    5 models: gemma
    3 models: alibaba cloud
    3 models: nvidia
-   3 models: openrouter
    3 models: tng technology
    2 models: liquid ai
    2 models: meta
    2 models: openai
+   2 models: openrouter
    1 models: arcee
    1 models: cognitive computations
    1 models: deepseek
@@ -400,21 +400,7 @@ MODEL 24: openrouter/free
 
 ================================================================================
 
-MODEL 25: openrouter/pony-alpha
---------------------------------------------------
-  ID: openrouter/pony-alpha
-  Original Name: Pony Alpha
-  HuggingFace ID: 
-  Canonical Slug: openrouter/pony-alpha
-  Clean Model Name: Pony Alpha
-  Model Provider: OpenRouter
-  Model Provider Country: United States
-  Model Family: openrouter
-  Official URL: https://openrouter.ai/
-
-================================================================================
-
-MODEL 26: stepfun/step-3.5-flash
+MODEL 25: stepfun/step-3.5-flash
 --------------------------------------------------
   ID: stepfun/step-3.5-flash:free
   Original Name: StepFun: Step 3.5 Flash (free)
@@ -428,7 +414,7 @@ MODEL 26: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 27: tngtech/deepseek-r1t-chimera
+MODEL 26: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t-chimera:free
   Original Name: TNG: DeepSeek R1T Chimera (free)
@@ -442,7 +428,7 @@ MODEL 27: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 28: tngtech/deepseek-r1t2-chimera
+MODEL 27: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t2-chimera:free
   Original Name: TNG: DeepSeek R1T2 Chimera (free)
@@ -456,7 +442,7 @@ MODEL 28: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 29: tngtech/tng-r1t-chimera
+MODEL 28: tngtech/tng-r1t-chimera
 --------------------------------------------------
   ID: tngtech/tng-r1t-chimera:free
   Original Name: TNG: R1T Chimera (free)
@@ -470,7 +456,7 @@ MODEL 29: tngtech/tng-r1t-chimera
 
 ================================================================================
 
-MODEL 30: upstage/solar-pro-3
+MODEL 29: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage: Solar Pro 3 (free)
@@ -484,10 +470,10 @@ MODEL 30: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 31: z-ai/glm-4.5-air
+MODEL 30: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
-  Original Name: Z.AI: GLM 4.5 Air (free)
+  Original Name: Z.ai: GLM 4.5 Air (free)
   HuggingFace ID: zai-org/GLM-4.5-Air
   Canonical Slug: z-ai/glm-4.5-air
   Clean Model Name: GLM 4.5 Air

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-02-11 08:16:21 IST",
+    "generated_at": "2026-02-12 08:11:02 IST",
     "total_models": 32,
     "pipeline_stage": "M_final_list_of_licenses"
   },
@@ -380,7 +380,7 @@
     {
       "id": "z-ai/glm-4.5-air:free",
       "canonical_slug": "z-ai/glm-4.5-air",
-      "original_name": "Z.AI: GLM 4.5 Air (free)",
+      "original_name": "Z.ai: GLM 4.5 Air (free)",
       "hugging_face_id": "zai-org/GLM-4.5-Air",
       "clean_model_name": "GLM 4.5 Air",
       "license_info_text": "info",

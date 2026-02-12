@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-02-11 08:16:17 IST",
+    "generated_at": "2026-02-12 08:11:00 IST",
     "total_models": 19,
     "pipeline_stage": "G_standardize_other_license_names_from_hf"
   },
@@ -88,7 +88,7 @@
     {
       "id": "z-ai/glm-4.5-air:free",
       "canonical_slug": "z-ai/glm-4.5-air",
-      "name": "Z.AI: GLM 4.5 Air (free)",
+      "name": "Z.ai: GLM 4.5 Air (free)",
       "hugging_face_id": "zai-org/GLM-4.5-Air",
       "raw_extracted_license": "mit",
       "standardized_license_name": "MIT"

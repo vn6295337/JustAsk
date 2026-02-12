@@ -1,17 +1,17 @@
 ================================================================================
 STANDARDIZED MODALITIES REPORT
-Generated: 2026-02-11 08:16:22 IST
+Generated: 2026-02-12 08:11:03 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 31
+  Total models : 30
   Input        : 14_raw_modalities.json
   Config       : modality_standardization.json
   Processor    : step_15_standardize_modalities.py
   Output       : 15_standardized_modalities.json
 
 STANDARDIZED INPUT MODALITIES DISTRIBUTION:
-  23 models: Text
+  22 models: Text
    5 models: Text, Image
    2 models: Text, Image, Audio, Video
    1 models: Text, Image, Video
@@ -19,12 +19,12 @@ STANDARDIZED INPUT MODALITIES DISTRIBUTION:
 Total unique input types: 4
 
 STANDARDIZED OUTPUT MODALITIES DISTRIBUTION:
-  31 models: Text
+  30 models: Text
 
 Total unique output types: 1
 
 STANDARDIZED MODALITY COMBINATIONS (INPUT → OUTPUT):
-  23 models: Text → Text
+  22 models: Text → Text
    5 models: Text, Image → Text
    2 models: Text, Image, Audio, Video → Text
    1 models: Text, Image, Video → Text
@@ -32,8 +32,8 @@ STANDARDIZED MODALITY COMBINATIONS (INPUT → OUTPUT):
 Total unique combinations: 4
 
 STANDARDIZATION IMPACT ANALYSIS:
-  Input modalities changed: 31 models
-  Output modalities changed: 31 models
+  Input modalities changed: 30 models
+  Output modalities changed: 30 models
   Input modalities unchanged: 0 models
   Output modalities unchanged: 0 models
 
@@ -85,7 +85,7 @@ MODEL 3: tngtech/deepseek-r1t2-chimera
 MODEL 4: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
-  Original Name: Z.AI: GLM 4.5 Air (free)
+  Original Name: Z.ai: GLM 4.5 Air (free)
   HuggingFace ID: zai-org/GLM-4.5-Air
   Canonical Slug: z-ai/glm-4.5-air
   Clean Model Name: GLM 4.5 Air
@@ -222,21 +222,7 @@ MODEL 13: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 14: openrouter/pony-alpha
---------------------------------------------------
-  ID: openrouter/pony-alpha
-  Original Name: Pony Alpha
-  HuggingFace ID: 
-  Canonical Slug: openrouter/pony-alpha
-  Clean Model Name: Pony Alpha
-  Raw Input Modalities: text
-  Raw Output Modalities: text
-  Standardized Input Modalities: Text
-  Standardized Output Modalities: Text
-
-================================================================================
-
-MODEL 15: qwen/qwen3-4b-04-28
+MODEL 14: qwen/qwen3-4b-04-28
 --------------------------------------------------
   ID: qwen/qwen3-4b:free
   Original Name: Qwen: Qwen3 4B (free)
@@ -250,7 +236,7 @@ MODEL 15: qwen/qwen3-4b-04-28
 
 ================================================================================
 
-MODEL 16: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 15: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -264,7 +250,7 @@ MODEL 16: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 17: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 16: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID: qwen/qwen3-next-80b-a3b-instruct:free
   Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
@@ -278,7 +264,7 @@ MODEL 17: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 18: deepseek/deepseek-r1-0528
+MODEL 17: deepseek/deepseek-r1-0528
 --------------------------------------------------
   ID: deepseek/deepseek-r1-0528:free
   Original Name: DeepSeek: R1 0528 (free)
@@ -292,7 +278,7 @@ MODEL 18: deepseek/deepseek-r1-0528
 
 ================================================================================
 
-MODEL 19: tngtech/tng-r1t-chimera
+MODEL 18: tngtech/tng-r1t-chimera
 --------------------------------------------------
   ID: tngtech/tng-r1t-chimera:free
   Original Name: TNG: R1T Chimera (free)
@@ -306,7 +292,7 @@ MODEL 19: tngtech/tng-r1t-chimera
 
 ================================================================================
 
-MODEL 20: upstage/solar-pro-3
+MODEL 19: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage: Solar Pro 3 (free)
@@ -320,7 +306,7 @@ MODEL 20: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 21: stepfun/step-3.5-flash
+MODEL 20: stepfun/step-3.5-flash
 --------------------------------------------------
   ID: stepfun/step-3.5-flash:free
   Original Name: StepFun: Step 3.5 Flash (free)
@@ -334,7 +320,7 @@ MODEL 21: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 22: arcee-ai/trinity-mini-20251201
+MODEL 21: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID: arcee-ai/trinity-mini:free
   Original Name: Arcee AI: Trinity Mini (free)
@@ -348,7 +334,7 @@ MODEL 22: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 23: venice/uncensored
+MODEL 22: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -362,7 +348,7 @@ MODEL 23: venice/uncensored
 
 ================================================================================
 
-MODEL 24: openrouter/free
+MODEL 23: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -376,7 +362,7 @@ MODEL 24: openrouter/free
 
 ================================================================================
 
-MODEL 25: google/gemma-3-12b-it
+MODEL 24: google/gemma-3-12b-it
 --------------------------------------------------
   ID: google/gemma-3-12b-it:free
   Original Name: Google: Gemma 3 12B (free)
@@ -390,7 +376,7 @@ MODEL 25: google/gemma-3-12b-it
 
 ================================================================================
 
-MODEL 26: google/gemma-3-27b-it
+MODEL 25: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
@@ -404,7 +390,7 @@ MODEL 26: google/gemma-3-27b-it
 
 ================================================================================
 
-MODEL 27: google/gemma-3-4b-it
+MODEL 26: google/gemma-3-4b-it
 --------------------------------------------------
   ID: google/gemma-3-4b-it:free
   Original Name: Google: Gemma 3 4B (free)
@@ -418,7 +404,7 @@ MODEL 27: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 28: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 27: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID: mistralai/mistral-small-3.1-24b-instruct:free
   Original Name: Mistral: Mistral Small 3.1 24B (free)
@@ -432,7 +418,7 @@ MODEL 28: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 29: google/gemma-3n-e2b-it
+MODEL 28: google/gemma-3n-e2b-it
 --------------------------------------------------
   ID: google/gemma-3n-e2b-it:free
   Original Name: Google: Gemma 3n 2B (free)
@@ -446,7 +432,7 @@ MODEL 29: google/gemma-3n-e2b-it
 
 ================================================================================
 
-MODEL 30: google/gemma-3n-e4b-it
+MODEL 29: google/gemma-3n-e4b-it
 --------------------------------------------------
   ID: google/gemma-3n-e4b-it:free
   Original Name: Google: Gemma 3n 4B (free)
@@ -460,7 +446,7 @@ MODEL 30: google/gemma-3n-e4b-it
 
 ================================================================================
 
-MODEL 31: nvidia/nemotron-nano-12b-v2-vl
+MODEL 30: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)

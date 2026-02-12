@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-11 08:16:22 IST",
-    "total_models": 31,
+    "generated_at": "2026-02-12 08:11:03 IST",
+    "total_models": 30,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
@@ -11,15 +11,6 @@
       "original_name": "Aurora Alpha",
       "hugging_face_id": "",
       "clean_model_name": "Aurora Alpha",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "openrouter/pony-alpha",
-      "canonical_slug": "openrouter/pony-alpha",
-      "original_name": "Pony Alpha",
-      "hugging_face_id": "",
-      "clean_model_name": "Pony Alpha",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text"
     },
@@ -143,7 +134,7 @@
     {
       "id": "z-ai/glm-4.5-air:free",
       "canonical_slug": "z-ai/glm-4.5-air",
-      "original_name": "Z.AI: GLM 4.5 Air (free)",
+      "original_name": "Z.ai: GLM 4.5 Air (free)",
       "hugging_face_id": "zai-org/GLM-4.5-Air",
       "clean_model_name": "GLM 4.5 Air",
       "raw_input_modalities": "text",
