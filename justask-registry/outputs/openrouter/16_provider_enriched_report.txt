@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-02-12 08:11:03 IST
+Generated: 2026-02-13 08:12:23 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 30
+  Total models      : 32
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -13,8 +13,8 @@ SUMMARY:
 ✓ ALL PROVIDERS AND FAMILIES MAPPED SUCCESSFULLY
 
 MODEL PROVIDER DISTRIBUTION:
+   5 models: Alibaba Cloud
    5 models: Google
-   3 models: Alibaba Cloud
    3 models: NVIDIA
    3 models: TNG Technology
    2 models: Liquid AI
@@ -34,7 +34,7 @@ Total unique model providers: 16
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
   19 models: United States
-   6 models: China
+   8 models: China
    3 models: Germany
    1 models: France
    1 models: South Korea
@@ -42,8 +42,8 @@ MODEL PROVIDER COUNTRY DISTRIBUTION:
 Total unique countries: 5
 
 MODEL FAMILY DISTRIBUTION:
+   5 models: alibaba cloud
    5 models: gemma
-   3 models: alibaba cloud
    3 models: nvidia
    3 models: tng technology
    2 models: liquid ai
@@ -106,7 +106,35 @@ MODEL 3: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 4: arcee-ai/trinity-mini-20251201
+MODEL 4: qwen/qwen3-vl-235b-a22b-thinking
+--------------------------------------------------
+  ID: qwen/qwen3-vl-235b-a22b-thinking
+  Original Name: Qwen: Qwen3 VL 235B A22B Thinking
+  HuggingFace ID: Qwen/Qwen3-VL-235B-A22B-Thinking
+  Canonical Slug: qwen/qwen3-vl-235b-a22b-thinking
+  Clean Model Name: Qwen3 VL 235B A22B Thinking
+  Model Provider: Alibaba Cloud
+  Model Provider Country: China
+  Model Family: alibaba cloud
+  Official URL: https://alibabacloud.com/
+
+================================================================================
+
+MODEL 5: qwen/qwen3-vl-30b-a3b-thinking
+--------------------------------------------------
+  ID: qwen/qwen3-vl-30b-a3b-thinking
+  Original Name: Qwen: Qwen3 VL 30B A3B Thinking
+  HuggingFace ID: Qwen/Qwen3-VL-30B-A3B-Thinking
+  Canonical Slug: qwen/qwen3-vl-30b-a3b-thinking
+  Clean Model Name: Qwen3 VL 30B A3B Thinking
+  Model Provider: Alibaba Cloud
+  Model Provider Country: China
+  Model Family: alibaba cloud
+  Official URL: https://alibabacloud.com/
+
+================================================================================
+
+MODEL 6: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID: arcee-ai/trinity-mini:free
   Original Name: Arcee AI: Trinity Mini (free)
@@ -120,7 +148,7 @@ MODEL 4: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 5: venice/uncensored
+MODEL 7: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -134,7 +162,7 @@ MODEL 5: venice/uncensored
 
 ================================================================================
 
-MODEL 6: deepseek/deepseek-r1-0528
+MODEL 8: deepseek/deepseek-r1-0528
 --------------------------------------------------
   ID: deepseek/deepseek-r1-0528:free
   Original Name: DeepSeek: R1 0528 (free)
@@ -148,7 +176,7 @@ MODEL 6: deepseek/deepseek-r1-0528
 
 ================================================================================
 
-MODEL 7: google/gemma-3-12b-it
+MODEL 9: google/gemma-3-12b-it
 --------------------------------------------------
   ID: google/gemma-3-12b-it:free
   Original Name: Google: Gemma 3 12B (free)
@@ -162,7 +190,7 @@ MODEL 7: google/gemma-3-12b-it
 
 ================================================================================
 
-MODEL 8: google/gemma-3-27b-it
+MODEL 10: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
@@ -176,7 +204,7 @@ MODEL 8: google/gemma-3-27b-it
 
 ================================================================================
 
-MODEL 9: google/gemma-3-4b-it
+MODEL 11: google/gemma-3-4b-it
 --------------------------------------------------
   ID: google/gemma-3-4b-it:free
   Original Name: Google: Gemma 3 4B (free)
@@ -190,7 +218,7 @@ MODEL 9: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 10: google/gemma-3n-e2b-it
+MODEL 12: google/gemma-3n-e2b-it
 --------------------------------------------------
   ID: google/gemma-3n-e2b-it:free
   Original Name: Google: Gemma 3n 2B (free)
@@ -204,7 +232,7 @@ MODEL 10: google/gemma-3n-e2b-it
 
 ================================================================================
 
-MODEL 11: google/gemma-3n-e4b-it
+MODEL 13: google/gemma-3n-e4b-it
 --------------------------------------------------
   ID: google/gemma-3n-e4b-it:free
   Original Name: Google: Gemma 3n 4B (free)
@@ -218,7 +246,7 @@ MODEL 11: google/gemma-3n-e4b-it
 
 ================================================================================
 
-MODEL 12: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 14: liquid/lfm-2.5-1.2b-instruct-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-instruct:free
   Original Name: LiquidAI: LFM2.5-1.2B-Instruct (free)
@@ -232,7 +260,7 @@ MODEL 12: liquid/lfm-2.5-1.2b-instruct-20260120
 
 ================================================================================
 
-MODEL 13: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 15: liquid/lfm-2.5-1.2b-thinking-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-thinking:free
   Original Name: LiquidAI: LFM2.5-1.2B-Thinking (free)
@@ -246,7 +274,7 @@ MODEL 13: liquid/lfm-2.5-1.2b-thinking-20260120
 
 ================================================================================
 
-MODEL 14: meta-llama/llama-3.2-3b-instruct
+MODEL 16: meta-llama/llama-3.2-3b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.2-3b-instruct:free
   Original Name: Meta: Llama 3.2 3B Instruct (free)
@@ -260,7 +288,7 @@ MODEL 14: meta-llama/llama-3.2-3b-instruct
 
 ================================================================================
 
-MODEL 15: meta-llama/llama-3.3-70b-instruct
+MODEL 17: meta-llama/llama-3.3-70b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.3-70b-instruct:free
   Original Name: Meta: Llama 3.3 70B Instruct (free)
@@ -274,7 +302,7 @@ MODEL 15: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 16: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 18: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID: mistralai/mistral-small-3.1-24b-instruct:free
   Original Name: Mistral: Mistral Small 3.1 24B (free)
@@ -288,7 +316,7 @@ MODEL 16: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 17: nousresearch/hermes-3-llama-3.1-405b
+MODEL 19: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -302,7 +330,7 @@ MODEL 17: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 18: nvidia/nemotron-3-nano-30b-a3b
+MODEL 20: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -316,7 +344,7 @@ MODEL 18: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 19: nvidia/nemotron-nano-12b-v2-vl
+MODEL 21: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
@@ -330,7 +358,7 @@ MODEL 19: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 20: nvidia/nemotron-nano-9b-v2
+MODEL 22: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -344,7 +372,7 @@ MODEL 20: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 21: openai/gpt-oss-120b
+MODEL 23: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -358,7 +386,7 @@ MODEL 21: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 22: openai/gpt-oss-20b
+MODEL 24: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -372,7 +400,7 @@ MODEL 22: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 23: openrouter/aurora-alpha
+MODEL 25: openrouter/aurora-alpha
 --------------------------------------------------
   ID: openrouter/aurora-alpha
   Original Name: Aurora Alpha
@@ -386,7 +414,7 @@ MODEL 23: openrouter/aurora-alpha
 
 ================================================================================
 
-MODEL 24: openrouter/free
+MODEL 26: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -400,7 +428,7 @@ MODEL 24: openrouter/free
 
 ================================================================================
 
-MODEL 25: stepfun/step-3.5-flash
+MODEL 27: stepfun/step-3.5-flash
 --------------------------------------------------
   ID: stepfun/step-3.5-flash:free
   Original Name: StepFun: Step 3.5 Flash (free)
@@ -414,7 +442,7 @@ MODEL 25: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 26: tngtech/deepseek-r1t-chimera
+MODEL 28: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t-chimera:free
   Original Name: TNG: DeepSeek R1T Chimera (free)
@@ -428,7 +456,7 @@ MODEL 26: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 27: tngtech/deepseek-r1t2-chimera
+MODEL 29: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t2-chimera:free
   Original Name: TNG: DeepSeek R1T2 Chimera (free)
@@ -442,7 +470,7 @@ MODEL 27: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 28: tngtech/tng-r1t-chimera
+MODEL 30: tngtech/tng-r1t-chimera
 --------------------------------------------------
   ID: tngtech/tng-r1t-chimera:free
   Original Name: TNG: R1T Chimera (free)
@@ -456,7 +484,7 @@ MODEL 28: tngtech/tng-r1t-chimera
 
 ================================================================================
 
-MODEL 29: upstage/solar-pro-3
+MODEL 31: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage: Solar Pro 3 (free)
@@ -470,7 +498,7 @@ MODEL 29: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 30: z-ai/glm-4.5-air
+MODEL 32: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)

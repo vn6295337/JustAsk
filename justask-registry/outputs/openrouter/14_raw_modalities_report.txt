@@ -1,29 +1,29 @@
 ================================================================================
 RAW MODALITIES EXTRACTION REPORT
-Generated: 2026-02-12 08:11:03 IST
+Generated: 2026-02-13 08:12:22 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 30
+  Total models : 32
   Input        : 02_filtered_models.json
   Processor    : step_14_extract_modalities.py
   Output       : 14_raw_modalities.json
 
 RAW INPUT MODALITIES DISTRIBUTION:
   24 models: text
-   5 models: text, image
+   7 models: text, image
    1 models: image, text, video
 
 Total unique input types: 3
 
 RAW OUTPUT MODALITIES DISTRIBUTION:
-  30 models: text
+  32 models: text
 
 Total unique output types: 1
 
 RAW MODALITY COMBINATIONS (INPUT → OUTPUT):
   24 models: text → text
-   5 models: text, image → text
+   7 models: text, image → text
    1 models: image, text, video → text
 
 Total unique combinations: 3
@@ -386,6 +386,30 @@ MODEL 30: mistralai/mistral-small-3.1-24b-instruct-2503
   HuggingFace ID: mistralai/Mistral-Small-3.1-24B-Instruct-2503
   Canonical Slug: mistralai/mistral-small-3.1-24b-instruct-2503
   Clean Model Name: Mistral Small 3.1 24B
+  Raw Input Modalities: text, image
+  Raw Output Modalities: text
+
+================================================================================
+
+MODEL 31: qwen/qwen3-vl-235b-a22b-thinking
+--------------------------------------------------
+  ID: qwen/qwen3-vl-235b-a22b-thinking
+  Original Name: Qwen: Qwen3 VL 235B A22B Thinking
+  HuggingFace ID: Qwen/Qwen3-VL-235B-A22B-Thinking
+  Canonical Slug: qwen/qwen3-vl-235b-a22b-thinking
+  Clean Model Name: Qwen3 VL 235B A22B Thinking
+  Raw Input Modalities: text, image
+  Raw Output Modalities: text
+
+================================================================================
+
+MODEL 32: qwen/qwen3-vl-30b-a3b-thinking
+--------------------------------------------------
+  ID: qwen/qwen3-vl-30b-a3b-thinking
+  Original Name: Qwen: Qwen3 VL 30B A3B Thinking
+  HuggingFace ID: Qwen/Qwen3-VL-30B-A3B-Thinking
+  Canonical Slug: qwen/qwen3-vl-30b-a3b-thinking
+  Clean Model Name: Qwen3 VL 30B A3B Thinking
   Raw Input Modalities: text, image
   Raw Output Modalities: text
 

@@ -1,6 +1,6 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-02-12 08:10:48 IST
+Generated: 2026-02-13 08:11:54 IST
 ================================================================================
 
 SUMMARY:
@@ -111,7 +111,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3-vl-8b-thinking
     - qwq-32b
 
-  Mistral         :  26 models
+  Mistral         :  25 models
     - codestral-2508
     - devstral-2512
     - devstral-medium
@@ -135,7 +135,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - mistral-small-creative
     - mixtral-8x22b-instruct
     - mixtral-8x7b-instruct
-    - pixtral-12b
     - pixtral-large-2411
     - voxtral-small-24b-2507
 
@@ -264,6 +263,14 @@ PROVIDER BREAKDOWN (Descending Order):
     - olmo-3.1-32b-instruct
     - olmo-3.1-32b-think
 
+  MiniMax         :   6 models
+    - minimax-01
+    - minimax-m1
+    - minimax-m2
+    - minimax-m2-her
+    - minimax-m2.1
+    - minimax-m2.5
+
   TNG             :   6 models
     - deepseek-r1t-chimera
     - deepseek-r1t-chimera:free
@@ -286,13 +293,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - kimi-k2-0905:exacto
     - kimi-k2-thinking
     - kimi-k2.5
-
-  MiniMax         :   5 models
-    - minimax-01
-    - minimax-m1
-    - minimax-m2
-    - minimax-m2-her
-    - minimax-m2.1
 
   Amazon          :   5 models
     - nova-2-lite-v1

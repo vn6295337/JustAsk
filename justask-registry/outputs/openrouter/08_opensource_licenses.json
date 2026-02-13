@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-12 08:11:00 IST",
-    "total_models": 14,
+    "generated_at": "2026-02-13 08:12:18 IST",
+    "total_models": 16,
     "pipeline_stage": "H_bucketize_other_license_names"
   },
   "models": [
@@ -17,6 +17,20 @@
       "canonical_slug": "arcee-ai/trinity-mini-20251201",
       "name": "Arcee AI: Trinity Mini (free)",
       "hugging_face_id": "arcee-ai/Trinity-Mini",
+      "license_name": "Apache-2.0"
+    },
+    {
+      "id": "qwen/qwen3-vl-30b-a3b-thinking",
+      "canonical_slug": "qwen/qwen3-vl-30b-a3b-thinking",
+      "name": "Qwen: Qwen3 VL 30B A3B Thinking",
+      "hugging_face_id": "Qwen/Qwen3-VL-30B-A3B-Thinking",
+      "license_name": "Apache-2.0"
+    },
+    {
+      "id": "qwen/qwen3-vl-235b-a22b-thinking",
+      "canonical_slug": "qwen/qwen3-vl-235b-a22b-thinking",
+      "name": "Qwen: Qwen3 VL 235B A22B Thinking",
+      "hugging_face_id": "Qwen/Qwen3-VL-235B-A22B-Thinking",
       "license_name": "Apache-2.0"
     },
     {

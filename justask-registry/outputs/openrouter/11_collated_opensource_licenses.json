@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-12 08:11:02 IST",
-    "total_models": 14,
+    "generated_at": "2026-02-13 08:12:22 IST",
+    "total_models": 16,
     "pipeline_stage": "K_collate_opensource_licenses"
   },
   "models": [
@@ -101,6 +101,28 @@
       "clean_model_name": "Qwen3 Next 80B A3B Instruct",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct/blob/main/LICENSE",
+      "license_name": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "id": "qwen/qwen3-vl-235b-a22b-thinking",
+      "canonical_slug": "qwen/qwen3-vl-235b-a22b-thinking",
+      "original_name": "Qwen: Qwen3 VL 235B A22B Thinking",
+      "hugging_face_id": "Qwen/Qwen3-VL-235B-A22B-Thinking",
+      "clean_model_name": "Qwen3 VL 235B A22B Thinking",
+      "license_info_text": "info",
+      "license_info_url": "https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Thinking/blob/main/README.md",
+      "license_name": "Apache-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "id": "qwen/qwen3-vl-30b-a3b-thinking",
+      "canonical_slug": "qwen/qwen3-vl-30b-a3b-thinking",
+      "original_name": "Qwen: Qwen3 VL 30B A3B Thinking",
+      "hugging_face_id": "Qwen/Qwen3-VL-30B-A3B-Thinking",
+      "clean_model_name": "Qwen3 VL 30B A3B Thinking",
+      "license_info_text": "info",
+      "license_info_url": "https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Thinking/blob/main/README.md",
       "license_name": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },

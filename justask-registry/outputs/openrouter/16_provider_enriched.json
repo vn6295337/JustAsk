@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-12 08:11:03 IST",
-    "total_models": 30,
+    "generated_at": "2026-02-13 08:12:23 IST",
+    "total_models": 32,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
@@ -204,6 +204,46 @@
       "model_provider_country": "United States",
       "model_family": "nvidia",
       "official_url": "https://build.nvidia.com/"
+    },
+    {
+      "id": "qwen/qwen3-vl-30b-a3b-thinking",
+      "canonical_slug": "qwen/qwen3-vl-30b-a3b-thinking",
+      "provider_slug": "qwen3-vl-30b-a3b-thinking",
+      "original_name": "Qwen: Qwen3 VL 30B A3B Thinking",
+      "hugging_face_id": "Qwen/Qwen3-VL-30B-A3B-Thinking",
+      "clean_model_name": "Qwen3 VL 30B A3B Thinking",
+      "raw_input_modalities": "text, image",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text, image",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text, Image",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "Alibaba Cloud",
+      "model_provider_country": "China",
+      "model_family": "alibaba cloud",
+      "official_url": "https://alibabacloud.com/"
+    },
+    {
+      "id": "qwen/qwen3-vl-235b-a22b-thinking",
+      "canonical_slug": "qwen/qwen3-vl-235b-a22b-thinking",
+      "provider_slug": "qwen3-vl-235b-a22b-thinking",
+      "original_name": "Qwen: Qwen3 VL 235B A22B Thinking",
+      "hugging_face_id": "Qwen/Qwen3-VL-235B-A22B-Thinking",
+      "clean_model_name": "Qwen3 VL 235B A22B Thinking",
+      "raw_input_modalities": "text, image",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text, image",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text, Image",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "Alibaba Cloud",
+      "model_provider_country": "China",
+      "model_family": "alibaba cloud",
+      "official_url": "https://alibabacloud.com/"
     },
     {
       "id": "qwen/qwen3-next-80b-a3b-instruct:free",

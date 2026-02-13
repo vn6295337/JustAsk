@@ -1,21 +1,21 @@
 ================================================================================
 COLLATED OPENSOURCE LICENSE INFORMATION REPORT
-Generated: 2026-02-12 08:11:02 IST
+Generated: 2026-02-13 08:12:22 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 14
+  Total models        : 16
   Input sources       : 3 pipeline stage files
   Processor           : step_11_collate_opensource.py
   Output              : 11_collated_opensource_licenses.json
 
 PIPELINE STAGE COVERAGE:
-  Step 05 (License Info URLs)    : 14 models
-  Step 08 Opensource Names       : 14 models
-  Step 09 Opensource URLs        : 14 models
+  Step 05 (License Info URLs)    : 16 models
+  Step 08 Opensource Names       : 16 models
+  Step 09 Opensource URLs        : 16 models
 
 OPENSOURCE LICENSE DISTRIBUTION:
-   9 models: Apache-2.0
+  11 models: Apache-2.0
    4 models: MIT
    1 models: Llama-3.1
 
@@ -122,7 +122,35 @@ MODEL 7: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 8: stepfun/step-3.5-flash
+MODEL 8: qwen/qwen3-vl-235b-a22b-thinking
+--------------------------------------------------
+  ID: qwen/qwen3-vl-235b-a22b-thinking
+  Original Name: Qwen: Qwen3 VL 235B A22B Thinking
+  HuggingFace ID: Qwen/Qwen3-VL-235B-A22B-Thinking
+  Canonical Slug: qwen/qwen3-vl-235b-a22b-thinking
+  Clean Model Name: Qwen3 VL 235B A22B Thinking
+  License Info Text: info
+  License Info URL: https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Thinking/blob/main/README.md
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 9: qwen/qwen3-vl-30b-a3b-thinking
+--------------------------------------------------
+  ID: qwen/qwen3-vl-30b-a3b-thinking
+  Original Name: Qwen: Qwen3 VL 30B A3B Thinking
+  HuggingFace ID: Qwen/Qwen3-VL-30B-A3B-Thinking
+  Canonical Slug: qwen/qwen3-vl-30b-a3b-thinking
+  Clean Model Name: Qwen3 VL 30B A3B Thinking
+  License Info Text: info
+  License Info URL: https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Thinking/blob/main/README.md
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 10: stepfun/step-3.5-flash
 --------------------------------------------------
   ID: stepfun/step-3.5-flash:free
   Original Name: StepFun: Step 3.5 Flash (free)
@@ -136,7 +164,7 @@ MODEL 8: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 9: venice/uncensored
+MODEL 11: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -150,7 +178,7 @@ MODEL 9: venice/uncensored
 
 ================================================================================
 
-MODEL 10: nousresearch/hermes-3-llama-3.1-405b
+MODEL 12: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -164,7 +192,7 @@ MODEL 10: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 11: deepseek/deepseek-r1-0528
+MODEL 13: deepseek/deepseek-r1-0528
 --------------------------------------------------
   ID: deepseek/deepseek-r1-0528:free
   Original Name: DeepSeek: R1 0528 (free)
@@ -178,7 +206,7 @@ MODEL 11: deepseek/deepseek-r1-0528
 
 ================================================================================
 
-MODEL 12: tngtech/deepseek-r1t-chimera
+MODEL 14: tngtech/deepseek-r1t-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t-chimera:free
   Original Name: TNG: DeepSeek R1T Chimera (free)
@@ -192,7 +220,7 @@ MODEL 12: tngtech/deepseek-r1t-chimera
 
 ================================================================================
 
-MODEL 13: tngtech/deepseek-r1t2-chimera
+MODEL 15: tngtech/deepseek-r1t2-chimera
 --------------------------------------------------
   ID: tngtech/deepseek-r1t2-chimera:free
   Original Name: TNG: DeepSeek R1T2 Chimera (free)
@@ -206,7 +234,7 @@ MODEL 13: tngtech/deepseek-r1t2-chimera
 
 ================================================================================
 
-MODEL 14: z-ai/glm-4.5-air
+MODEL 16: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)
