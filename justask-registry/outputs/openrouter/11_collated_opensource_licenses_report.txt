@@ -1,22 +1,22 @@
 ================================================================================
 COLLATED OPENSOURCE LICENSE INFORMATION REPORT
-Generated: 2026-02-13 08:12:22 IST
+Generated: 2026-02-14 07:59:26 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 16
+  Total models        : 15
   Input sources       : 3 pipeline stage files
   Processor           : step_11_collate_opensource.py
   Output              : 11_collated_opensource_licenses.json
 
 PIPELINE STAGE COVERAGE:
-  Step 05 (License Info URLs)    : 16 models
-  Step 08 Opensource Names       : 16 models
-  Step 09 Opensource URLs        : 16 models
+  Step 05 (License Info URLs)    : 15 models
+  Step 08 Opensource Names       : 15 models
+  Step 09 Opensource URLs        : 15 models
 
 OPENSOURCE LICENSE DISTRIBUTION:
-  11 models: Apache-2.0
-   4 models: MIT
+  12 models: Apache-2.0
+   2 models: MIT
    1 models: Llama-3.1
 
 Total unique license types: 3
@@ -80,7 +80,21 @@ MODEL 4: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 5: qwen/qwen3-4b-04-28
+MODEL 5: qwen/qwen3-235b-a22b-thinking-2507
+--------------------------------------------------
+  ID: qwen/qwen3-235b-a22b-thinking-2507
+  Original Name: Qwen: Qwen3 235B A22B Thinking 2507
+  HuggingFace ID: Qwen/Qwen3-235B-A22B-Thinking-2507
+  Canonical Slug: qwen/qwen3-235b-a22b-thinking-2507
+  Clean Model Name: Qwen3 235B A22B Thinking 2507
+  License Info Text: info
+  License Info URL: https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507/blob/main/LICENSE
+  License Name: Apache-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 6: qwen/qwen3-4b-04-28
 --------------------------------------------------
   ID: qwen/qwen3-4b:free
   Original Name: Qwen: Qwen3 4B (free)
@@ -94,7 +108,7 @@ MODEL 5: qwen/qwen3-4b-04-28
 
 ================================================================================
 
-MODEL 6: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 7: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -108,7 +122,7 @@ MODEL 6: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 7: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 8: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID: qwen/qwen3-next-80b-a3b-instruct:free
   Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
@@ -122,7 +136,7 @@ MODEL 7: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 8: qwen/qwen3-vl-235b-a22b-thinking
+MODEL 9: qwen/qwen3-vl-235b-a22b-thinking
 --------------------------------------------------
   ID: qwen/qwen3-vl-235b-a22b-thinking
   Original Name: Qwen: Qwen3 VL 235B A22B Thinking
@@ -136,7 +150,7 @@ MODEL 8: qwen/qwen3-vl-235b-a22b-thinking
 
 ================================================================================
 
-MODEL 9: qwen/qwen3-vl-30b-a3b-thinking
+MODEL 10: qwen/qwen3-vl-30b-a3b-thinking
 --------------------------------------------------
   ID: qwen/qwen3-vl-30b-a3b-thinking
   Original Name: Qwen: Qwen3 VL 30B A3B Thinking
@@ -150,7 +164,7 @@ MODEL 9: qwen/qwen3-vl-30b-a3b-thinking
 
 ================================================================================
 
-MODEL 10: stepfun/step-3.5-flash
+MODEL 11: stepfun/step-3.5-flash
 --------------------------------------------------
   ID: stepfun/step-3.5-flash:free
   Original Name: StepFun: Step 3.5 Flash (free)
@@ -164,7 +178,7 @@ MODEL 10: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 11: venice/uncensored
+MODEL 12: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -178,7 +192,7 @@ MODEL 11: venice/uncensored
 
 ================================================================================
 
-MODEL 12: nousresearch/hermes-3-llama-3.1-405b
+MODEL 13: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -192,7 +206,7 @@ MODEL 12: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 13: deepseek/deepseek-r1-0528
+MODEL 14: deepseek/deepseek-r1-0528
 --------------------------------------------------
   ID: deepseek/deepseek-r1-0528:free
   Original Name: DeepSeek: R1 0528 (free)
@@ -206,35 +220,7 @@ MODEL 13: deepseek/deepseek-r1-0528
 
 ================================================================================
 
-MODEL 14: tngtech/deepseek-r1t-chimera
---------------------------------------------------
-  ID: tngtech/deepseek-r1t-chimera:free
-  Original Name: TNG: DeepSeek R1T Chimera (free)
-  HuggingFace ID: tngtech/DeepSeek-R1T-Chimera
-  Canonical Slug: tngtech/deepseek-r1t-chimera
-  Clean Model Name: DeepSeek R1T Chimera
-  License Info Text: info
-  License Info URL: https://huggingface.co/tngtech/DeepSeek-R1T-Chimera/blob/main/README.md
-  License Name: MIT
-  License URL: https://opensource.org/licenses/MIT
-
-================================================================================
-
-MODEL 15: tngtech/deepseek-r1t2-chimera
---------------------------------------------------
-  ID: tngtech/deepseek-r1t2-chimera:free
-  Original Name: TNG: DeepSeek R1T2 Chimera (free)
-  HuggingFace ID: tngtech/DeepSeek-TNG-R1T2-Chimera
-  Canonical Slug: tngtech/deepseek-r1t2-chimera
-  Clean Model Name: DeepSeek R1T2 Chimera
-  License Info Text: info
-  License Info URL: https://huggingface.co/tngtech/DeepSeek-TNG-R1T2-Chimera/blob/main/README.md
-  License Name: MIT
-  License URL: https://opensource.org/licenses/MIT
-
-================================================================================
-
-MODEL 16: z-ai/glm-4.5-air
+MODEL 15: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)

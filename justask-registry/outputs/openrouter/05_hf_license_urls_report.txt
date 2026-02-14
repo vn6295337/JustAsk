@@ -1,17 +1,17 @@
 ================================================================================
 OTHER LICENSE INFO URLS REPORT
-Generated: 2026-02-13 08:12:09 IST
+Generated: 2026-02-14 07:59:19 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 21
+  Total models : 20
   Input        : 02_filtered_models.json
   Processor    : step_05_fetch_hf_license_urls.py
   Output       : 05_hf_license_urls.json
 
 LICENSE INFO URL BREAKDOWN:
-  13 models: README.md file
-   8 models: LICENSE file
+  11 models: README.md file
+   9 models: LICENSE file
 
 Total categories: 2
 
@@ -63,7 +63,16 @@ MODEL 5: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 6: qwen/qwen3-4b-04-28
+MODEL 6: qwen/qwen3-235b-a22b-thinking-2507
+--------------------------------------------------
+  ID              : qwen/qwen3-235b-a22b-thinking-2507
+  Canonical Slug  : qwen/qwen3-235b-a22b-thinking-2507
+  HuggingFace ID  : Qwen/Qwen3-235B-A22B-Thinking-2507
+  License Info URL: https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507/blob/main/LICENSE
+
+================================================================================
+
+MODEL 7: qwen/qwen3-4b-04-28
 --------------------------------------------------
   ID              : qwen/qwen3-4b:free
   Canonical Slug  : qwen/qwen3-4b-04-28
@@ -72,7 +81,7 @@ MODEL 6: qwen/qwen3-4b-04-28
 
 ================================================================================
 
-MODEL 7: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 8: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID              : qwen/qwen3-coder:free
   Canonical Slug  : qwen/qwen3-coder-480b-a35b-07-25
@@ -81,7 +90,7 @@ MODEL 7: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 8: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 9: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID              : qwen/qwen3-next-80b-a3b-instruct:free
   Canonical Slug  : qwen/qwen3-next-80b-a3b-instruct-2509
@@ -90,7 +99,7 @@ MODEL 8: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 9: arcee-ai/trinity-mini-20251201
+MODEL 10: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID              : arcee-ai/trinity-mini:free
   Canonical Slug  : arcee-ai/trinity-mini-20251201
@@ -99,7 +108,7 @@ MODEL 9: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 10: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 11: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID              : mistralai/mistral-small-3.1-24b-instruct:free
   Canonical Slug  : mistralai/mistral-small-3.1-24b-instruct-2503
@@ -108,7 +117,7 @@ MODEL 10: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 11: nvidia/nemotron-3-nano-30b-a3b
+MODEL 12: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID              : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug  : nvidia/nemotron-3-nano-30b-a3b
@@ -117,7 +126,7 @@ MODEL 11: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 12: nvidia/nemotron-nano-12b-v2-vl
+MODEL 13: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID              : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug  : nvidia/nemotron-nano-12b-v2-vl
@@ -126,7 +135,7 @@ MODEL 12: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 13: nvidia/nemotron-nano-9b-v2
+MODEL 14: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID              : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug  : nvidia/nemotron-nano-9b-v2
@@ -135,7 +144,7 @@ MODEL 13: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 14: nousresearch/hermes-3-llama-3.1-405b
+MODEL 15: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID              : nousresearch/hermes-3-llama-3.1-405b:free
   Canonical Slug  : nousresearch/hermes-3-llama-3.1-405b
@@ -144,7 +153,7 @@ MODEL 14: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 15: qwen/qwen3-vl-235b-a22b-thinking
+MODEL 16: qwen/qwen3-vl-235b-a22b-thinking
 --------------------------------------------------
   ID              : qwen/qwen3-vl-235b-a22b-thinking
   Canonical Slug  : qwen/qwen3-vl-235b-a22b-thinking
@@ -153,7 +162,7 @@ MODEL 15: qwen/qwen3-vl-235b-a22b-thinking
 
 ================================================================================
 
-MODEL 16: qwen/qwen3-vl-30b-a3b-thinking
+MODEL 17: qwen/qwen3-vl-30b-a3b-thinking
 --------------------------------------------------
   ID              : qwen/qwen3-vl-30b-a3b-thinking
   Canonical Slug  : qwen/qwen3-vl-30b-a3b-thinking
@@ -162,7 +171,7 @@ MODEL 16: qwen/qwen3-vl-30b-a3b-thinking
 
 ================================================================================
 
-MODEL 17: stepfun/step-3.5-flash
+MODEL 18: stepfun/step-3.5-flash
 --------------------------------------------------
   ID              : stepfun/step-3.5-flash:free
   Canonical Slug  : stepfun/step-3.5-flash
@@ -171,25 +180,7 @@ MODEL 17: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 18: tngtech/deepseek-r1t-chimera
---------------------------------------------------
-  ID              : tngtech/deepseek-r1t-chimera:free
-  Canonical Slug  : tngtech/deepseek-r1t-chimera
-  HuggingFace ID  : tngtech/DeepSeek-R1T-Chimera
-  License Info URL: https://huggingface.co/tngtech/DeepSeek-R1T-Chimera/blob/main/README.md
-
-================================================================================
-
-MODEL 19: tngtech/deepseek-r1t2-chimera
---------------------------------------------------
-  ID              : tngtech/deepseek-r1t2-chimera:free
-  Canonical Slug  : tngtech/deepseek-r1t2-chimera
-  HuggingFace ID  : tngtech/DeepSeek-TNG-R1T2-Chimera
-  License Info URL: https://huggingface.co/tngtech/DeepSeek-TNG-R1T2-Chimera/blob/main/README.md
-
-================================================================================
-
-MODEL 20: venice/uncensored
+MODEL 19: venice/uncensored
 --------------------------------------------------
   ID              : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Canonical Slug  : venice/uncensored
@@ -198,7 +189,7 @@ MODEL 20: venice/uncensored
 
 ================================================================================
 
-MODEL 21: z-ai/glm-4.5-air
+MODEL 20: z-ai/glm-4.5-air
 --------------------------------------------------
   ID              : z-ai/glm-4.5-air:free
   Canonical Slug  : z-ai/glm-4.5-air

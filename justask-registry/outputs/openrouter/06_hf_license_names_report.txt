@@ -1,19 +1,19 @@
 ================================================================================
 OTHER MODEL LICENSE NAME EXTRACTIONS REPORT
-Generated: 2026-02-13 08:12:17 IST
+Generated: 2026-02-14 07:59:23 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 21
+  Total models : 20
   Input        : 05_hf_license_urls.json
   Processor    : step_06_fetch_hf_license_names.py
   Output       : 06_hf_license_names.json
 
 LICENSE DISTRIBUTION:
-  apache-2.0: 11
+  apache-2.0: 12
   lfm1.0: 2
   llama3: 1
-  mit: 4
+  mit: 2
   nvidia-open-model-license: 3
 
 Total license types: 5
@@ -138,7 +138,16 @@ MODEL 13: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 14: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 14: qwen/qwen3-235b-a22b-thinking-2507
+--------------------------------------------------
+  ID               : qwen/qwen3-235b-a22b-thinking-2507
+  Canonical Slug   : qwen/qwen3-235b-a22b-thinking-2507
+  HuggingFace ID   : Qwen/Qwen3-235B-A22B-Thinking-2507
+  Extracted License: apache-2.0
+
+================================================================================
+
+MODEL 15: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID               : qwen/qwen3-coder:free
   Canonical Slug   : qwen/qwen3-coder-480b-a35b-07-25
@@ -147,21 +156,12 @@ MODEL 14: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 15: venice/uncensored
+MODEL 16: venice/uncensored
 --------------------------------------------------
   ID               : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Canonical Slug   : venice/uncensored
   HuggingFace ID   : cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition
   Extracted License: apache-2.0
-
-================================================================================
-
-MODEL 16: tngtech/deepseek-r1t2-chimera
---------------------------------------------------
-  ID               : tngtech/deepseek-r1t2-chimera:free
-  Canonical Slug   : tngtech/deepseek-r1t2-chimera
-  HuggingFace ID   : tngtech/DeepSeek-TNG-R1T2-Chimera
-  Extracted License: mit
 
 ================================================================================
 
@@ -183,16 +183,7 @@ MODEL 18: qwen/qwen3-4b-04-28
 
 ================================================================================
 
-MODEL 19: tngtech/deepseek-r1t-chimera
---------------------------------------------------
-  ID               : tngtech/deepseek-r1t-chimera:free
-  Canonical Slug   : tngtech/deepseek-r1t-chimera
-  HuggingFace ID   : tngtech/DeepSeek-R1T-Chimera
-  Extracted License: mit
-
-================================================================================
-
-MODEL 20: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 19: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID               : mistralai/mistral-small-3.1-24b-instruct:free
   Canonical Slug   : mistralai/mistral-small-3.1-24b-instruct-2503
@@ -201,7 +192,7 @@ MODEL 20: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 21: nousresearch/hermes-3-llama-3.1-405b
+MODEL 20: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID               : nousresearch/hermes-3-llama-3.1-405b:free
   Canonical Slug   : nousresearch/hermes-3-llama-3.1-405b

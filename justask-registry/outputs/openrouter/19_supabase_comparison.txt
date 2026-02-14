@@ -1,64 +1,66 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-02-13 08:12:26 IST
+Generated: 2026-02-14 07:59:30 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 31
-   • Total records in pipeline: 31
+   • Total unique model names: 32
+   • Total records in pipeline: 30
    • Total records in Supabase: 28
-   • Models in both systems: 28
+   • Models in both systems: 26
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 3
-   • Models in Supabase only (not in pipeline): 0
+   • Models in pipeline only (not in Supabase): 4
+   • Models in Supabase only (not in pipeline): 2
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
    • inference_provider:
-     - Exact matches: 28
+     - Exact matches: 26
      - Differences: 0
    • model_provider:
-     - Exact matches: 28
+     - Exact matches: 26
      - Differences: 0
    • human_readable_name:
-     - Exact matches: 28
+     - Exact matches: 26
      - Differences: 0
    • model_provider_country:
-     - Exact matches: 28
+     - Exact matches: 26
      - Differences: 0
    • official_url:
-     - Exact matches: 28
+     - Exact matches: 26
      - Differences: 0
    • input_modalities:
-     - Exact matches: 28
+     - Exact matches: 26
      - Differences: 0
    • output_modalities:
-     - Exact matches: 28
+     - Exact matches: 26
      - Differences: 0
    • license_info_text:
-     - Exact matches: 28
+     - Exact matches: 26
      - Differences: 0
    • license_info_url:
-     - Exact matches: 28
+     - Exact matches: 26
      - Differences: 0
    • license_name:
-     - Exact matches: 28
+     - Exact matches: 26
      - Differences: 0
    • license_url:
-     - Exact matches: 28
+     - Exact matches: 26
      - Differences: 0
    • rate_limits:
-     - Exact matches: 28
+     - Exact matches: 26
      - Differences: 0
    • provider_api_access:
-     - Exact matches: 28
+     - Exact matches: 26
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 3
-     Models: Aurora Alpha, Qwen3 VL 235B A22B Thinking, Qwen3 VL 30B A3B Thinking
+   • New models (pipeline only): 4
+     Models: Aurora Alpha, Qwen3 235B A22B Thinking 2507, Qwen3 VL 235B A22B Thinking, Qwen3 VL 30B A3B Thinking
    • Existing models with differences: 0
+   • Deprecated models (Supabase only): 2
+     Models: DeepSeek R1T Chimera, DeepSeek R1T2 Chimera
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
@@ -88,19 +90,19 @@ MODEL: DeepSeek R1T Chimera
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                | OpenRouter               
-model_provider            | TNG Technology            | TNG Technology           
-human_readable_name       | DeepSeek R1T Chimera      | DeepSeek R1T Chimera     
-model_provider_country    | Germany                   | Germany                  
-official_url              | https://tngtech.com       | https://tngtech.com      
-input_modalities          | Text                      | Text                     
-output_modalities         | Text                      | Text                     
-license_info_text         | info                      | info                     
-license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | MIT                       | MIT                      
-license_url               | https://opensource.org/.. | https://opensource.org/..
-rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
-provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+inference_provider        |                           | OpenRouter               
+model_provider            |                           | TNG Technology           
+human_readable_name       |                           | DeepSeek R1T Chimera     
+model_provider_country    |                           | Germany                  
+official_url              |                           | https://tngtech.com      
+input_modalities          |                           | Text                     
+output_modalities         |                           | Text                     
+license_info_text         |                           | info                     
+license_info_url          |                           | https://huggingface.co/..
+license_name              |                           | MIT                      
+license_url               |                           | https://opensource.org/..
+rate_limits               |                           | 20 requests/min 50/day   
+provider_api_access       |                           | https://openrouter.ai/s..
 
 ================================================================================
 
@@ -108,19 +110,19 @@ MODEL: DeepSeek R1T2 Chimera
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                | OpenRouter               
-model_provider            | TNG Technology            | TNG Technology           
-human_readable_name       | DeepSeek R1T2 Chimera     | DeepSeek R1T2 Chimera    
-model_provider_country    | Germany                   | Germany                  
-official_url              | https://tngtech.com       | https://tngtech.com      
-input_modalities          | Text                      | Text                     
-output_modalities         | Text                      | Text                     
-license_info_text         | info                      | info                     
-license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | MIT                       | MIT                      
-license_url               | https://opensource.org/.. | https://opensource.org/..
-rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
-provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+inference_provider        |                           | OpenRouter               
+model_provider            |                           | TNG Technology           
+human_readable_name       |                           | DeepSeek R1T2 Chimera    
+model_provider_country    |                           | Germany                  
+official_url              |                           | https://tngtech.com      
+input_modalities          |                           | Text                     
+output_modalities         |                           | Text                     
+license_info_text         |                           | info                     
+license_info_url          |                           | https://huggingface.co/..
+license_name              |                           | MIT                      
+license_url               |                           | https://opensource.org/..
+rate_limits               |                           | 20 requests/min 50/day   
+provider_api_access       |                           | https://openrouter.ai/s..
 
 ================================================================================
 
@@ -481,6 +483,26 @@ license_name              | NVIDIA                    | NVIDIA
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+
+================================================================================
+
+MODEL: Qwen3 235B A22B Thinking 2507
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | Alibaba Cloud             |                          
+human_readable_name       | Qwen3 235B A22B Thinkin.. |                          
+model_provider_country    | China                     |                          
+official_url              | https://alibabacloud.com/ |                          
+input_modalities          | Text                      |                          
+output_modalities         | Text                      |                          
+license_info_text         | info                      |                          
+license_info_url          | https://huggingface.co/.. |                          
+license_name              | Apache-2.0                |                          
+license_url               | https://www.apache.org/.. |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-13 08:12:18 IST",
-    "total_models": 16,
+    "generated_at": "2026-02-14 07:59:24 IST",
+    "total_models": 15,
     "pipeline_stage": "H_bucketize_other_license_names"
   },
   "models": [
@@ -62,6 +62,13 @@
       "license_name": "MIT"
     },
     {
+      "id": "qwen/qwen3-235b-a22b-thinking-2507",
+      "canonical_slug": "qwen/qwen3-235b-a22b-thinking-2507",
+      "name": "Qwen: Qwen3 235B A22B Thinking 2507",
+      "hugging_face_id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+      "license_name": "Apache-2.0"
+    },
+    {
       "id": "qwen/qwen3-coder:free",
       "canonical_slug": "qwen/qwen3-coder-480b-a35b-07-25",
       "name": "Qwen: Qwen3 Coder 480B A35B (free)",
@@ -76,13 +83,6 @@
       "license_name": "Apache-2.0"
     },
     {
-      "id": "tngtech/deepseek-r1t2-chimera:free",
-      "canonical_slug": "tngtech/deepseek-r1t2-chimera",
-      "name": "TNG: DeepSeek R1T2 Chimera (free)",
-      "hugging_face_id": "tngtech/DeepSeek-TNG-R1T2-Chimera",
-      "license_name": "MIT"
-    },
-    {
       "id": "deepseek/deepseek-r1-0528:free",
       "canonical_slug": "deepseek/deepseek-r1-0528",
       "name": "DeepSeek: R1 0528 (free)",
@@ -95,13 +95,6 @@
       "name": "Qwen: Qwen3 4B (free)",
       "hugging_face_id": "Qwen/Qwen3-4B",
       "license_name": "Apache-2.0"
-    },
-    {
-      "id": "tngtech/deepseek-r1t-chimera:free",
-      "canonical_slug": "tngtech/deepseek-r1t-chimera",
-      "name": "TNG: DeepSeek R1T Chimera (free)",
-      "hugging_face_id": "tngtech/DeepSeek-R1T-Chimera",
-      "license_name": "MIT"
     },
     {
       "id": "mistralai/mistral-small-3.1-24b-instruct:free",
