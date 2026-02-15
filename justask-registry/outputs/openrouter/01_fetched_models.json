@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-02-14 07:59:10 IST",
+    "generated_at": "2026-02-15 08:12:19 IST",
     "total_models": 340,
     "pipeline_stage": "A_fetch_api_models"
   },
@@ -539,12 +539,12 @@
       },
       "pricing": {
         "prompt": "0.00000045",
-        "completion": "0.00000225",
-        "input_cache_read": "0.000000070000002"
+        "completion": "0.00000044",
+        "input_cache_read": "0.0000001125"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": null,
+        "max_completion_tokens": 65535,
         "is_moderated": false
       },
       "per_request_limits": null,
