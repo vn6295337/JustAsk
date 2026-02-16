@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-02-15 08:12:19 IST",
+    "generated_at": "2026-02-16 08:07:51 IST",
     "total_models": 340,
     "pipeline_stage": "A_fetch_api_models"
   },
@@ -12,7 +12,7 @@
       "name": "MiniMax: MiniMax M2.5",
       "created": 1770908502,
       "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 76.3% on BrowseComp, M2.5 is also more token efficient than previous generations, having been trained to optimize its actions and output through planning.",
-      "context_length": 204800,
+      "context_length": 196608,
       "architecture": {
         "modality": "text->text",
         "input_modalities": [
@@ -25,12 +25,11 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000003",
-        "completion": "0.0000012",
-        "input_cache_read": "0.00000003"
+        "prompt": "0.0000002",
+        "completion": "0.000001"
       },
       "top_provider": {
-        "context_length": 204800,
+        "context_length": 196608,
         "max_completion_tokens": 131072,
         "is_moderated": false
       },
@@ -38,6 +37,8 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
+        "logit_bias",
+        "logprobs",
         "max_tokens",
         "presence_penalty",
         "reasoning",
@@ -45,10 +46,12 @@
         "response_format",
         "seed",
         "stop",
+        "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
         "top_k",
+        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {
@@ -65,7 +68,7 @@
       "name": "Z.ai: GLM 5",
       "created": 1770829182,
       "description": "GLM-5 is Z.ai\u2019s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading closed-source models. With advanced agentic planning, deep backend reasoning, and iterative self-correction, GLM-5 moves beyond code generation to full-system construction and autonomous execution.",
-      "context_length": 202752,
+      "context_length": 204800,
       "architecture": {
         "modality": "text->text",
         "input_modalities": [
@@ -78,12 +81,11 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000008",
-        "completion": "0.00000256",
-        "input_cache_read": "0.00000016"
+        "prompt": "0.00000075",
+        "completion": "0.00000255"
       },
       "top_provider": {
-        "context_length": 202752,
+        "context_length": 204800,
         "max_completion_tokens": 131072,
         "is_moderated": false
       },
@@ -493,7 +495,11 @@
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0"
+        "completion": "0",
+        "request": "0",
+        "image": "0",
+        "web_search": "0",
+        "internal_reasoning": "0"
       },
       "top_provider": {
         "context_length": 131000,
@@ -1921,7 +1927,6 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logit_bias",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -2509,7 +2514,6 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logit_bias",
         "max_tokens",
         "presence_penalty",
         "reasoning",
@@ -8590,7 +8594,11 @@
         "top_k",
         "top_p"
       ],
-      "default_parameters": {},
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      },
       "expiration_date": null
     },
     {
@@ -9921,7 +9929,6 @@
       "supported_parameters": [
         "frequency_penalty",
         "include_reasoning",
-        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -9935,7 +9942,6 @@
         "tool_choice",
         "tools",
         "top_k",
-        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {},
@@ -12643,7 +12649,11 @@
         "temperature",
         "top_p"
       ],
-      "default_parameters": {},
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      },
       "expiration_date": null
     },
     {
