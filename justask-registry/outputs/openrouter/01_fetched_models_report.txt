@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-02-16 08:07:51 IST
+Generated: 2026-02-17 08:04:29 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 340
+  Total models: 342
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  58 models
@@ -67,7 +67,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - o4-mini-deep-research
     - o4-mini-high
 
-  Qwen            :  43 models
+  Qwen            :  45 models
     - qwen-2.5-7b-instruct
     - qwen-2.5-vl-7b-instruct
     - qwen-max
@@ -110,6 +110,8 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3-vl-32b-instruct
     - qwen3-vl-8b-instruct
     - qwen3-vl-8b-thinking
+    - qwen3.5-397b-a17b
+    - qwen3.5-plus-02-15
     - qwq-32b
 
   Mistral         :  25 models
