@@ -1,5 +1,5 @@
 === GOOGLE MODELS DATA NORMALIZATION REPORT ===
-Generated: 2026-02-16 08:06:16 IST
+Generated: 2026-02-17 08:02:48 IST
 
 === SUMMARY ===
 Total Models Processed: 20
@@ -21,8 +21,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 10 requests/min, 250K tokens/min, 250 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.767388+00:00
-     Updated At: 2026-02-16T02:36:16.767393+00:00
+     Created At: 2026-02-17T02:32:48.474294+00:00
+     Updated At: 2026-02-17T02:32:48.474300+00:00
 
   2. Gemini 2.5 Pro
      ID: 
@@ -38,8 +38,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 5 requests/min, 250K tokens/min, 100 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.767619+00:00
-     Updated At: 2026-02-16T02:36:16.767622+00:00
+     Created At: 2026-02-17T02:32:48.474534+00:00
+     Updated At: 2026-02-17T02:32:48.474537+00:00
 
   3. Gemini 2.0 Flash
      ID: 
@@ -55,8 +55,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 15 requests/min, 1M tokens/min, 200 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.767823+00:00
-     Updated At: 2026-02-16T02:36:16.767826+00:00
+     Created At: 2026-02-17T02:32:48.474763+00:00
+     Updated At: 2026-02-17T02:32:48.474766+00:00
 
   4. Gemini 2.0 Flash 001
      ID: 
@@ -72,8 +72,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 15 requests/min, 1M tokens/min, 200 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.768026+00:00
-     Updated At: 2026-02-16T02:36:16.768029+00:00
+     Created At: 2026-02-17T02:32:48.474968+00:00
+     Updated At: 2026-02-17T02:32:48.474971+00:00
 
   5. Gemini 2.0 Flash-Lite 001
      ID: 
@@ -89,8 +89,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 15 requests/min, 1M tokens/min, 200 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.768253+00:00
-     Updated At: 2026-02-16T02:36:16.768256+00:00
+     Created At: 2026-02-17T02:32:48.475167+00:00
+     Updated At: 2026-02-17T02:32:48.475170+00:00
 
   6. Gemini 2.0 Flash-Lite
      ID: 
@@ -106,8 +106,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 15 requests/min, 1M tokens/min, 200 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.768448+00:00
-     Updated At: 2026-02-16T02:36:16.768451+00:00
+     Created At: 2026-02-17T02:32:48.475357+00:00
+     Updated At: 2026-02-17T02:32:48.475360+00:00
 
   7. Gemma 3 1B IT
      ID: 
@@ -123,8 +123,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemma/terms
      Rate Limits: 30 requests/min, 15K tokens/min, 14,400 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.768644+00:00
-     Updated At: 2026-02-16T02:36:16.768647+00:00
+     Created At: 2026-02-17T02:32:48.475553+00:00
+     Updated At: 2026-02-17T02:32:48.475556+00:00
 
   8. Gemma 3 4B IT
      ID: 
@@ -140,8 +140,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemma/terms
      Rate Limits: 30 requests/min, 15K tokens/min, 14,400 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.768839+00:00
-     Updated At: 2026-02-16T02:36:16.768842+00:00
+     Created At: 2026-02-17T02:32:48.475778+00:00
+     Updated At: 2026-02-17T02:32:48.475781+00:00
 
   9. Gemma 3 12B IT
      ID: 
@@ -157,8 +157,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemma/terms
      Rate Limits: 30 requests/min, 15K tokens/min, 14,400 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.769030+00:00
-     Updated At: 2026-02-16T02:36:16.769033+00:00
+     Created At: 2026-02-17T02:32:48.475972+00:00
+     Updated At: 2026-02-17T02:32:48.475975+00:00
 
  10. Gemma 3 27B IT
      ID: 
@@ -174,8 +174,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemma/terms
      Rate Limits: 30 requests/min, 15K tokens/min, 14,400 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.769252+00:00
-     Updated At: 2026-02-16T02:36:16.769255+00:00
+     Created At: 2026-02-17T02:32:48.476157+00:00
+     Updated At: 2026-02-17T02:32:48.476160+00:00
 
  11. Gemma 3n E4B IT
      ID: 
@@ -191,8 +191,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemma/terms
      Rate Limits: 30 requests/min, 15K tokens/min, 14,400 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.769443+00:00
-     Updated At: 2026-02-16T02:36:16.769446+00:00
+     Created At: 2026-02-17T02:32:48.476346+00:00
+     Updated At: 2026-02-17T02:32:48.476348+00:00
 
  12. Gemma 3n E2B IT
      ID: 
@@ -208,8 +208,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemma/terms
      Rate Limits: 30 requests/min, 15K tokens/min, 14,400 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.769629+00:00
-     Updated At: 2026-02-16T02:36:16.769632+00:00
+     Created At: 2026-02-17T02:32:48.476532+00:00
+     Updated At: 2026-02-17T02:32:48.476535+00:00
 
  13. Gemini 2.5 Flash-Lite
      ID: 
@@ -225,8 +225,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 10 requests/min, 250K tokens/min, 250 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.769813+00:00
-     Updated At: 2026-02-16T02:36:16.769815+00:00
+     Created At: 2026-02-17T02:32:48.476732+00:00
+     Updated At: 2026-02-17T02:32:48.476735+00:00
 
  14. Gemini Embedding 001
      ID: 
@@ -242,8 +242,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 100 requests/min, 30K tokens/min, 1,000 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.769995+00:00
-     Updated At: 2026-02-16T02:36:16.769997+00:00
+     Created At: 2026-02-17T02:32:48.476919+00:00
+     Updated At: 2026-02-17T02:32:48.476922+00:00
 
  15. AQA
      ID: 
@@ -259,8 +259,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 15 requests/min, 1M tokens/min, 200 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.770156+00:00
-     Updated At: 2026-02-16T02:36:16.770159+00:00
+     Created At: 2026-02-17T02:32:48.477046+00:00
+     Updated At: 2026-02-17T02:32:48.477048+00:00
 
  16. Imagen 4.0 Generate 001
      ID: 
@@ -276,8 +276,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: Input: 480 tokens, Output: up to 4 images
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.770348+00:00
-     Updated At: 2026-02-16T02:36:16.770351+00:00
+     Created At: 2026-02-17T02:32:48.477227+00:00
+     Updated At: 2026-02-17T02:32:48.477229+00:00
 
  17. Imagen 4.0 Ultra Generate 001
      ID: 
@@ -293,8 +293,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: Input: 480 tokens, Output: up to 4 images
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.770535+00:00
-     Updated At: 2026-02-16T02:36:16.770538+00:00
+     Created At: 2026-02-17T02:32:48.477411+00:00
+     Updated At: 2026-02-17T02:32:48.477414+00:00
 
  18. Imagen 4.0 Fast Generate 001
      ID: 
@@ -310,8 +310,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: Input: 480 tokens, Output: up to 4 images
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.770718+00:00
-     Updated At: 2026-02-16T02:36:16.770721+00:00
+     Created At: 2026-02-17T02:32:48.477590+00:00
+     Updated At: 2026-02-17T02:32:48.477593+00:00
 
  19. Veo 3.0 Generate 001
      ID: 
@@ -327,8 +327,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: Image input: up to 20MB, Output video: up to 2 minutes
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.770903+00:00
-     Updated At: 2026-02-16T02:36:16.770906+00:00
+     Created At: 2026-02-17T02:32:48.477806+00:00
+     Updated At: 2026-02-17T02:32:48.477809+00:00
 
  20. Veo 3.0 Fast Generate 001
      ID: 
@@ -344,5 +344,5 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: Image input: up to 20MB, Output video: up to 2 minutes
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-02-16T02:36:16.771110+00:00
-     Updated At: 2026-02-16T02:36:16.771113+00:00
+     Created At: 2026-02-17T02:32:48.477992+00:00
+     Updated At: 2026-02-17T02:32:48.477994+00:00
