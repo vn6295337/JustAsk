@@ -1,1 +1,1 @@
-This Week - Openrouter: Added free-models-router, step-3.5-flash. Removed kimi-k2-0711, llama-3.1-405b-instruct, molmo2-8b, qwen2.5-vl-7b-instruct. | Google: Readded embedding-001, text-embedding-004.
+This Week - Openrouter: Added aurora-alpha, qwen3-235b-a22b-thinking-2507, qwen3-vl-235b-a22b-thinking, qwen3-vl-30b-a3b-thinking. Removed deepseek-r1t-chimera, deepseek-r1t2-chimera | Google: Removed embedding-001, text-embedding-004.
