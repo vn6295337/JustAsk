@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-02-18 08:07:35 IST
+Generated: 2026-02-19 08:07:06 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 341
+  Total models: 337
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  57 models
@@ -66,7 +66,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - o4-mini-deep-research
     - o4-mini-high
 
-  Qwen            :  45 models
+  Qwen            :  44 models
     - qwen-2.5-7b-instruct
     - qwen-2.5-vl-7b-instruct
     - qwen-max
@@ -87,7 +87,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3-30b-a3b-instruct-2507
     - qwen3-30b-a3b-thinking-2507
     - qwen3-32b
-    - qwen3-4b
     - qwen3-4b:free
     - qwen3-8b
     - qwen3-coder
@@ -273,14 +272,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - minimax-m2.1
     - minimax-m2.5
 
-  Nous            :   6 models
-    - deephermes-3-mistral-24b-preview
-    - hermes-3-llama-3.1-405b
-    - hermes-3-llama-3.1-405b:free
-    - hermes-3-llama-3.1-70b
-    - hermes-4-405b
-    - hermes-4-70b
-
   MoonshotAI      :   5 models
     - kimi-k2
     - kimi-k2-0905
@@ -309,6 +300,13 @@ PROVIDER BREAKDOWN (Descending Order):
     - ernie-4.5-vl-28b-a3b
     - ernie-4.5-vl-424b-a47b
 
+  Nous            :   5 models
+    - hermes-3-llama-3.1-405b
+    - hermes-3-llama-3.1-405b:free
+    - hermes-3-llama-3.1-70b
+    - hermes-4-405b
+    - hermes-4-70b
+
   LiquidAI        :   4 models
     - lfm-2.2-6b
     - lfm-2.5-1.2b-instruct:free
@@ -332,11 +330,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - l3.1-70b-hanami-x1
     - l3.1-euryale-70b
     - l3.3-euryale-70b
-
-  TNG             :   3 models
-    - deepseek-r1t-chimera
-    - deepseek-r1t2-chimera
-    - tng-r1t-chimera
 
   AionLabs        :   3 models
     - aion-1.0
@@ -411,6 +404,9 @@ PROVIDER BREAKDOWN (Descending Order):
 
   Tencent         :   1 models
     - hunyuan-a13b-instruct
+
+  TNG             :   1 models
+    - deepseek-r1t2-chimera
 
   EleutherAI      :   1 models
     - llemma_7b
