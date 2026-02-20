@@ -1,8 +1,8 @@
 GOOGLE API MODELS FETCH REPORT
 ==================================================
 
-Generated: 2026-02-19 08:05:15 IST
-Total Models: 45
+Generated: 2026-02-20 08:00:29 IST
+Total Models: 47
 
 MODELS LIST:
 --------------------
@@ -31,23 +31,25 @@ MODELS LIST:
 23. models/gemini-2.5-flash-lite-preview-09-2025
 24. models/gemini-3-pro-preview
 25. models/gemini-3-flash-preview
-26. models/gemini-3-pro-image-preview
-27. models/nano-banana-pro-preview
-28. models/gemini-robotics-er-1.5-preview
-29. models/gemini-2.5-computer-use-preview-10-2025
-30. models/deep-research-pro-preview-12-2025
-31. models/gemini-embedding-001
-32. models/aqa
-33. models/imagen-4.0-generate-preview-06-06
-34. models/imagen-4.0-ultra-generate-preview-06-06
-35. models/imagen-4.0-generate-001
-36. models/imagen-4.0-ultra-generate-001
-37. models/imagen-4.0-fast-generate-001
-38. models/veo-2.0-generate-001
-39. models/veo-3.0-generate-001
-40. models/veo-3.0-fast-generate-001
-41. models/veo-3.1-generate-preview
-42. models/veo-3.1-fast-generate-preview
-43. models/gemini-2.5-flash-native-audio-latest
-44. models/gemini-2.5-flash-native-audio-preview-09-2025
-45. models/gemini-2.5-flash-native-audio-preview-12-2025
+26. models/gemini-3.1-pro-preview
+27. models/gemini-3.1-pro-preview-customtools
+28. models/gemini-3-pro-image-preview
+29. models/nano-banana-pro-preview
+30. models/gemini-robotics-er-1.5-preview
+31. models/gemini-2.5-computer-use-preview-10-2025
+32. models/deep-research-pro-preview-12-2025
+33. models/gemini-embedding-001
+34. models/aqa
+35. models/imagen-4.0-generate-preview-06-06
+36. models/imagen-4.0-ultra-generate-preview-06-06
+37. models/imagen-4.0-generate-001
+38. models/imagen-4.0-ultra-generate-001
+39. models/imagen-4.0-fast-generate-001
+40. models/veo-2.0-generate-001
+41. models/veo-3.0-generate-001
+42. models/veo-3.0-fast-generate-001
+43. models/veo-3.1-generate-preview
+44. models/veo-3.1-fast-generate-preview
+45. models/gemini-2.5-flash-native-audio-latest
+46. models/gemini-2.5-flash-native-audio-preview-09-2025
+47. models/gemini-2.5-flash-native-audio-preview-12-2025
