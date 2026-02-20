@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-02-19 08:07:28 IST
+Generated: 2026-02-20 08:02:43 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 30
+  Total models      : 29
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -19,12 +19,12 @@ MODEL PROVIDER DISTRIBUTION:
    2 models: Liquid AI
    2 models: Meta
    2 models: OpenAI
-   2 models: OpenRouter
    1 models: Arcee
    1 models: Cognitive Computations
    1 models: DeepSeek
    1 models: Mistral AI
    1 models: Nous Research
+   1 models: OpenRouter
    1 models: StepFun
    1 models: Upstage AI
    1 models: Z.AI
@@ -32,7 +32,7 @@ MODEL PROVIDER DISTRIBUTION:
 Total unique model providers: 15
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
-  19 models: United States
+  18 models: United States
    9 models: China
    1 models: France
    1 models: South Korea
@@ -46,12 +46,12 @@ MODEL FAMILY DISTRIBUTION:
    2 models: liquid ai
    2 models: meta
    2 models: openai
-   2 models: openrouter
    1 models: arcee
    1 models: cognitive computations
    1 models: deepseek
    1 models: mistral ai
    1 models: nous research
+   1 models: openrouter
    1 models: stepfun
    1 models: upstage ai
    1 models: z.ai
@@ -411,21 +411,7 @@ MODEL 25: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 26: openrouter/aurora-alpha
---------------------------------------------------
-  ID: openrouter/aurora-alpha
-  Original Name: Aurora Alpha
-  HuggingFace ID: 
-  Canonical Slug: openrouter/aurora-alpha
-  Clean Model Name: Aurora Alpha
-  Model Provider: OpenRouter
-  Model Provider Country: United States
-  Model Family: openrouter
-  Official URL: https://openrouter.ai/
-
-================================================================================
-
-MODEL 27: openrouter/free
+MODEL 26: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -439,7 +425,7 @@ MODEL 27: openrouter/free
 
 ================================================================================
 
-MODEL 28: stepfun/step-3.5-flash
+MODEL 27: stepfun/step-3.5-flash
 --------------------------------------------------
   ID: stepfun/step-3.5-flash:free
   Original Name: StepFun: Step 3.5 Flash (free)
@@ -453,7 +439,7 @@ MODEL 28: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 29: upstage/solar-pro-3
+MODEL 28: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage: Solar Pro 3 (free)
@@ -467,7 +453,7 @@ MODEL 29: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 30: z-ai/glm-4.5-air
+MODEL 29: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)

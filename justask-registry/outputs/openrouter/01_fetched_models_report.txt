@@ -1,6 +1,6 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-02-19 08:07:06 IST
+Generated: 2026-02-20 08:02:23 IST
 ================================================================================
 
 SUMMARY:
@@ -139,7 +139,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - pixtral-large-2411
     - voxtral-small-24b-2507
 
-  Google          :  23 models
+  Google          :  24 models
     - gemini-2.0-flash-001
     - gemini-2.0-flash-lite-001
     - gemini-2.5-flash
@@ -152,6 +152,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemini-3-flash-preview
     - gemini-3-pro-image-preview
     - gemini-3-pro-preview
+    - gemini-3.1-pro-preview
     - gemma-2-27b-it
     - gemma-2-9b-it
     - gemma-3-12b-it

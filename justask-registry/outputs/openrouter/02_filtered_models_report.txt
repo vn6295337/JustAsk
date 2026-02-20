@@ -1,39 +1,39 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-02-19 08:07:06 IST
+Generated: 2026-02-20 08:02:24 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
   Total models processed: 337
-  Models passed all filters: 30
-  Models excluded: 307
-  Success rate: 8.9%
+  Models passed all filters: 29
+  Models excluded: 308
+  Success rate: 8.6%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
     Input: 337 models
-    Excluded: 306 models (non-free pricing)
-    Remaining: 31 models
-
-  Step 2 - Billing Description Filter:
-    Input: 31 models
-    Excluded: 0 models (billing requirements in description)
-    Remaining: 31 models
-
-  Step 3 - Keyword Filter:
-    Input: 31 models
-    Excluded: 1 models (preview/experimental/beta)
+    Excluded: 307 models (non-free pricing)
     Remaining: 30 models
 
-  Step 4 - Deduplication Filter:
+  Step 2 - Billing Description Filter:
     Input: 30 models
+    Excluded: 0 models (billing requirements in description)
+    Remaining: 30 models
+
+  Step 3 - Keyword Filter:
+    Input: 30 models
+    Excluded: 1 models (preview/experimental/beta)
+    Remaining: 29 models
+
+  Step 4 - Deduplication Filter:
+    Input: 29 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 30 models
+    Final: 29 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 306 models with non-free pricing (details omitted due to volume)
+Excluded 307 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -121,17 +121,6 @@ PROVIDER: NVIDIA (3 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
-PROVIDER: OPENROUTER (2 models)
---------------------------------------------------
-   1. Aurora Alpha
-      ID: openrouter/aurora-alpha
-      Pricing: prompt=0, completion=0, request=0
-
-   2. Free Models Router
-      ID: openrouter/free
-      Pricing: prompt=0, completion=0, request=N/A
-
-
 PROVIDER: LIQUIDAI (2 models)
 --------------------------------------------------
    1. LiquidAI: LFM2.5-1.2B-Instruct (free)
@@ -162,6 +151,13 @@ PROVIDER: META (2 models)
 
    2. Meta: Llama 3.3 70B Instruct (free)
       ID: meta-llama/llama-3.3-70b-instruct:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+
+PROVIDER: OPENROUTER (1 models)
+--------------------------------------------------
+   1. Free Models Router
+      ID: openrouter/free
       Pricing: prompt=0, completion=0, request=N/A
 
 
@@ -224,10 +220,10 @@ PROVIDER: NOUS (1 models)
 ================================================================================
 FINAL SUMMARY:
   Total providers: 15
-  Total models passed all filters: 30
-  Models excluded by pricing: 306
+  Total models passed all filters: 29
+  Models excluded by pricing: 307
   Models excluded by billing description: 0
   Models excluded by keywords: 1
   Models excluded by deduplication: 0
-  Total exclusions: 307
+  Total exclusions: 308
   ✓ All filtered models accounted for

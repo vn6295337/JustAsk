@@ -1,30 +1,10 @@
 {
   "metadata": {
-    "generated_at": "2026-02-19 08:07:28 IST",
-    "total_models": 30,
+    "generated_at": "2026-02-20 08:02:43 IST",
+    "total_models": 29,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
-    {
-      "id": "openrouter/aurora-alpha",
-      "canonical_slug": "openrouter/aurora-alpha",
-      "provider_slug": "aurora-alpha",
-      "original_name": "Aurora Alpha",
-      "hugging_face_id": "",
-      "clean_model_name": "Aurora Alpha",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model",
-      "inference_provider": "OpenRouter",
-      "model_provider": "OpenRouter",
-      "model_provider_country": "United States",
-      "model_family": "openrouter",
-      "official_url": "https://openrouter.ai/"
-    },
     {
       "id": "openrouter/free",
       "canonical_slug": "openrouter/free",

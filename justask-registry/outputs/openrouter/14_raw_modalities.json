@@ -1,19 +1,10 @@
 {
   "metadata": {
-    "generated_at": "2026-02-19 08:07:27 IST",
-    "total_models": 30,
+    "generated_at": "2026-02-20 08:02:42 IST",
+    "total_models": 29,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
-    {
-      "id": "openrouter/aurora-alpha",
-      "canonical_slug": "openrouter/aurora-alpha",
-      "original_name": "Aurora Alpha",
-      "hugging_face_id": "",
-      "clean_model_name": "Aurora Alpha",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
     {
       "id": "openrouter/free",
       "canonical_slug": "openrouter/free",
