@@ -1,1 +1,1 @@
-Today - Openrouter: Removed aurora-alpha
+Today - Groq: Removed llama-guard-4-12b
