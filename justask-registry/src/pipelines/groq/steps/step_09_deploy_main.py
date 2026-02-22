@@ -107,10 +107,12 @@ def prepare_data_for_production(staging_data: List[Dict[str, Any]]) -> List[Dict
 
     prepared_models = []
     auto_managed_fields = ['id', 'created_at', 'updated_at']
+    excluded_fields = ['provider_slug']  # Not in ai_models_main schema
 
     for model in staging_data:
-        # Remove auto-managed fields
-        clean_model = {k: v for k, v in model.items() if k not in auto_managed_fields}
+        # Remove auto-managed fields and excluded fields
+        clean_model = {k: v for k, v in model.items()
+                      if k not in auto_managed_fields and k not in excluded_fields}
 
         # Convert empty strings to None for nullable fields
         nullable_fields = ['license_info_text', 'license_info_url']
