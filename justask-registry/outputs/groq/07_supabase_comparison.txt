@@ -1,144 +1,132 @@
 GROQ FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-02-22 08:07:14 IST
+Generated: 2026-02-23 08:07:49 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 Pipeline Models: 6
-Supabase Models: 7
-Models in Both Systems: 3
+Supabase Models: 6
+Models in Both Systems: 6
 Models with Field Differences: 0
-Models Only in Pipeline: 3
-Models Only in Supabase: 4
+Models Only in Pipeline: 0
+Models Only in Supabase: 0
 
 FIELD-BY-FIELD COMPARISON
 --------------------------------------------------------------------------------
 
 Field: inference_provider
-  Exact Matches: 3 (100.0%)
+  Exact Matches: 6 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: model_provider
-  Exact Matches: 3 (100.0%)
+  Exact Matches: 6 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: human_readable_name
-  Exact Matches: 3 (100.0%)
+  Exact Matches: 6 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: model_provider_country
-  Exact Matches: 3 (100.0%)
+  Exact Matches: 6 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: official_url
-  Exact Matches: 3 (100.0%)
+  Exact Matches: 6 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: input_modalities
-  Exact Matches: 3 (100.0%)
+  Exact Matches: 6 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: output_modalities
-  Exact Matches: 3 (100.0%)
+  Exact Matches: 6 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: license_info_text
-  Exact Matches: 3 (100.0%)
+  Exact Matches: 6 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: license_info_url
-  Exact Matches: 3 (100.0%)
+  Exact Matches: 6 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: license_name
-  Exact Matches: 3 (100.0%)
+  Exact Matches: 6 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: license_url
-  Exact Matches: 3 (100.0%)
+  Exact Matches: 6 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: rate_limits
-  Exact Matches: 3 (100.0%)
+  Exact Matches: 6 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: provider_api_access
-  Exact Matches: 3 (100.0%)
+  Exact Matches: 6 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: context_window
-  Exact Matches: 3 (100.0%)
+  Exact Matches: 6 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: max_completion_tokens
-  Exact Matches: 3 (100.0%)
+  Exact Matches: 6 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
-MODELS ONLY IN PIPELINE
---------------------------------------------------------------------------------
-
-Count: 3
-     Models: Gpt Oss 120b, Gpt Oss 20b, Llama 3.1 8b
-
-MODELS ONLY IN SUPABASE
---------------------------------------------------------------------------------
-
-Count: 4
-     Models: GPT OSS 120B, GPT OSS 20B, Llama 3.1 8b Instant, Llama Guard 4 12b
-
 SAMPLE MODEL COMPARISONS
 --------------------------------------------------------------------------------
 
-MODEL: Llama 3.3 70b Versatile
+MODEL: Gpt Oss 120b
 --------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
 inference_provider        | Groq                      | Groq                     
 model_provider            | Groq                      | Groq                     
-human_readable_name       | Llama 3.3 70b Versatile   | Llama 3.3 70b Versatile  
+human_readable_name       | Gpt Oss 120b              | Gpt Oss 120b             
 model_provider_country    | United States             | United States            
 official_url              | https://groq.com/         | https://groq.com/        
 input_modalities          | Text                      | Text                     
 output_modalities         | Text                      | Text                     
-license_info_text         |                           |                          
-license_info_url          |                           |                          
-license_name              | Llama-3.3                 | Llama-3.3                
-license_url               | https://www.llama.com/... | https://www.llama.com/...
-rate_limits               | 300K TPM
+license_info_text         | info                      | info                     
+license_info_url          | https://huggingface.co... | https://huggingface.co...
+license_name              | Apache-2.0                | Apache-2.0               
+license_url               | https://www.apache.org... | https://www.apache.org...
+rate_limits               | 250K TPM
 TPM
 1K RPM
-RPM   | 300K TPM
+RPM   | 250K TPM
 TPM
 1K RPM
 RPM  
@@ -146,54 +134,54 @@ provider_api_access       | https://console.groq.c... | https://console.groq.c..
 context_window            |                           |                          
 max_completion_tokens     |                           |                          
 
-MODEL: Whisper Large V3
+MODEL: Gpt Oss 20b
 --------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
 inference_provider        | Groq                      | Groq                     
 model_provider            | Groq                      | Groq                     
-human_readable_name       | Whisper Large V3          | Whisper Large V3         
+human_readable_name       | Gpt Oss 20b               | Gpt Oss 20b              
 model_provider_country    | United States             | United States            
 official_url              | https://groq.com/         | https://groq.com/        
-input_modalities          | Audio                     | Audio                    
+input_modalities          | Text                      | Text                     
 output_modalities         | Text                      | Text                     
 license_info_text         | info                      | info                     
 license_info_url          | https://huggingface.co... | https://huggingface.co...
 license_name              | Apache-2.0                | Apache-2.0               
 license_url               | https://www.apache.org... | https://www.apache.org...
-rate_limits               | 200K ASH
-ASH
-300 RPM
-RPM  | 200K ASH
-ASH
-300 RPM
-RPM 
+rate_limits               | 250K TPM
+TPM
+1K RPM
+RPM   | 250K TPM
+TPM
+1K RPM
+RPM  
 provider_api_access       | https://console.groq.c... | https://console.groq.c...
 context_window            |                           |                          
 max_completion_tokens     |                           |                          
 
-MODEL: Whisper Large V3 Turbo
+MODEL: Llama 3.1 8b
 --------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
 inference_provider        | Groq                      | Groq                     
 model_provider            | Groq                      | Groq                     
-human_readable_name       | Whisper Large V3 Turbo    | Whisper Large V3 Turbo   
+human_readable_name       | Llama 3.1 8b              | Llama 3.1 8b             
 model_provider_country    | United States             | United States            
 official_url              | https://groq.com/         | https://groq.com/        
-input_modalities          | Audio                     | Audio                    
+input_modalities          | Text                      | Text                     
 output_modalities         | Text                      | Text                     
-license_info_text         | info                      | info                     
-license_info_url          | https://huggingface.co... | https://huggingface.co...
-license_name              | MIT                       | MIT                      
-license_url               | https://opensource.org... | https://opensource.org...
-rate_limits               | 400K ASH
-ASH
-400 RPM
-RPM  | 400K ASH
-ASH
-400 RPM
-RPM 
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              | Llama-3.1                 | Llama-3.1                
+license_url               | https://www.llama.com/... | https://www.llama.com/...
+rate_limits               | 250K TPM
+TPM
+1K RPM
+RPM   | 250K TPM
+TPM
+1K RPM
+RPM  
 provider_api_access       | https://console.groq.c... | https://console.groq.c...
 context_window            |                           |                          
 max_completion_tokens     |                           |                          
