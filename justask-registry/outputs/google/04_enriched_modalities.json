@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated": "2026-02-24 08:03:11 IST",
+    "generated": "2026-02-24 10:05:13 IST",
     "total_models": 20,
     "enrichment_source": "Google Pipeline 04_enrich_modalities"
   },
@@ -24,10 +24,10 @@
       "maxTemperature": 2,
       "thinking": true,
       "provider_slug": "gemini-2.5-flash",
-      "input_modalities": "Unknown",
-      "output_modalities": "Unknown",
-      "modality_source": "unknown",
-      "match_priority": 0
+      "input_modalities": "Text, Image, Audio, Video",
+      "output_modalities": "Text",
+      "modality_source": "gemini_pattern",
+      "match_priority": 7
     },
     {
       "name": "models/gemini-2.5-pro",
@@ -48,10 +48,10 @@
       "maxTemperature": 2,
       "thinking": true,
       "provider_slug": "gemini-2.5-pro",
-      "input_modalities": "Unknown",
-      "output_modalities": "Unknown",
-      "modality_source": "unknown",
-      "match_priority": 0
+      "input_modalities": "Text, Image, Audio, Video, PDF",
+      "output_modalities": "Text",
+      "modality_source": "gemini_pattern",
+      "match_priority": 7
     },
     {
       "name": "models/gemini-2.0-flash",
@@ -71,10 +71,10 @@
       "topK": 40,
       "maxTemperature": 2,
       "provider_slug": "gemini-2.0-flash",
-      "input_modalities": "Unknown",
-      "output_modalities": "Unknown",
-      "modality_source": "unknown",
-      "match_priority": 0
+      "input_modalities": "Text, Image, Audio, Video",
+      "output_modalities": "Text",
+      "modality_source": "gemini_pattern",
+      "match_priority": 7
     },
     {
       "name": "models/gemini-2.0-flash-001",
@@ -94,10 +94,10 @@
       "topK": 40,
       "maxTemperature": 2,
       "provider_slug": "gemini-2.0-flash-001",
-      "input_modalities": "Unknown",
-      "output_modalities": "Unknown",
-      "modality_source": "unknown",
-      "match_priority": 0
+      "input_modalities": "Text, Image, Audio, Video",
+      "output_modalities": "Text",
+      "modality_source": "gemini_pattern",
+      "match_priority": 7
     },
     {
       "name": "models/gemini-2.0-flash-lite-001",
@@ -117,10 +117,10 @@
       "topK": 40,
       "maxTemperature": 2,
       "provider_slug": "gemini-2.0-flash-lite-001",
-      "input_modalities": "Unknown",
-      "output_modalities": "Unknown",
-      "modality_source": "unknown",
-      "match_priority": 0
+      "input_modalities": "Text, Image, Audio, Video",
+      "output_modalities": "Text",
+      "modality_source": "gemini_pattern",
+      "match_priority": 7
     },
     {
       "name": "models/gemini-2.0-flash-lite",
@@ -140,10 +140,10 @@
       "topK": 40,
       "maxTemperature": 2,
       "provider_slug": "gemini-2.0-flash-lite",
-      "input_modalities": "Unknown",
-      "output_modalities": "Unknown",
-      "modality_source": "unknown",
-      "match_priority": 0
+      "input_modalities": "Text, Image, Audio, Video",
+      "output_modalities": "Text",
+      "modality_source": "gemini_pattern",
+      "match_priority": 7
     },
     {
       "name": "models/gemma-3-1b-it",
@@ -278,10 +278,10 @@
       "maxTemperature": 2,
       "thinking": true,
       "provider_slug": "gemini-2.5-flash-lite",
-      "input_modalities": "Unknown",
-      "output_modalities": "Unknown",
-      "modality_source": "unknown",
-      "match_priority": 0
+      "input_modalities": "Text, Image, Audio, Video, PDF",
+      "output_modalities": "Text",
+      "modality_source": "gemini_pattern",
+      "match_priority": 7
     },
     {
       "name": "models/gemini-embedding-001",
