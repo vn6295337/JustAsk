@@ -33,6 +33,7 @@ class ModalityEnrichment:
         self.embedding_config = {}
         self.modality_standardization = {}
         self.unique_models_config = {}
+        self.gemini_modalities_config = {}
         self.enriched_models = []
         self.matching_stats = {
             'total_models': 0,
@@ -40,6 +41,7 @@ class ModalityEnrichment:
             'priority_2_matches': 0,
             'embedding_matches': 0,
             'gemma_matches': 0,
+            'gemini_matches': 0,
             'unique_matches': 0,
             'hardcoded_matches': 0,
             'no_matches': 0,
@@ -135,7 +137,17 @@ class ModalityEnrichment:
             print("⚠️ unique_modalities.json not found - unique models will not be processed")
         except json.JSONDecodeError as e:
             print(f"❌ Error parsing unique_modalities.json: {e}")
-            
+
+        # Load Gemini modalities configuration (pattern-based fallback for when scraping fails)
+        try:
+            with open(CONFIG_DIR / 'gemini_modalities.json', 'r') as f:
+                self.gemini_modalities_config = json.load(f)
+                print(f"✅ Loaded Gemini modalities configuration ({len(self.gemini_modalities_config.get('model_families', {}))} model families)")
+        except FileNotFoundError:
+            print("⚠️ gemini_modalities.json not found - Gemini pattern matching will be skipped")
+        except json.JSONDecodeError as e:
+            print(f"❌ Error parsing gemini_modalities.json: {e}")
+
         return True
 
     def extract_api_id_from_stage3_key(self, key: str) -> str:
@@ -275,12 +287,49 @@ class ModalityEnrichment:
         gemma_pattern = self.extract_gemma_pattern(stage2_api_id)
         if not gemma_pattern:
             return None, 0, ''
-        
+
         # Look for exact match with the gemma pattern in stage-3 keys
         for stage3_key, modality_data in self.scraped_modalities.items():
             if stage3_key.lower() == gemma_pattern.lower():
                 return modality_data, 4, gemma_pattern  # Priority 4 for Gemma pattern matching
-                
+
+        return None, 0, ''
+
+    def find_gemini_pattern_match(self, stage2_api_id: str) -> Tuple[Optional[Dict], int, str]:
+        """
+        Find modality match for Gemini models using regex pattern matching.
+
+        This is a fallback mechanism for when web scraping fails to find Gemini models.
+        Uses gemini_modalities.json config with regex patterns to match model families.
+
+        Returns (modality_data, priority, matched_family) or (None, 0, '') for no match
+        """
+        if not self.gemini_modalities_config:
+            return None, 0, ''
+
+        # Only apply to Gemini models
+        if not stage2_api_id.lower().startswith('gemini'):
+            return None, 0, ''
+
+        model_families = self.gemini_modalities_config.get('model_families', {})
+
+        # Try to match against each family pattern
+        for family_name, family_config in model_families.items():
+            pattern = family_config.get('pattern', '')
+            if not pattern:
+                continue
+
+            try:
+                if re.match(pattern, stage2_api_id.lower()):
+                    modality_data = {
+                        'input_modalities': family_config.get('input_modalities', 'Text'),
+                        'output_modalities': family_config.get('output_modalities', 'Text')
+                    }
+                    return modality_data, 7, family_name  # Priority 7 for Gemini pattern matching
+            except re.error as e:
+                print(f"⚠️ Invalid regex pattern for {family_name}: {e}")
+                continue
+
         return None, 0, ''
 
     def find_unique_model_match(self, stage2_api_id: str) -> Tuple[Optional[Dict], int, str]:
@@ -514,10 +563,10 @@ class ModalityEnrichment:
                 enriched_model['output_modalities'] = self.standardize_modalities(output_modalities)
                 enriched_model['modality_source'] = 'gemma_pattern'
                 enriched_model['match_priority'] = gemma_priority
-                
+
                 self.matching_stats['gemma_matches'] += 1
                 print(f"🧬 Gemma Pattern: {display_name} ({stage2_api_id}) → {gemma_pattern}")
-                
+
                 match_detail = {
                     'model_name': model_name,
                     'display_name': display_name,
@@ -531,7 +580,38 @@ class ModalityEnrichment:
                 self.matching_stats['match_details'].append(match_detail)
                 self.enriched_models.append(enriched_model)
                 continue
-            
+
+            # Check if this is a Gemini model with pattern matching (fallback when scraping fails)
+            gemini_data, gemini_priority, gemini_family = self.find_gemini_pattern_match(stage2_api_id)
+            if gemini_data:
+                enriched_model = model.copy()
+                # Extract slug: everything after 'models/'
+                full_name = model.get('name', '')
+                enriched_model['provider_slug'] = full_name.split('models/', 1)[1] if 'models/' in full_name else full_name
+                input_modalities = gemini_data.get('input_modalities', 'Unknown')
+                output_modalities = gemini_data.get('output_modalities', 'Unknown')
+                enriched_model['input_modalities'] = self.standardize_modalities(input_modalities)
+                enriched_model['output_modalities'] = self.standardize_modalities(output_modalities)
+                enriched_model['modality_source'] = 'gemini_pattern'
+                enriched_model['match_priority'] = gemini_priority
+
+                self.matching_stats['gemini_matches'] += 1
+                print(f"💎 Gemini Pattern: {display_name} ({stage2_api_id}) → {gemini_family}")
+
+                match_detail = {
+                    'model_name': model_name,
+                    'display_name': display_name,
+                    'api_id': stage2_api_id,
+                    'match_found': True,
+                    'match_priority': gemini_priority,
+                    'matched_family': gemini_family,
+                    'input_modalities': enriched_model['input_modalities'],
+                    'output_modalities': enriched_model['output_modalities']
+                }
+                self.matching_stats['match_details'].append(match_detail)
+                self.enriched_models.append(enriched_model)
+                continue
+
             # Find matching modality data
             modality_data, priority, matched_api_id = self.find_modality_match(stage2_api_id)
 
@@ -627,18 +707,23 @@ class ModalityEnrichment:
         priority_2 = self.matching_stats['priority_2_matches']
         embedding_matches = self.matching_stats['embedding_matches']
         gemma_matches = self.matching_stats['gemma_matches']
+        gemini_matches = self.matching_stats['gemini_matches']
         unique_matches = self.matching_stats['unique_matches']
+        hardcoded_matches = self.matching_stats['hardcoded_matches']
         no_matches = self.matching_stats['no_matches']
-        
+
         report_content.append("=== SUMMARY ===")
         report_content.append(f"Total Models: {total}")
+        report_content.append(f"Hardcoded Matches: {hardcoded_matches}")
         report_content.append(f"Priority 1 Matches (Exact): {priority_1}")
         report_content.append(f"Priority 2 Matches (Normalized): {priority_2}")
         report_content.append(f"Embedding Matches: {embedding_matches}")
         report_content.append(f"Gemma Pattern Matches: {gemma_matches}")
+        report_content.append(f"Gemini Pattern Matches: {gemini_matches}")
         report_content.append(f"Unique Model Matches: {unique_matches}")
         report_content.append(f"No Matches: {no_matches}")
-        report_content.append(f"Overall Match Rate: {(priority_1 + priority_2 + embedding_matches + gemma_matches + unique_matches)/total*100:.1f}%")
+        total_success = hardcoded_matches + priority_1 + priority_2 + embedding_matches + gemma_matches + gemini_matches + unique_matches
+        report_content.append(f"Overall Match Rate: {total_success/total*100:.1f}%")
         report_content.append("")
         
         # Priority 1 matches (including Priority 0 display name matches)
@@ -683,7 +768,17 @@ class ModalityEnrichment:
                 report_content.append(f"    Input: {detail['input_modalities']}")
                 report_content.append(f"    Output: {detail['output_modalities']}")
                 report_content.append("")
-        
+
+        # Gemini pattern matches
+        if gemini_matches > 0:
+            report_content.append("=== GEMINI PATTERN MATCHES ===\n")
+            for i, detail in enumerate([d for d in self.matching_stats['match_details'] if d['match_priority'] == 7], 1):
+                report_content.append(f"{i:2d}. {detail['api_id']}")
+                report_content.append(f"    Family: {detail.get('matched_family', 'N/A')}")
+                report_content.append(f"    Input: {detail['input_modalities']}")
+                report_content.append(f"    Output: {detail['output_modalities']}")
+                report_content.append("")
+
         # Unique model matches
         if unique_matches > 0:
             report_content.append("=== UNIQUE MODEL MATCHES ===\n")
@@ -733,9 +828,10 @@ class ModalityEnrichment:
         print(f"Priority 2 Matches: {self.matching_stats['priority_2_matches']}")
         print(f"Embedding Matches: {self.matching_stats['embedding_matches']}")
         print(f"Gemma Pattern Matches: {self.matching_stats['gemma_matches']}")
+        print(f"Gemini Pattern Matches: {self.matching_stats['gemini_matches']}")
         print(f"Unique Model Matches: {self.matching_stats['unique_matches']}")
         print(f"No Matches: {self.matching_stats['no_matches']}")
-        total_success = self.matching_stats['hardcoded_matches'] + self.matching_stats['priority_1_matches'] + self.matching_stats['priority_2_matches'] + self.matching_stats['embedding_matches'] + self.matching_stats['gemma_matches'] + self.matching_stats['unique_matches']
+        total_success = self.matching_stats['hardcoded_matches'] + self.matching_stats['priority_1_matches'] + self.matching_stats['priority_2_matches'] + self.matching_stats['embedding_matches'] + self.matching_stats['gemma_matches'] + self.matching_stats['gemini_matches'] + self.matching_stats['unique_matches']
         print(f"Total Success Rate: {total_success/self.matching_stats['total_models']*100:.1f}%")
 
 if __name__ == "__main__":

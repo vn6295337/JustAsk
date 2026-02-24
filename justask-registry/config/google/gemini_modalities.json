@@ -1,0 +1,35 @@
+{
+  "description": "Gemini model family modality definitions for pattern-based matching when web scraping fails",
+  "model_families": {
+    "gemini-2.0-flash": {
+      "pattern": "^gemini-2\\.0-flash(?!-lite)(?!-live)",
+      "input_modalities": "Text, Image, Audio, Video",
+      "output_modalities": "Text",
+      "notes": "Gemini 2.0 Flash - multimodal input, text output"
+    },
+    "gemini-2.0-flash-lite": {
+      "pattern": "^gemini-2\\.0-flash-lite",
+      "input_modalities": "Text, Image, Audio, Video",
+      "output_modalities": "Text",
+      "notes": "Gemini 2.0 Flash-Lite - lightweight multimodal model"
+    },
+    "gemini-2.5-flash": {
+      "pattern": "^gemini-2\\.5-flash(?!-lite)(?!-live)(?!-preview-tts)",
+      "input_modalities": "Text, Image, Audio, Video",
+      "output_modalities": "Text",
+      "notes": "Gemini 2.5 Flash - mid-size multimodal model (no PDF support unlike Pro/Lite)"
+    },
+    "gemini-2.5-flash-lite": {
+      "pattern": "^gemini-2\\.5-flash-lite",
+      "input_modalities": "Text, Image, Audio, Video, PDF",
+      "output_modalities": "Text",
+      "notes": "Gemini 2.5 Flash-Lite - budget multimodal with PDF support"
+    },
+    "gemini-2.5-pro": {
+      "pattern": "^gemini-2\\.5-pro(?!-preview-tts)",
+      "input_modalities": "Text, Image, Audio, Video, PDF",
+      "output_modalities": "Text",
+      "notes": "Gemini 2.5 Pro - advanced reasoning with PDF support"
+    }
+  }
+}
