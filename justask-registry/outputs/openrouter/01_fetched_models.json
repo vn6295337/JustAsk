@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-02-24 08:04:47 IST",
+    "generated_at": "2026-02-24 10:06:58 IST",
     "total_models": 337,
     "pipeline_stage": "A_fetch_api_models"
   },
@@ -15477,7 +15477,7 @@
         "top_p"
       ],
       "default_parameters": {},
-      "expiration_date": "2026-08-23"
+      "expiration_date": null
     },
     {
       "id": "mistralai/mistral-large",
