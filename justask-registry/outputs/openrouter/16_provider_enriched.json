@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-24 10:07:15 IST",
-    "total_models": 29,
+    "generated_at": "2026-02-25 08:06:22 IST",
+    "total_models": 28,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
@@ -384,26 +384,6 @@
       "model_provider_country": "United States",
       "model_family": "gemma",
       "official_url": "https://ai.google.dev/gemma"
-    },
-    {
-      "id": "deepseek/deepseek-r1-0528:free",
-      "canonical_slug": "deepseek/deepseek-r1-0528",
-      "provider_slug": "deepseek-r1-0528",
-      "original_name": "DeepSeek: R1 0528 (free)",
-      "hugging_face_id": "deepseek-ai/DeepSeek-R1-0528",
-      "clean_model_name": "R1 0528",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model",
-      "inference_provider": "OpenRouter",
-      "model_provider": "DeepSeek",
-      "model_provider_country": "China",
-      "model_family": "deepseek",
-      "official_url": "https://deepseek.com/"
     },
     {
       "id": "google/gemma-3n-e4b-it:free",

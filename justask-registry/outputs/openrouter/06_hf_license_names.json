@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-24 10:07:12 IST",
-    "total_models": 20,
+    "generated_at": "2026-02-25 08:06:18 IST",
+    "total_models": 19,
     "pipeline_stage": "F_fetch_other_license_names_from_hf"
   },
   "models": [
@@ -116,13 +116,6 @@
       "name": "Venice: Uncensored (free)",
       "hugging_face_id": "cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition",
       "extracted_license": "apache-2.0"
-    },
-    {
-      "id": "deepseek/deepseek-r1-0528:free",
-      "canonical_slug": "deepseek/deepseek-r1-0528",
-      "name": "DeepSeek: R1 0528 (free)",
-      "hugging_face_id": "deepseek-ai/DeepSeek-R1-0528",
-      "extracted_license": "mit"
     },
     {
       "id": "qwen/qwen3-4b:free",

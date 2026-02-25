@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-24 10:07:15 IST",
-    "total_models": 29,
+    "generated_at": "2026-02-25 08:06:21 IST",
+    "total_models": 28,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
@@ -173,15 +173,6 @@
       "original_name": "Google: Gemma 3n 2B (free)",
       "hugging_face_id": "google/gemma-3n-E2B-it",
       "clean_model_name": "Gemma 3n E2B IT",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "deepseek/deepseek-r1-0528:free",
-      "canonical_slug": "deepseek/deepseek-r1-0528",
-      "original_name": "DeepSeek: R1 0528 (free)",
-      "hugging_face_id": "deepseek-ai/DeepSeek-R1-0528",
-      "clean_model_name": "R1 0528",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text"
     },

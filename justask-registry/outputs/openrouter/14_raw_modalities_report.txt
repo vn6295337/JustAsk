@@ -1,28 +1,28 @@
 ================================================================================
 RAW MODALITIES EXTRACTION REPORT
-Generated: 2026-02-24 10:07:15 IST
+Generated: 2026-02-25 08:06:21 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 29
+  Total models : 28
   Input        : 02_filtered_models.json
   Processor    : step_14_extract_modalities.py
   Output       : 14_raw_modalities.json
 
 RAW INPUT MODALITIES DISTRIBUTION:
-  21 models: text
+  20 models: text
    7 models: text, image
    1 models: image, text, video
 
 Total unique input types: 3
 
 RAW OUTPUT MODALITIES DISTRIBUTION:
-  29 models: text
+  28 models: text
 
 Total unique output types: 1
 
 RAW MODALITY COMBINATIONS (INPUT → OUTPUT):
-  21 models: text → text
+  20 models: text → text
    7 models: text, image → text
    1 models: image, text, video → text
 
@@ -235,19 +235,7 @@ MODEL 17: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 18: deepseek/deepseek-r1-0528
---------------------------------------------------
-  ID: deepseek/deepseek-r1-0528:free
-  Original Name: DeepSeek: R1 0528 (free)
-  HuggingFace ID: deepseek-ai/DeepSeek-R1-0528
-  Canonical Slug: deepseek/deepseek-r1-0528
-  Clean Model Name: R1 0528
-  Raw Input Modalities: text
-  Raw Output Modalities: text
-
-================================================================================
-
-MODEL 19: upstage/solar-pro-3
+MODEL 18: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage: Solar Pro 3 (free)
@@ -259,7 +247,7 @@ MODEL 19: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 20: stepfun/step-3.5-flash
+MODEL 19: stepfun/step-3.5-flash
 --------------------------------------------------
   ID: stepfun/step-3.5-flash:free
   Original Name: StepFun: Step 3.5 Flash (free)
@@ -271,7 +259,7 @@ MODEL 20: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 21: arcee-ai/trinity-mini-20251201
+MODEL 20: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID: arcee-ai/trinity-mini:free
   Original Name: Arcee AI: Trinity Mini (free)
@@ -283,7 +271,7 @@ MODEL 21: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 22: venice/uncensored
+MODEL 21: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -295,7 +283,7 @@ MODEL 22: venice/uncensored
 
 ================================================================================
 
-MODEL 23: openrouter/free
+MODEL 22: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -307,7 +295,7 @@ MODEL 23: openrouter/free
 
 ================================================================================
 
-MODEL 24: google/gemma-3-12b-it
+MODEL 23: google/gemma-3-12b-it
 --------------------------------------------------
   ID: google/gemma-3-12b-it:free
   Original Name: Google: Gemma 3 12B (free)
@@ -319,7 +307,7 @@ MODEL 24: google/gemma-3-12b-it
 
 ================================================================================
 
-MODEL 25: google/gemma-3-27b-it
+MODEL 24: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
@@ -331,7 +319,7 @@ MODEL 25: google/gemma-3-27b-it
 
 ================================================================================
 
-MODEL 26: google/gemma-3-4b-it
+MODEL 25: google/gemma-3-4b-it
 --------------------------------------------------
   ID: google/gemma-3-4b-it:free
   Original Name: Google: Gemma 3 4B (free)
@@ -343,7 +331,7 @@ MODEL 26: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 27: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 26: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID: mistralai/mistral-small-3.1-24b-instruct:free
   Original Name: Mistral: Mistral Small 3.1 24B (free)
@@ -355,7 +343,7 @@ MODEL 27: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 28: qwen/qwen3-vl-235b-a22b-thinking
+MODEL 27: qwen/qwen3-vl-235b-a22b-thinking
 --------------------------------------------------
   ID: qwen/qwen3-vl-235b-a22b-thinking
   Original Name: Qwen: Qwen3 VL 235B A22B Thinking
@@ -367,7 +355,7 @@ MODEL 28: qwen/qwen3-vl-235b-a22b-thinking
 
 ================================================================================
 
-MODEL 29: qwen/qwen3-vl-30b-a3b-thinking
+MODEL 28: qwen/qwen3-vl-30b-a3b-thinking
 --------------------------------------------------
   ID: qwen/qwen3-vl-30b-a3b-thinking
   Original Name: Qwen: Qwen3 VL 30B A3B Thinking

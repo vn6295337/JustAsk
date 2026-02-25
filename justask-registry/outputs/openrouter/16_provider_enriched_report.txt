@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-02-24 10:07:15 IST
+Generated: 2026-02-25 08:06:22 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 29
+  Total models      : 28
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -21,7 +21,6 @@ MODEL PROVIDER DISTRIBUTION:
    2 models: OpenAI
    1 models: Arcee
    1 models: Cognitive Computations
-   1 models: DeepSeek
    1 models: Mistral AI
    1 models: Nous Research
    1 models: OpenRouter
@@ -29,11 +28,11 @@ MODEL PROVIDER DISTRIBUTION:
    1 models: Upstage AI
    1 models: Z.AI
 
-Total unique model providers: 15
+Total unique model providers: 14
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
   18 models: United States
-   9 models: China
+   8 models: China
    1 models: France
    1 models: South Korea
 
@@ -48,7 +47,6 @@ MODEL FAMILY DISTRIBUTION:
    2 models: openai
    1 models: arcee
    1 models: cognitive computations
-   1 models: deepseek
    1 models: mistral ai
    1 models: nous research
    1 models: openrouter
@@ -56,7 +54,7 @@ MODEL FAMILY DISTRIBUTION:
    1 models: upstage ai
    1 models: z.ai
 
-Total unique model families: 15
+Total unique model families: 14
 
 DETAILED PROVIDER ENRICHED MODEL INFORMATION:
 ================================================================================
@@ -173,21 +171,7 @@ MODEL 8: venice/uncensored
 
 ================================================================================
 
-MODEL 9: deepseek/deepseek-r1-0528
---------------------------------------------------
-  ID: deepseek/deepseek-r1-0528:free
-  Original Name: DeepSeek: R1 0528 (free)
-  HuggingFace ID: deepseek-ai/DeepSeek-R1-0528
-  Canonical Slug: deepseek/deepseek-r1-0528
-  Clean Model Name: R1 0528
-  Model Provider: DeepSeek
-  Model Provider Country: China
-  Model Family: deepseek
-  Official URL: https://deepseek.com/
-
-================================================================================
-
-MODEL 10: google/gemma-3-12b-it
+MODEL 9: google/gemma-3-12b-it
 --------------------------------------------------
   ID: google/gemma-3-12b-it:free
   Original Name: Google: Gemma 3 12B (free)
@@ -201,7 +185,7 @@ MODEL 10: google/gemma-3-12b-it
 
 ================================================================================
 
-MODEL 11: google/gemma-3-27b-it
+MODEL 10: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
@@ -215,7 +199,7 @@ MODEL 11: google/gemma-3-27b-it
 
 ================================================================================
 
-MODEL 12: google/gemma-3-4b-it
+MODEL 11: google/gemma-3-4b-it
 --------------------------------------------------
   ID: google/gemma-3-4b-it:free
   Original Name: Google: Gemma 3 4B (free)
@@ -229,7 +213,7 @@ MODEL 12: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 13: google/gemma-3n-e2b-it
+MODEL 12: google/gemma-3n-e2b-it
 --------------------------------------------------
   ID: google/gemma-3n-e2b-it:free
   Original Name: Google: Gemma 3n 2B (free)
@@ -243,7 +227,7 @@ MODEL 13: google/gemma-3n-e2b-it
 
 ================================================================================
 
-MODEL 14: google/gemma-3n-e4b-it
+MODEL 13: google/gemma-3n-e4b-it
 --------------------------------------------------
   ID: google/gemma-3n-e4b-it:free
   Original Name: Google: Gemma 3n 4B (free)
@@ -257,7 +241,7 @@ MODEL 14: google/gemma-3n-e4b-it
 
 ================================================================================
 
-MODEL 15: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 14: liquid/lfm-2.5-1.2b-instruct-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-instruct:free
   Original Name: LiquidAI: LFM2.5-1.2B-Instruct (free)
@@ -271,7 +255,7 @@ MODEL 15: liquid/lfm-2.5-1.2b-instruct-20260120
 
 ================================================================================
 
-MODEL 16: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 15: liquid/lfm-2.5-1.2b-thinking-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-thinking:free
   Original Name: LiquidAI: LFM2.5-1.2B-Thinking (free)
@@ -285,7 +269,7 @@ MODEL 16: liquid/lfm-2.5-1.2b-thinking-20260120
 
 ================================================================================
 
-MODEL 17: meta-llama/llama-3.2-3b-instruct
+MODEL 16: meta-llama/llama-3.2-3b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.2-3b-instruct:free
   Original Name: Meta: Llama 3.2 3B Instruct (free)
@@ -299,7 +283,7 @@ MODEL 17: meta-llama/llama-3.2-3b-instruct
 
 ================================================================================
 
-MODEL 18: meta-llama/llama-3.3-70b-instruct
+MODEL 17: meta-llama/llama-3.3-70b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.3-70b-instruct:free
   Original Name: Meta: Llama 3.3 70B Instruct (free)
@@ -313,7 +297,7 @@ MODEL 18: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 19: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 18: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID: mistralai/mistral-small-3.1-24b-instruct:free
   Original Name: Mistral: Mistral Small 3.1 24B (free)
@@ -327,7 +311,7 @@ MODEL 19: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 20: nousresearch/hermes-3-llama-3.1-405b
+MODEL 19: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -341,7 +325,7 @@ MODEL 20: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 21: nvidia/nemotron-3-nano-30b-a3b
+MODEL 20: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -355,7 +339,7 @@ MODEL 21: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 22: nvidia/nemotron-nano-12b-v2-vl
+MODEL 21: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
@@ -369,7 +353,7 @@ MODEL 22: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 23: nvidia/nemotron-nano-9b-v2
+MODEL 22: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -383,7 +367,7 @@ MODEL 23: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 24: openai/gpt-oss-120b
+MODEL 23: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -397,7 +381,7 @@ MODEL 24: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 25: openai/gpt-oss-20b
+MODEL 24: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -411,7 +395,7 @@ MODEL 25: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 26: openrouter/free
+MODEL 25: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -425,7 +409,7 @@ MODEL 26: openrouter/free
 
 ================================================================================
 
-MODEL 27: stepfun/step-3.5-flash
+MODEL 26: stepfun/step-3.5-flash
 --------------------------------------------------
   ID: stepfun/step-3.5-flash:free
   Original Name: StepFun: Step 3.5 Flash (free)
@@ -439,7 +423,7 @@ MODEL 27: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 28: upstage/solar-pro-3
+MODEL 27: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage: Solar Pro 3 (free)
@@ -453,7 +437,7 @@ MODEL 28: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 29: z-ai/glm-4.5-air
+MODEL 28: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)

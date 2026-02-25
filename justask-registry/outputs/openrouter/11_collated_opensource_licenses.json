@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-24 10:07:14 IST",
-    "total_models": 15,
+    "generated_at": "2026-02-25 08:06:20 IST",
+    "total_models": 14,
     "pipeline_stage": "K_collate_opensource_licenses"
   },
   "models": [
@@ -15,17 +15,6 @@
       "license_info_url": "https://huggingface.co/arcee-ai/Trinity-Mini/blob/main/README.md",
       "license_name": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
-    },
-    {
-      "id": "deepseek/deepseek-r1-0528:free",
-      "canonical_slug": "deepseek/deepseek-r1-0528",
-      "original_name": "DeepSeek: R1 0528 (free)",
-      "hugging_face_id": "deepseek-ai/DeepSeek-R1-0528",
-      "clean_model_name": "R1 0528",
-      "license_info_text": "info",
-      "license_info_url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-0528/blob/main/LICENSE",
-      "license_name": "MIT",
-      "license_url": "https://opensource.org/licenses/MIT"
     },
     {
       "id": "mistralai/mistral-small-3.1-24b-instruct:free",

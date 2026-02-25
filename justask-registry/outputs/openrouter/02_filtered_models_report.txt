@@ -1,39 +1,39 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-02-24 10:06:58 IST
+Generated: 2026-02-25 08:06:05 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 337
-  Models passed all filters: 29
-  Models excluded: 308
-  Success rate: 8.6%
+  Total models processed: 338
+  Models passed all filters: 28
+  Models excluded: 310
+  Success rate: 8.3%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 337 models
-    Excluded: 307 models (non-free pricing)
-    Remaining: 30 models
-
-  Step 2 - Billing Description Filter:
-    Input: 30 models
-    Excluded: 0 models (billing requirements in description)
-    Remaining: 30 models
-
-  Step 3 - Keyword Filter:
-    Input: 30 models
-    Excluded: 1 models (preview/experimental/beta)
+    Input: 338 models
+    Excluded: 309 models (non-free pricing)
     Remaining: 29 models
 
-  Step 4 - Deduplication Filter:
+  Step 2 - Billing Description Filter:
     Input: 29 models
+    Excluded: 0 models (billing requirements in description)
+    Remaining: 29 models
+
+  Step 3 - Keyword Filter:
+    Input: 29 models
+    Excluded: 1 models (preview/experimental/beta)
+    Remaining: 28 models
+
+  Step 4 - Deduplication Filter:
+    Input: 28 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 29 models
+    Final: 28 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 307 models with non-free pricing (details omitted due to volume)
+Excluded 309 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -196,13 +196,6 @@ PROVIDER: VENICE (1 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
-PROVIDER: DEEPSEEK (1 models)
---------------------------------------------------
-   1. DeepSeek: R1 0528 (free)
-      ID: deepseek/deepseek-r1-0528:free
-      Pricing: prompt=0, completion=0, request=N/A
-
-
 PROVIDER: MISTRAL (1 models)
 --------------------------------------------------
    1. Mistral: Mistral Small 3.1 24B (free)
@@ -219,11 +212,11 @@ PROVIDER: NOUS (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 15
-  Total models passed all filters: 29
-  Models excluded by pricing: 307
+  Total providers: 14
+  Total models passed all filters: 28
+  Models excluded by pricing: 309
   Models excluded by billing description: 0
   Models excluded by keywords: 1
   Models excluded by deduplication: 0
-  Total exclusions: 308
+  Total exclusions: 310
   ✓ All filtered models accounted for

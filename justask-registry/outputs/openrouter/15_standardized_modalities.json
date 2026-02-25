@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-02-24 10:07:15 IST",
-    "total_models": 29,
+    "generated_at": "2026-02-25 08:06:21 IST",
+    "total_models": 28,
     "pipeline_stage": "O_standardize_raw_modalities"
   },
   "models": [
@@ -270,20 +270,6 @@
       "standardized_input_modalities": "Text, Image, Audio, Video",
       "standardized_output_modalities": "Text",
       "google_enhancement_status": "google_enhanced"
-    },
-    {
-      "id": "deepseek/deepseek-r1-0528:free",
-      "canonical_slug": "deepseek/deepseek-r1-0528",
-      "original_name": "DeepSeek: R1 0528 (free)",
-      "hugging_face_id": "deepseek-ai/DeepSeek-R1-0528",
-      "clean_model_name": "R1 0528",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model"
     },
     {
       "id": "google/gemma-3n-e4b-it:free",
