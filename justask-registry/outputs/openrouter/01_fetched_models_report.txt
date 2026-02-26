@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-02-25 08:06:05 IST
+Generated: 2026-02-26 08:01:47 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 338
+  Total models: 343
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  58 models
@@ -67,7 +67,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - o4-mini-deep-research
     - o4-mini-high
 
-  Qwen            :  44 models
+  Qwen            :  48 models
     - qwen-2.5-7b-instruct
     - qwen-2.5-vl-7b-instruct
     - qwen-max
@@ -109,9 +109,40 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3-vl-32b-instruct
     - qwen3-vl-8b-instruct
     - qwen3-vl-8b-thinking
+    - qwen3.5-122b-a10b
+    - qwen3.5-27b
+    - qwen3.5-35b-a3b
     - qwen3.5-397b-a17b
+    - qwen3.5-flash-02-23
     - qwen3.5-plus-02-15
     - qwq-32b
+
+  Google          :  25 models
+    - gemini-2.0-flash-001
+    - gemini-2.0-flash-lite-001
+    - gemini-2.5-flash
+    - gemini-2.5-flash-image
+    - gemini-2.5-flash-lite
+    - gemini-2.5-flash-lite-preview-09-2025
+    - gemini-2.5-pro
+    - gemini-2.5-pro-preview
+    - gemini-2.5-pro-preview-05-06
+    - gemini-3-flash-preview
+    - gemini-3-pro-image-preview
+    - gemini-3-pro-preview
+    - gemini-3.1-pro-preview
+    - gemini-3.1-pro-preview-customtools
+    - gemma-2-27b-it
+    - gemma-2-9b-it
+    - gemma-3-12b-it
+    - gemma-3-12b-it:free
+    - gemma-3-27b-it
+    - gemma-3-27b-it:free
+    - gemma-3-4b-it
+    - gemma-3-4b-it:free
+    - gemma-3n-e2b-it:free
+    - gemma-3n-e4b-it
+    - gemma-3n-e4b-it:free
 
   Mistral         :  25 models
     - codestral-2508
@@ -139,32 +170,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - mixtral-8x7b-instruct
     - pixtral-large-2411
     - voxtral-small-24b-2507
-
-  Google          :  24 models
-    - gemini-2.0-flash-001
-    - gemini-2.0-flash-lite-001
-    - gemini-2.5-flash
-    - gemini-2.5-flash-image
-    - gemini-2.5-flash-lite
-    - gemini-2.5-flash-lite-preview-09-2025
-    - gemini-2.5-pro
-    - gemini-2.5-pro-preview
-    - gemini-2.5-pro-preview-05-06
-    - gemini-3-flash-preview
-    - gemini-3-pro-image-preview
-    - gemini-3-pro-preview
-    - gemini-3.1-pro-preview
-    - gemma-2-27b-it
-    - gemma-2-9b-it
-    - gemma-3-12b-it
-    - gemma-3-12b-it:free
-    - gemma-3-27b-it
-    - gemma-3-27b-it:free
-    - gemma-3-4b-it
-    - gemma-3-4b-it:free
-    - gemma-3n-e2b-it:free
-    - gemma-3n-e4b-it
-    - gemma-3n-e4b-it:free
 
   Meta            :  16 models
     - llama-3-70b-instruct
@@ -226,9 +231,8 @@ PROVIDER BREAKDOWN (Descending Order):
     - glm-4.7-flash
     - glm-5
 
-  NVIDIA          :   9 models
+  NVIDIA          :   8 models
     - llama-3.1-nemotron-70b-instruct
-    - llama-3.1-nemotron-ultra-253b-v1
     - llama-3.3-nemotron-super-49b-v1.5
     - nemotron-3-nano-30b-a3b
     - nemotron-3-nano-30b-a3b:free
@@ -273,6 +277,13 @@ PROVIDER BREAKDOWN (Descending Order):
     - minimax-m2.1
     - minimax-m2.5
 
+  LiquidAI        :   5 models
+    - lfm-2-24b-a2b
+    - lfm-2.2-6b
+    - lfm-2.5-1.2b-instruct:free
+    - lfm-2.5-1.2b-thinking:free
+    - lfm2-8b-a1b
+
   MoonshotAI      :   5 models
     - kimi-k2
     - kimi-k2-0905
@@ -313,12 +324,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - aion-1.0-mini
     - aion-2.0
     - aion-rp-llama-3.1-8b
-
-  LiquidAI        :   4 models
-    - lfm-2.2-6b
-    - lfm-2.5-1.2b-instruct:free
-    - lfm-2.5-1.2b-thinking:free
-    - lfm2-8b-a1b
 
   TheDrummer      :   4 models
     - cydonia-24b-v4.1
