@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-02-26 08:00:12 IST",
-    "total_models": 43,
+    "generated": "2026-02-27 07:58:42 IST",
+    "total_models": 44,
     "api_source": "Google Generative Language API"
   },
   "models": [
@@ -462,6 +462,24 @@
       "description": "Gemini 3 Pro Image Preview",
       "inputTokenLimit": 131072,
       "outputTokenLimit": 32768,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 1,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-3.1-flash-image-preview",
+      "version": "3.0",
+      "displayName": "Nano Banana 2",
+      "description": "Gemini 3.1 Flash Image Preview.",
+      "inputTokenLimit": 65536,
+      "outputTokenLimit": 65536,
       "supportedGenerationMethods": [
         "generateContent",
         "countTokens",

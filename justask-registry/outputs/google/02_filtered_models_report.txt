@@ -1,11 +1,11 @@
 === GOOGLE MODELS FILTERING REPORT ===
-Generated: 2026-02-26 08:00:12 IST
+Generated: 2026-02-27 07:58:42 IST
 
 === SUMMARY ===
-Total Input Models: 43
+Total Input Models: 44
 Models Included: 20
-Models Excluded: 23
-Filtering Success Rate: 46.5%
+Models Excluded: 24
+Filtering Success Rate: 45.5%
 
 === EXCLUDED MODELS ===
  1. gemini-2.0-flash-exp-image-generation
@@ -22,15 +22,16 @@ Filtering Success Rate: 46.5%
 12. gemini-3.1-pro-preview-customtools
 13. gemini-3-pro-image-preview
 14. nano-banana-pro-preview
-15. gemini-robotics-er-1.5-preview
-16. gemini-2.5-computer-use-preview-10-2025
-17. deep-research-pro-preview-12-2025
-18. veo-2.0-generate-001
-19. veo-3.1-generate-preview
-20. veo-3.1-fast-generate-preview
-21. gemini-2.5-flash-native-audio-latest
-22. gemini-2.5-flash-native-audio-preview-09-2025
-23. gemini-2.5-flash-native-audio-preview-12-2025
+15. gemini-3.1-flash-image-preview
+16. gemini-robotics-er-1.5-preview
+17. gemini-2.5-computer-use-preview-10-2025
+18. deep-research-pro-preview-12-2025
+19. veo-2.0-generate-001
+20. veo-3.1-generate-preview
+21. veo-3.1-fast-generate-preview
+22. gemini-2.5-flash-native-audio-latest
+23. gemini-2.5-flash-native-audio-preview-09-2025
+24. gemini-2.5-flash-native-audio-preview-12-2025
 
 === INCLUDED MODELS ===
  1. gemini-2.5-flash
@@ -55,7 +56,7 @@ Filtering Success Rate: 46.5%
 20. veo-3.0-fast-generate-001
 
 === EXCLUSION BREAKDOWN ===
-18 models: Experimental/Preview model - production-ready models only
+19 models: Experimental/Preview model - production-ready models only
  1 models: Model requires billing/payment - free models only
  1 models: Preview model - gemini-2.5-flash-native-audio-preview-09-2025 (https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-live). Note: preview tag not mentioned in API response.
  1 models: Preview model - gemini-flash-latest is a preview pointer per Sep 25 2025 Google update (https://developers.googleblog.com/en/continuing-to-bring-you-our-latest-models-with-an-improved-gemini-2-5-flash-and-flash-lite-release/). Note: preview tag not mentioned in API response.
