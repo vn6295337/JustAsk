@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-02-26 08:01:47 IST
+Generated: 2026-02-27 08:00:24 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 343
+  Total models: 344
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  58 models
@@ -117,7 +117,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3.5-plus-02-15
     - qwq-32b
 
-  Google          :  25 models
+  Google          :  26 models
     - gemini-2.0-flash-001
     - gemini-2.0-flash-lite-001
     - gemini-2.5-flash
@@ -130,6 +130,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemini-3-flash-preview
     - gemini-3-pro-image-preview
     - gemini-3-pro-preview
+    - gemini-3.1-flash-image-preview
     - gemini-3.1-pro-preview
     - gemini-3.1-pro-preview-customtools
     - gemma-2-27b-it
@@ -144,7 +145,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemma-3n-e4b-it
     - gemma-3n-e4b-it:free
 
-  Mistral         :  25 models
+  Mistral         :  24 models
     - codestral-2508
     - devstral-2512
     - devstral-medium
@@ -154,7 +155,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - ministral-8b-2512
     - mistral-7b-instruct
     - mistral-7b-instruct-v0.1
-    - mistral-7b-instruct-v0.2
     - mistral-7b-instruct-v0.3
     - mistral-large-2512
     - mistral-medium-3
@@ -343,13 +343,14 @@ PROVIDER BREAKDOWN (Descending Order):
     - l3.1-euryale-70b
     - l3.3-euryale-70b
 
+  ByteDance Seed  :   3 models
+    - seed-1.6
+    - seed-1.6-flash
+    - seed-2.0-mini
+
   StepFun         :   2 models
     - step-3.5-flash
     - step-3.5-flash:free
-
-  ByteDance Seed  :   2 models
-    - seed-1.6
-    - seed-1.6-flash
 
   Relace          :   2 models
     - relace-apply-3
