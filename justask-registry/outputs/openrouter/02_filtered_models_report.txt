@@ -1,39 +1,39 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-03-02 08:03:41 IST
+Generated: 2026-03-03 08:06:20 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
   Total models processed: 342
-  Models passed all filters: 28
-  Models excluded: 314
-  Success rate: 8.2%
+  Models passed all filters: 27
+  Models excluded: 315
+  Success rate: 7.9%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
     Input: 342 models
-    Excluded: 313 models (non-free pricing)
-    Remaining: 29 models
-
-  Step 2 - Billing Description Filter:
-    Input: 29 models
-    Excluded: 0 models (billing requirements in description)
-    Remaining: 29 models
-
-  Step 3 - Keyword Filter:
-    Input: 29 models
-    Excluded: 1 models (preview/experimental/beta)
+    Excluded: 314 models (non-free pricing)
     Remaining: 28 models
 
-  Step 4 - Deduplication Filter:
+  Step 2 - Billing Description Filter:
     Input: 28 models
+    Excluded: 0 models (billing requirements in description)
+    Remaining: 28 models
+
+  Step 3 - Keyword Filter:
+    Input: 28 models
+    Excluded: 1 models (preview/experimental/beta)
+    Remaining: 27 models
+
+  Step 4 - Deduplication Filter:
+    Input: 27 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 28 models
+    Final: 27 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 313 models with non-free pricing (details omitted due to volume)
+Excluded 314 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -168,13 +168,6 @@ PROVIDER: STEPFUN (1 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
-PROVIDER: UPSTAGE (1 models)
---------------------------------------------------
-   1. Upstage: Solar Pro 3 (free)
-      ID: upstage/solar-pro-3:free
-      Pricing: prompt=0, completion=0, request=N/A
-
-
 PROVIDER: ARCEE AI (1 models)
 --------------------------------------------------
    1. Arcee AI: Trinity Mini (free)
@@ -212,11 +205,11 @@ PROVIDER: NOUS (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 14
-  Total models passed all filters: 28
-  Models excluded by pricing: 313
+  Total providers: 13
+  Total models passed all filters: 27
+  Models excluded by pricing: 314
   Models excluded by billing description: 0
   Models excluded by keywords: 1
   Models excluded by deduplication: 0
-  Total exclusions: 314
+  Total exclusions: 315
   ✓ All filtered models accounted for

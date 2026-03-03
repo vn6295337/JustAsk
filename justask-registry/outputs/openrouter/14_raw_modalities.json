@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-03-02 08:03:58 IST",
-    "total_models": 28,
+    "generated_at": "2026-03-03 08:06:48 IST",
+    "total_models": 27,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
@@ -20,15 +20,6 @@
       "original_name": "StepFun: Step 3.5 Flash (free)",
       "hugging_face_id": "stepfun-ai/Step-3.5-Flash",
       "clean_model_name": "Step 3.5 Flash",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "upstage/solar-pro-3:free",
-      "canonical_slug": "upstage/solar-pro-3",
-      "original_name": "Upstage: Solar Pro 3 (free)",
-      "hugging_face_id": "",
-      "clean_model_name": "Solar Pro 3",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text"
     },

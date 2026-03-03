@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-03-02 08:03:59 IST
+Generated: 2026-03-03 08:06:48 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 28
+  Total models      : 27
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -25,18 +25,16 @@ MODEL PROVIDER DISTRIBUTION:
    1 models: Nous Research
    1 models: OpenRouter
    1 models: StepFun
-   1 models: Upstage AI
    1 models: Z.AI
 
-Total unique model providers: 14
+Total unique model providers: 13
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
   18 models: United States
    8 models: China
    1 models: France
-   1 models: South Korea
 
-Total unique countries: 4
+Total unique countries: 3
 
 MODEL FAMILY DISTRIBUTION:
    6 models: alibaba cloud
@@ -51,10 +49,9 @@ MODEL FAMILY DISTRIBUTION:
    1 models: nous research
    1 models: openrouter
    1 models: stepfun
-   1 models: upstage ai
    1 models: z.ai
 
-Total unique model families: 14
+Total unique model families: 13
 
 DETAILED PROVIDER ENRICHED MODEL INFORMATION:
 ================================================================================
@@ -423,21 +420,7 @@ MODEL 26: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 27: upstage/solar-pro-3
---------------------------------------------------
-  ID: upstage/solar-pro-3:free
-  Original Name: Upstage: Solar Pro 3 (free)
-  HuggingFace ID: 
-  Canonical Slug: upstage/solar-pro-3
-  Clean Model Name: Solar Pro 3
-  Model Provider: Upstage AI
-  Model Provider Country: South Korea
-  Model Family: upstage ai
-  Official URL: https://www.upstage.ai/
-
-================================================================================
-
-MODEL 28: z-ai/glm-4.5-air
+MODEL 27: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)
