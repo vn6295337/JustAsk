@@ -1,13 +1,13 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-03-03 08:06:20 IST
+Generated: 2026-03-04 07:58:45 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 342
+  Total models: 343
 
 PROVIDER BREAKDOWN (Descending Order):
-  OpenAI          :  58 models
+  OpenAI          :  59 models
     - gpt-3.5-turbo
     - gpt-3.5-turbo-0613
     - gpt-3.5-turbo-16k
@@ -47,6 +47,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - gpt-5.2-chat
     - gpt-5.2-codex
     - gpt-5.2-pro
+    - gpt-5.3-chat
     - gpt-5.3-codex
     - gpt-audio
     - gpt-audio-mini
@@ -117,7 +118,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3.5-plus-02-15
     - qwq-32b
 
-  Google          :  26 models
+  Google          :  27 models
     - gemini-2.0-flash-001
     - gemini-2.0-flash-lite-001
     - gemini-2.5-flash
@@ -131,6 +132,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemini-3-pro-image-preview
     - gemini-3-pro-preview
     - gemini-3.1-flash-image-preview
+    - gemini-3.1-flash-lite-preview
     - gemini-3.1-pro-preview
     - gemini-3.1-pro-preview-customtools
     - gemma-2-27b-it
@@ -145,7 +147,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemma-3n-e4b-it
     - gemma-3n-e4b-it:free
 
-  Mistral         :  24 models
+  Mistral         :  22 models
     - codestral-2508
     - devstral-2512
     - devstral-medium
@@ -153,9 +155,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - ministral-14b-2512
     - ministral-3b-2512
     - ministral-8b-2512
-    - mistral-7b-instruct
     - mistral-7b-instruct-v0.1
-    - mistral-7b-instruct-v0.3
     - mistral-large-2512
     - mistral-medium-3
     - mistral-medium-3.1
@@ -251,6 +251,15 @@ PROVIDER BREAKDOWN (Descending Order):
     - grok-4.1-fast
     - grok-code-fast-1
 
+  Arcee AI        :   7 models
+    - coder-large
+    - maestro-reasoning
+    - spotlight
+    - trinity-large-preview:free
+    - trinity-mini
+    - trinity-mini:free
+    - virtuoso-large
+
   AllenAI         :   7 models
     - molmo-2-8b
     - olmo-2-0325-32b-instruct
@@ -267,14 +276,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - minimax-m2-her
     - minimax-m2.1
     - minimax-m2.5
-
-  Arcee AI        :   6 models
-    - coder-large
-    - maestro-reasoning
-    - spotlight
-    - trinity-large-preview:free
-    - trinity-mini:free
-    - virtuoso-large
 
   LiquidAI        :   5 models
     - lfm-2-24b-a2b
