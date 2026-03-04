@@ -1,8 +1,8 @@
 GOOGLE API MODELS FETCH REPORT
 ==================================================
 
-Generated: 2026-03-03 08:04:23 IST
-Total Models: 44
+Generated: 2026-03-04 07:57:09 IST
+Total Models: 45
 
 MODELS LIST:
 --------------------
@@ -31,22 +31,23 @@ MODELS LIST:
 23. models/gemini-3-flash-preview
 24. models/gemini-3.1-pro-preview
 25. models/gemini-3.1-pro-preview-customtools
-26. models/gemini-3-pro-image-preview
-27. models/nano-banana-pro-preview
-28. models/gemini-3.1-flash-image-preview
-29. models/gemini-robotics-er-1.5-preview
-30. models/gemini-2.5-computer-use-preview-10-2025
-31. models/deep-research-pro-preview-12-2025
-32. models/gemini-embedding-001
-33. models/aqa
-34. models/imagen-4.0-generate-001
-35. models/imagen-4.0-ultra-generate-001
-36. models/imagen-4.0-fast-generate-001
-37. models/veo-2.0-generate-001
-38. models/veo-3.0-generate-001
-39. models/veo-3.0-fast-generate-001
-40. models/veo-3.1-generate-preview
-41. models/veo-3.1-fast-generate-preview
-42. models/gemini-2.5-flash-native-audio-latest
-43. models/gemini-2.5-flash-native-audio-preview-09-2025
-44. models/gemini-2.5-flash-native-audio-preview-12-2025
+26. models/gemini-3.1-flash-lite-preview
+27. models/gemini-3-pro-image-preview
+28. models/nano-banana-pro-preview
+29. models/gemini-3.1-flash-image-preview
+30. models/gemini-robotics-er-1.5-preview
+31. models/gemini-2.5-computer-use-preview-10-2025
+32. models/deep-research-pro-preview-12-2025
+33. models/gemini-embedding-001
+34. models/aqa
+35. models/imagen-4.0-generate-001
+36. models/imagen-4.0-ultra-generate-001
+37. models/imagen-4.0-fast-generate-001
+38. models/veo-2.0-generate-001
+39. models/veo-3.0-generate-001
+40. models/veo-3.0-fast-generate-001
+41. models/veo-3.1-generate-preview
+42. models/veo-3.1-fast-generate-preview
+43. models/gemini-2.5-flash-native-audio-latest
+44. models/gemini-2.5-flash-native-audio-preview-09-2025
+45. models/gemini-2.5-flash-native-audio-preview-12-2025
