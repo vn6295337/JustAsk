@@ -1,13 +1,13 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-03-05 08:01:28 IST
+Generated: 2026-03-06 07:59:45 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 343
+  Total models: 346
 
 PROVIDER BREAKDOWN (Descending Order):
-  OpenAI          :  59 models
+  OpenAI          :  61 models
     - gpt-3.5-turbo
     - gpt-3.5-turbo-0613
     - gpt-3.5-turbo-16k
@@ -49,6 +49,8 @@ PROVIDER BREAKDOWN (Descending Order):
     - gpt-5.2-pro
     - gpt-5.3-chat
     - gpt-5.3-codex
+    - gpt-5.4
+    - gpt-5.4-pro
     - gpt-audio
     - gpt-audio-mini
     - gpt-oss-120b
@@ -343,6 +345,11 @@ PROVIDER BREAKDOWN (Descending Order):
     - l3.1-euryale-70b
     - l3.3-euryale-70b
 
+  Inception       :   3 models
+    - mercury
+    - mercury-2
+    - mercury-coder
+
   ByteDance Seed  :   3 models
     - seed-1.6
     - seed-1.6-flash
@@ -359,10 +366,6 @@ PROVIDER BREAKDOWN (Descending Order):
   Morph           :   2 models
     - morph-v3-fast
     - morph-v3-large
-
-  Inception       :   2 models
-    - mercury
-    - mercury-coder
 
   Inflection      :   2 models
     - inflection-3-pi
