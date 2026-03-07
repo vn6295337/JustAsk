@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-03-06 08:00:06 IST",
-    "total_models": 27,
+    "generated_at": "2026-03-07 07:53:47 IST",
+    "total_models": 26,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
@@ -284,26 +284,6 @@
       "model_provider_country": "China",
       "model_family": "z.ai",
       "official_url": "https://zhipuai.cn/en/"
-    },
-    {
-      "id": "qwen/qwen3-235b-a22b-thinking-2507",
-      "canonical_slug": "qwen/qwen3-235b-a22b-thinking-2507",
-      "provider_slug": "qwen3-235b-a22b-thinking-2507",
-      "original_name": "Qwen: Qwen3 235B A22B Thinking 2507",
-      "hugging_face_id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-      "clean_model_name": "Qwen3 235B A22B Thinking 2507",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model",
-      "inference_provider": "OpenRouter",
-      "model_provider": "Alibaba Cloud",
-      "model_provider_country": "China",
-      "model_family": "alibaba cloud",
-      "official_url": "https://alibabacloud.com/"
     },
     {
       "id": "qwen/qwen3-coder:free",

@@ -1,17 +1,17 @@
 ================================================================================
 OPENSOURCE LICENSE MODELS REPORT
-Generated: 2026-03-06 08:00:02 IST
+Generated: 2026-03-07 07:53:44 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 14
+  Total models : 13
   Input        : 07_standardized_licenses.json
   Reference    : opensource_license_urls.json
   Processor    : step_08_bucketize_licenses.py
   Output       : 08_opensource_licenses.json
 
 OPENSOURCE LICENSE DISTRIBUTION:
-  Apache-2.0: 12 models
+  Apache-2.0: 11 models
   Llama-3.1: 1 models
   MIT: 1 models
 
@@ -56,16 +56,7 @@ MODEL 4: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 5: qwen/qwen3-235b-a22b-thinking-2507
---------------------------------------------------
-  ID              : qwen/qwen3-235b-a22b-thinking-2507
-  Canonical Slug  : qwen/qwen3-235b-a22b-thinking-2507
-  HuggingFace ID  : Qwen/Qwen3-235B-A22B-Thinking-2507
-  License Name    : Apache-2.0
-
-================================================================================
-
-MODEL 6: qwen/qwen3-4b-04-28
+MODEL 5: qwen/qwen3-4b-04-28
 --------------------------------------------------
   ID              : qwen/qwen3-4b:free
   Canonical Slug  : qwen/qwen3-4b-04-28
@@ -74,7 +65,7 @@ MODEL 6: qwen/qwen3-4b-04-28
 
 ================================================================================
 
-MODEL 7: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 6: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID              : qwen/qwen3-coder:free
   Canonical Slug  : qwen/qwen3-coder-480b-a35b-07-25
@@ -83,7 +74,7 @@ MODEL 7: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 8: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 7: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID              : qwen/qwen3-next-80b-a3b-instruct:free
   Canonical Slug  : qwen/qwen3-next-80b-a3b-instruct-2509
@@ -92,7 +83,7 @@ MODEL 8: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 9: qwen/qwen3-vl-235b-a22b-thinking
+MODEL 8: qwen/qwen3-vl-235b-a22b-thinking
 --------------------------------------------------
   ID              : qwen/qwen3-vl-235b-a22b-thinking
   Canonical Slug  : qwen/qwen3-vl-235b-a22b-thinking
@@ -101,7 +92,7 @@ MODEL 9: qwen/qwen3-vl-235b-a22b-thinking
 
 ================================================================================
 
-MODEL 10: qwen/qwen3-vl-30b-a3b-thinking
+MODEL 9: qwen/qwen3-vl-30b-a3b-thinking
 --------------------------------------------------
   ID              : qwen/qwen3-vl-30b-a3b-thinking
   Canonical Slug  : qwen/qwen3-vl-30b-a3b-thinking
@@ -110,7 +101,7 @@ MODEL 10: qwen/qwen3-vl-30b-a3b-thinking
 
 ================================================================================
 
-MODEL 11: stepfun/step-3.5-flash
+MODEL 10: stepfun/step-3.5-flash
 --------------------------------------------------
   ID              : stepfun/step-3.5-flash:free
   Canonical Slug  : stepfun/step-3.5-flash
@@ -119,7 +110,7 @@ MODEL 11: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 12: venice/uncensored
+MODEL 11: venice/uncensored
 --------------------------------------------------
   ID              : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Canonical Slug  : venice/uncensored
@@ -128,7 +119,7 @@ MODEL 12: venice/uncensored
 
 ================================================================================
 
-MODEL 13: nousresearch/hermes-3-llama-3.1-405b
+MODEL 12: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID              : nousresearch/hermes-3-llama-3.1-405b:free
   Canonical Slug  : nousresearch/hermes-3-llama-3.1-405b
@@ -137,7 +128,7 @@ MODEL 13: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 14: z-ai/glm-4.5-air
+MODEL 13: z-ai/glm-4.5-air
 --------------------------------------------------
   ID              : z-ai/glm-4.5-air:free
   Canonical Slug  : z-ai/glm-4.5-air

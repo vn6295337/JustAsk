@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-03-06 08:00:01 IST",
-    "total_models": 19,
+    "generated_at": "2026-03-07 07:53:43 IST",
+    "total_models": 18,
     "pipeline_stage": "G_standardize_other_license_names_from_hf"
   },
   "models": [
@@ -108,14 +108,6 @@
       "hugging_face_id": "zai-org/GLM-4.5-Air",
       "raw_extracted_license": "mit",
       "standardized_license_name": "MIT"
-    },
-    {
-      "id": "qwen/qwen3-235b-a22b-thinking-2507",
-      "canonical_slug": "qwen/qwen3-235b-a22b-thinking-2507",
-      "name": "Qwen: Qwen3 235B A22B Thinking 2507",
-      "hugging_face_id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-      "raw_extracted_license": "apache-2.0",
-      "standardized_license_name": "Apache-2.0"
     },
     {
       "id": "qwen/qwen3-coder:free",

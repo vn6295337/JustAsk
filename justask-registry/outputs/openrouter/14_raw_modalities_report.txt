@@ -1,28 +1,28 @@
 ================================================================================
 RAW MODALITIES EXTRACTION REPORT
-Generated: 2026-03-06 08:00:05 IST
+Generated: 2026-03-07 07:53:46 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 27
+  Total models : 26
   Input        : 02_filtered_models.json
   Processor    : step_14_extract_modalities.py
   Output       : 14_raw_modalities.json
 
 RAW INPUT MODALITIES DISTRIBUTION:
-  19 models: text
+  18 models: text
    7 models: text, image
    1 models: image, text, video
 
 Total unique input types: 3
 
 RAW OUTPUT MODALITIES DISTRIBUTION:
-  27 models: text
+  26 models: text
 
 Total unique output types: 1
 
 RAW MODALITY COMBINATIONS (INPUT → OUTPUT):
-  19 models: text → text
+  18 models: text → text
    7 models: text, image → text
    1 models: image, text, video → text
 
@@ -187,19 +187,7 @@ MODEL 13: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 14: qwen/qwen3-235b-a22b-thinking-2507
---------------------------------------------------
-  ID: qwen/qwen3-235b-a22b-thinking-2507
-  Original Name: Qwen: Qwen3 235B A22B Thinking 2507
-  HuggingFace ID: Qwen/Qwen3-235B-A22B-Thinking-2507
-  Canonical Slug: qwen/qwen3-235b-a22b-thinking-2507
-  Clean Model Name: Qwen3 235B A22B Thinking 2507
-  Raw Input Modalities: text
-  Raw Output Modalities: text
-
-================================================================================
-
-MODEL 15: qwen/qwen3-4b-04-28
+MODEL 14: qwen/qwen3-4b-04-28
 --------------------------------------------------
   ID: qwen/qwen3-4b:free
   Original Name: Qwen: Qwen3 4B (free)
@@ -211,7 +199,7 @@ MODEL 15: qwen/qwen3-4b-04-28
 
 ================================================================================
 
-MODEL 16: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 15: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -223,7 +211,7 @@ MODEL 16: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 17: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 16: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID: qwen/qwen3-next-80b-a3b-instruct:free
   Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
@@ -235,7 +223,7 @@ MODEL 17: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 18: stepfun/step-3.5-flash
+MODEL 17: stepfun/step-3.5-flash
 --------------------------------------------------
   ID: stepfun/step-3.5-flash:free
   Original Name: StepFun: Step 3.5 Flash (free)
@@ -247,7 +235,7 @@ MODEL 18: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 19: arcee-ai/trinity-mini-20251201
+MODEL 18: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID: arcee-ai/trinity-mini:free
   Original Name: Arcee AI: Trinity Mini (free)
@@ -259,7 +247,7 @@ MODEL 19: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 20: venice/uncensored
+MODEL 19: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -271,7 +259,7 @@ MODEL 20: venice/uncensored
 
 ================================================================================
 
-MODEL 21: openrouter/free
+MODEL 20: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -283,7 +271,7 @@ MODEL 21: openrouter/free
 
 ================================================================================
 
-MODEL 22: google/gemma-3-12b-it
+MODEL 21: google/gemma-3-12b-it
 --------------------------------------------------
   ID: google/gemma-3-12b-it:free
   Original Name: Google: Gemma 3 12B (free)
@@ -295,7 +283,7 @@ MODEL 22: google/gemma-3-12b-it
 
 ================================================================================
 
-MODEL 23: google/gemma-3-27b-it
+MODEL 22: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
@@ -307,7 +295,7 @@ MODEL 23: google/gemma-3-27b-it
 
 ================================================================================
 
-MODEL 24: google/gemma-3-4b-it
+MODEL 23: google/gemma-3-4b-it
 --------------------------------------------------
   ID: google/gemma-3-4b-it:free
   Original Name: Google: Gemma 3 4B (free)
@@ -319,7 +307,7 @@ MODEL 24: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 25: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 24: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID: mistralai/mistral-small-3.1-24b-instruct:free
   Original Name: Mistral: Mistral Small 3.1 24B (free)
@@ -331,7 +319,7 @@ MODEL 25: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 26: qwen/qwen3-vl-235b-a22b-thinking
+MODEL 25: qwen/qwen3-vl-235b-a22b-thinking
 --------------------------------------------------
   ID: qwen/qwen3-vl-235b-a22b-thinking
   Original Name: Qwen: Qwen3 VL 235B A22B Thinking
@@ -343,7 +331,7 @@ MODEL 26: qwen/qwen3-vl-235b-a22b-thinking
 
 ================================================================================
 
-MODEL 27: qwen/qwen3-vl-30b-a3b-thinking
+MODEL 26: qwen/qwen3-vl-30b-a3b-thinking
 --------------------------------------------------
   ID: qwen/qwen3-vl-30b-a3b-thinking
   Original Name: Qwen: Qwen3 VL 30B A3B Thinking

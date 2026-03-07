@@ -1,39 +1,39 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-03-06 07:59:45 IST
+Generated: 2026-03-07 07:53:33 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
   Total models processed: 346
-  Models passed all filters: 27
-  Models excluded: 319
-  Success rate: 7.8%
+  Models passed all filters: 26
+  Models excluded: 320
+  Success rate: 7.5%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
     Input: 346 models
-    Excluded: 318 models (non-free pricing)
-    Remaining: 28 models
-
-  Step 2 - Billing Description Filter:
-    Input: 28 models
-    Excluded: 0 models (billing requirements in description)
-    Remaining: 28 models
-
-  Step 3 - Keyword Filter:
-    Input: 28 models
-    Excluded: 1 models (preview/experimental/beta)
+    Excluded: 319 models (non-free pricing)
     Remaining: 27 models
 
-  Step 4 - Deduplication Filter:
+  Step 2 - Billing Description Filter:
     Input: 27 models
+    Excluded: 0 models (billing requirements in description)
+    Remaining: 27 models
+
+  Step 3 - Keyword Filter:
+    Input: 27 models
+    Excluded: 1 models (preview/experimental/beta)
+    Remaining: 26 models
+
+  Step 4 - Deduplication Filter:
+    Input: 26 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 27 models
+    Final: 26 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 318 models with non-free pricing (details omitted due to volume)
+Excluded 319 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -56,29 +56,25 @@ No duplicate models found.
 FINAL FILTERED MODELS (PASSED ALL FILTERS)
 ================================================================================
 
-PROVIDER: QWEN (6 models)
+PROVIDER: QWEN (5 models)
 --------------------------------------------------
-   1. Qwen: Qwen3 235B A22B Thinking 2507
-      ID: qwen/qwen3-235b-a22b-thinking-2507
-      Pricing: prompt=0, completion=0, request=0
-
-   2. Qwen: Qwen3 4B (free)
+   1. Qwen: Qwen3 4B (free)
       ID: qwen/qwen3-4b:free
       Pricing: prompt=0, completion=0, request=N/A
 
-   3. Qwen: Qwen3 Coder 480B A35B (free)
+   2. Qwen: Qwen3 Coder 480B A35B (free)
       ID: qwen/qwen3-coder:free
       Pricing: prompt=0, completion=0, request=N/A
 
-   4. Qwen: Qwen3 Next 80B A3B Instruct (free)
+   3. Qwen: Qwen3 Next 80B A3B Instruct (free)
       ID: qwen/qwen3-next-80b-a3b-instruct:free
       Pricing: prompt=0, completion=0, request=N/A
 
-   5. Qwen: Qwen3 VL 235B A22B Thinking
+   4. Qwen: Qwen3 VL 235B A22B Thinking
       ID: qwen/qwen3-vl-235b-a22b-thinking
       Pricing: prompt=0, completion=0, request=0
 
-   6. Qwen: Qwen3 VL 30B A3B Thinking
+   5. Qwen: Qwen3 VL 30B A3B Thinking
       ID: qwen/qwen3-vl-30b-a3b-thinking
       Pricing: prompt=0, completion=0, request=0
 
@@ -206,10 +202,10 @@ PROVIDER: NOUS (1 models)
 ================================================================================
 FINAL SUMMARY:
   Total providers: 13
-  Total models passed all filters: 27
-  Models excluded by pricing: 318
+  Total models passed all filters: 26
+  Models excluded by pricing: 319
   Models excluded by billing description: 0
   Models excluded by keywords: 1
   Models excluded by deduplication: 0
-  Total exclusions: 319
+  Total exclusions: 320
   ✓ All filtered models accounted for

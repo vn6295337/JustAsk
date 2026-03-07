@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-03-06 08:00:05 IST",
-    "total_models": 32,
+    "generated_at": "2026-03-07 07:53:46 IST",
+    "total_models": 31,
     "pipeline_stage": "M_final_list_of_licenses"
   },
   "models": [
@@ -241,18 +241,6 @@
       "clean_model_name": "GPT OSS 20B",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE",
-      "license_name": "Apache-2.0",
-      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
-      "source_category": "opensource"
-    },
-    {
-      "id": "qwen/qwen3-235b-a22b-thinking-2507",
-      "canonical_slug": "qwen/qwen3-235b-a22b-thinking-2507",
-      "original_name": "Qwen: Qwen3 235B A22B Thinking 2507",
-      "hugging_face_id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-      "clean_model_name": "Qwen3 235B A22B Thinking 2507",
-      "license_info_text": "info",
-      "license_info_url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507/blob/main/LICENSE",
       "license_name": "Apache-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
       "source_category": "opensource"

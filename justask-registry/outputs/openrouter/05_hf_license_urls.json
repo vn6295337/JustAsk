@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-03-06 07:59:55 IST",
-    "total_models": 19,
+    "generated_at": "2026-03-07 07:53:39 IST",
+    "total_models": 18,
     "pipeline_stage": "E_fetch_other_license_info_urls_from_hf"
   },
   "models": [
@@ -95,13 +95,6 @@
       "name": "Z.ai: GLM 4.5 Air (free)",
       "hugging_face_id": "zai-org/GLM-4.5-Air",
       "license_info_url": "https://huggingface.co/zai-org/GLM-4.5-Air/blob/main/README.md"
-    },
-    {
-      "id": "qwen/qwen3-235b-a22b-thinking-2507",
-      "canonical_slug": "qwen/qwen3-235b-a22b-thinking-2507",
-      "name": "Qwen: Qwen3 235B A22B Thinking 2507",
-      "hugging_face_id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-      "license_info_url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507/blob/main/LICENSE"
     },
     {
       "id": "qwen/qwen3-coder:free",
