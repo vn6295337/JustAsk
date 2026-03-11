@@ -1,13 +1,13 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-03-10 07:57:47 IST
+Generated: 2026-03-11 07:57:36 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 346
+  Total models: 339
 
 PROVIDER BREAKDOWN (Descending Order):
-  OpenAI          :  61 models
+  OpenAI          :  60 models
     - gpt-3.5-turbo
     - gpt-3.5-turbo-0613
     - gpt-3.5-turbo-16k
@@ -54,7 +54,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - gpt-audio
     - gpt-audio-mini
     - gpt-oss-120b
-    - gpt-oss-120b:exacto
     - gpt-oss-120b:free
     - gpt-oss-20b
     - gpt-oss-20b:free
@@ -98,7 +97,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3-coder-flash
     - qwen3-coder-next
     - qwen3-coder-plus
-    - qwen3-coder:exacto
     - qwen3-coder:free
     - qwen3-max
     - qwen3-max-thinking
@@ -116,6 +114,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3.5-27b
     - qwen3.5-35b-a3b
     - qwen3.5-397b-a17b
+    - qwen3.5-9b
     - qwen3.5-flash-02-23
     - qwen3.5-plus-02-15
     - qwq-32b
@@ -173,7 +172,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - pixtral-large-2411
     - voxtral-small-24b-2507
 
-  Meta            :  16 models
+  Meta            :  15 models
     - llama-3-70b-instruct
     - llama-3-8b-instruct
     - llama-3.1-405b
@@ -188,7 +187,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - llama-3.3-70b-instruct:free
     - llama-4-maverick
     - llama-4-scout
-    - llama-guard-2-8b
     - llama-guard-4-12b
 
   Anthropic       :  13 models
@@ -206,7 +204,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - claude-sonnet-4.5
     - claude-sonnet-4.6
 
-  DeepSeek        :  12 models
+  DeepSeek        :  11 models
     - deepseek-chat
     - deepseek-chat-v3-0324
     - deepseek-chat-v3.1
@@ -215,19 +213,17 @@ PROVIDER BREAKDOWN (Descending Order):
     - deepseek-r1-distill-llama-70b
     - deepseek-r1-distill-qwen-32b
     - deepseek-v3.1-terminus
-    - deepseek-v3.1-terminus:exacto
     - deepseek-v3.2
     - deepseek-v3.2-exp
     - deepseek-v3.2-speciale
 
-  Z.ai            :  11 models
+  Z.ai            :  10 models
     - glm-4-32b
     - glm-4.5
     - glm-4.5-air
     - glm-4.5-air:free
     - glm-4.5v
     - glm-4.6
-    - glm-4.6:exacto
     - glm-4.6v
     - glm-4.7
     - glm-4.7-flash
@@ -286,13 +282,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - lfm-2.5-1.2b-thinking:free
     - lfm2-8b-a1b
 
-  MoonshotAI      :   5 models
-    - kimi-k2
-    - kimi-k2-0905
-    - kimi-k2-0905:exacto
-    - kimi-k2-thinking
-    - kimi-k2.5
-
   Amazon          :   5 models
     - nova-2-lite-v1
     - nova-lite-v1
@@ -321,11 +310,23 @@ PROVIDER BREAKDOWN (Descending Order):
     - hermes-4-405b
     - hermes-4-70b
 
+  ByteDance Seed  :   4 models
+    - seed-1.6
+    - seed-1.6-flash
+    - seed-2.0-lite
+    - seed-2.0-mini
+
   AionLabs        :   4 models
     - aion-1.0
     - aion-1.0-mini
     - aion-2.0
     - aion-rp-llama-3.1-8b
+
+  MoonshotAI      :   4 models
+    - kimi-k2
+    - kimi-k2-0905
+    - kimi-k2-thinking
+    - kimi-k2.5
 
   TheDrummer      :   4 models
     - cydonia-24b-v4.1
@@ -349,11 +350,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - mercury
     - mercury-2
     - mercury-coder
-
-  ByteDance Seed  :   3 models
-    - seed-1.6
-    - seed-1.6-flash
-    - seed-2.0-mini
 
   StepFun         :   2 models
     - step-3.5-flash
@@ -425,9 +421,6 @@ PROVIDER BREAKDOWN (Descending Order):
   Microsoft       :   1 models
     - phi-4
 
-  NeverSleep      :   1 models
-    - llama-3.1-lumimaid-8b
-
   Sao10k          :   1 models
     - l3-euryale-70b
 
@@ -437,4 +430,4 @@ PROVIDER BREAKDOWN (Descending Order):
   Mancer          :   1 models
     - weaver
 
-Total providers: 51
+Total providers: 50
