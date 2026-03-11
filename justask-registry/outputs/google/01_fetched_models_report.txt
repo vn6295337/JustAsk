@@ -1,7 +1,7 @@
 GOOGLE API MODELS FETCH REPORT
 ==================================================
 
-Generated: 2026-03-10 07:56:09 IST
+Generated: 2026-03-11 07:55:56 IST
 Total Models: 45
 
 MODELS LIST:
@@ -10,35 +10,35 @@ MODELS LIST:
  2. models/gemini-2.5-pro
  3. models/gemini-2.0-flash
  4. models/gemini-2.0-flash-001
- 5. models/gemini-2.0-flash-exp-image-generation
- 6. models/gemini-2.0-flash-lite-001
- 7. models/gemini-2.0-flash-lite
- 8. models/gemini-2.5-flash-preview-tts
- 9. models/gemini-2.5-pro-preview-tts
-10. models/gemma-3-1b-it
-11. models/gemma-3-4b-it
-12. models/gemma-3-12b-it
-13. models/gemma-3-27b-it
-14. models/gemma-3n-e4b-it
-15. models/gemma-3n-e2b-it
-16. models/gemini-flash-latest
-17. models/gemini-flash-lite-latest
-18. models/gemini-pro-latest
-19. models/gemini-2.5-flash-lite
-20. models/gemini-2.5-flash-image
-21. models/gemini-2.5-flash-lite-preview-09-2025
-22. models/gemini-3-pro-preview
-23. models/gemini-3-flash-preview
-24. models/gemini-3.1-pro-preview
-25. models/gemini-3.1-pro-preview-customtools
-26. models/gemini-3.1-flash-lite-preview
-27. models/gemini-3-pro-image-preview
-28. models/nano-banana-pro-preview
-29. models/gemini-3.1-flash-image-preview
-30. models/gemini-robotics-er-1.5-preview
-31. models/gemini-2.5-computer-use-preview-10-2025
-32. models/deep-research-pro-preview-12-2025
-33. models/gemini-embedding-001
+ 5. models/gemini-2.0-flash-lite-001
+ 6. models/gemini-2.0-flash-lite
+ 7. models/gemini-2.5-flash-preview-tts
+ 8. models/gemini-2.5-pro-preview-tts
+ 9. models/gemma-3-1b-it
+10. models/gemma-3-4b-it
+11. models/gemma-3-12b-it
+12. models/gemma-3-27b-it
+13. models/gemma-3n-e4b-it
+14. models/gemma-3n-e2b-it
+15. models/gemini-flash-latest
+16. models/gemini-flash-lite-latest
+17. models/gemini-pro-latest
+18. models/gemini-2.5-flash-lite
+19. models/gemini-2.5-flash-image
+20. models/gemini-2.5-flash-lite-preview-09-2025
+21. models/gemini-3-pro-preview
+22. models/gemini-3-flash-preview
+23. models/gemini-3.1-pro-preview
+24. models/gemini-3.1-pro-preview-customtools
+25. models/gemini-3.1-flash-lite-preview
+26. models/gemini-3-pro-image-preview
+27. models/nano-banana-pro-preview
+28. models/gemini-3.1-flash-image-preview
+29. models/gemini-robotics-er-1.5-preview
+30. models/gemini-2.5-computer-use-preview-10-2025
+31. models/deep-research-pro-preview-12-2025
+32. models/gemini-embedding-001
+33. models/gemini-embedding-2-preview
 34. models/aqa
 35. models/imagen-4.0-generate-001
 36. models/imagen-4.0-ultra-generate-001

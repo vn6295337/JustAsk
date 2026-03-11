@@ -1,5 +1,5 @@
 === GOOGLE MODELS FILTERING REPORT ===
-Generated: 2026-03-10 07:56:09 IST
+Generated: 2026-03-11 07:55:56 IST
 
 === SUMMARY ===
 Total Input Models: 45
@@ -8,25 +8,25 @@ Models Excluded: 25
 Filtering Success Rate: 44.4%
 
 === EXCLUDED MODELS ===
- 1. gemini-2.0-flash-exp-image-generation
- 2. gemini-2.5-flash-preview-tts
- 3. gemini-2.5-pro-preview-tts
- 4. gemini-flash-latest
- 5. gemini-flash-lite-latest
- 6. gemini-pro-latest
- 7. gemini-2.5-flash-image
- 8. gemini-2.5-flash-lite-preview-09-2025
- 9. gemini-3-pro-preview
-10. gemini-3-flash-preview
-11. gemini-3.1-pro-preview
-12. gemini-3.1-pro-preview-customtools
-13. gemini-3.1-flash-lite-preview
-14. gemini-3-pro-image-preview
-15. nano-banana-pro-preview
-16. gemini-3.1-flash-image-preview
-17. gemini-robotics-er-1.5-preview
-18. gemini-2.5-computer-use-preview-10-2025
-19. deep-research-pro-preview-12-2025
+ 1. gemini-2.5-flash-preview-tts
+ 2. gemini-2.5-pro-preview-tts
+ 3. gemini-flash-latest
+ 4. gemini-flash-lite-latest
+ 5. gemini-pro-latest
+ 6. gemini-2.5-flash-image
+ 7. gemini-2.5-flash-lite-preview-09-2025
+ 8. gemini-3-pro-preview
+ 9. gemini-3-flash-preview
+10. gemini-3.1-pro-preview
+11. gemini-3.1-pro-preview-customtools
+12. gemini-3.1-flash-lite-preview
+13. gemini-3-pro-image-preview
+14. nano-banana-pro-preview
+15. gemini-3.1-flash-image-preview
+16. gemini-robotics-er-1.5-preview
+17. gemini-2.5-computer-use-preview-10-2025
+18. deep-research-pro-preview-12-2025
+19. gemini-embedding-2-preview
 20. veo-2.0-generate-001
 21. veo-3.1-generate-preview
 22. veo-3.1-fast-generate-preview
