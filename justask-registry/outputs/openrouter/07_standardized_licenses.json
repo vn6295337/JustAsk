@@ -1,10 +1,18 @@
 {
   "metadata": {
-    "generated_at": "2026-03-11 07:57:45 IST",
-    "total_models": 18,
+    "generated_at": "2026-03-12 08:03:41 IST",
+    "total_models": 17,
     "pipeline_stage": "G_standardize_other_license_names_from_hf"
   },
   "models": [
+    {
+      "id": "nvidia/nemotron-3-super-120b-a12b:free",
+      "canonical_slug": "nvidia/nemotron-3-super-120b-a12b-20230311",
+      "name": "NVIDIA: Nemotron 3 Super (free)",
+      "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
+      "raw_extracted_license": "nvidia-open-model-license",
+      "standardized_license_name": "NVIDIA"
+    },
     {
       "id": "stepfun/step-3.5-flash:free",
       "canonical_slug": "stepfun/step-3.5-flash",
@@ -52,22 +60,6 @@
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16",
       "raw_extracted_license": "nvidia-open-model-license",
       "standardized_license_name": "NVIDIA"
-    },
-    {
-      "id": "qwen/qwen3-vl-30b-a3b-thinking",
-      "canonical_slug": "qwen/qwen3-vl-30b-a3b-thinking",
-      "name": "Qwen: Qwen3 VL 30B A3B Thinking",
-      "hugging_face_id": "Qwen/Qwen3-VL-30B-A3B-Thinking",
-      "raw_extracted_license": "apache-2.0",
-      "standardized_license_name": "Apache-2.0"
-    },
-    {
-      "id": "qwen/qwen3-vl-235b-a22b-thinking",
-      "canonical_slug": "qwen/qwen3-vl-235b-a22b-thinking",
-      "name": "Qwen: Qwen3 VL 235B A22B Thinking",
-      "hugging_face_id": "Qwen/Qwen3-VL-235B-A22B-Thinking",
-      "raw_extracted_license": "apache-2.0",
-      "standardized_license_name": "Apache-2.0"
     },
     {
       "id": "qwen/qwen3-next-80b-a3b-instruct:free",

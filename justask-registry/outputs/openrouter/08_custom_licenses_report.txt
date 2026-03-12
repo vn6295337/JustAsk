@@ -1,17 +1,17 @@
 ================================================================================
 CUSTOM LICENSE MODELS REPORT
-Generated: 2026-03-11 07:57:45 IST
+Generated: 2026-03-12 08:03:41 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 5
+  Total models : 6
   Input        : 07_standardized_licenses.json
   Reference    : opensource_license_urls.json
   Processor    : step_08_bucketize_licenses.py
   Output       : 08_custom_licenses.json
 
 CUSTOM LICENSE DISTRIBUTION:
-  NVIDIA: 3 models
+  NVIDIA: 4 models
   lfm1.0: 2 models
 
 Total license types: 2
@@ -28,7 +28,16 @@ MODEL 1: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 2: nvidia/nemotron-nano-12b-v2-vl
+MODEL 2: nvidia/nemotron-3-super-120b-a12b-20230311
+--------------------------------------------------
+  ID              : nvidia/nemotron-3-super-120b-a12b:free
+  Canonical Slug  : nvidia/nemotron-3-super-120b-a12b-20230311
+  HuggingFace ID  : nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8
+  License Name    : NVIDIA
+
+================================================================================
+
+MODEL 3: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID              : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug  : nvidia/nemotron-nano-12b-v2-vl
@@ -37,7 +46,7 @@ MODEL 2: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 3: nvidia/nemotron-nano-9b-v2
+MODEL 4: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID              : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug  : nvidia/nemotron-nano-9b-v2
@@ -46,7 +55,7 @@ MODEL 3: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 4: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 5: liquid/lfm-2.5-1.2b-instruct-20260120
 --------------------------------------------------
   ID              : liquid/lfm-2.5-1.2b-instruct:free
   Canonical Slug  : liquid/lfm-2.5-1.2b-instruct-20260120
@@ -55,7 +64,7 @@ MODEL 4: liquid/lfm-2.5-1.2b-instruct-20260120
 
 ================================================================================
 
-MODEL 5: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 6: liquid/lfm-2.5-1.2b-thinking-20260120
 --------------------------------------------------
   ID              : liquid/lfm-2.5-1.2b-thinking:free
   Canonical Slug  : liquid/lfm-2.5-1.2b-thinking-20260120

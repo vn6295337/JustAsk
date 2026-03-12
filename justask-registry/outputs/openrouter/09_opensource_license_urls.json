@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-03-11 07:57:46 IST",
-    "total_models": 13,
+    "generated_at": "2026-03-12 08:03:41 IST",
+    "total_models": 11,
     "pipeline_stage": "I_opensource_license_urls"
   },
   "models": [
@@ -18,22 +18,6 @@
       "canonical_slug": "arcee-ai/trinity-mini-20251201",
       "name": "Arcee AI: Trinity Mini (free)",
       "hugging_face_id": "arcee-ai/Trinity-Mini",
-      "license_name": "Apache-2.0",
-      "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
-    },
-    {
-      "id": "qwen/qwen3-vl-30b-a3b-thinking",
-      "canonical_slug": "qwen/qwen3-vl-30b-a3b-thinking",
-      "name": "Qwen: Qwen3 VL 30B A3B Thinking",
-      "hugging_face_id": "Qwen/Qwen3-VL-30B-A3B-Thinking",
-      "license_name": "Apache-2.0",
-      "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
-    },
-    {
-      "id": "qwen/qwen3-vl-235b-a22b-thinking",
-      "canonical_slug": "qwen/qwen3-vl-235b-a22b-thinking",
-      "name": "Qwen: Qwen3 VL 235B A22B Thinking",
-      "hugging_face_id": "Qwen/Qwen3-VL-235B-A22B-Thinking",
       "license_name": "Apache-2.0",
       "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },

@@ -1,10 +1,52 @@
 {
   "metadata": {
-    "generated_at": "2026-03-11 07:57:48 IST",
-    "total_models": 26,
+    "generated_at": "2026-03-12 08:03:45 IST",
+    "total_models": 27,
     "pipeline_stage": "O_standardize_raw_modalities"
   },
   "models": [
+    {
+      "id": "openrouter/hunter-alpha",
+      "canonical_slug": "openrouter/hunter-alpha",
+      "original_name": "Hunter Alpha",
+      "hugging_face_id": "",
+      "clean_model_name": "Hunter Alpha",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model"
+    },
+    {
+      "id": "openrouter/healer-alpha",
+      "canonical_slug": "openrouter/healer-alpha",
+      "original_name": "Healer Alpha",
+      "hugging_face_id": "",
+      "clean_model_name": "Healer Alpha",
+      "raw_input_modalities": "text, image, audio, video",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text, image, audio, video",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text, Image, Audio, Video",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model"
+    },
+    {
+      "id": "nvidia/nemotron-3-super-120b-a12b:free",
+      "canonical_slug": "nvidia/nemotron-3-super-120b-a12b-20230311",
+      "original_name": "NVIDIA: Nemotron 3 Super (free)",
+      "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
+      "clean_model_name": "Nemotron 3 Super",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model"
+    },
     {
       "id": "openrouter/free",
       "canonical_slug": "openrouter/free",
@@ -100,34 +142,6 @@
       "enhanced_input_modalities": "image, text, video",
       "enhanced_output_modalities": "text",
       "standardized_input_modalities": "Text, Image, Video",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model"
-    },
-    {
-      "id": "qwen/qwen3-vl-30b-a3b-thinking",
-      "canonical_slug": "qwen/qwen3-vl-30b-a3b-thinking",
-      "original_name": "Qwen: Qwen3 VL 30B A3B Thinking",
-      "hugging_face_id": "Qwen/Qwen3-VL-30B-A3B-Thinking",
-      "clean_model_name": "Qwen3 VL 30B A3B Thinking",
-      "raw_input_modalities": "text, image",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text, image",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text, Image",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model"
-    },
-    {
-      "id": "qwen/qwen3-vl-235b-a22b-thinking",
-      "canonical_slug": "qwen/qwen3-vl-235b-a22b-thinking",
-      "original_name": "Qwen: Qwen3 VL 235B A22B Thinking",
-      "hugging_face_id": "Qwen/Qwen3-VL-235B-A22B-Thinking",
-      "clean_model_name": "Qwen3 VL 235B A22B Thinking",
-      "raw_input_modalities": "text, image",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text, image",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text, Image",
       "standardized_output_modalities": "Text",
       "google_enhancement_status": "no_google_model"
     },

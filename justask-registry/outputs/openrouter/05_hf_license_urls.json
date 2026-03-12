@@ -1,10 +1,17 @@
 {
   "metadata": {
-    "generated_at": "2026-03-11 07:57:41 IST",
-    "total_models": 18,
+    "generated_at": "2026-03-12 08:03:35 IST",
+    "total_models": 17,
     "pipeline_stage": "E_fetch_other_license_info_urls_from_hf"
   },
   "models": [
+    {
+      "id": "nvidia/nemotron-3-super-120b-a12b:free",
+      "canonical_slug": "nvidia/nemotron-3-super-120b-a12b-20230311",
+      "name": "NVIDIA: Nemotron 3 Super (free)",
+      "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
+      "license_info_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8/blob/main/README.md"
+    },
     {
       "id": "stepfun/step-3.5-flash:free",
       "canonical_slug": "stepfun/step-3.5-flash",
@@ -46,20 +53,6 @@
       "name": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16",
       "license_info_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16/blob/main/README.md"
-    },
-    {
-      "id": "qwen/qwen3-vl-30b-a3b-thinking",
-      "canonical_slug": "qwen/qwen3-vl-30b-a3b-thinking",
-      "name": "Qwen: Qwen3 VL 30B A3B Thinking",
-      "hugging_face_id": "Qwen/Qwen3-VL-30B-A3B-Thinking",
-      "license_info_url": "https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Thinking/blob/main/README.md"
-    },
-    {
-      "id": "qwen/qwen3-vl-235b-a22b-thinking",
-      "canonical_slug": "qwen/qwen3-vl-235b-a22b-thinking",
-      "name": "Qwen: Qwen3 VL 235B A22B Thinking",
-      "hugging_face_id": "Qwen/Qwen3-VL-235B-A22B-Thinking",
-      "license_info_url": "https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Thinking/blob/main/README.md"
     },
     {
       "id": "qwen/qwen3-next-80b-a3b-instruct:free",
