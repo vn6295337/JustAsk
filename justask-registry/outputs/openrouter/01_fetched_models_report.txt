@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-03-12 08:03:27 IST
+Generated: 2026-03-13 08:01:37 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 342
+  Total models: 344
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  60 models
@@ -217,6 +217,18 @@ PROVIDER BREAKDOWN (Descending Order):
     - deepseek-v3.2-exp
     - deepseek-v3.2-speciale
 
+  xAI             :  10 models
+    - grok-3
+    - grok-3-beta
+    - grok-3-mini
+    - grok-3-mini-beta
+    - grok-4
+    - grok-4-fast
+    - grok-4.1-fast
+    - grok-4.20-beta
+    - grok-4.20-multi-agent-beta
+    - grok-code-fast-1
+
   Z.ai            :  10 models
     - glm-4-32b
     - glm-4.5
@@ -239,16 +251,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - nemotron-nano-12b-v2-vl:free
     - nemotron-nano-9b-v2
     - nemotron-nano-9b-v2:free
-
-  xAI             :   8 models
-    - grok-3
-    - grok-3-beta
-    - grok-3-mini
-    - grok-3-mini-beta
-    - grok-4
-    - grok-4-fast
-    - grok-4.1-fast
-    - grok-code-fast-1
 
   Arcee AI        :   7 models
     - coder-large
