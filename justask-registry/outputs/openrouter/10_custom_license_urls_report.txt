@@ -1,6 +1,6 @@
 ================================================================================
 CUSTOM LICENSE URLS ENRICHMENT REPORT
-Generated: 2026-03-14 07:59:19 IST
+Generated: 2026-03-15 08:19:38 IST
 ================================================================================
 
 SUMMARY:
@@ -22,10 +22,11 @@ URL RESOLUTION STATISTICS:
   Success rate: 100.0%
 
 CUSTOM LICENSE DISTRIBUTION:
-  NVIDIA: 4 models
+  NVIDIA: 3 models
   lfm1.0: 2 models
+  nvidia-nemotron-open-model-license: 1 models
 
-Total license types: 2
+Total license types: 3
 
 DETAILED MODEL LICENSE URL MAPPINGS:
 ================================================================================
@@ -68,7 +69,7 @@ MODEL 4: nvidia/nemotron-3-super-120b-a12b-20230311
   ID                     : nvidia/nemotron-3-super-120b-a12b:free
   Canonical Slug         : nvidia/nemotron-3-super-120b-a12b-20230311
   HuggingFace ID         : nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8
-  License Name           : NVIDIA
+  License Name           : nvidia-nemotron-open-model-license
   License URL            : https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8/blob/main/README.md
   License URL Type       : README.md file
 

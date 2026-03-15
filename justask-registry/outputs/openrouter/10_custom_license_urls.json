@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-14 07:59:19 IST",
+    "generated_at": "2026-03-15 08:19:38 IST",
     "total_models": 6,
     "pipeline_stage": "J_custom_license_urls"
   },
@@ -10,7 +10,7 @@
       "canonical_slug": "nvidia/nemotron-3-super-120b-a12b-20230311",
       "name": "NVIDIA: Nemotron 3 Super (free)",
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
-      "license_name": "NVIDIA",
+      "license_name": "nvidia-nemotron-open-model-license",
       "license_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8/blob/main/README.md",
       "license_url_type": "README.md file"
     },

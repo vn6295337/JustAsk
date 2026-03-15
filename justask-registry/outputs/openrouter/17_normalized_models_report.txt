@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-03-14 07:59:21 IST
+Generated: 2026-03-15 08:19:40 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -235,7 +235,7 @@ COMPLETE MODEL RECORDS:
  17. Nemotron 3 Super
      Provider           : NVIDIA (United States)
      Modalities         : Text → Text
-     License            : NVIDIA
+     License            : nvidia-nemotron-open-model-license
      License Info       : 
      License URL        : https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8/blob/main/README.md
      Official URL       : https://build.nvidia.com/

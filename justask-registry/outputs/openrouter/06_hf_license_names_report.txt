@@ -1,6 +1,6 @@
 ================================================================================
 OTHER MODEL LICENSE NAME EXTRACTIONS REPORT
-Generated: 2026-03-14 07:59:17 IST
+Generated: 2026-03-15 08:19:35 IST
 ================================================================================
 
 SUMMARY:
@@ -14,9 +14,10 @@ LICENSE DISTRIBUTION:
   lfm1.0: 2
   llama3: 1
   mit: 1
-  nvidia-open-model-license: 4
+  nvidia-nemotron-open-model-license: 1
+  nvidia-open-model-license: 3
 
-Total license types: 5
+Total license types: 6
 
 DETAILED MODEL EXTRACTION RESULTS:
 ================================================================================
@@ -26,7 +27,7 @@ MODEL 1: nvidia/nemotron-3-super-120b-a12b-20230311
   ID               : nvidia/nemotron-3-super-120b-a12b:free
   Canonical Slug   : nvidia/nemotron-3-super-120b-a12b-20230311
   HuggingFace ID   : nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8
-  Extracted License: nvidia-open-model-license
+  Extracted License: nvidia-nemotron-open-model-license
 
 ================================================================================
 

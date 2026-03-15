@@ -1,6 +1,6 @@
 ================================================================================
 STANDARDIZED OTHER LICENSE NAMES REPORT
-Generated: 2026-03-14 07:59:17 IST
+Generated: 2026-03-15 08:19:36 IST
 ================================================================================
 
 SUMMARY:
@@ -11,18 +11,19 @@ SUMMARY:
   Output       : 07_standardized_licenses.json
 
 STANDARDIZATION RESULTS:
-  Models with license transformations: 15
-  Models unchanged: 2
-  Transformation rate: 88.2%
+  Models with license transformations: 14
+  Models unchanged: 3
+  Transformation rate: 82.4%
 
 STANDARDIZED LICENSE DISTRIBUTION:
   Apache-2.0: 9 models
   Llama-3.1: 1 models
   MIT: 1 models
-  NVIDIA: 4 models
+  NVIDIA: 3 models
   lfm1.0: 2 models
+  nvidia-nemotron-open-model-license: 1 models
 
-Total license types: 5
+Total license types: 6
 
 LICENSE NAME TRANSFORMATIONS:
   'apache-2.0' → 'Apache-2.0'
@@ -32,7 +33,8 @@ LICENSE NAME TRANSFORMATIONS:
 
 Total unique transformations: 4
 
-MODELS WITH NO LICENSE CHANGES (2 models):
+MODELS WITH NO LICENSE CHANGES (3 models):
+  NVIDIA: Nemotron 3 Super (free): 'nvidia-nemotron-open-model-license'
   LiquidAI: LFM2.5-1.2B-Thinking (free): 'lfm1.0'
   LiquidAI: LFM2.5-1.2B-Instruct (free): 'lfm1.0'
 
@@ -159,17 +161,7 @@ MODEL 12: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 13: nvidia/nemotron-3-super-120b-a12b-20230311
---------------------------------------------------
-  ID                     : nvidia/nemotron-3-super-120b-a12b:free
-  Canonical Slug         : nvidia/nemotron-3-super-120b-a12b-20230311
-  HuggingFace ID         : nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8
-  Raw License            : nvidia-open-model-license
-  Standardized License   : NVIDIA
-
-================================================================================
-
-MODEL 14: nvidia/nemotron-nano-12b-v2-vl
+MODEL 13: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug         : nvidia/nemotron-nano-12b-v2-vl
@@ -179,7 +171,7 @@ MODEL 14: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 15: nvidia/nemotron-nano-9b-v2
+MODEL 14: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug         : nvidia/nemotron-nano-9b-v2
