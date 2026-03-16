@@ -1,31 +1,32 @@
 ================================================================================
 CUSTOM LICENSE MODELS REPORT
-Generated: 2026-03-15 08:19:36 IST
+Generated: 2026-03-16 08:20:25 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 6
+  Total models : 7
   Input        : 07_standardized_licenses.json
   Reference    : opensource_license_urls.json
   Processor    : step_08_bucketize_licenses.py
   Output       : 08_custom_licenses.json
 
 CUSTOM LICENSE DISTRIBUTION:
-  NVIDIA: 3 models
+  Modified MIT: 1 models
+  NVIDIA: 2 models
   lfm1.0: 2 models
-  nvidia-nemotron-open-model-license: 1 models
+  nvidia-nemotron-open-model-license: 2 models
 
-Total license types: 3
+Total license types: 4
 
 DETAILED CUSTOM LICENSE MODEL LISTINGS:
 ================================================================================
 
-MODEL 1: nvidia/nemotron-3-nano-30b-a3b
+MODEL 1: minimax/minimax-m2.5-20260211
 --------------------------------------------------
-  ID              : nvidia/nemotron-3-nano-30b-a3b:free
-  Canonical Slug  : nvidia/nemotron-3-nano-30b-a3b
-  HuggingFace ID  : nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
-  License Name    : NVIDIA
+  ID              : minimax/minimax-m2.5:free
+  Canonical Slug  : minimax/minimax-m2.5-20260211
+  HuggingFace ID  : MiniMaxAI/MiniMax-M2.5
+  License Name    : Modified MIT
 
 ================================================================================
 
@@ -65,7 +66,16 @@ MODEL 5: liquid/lfm-2.5-1.2b-thinking-20260120
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 6: nvidia/nemotron-3-nano-30b-a3b
+--------------------------------------------------
+  ID              : nvidia/nemotron-3-nano-30b-a3b:free
+  Canonical Slug  : nvidia/nemotron-3-nano-30b-a3b
+  HuggingFace ID  : nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
+  License Name    : nvidia-nemotron-open-model-license
+
+================================================================================
+
+MODEL 7: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID              : nvidia/nemotron-3-super-120b-a12b:free
   Canonical Slug  : nvidia/nemotron-3-super-120b-a12b-20230311

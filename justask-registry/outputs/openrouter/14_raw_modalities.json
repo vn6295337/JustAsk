@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-03-15 08:19:39 IST",
-    "total_models": 27,
+    "generated_at": "2026-03-16 08:20:29 IST",
+    "total_models": 28,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
@@ -11,7 +11,7 @@
       "original_name": "Hunter Alpha",
       "hugging_face_id": "",
       "clean_model_name": "Hunter Alpha",
-      "raw_input_modalities": "text",
+      "raw_input_modalities": "text, image",
       "raw_output_modalities": "text"
     },
     {
@@ -29,6 +29,15 @@
       "original_name": "NVIDIA: Nemotron 3 Super (free)",
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
       "clean_model_name": "Nemotron 3 Super",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text"
+    },
+    {
+      "id": "minimax/minimax-m2.5:free",
+      "canonical_slug": "minimax/minimax-m2.5-20260211",
+      "original_name": "MiniMax: MiniMax M2.5 (free)",
+      "hugging_face_id": "MiniMaxAI/MiniMax-M2.5",
+      "clean_model_name": "MiniMax M2.5",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text"
     },

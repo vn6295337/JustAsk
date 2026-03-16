@@ -1,30 +1,30 @@
 ================================================================================
 RAW MODALITIES EXTRACTION REPORT
-Generated: 2026-03-15 08:19:39 IST
+Generated: 2026-03-16 08:20:29 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 27
+  Total models : 28
   Input        : 02_filtered_models.json
   Processor    : step_14_extract_modalities.py
   Output       : 14_raw_modalities.json
 
 RAW INPUT MODALITIES DISTRIBUTION:
   20 models: text
-   5 models: text, image
+   6 models: text, image
    1 models: image, text, video
    1 models: text, image, audio, video
 
 Total unique input types: 4
 
 RAW OUTPUT MODALITIES DISTRIBUTION:
-  27 models: text
+  28 models: text
 
 Total unique output types: 1
 
 RAW MODALITY COMBINATIONS (INPUT → OUTPUT):
   20 models: text → text
-   5 models: text, image → text
+   6 models: text, image → text
    1 models: image, text, video → text
    1 models: text, image, audio, video → text
 
@@ -117,19 +117,7 @@ MODEL 7: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 8: openrouter/hunter-alpha
---------------------------------------------------
-  ID: openrouter/hunter-alpha
-  Original Name: Hunter Alpha
-  HuggingFace ID: 
-  Canonical Slug: openrouter/hunter-alpha
-  Clean Model Name: Hunter Alpha
-  Raw Input Modalities: text
-  Raw Output Modalities: text
-
-================================================================================
-
-MODEL 9: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 8: liquid/lfm-2.5-1.2b-instruct-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-instruct:free
   Original Name: LiquidAI: LFM2.5-1.2B-Instruct (free)
@@ -141,7 +129,7 @@ MODEL 9: liquid/lfm-2.5-1.2b-instruct-20260120
 
 ================================================================================
 
-MODEL 10: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 9: liquid/lfm-2.5-1.2b-thinking-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-thinking:free
   Original Name: LiquidAI: LFM2.5-1.2B-Thinking (free)
@@ -153,7 +141,7 @@ MODEL 10: liquid/lfm-2.5-1.2b-thinking-20260120
 
 ================================================================================
 
-MODEL 11: meta-llama/llama-3.2-3b-instruct
+MODEL 10: meta-llama/llama-3.2-3b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.2-3b-instruct:free
   Original Name: Meta: Llama 3.2 3B Instruct (free)
@@ -165,13 +153,25 @@ MODEL 11: meta-llama/llama-3.2-3b-instruct
 
 ================================================================================
 
-MODEL 12: meta-llama/llama-3.3-70b-instruct
+MODEL 11: meta-llama/llama-3.3-70b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.3-70b-instruct:free
   Original Name: Meta: Llama 3.3 70B Instruct (free)
   HuggingFace ID: meta-llama/Llama-3.3-70B-Instruct
   Canonical Slug: meta-llama/llama-3.3-70b-instruct
   Clean Model Name: Llama 3.3 70B Instruct
+  Raw Input Modalities: text
+  Raw Output Modalities: text
+
+================================================================================
+
+MODEL 12: minimax/minimax-m2.5-20260211
+--------------------------------------------------
+  ID: minimax/minimax-m2.5:free
+  Original Name: MiniMax: MiniMax M2.5 (free)
+  HuggingFace ID: MiniMaxAI/MiniMax-M2.5
+  Canonical Slug: minimax/minimax-m2.5-20260211
+  Clean Model Name: MiniMax M2.5
   Raw Input Modalities: text
   Raw Output Modalities: text
 
@@ -333,7 +333,19 @@ MODEL 25: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 26: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 26: openrouter/hunter-alpha
+--------------------------------------------------
+  ID: openrouter/hunter-alpha
+  Original Name: Hunter Alpha
+  HuggingFace ID: 
+  Canonical Slug: openrouter/hunter-alpha
+  Clean Model Name: Hunter Alpha
+  Raw Input Modalities: text, image
+  Raw Output Modalities: text
+
+================================================================================
+
+MODEL 27: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID: mistralai/mistral-small-3.1-24b-instruct:free
   Original Name: Mistral: Mistral Small 3.1 24B (free)
@@ -345,7 +357,7 @@ MODEL 26: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 27: openrouter/healer-alpha
+MODEL 28: openrouter/healer-alpha
 --------------------------------------------------
   ID: openrouter/healer-alpha
   Original Name: Healer Alpha

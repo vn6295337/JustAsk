@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-03-15 08:19:39 IST",
-    "total_models": 6,
+    "generated_at": "2026-03-16 08:20:28 IST",
+    "total_models": 7,
     "pipeline_stage": "L_collate_custom_licenses"
   },
   "models": [
@@ -15,6 +15,17 @@
       "license_info_url": "",
       "license_name": "nvidia-nemotron-open-model-license",
       "license_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8/blob/main/README.md"
+    },
+    {
+      "id": "minimax/minimax-m2.5:free",
+      "canonical_slug": "minimax/minimax-m2.5-20260211",
+      "original_name": "MiniMax: MiniMax M2.5 (free)",
+      "hugging_face_id": "MiniMaxAI/MiniMax-M2.5",
+      "clean_model_name": "MiniMax M2.5",
+      "license_info_text": "",
+      "license_info_url": "",
+      "license_name": "Modified MIT",
+      "license_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md"
     },
     {
       "id": "liquid/lfm-2.5-1.2b-thinking:free",
@@ -46,7 +57,7 @@
       "clean_model_name": "Nemotron 3 Nano 30B A3B",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "NVIDIA",
+      "license_name": "nvidia-nemotron-open-model-license",
       "license_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md"
     },
     {

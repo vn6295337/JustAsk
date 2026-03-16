@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-03-15 08:19:39 IST",
-    "total_models": 30,
+    "generated_at": "2026-03-16 08:20:28 IST",
+    "total_models": 31,
     "pipeline_stage": "M_final_list_of_licenses"
   },
   "models": [
@@ -150,6 +150,18 @@
       "source_category": "meta"
     },
     {
+      "id": "minimax/minimax-m2.5:free",
+      "canonical_slug": "minimax/minimax-m2.5-20260211",
+      "original_name": "MiniMax: MiniMax M2.5 (free)",
+      "hugging_face_id": "MiniMaxAI/MiniMax-M2.5",
+      "clean_model_name": "MiniMax M2.5",
+      "license_info_text": "",
+      "license_info_url": "",
+      "license_name": "Modified MIT",
+      "license_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md",
+      "source_category": "custom"
+    },
+    {
       "id": "mistralai/devstral-2512:free",
       "canonical_slug": "mistralai/devstral-2512",
       "original_name": "Mistralai/Devstral 2512",
@@ -193,7 +205,7 @@
       "clean_model_name": "Nemotron 3 Nano 30B A3B",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "NVIDIA",
+      "license_name": "nvidia-nemotron-open-model-license",
       "license_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md",
       "source_category": "custom"
     },

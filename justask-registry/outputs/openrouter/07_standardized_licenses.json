@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-03-15 08:19:36 IST",
-    "total_models": 17,
+    "generated_at": "2026-03-16 08:20:25 IST",
+    "total_models": 18,
     "pipeline_stage": "G_standardize_other_license_names_from_hf"
   },
   "models": [
@@ -12,6 +12,14 @@
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
       "raw_extracted_license": "nvidia-nemotron-open-model-license",
       "standardized_license_name": "nvidia-nemotron-open-model-license"
+    },
+    {
+      "id": "minimax/minimax-m2.5:free",
+      "canonical_slug": "minimax/minimax-m2.5-20260211",
+      "name": "MiniMax: MiniMax M2.5 (free)",
+      "hugging_face_id": "MiniMaxAI/MiniMax-M2.5",
+      "raw_extracted_license": "modified-mit",
+      "standardized_license_name": "Modified MIT"
     },
     {
       "id": "stepfun/step-3.5-flash:free",
@@ -42,8 +50,8 @@
       "canonical_slug": "nvidia/nemotron-3-nano-30b-a3b",
       "name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
-      "raw_extracted_license": "nvidia-open-model-license",
-      "standardized_license_name": "NVIDIA"
+      "raw_extracted_license": "nvidia-nemotron-open-model-license",
+      "standardized_license_name": "nvidia-nemotron-open-model-license"
     },
     {
       "id": "arcee-ai/trinity-mini:free",

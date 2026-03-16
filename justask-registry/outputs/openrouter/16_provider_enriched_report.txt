@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-03-15 08:19:40 IST
+Generated: 2026-03-16 08:20:29 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 27
+  Total models      : 28
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -22,19 +22,21 @@ MODEL PROVIDER DISTRIBUTION:
    2 models: OpenAI
    1 models: Arcee
    1 models: Cognitive Computations
+   1 models: MiniMax
    1 models: Mistral AI
    1 models: Nous Research
    1 models: StepFun
    1 models: Z.AI
 
-Total unique model providers: 13
+Total unique model providers: 14
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
   21 models: United States
    5 models: China
    1 models: France
+   1 models: Singapore
 
-Total unique countries: 3
+Total unique countries: 4
 
 MODEL FAMILY DISTRIBUTION:
    5 models: gemma
@@ -46,12 +48,13 @@ MODEL FAMILY DISTRIBUTION:
    2 models: openai
    1 models: arcee
    1 models: cognitive computations
+   1 models: minimax
    1 models: mistral ai
    1 models: nous research
    1 models: stepfun
    1 models: z.ai
 
-Total unique model families: 13
+Total unique model families: 14
 
 DETAILED PROVIDER ENRICHED MODEL INFORMATION:
 ================================================================================
@@ -252,7 +255,21 @@ MODEL 14: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 15: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 15: minimax/minimax-m2.5-20260211
+--------------------------------------------------
+  ID: minimax/minimax-m2.5:free
+  Original Name: MiniMax: MiniMax M2.5 (free)
+  HuggingFace ID: MiniMaxAI/MiniMax-M2.5
+  Canonical Slug: minimax/minimax-m2.5-20260211
+  Clean Model Name: MiniMax M2.5
+  Model Provider: MiniMax
+  Model Provider Country: Singapore
+  Model Family: minimax
+  Official URL: https://www.minimax.io/
+
+================================================================================
+
+MODEL 16: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID: mistralai/mistral-small-3.1-24b-instruct:free
   Original Name: Mistral: Mistral Small 3.1 24B (free)
@@ -266,7 +283,7 @@ MODEL 15: mistralai/mistral-small-3.1-24b-instruct-2503
 
 ================================================================================
 
-MODEL 16: nousresearch/hermes-3-llama-3.1-405b
+MODEL 17: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -280,7 +297,7 @@ MODEL 16: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 17: nvidia/nemotron-3-nano-30b-a3b
+MODEL 18: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -294,7 +311,7 @@ MODEL 17: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 18: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 19: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID: nvidia/nemotron-3-super-120b-a12b:free
   Original Name: NVIDIA: Nemotron 3 Super (free)
@@ -308,7 +325,7 @@ MODEL 18: nvidia/nemotron-3-super-120b-a12b-20230311
 
 ================================================================================
 
-MODEL 19: nvidia/nemotron-nano-12b-v2-vl
+MODEL 20: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
@@ -322,7 +339,7 @@ MODEL 19: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 20: nvidia/nemotron-nano-9b-v2
+MODEL 21: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -336,7 +353,7 @@ MODEL 20: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 21: openai/gpt-oss-120b
+MODEL 22: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -350,7 +367,7 @@ MODEL 21: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 22: openai/gpt-oss-20b
+MODEL 23: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -364,7 +381,7 @@ MODEL 22: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 23: openrouter/free
+MODEL 24: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -378,7 +395,7 @@ MODEL 23: openrouter/free
 
 ================================================================================
 
-MODEL 24: openrouter/healer-alpha
+MODEL 25: openrouter/healer-alpha
 --------------------------------------------------
   ID: openrouter/healer-alpha
   Original Name: Healer Alpha
@@ -392,7 +409,7 @@ MODEL 24: openrouter/healer-alpha
 
 ================================================================================
 
-MODEL 25: openrouter/hunter-alpha
+MODEL 26: openrouter/hunter-alpha
 --------------------------------------------------
   ID: openrouter/hunter-alpha
   Original Name: Hunter Alpha
@@ -406,7 +423,7 @@ MODEL 25: openrouter/hunter-alpha
 
 ================================================================================
 
-MODEL 26: stepfun/step-3.5-flash
+MODEL 27: stepfun/step-3.5-flash
 --------------------------------------------------
   ID: stepfun/step-3.5-flash:free
   Original Name: StepFun: Step 3.5 Flash (free)
@@ -420,7 +437,7 @@ MODEL 26: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 27: z-ai/glm-4.5-air
+MODEL 28: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)

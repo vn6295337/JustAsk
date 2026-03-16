@@ -1,41 +1,42 @@
 ================================================================================
 COLLATED CUSTOM LICENSE INFORMATION REPORT
-Generated: 2026-03-15 08:19:39 IST
+Generated: 2026-03-16 08:20:28 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 6
+  Total models        : 7
   Input sources       : 10_custom_license_urls.json + 05_hf_license_urls.json
   Processor           : step_12_collate_custom.py
   Output              : 12_collated_custom_licenses.json
 
 CUSTOM LICENSE DISTRIBUTION:
-   3 models: NVIDIA
+   2 models: NVIDIA
    2 models: lfm1.0
-   1 models: nvidia-nemotron-open-model-license
+   2 models: nvidia-nemotron-open-model-license
+   1 models: Modified MIT
 
-Total unique license types: 3
+Total unique license types: 4
 
 LICENSE URL TYPE DISTRIBUTION:
    2 models: LICENSE file
-   4 models: README.md file
+   5 models: README.md file
 
 Total URL types: 2
 
 DETAILED CUSTOM MODEL INFORMATION:
 ================================================================================
 
-MODEL 1: nvidia/nemotron-3-nano-30b-a3b
+MODEL 1: minimax/minimax-m2.5-20260211
 --------------------------------------------------
-  ID: nvidia/nemotron-3-nano-30b-a3b:free
-  Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
-  HuggingFace ID: nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
-  Canonical Slug: nvidia/nemotron-3-nano-30b-a3b
-  Clean Model Name: Nemotron 3 Nano 30B A3B
+  ID: minimax/minimax-m2.5:free
+  Original Name: MiniMax: MiniMax M2.5 (free)
+  HuggingFace ID: MiniMaxAI/MiniMax-M2.5
+  Canonical Slug: minimax/minimax-m2.5-20260211
+  Clean Model Name: MiniMax M2.5
   License Info Text: 
   License Info URL: 
-  License Name: NVIDIA
-  License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md
+  License Name: Modified MIT
+  License URL: https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md
 
 ================================================================================
 
@@ -95,7 +96,21 @@ MODEL 5: liquid/lfm-2.5-1.2b-thinking-20260120
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 6: nvidia/nemotron-3-nano-30b-a3b
+--------------------------------------------------
+  ID: nvidia/nemotron-3-nano-30b-a3b:free
+  Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
+  HuggingFace ID: nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
+  Canonical Slug: nvidia/nemotron-3-nano-30b-a3b
+  Clean Model Name: Nemotron 3 Nano 30B A3B
+  License Info Text: 
+  License Info URL: 
+  License Name: nvidia-nemotron-open-model-license
+  License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md
+
+================================================================================
+
+MODEL 7: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID: nvidia/nemotron-3-super-120b-a12b:free
   Original Name: NVIDIA: Nemotron 3 Super (free)

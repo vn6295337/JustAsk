@@ -1,10 +1,10 @@
 ================================================================================
 CUSTOM LICENSE URLS ENRICHMENT REPORT
-Generated: 2026-03-15 08:19:38 IST
+Generated: 2026-03-16 08:20:27 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 6
+  Total models : 7
   Input        : 08_custom_licenses.json
   Priority     : LICENSE → README.md → Base repository
   Processor    : step_10_custom_license_urls.py
@@ -12,21 +12,22 @@ SUMMARY:
 
 LICENSE URL TYPE DISTRIBUTION:
   LICENSE file: 2 models
-  README.md file: 4 models
+  README.md file: 5 models
 
 Total URL types: 2
 
 URL RESOLUTION STATISTICS:
-  Successful URL resolutions: 6
+  Successful URL resolutions: 7
   Failed URL resolutions: 0
   Success rate: 100.0%
 
 CUSTOM LICENSE DISTRIBUTION:
-  NVIDIA: 3 models
+  Modified MIT: 1 models
+  NVIDIA: 2 models
   lfm1.0: 2 models
-  nvidia-nemotron-open-model-license: 1 models
+  nvidia-nemotron-open-model-license: 2 models
 
-Total license types: 3
+Total license types: 4
 
 DETAILED MODEL LICENSE URL MAPPINGS:
 ================================================================================
@@ -53,18 +54,29 @@ MODEL 2: liquid/lfm-2.5-1.2b-thinking-20260120
 
 ================================================================================
 
-MODEL 3: nvidia/nemotron-3-nano-30b-a3b
+MODEL 3: minimax/minimax-m2.5-20260211
+--------------------------------------------------
+  ID                     : minimax/minimax-m2.5:free
+  Canonical Slug         : minimax/minimax-m2.5-20260211
+  HuggingFace ID         : MiniMaxAI/MiniMax-M2.5
+  License Name           : Modified MIT
+  License URL            : https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md
+  License URL Type       : README.md file
+
+================================================================================
+
+MODEL 4: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID                     : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug         : nvidia/nemotron-3-nano-30b-a3b
   HuggingFace ID         : nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
-  License Name           : NVIDIA
+  License Name           : nvidia-nemotron-open-model-license
   License URL            : https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md
   License URL Type       : README.md file
 
 ================================================================================
 
-MODEL 4: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 5: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID                     : nvidia/nemotron-3-super-120b-a12b:free
   Canonical Slug         : nvidia/nemotron-3-super-120b-a12b-20230311
@@ -75,7 +87,7 @@ MODEL 4: nvidia/nemotron-3-super-120b-a12b-20230311
 
 ================================================================================
 
-MODEL 5: nvidia/nemotron-nano-12b-v2-vl
+MODEL 6: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug         : nvidia/nemotron-nano-12b-v2-vl
@@ -86,7 +98,7 @@ MODEL 5: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-nano-9b-v2
+MODEL 7: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug         : nvidia/nemotron-nano-9b-v2

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-03-15 08:19:40 IST",
-    "total_models": 27,
+    "generated_at": "2026-03-16 08:20:29 IST",
+    "total_models": 28,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
@@ -12,11 +12,11 @@
       "original_name": "Hunter Alpha",
       "hugging_face_id": "",
       "clean_model_name": "Hunter Alpha",
-      "raw_input_modalities": "text",
+      "raw_input_modalities": "text, image",
       "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text",
+      "enhanced_input_modalities": "text, image",
       "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text",
+      "standardized_input_modalities": "Text, Image",
       "standardized_output_modalities": "Text",
       "google_enhancement_status": "no_google_model",
       "inference_provider": "OpenRouter",
@@ -64,6 +64,26 @@
       "model_provider_country": "United States",
       "model_family": "nvidia",
       "official_url": "https://build.nvidia.com/"
+    },
+    {
+      "id": "minimax/minimax-m2.5:free",
+      "canonical_slug": "minimax/minimax-m2.5-20260211",
+      "provider_slug": "minimax-m2.5-20260211",
+      "original_name": "MiniMax: MiniMax M2.5 (free)",
+      "hugging_face_id": "MiniMaxAI/MiniMax-M2.5",
+      "clean_model_name": "MiniMax M2.5",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "MiniMax",
+      "model_provider_country": "Singapore",
+      "model_family": "minimax",
+      "official_url": "https://www.minimax.io/"
     },
     {
       "id": "openrouter/free",
