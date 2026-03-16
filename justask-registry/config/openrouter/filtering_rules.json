@@ -19,14 +19,18 @@
   "exclude_keywords": [
     "preview",
     "experimental",
-    "beta"
+    "beta",
+    "Healer Alpha",
+    "Hunter Alpha"
   ],
   "exclude_reasons": {
     "billing_required": "Requires billing/payment",
     "billing_in_description": "Description indicates billing requirements",
     "preview": "Preview/experimental version",
     "experimental": "Experimental version",
-    "beta": "Beta version"
+    "beta": "Beta version",
+    "Healer Alpha": "Unknown origin",
+    "Hunter Alpha": "Unknown origin"
   },
   "deduplication_rules": {
     "enabled": true,
