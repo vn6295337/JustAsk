@@ -1,28 +1,10 @@
 {
   "metadata": {
-    "generated_at": "2026-03-16 08:20:29 IST",
-    "total_models": 28,
+    "generated_at": "2026-03-16 11:18:50 IST",
+    "total_models": 26,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
-    {
-      "id": "openrouter/hunter-alpha",
-      "canonical_slug": "openrouter/hunter-alpha",
-      "original_name": "Hunter Alpha",
-      "hugging_face_id": "",
-      "clean_model_name": "Hunter Alpha",
-      "raw_input_modalities": "text, image",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "openrouter/healer-alpha",
-      "canonical_slug": "openrouter/healer-alpha",
-      "original_name": "Healer Alpha",
-      "hugging_face_id": "",
-      "clean_model_name": "Healer Alpha",
-      "raw_input_modalities": "text, image, audio, video",
-      "raw_output_modalities": "text"
-    },
     {
       "id": "nvidia/nemotron-3-super-120b-a12b:free",
       "canonical_slug": "nvidia/nemotron-3-super-120b-a12b-20230311",

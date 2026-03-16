@@ -1,34 +1,32 @@
 ================================================================================
 RAW MODALITIES EXTRACTION REPORT
-Generated: 2026-03-16 08:20:29 IST
+Generated: 2026-03-16 11:18:50 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 28
+  Total models : 26
   Input        : 02_filtered_models.json
   Processor    : step_14_extract_modalities.py
   Output       : 14_raw_modalities.json
 
 RAW INPUT MODALITIES DISTRIBUTION:
   20 models: text
-   6 models: text, image
+   5 models: text, image
    1 models: image, text, video
-   1 models: text, image, audio, video
 
-Total unique input types: 4
+Total unique input types: 3
 
 RAW OUTPUT MODALITIES DISTRIBUTION:
-  28 models: text
+  26 models: text
 
 Total unique output types: 1
 
 RAW MODALITY COMBINATIONS (INPUT → OUTPUT):
   20 models: text → text
-   6 models: text, image → text
+   5 models: text, image → text
    1 models: image, text, video → text
-   1 models: text, image, audio, video → text
 
-Total unique combinations: 4
+Total unique combinations: 3
 
 DETAILED RAW MODALITY MODEL INFORMATION:
 ================================================================================
@@ -333,19 +331,7 @@ MODEL 25: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 26: openrouter/hunter-alpha
---------------------------------------------------
-  ID: openrouter/hunter-alpha
-  Original Name: Hunter Alpha
-  HuggingFace ID: 
-  Canonical Slug: openrouter/hunter-alpha
-  Clean Model Name: Hunter Alpha
-  Raw Input Modalities: text, image
-  Raw Output Modalities: text
-
-================================================================================
-
-MODEL 27: mistralai/mistral-small-3.1-24b-instruct-2503
+MODEL 26: mistralai/mistral-small-3.1-24b-instruct-2503
 --------------------------------------------------
   ID: mistralai/mistral-small-3.1-24b-instruct:free
   Original Name: Mistral: Mistral Small 3.1 24B (free)
@@ -353,17 +339,5 @@ MODEL 27: mistralai/mistral-small-3.1-24b-instruct-2503
   Canonical Slug: mistralai/mistral-small-3.1-24b-instruct-2503
   Clean Model Name: Mistral Small 3.1 24B
   Raw Input Modalities: text, image
-  Raw Output Modalities: text
-
-================================================================================
-
-MODEL 28: openrouter/healer-alpha
---------------------------------------------------
-  ID: openrouter/healer-alpha
-  Original Name: Healer Alpha
-  HuggingFace ID: 
-  Canonical Slug: openrouter/healer-alpha
-  Clean Model Name: Healer Alpha
-  Raw Input Modalities: text, image, audio, video
   Raw Output Modalities: text
 

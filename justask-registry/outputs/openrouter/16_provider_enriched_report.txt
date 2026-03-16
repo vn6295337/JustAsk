@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-03-16 08:20:29 IST
+Generated: 2026-03-16 11:18:50 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 28
+  Total models      : 26
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -16,7 +16,6 @@ MODEL PROVIDER DISTRIBUTION:
    5 models: Google
    4 models: NVIDIA
    3 models: Alibaba Cloud
-   3 models: OpenRouter
    2 models: Liquid AI
    2 models: Meta
    2 models: OpenAI
@@ -25,13 +24,14 @@ MODEL PROVIDER DISTRIBUTION:
    1 models: MiniMax
    1 models: Mistral AI
    1 models: Nous Research
+   1 models: OpenRouter
    1 models: StepFun
    1 models: Z.AI
 
 Total unique model providers: 14
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
-  21 models: United States
+  19 models: United States
    5 models: China
    1 models: France
    1 models: Singapore
@@ -42,7 +42,6 @@ MODEL FAMILY DISTRIBUTION:
    5 models: gemma
    4 models: nvidia
    3 models: alibaba cloud
-   3 models: openrouter
    2 models: liquid ai
    2 models: meta
    2 models: openai
@@ -51,6 +50,7 @@ MODEL FAMILY DISTRIBUTION:
    1 models: minimax
    1 models: mistral ai
    1 models: nous research
+   1 models: openrouter
    1 models: stepfun
    1 models: z.ai
 
@@ -395,35 +395,7 @@ MODEL 24: openrouter/free
 
 ================================================================================
 
-MODEL 25: openrouter/healer-alpha
---------------------------------------------------
-  ID: openrouter/healer-alpha
-  Original Name: Healer Alpha
-  HuggingFace ID: 
-  Canonical Slug: openrouter/healer-alpha
-  Clean Model Name: Healer Alpha
-  Model Provider: OpenRouter
-  Model Provider Country: United States
-  Model Family: openrouter
-  Official URL: https://openrouter.ai/
-
-================================================================================
-
-MODEL 26: openrouter/hunter-alpha
---------------------------------------------------
-  ID: openrouter/hunter-alpha
-  Original Name: Hunter Alpha
-  HuggingFace ID: 
-  Canonical Slug: openrouter/hunter-alpha
-  Clean Model Name: Hunter Alpha
-  Model Provider: OpenRouter
-  Model Provider Country: United States
-  Model Family: openrouter
-  Official URL: https://openrouter.ai/
-
-================================================================================
-
-MODEL 27: stepfun/step-3.5-flash
+MODEL 25: stepfun/step-3.5-flash
 --------------------------------------------------
   ID: stepfun/step-3.5-flash:free
   Original Name: StepFun: Step 3.5 Flash (free)
@@ -437,7 +409,7 @@ MODEL 27: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 28: z-ai/glm-4.5-air
+MODEL 26: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)

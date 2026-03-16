@@ -1,17 +1,17 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-03-16 08:20:32 IST
+Generated: 2026-03-16 11:18:53 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 30
-   • Total records in pipeline: 28
+   • Total unique model names: 28
+   • Total records in pipeline: 26
    • Total records in Supabase: 26
    • Models in both systems: 24
    • Models with differences: 1
-   • Models in pipeline only (not in Supabase): 4
+   • Models in pipeline only (not in Supabase): 2
    • Models in Supabase only (not in pipeline): 2
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
@@ -58,8 +58,8 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 4
-     Models: Healer Alpha, Hunter Alpha, MiniMax M2.5, Nemotron 3 Super
+   • New models (pipeline only): 2
+     Models: MiniMax M2.5, Nemotron 3 Super
    • Existing models with differences: 1
      Models: Nemotron 3 Nano 30B A3B
    • Deprecated models (Supabase only): 2
@@ -249,26 +249,6 @@ provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s.
 
 ================================================================================
 
-MODEL: Healer Alpha
---------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
---------------------------------------------------------------------------------
-inference_provider        | OpenRouter                |                          
-model_provider            | OpenRouter                |                          
-human_readable_name       | Healer Alpha              |                          
-model_provider_country    | United States             |                          
-official_url              | https://openrouter.ai/    |                          
-input_modalities          | Text, Image, Audio, Video |                          
-output_modalities         | Text                      |                          
-license_info_text         |                           |                          
-license_info_url          |                           |                          
-license_name              |                           |                          
-license_url               |                           |                          
-rate_limits               | 20 requests/min 50/day    |                          
-provider_api_access       | https://openrouter.ai/s.. |                          
-
-================================================================================
-
 MODEL: Hermes 3 405B Instruct
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
@@ -286,26 +266,6 @@ license_name              | Llama-3.1                 | Llama-3.1
 license_url               | https://www.llama.com/l.. | https://www.llama.com/l..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
-
-================================================================================
-
-MODEL: Hunter Alpha
---------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
---------------------------------------------------------------------------------
-inference_provider        | OpenRouter                |                          
-model_provider            | OpenRouter                |                          
-human_readable_name       | Hunter Alpha              |                          
-model_provider_country    | United States             |                          
-official_url              | https://openrouter.ai/    |                          
-input_modalities          | Text, Image               |                          
-output_modalities         | Text                      |                          
-license_info_text         |                           |                          
-license_info_url          |                           |                          
-license_name              |                           |                          
-license_url               |                           |                          
-rate_limits               | 20 requests/min 50/day    |                          
-provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 

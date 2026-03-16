@@ -1,50 +1,10 @@
 {
   "metadata": {
-    "generated_at": "2026-03-16 08:20:29 IST",
-    "total_models": 28,
+    "generated_at": "2026-03-16 11:18:50 IST",
+    "total_models": 26,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
-    {
-      "id": "openrouter/hunter-alpha",
-      "canonical_slug": "openrouter/hunter-alpha",
-      "provider_slug": "hunter-alpha",
-      "original_name": "Hunter Alpha",
-      "hugging_face_id": "",
-      "clean_model_name": "Hunter Alpha",
-      "raw_input_modalities": "text, image",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text, image",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text, Image",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model",
-      "inference_provider": "OpenRouter",
-      "model_provider": "OpenRouter",
-      "model_provider_country": "United States",
-      "model_family": "openrouter",
-      "official_url": "https://openrouter.ai/"
-    },
-    {
-      "id": "openrouter/healer-alpha",
-      "canonical_slug": "openrouter/healer-alpha",
-      "provider_slug": "healer-alpha",
-      "original_name": "Healer Alpha",
-      "hugging_face_id": "",
-      "clean_model_name": "Healer Alpha",
-      "raw_input_modalities": "text, image, audio, video",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text, image, audio, video",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text, Image, Audio, Video",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model",
-      "inference_provider": "OpenRouter",
-      "model_provider": "OpenRouter",
-      "model_provider_country": "United States",
-      "model_family": "openrouter",
-      "official_url": "https://openrouter.ai/"
-    },
     {
       "id": "nvidia/nemotron-3-super-120b-a12b:free",
       "canonical_slug": "nvidia/nemotron-3-super-120b-a12b-20230311",

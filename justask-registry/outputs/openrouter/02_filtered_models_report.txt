@@ -1,13 +1,13 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-03-16 08:20:13 IST
+Generated: 2026-03-16 11:18:36 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
   Total models processed: 346
-  Models passed all filters: 28
-  Models excluded: 318
-  Success rate: 8.1%
+  Models passed all filters: 26
+  Models excluded: 320
+  Success rate: 7.5%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
@@ -22,13 +22,13 @@ STEP-BY-STEP FILTERING BREAKDOWN:
 
   Step 3 - Keyword Filter:
     Input: 29 models
-    Excluded: 1 models (preview/experimental/beta)
-    Remaining: 28 models
+    Excluded: 3 models (preview/experimental/beta)
+    Remaining: 26 models
 
   Step 4 - Deduplication Filter:
-    Input: 28 models
+    Input: 26 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 28 models
+    Final: 26 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
@@ -46,6 +46,11 @@ STEP 3 - KEYWORD FILTER RESULTS (DETAILED)
 EXCLUDED FOR: PREVIEW/EXPERIMENTAL VERSION (1 models)
 --------------------------------------------------
    1. Arcee AI: Trinity Large Preview (free)
+
+EXCLUDED FOR: UNKNOWN ORIGIN (2 models)
+--------------------------------------------------
+   1. Healer Alpha
+   2. Hunter Alpha
 
 ================================================================================
 STEP 4 - DEDUPLICATION FILTER RESULTS (DETAILED)
@@ -96,21 +101,6 @@ PROVIDER: NVIDIA (4 models)
    4. NVIDIA: Nemotron Nano 9B V2 (free)
       ID: nvidia/nemotron-nano-9b-v2:free
       Pricing: prompt=0, completion=0, request=N/A
-
-
-PROVIDER: OPENROUTER (3 models)
---------------------------------------------------
-   1. Free Models Router
-      ID: openrouter/free
-      Pricing: prompt=0, completion=0, request=N/A
-
-   2. Healer Alpha
-      ID: openrouter/healer-alpha
-      Pricing: prompt=0, completion=0, request=0
-
-   3. Hunter Alpha
-      ID: openrouter/hunter-alpha
-      Pricing: prompt=0, completion=0, request=0
 
 
 PROVIDER: QWEN (3 models)
@@ -168,6 +158,13 @@ PROVIDER: MINIMAX (1 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
+PROVIDER: OPENROUTER (1 models)
+--------------------------------------------------
+   1. Free Models Router
+      ID: openrouter/free
+      Pricing: prompt=0, completion=0, request=N/A
+
+
 PROVIDER: STEPFUN (1 models)
 --------------------------------------------------
    1. StepFun: Step 3.5 Flash (free)
@@ -213,10 +210,10 @@ PROVIDER: NOUS (1 models)
 ================================================================================
 FINAL SUMMARY:
   Total providers: 14
-  Total models passed all filters: 28
+  Total models passed all filters: 26
   Models excluded by pricing: 317
   Models excluded by billing description: 0
-  Models excluded by keywords: 1
+  Models excluded by keywords: 3
   Models excluded by deduplication: 0
-  Total exclusions: 318
+  Total exclusions: 320
   ✓ All filtered models accounted for
