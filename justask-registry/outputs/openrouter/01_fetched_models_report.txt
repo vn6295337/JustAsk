@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-03-16 11:18:35 IST
+Generated: 2026-03-17 08:03:35 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 346
+  Total models: 345
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  60 models
@@ -172,11 +172,10 @@ PROVIDER BREAKDOWN (Descending Order):
     - pixtral-large-2411
     - voxtral-small-24b-2507
 
-  Meta            :  15 models
+  Meta            :  14 models
     - llama-3-70b-instruct
     - llama-3-8b-instruct
     - llama-3.1-405b
-    - llama-3.1-405b-instruct
     - llama-3.1-70b-instruct
     - llama-3.1-8b-instruct
     - llama-3.2-11b-vision-instruct

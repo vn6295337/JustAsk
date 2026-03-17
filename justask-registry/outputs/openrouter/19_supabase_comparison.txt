@@ -1,69 +1,62 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-03-16 11:18:53 IST
+Generated: 2026-03-17 08:03:56 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 28
+   • Total unique model names: 26
    • Total records in pipeline: 26
    • Total records in Supabase: 26
-   • Models in both systems: 24
-   • Models with differences: 1
-   • Models in pipeline only (not in Supabase): 2
-   • Models in Supabase only (not in pipeline): 2
+   • Models in both systems: 26
+   • Models with differences: 0
+   • Models in pipeline only (not in Supabase): 0
+   • Models in Supabase only (not in pipeline): 0
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
    • inference_provider:
-     - Exact matches: 24
+     - Exact matches: 26
      - Differences: 0
    • model_provider:
-     - Exact matches: 24
+     - Exact matches: 26
      - Differences: 0
    • human_readable_name:
-     - Exact matches: 24
+     - Exact matches: 26
      - Differences: 0
    • model_provider_country:
-     - Exact matches: 24
+     - Exact matches: 26
      - Differences: 0
    • official_url:
-     - Exact matches: 24
+     - Exact matches: 26
      - Differences: 0
    • input_modalities:
-     - Exact matches: 24
+     - Exact matches: 26
      - Differences: 0
    • output_modalities:
-     - Exact matches: 24
+     - Exact matches: 26
      - Differences: 0
    • license_info_text:
-     - Exact matches: 24
+     - Exact matches: 26
      - Differences: 0
    • license_info_url:
-     - Exact matches: 24
+     - Exact matches: 26
      - Differences: 0
    • license_name:
-     - Exact matches: 23
-     - Differences: 1
-     - Specific differences:
-       * Nemotron 3 Nano 30B A3B: Pipeline='nvidia-nemotron-open...' vs Supabase='NVIDIA'
+     - Exact matches: 26
+     - Differences: 0
    • license_url:
-     - Exact matches: 24
+     - Exact matches: 26
      - Differences: 0
    • rate_limits:
-     - Exact matches: 24
+     - Exact matches: 26
      - Differences: 0
    • provider_api_access:
-     - Exact matches: 24
+     - Exact matches: 26
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 2
-     Models: MiniMax M2.5, Nemotron 3 Super
-   • Existing models with differences: 1
-     Models: Nemotron 3 Nano 30B A3B
-   • Deprecated models (Supabase only): 2
-     Models: Qwen3 VL 235B A22B Thinking, Qwen3 VL 30B A3B Thinking
+   • Existing models with differences: 0
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
@@ -353,19 +346,19 @@ MODEL: MiniMax M2.5
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                |                          
-model_provider            | MiniMax                   |                          
-human_readable_name       | MiniMax M2.5              |                          
-model_provider_country    | Singapore                 |                          
-official_url              | https://www.minimax.io/   |                          
-input_modalities          | Text                      |                          
-output_modalities         | Text                      |                          
-license_info_text         |                           |                          
-license_info_url          |                           |                          
-license_name              | Modified MIT              |                          
-license_url               | https://huggingface.co/.. |                          
-rate_limits               | 20 requests/min 50/day    |                          
-provider_api_access       | https://openrouter.ai/s.. |                          
+inference_provider        | OpenRouter                | OpenRouter               
+model_provider            | MiniMax                   | MiniMax                  
+human_readable_name       | MiniMax M2.5              | MiniMax M2.5             
+model_provider_country    | Singapore                 | Singapore                
+official_url              | https://www.minimax.io/   | https://www.minimax.io/  
+input_modalities          | Text                      | Text                     
+output_modalities         | Text                      | Text                     
+license_info_text         |                           | None                     
+license_info_url          |                           | None                     
+license_name              | Modified MIT              | Modified MIT             
+license_url               | https://huggingface.co/.. | https://huggingface.co/..
+rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
+provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
 
 ================================================================================
 
@@ -402,7 +395,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | nvidia-nemotron-open-mo.. | NVIDIA                   
+license_name              | nvidia-nemotron-open-mo.. | nvidia-nemotron-open-mo..
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -413,19 +406,19 @@ MODEL: Nemotron 3 Super
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                |                          
-model_provider            | NVIDIA                    |                          
-human_readable_name       | Nemotron 3 Super          |                          
-model_provider_country    | United States             |                          
-official_url              | https://build.nvidia.com/ |                          
-input_modalities          | Text                      |                          
-output_modalities         | Text                      |                          
-license_info_text         |                           |                          
-license_info_url          |                           |                          
-license_name              | nvidia-nemotron-open-mo.. |                          
-license_url               | https://huggingface.co/.. |                          
-rate_limits               | 20 requests/min 50/day    |                          
-provider_api_access       | https://openrouter.ai/s.. |                          
+inference_provider        | OpenRouter                | OpenRouter               
+model_provider            | NVIDIA                    | NVIDIA                   
+human_readable_name       | Nemotron 3 Super          | Nemotron 3 Super         
+model_provider_country    | United States             | United States            
+official_url              | https://build.nvidia.com/ | https://build.nvidia.com/
+input_modalities          | Text                      | Text                     
+output_modalities         | Text                      | Text                     
+license_info_text         |                           | None                     
+license_info_url          |                           | None                     
+license_name              | nvidia-nemotron-open-mo.. | nvidia-nemotron-open-mo..
+license_url               | https://huggingface.co/.. | https://huggingface.co/..
+rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
+provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
 
 ================================================================================
 
@@ -526,46 +519,6 @@ license_name              | Apache-2.0                | Apache-2.0
 license_url               | https://www.apache.org/.. | https://www.apache.org/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
-
-================================================================================
-
-MODEL: Qwen3 VL 235B A22B Thinking
---------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
---------------------------------------------------------------------------------
-inference_provider        |                           | OpenRouter               
-model_provider            |                           | Alibaba Cloud            
-human_readable_name       |                           | Qwen3 VL 235B A22B Thin..
-model_provider_country    |                           | China                    
-official_url              |                           | https://alibabacloud.com/
-input_modalities          |                           | Text, Image              
-output_modalities         |                           | Text                     
-license_info_text         |                           | info                     
-license_info_url          |                           | https://huggingface.co/..
-license_name              |                           | Apache-2.0               
-license_url               |                           | https://www.apache.org/..
-rate_limits               |                           | 20 requests/min 50/day   
-provider_api_access       |                           | https://openrouter.ai/s..
-
-================================================================================
-
-MODEL: Qwen3 VL 30B A3B Thinking
---------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
---------------------------------------------------------------------------------
-inference_provider        |                           | OpenRouter               
-model_provider            |                           | Alibaba Cloud            
-human_readable_name       |                           | Qwen3 VL 30B A3B Thinking
-model_provider_country    |                           | China                    
-official_url              |                           | https://alibabacloud.com/
-input_modalities          |                           | Text, Image              
-output_modalities         |                           | Text                     
-license_info_text         |                           | info                     
-license_info_url          |                           | https://huggingface.co/..
-license_name              |                           | Apache-2.0               
-license_url               |                           | https://www.apache.org/..
-rate_limits               |                           | 20 requests/min 50/day   
-provider_api_access       |                           | https://openrouter.ai/s..
 
 ================================================================================
 
