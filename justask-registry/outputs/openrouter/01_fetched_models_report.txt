@@ -1,13 +1,13 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-03-17 08:03:35 IST
+Generated: 2026-03-18 08:08:57 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 345
+  Total models: 348
 
 PROVIDER BREAKDOWN (Descending Order):
-  OpenAI          :  60 models
+  OpenAI          :  62 models
     - gpt-3.5-turbo
     - gpt-3.5-turbo-0613
     - gpt-3.5-turbo-16k
@@ -50,6 +50,8 @@ PROVIDER BREAKDOWN (Descending Order):
     - gpt-5.3-chat
     - gpt-5.3-codex
     - gpt-5.4
+    - gpt-5.4-mini
+    - gpt-5.4-nano
     - gpt-5.4-pro
     - gpt-audio
     - gpt-audio-mini
@@ -148,7 +150,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemma-3n-e4b-it
     - gemma-3n-e4b-it:free
 
-  Mistral         :  22 models
+  Mistral         :  23 models
     - codestral-2508
     - devstral-2512
     - devstral-medium
@@ -163,6 +165,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - mistral-nemo
     - mistral-saba
     - mistral-small-24b-instruct-2501
+    - mistral-small-2603
     - mistral-small-3.1-24b-instruct
     - mistral-small-3.1-24b-instruct:free
     - mistral-small-3.2-24b-instruct
