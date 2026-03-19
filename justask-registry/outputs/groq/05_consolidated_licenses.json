@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-18T02:38:34.186386+00:00",
+    "generated_at": "2026-03-19T02:39:59.759359+00:00",
     "consolidation_processor": "step_05_consolidate_licenses.py",
     "source_files": [
       "03_meta_licenses.json",
@@ -20,20 +20,17 @@
       "licenses": {
         "Llama-3.1": 1,
         "Llama-3.3": 1,
-        "Apache-2.0": 3,
-        "MIT": 1
+        "Not Found": 4
       },
       "categories": {
         "meta": 2,
-        "opensource": 4
+        "custom": 4
       }
     }
   },
   "license_urls": {
     "Llama-3.1": "https://www.llama.com/llama3_1/license/",
-    "Llama-3.3": "https://www.llama.com/llama3_3/license/",
-    "Apache-2.0": "https://www.apache.org/licenses/LICENSE-2.0",
-    "MIT": "https://opensource.org/licenses/MIT"
+    "Llama-3.3": "https://www.llama.com/llama3_3/license/"
   },
   "provider_license_mappings": {
     "Groq": {
@@ -50,28 +47,28 @@
         "license_url": "https://www.llama.com/llama3_3/license/"
       },
       "gpt-oss-120b": {
-        "license_info_text": "info",
-        "license_info_url": "https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE",
-        "license_name": "Apache-2.0",
-        "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+        "license_info_text": "",
+        "license_info_url": "",
+        "license_name": "Not Found",
+        "license_url": "https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE"
       },
       "gpt-oss-20b": {
-        "license_info_text": "info",
-        "license_info_url": "https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE",
-        "license_name": "Apache-2.0",
-        "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+        "license_info_text": "",
+        "license_info_url": "",
+        "license_name": "Not Found",
+        "license_url": "https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE"
       },
       "whisper-large-v3": {
-        "license_info_text": "info",
-        "license_info_url": "https://huggingface.co/openai/whisper-large-v3/blob/main/README.md",
-        "license_name": "Apache-2.0",
-        "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+        "license_info_text": "",
+        "license_info_url": "",
+        "license_name": "Not Found",
+        "license_url": "https://huggingface.co/openai/whisper-large-v3/blob/main/README.md"
       },
       "whisper-large-v3-turbo": {
-        "license_info_text": "info",
-        "license_info_url": "https://huggingface.co/openai/whisper-large-v3-turbo/blob/main/README.md",
-        "license_name": "MIT",
-        "license_url": "https://opensource.org/licenses/MIT"
+        "license_info_text": "",
+        "license_info_url": "",
+        "license_name": "Not Found",
+        "license_url": "https://huggingface.co/openai/whisper-large-v3-turbo/blob/main/README.md"
       }
     }
   }

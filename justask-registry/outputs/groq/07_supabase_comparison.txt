@@ -1,5 +1,5 @@
 GROQ FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-03-18 08:08:36 IST
+Generated: 2026-03-19 08:10:02 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -8,7 +8,7 @@ SUMMARY STATISTICS
 Pipeline Models: 6
 Supabase Models: 6
 Models in Both Systems: 6
-Models with Field Differences: 0
+Models with Field Differences: 4
 Models Only in Pipeline: 0
 Models Only in Supabase: 0
 
@@ -58,26 +58,26 @@ Field: output_modalities
   Supabase Missing: 0
 
 Field: license_info_text
-  Exact Matches: 6 (100.0%)
-  Differences: 0
-  Pipeline Missing: 0
+  Exact Matches: 2 (33.3%)
+  Differences: 4
+  Pipeline Missing: 4
   Supabase Missing: 0
 
 Field: license_info_url
-  Exact Matches: 6 (100.0%)
-  Differences: 0
-  Pipeline Missing: 0
+  Exact Matches: 2 (33.3%)
+  Differences: 4
+  Pipeline Missing: 4
   Supabase Missing: 0
 
 Field: license_name
-  Exact Matches: 6 (100.0%)
-  Differences: 0
+  Exact Matches: 2 (33.3%)
+  Differences: 4
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: license_url
-  Exact Matches: 6 (100.0%)
-  Differences: 0
+  Exact Matches: 2 (33.3%)
+  Differences: 4
   Pipeline Missing: 0
   Supabase Missing: 0
 
@@ -105,6 +105,85 @@ Field: max_completion_tokens
   Pipeline Missing: 0
   Supabase Missing: 0
 
+DETAILED FIELD DIFFERENCES
+--------------------------------------------------------------------------------
+
+Field: license_info_text
+----------------------------------------
+Model: Whisper Large V3
+  Pipeline Value: ''
+  Supabase Value: 'info'
+
+Model: Gpt Oss 120b
+  Pipeline Value: ''
+  Supabase Value: 'info'
+
+Model: Gpt Oss 20b
+  Pipeline Value: ''
+  Supabase Value: 'info'
+
+Model: Whisper Large V3 Turbo
+  Pipeline Value: ''
+  Supabase Value: 'info'
+
+
+Field: license_info_url
+----------------------------------------
+Model: Whisper Large V3
+  Pipeline Value: ''
+  Supabase Value: 'https://huggingface.co/openai/whisper-large-v3/blob/main/README.md'
+
+Model: Gpt Oss 120b
+  Pipeline Value: ''
+  Supabase Value: 'https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE'
+
+Model: Gpt Oss 20b
+  Pipeline Value: ''
+  Supabase Value: 'https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE'
+
+Model: Whisper Large V3 Turbo
+  Pipeline Value: ''
+  Supabase Value: 'https://huggingface.co/openai/whisper-large-v3-turbo/blob/main/README.md'
+
+
+Field: license_name
+----------------------------------------
+Model: Whisper Large V3
+  Pipeline Value: 'Not Found'
+  Supabase Value: 'Apache-2.0'
+
+Model: Gpt Oss 120b
+  Pipeline Value: 'Not Found'
+  Supabase Value: 'Apache-2.0'
+
+Model: Gpt Oss 20b
+  Pipeline Value: 'Not Found'
+  Supabase Value: 'Apache-2.0'
+
+Model: Whisper Large V3 Turbo
+  Pipeline Value: 'Not Found'
+  Supabase Value: 'MIT'
+
+
+Field: license_url
+----------------------------------------
+Model: Whisper Large V3
+  Pipeline Value: 'https://huggingface.co/openai/whisper-large-v3/blob/main/README.md'
+  Supabase Value: 'https://www.apache.org/licenses/LICENSE-2.0'
+
+Model: Gpt Oss 120b
+  Pipeline Value: 'https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE'
+  Supabase Value: 'https://www.apache.org/licenses/LICENSE-2.0'
+
+Model: Gpt Oss 20b
+  Pipeline Value: 'https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE'
+  Supabase Value: 'https://www.apache.org/licenses/LICENSE-2.0'
+
+Model: Whisper Large V3 Turbo
+  Pipeline Value: 'https://huggingface.co/openai/whisper-large-v3-turbo/blob/main/README.md'
+  Supabase Value: 'https://opensource.org/licenses/MIT'
+
+
 SAMPLE MODEL COMPARISONS
 --------------------------------------------------------------------------------
 
@@ -119,10 +198,10 @@ model_provider_country    | United States             | United States
 official_url              | https://groq.com/         | https://groq.com/        
 input_modalities          | Text                      | Text                     
 output_modalities         | Text                      | Text                     
-license_info_text         | info                      | info                     
-license_info_url          | https://huggingface.co... | https://huggingface.co...
-license_name              | Apache-2.0                | Apache-2.0               
-license_url               | https://www.apache.org... | https://www.apache.org...
+license_info_text         |                           | info                     
+license_info_url          |                           | https://huggingface.co...
+license_name              | Not Found                 | Apache-2.0               
+license_url               | https://huggingface.co... | https://www.apache.org...
 rate_limits               | 250K TPM
 TPM
 1K RPM
@@ -145,10 +224,10 @@ model_provider_country    | United States             | United States
 official_url              | https://groq.com/         | https://groq.com/        
 input_modalities          | Text                      | Text                     
 output_modalities         | Text                      | Text                     
-license_info_text         | info                      | info                     
-license_info_url          | https://huggingface.co... | https://huggingface.co...
-license_name              | Apache-2.0                | Apache-2.0               
-license_url               | https://www.apache.org... | https://www.apache.org...
+license_info_text         |                           | info                     
+license_info_url          |                           | https://huggingface.co...
+license_name              | Not Found                 | Apache-2.0               
+license_url               | https://huggingface.co... | https://www.apache.org...
 rate_limits               | 250K TPM
 TPM
 1K RPM

@@ -1,6 +1,6 @@
 ================================================================================
 GROQ PIPELINE NORMALIZATION REPORT
-Generated: 2026-03-18 02:38:34
+Generated: 2026-03-19 02:40:00
 ================================================================================
 
 SUMMARY:
@@ -36,7 +36,7 @@ RPM
       Model Name: openai/gpt-oss-120b -> Gpt Oss 120b
       Input Modalities: Text
       Output Modalities: Text
-      License: info -> Apache-2.0
+      License:  -> Not Found
       Rate Limits: 250K TPM
 TPM
 1K RPM
@@ -46,7 +46,7 @@ RPM
       Model Name: openai/gpt-oss-20b -> Gpt Oss 20b
       Input Modalities: Text
       Output Modalities: Text
-      License: info -> Apache-2.0
+      License:  -> Not Found
       Rate Limits: 250K TPM
 TPM
 1K RPM
@@ -56,7 +56,7 @@ RPM
       Model Name: whisper-large-v3 -> Whisper Large V3
       Input Modalities: Audio
       Output Modalities: Text
-      License: info -> Apache-2.0
+      License:  -> Not Found
       Rate Limits: 200K ASH
 ASH
 300 RPM
@@ -66,7 +66,7 @@ RPM
       Model Name: whisper-large-v3-turbo -> Whisper Large V3 Turbo
       Input Modalities: Audio
       Output Modalities: Text
-      License: info -> MIT
+      License:  -> Not Found
       Rate Limits: 400K ASH
 ASH
 400 RPM
