@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-18 08:09:12 IST",
+    "generated_at": "2026-03-19 08:10:39 IST",
     "total_models": 31,
     "pipeline_stage": "M_final_list_of_licenses"
   },
@@ -109,7 +109,7 @@
       "clean_model_name": "LFM2.5-1.2B-Instruct",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "lfm1.0",
+      "license_name": "other",
       "license_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct/blob/main/LICENSE",
       "source_category": "custom"
     },
@@ -121,7 +121,7 @@
       "clean_model_name": "LFM2.5-1.2B-Thinking",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "lfm1.0",
+      "license_name": "other",
       "license_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE",
       "source_category": "custom"
     },
@@ -157,7 +157,7 @@
       "clean_model_name": "MiniMax M2.5",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "Modified MIT",
+      "license_name": "other",
       "license_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md",
       "source_category": "custom"
     },
@@ -205,7 +205,7 @@
       "clean_model_name": "Nemotron 3 Nano 30B A3B",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "nvidia-nemotron-open-model-license",
+      "license_name": "other",
       "license_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md",
       "source_category": "custom"
     },
@@ -217,7 +217,7 @@
       "clean_model_name": "Nemotron 3 Super",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "nvidia-nemotron-open-model-license",
+      "license_name": "other",
       "license_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8/blob/main/README.md",
       "source_category": "custom"
     },
@@ -229,7 +229,7 @@
       "clean_model_name": "Nemotron Nano 12B 2 VL",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "NVIDIA",
+      "license_name": "other",
       "license_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16/blob/main/README.md",
       "source_category": "custom"
     },
@@ -241,7 +241,7 @@
       "clean_model_name": "Nemotron Nano 9B V2",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "NVIDIA",
+      "license_name": "other",
       "license_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md",
       "source_category": "custom"
     },

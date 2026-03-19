@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-18 08:08:57 IST",
+    "generated_at": "2026-03-19 08:10:23 IST",
     "total_models": 26,
     "pipeline_stage": "B_filter_models"
   },
@@ -22,15 +22,11 @@
           "text"
         ],
         "tokenizer": "Other",
-        "instruct_type": "nemotron"
+        "instruct_type": null
       },
       "pricing": {
         "prompt": "0",
-        "completion": "0",
-        "request": "0",
-        "image": "0",
-        "web_search": "0",
-        "internal_reasoning": "0"
+        "completion": "0"
       },
       "top_provider": {
         "context_length": 262144,
@@ -102,7 +98,10 @@
       "default_parameters": {
         "temperature": 1,
         "top_p": 0.95,
-        "frequency_penalty": null
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
       },
       "expiration_date": null
     },
@@ -886,7 +885,7 @@
         "top_p"
       ],
       "default_parameters": {},
-      "expiration_date": null
+      "expiration_date": "2026-03-29"
     },
     {
       "id": "mistralai/mistral-small-3.1-24b-instruct:free",
@@ -934,7 +933,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
-      "expiration_date": null
+      "expiration_date": "2026-03-29"
     },
     {
       "id": "google/gemma-3-4b-it:free",
@@ -1053,8 +1052,6 @@
         "seed",
         "stop",
         "temperature",
-        "tool_choice",
-        "tools",
         "top_p"
       ],
       "default_parameters": {
@@ -1071,7 +1068,7 @@
       "name": "Meta: Llama 3.3 70B Instruct (free)",
       "created": 1733506137,
       "description": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model is optimized for multilingual dialogue use cases and outperforms many of the available open source and closed chat models on common industry benchmarks.\n\nSupported languages: English, German, French, Italian, Portuguese, Hindi, Spanish, and Thai.\n\n[Model Card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md)",
-      "context_length": 128000,
+      "context_length": 65536,
       "architecture": {
         "modality": "text->text",
         "input_modalities": [
@@ -1088,16 +1085,15 @@
         "completion": "0"
       },
       "top_provider": {
-        "context_length": 128000,
-        "max_completion_tokens": 128000,
-        "is_moderated": true
+        "context_length": 65536,
+        "max_completion_tokens": null,
+        "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
         "frequency_penalty",
         "max_tokens",
         "presence_penalty",
-        "seed",
         "stop",
         "temperature",
         "tool_choice",

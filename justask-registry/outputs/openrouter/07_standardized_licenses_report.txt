@@ -1,6 +1,6 @@
 ================================================================================
 STANDARDIZED OTHER LICENSE NAMES REPORT
-Generated: 2026-03-18 08:09:08 IST
+Generated: 2026-03-19 08:10:35 IST
 ================================================================================
 
 SUMMARY:
@@ -11,35 +11,33 @@ SUMMARY:
   Output       : 07_standardized_licenses.json
 
 STANDARDIZATION RESULTS:
-  Models with license transformations: 14
-  Models unchanged: 4
-  Transformation rate: 77.8%
+  Models with license transformations: 11
+  Models unchanged: 7
+  Transformation rate: 61.1%
 
 STANDARDIZED LICENSE DISTRIBUTION:
   Apache-2.0: 9 models
   Llama-3.1: 1 models
   MIT: 1 models
-  Modified MIT: 1 models
-  NVIDIA: 2 models
-  lfm1.0: 2 models
-  nvidia-nemotron-open-model-license: 2 models
+  other: 7 models
 
-Total license types: 7
+Total license types: 4
 
 LICENSE NAME TRANSFORMATIONS:
   'apache-2.0' → 'Apache-2.0'
   'llama3' → 'Llama-3.1'
   'mit' → 'MIT'
-  'modified-mit' → 'Modified MIT'
-  'nvidia-open-model-license' → 'NVIDIA'
 
-Total unique transformations: 5
+Total unique transformations: 3
 
-MODELS WITH NO LICENSE CHANGES (4 models):
-  NVIDIA: Nemotron 3 Super (free): 'nvidia-nemotron-open-model-license'
-  LiquidAI: LFM2.5-1.2B-Thinking (free): 'lfm1.0'
-  LiquidAI: LFM2.5-1.2B-Instruct (free): 'lfm1.0'
-  NVIDIA: Nemotron 3 Nano 30B A3B (free): 'nvidia-nemotron-open-model-license'
+MODELS WITH NO LICENSE CHANGES (7 models):
+  NVIDIA: Nemotron 3 Super (free): 'other'
+  MiniMax: MiniMax M2.5 (free): 'other'
+  LiquidAI: LFM2.5-1.2B-Thinking (free): 'other'
+  LiquidAI: LFM2.5-1.2B-Instruct (free): 'other'
+  NVIDIA: Nemotron 3 Nano 30B A3B (free): 'other'
+  NVIDIA: Nemotron Nano 12B 2 VL (free): 'other'
+  NVIDIA: Nemotron Nano 9B V2 (free): 'other'
 
 DETAILED MODEL STANDARDIZATION RESULTS:
 ================================================================================
@@ -151,34 +149,4 @@ MODEL 11: z-ai/glm-4.5-air
   HuggingFace ID         : zai-org/GLM-4.5-Air
   Raw License            : mit
   Standardized License   : MIT
-
-================================================================================
-
-MODEL 12: minimax/minimax-m2.5-20260211
---------------------------------------------------
-  ID                     : minimax/minimax-m2.5:free
-  Canonical Slug         : minimax/minimax-m2.5-20260211
-  HuggingFace ID         : MiniMaxAI/MiniMax-M2.5
-  Raw License            : modified-mit
-  Standardized License   : Modified MIT
-
-================================================================================
-
-MODEL 13: nvidia/nemotron-nano-12b-v2-vl
---------------------------------------------------
-  ID                     : nvidia/nemotron-nano-12b-v2-vl:free
-  Canonical Slug         : nvidia/nemotron-nano-12b-v2-vl
-  HuggingFace ID         : nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16
-  Raw License            : nvidia-open-model-license
-  Standardized License   : NVIDIA
-
-================================================================================
-
-MODEL 14: nvidia/nemotron-nano-9b-v2
---------------------------------------------------
-  ID                     : nvidia/nemotron-nano-9b-v2:free
-  Canonical Slug         : nvidia/nemotron-nano-9b-v2
-  HuggingFace ID         : nvidia/NVIDIA-Nemotron-Nano-9B-v2
-  Raw License            : nvidia-open-model-license
-  Standardized License   : NVIDIA
 

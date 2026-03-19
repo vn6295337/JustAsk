@@ -1,28 +1,28 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-03-18 08:08:57 IST
+Generated: 2026-03-19 08:10:23 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 348
+  Total models processed: 350
   Models passed all filters: 26
-  Models excluded: 322
-  Success rate: 7.5%
+  Models excluded: 324
+  Success rate: 7.4%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 348 models
-    Excluded: 319 models (non-free pricing)
-    Remaining: 29 models
+    Input: 350 models
+    Excluded: 323 models (non-free pricing)
+    Remaining: 27 models
 
   Step 2 - Billing Description Filter:
-    Input: 29 models
+    Input: 27 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 29 models
+    Remaining: 27 models
 
   Step 3 - Keyword Filter:
-    Input: 29 models
-    Excluded: 3 models (preview/experimental/beta)
+    Input: 27 models
+    Excluded: 1 models (preview/experimental/beta)
     Remaining: 26 models
 
   Step 4 - Deduplication Filter:
@@ -33,7 +33,7 @@ STEP-BY-STEP FILTERING BREAKDOWN:
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 319 models with non-free pricing (details omitted due to volume)
+Excluded 323 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -46,11 +46,6 @@ STEP 3 - KEYWORD FILTER RESULTS (DETAILED)
 EXCLUDED FOR: PREVIEW/EXPERIMENTAL VERSION (1 models)
 --------------------------------------------------
    1. Arcee AI: Trinity Large Preview (free)
-
-EXCLUDED FOR: UNKNOWN ORIGIN (2 models)
---------------------------------------------------
-   1. Healer Alpha
-   2. Hunter Alpha
 
 ================================================================================
 STEP 4 - DEDUPLICATION FILTER RESULTS (DETAILED)
@@ -92,7 +87,7 @@ PROVIDER: NVIDIA (4 models)
 
    2. NVIDIA: Nemotron 3 Super (free)
       ID: nvidia/nemotron-3-super-120b-a12b:free
-      Pricing: prompt=0, completion=0, request=0
+      Pricing: prompt=0, completion=0, request=N/A
 
    3. NVIDIA: Nemotron Nano 12B 2 VL (free)
       ID: nvidia/nemotron-nano-12b-v2-vl:free
@@ -211,9 +206,9 @@ PROVIDER: NOUS (1 models)
 FINAL SUMMARY:
   Total providers: 14
   Total models passed all filters: 26
-  Models excluded by pricing: 319
+  Models excluded by pricing: 323
   Models excluded by billing description: 0
-  Models excluded by keywords: 3
+  Models excluded by keywords: 1
   Models excluded by deduplication: 0
-  Total exclusions: 322
+  Total exclusions: 324
   ✓ All filtered models accounted for

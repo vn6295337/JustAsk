@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-03-18 08:09:13 IST
+Generated: 2026-03-19 08:10:40 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -169,7 +169,7 @@ COMPLETE MODEL RECORDS:
  11. LFM2.5-1.2B-Instruct
      Provider           : Liquid AI (United States)
      Modalities         : Text → Text
-     License            : lfm1.0
+     License            : other
      License Info       : 
      License URL        : https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct/blob/main/LICENSE
      Official URL       : https://www.liquid.ai/
@@ -179,7 +179,7 @@ COMPLETE MODEL RECORDS:
  12. LFM2.5-1.2B-Thinking
      Provider           : Liquid AI (United States)
      Modalities         : Text → Text
-     License            : lfm1.0
+     License            : other
      License Info       : 
      License URL        : https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE
      Official URL       : https://www.liquid.ai/
@@ -209,7 +209,7 @@ COMPLETE MODEL RECORDS:
  15. MiniMax M2.5
      Provider           : MiniMax (Singapore)
      Modalities         : Text → Text
-     License            : Modified MIT
+     License            : other
      License Info       : 
      License URL        : https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md
      Official URL       : https://www.minimax.io/
@@ -229,7 +229,7 @@ COMPLETE MODEL RECORDS:
  17. Nemotron 3 Nano 30B A3B
      Provider           : NVIDIA (United States)
      Modalities         : Text → Text
-     License            : nvidia-nemotron-open-model-license
+     License            : other
      License Info       : 
      License URL        : https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md
      Official URL       : https://build.nvidia.com/
@@ -239,7 +239,7 @@ COMPLETE MODEL RECORDS:
  18. Nemotron 3 Super
      Provider           : NVIDIA (United States)
      Modalities         : Text → Text
-     License            : nvidia-nemotron-open-model-license
+     License            : other
      License Info       : 
      License URL        : https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8/blob/main/README.md
      Official URL       : https://build.nvidia.com/
@@ -249,7 +249,7 @@ COMPLETE MODEL RECORDS:
  19. Nemotron Nano 12B 2 VL
      Provider           : NVIDIA (United States)
      Modalities         : Text, Image, Video → Text
-     License            : NVIDIA
+     License            : other
      License Info       : 
      License URL        : https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16/blob/main/README.md
      Official URL       : https://build.nvidia.com/
@@ -259,7 +259,7 @@ COMPLETE MODEL RECORDS:
  20. Nemotron Nano 9B V2
      Provider           : NVIDIA (United States)
      Modalities         : Text → Text
-     License            : NVIDIA
+     License            : other
      License Info       : 
      License URL        : https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md
      Official URL       : https://build.nvidia.com/

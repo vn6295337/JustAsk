@@ -1,5 +1,5 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-03-18 08:09:15 IST
+Generated: 2026-03-19 08:10:42 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -10,7 +10,7 @@ SUMMARY STATISTICS
    • Total records in pipeline: 26
    • Total records in Supabase: 26
    • Models in both systems: 26
-   • Models with differences: 0
+   • Models with differences: 7
    • Models in pipeline only (not in Supabase): 0
    • Models in Supabase only (not in pipeline): 0
 
@@ -43,8 +43,16 @@ SUMMARY STATISTICS
      - Exact matches: 26
      - Differences: 0
    • license_name:
-     - Exact matches: 26
-     - Differences: 0
+     - Exact matches: 19
+     - Differences: 7
+     - Specific differences:
+       * Nemotron Nano 9B V2: Pipeline='other' vs Supabase='NVIDIA'
+       * Nemotron Nano 12B 2 VL: Pipeline='other' vs Supabase='NVIDIA'
+       * MiniMax M2.5: Pipeline='other' vs Supabase='Modified MIT'
+       * LFM2.5-1.2B-Instruct: Pipeline='other' vs Supabase='lfm1.0'
+       * Nemotron 3 Super: Pipeline='other' vs Supabase='nvidia-nemotron-open...'
+       * Nemotron 3 Nano 30B A3B: Pipeline='other' vs Supabase='nvidia-nemotron-open...'
+       * LFM2.5-1.2B-Thinking: Pipeline='other' vs Supabase='lfm1.0'
    • license_url:
      - Exact matches: 26
      - Differences: 0
@@ -56,7 +64,8 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • Existing models with differences: 0
+   • Existing models with differences: 7
+     Models: LFM2.5-1.2B-Instruct, LFM2.5-1.2B-Thinking, MiniMax M2.5, Nemotron 3 Nano 30B A3B, Nemotron 3 Super, Nemotron Nano 12B 2 VL, Nemotron Nano 9B V2
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
@@ -275,7 +284,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | lfm1.0                    | lfm1.0                   
+license_name              | other                     | lfm1.0                   
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -295,7 +304,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | lfm1.0                    | lfm1.0                   
+license_name              | other                     | lfm1.0                   
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -355,7 +364,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | Modified MIT              | Modified MIT             
+license_name              | other                     | Modified MIT             
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -395,7 +404,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | nvidia-nemotron-open-mo.. | nvidia-nemotron-open-mo..
+license_name              | other                     | nvidia-nemotron-open-mo..
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -415,7 +424,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | nvidia-nemotron-open-mo.. | nvidia-nemotron-open-mo..
+license_name              | other                     | nvidia-nemotron-open-mo..
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -435,7 +444,7 @@ input_modalities          | Text, Image, Video        | Text, Image, Video
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | NVIDIA                    | NVIDIA                   
+license_name              | other                     | NVIDIA                   
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -455,7 +464,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | NVIDIA                    | NVIDIA                   
+license_name              | other                     | NVIDIA                   
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..

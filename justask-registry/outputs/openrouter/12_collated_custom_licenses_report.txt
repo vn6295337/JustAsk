@@ -1,6 +1,6 @@
 ================================================================================
 COLLATED CUSTOM LICENSE INFORMATION REPORT
-Generated: 2026-03-18 08:09:11 IST
+Generated: 2026-03-19 08:10:39 IST
 ================================================================================
 
 SUMMARY:
@@ -10,12 +10,9 @@ SUMMARY:
   Output              : 12_collated_custom_licenses.json
 
 CUSTOM LICENSE DISTRIBUTION:
-   2 models: NVIDIA
-   2 models: lfm1.0
-   2 models: nvidia-nemotron-open-model-license
-   1 models: Modified MIT
+   7 models: other
 
-Total unique license types: 4
+Total unique license types: 1
 
 LICENSE URL TYPE DISTRIBUTION:
    2 models: LICENSE file
@@ -26,49 +23,7 @@ Total URL types: 2
 DETAILED CUSTOM MODEL INFORMATION:
 ================================================================================
 
-MODEL 1: minimax/minimax-m2.5-20260211
---------------------------------------------------
-  ID: minimax/minimax-m2.5:free
-  Original Name: MiniMax: MiniMax M2.5 (free)
-  HuggingFace ID: MiniMaxAI/MiniMax-M2.5
-  Canonical Slug: minimax/minimax-m2.5-20260211
-  Clean Model Name: MiniMax M2.5
-  License Info Text: 
-  License Info URL: 
-  License Name: Modified MIT
-  License URL: https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md
-
-================================================================================
-
-MODEL 2: nvidia/nemotron-nano-12b-v2-vl
---------------------------------------------------
-  ID: nvidia/nemotron-nano-12b-v2-vl:free
-  Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
-  HuggingFace ID: nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16
-  Canonical Slug: nvidia/nemotron-nano-12b-v2-vl
-  Clean Model Name: Nemotron Nano 12B 2 VL
-  License Info Text: 
-  License Info URL: 
-  License Name: NVIDIA
-  License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16/blob/main/README.md
-
-================================================================================
-
-MODEL 3: nvidia/nemotron-nano-9b-v2
---------------------------------------------------
-  ID: nvidia/nemotron-nano-9b-v2:free
-  Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
-  HuggingFace ID: nvidia/NVIDIA-Nemotron-Nano-9B-v2
-  Canonical Slug: nvidia/nemotron-nano-9b-v2
-  Clean Model Name: Nemotron Nano 9B V2
-  License Info Text: 
-  License Info URL: 
-  License Name: NVIDIA
-  License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md
-
-================================================================================
-
-MODEL 4: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 1: liquid/lfm-2.5-1.2b-instruct-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-instruct:free
   Original Name: LiquidAI: LFM2.5-1.2B-Instruct (free)
@@ -77,12 +32,12 @@ MODEL 4: liquid/lfm-2.5-1.2b-instruct-20260120
   Clean Model Name: LFM2.5-1.2B-Instruct
   License Info Text: 
   License Info URL: 
-  License Name: lfm1.0
+  License Name: other
   License URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct/blob/main/LICENSE
 
 ================================================================================
 
-MODEL 5: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 2: liquid/lfm-2.5-1.2b-thinking-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-thinking:free
   Original Name: LiquidAI: LFM2.5-1.2B-Thinking (free)
@@ -91,12 +46,26 @@ MODEL 5: liquid/lfm-2.5-1.2b-thinking-20260120
   Clean Model Name: LFM2.5-1.2B-Thinking
   License Info Text: 
   License Info URL: 
-  License Name: lfm1.0
+  License Name: other
   License URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-3-nano-30b-a3b
+MODEL 3: minimax/minimax-m2.5-20260211
+--------------------------------------------------
+  ID: minimax/minimax-m2.5:free
+  Original Name: MiniMax: MiniMax M2.5 (free)
+  HuggingFace ID: MiniMaxAI/MiniMax-M2.5
+  Canonical Slug: minimax/minimax-m2.5-20260211
+  Clean Model Name: MiniMax M2.5
+  License Info Text: 
+  License Info URL: 
+  License Name: other
+  License URL: https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md
+
+================================================================================
+
+MODEL 4: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -105,12 +74,12 @@ MODEL 6: nvidia/nemotron-3-nano-30b-a3b
   Clean Model Name: Nemotron 3 Nano 30B A3B
   License Info Text: 
   License Info URL: 
-  License Name: nvidia-nemotron-open-model-license
+  License Name: other
   License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md
 
 ================================================================================
 
-MODEL 7: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 5: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID: nvidia/nemotron-3-super-120b-a12b:free
   Original Name: NVIDIA: Nemotron 3 Super (free)
@@ -119,6 +88,34 @@ MODEL 7: nvidia/nemotron-3-super-120b-a12b-20230311
   Clean Model Name: Nemotron 3 Super
   License Info Text: 
   License Info URL: 
-  License Name: nvidia-nemotron-open-model-license
+  License Name: other
   License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8/blob/main/README.md
+
+================================================================================
+
+MODEL 6: nvidia/nemotron-nano-12b-v2-vl
+--------------------------------------------------
+  ID: nvidia/nemotron-nano-12b-v2-vl:free
+  Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
+  HuggingFace ID: nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16
+  Canonical Slug: nvidia/nemotron-nano-12b-v2-vl
+  Clean Model Name: Nemotron Nano 12B 2 VL
+  License Info Text: 
+  License Info URL: 
+  License Name: other
+  License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16/blob/main/README.md
+
+================================================================================
+
+MODEL 7: nvidia/nemotron-nano-9b-v2
+--------------------------------------------------
+  ID: nvidia/nemotron-nano-9b-v2:free
+  Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
+  HuggingFace ID: nvidia/NVIDIA-Nemotron-Nano-9B-v2
+  Canonical Slug: nvidia/nemotron-nano-9b-v2
+  Clean Model Name: Nemotron Nano 9B V2
+  License Info Text: 
+  License Info URL: 
+  License Name: other
+  License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md
 
