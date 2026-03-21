@@ -1,1 +1,1 @@
-Today - OpenRouter: Added minimax-m2.5, nemotron-3-super. Removed qwen3-vl-235b-a22b-thinking, qwen3-vl-30b-a3b-thinking 
+Today - No updates
