@@ -1,5 +1,5 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-03-20 08:02:25 IST
+Generated: 2026-03-21 07:56:34 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -47,12 +47,12 @@ SUMMARY STATISTICS
      - Differences: 7
      - Specific differences:
        * Nemotron 3 Super: Pipeline='other' vs Supabase='nvidia-nemotron-open...'
-       * Nemotron Nano 12B 2 VL: Pipeline='other' vs Supabase='NVIDIA'
        * Nemotron 3 Nano 30B A3B: Pipeline='other' vs Supabase='nvidia-nemotron-open...'
-       * LFM2.5-1.2B-Instruct: Pipeline='other' vs Supabase='lfm1.0'
        * Nemotron Nano 9B V2: Pipeline='other' vs Supabase='NVIDIA'
-       * MiniMax M2.5: Pipeline='other' vs Supabase='Modified MIT'
+       * LFM2.5-1.2B-Instruct: Pipeline='other' vs Supabase='lfm1.0'
+       * Nemotron Nano 12B 2 VL: Pipeline='other' vs Supabase='NVIDIA'
        * LFM2.5-1.2B-Thinking: Pipeline='other' vs Supabase='lfm1.0'
+       * MiniMax M2.5: Pipeline='other' vs Supabase='Modified MIT'
    • license_url:
      - Exact matches: 26
      - Differences: 0
