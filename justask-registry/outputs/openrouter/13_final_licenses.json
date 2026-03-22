@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-21 07:56:30 IST",
+    "generated_at": "2026-03-22 08:11:39 IST",
     "total_models": 31,
     "pipeline_stage": "M_final_list_of_licenses"
   },
@@ -242,7 +242,7 @@
       "license_info_text": "",
       "license_info_url": "",
       "license_name": "other",
-      "license_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md",
+      "license_url": "Unknown",
       "source_category": "custom"
     },
     {

@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-03-21 07:56:12 IST
+Generated: 2026-03-22 08:11:22 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 350
+  Total models: 352
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  62 models
@@ -150,7 +150,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemma-3n-e4b-it
     - gemma-3n-e4b-it:free
 
-  Mistral         :  23 models
+  Mistral         :  24 models
     - codestral-2508
     - devstral-2512
     - devstral-medium
@@ -172,6 +172,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - mistral-small-creative
     - mixtral-8x22b-instruct
     - mixtral-8x7b-instruct
+    - pixtral-12b
     - pixtral-large-2411
     - voxtral-small-24b-2507
 
@@ -219,6 +220,19 @@ PROVIDER BREAKDOWN (Descending Order):
     - glm-5
     - glm-5-turbo
 
+  NVIDIA          :  11 models
+    - llama-3.1-nemotron-70b-instruct
+    - llama-3.1-nemotron-ultra-253b-v1
+    - llama-3.3-nemotron-super-49b-v1.5
+    - nemotron-3-nano-30b-a3b
+    - nemotron-3-nano-30b-a3b:free
+    - nemotron-3-super-120b-a12b
+    - nemotron-3-super-120b-a12b:free
+    - nemotron-nano-12b-v2-vl
+    - nemotron-nano-12b-v2-vl:free
+    - nemotron-nano-9b-v2
+    - nemotron-nano-9b-v2:free
+
   DeepSeek        :  11 models
     - deepseek-chat
     - deepseek-chat-v3-0324
@@ -243,18 +257,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - grok-4.20-beta
     - grok-4.20-multi-agent-beta
     - grok-code-fast-1
-
-  NVIDIA          :  10 models
-    - llama-3.1-nemotron-70b-instruct
-    - llama-3.3-nemotron-super-49b-v1.5
-    - nemotron-3-nano-30b-a3b
-    - nemotron-3-nano-30b-a3b:free
-    - nemotron-3-super-120b-a12b
-    - nemotron-3-super-120b-a12b:free
-    - nemotron-nano-12b-v2-vl
-    - nemotron-nano-12b-v2-vl:free
-    - nemotron-nano-9b-v2
-    - nemotron-nano-9b-v2:free
 
   MiniMax         :   8 models
     - minimax-01

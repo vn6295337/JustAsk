@@ -1,5 +1,5 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-03-21 07:56:34 IST
+Generated: 2026-03-22 08:11:42 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -46,16 +46,18 @@ SUMMARY STATISTICS
      - Exact matches: 19
      - Differences: 7
      - Specific differences:
-       * Nemotron 3 Super: Pipeline='other' vs Supabase='nvidia-nemotron-open...'
        * Nemotron 3 Nano 30B A3B: Pipeline='other' vs Supabase='nvidia-nemotron-open...'
        * Nemotron Nano 9B V2: Pipeline='other' vs Supabase='NVIDIA'
-       * LFM2.5-1.2B-Instruct: Pipeline='other' vs Supabase='lfm1.0'
-       * Nemotron Nano 12B 2 VL: Pipeline='other' vs Supabase='NVIDIA'
        * LFM2.5-1.2B-Thinking: Pipeline='other' vs Supabase='lfm1.0'
+       * LFM2.5-1.2B-Instruct: Pipeline='other' vs Supabase='lfm1.0'
+       * Nemotron 3 Super: Pipeline='other' vs Supabase='nvidia-nemotron-open...'
+       * Nemotron Nano 12B 2 VL: Pipeline='other' vs Supabase='NVIDIA'
        * MiniMax M2.5: Pipeline='other' vs Supabase='Modified MIT'
    • license_url:
-     - Exact matches: 26
-     - Differences: 0
+     - Exact matches: 25
+     - Differences: 1
+     - Specific differences:
+       * Nemotron Nano 9B V2: Pipeline='Unknown' vs Supabase='https://huggingface....'
    • rate_limits:
      - Exact matches: 26
      - Differences: 0
@@ -465,7 +467,7 @@ output_modalities         | Text                      | Text
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
 license_name              | other                     | NVIDIA                   
-license_url               | https://huggingface.co/.. | https://huggingface.co/..
+license_url               | Unknown                   | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
 

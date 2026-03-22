@@ -1,18 +1,18 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-03-21 07:56:13 IST
+Generated: 2026-03-22 08:11:22 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 350
+  Total models processed: 352
   Models passed all filters: 26
-  Models excluded: 324
+  Models excluded: 326
   Success rate: 7.4%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 350 models
-    Excluded: 323 models (non-free pricing)
+    Input: 352 models
+    Excluded: 325 models (non-free pricing)
     Remaining: 27 models
 
   Step 2 - Billing Description Filter:
@@ -33,7 +33,7 @@ STEP-BY-STEP FILTERING BREAKDOWN:
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 323 models with non-free pricing (details omitted due to volume)
+Excluded 325 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -206,9 +206,9 @@ PROVIDER: NOUS (1 models)
 FINAL SUMMARY:
   Total providers: 14
   Total models passed all filters: 26
-  Models excluded by pricing: 323
+  Models excluded by pricing: 325
   Models excluded by billing description: 0
   Models excluded by keywords: 1
   Models excluded by deduplication: 0
-  Total exclusions: 324
+  Total exclusions: 326
   ✓ All filtered models accounted for
