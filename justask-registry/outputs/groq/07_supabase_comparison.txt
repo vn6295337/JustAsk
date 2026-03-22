@@ -1,5 +1,5 @@
 GROQ FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-03-21 07:55:46 IST
+Generated: 2026-03-22 08:11:00 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -110,14 +110,6 @@ DETAILED FIELD DIFFERENCES
 
 Field: license_info_text
 ----------------------------------------
-Model: Gpt Oss 120b
-  Pipeline Value: ''
-  Supabase Value: 'info'
-
-Model: Whisper Large V3 Turbo
-  Pipeline Value: ''
-  Supabase Value: 'info'
-
 Model: Gpt Oss 20b
   Pipeline Value: ''
   Supabase Value: 'info'
@@ -126,17 +118,17 @@ Model: Whisper Large V3
   Pipeline Value: ''
   Supabase Value: 'info'
 
-
-Field: license_info_url
-----------------------------------------
 Model: Gpt Oss 120b
   Pipeline Value: ''
-  Supabase Value: 'https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE'
+  Supabase Value: 'info'
 
 Model: Whisper Large V3 Turbo
   Pipeline Value: ''
-  Supabase Value: 'https://huggingface.co/openai/whisper-large-v3-turbo/blob/main/README.md'
+  Supabase Value: 'info'
 
+
+Field: license_info_url
+----------------------------------------
 Model: Gpt Oss 20b
   Pipeline Value: ''
   Supabase Value: 'https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE'
@@ -145,9 +137,25 @@ Model: Whisper Large V3
   Pipeline Value: ''
   Supabase Value: 'https://huggingface.co/openai/whisper-large-v3/blob/main/README.md'
 
+Model: Gpt Oss 120b
+  Pipeline Value: ''
+  Supabase Value: 'https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE'
+
+Model: Whisper Large V3 Turbo
+  Pipeline Value: ''
+  Supabase Value: 'https://huggingface.co/openai/whisper-large-v3-turbo/blob/main/README.md'
+
 
 Field: license_name
 ----------------------------------------
+Model: Gpt Oss 20b
+  Pipeline Value: 'Not Found'
+  Supabase Value: 'Apache-2.0'
+
+Model: Whisper Large V3
+  Pipeline Value: 'Not Found'
+  Supabase Value: 'Apache-2.0'
+
 Model: Gpt Oss 120b
   Pipeline Value: 'Not Found'
   Supabase Value: 'Apache-2.0'
@@ -156,25 +164,9 @@ Model: Whisper Large V3 Turbo
   Pipeline Value: 'Not Found'
   Supabase Value: 'MIT'
 
-Model: Gpt Oss 20b
-  Pipeline Value: 'Not Found'
-  Supabase Value: 'Apache-2.0'
-
-Model: Whisper Large V3
-  Pipeline Value: 'Not Found'
-  Supabase Value: 'Apache-2.0'
-
 
 Field: license_url
 ----------------------------------------
-Model: Gpt Oss 120b
-  Pipeline Value: 'https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE'
-  Supabase Value: 'https://www.apache.org/licenses/LICENSE-2.0'
-
-Model: Whisper Large V3 Turbo
-  Pipeline Value: 'https://huggingface.co/openai/whisper-large-v3-turbo/blob/main/README.md'
-  Supabase Value: 'https://opensource.org/licenses/MIT'
-
 Model: Gpt Oss 20b
   Pipeline Value: 'https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE'
   Supabase Value: 'https://www.apache.org/licenses/LICENSE-2.0'
@@ -182,6 +174,14 @@ Model: Gpt Oss 20b
 Model: Whisper Large V3
   Pipeline Value: 'https://huggingface.co/openai/whisper-large-v3/blob/main/README.md'
   Supabase Value: 'https://www.apache.org/licenses/LICENSE-2.0'
+
+Model: Gpt Oss 120b
+  Pipeline Value: 'https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE'
+  Supabase Value: 'https://www.apache.org/licenses/LICENSE-2.0'
+
+Model: Whisper Large V3 Turbo
+  Pipeline Value: 'https://huggingface.co/openai/whisper-large-v3-turbo/blob/main/README.md'
+  Supabase Value: 'https://opensource.org/licenses/MIT'
 
 
 SAMPLE MODEL COMPARISONS
