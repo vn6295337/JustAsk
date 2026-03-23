@@ -1,6 +1,6 @@
 FIELD COMPARISON REPORT: GOOGLE PIPELINE vs SUPABASE
 ================================================================================
-Generated: 2026-03-23 10:16:31 IST
+Generated: 2026-03-23 10:18:11 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -8,12 +8,75 @@ SUMMARY STATISTICS
 
 1. OVERALL STATISTICS:
    • Total models processed: 20
-   • Models in both systems: 0
-   • Models in pipeline only (not in Supabase): 20
+   • Models in both systems: 20
+   • Models with differences: 20
+   • Models in pipeline only (not in Supabase): 0
    • Models in Supabase only (not in pipeline): 0
 
+2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
+   • inference_provider:
+     - Exact matches: 20
+     - Differences: 0
+   • model_provider:
+     - Exact matches: 20
+     - Differences: 0
+   • human_readable_name:
+     - Exact matches: 20
+     - Differences: 0
+   • model_provider_country:
+     - Exact matches: 20
+     - Differences: 0
+   • official_url:
+     - Exact matches: 20
+     - Differences: 0
+   • input_modalities:
+     - Exact matches: 20
+     - Differences: 0
+   • output_modalities:
+     - Exact matches: 20
+     - Differences: 0
+   • license_info_text:
+     - Exact matches: 20
+     - Differences: 0
+   • license_info_url:
+     - Exact matches: 20
+     - Differences: 0
+   • license_name:
+     - Exact matches: 0
+     - Differences: 20
+     - Specific differences:
+       * Gemini 2.0 Flash 001: Pipeline='GEMINI' vs Supabase='Gemini'
+       * Imagen 4.0 Ultra Generate 001: Pipeline='GEMINI' vs Supabase='Gemini'
+       * Gemma 3n E2B IT: Pipeline='GEMMA' vs Supabase='Gemma'
+       * Gemma 3 4B IT: Pipeline='GEMMA' vs Supabase='Gemma'
+       * Gemma 3 12B IT: Pipeline='GEMMA' vs Supabase='Gemma'
+       * Gemini Embedding 001: Pipeline='GEMINI' vs Supabase='Gemini'
+       * Imagen 4.0 Fast Generate 001: Pipeline='GEMINI' vs Supabase='Gemini'
+       * Gemma 3 27B IT: Pipeline='GEMMA' vs Supabase='Gemma'
+       * AQA: Pipeline='GEMINI' vs Supabase='Gemini'
+       * Imagen 4.0 Generate 001: Pipeline='GEMINI' vs Supabase='Gemini'
+       * Gemma 3 1B IT: Pipeline='GEMMA' vs Supabase='Gemma'
+       * Gemini 2.0 Flash-Lite 001: Pipeline='GEMINI' vs Supabase='Gemini'
+       * Veo 3.0 Generate 001: Pipeline='GEMINI' vs Supabase='Gemini'
+       * Gemma 3n E4B IT: Pipeline='GEMMA' vs Supabase='Gemma'
+       * Gemini 2.0 Flash: Pipeline='GEMINI' vs Supabase='Gemini'
+       * Gemini 2.5 Flash: Pipeline='GEMINI' vs Supabase='Gemini'
+       * Gemini 2.5 Flash-Lite: Pipeline='GEMINI' vs Supabase='Gemini'
+       * Veo 3.0 Fast Generate 001: Pipeline='GEMINI' vs Supabase='Gemini'
+       * Gemini 2.5 Pro: Pipeline='GEMINI' vs Supabase='Gemini'
+       * Gemini 2.0 Flash-Lite: Pipeline='GEMINI' vs Supabase='Gemini'
+   • license_url:
+     - Exact matches: 20
+     - Differences: 0
+   • rate_limits:
+     - Exact matches: 20
+     - Differences: 0
+   • provider_api_access:
+     - Exact matches: 20
+     - Differences: 0
+
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 20
+   • Existing models with differences: 20
      Models: AQA, Gemini 2.0 Flash, Gemini 2.0 Flash 001, Gemini 2.0 Flash-Lite, Gemini 2.0 Flash-Lite 001, Gemini 2.5 Flash, Gemini 2.5 Flash-Lite, Gemini 2.5 Pro, Gemini Embedding 001, Gemma 3 12B IT, Gemma 3 1B IT, Gemma 3 27B IT, Gemma 3 4B IT, Gemma 3n E2B IT, Gemma 3n E4B IT, Imagen 4.0 Fast Generate 001, Imagen 4.0 Generate 001, Imagen 4.0 Ultra Generate 001, Veo 3.0 Fast Generate 001, Veo 3.0 Generate 001
 
 ================================================================================
@@ -24,19 +87,19 @@ MODEL: AQA
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | AQA                                                |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemini/             |                                                   
-input_modalities          | Text                                               |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         | Google                                             |                                                   
-license_info_url          | https://developers.google.com/terms                |                                                   
-license_name              | GEMINI                                             |                                                   
-license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
-rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | AQA                                                | AQA                                               
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemini/             | https://deepmind.google/models/gemini/            
+input_modalities          | Text                                               | Text                                              
+output_modalities         | Text                                               | Text                                              
+license_info_text         | Google                                             | Google                                            
+license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
+license_name              | GEMINI                                             | Gemini                                            
+license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
+rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   | 15 requests/min, 1M tokens/min, 200 requests/day  
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -44,19 +107,19 @@ MODEL: Gemini 2.0 Flash
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemini 2.0 Flash                                   |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemini/             |                                                   
-input_modalities          | Text, Image, Audio, Video                          |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         | Google                                             |                                                   
-license_info_url          | https://developers.google.com/terms                |                                                   
-license_name              | GEMINI                                             |                                                   
-license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
-rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemini 2.0 Flash                                   | Gemini 2.0 Flash                                  
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemini/             | https://deepmind.google/models/gemini/            
+input_modalities          | Text, Image, Audio, Video                          | Text, Image, Audio, Video                         
+output_modalities         | Text                                               | Text                                              
+license_info_text         | Google                                             | Google                                            
+license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
+license_name              | GEMINI                                             | Gemini                                            
+license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
+rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   | 15 requests/min, 1M tokens/min, 200 requests/day  
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -64,19 +127,19 @@ MODEL: Gemini 2.0 Flash 001
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemini 2.0 Flash 001                               |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemini/             |                                                   
-input_modalities          | Text, Image, Audio, Video                          |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         | Google                                             |                                                   
-license_info_url          | https://developers.google.com/terms                |                                                   
-license_name              | GEMINI                                             |                                                   
-license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
-rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemini 2.0 Flash 001                               | Gemini 2.0 Flash 001                              
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemini/             | https://deepmind.google/models/gemini/            
+input_modalities          | Text, Image, Audio, Video                          | Text, Image, Audio, Video                         
+output_modalities         | Text                                               | Text                                              
+license_info_text         | Google                                             | Google                                            
+license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
+license_name              | GEMINI                                             | Gemini                                            
+license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
+rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   | 15 requests/min, 1M tokens/min, 200 requests/day  
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -84,19 +147,19 @@ MODEL: Gemini 2.0 Flash-Lite
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemini 2.0 Flash-Lite                              |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemini/             |                                                   
-input_modalities          | Text, Image, Audio, Video                          |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         | Google                                             |                                                   
-license_info_url          | https://developers.google.com/terms                |                                                   
-license_name              | GEMINI                                             |                                                   
-license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
-rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemini 2.0 Flash-Lite                              | Gemini 2.0 Flash-Lite                             
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemini/             | https://deepmind.google/models/gemini/            
+input_modalities          | Text, Image, Audio, Video                          | Text, Image, Audio, Video                         
+output_modalities         | Text                                               | Text                                              
+license_info_text         | Google                                             | Google                                            
+license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
+license_name              | GEMINI                                             | Gemini                                            
+license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
+rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   | 15 requests/min, 1M tokens/min, 200 requests/day  
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -104,19 +167,19 @@ MODEL: Gemini 2.0 Flash-Lite 001
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemini 2.0 Flash-Lite 001                          |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemini/             |                                                   
-input_modalities          | Text, Image, Audio, Video                          |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         | Google                                             |                                                   
-license_info_url          | https://developers.google.com/terms                |                                                   
-license_name              | GEMINI                                             |                                                   
-license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
-rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemini 2.0 Flash-Lite 001                          | Gemini 2.0 Flash-Lite 001                         
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemini/             | https://deepmind.google/models/gemini/            
+input_modalities          | Text, Image, Audio, Video                          | Text, Image, Audio, Video                         
+output_modalities         | Text                                               | Text                                              
+license_info_text         | Google                                             | Google                                            
+license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
+license_name              | GEMINI                                             | Gemini                                            
+license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
+rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   | 15 requests/min, 1M tokens/min, 200 requests/day  
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -124,19 +187,19 @@ MODEL: Gemini 2.5 Flash
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemini 2.5 Flash                                   |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemini/             |                                                   
-input_modalities          | Text, Image, Audio, Video                          |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         | Google                                             |                                                   
-license_info_url          | https://developers.google.com/terms                |                                                   
-license_name              | GEMINI                                             |                                                   
-license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
-rate_limits               | 10 requests/min, 250K tokens/min, 250 requests/day |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemini 2.5 Flash                                   | Gemini 2.5 Flash                                  
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemini/             | https://deepmind.google/models/gemini/            
+input_modalities          | Text, Image, Audio, Video                          | Text, Image, Audio, Video                         
+output_modalities         | Text                                               | Text                                              
+license_info_text         | Google                                             | Google                                            
+license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
+license_name              | GEMINI                                             | Gemini                                            
+license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
+rate_limits               | 10 requests/min, 250K tokens/min, 250 requests/day | 10 requests/min, 250K tokens/min, 250 requests/day
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -144,19 +207,19 @@ MODEL: Gemini 2.5 Flash-Lite
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemini 2.5 Flash-Lite                              |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemini/             |                                                   
-input_modalities          | Text, Image, Audio, Video, PDF                     |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         | Google                                             |                                                   
-license_info_url          | https://developers.google.com/terms                |                                                   
-license_name              | GEMINI                                             |                                                   
-license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
-rate_limits               | 10 requests/min, 250K tokens/min, 250 requests/day |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemini 2.5 Flash-Lite                              | Gemini 2.5 Flash-Lite                             
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemini/             | https://deepmind.google/models/gemini/            
+input_modalities          | Text, Image, Audio, Video, PDF                     | Text, Image, Audio, Video, PDF                    
+output_modalities         | Text                                               | Text                                              
+license_info_text         | Google                                             | Google                                            
+license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
+license_name              | GEMINI                                             | Gemini                                            
+license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
+rate_limits               | 10 requests/min, 250K tokens/min, 250 requests/day | 10 requests/min, 250K tokens/min, 250 requests/day
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -164,19 +227,19 @@ MODEL: Gemini 2.5 Pro
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemini 2.5 Pro                                     |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemini/             |                                                   
-input_modalities          | Text, Image, Audio, Video, PDF                     |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         | Google                                             |                                                   
-license_info_url          | https://developers.google.com/terms                |                                                   
-license_name              | GEMINI                                             |                                                   
-license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
-rate_limits               | 5 requests/min, 250K tokens/min, 100 requests/day  |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemini 2.5 Pro                                     | Gemini 2.5 Pro                                    
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemini/             | https://deepmind.google/models/gemini/            
+input_modalities          | Text, Image, Audio, Video, PDF                     | Text, Image, Audio, Video, PDF                    
+output_modalities         | Text                                               | Text                                              
+license_info_text         | Google                                             | Google                                            
+license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
+license_name              | GEMINI                                             | Gemini                                            
+license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
+rate_limits               | 5 requests/min, 250K tokens/min, 100 requests/day  | 5 requests/min, 250K tokens/min, 100 requests/day 
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -184,19 +247,19 @@ MODEL: Gemini Embedding 001
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemini Embedding 001                               |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemini/             |                                                   
-input_modalities          | Text                                               |                                                   
-output_modalities         | Text Embeddings                                    |                                                   
-license_info_text         | Google                                             |                                                   
-license_info_url          | https://developers.google.com/terms                |                                                   
-license_name              | GEMINI                                             |                                                   
-license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
-rate_limits               | 100 requests/min, 30K tokens/min, 1,000 requests.. |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemini Embedding 001                               | Gemini Embedding 001                              
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemini/             | https://deepmind.google/models/gemini/            
+input_modalities          | Text                                               | Text                                              
+output_modalities         | Text Embeddings                                    | Text Embeddings                                   
+license_info_text         | Google                                             | Google                                            
+license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
+license_name              | GEMINI                                             | Gemini                                            
+license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
+rate_limits               | 100 requests/min, 30K tokens/min, 1,000 requests.. | 100 requests/min, 30K tokens/min, 1,000 requests..
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -204,19 +267,19 @@ MODEL: Gemma 3 12B IT
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemma 3 12B IT                                     |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemma/              |                                                   
-input_modalities          | Text, Image                                        |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         |                                                    |                                                   
-license_info_url          |                                                    |                                                   
-license_name              | GEMMA                                              |                                                   
-license_url               | https://ai.google.dev/gemma/terms                  |                                                   
-rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemma 3 12B IT                                     | Gemma 3 12B IT                                    
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemma/              | https://deepmind.google/models/gemma/             
+input_modalities          | Text, Image                                        | Text, Image                                       
+output_modalities         | Text                                               | Text                                              
+license_info_text         |                                                    | None                                              
+license_info_url          |                                                    | None                                              
+license_name              | GEMMA                                              | Gemma                                             
+license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
+rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -224,19 +287,19 @@ MODEL: Gemma 3 1B IT
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemma 3 1B IT                                      |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemma/              |                                                   
-input_modalities          | Text, Image                                        |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         |                                                    |                                                   
-license_info_url          |                                                    |                                                   
-license_name              | GEMMA                                              |                                                   
-license_url               | https://ai.google.dev/gemma/terms                  |                                                   
-rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemma 3 1B IT                                      | Gemma 3 1B IT                                     
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemma/              | https://deepmind.google/models/gemma/             
+input_modalities          | Text, Image                                        | Text, Image                                       
+output_modalities         | Text                                               | Text                                              
+license_info_text         |                                                    | None                                              
+license_info_url          |                                                    | None                                              
+license_name              | GEMMA                                              | Gemma                                             
+license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
+rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -244,19 +307,19 @@ MODEL: Gemma 3 27B IT
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemma 3 27B IT                                     |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemma/              |                                                   
-input_modalities          | Text, Image                                        |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         |                                                    |                                                   
-license_info_url          |                                                    |                                                   
-license_name              | GEMMA                                              |                                                   
-license_url               | https://ai.google.dev/gemma/terms                  |                                                   
-rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemma 3 27B IT                                     | Gemma 3 27B IT                                    
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemma/              | https://deepmind.google/models/gemma/             
+input_modalities          | Text, Image                                        | Text, Image                                       
+output_modalities         | Text                                               | Text                                              
+license_info_text         |                                                    | None                                              
+license_info_url          |                                                    | None                                              
+license_name              | GEMMA                                              | Gemma                                             
+license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
+rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -264,19 +327,19 @@ MODEL: Gemma 3 4B IT
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemma 3 4B IT                                      |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemma/              |                                                   
-input_modalities          | Text, Image                                        |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         |                                                    |                                                   
-license_info_url          |                                                    |                                                   
-license_name              | GEMMA                                              |                                                   
-license_url               | https://ai.google.dev/gemma/terms                  |                                                   
-rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemma 3 4B IT                                      | Gemma 3 4B IT                                     
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemma/              | https://deepmind.google/models/gemma/             
+input_modalities          | Text, Image                                        | Text, Image                                       
+output_modalities         | Text                                               | Text                                              
+license_info_text         |                                                    | None                                              
+license_info_url          |                                                    | None                                              
+license_name              | GEMMA                                              | Gemma                                             
+license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
+rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -284,19 +347,19 @@ MODEL: Gemma 3n E2B IT
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemma 3n E2B IT                                    |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemma/              |                                                   
-input_modalities          | Text, Image, Audio, Video                          |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         |                                                    |                                                   
-license_info_url          |                                                    |                                                   
-license_name              | GEMMA                                              |                                                   
-license_url               | https://ai.google.dev/gemma/terms                  |                                                   
-rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemma 3n E2B IT                                    | Gemma 3n E2B IT                                   
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemma/              | https://deepmind.google/models/gemma/             
+input_modalities          | Text, Image, Audio, Video                          | Text, Image, Audio, Video                         
+output_modalities         | Text                                               | Text                                              
+license_info_text         |                                                    | None                                              
+license_info_url          |                                                    | None                                              
+license_name              | GEMMA                                              | Gemma                                             
+license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
+rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -304,19 +367,19 @@ MODEL: Gemma 3n E4B IT
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemma 3n E4B IT                                    |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemma/              |                                                   
-input_modalities          | Text, Image, Audio, Video                          |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         |                                                    |                                                   
-license_info_url          |                                                    |                                                   
-license_name              | GEMMA                                              |                                                   
-license_url               | https://ai.google.dev/gemma/terms                  |                                                   
-rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemma 3n E4B IT                                    | Gemma 3n E4B IT                                   
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemma/              | https://deepmind.google/models/gemma/             
+input_modalities          | Text, Image, Audio, Video                          | Text, Image, Audio, Video                         
+output_modalities         | Text                                               | Text                                              
+license_info_text         |                                                    | None                                              
+license_info_url          |                                                    | None                                              
+license_name              | GEMMA                                              | Gemma                                             
+license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
+rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -324,19 +387,19 @@ MODEL: Imagen 4.0 Fast Generate 001
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Imagen 4.0 Fast Generate 001                       |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/imagen/             |                                                   
-input_modalities          | Text                                               |                                                   
-output_modalities         | Image                                              |                                                   
-license_info_text         | Google                                             |                                                   
-license_info_url          | https://developers.google.com/terms                |                                                   
-license_name              | GEMINI                                             |                                                   
-license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
-rate_limits               | Input: 480 tokens, Output: up to 4 images          |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Imagen 4.0 Fast Generate 001                       | Imagen 4.0 Fast Generate 001                      
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/imagen/             | https://deepmind.google/models/imagen/            
+input_modalities          | Text                                               | Text                                              
+output_modalities         | Image                                              | Image                                             
+license_info_text         | Google                                             | Google                                            
+license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
+license_name              | GEMINI                                             | Gemini                                            
+license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
+rate_limits               | Input: 480 tokens, Output: up to 4 images          | Input: 480 tokens, Output: up to 4 images         
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -344,19 +407,19 @@ MODEL: Imagen 4.0 Generate 001
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Imagen 4.0 Generate 001                            |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/imagen/             |                                                   
-input_modalities          | Text                                               |                                                   
-output_modalities         | Image                                              |                                                   
-license_info_text         | Google                                             |                                                   
-license_info_url          | https://developers.google.com/terms                |                                                   
-license_name              | GEMINI                                             |                                                   
-license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
-rate_limits               | Input: 480 tokens, Output: up to 4 images          |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Imagen 4.0 Generate 001                            | Imagen 4.0 Generate 001                           
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/imagen/             | https://deepmind.google/models/imagen/            
+input_modalities          | Text                                               | Text                                              
+output_modalities         | Image                                              | Image                                             
+license_info_text         | Google                                             | Google                                            
+license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
+license_name              | GEMINI                                             | Gemini                                            
+license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
+rate_limits               | Input: 480 tokens, Output: up to 4 images          | Input: 480 tokens, Output: up to 4 images         
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -364,19 +427,19 @@ MODEL: Imagen 4.0 Ultra Generate 001
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Imagen 4.0 Ultra Generate 001                      |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/imagen/             |                                                   
-input_modalities          | Text                                               |                                                   
-output_modalities         | Image                                              |                                                   
-license_info_text         | Google                                             |                                                   
-license_info_url          | https://developers.google.com/terms                |                                                   
-license_name              | GEMINI                                             |                                                   
-license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
-rate_limits               | Input: 480 tokens, Output: up to 4 images          |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Imagen 4.0 Ultra Generate 001                      | Imagen 4.0 Ultra Generate 001                     
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/imagen/             | https://deepmind.google/models/imagen/            
+input_modalities          | Text                                               | Text                                              
+output_modalities         | Image                                              | Image                                             
+license_info_text         | Google                                             | Google                                            
+license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
+license_name              | GEMINI                                             | Gemini                                            
+license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
+rate_limits               | Input: 480 tokens, Output: up to 4 images          | Input: 480 tokens, Output: up to 4 images         
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -384,19 +447,19 @@ MODEL: Veo 3.0 Fast Generate 001
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Veo 3.0 Fast Generate 001                          |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/veo/                |                                                   
-input_modalities          | Text, Image                                        |                                                   
-output_modalities         | Audio, Video                                       |                                                   
-license_info_text         | Google                                             |                                                   
-license_info_url          | https://developers.google.com/terms                |                                                   
-license_name              | GEMINI                                             |                                                   
-license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
-rate_limits               | Image input: up to 20MB, Output video: up to 2 m.. |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Veo 3.0 Fast Generate 001                          | Veo 3.0 Fast Generate 001                         
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/veo/                | https://deepmind.google/models/veo/               
+input_modalities          | Text, Image                                        | Text, Image                                       
+output_modalities         | Audio, Video                                       | Audio, Video                                      
+license_info_text         | Google                                             | Google                                            
+license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
+license_name              | GEMINI                                             | Gemini                                            
+license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
+rate_limits               | Image input: up to 20MB, Output video: up to 2 m.. | Image input: up to 20MB, Output video: up to 2 m..
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -404,19 +467,19 @@ MODEL: Veo 3.0 Generate 001
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Veo 3.0 Generate 001                               |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/veo/                |                                                   
-input_modalities          | Text, Image                                        |                                                   
-output_modalities         | Audio, Video                                       |                                                   
-license_info_text         | Google                                             |                                                   
-license_info_url          | https://developers.google.com/terms                |                                                   
-license_name              | GEMINI                                             |                                                   
-license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
-rate_limits               | Image input: up to 20MB, Output video: up to 2 m.. |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Veo 3.0 Generate 001                               | Veo 3.0 Generate 001                              
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/veo/                | https://deepmind.google/models/veo/               
+input_modalities          | Text, Image                                        | Text, Image                                       
+output_modalities         | Audio, Video                                       | Audio, Video                                      
+license_info_text         | Google                                             | Google                                            
+license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
+license_name              | GEMINI                                             | Gemini                                            
+license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
+rate_limits               | Image input: up to 20MB, Output video: up to 2 m.. | Image input: up to 20MB, Output video: up to 2 m..
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 

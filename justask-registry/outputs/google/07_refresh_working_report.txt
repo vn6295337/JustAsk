@@ -1,9 +1,0 @@
-Supabase Google Working Version Refresh Report
-Last Run: 2026-01-28 10:29:27
-============================================================
-
-2026-01-28 10:29:27,948 - INFO - ============================================================
-2026-01-28 10:29:27,948 - INFO - SUPABASE GOOGLE DATA REFRESH STARTED
-2026-01-28 10:29:27,948 - INFO - ============================================================
-2026-01-28 10:29:27,949 - ERROR - Missing required environment variable: PIPELINE_SUPABASE_URL
-2026-01-28 10:29:27,949 - ERROR - ❌ REFRESH FAILED: Could not connect to database
