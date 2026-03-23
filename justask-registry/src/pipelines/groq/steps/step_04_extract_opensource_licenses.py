@@ -122,17 +122,25 @@ def extract_license_from_hf_page(hf_id: str) -> str:
         content = response.text
 
         # Look for license information in the specific HuggingFace HTML structure
+        # IMPORTANT: HuggingFace uses "license":"other" + "license_name":"actual-license"
+        # so we must check license_name FIRST before falling back to license
+        # NOTE: HuggingFace embeds JSON with HTML entities (&quot; instead of ")
         patterns = [
             r'<span class="-mr-1 text-gray-400">License:</span>\s*<span>([^<]+)</span>',  # HF license structure
             r'<span[^>]*>License:</span>[^<]*<span[^>]*>([^<]+)</span>',  # General license span structure
-            r'"license"\s*:\s*"([^"]+)"',  # JSON license field
+            r'license_name&quot;:&quot;([^&]+)&quot;',  # HTML-escaped JSON license_name (HF primary format)
+            r'"license_name"\s*:\s*"([^"]+)"',  # JSON license_name field (non-escaped)
+            r'license&quot;:&quot;([^&]+)&quot;',  # HTML-escaped JSON license (fallback)
+            r'"license"\s*:\s*"([^"]+)"',  # JSON license field (fallback)
         ]
 
         for pattern in patterns:
             match = re.search(pattern, content, re.IGNORECASE)
             if match:
                 license_name = match.group(1).strip()
-                # Return license exactly as found on the page
+                # Skip 'other' if found - it means HF has a custom license in license_name field
+                if license_name.lower() == 'other':
+                    continue
                 return license_name
 
         return "Not Found"
@@ -236,13 +244,53 @@ def detect_hf_id(groq_model_id: str, hf_mappings: Dict[str, str]) -> str:
     return hf_mappings.get(groq_model_id, '')
 
 
+def capitalize_license_name(license_name: str) -> str:
+    """Capitalize license name appropriately (title case, preserving version numbers)"""
+    if not license_name:
+        return license_name
+
+    # Already uppercase (like MIT, NVIDIA, QWEN) - keep as is
+    if license_name.isupper():
+        return license_name
+
+    # Handle hyphenated names like "lfm1.0" -> "LFM1.0"
+    parts = license_name.split('-')
+    capitalized_parts = []
+    for part in parts:
+        # If part is all lowercase letters followed by numbers (e.g., "lfm1.0"), uppercase letters
+        if part and part[0].islower():
+            # Find where letters end and numbers begin
+            letter_end = 0
+            for i, c in enumerate(part):
+                if c.isalpha():
+                    letter_end = i + 1
+                else:
+                    break
+            # Uppercase the letter portion, keep rest as is
+            capitalized_parts.append(part[:letter_end].upper() + part[letter_end:])
+        else:
+            capitalized_parts.append(part)
+
+    return '-'.join(capitalized_parts)
+
+
 def standardize_license_name(license_name: str, standardization_mappings: Dict[str, str]) -> str:
     """Standardize license name using mappings"""
     if not license_name:
         return license_name
 
     license_lower = license_name.lower()
-    return standardization_mappings.get(license_lower, license_name)
+
+    # Check if we have a direct mapping
+    if license_lower in standardization_mappings:
+        return standardization_mappings[license_lower]
+
+    # Catch-all: Any license starting with "nvidia" -> "NVIDIA"
+    if license_lower.startswith('nvidia'):
+        return 'NVIDIA'
+
+    # Return capitalized license name if no mapping found
+    return capitalize_license_name(license_name)
 
 
 def is_google_model(model_id: str, provider: str) -> bool:
