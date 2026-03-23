@@ -80,28 +80,58 @@ def get_license_standardization_mappings(config: Dict[str, Any]) -> Tuple[Dict[s
     print(f"Loaded {len(mappings)} license mappings, case_sensitive={case_sensitive}")
     return mappings, case_sensitive
 
+def capitalize_license_name(license_name: str) -> str:
+    """Capitalize license name appropriately (title case, preserving version numbers)"""
+    if not license_name:
+        return license_name
+
+    # Already uppercase (like MIT, NVIDIA, QWEN) - keep as is
+    if license_name.isupper():
+        return license_name
+
+    # Handle hyphenated names like "lfm1.0" -> "LFM1.0"
+    parts = license_name.split('-')
+    capitalized_parts = []
+    for part in parts:
+        # If part is all lowercase letters followed by numbers (e.g., "lfm1.0"), uppercase letters
+        if part and part[0].islower():
+            # Find where letters end and numbers begin
+            letter_end = 0
+            for i, c in enumerate(part):
+                if c.isalpha():
+                    letter_end = i + 1
+                else:
+                    break
+            # Uppercase the letter portion, keep rest as is
+            capitalized_parts.append(part[:letter_end].upper() + part[letter_end:])
+        else:
+            capitalized_parts.append(part)
+
+    return '-'.join(capitalized_parts)
+
+
 def standardize_license_name(raw_license: str, mappings: Dict[str, str], case_sensitive: bool = False, debug: bool = False) -> str:
     """Standardize a single license name using config mappings"""
     if not raw_license or raw_license.strip() == '':
         return 'Unknown'
-    
+
     if not mappings:
-        # No mappings available, return cleaned original or Unknown
+        # No mappings available, return cleaned and capitalized original or Unknown
         cleaned = raw_license.strip()
         if debug:
-            print(f"  DEBUG: No mappings available, returning: {cleaned}")
-        return cleaned if cleaned else 'Unknown'
-    
+            print(f"  DEBUG: No mappings available, returning capitalized: {capitalize_license_name(cleaned)}")
+        return capitalize_license_name(cleaned) if cleaned else 'Unknown'
+
     # Clean the input
     license_input = raw_license.strip()
-    
+
     # Try exact match first (case-sensitive)
     if license_input in mappings:
         result = mappings[license_input]
         if debug:
             print(f"  DEBUG: Exact match '{license_input}' -> '{result}'")
         return result
-    
+
     # If case insensitive, try matching with different cases
     if not case_sensitive:
         for mapping_key, standardized_value in mappings.items():
@@ -109,21 +139,28 @@ def standardize_license_name(raw_license: str, mappings: Dict[str, str], case_se
                 if debug:
                     print(f"  DEBUG: Case-insensitive match '{license_input}' -> '{standardized_value}' (via key '{mapping_key}')")
                 return standardized_value
-    
+
     # Check for error patterns
     license_lower = license_input.lower()
-    if (license_lower.startswith('http ') or 
-        license_lower.startswith('error:') or 
-        license_lower.startswith('parse error:') or 
+    if (license_lower.startswith('http ') or
+        license_lower.startswith('error:') or
+        license_lower.startswith('parse error:') or
         license_lower in ['not found', 'no hf id']):
         if debug:
             print(f"  DEBUG: Error pattern detected '{license_input}' -> 'Unknown'")
         return 'Unknown'
-    
-    # Return original if it looks like a legitimate license name
+
+    # Catch-all: Any license starting with "nvidia" -> "NVIDIA"
+    if license_lower.startswith('nvidia'):
+        if debug:
+            print(f"  DEBUG: NVIDIA prefix match '{license_input}' -> 'NVIDIA'")
+        return 'NVIDIA'
+
+    # Return capitalized license name if no mapping found
+    capitalized = capitalize_license_name(license_input)
     if debug:
-        print(f"  DEBUG: No match found for '{license_input}', returning original")
-    return license_input
+        print(f"  DEBUG: No match found for '{license_input}', returning capitalized: '{capitalized}'")
+    return capitalized
 
 def process_license_standardization(license_data: List[Dict[str, Any]], 
                                    config: Dict[str, Any]) -> List[Dict[str, Any]]:

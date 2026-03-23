@@ -84,10 +84,16 @@ def extract_license_from_url(url: str, source_label: str = "URL", max_retries: i
             content = response.text
 
             # Look for license information in the specific HuggingFace HTML structure
+            # IMPORTANT: HuggingFace uses "license":"other" + "license_name":"actual-license"
+            # so we must check license_name FIRST before falling back to license
+            # NOTE: HuggingFace embeds JSON with HTML entities (&quot; instead of ")
             patterns = [
                 r'<span class="-mr-1 text-gray-400">License:</span>\s*<span>([^<]+)</span>',  # HF license structure
                 r'<span[^>]*>License:</span>[^<]*<span[^>]*>([^<]+)</span>',  # General license span structure
-                r'"license"\s*:\s*"([^"]+)"',  # JSON license field
+                r'license_name&quot;:&quot;([^&]+)&quot;',  # HTML-escaped JSON license_name (HF primary format)
+                r'"license_name"\s*:\s*"([^"]+)"',  # JSON license_name field (non-escaped)
+                r'license&quot;:&quot;([^&]+)&quot;',  # HTML-escaped JSON license (fallback)
+                r'"license"\s*:\s*"([^"]+)"',  # JSON license field (fallback)
                 r'<dt[^>]*>License</dt>\s*<dd[^>]*>([^<]+)</dd>',  # Definition list structure
                 r'License:\s*([A-Za-z0-9\-\.\s]+)',  # Plain text license
             ]
@@ -96,7 +102,9 @@ def extract_license_from_url(url: str, source_label: str = "URL", max_retries: i
                 match = re.search(pattern, content, re.IGNORECASE)
                 if match:
                     license_name = match.group(1).strip()
-                    # Return license exactly as found on the page
+                    # Skip 'other' if found - it means HF has a custom license in license_name field
+                    if license_name.lower() == 'other':
+                        continue
                     return license_name
 
             return "Unknown"
