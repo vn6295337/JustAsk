@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-03-22 08:11:40 IST
+Generated: 2026-03-23 08:11:54 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -261,7 +261,7 @@ COMPLETE MODEL RECORDS:
      Modalities         : Text → Text
      License            : other
      License Info       : 
-     License URL        : Unknown
+     License URL        : https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md
      Official URL       : https://build.nvidia.com/
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys

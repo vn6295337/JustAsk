@@ -1,6 +1,6 @@
 ================================================================================
 CUSTOM LICENSE URLS ENRICHMENT REPORT
-Generated: 2026-03-22 08:11:38 IST
+Generated: 2026-03-23 08:11:52 IST
 ================================================================================
 
 SUMMARY:
@@ -12,25 +12,19 @@ SUMMARY:
 
 LICENSE URL TYPE DISTRIBUTION:
   LICENSE file: 2 models
-  README.md file: 4 models
-  Inaccessible: 1 models
+  README.md file: 5 models
 
-Total URL types: 3
+Total URL types: 2
 
 URL RESOLUTION STATISTICS:
-  Successful URL resolutions: 6
-  Failed URL resolutions: 1
-  Success rate: 85.7%
+  Successful URL resolutions: 7
+  Failed URL resolutions: 0
+  Success rate: 100.0%
 
 CUSTOM LICENSE DISTRIBUTION:
   other: 7 models
 
 Total license types: 1
-
-MODELS WITH FAILED URL RESOLUTION (1 models):
-  NVIDIA: Nemotron Nano 9B V2 (free)
-    HF ID: nvidia/NVIDIA-Nemotron-Nano-9B-v2
-    Reason: Inaccessible
 
 DETAILED MODEL LICENSE URL MAPPINGS:
 ================================================================================
@@ -107,6 +101,6 @@ MODEL 7: nvidia/nemotron-nano-9b-v2
   Canonical Slug         : nvidia/nemotron-nano-9b-v2
   HuggingFace ID         : nvidia/NVIDIA-Nemotron-Nano-9B-v2
   License Name           : other
-  License URL            : Unknown
-  License URL Type       : Inaccessible
+  License URL            : https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md
+  License URL Type       : README.md file
 

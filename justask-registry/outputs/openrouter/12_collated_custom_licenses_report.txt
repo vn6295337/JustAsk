@@ -1,6 +1,6 @@
 ================================================================================
 COLLATED CUSTOM LICENSE INFORMATION REPORT
-Generated: 2026-03-22 08:11:38 IST
+Generated: 2026-03-23 08:11:53 IST
 ================================================================================
 
 SUMMARY:
@@ -16,10 +16,9 @@ Total unique license types: 1
 
 LICENSE URL TYPE DISTRIBUTION:
    2 models: LICENSE file
-   4 models: README.md file
-   1 models: Other
+   5 models: README.md file
 
-Total URL types: 3
+Total URL types: 2
 
 DETAILED CUSTOM MODEL INFORMATION:
 ================================================================================
@@ -118,5 +117,5 @@ MODEL 7: nvidia/nemotron-nano-9b-v2
   License Info Text: 
   License Info URL: 
   License Name: other
-  License URL: Unknown
+  License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md
 
