@@ -1,6 +1,6 @@
 ================================================================================
 META MODELS LICENSE EXTRACTION REPORT
-Generated: 2026-03-23 08:11:38 IST
+Generated: 2026-03-23 10:09:34 IST
 ================================================================================
 
 SUMMARY:
@@ -10,8 +10,8 @@ SUMMARY:
   Output       : 04_meta_licenses.json
 
 LICENSE BREAKDOWN:
-  Llama-3.2: 1 models
-  Llama-3.3: 1 models
+  LLAMA-3.2: 1 models
+  LLAMA-3.3: 1 models
 
 Total license types: 2
 
@@ -27,7 +27,7 @@ MODEL 1: meta-llama/llama-3.2-3b-instruct
   Clean Model Name: Llama 3.2 3B Instruct
   License Info Text: 
   License Info URL: 
-  License Name: Llama-3.2
+  License Name: LLAMA-3.2
   License URL: https://www.llama.com/llama3_2/license/
 
 ================================================================================
@@ -41,6 +41,6 @@ MODEL 2: meta-llama/llama-3.3-70b-instruct
   Clean Model Name: Llama 3.3 70B Instruct
   License Info Text: 
   License Info URL: 
-  License Name: Llama-3.3
+  License Name: LLAMA-3.3
   License URL: https://www.llama.com/llama3_3/license/
 

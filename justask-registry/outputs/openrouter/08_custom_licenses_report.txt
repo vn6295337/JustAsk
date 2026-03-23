@@ -1,6 +1,6 @@
 ================================================================================
 CUSTOM LICENSE MODELS REPORT
-Generated: 2026-03-23 08:11:50 IST
+Generated: 2026-03-23 10:10:15 IST
 ================================================================================
 
 SUMMARY:
@@ -11,9 +11,11 @@ SUMMARY:
   Output       : 08_custom_licenses.json
 
 CUSTOM LICENSE DISTRIBUTION:
-  other: 7 models
+  LFM1.0: 2 models
+  MODIFIED MIT: 1 models
+  NVIDIA: 4 models
 
-Total license types: 1
+Total license types: 3
 
 DETAILED CUSTOM LICENSE MODEL LISTINGS:
 ================================================================================
@@ -23,7 +25,7 @@ MODEL 1: liquid/lfm-2.5-1.2b-instruct-20260120
   ID              : liquid/lfm-2.5-1.2b-instruct:free
   Canonical Slug  : liquid/lfm-2.5-1.2b-instruct-20260120
   HuggingFace ID  : LiquidAI/LFM2.5-1.2B-Instruct
-  License Name    : other
+  License Name    : LFM1.0
 
 ================================================================================
 
@@ -32,7 +34,7 @@ MODEL 2: liquid/lfm-2.5-1.2b-thinking-20260120
   ID              : liquid/lfm-2.5-1.2b-thinking:free
   Canonical Slug  : liquid/lfm-2.5-1.2b-thinking-20260120
   HuggingFace ID  : LiquidAI/LFM2.5-1.2B-Thinking
-  License Name    : other
+  License Name    : LFM1.0
 
 ================================================================================
 
@@ -41,7 +43,7 @@ MODEL 3: minimax/minimax-m2.5-20260211
   ID              : minimax/minimax-m2.5:free
   Canonical Slug  : minimax/minimax-m2.5-20260211
   HuggingFace ID  : MiniMaxAI/MiniMax-M2.5
-  License Name    : other
+  License Name    : MODIFIED MIT
 
 ================================================================================
 
@@ -50,7 +52,7 @@ MODEL 4: nvidia/nemotron-3-nano-30b-a3b
   ID              : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug  : nvidia/nemotron-3-nano-30b-a3b
   HuggingFace ID  : nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
-  License Name    : other
+  License Name    : NVIDIA
 
 ================================================================================
 
@@ -59,7 +61,7 @@ MODEL 5: nvidia/nemotron-3-super-120b-a12b-20230311
   ID              : nvidia/nemotron-3-super-120b-a12b:free
   Canonical Slug  : nvidia/nemotron-3-super-120b-a12b-20230311
   HuggingFace ID  : nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8
-  License Name    : other
+  License Name    : NVIDIA
 
 ================================================================================
 
@@ -68,7 +70,7 @@ MODEL 6: nvidia/nemotron-nano-12b-v2-vl
   ID              : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug  : nvidia/nemotron-nano-12b-v2-vl
   HuggingFace ID  : nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16
-  License Name    : other
+  License Name    : NVIDIA
 
 ================================================================================
 
@@ -77,5 +79,5 @@ MODEL 7: nvidia/nemotron-nano-9b-v2
   ID              : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug  : nvidia/nemotron-nano-9b-v2
   HuggingFace ID  : nvidia/NVIDIA-Nemotron-Nano-9B-v2
-  License Name    : other
+  License Name    : NVIDIA
 

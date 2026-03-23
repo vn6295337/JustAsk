@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-23T09:57:29.173977+00:00",
+    "generated_at": "2026-03-23T10:06:43.230289+00:00",
     "consolidation_processor": "step_05_consolidate_licenses.py",
     "source_files": [
       "03_meta_licenses.json",
@@ -18,9 +18,9 @@
         "Groq": 6
       },
       "licenses": {
-        "Llama-3.1": 1,
-        "Llama-3.3": 1,
-        "Apache-2.0": 3,
+        "LLAMA-3.1": 1,
+        "LLAMA-3.3": 1,
+        "APACHE-2.0": 3,
         "MIT": 1
       },
       "categories": {
@@ -30,9 +30,9 @@
     }
   },
   "license_urls": {
-    "Llama-3.1": "https://www.llama.com/llama3_1/license/",
-    "Llama-3.3": "https://www.llama.com/llama3_3/license/",
-    "Apache-2.0": "https://www.apache.org/licenses/LICENSE-2.0",
+    "LLAMA-3.1": "https://www.llama.com/llama3_1/license/",
+    "LLAMA-3.3": "https://www.llama.com/llama3_3/license/",
+    "APACHE-2.0": "https://www.apache.org/licenses/LICENSE-2.0",
     "MIT": "https://opensource.org/licenses/MIT"
   },
   "provider_license_mappings": {
@@ -40,31 +40,31 @@
       "llama-3.1-8b-instant": {
         "license_info_text": "",
         "license_info_url": "",
-        "license_name": "Llama-3.1",
+        "license_name": "LLAMA-3.1",
         "license_url": "https://www.llama.com/llama3_1/license/"
       },
       "llama-3.3-70b-versatile": {
         "license_info_text": "",
         "license_info_url": "",
-        "license_name": "Llama-3.3",
+        "license_name": "LLAMA-3.3",
         "license_url": "https://www.llama.com/llama3_3/license/"
       },
       "gpt-oss-120b": {
         "license_info_text": "info",
         "license_info_url": "https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE",
-        "license_name": "Apache-2.0",
+        "license_name": "APACHE-2.0",
         "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
       },
       "gpt-oss-20b": {
         "license_info_text": "info",
         "license_info_url": "https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE",
-        "license_name": "Apache-2.0",
+        "license_name": "APACHE-2.0",
         "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
       },
       "whisper-large-v3": {
         "license_info_text": "info",
         "license_info_url": "https://huggingface.co/openai/whisper-large-v3/blob/main/README.md",
-        "license_name": "Apache-2.0",
+        "license_name": "APACHE-2.0",
         "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
       },
       "whisper-large-v3-turbo": {

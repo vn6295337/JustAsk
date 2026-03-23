@@ -1,6 +1,6 @@
 ================================================================================
 OTHER MODEL LICENSE NAME EXTRACTIONS REPORT
-Generated: 2026-03-23 08:11:49 IST
+Generated: 2026-03-23 10:10:12 IST
 ================================================================================
 
 SUMMARY:
@@ -11,11 +11,14 @@ SUMMARY:
 
 LICENSE DISTRIBUTION:
   apache-2.0: 9
+  lfm1.0: 2
   llama3: 1
   mit: 1
-  other: 7
+  modified-mit: 1
+  nvidia-nemotron-open-model-license: 2
+  nvidia-open-model-license: 2
 
-Total license types: 4
+Total license types: 7
 
 DETAILED MODEL EXTRACTION RESULTS:
 ================================================================================
@@ -25,7 +28,7 @@ MODEL 1: nvidia/nemotron-3-super-120b-a12b-20230311
   ID               : nvidia/nemotron-3-super-120b-a12b:free
   Canonical Slug   : nvidia/nemotron-3-super-120b-a12b-20230311
   HuggingFace ID   : nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8
-  Extracted License: other
+  Extracted License: nvidia-nemotron-open-model-license
 
 ================================================================================
 
@@ -34,7 +37,7 @@ MODEL 2: minimax/minimax-m2.5-20260211
   ID               : minimax/minimax-m2.5:free
   Canonical Slug   : minimax/minimax-m2.5-20260211
   HuggingFace ID   : MiniMaxAI/MiniMax-M2.5
-  Extracted License: other
+  Extracted License: modified-mit
 
 ================================================================================
 
@@ -52,7 +55,7 @@ MODEL 4: liquid/lfm-2.5-1.2b-thinking-20260120
   ID               : liquid/lfm-2.5-1.2b-thinking:free
   Canonical Slug   : liquid/lfm-2.5-1.2b-thinking-20260120
   HuggingFace ID   : LiquidAI/LFM2.5-1.2B-Thinking
-  Extracted License: other
+  Extracted License: lfm1.0
 
 ================================================================================
 
@@ -61,7 +64,7 @@ MODEL 5: liquid/lfm-2.5-1.2b-instruct-20260120
   ID               : liquid/lfm-2.5-1.2b-instruct:free
   Canonical Slug   : liquid/lfm-2.5-1.2b-instruct-20260120
   HuggingFace ID   : LiquidAI/LFM2.5-1.2B-Instruct
-  Extracted License: other
+  Extracted License: lfm1.0
 
 ================================================================================
 
@@ -70,7 +73,7 @@ MODEL 6: nvidia/nemotron-3-nano-30b-a3b
   ID               : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug   : nvidia/nemotron-3-nano-30b-a3b
   HuggingFace ID   : nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
-  Extracted License: other
+  Extracted License: nvidia-nemotron-open-model-license
 
 ================================================================================
 
@@ -88,7 +91,7 @@ MODEL 8: nvidia/nemotron-nano-12b-v2-vl
   ID               : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug   : nvidia/nemotron-nano-12b-v2-vl
   HuggingFace ID   : nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16
-  Extracted License: other
+  Extracted License: nvidia-open-model-license
 
 ================================================================================
 
@@ -106,7 +109,7 @@ MODEL 10: nvidia/nemotron-nano-9b-v2
   ID               : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug   : nvidia/nemotron-nano-9b-v2
   HuggingFace ID   : nvidia/NVIDIA-Nemotron-Nano-9B-v2
-  Extracted License: other
+  Extracted License: nvidia-open-model-license
 
 ================================================================================
 

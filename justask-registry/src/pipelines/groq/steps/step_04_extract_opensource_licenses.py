@@ -245,33 +245,10 @@ def detect_hf_id(groq_model_id: str, hf_mappings: Dict[str, str]) -> str:
 
 
 def capitalize_license_name(license_name: str) -> str:
-    """Capitalize license name appropriately (title case, preserving version numbers)"""
+    """Convert license name to uppercase"""
     if not license_name:
         return license_name
-
-    # Already uppercase (like MIT, NVIDIA, QWEN) - keep as is
-    if license_name.isupper():
-        return license_name
-
-    # Handle hyphenated names like "lfm1.0" -> "LFM1.0"
-    parts = license_name.split('-')
-    capitalized_parts = []
-    for part in parts:
-        # If part is all lowercase letters followed by numbers (e.g., "lfm1.0"), uppercase letters
-        if part and part[0].islower():
-            # Find where letters end and numbers begin
-            letter_end = 0
-            for i, c in enumerate(part):
-                if c.isalpha():
-                    letter_end = i + 1
-                else:
-                    break
-            # Uppercase the letter portion, keep rest as is
-            capitalized_parts.append(part[:letter_end].upper() + part[letter_end:])
-        else:
-            capitalized_parts.append(part)
-
-    return '-'.join(capitalized_parts)
+    return license_name.upper()
 
 
 def standardize_license_name(license_name: str, standardization_mappings: Dict[str, str]) -> str:

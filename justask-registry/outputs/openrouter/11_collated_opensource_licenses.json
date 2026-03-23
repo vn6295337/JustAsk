@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-23 08:11:53 IST",
+    "generated_at": "2026-03-23 10:10:27 IST",
     "total_models": 11,
     "pipeline_stage": "K_collate_opensource_licenses"
   },
@@ -13,7 +13,7 @@
       "clean_model_name": "Trinity Mini",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/arcee-ai/Trinity-Mini/blob/main/README.md",
-      "license_name": "Apache-2.0",
+      "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
@@ -24,7 +24,7 @@
       "clean_model_name": "Mistral Small 3.1 24B",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/blob/main/README.md",
-      "license_name": "Apache-2.0",
+      "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
@@ -35,7 +35,7 @@
       "clean_model_name": "Hermes 3 405B Instruct",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-405B/blob/main/README.md",
-      "license_name": "Llama-3.1",
+      "license_name": "LLAMA-3.1",
       "license_url": "https://www.llama.com/llama3_1/license/"
     },
     {
@@ -46,7 +46,7 @@
       "clean_model_name": "GPT OSS 120B",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE",
-      "license_name": "Apache-2.0",
+      "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
@@ -57,7 +57,7 @@
       "clean_model_name": "GPT OSS 20B",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE",
-      "license_name": "Apache-2.0",
+      "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
@@ -68,7 +68,7 @@
       "clean_model_name": "Qwen3 4B",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/Qwen/Qwen3-4B/blob/main/LICENSE",
-      "license_name": "Apache-2.0",
+      "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
@@ -79,7 +79,7 @@
       "clean_model_name": "Qwen3 Coder 480B A35B",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct/blob/main/LICENSE",
-      "license_name": "Apache-2.0",
+      "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
@@ -90,7 +90,7 @@
       "clean_model_name": "Qwen3 Next 80B A3B Instruct",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct/blob/main/LICENSE",
-      "license_name": "Apache-2.0",
+      "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
@@ -101,7 +101,7 @@
       "clean_model_name": "Step 3.5 Flash",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/stepfun-ai/Step-3.5-Flash/blob/main/README.md",
-      "license_name": "Apache-2.0",
+      "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
@@ -112,7 +112,7 @@
       "clean_model_name": "Uncensored",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition/blob/main/README.md",
-      "license_name": "Apache-2.0",
+      "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {

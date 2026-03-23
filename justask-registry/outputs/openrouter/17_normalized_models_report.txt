@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-03-23 08:11:54 IST
+Generated: 2026-03-23 10:10:36 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -69,7 +69,7 @@ COMPLETE MODEL RECORDS:
   1. Qwen3 4B
      Provider           : Alibaba Cloud (China)
      Modalities         : Text → Text
-     License            : Apache-2.0
+     License            : APACHE-2.0
      License Info       : info
      License URL        : https://www.apache.org/licenses/LICENSE-2.0
      Official URL       : https://alibabacloud.com/
@@ -79,7 +79,7 @@ COMPLETE MODEL RECORDS:
   2. Qwen3 Coder 480B A35B
      Provider           : Alibaba Cloud (China)
      Modalities         : Text → Text
-     License            : Apache-2.0
+     License            : APACHE-2.0
      License Info       : info
      License URL        : https://www.apache.org/licenses/LICENSE-2.0
      Official URL       : https://alibabacloud.com/
@@ -89,7 +89,7 @@ COMPLETE MODEL RECORDS:
   3. Qwen3 Next 80B A3B Instruct
      Provider           : Alibaba Cloud (China)
      Modalities         : Text → Text
-     License            : Apache-2.0
+     License            : APACHE-2.0
      License Info       : info
      License URL        : https://www.apache.org/licenses/LICENSE-2.0
      Official URL       : https://alibabacloud.com/
@@ -99,7 +99,7 @@ COMPLETE MODEL RECORDS:
   4. Trinity Mini
      Provider           : Arcee (United States)
      Modalities         : Text → Text
-     License            : Apache-2.0
+     License            : APACHE-2.0
      License Info       : info
      License URL        : https://www.apache.org/licenses/LICENSE-2.0
      Official URL       : https://www.arcee.ai/
@@ -109,7 +109,7 @@ COMPLETE MODEL RECORDS:
   5. Uncensored
      Provider           : Cognitive Computations (United States)
      Modalities         : Text → Text
-     License            : Apache-2.0
+     License            : APACHE-2.0
      License Info       : info
      License URL        : https://www.apache.org/licenses/LICENSE-2.0
      Official URL       : https://dphn.ai/
@@ -119,7 +119,7 @@ COMPLETE MODEL RECORDS:
   6. Gemma 3 12B IT
      Provider           : Google (United States)
      Modalities         : Text, Image → Text
-     License            : Gemma
+     License            : GEMMA
      License Info       : 
      License URL        : https://ai.google.dev/gemma/terms
      Official URL       : https://ai.google.dev/gemma
@@ -129,7 +129,7 @@ COMPLETE MODEL RECORDS:
   7. Gemma 3 27B IT
      Provider           : Google (United States)
      Modalities         : Text, Image → Text
-     License            : Gemma
+     License            : GEMMA
      License Info       : 
      License URL        : https://ai.google.dev/gemma/terms
      Official URL       : https://ai.google.dev/gemma
@@ -139,7 +139,7 @@ COMPLETE MODEL RECORDS:
   8. Gemma 3 4B IT
      Provider           : Google (United States)
      Modalities         : Text, Image → Text
-     License            : Gemma
+     License            : GEMMA
      License Info       : 
      License URL        : https://ai.google.dev/gemma/terms
      Official URL       : https://ai.google.dev/gemma
@@ -149,7 +149,7 @@ COMPLETE MODEL RECORDS:
   9. Gemma 3n E2B IT
      Provider           : Google (United States)
      Modalities         : Text, Image, Audio, Video → Text
-     License            : Gemma
+     License            : GEMMA
      License Info       : 
      License URL        : https://ai.google.dev/gemma/terms
      Official URL       : https://ai.google.dev/gemma
@@ -159,7 +159,7 @@ COMPLETE MODEL RECORDS:
  10. Gemma 3n E4B IT
      Provider           : Google (United States)
      Modalities         : Text, Image, Audio, Video → Text
-     License            : Gemma
+     License            : GEMMA
      License Info       : 
      License URL        : https://ai.google.dev/gemma/terms
      Official URL       : https://ai.google.dev/gemma
@@ -169,7 +169,7 @@ COMPLETE MODEL RECORDS:
  11. LFM2.5-1.2B-Instruct
      Provider           : Liquid AI (United States)
      Modalities         : Text → Text
-     License            : other
+     License            : LFM1.0
      License Info       : 
      License URL        : https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct/blob/main/LICENSE
      Official URL       : https://www.liquid.ai/
@@ -179,7 +179,7 @@ COMPLETE MODEL RECORDS:
  12. LFM2.5-1.2B-Thinking
      Provider           : Liquid AI (United States)
      Modalities         : Text → Text
-     License            : other
+     License            : LFM1.0
      License Info       : 
      License URL        : https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE
      Official URL       : https://www.liquid.ai/
@@ -189,7 +189,7 @@ COMPLETE MODEL RECORDS:
  13. Llama 3.2 3B Instruct
      Provider           : Meta (United States)
      Modalities         : Text → Text
-     License            : Llama-3.2
+     License            : LLAMA-3.2
      License Info       : 
      License URL        : https://www.llama.com/llama3_2/license/
      Official URL       : https://llama.meta.com/
@@ -199,7 +199,7 @@ COMPLETE MODEL RECORDS:
  14. Llama 3.3 70B Instruct
      Provider           : Meta (United States)
      Modalities         : Text → Text
-     License            : Llama-3.3
+     License            : LLAMA-3.3
      License Info       : 
      License URL        : https://www.llama.com/llama3_3/license/
      Official URL       : https://llama.meta.com/
@@ -209,7 +209,7 @@ COMPLETE MODEL RECORDS:
  15. MiniMax M2.5
      Provider           : MiniMax (Singapore)
      Modalities         : Text → Text
-     License            : other
+     License            : MODIFIED MIT
      License Info       : 
      License URL        : https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md
      Official URL       : https://www.minimax.io/
@@ -219,7 +219,7 @@ COMPLETE MODEL RECORDS:
  16. Mistral Small 3.1 24B
      Provider           : Mistral AI (France)
      Modalities         : Text, Image → Text
-     License            : Apache-2.0
+     License            : APACHE-2.0
      License Info       : info
      License URL        : https://www.apache.org/licenses/LICENSE-2.0
      Official URL       : https://mistral.ai/
@@ -229,7 +229,7 @@ COMPLETE MODEL RECORDS:
  17. Nemotron 3 Nano 30B A3B
      Provider           : NVIDIA (United States)
      Modalities         : Text → Text
-     License            : other
+     License            : NVIDIA
      License Info       : 
      License URL        : https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md
      Official URL       : https://build.nvidia.com/
@@ -239,7 +239,7 @@ COMPLETE MODEL RECORDS:
  18. Nemotron 3 Super
      Provider           : NVIDIA (United States)
      Modalities         : Text → Text
-     License            : other
+     License            : NVIDIA
      License Info       : 
      License URL        : https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8/blob/main/README.md
      Official URL       : https://build.nvidia.com/
@@ -249,7 +249,7 @@ COMPLETE MODEL RECORDS:
  19. Nemotron Nano 12B 2 VL
      Provider           : NVIDIA (United States)
      Modalities         : Text, Image, Video → Text
-     License            : other
+     License            : NVIDIA
      License Info       : 
      License URL        : https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16/blob/main/README.md
      Official URL       : https://build.nvidia.com/
@@ -259,7 +259,7 @@ COMPLETE MODEL RECORDS:
  20. Nemotron Nano 9B V2
      Provider           : NVIDIA (United States)
      Modalities         : Text → Text
-     License            : other
+     License            : NVIDIA
      License Info       : 
      License URL        : https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md
      Official URL       : https://build.nvidia.com/
@@ -269,7 +269,7 @@ COMPLETE MODEL RECORDS:
  21. Hermes 3 405B Instruct
      Provider           : Nous Research (United States)
      Modalities         : Text → Text
-     License            : Llama-3.1
+     License            : LLAMA-3.1
      License Info       : info
      License URL        : https://www.llama.com/llama3_1/license/
      Official URL       : https://nousresearch.com/
@@ -279,7 +279,7 @@ COMPLETE MODEL RECORDS:
  22. GPT OSS 120B
      Provider           : OpenAI (United States)
      Modalities         : Text → Text
-     License            : Apache-2.0
+     License            : APACHE-2.0
      License Info       : info
      License URL        : https://www.apache.org/licenses/LICENSE-2.0
      Official URL       : https://openai.com/
@@ -289,7 +289,7 @@ COMPLETE MODEL RECORDS:
  23. GPT OSS 20B
      Provider           : OpenAI (United States)
      Modalities         : Text → Text
-     License            : Apache-2.0
+     License            : APACHE-2.0
      License Info       : info
      License URL        : https://www.apache.org/licenses/LICENSE-2.0
      Official URL       : https://openai.com/
@@ -309,7 +309,7 @@ COMPLETE MODEL RECORDS:
  25. Step 3.5 Flash
      Provider           : StepFun (China)
      Modalities         : Text → Text
-     License            : Apache-2.0
+     License            : APACHE-2.0
      License Info       : info
      License URL        : https://www.apache.org/licenses/LICENSE-2.0
      Official URL       : https://stepfun.ai/

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-23T09:57:30.582906",
+    "generated_at": "2026-03-23T10:06:47.307141",
     "total_models": 6,
     "pipeline_stage": "06_normalize_data",
     "source_files": [
@@ -22,12 +22,12 @@
       "output_modalities": "Text",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "Llama-3.1",
+      "license_name": "LLAMA-3.1",
       "license_url": "https://www.llama.com/llama3_1/license/",
       "rate_limits": "250K TPM\nTPM\n1K RPM\nRPM",
       "provider_api_access": "https://console.groq.com/keys",
       "created_at": "2026-03-23T08:10:41+00:00",
-      "updated_at": "2026-03-23T09:57:30.577448+00:00"
+      "updated_at": "2026-03-23T10:06:47.290747+00:00"
     },
     {
       "id": 2,
@@ -41,12 +41,12 @@
       "output_modalities": "Text",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "Llama-3.3",
+      "license_name": "LLAMA-3.3",
       "license_url": "https://www.llama.com/llama3_3/license/",
       "rate_limits": "300K TPM\nTPM\n1K RPM\nRPM",
       "provider_api_access": "https://console.groq.com/keys",
       "created_at": "2026-03-23T08:10:41+00:00",
-      "updated_at": "2026-03-23T09:57:30.577448+00:00"
+      "updated_at": "2026-03-23T10:06:47.290747+00:00"
     },
     {
       "id": 3,
@@ -60,12 +60,12 @@
       "output_modalities": "Text",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE",
-      "license_name": "Apache-2.0",
+      "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
       "rate_limits": "250K TPM\nTPM\n1K RPM\nRPM",
       "provider_api_access": "https://console.groq.com/keys",
       "created_at": "2026-03-23T08:10:41+00:00",
-      "updated_at": "2026-03-23T09:57:30.577448+00:00"
+      "updated_at": "2026-03-23T10:06:47.290747+00:00"
     },
     {
       "id": 4,
@@ -79,12 +79,12 @@
       "output_modalities": "Text",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE",
-      "license_name": "Apache-2.0",
+      "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
       "rate_limits": "250K TPM\nTPM\n1K RPM\nRPM",
       "provider_api_access": "https://console.groq.com/keys",
       "created_at": "2026-03-23T08:10:41+00:00",
-      "updated_at": "2026-03-23T09:57:30.577448+00:00"
+      "updated_at": "2026-03-23T10:06:47.290747+00:00"
     },
     {
       "id": 5,
@@ -98,12 +98,12 @@
       "output_modalities": "Text",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/openai/whisper-large-v3/blob/main/README.md",
-      "license_name": "Apache-2.0",
+      "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
       "rate_limits": "200K ASH\nASH\n300 RPM\nRPM",
       "provider_api_access": "https://console.groq.com/keys",
       "created_at": "2026-03-23T08:10:42+00:00",
-      "updated_at": "2026-03-23T09:57:30.577448+00:00"
+      "updated_at": "2026-03-23T10:06:47.290747+00:00"
     },
     {
       "id": 6,
@@ -122,7 +122,7 @@
       "rate_limits": "400K ASH\nASH\n400 RPM\nRPM",
       "provider_api_access": "https://console.groq.com/keys",
       "created_at": "2026-03-23T08:10:42+00:00",
-      "updated_at": "2026-03-23T09:57:30.577448+00:00"
+      "updated_at": "2026-03-23T10:06:47.290747+00:00"
     }
   ]
 }

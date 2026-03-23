@@ -1,7 +1,7 @@
 GROQ DATA NORMALIZATION REPORT
 ================================================================================
 
-Generated: 2026-03-23T09:57:30.582906
+Generated: 2026-03-23T10:06:47.307141
 Total Models: 6
 Pipeline Stage: 06_normalize_data
 
@@ -15,27 +15,27 @@ NORMALIZED MODEL DATA:
 --------------------------------------------------------------------------------
 Model 1: Llama 3.1 8b
   Provider: Groq
-  License: Llama-3.1
+  License: LLAMA-3.1
   Modalities: Text → Text
 
 Model 2: Llama 3.3 70b Versatile
   Provider: Groq
-  License: Llama-3.3
+  License: LLAMA-3.3
   Modalities: Text → Text
 
 Model 3: Gpt Oss 120b
   Provider: Groq
-  License: Apache-2.0
+  License: APACHE-2.0
   Modalities: Text → Text
 
 Model 4: Gpt Oss 20b
   Provider: Groq
-  License: Apache-2.0
+  License: APACHE-2.0
   Modalities: Text → Text
 
 Model 5: Whisper Large V3
   Provider: Groq
-  License: Apache-2.0
+  License: APACHE-2.0
   Modalities: Audio → Text
 
 ... and 1 more models

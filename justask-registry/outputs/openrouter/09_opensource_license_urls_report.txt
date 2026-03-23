@@ -1,6 +1,6 @@
 ================================================================================
 OPENSOURCE LICENSE URLS ENRICHMENT REPORT
-Generated: 2026-03-23 08:11:50 IST
+Generated: 2026-03-23 10:10:17 IST
 ================================================================================
 
 SUMMARY:
@@ -16,8 +16,8 @@ URL MAPPING STATISTICS:
   Success rate: 100.0%
 
 LICENSE URL DISTRIBUTION:
-  Apache-2.0 → https://www.apache.org/licenses/LICENSE-2.0: 9 models
-  Llama-3.1 → https://www.llama.com/llama3_1/license/: 1 models
+  APACHE-2.0 → https://www.apache.org/licenses/LICENSE-2.0: 9 models
+  LLAMA-3.1 → https://www.llama.com/llama3_1/license/: 1 models
   MIT → https://opensource.org/licenses/MIT: 1 models
 
 Total mapping types: 3
@@ -30,7 +30,7 @@ MODEL 1: arcee-ai/trinity-mini-20251201
   ID                     : arcee-ai/trinity-mini:free
   Canonical Slug         : arcee-ai/trinity-mini-20251201
   HuggingFace ID         : arcee-ai/Trinity-Mini
-  License Name           : Apache-2.0
+  License Name           : APACHE-2.0
   Official License URL   : https://www.apache.org/licenses/LICENSE-2.0
 
 ================================================================================
@@ -40,7 +40,7 @@ MODEL 2: mistralai/mistral-small-3.1-24b-instruct-2503
   ID                     : mistralai/mistral-small-3.1-24b-instruct:free
   Canonical Slug         : mistralai/mistral-small-3.1-24b-instruct-2503
   HuggingFace ID         : mistralai/Mistral-Small-3.1-24B-Instruct-2503
-  License Name           : Apache-2.0
+  License Name           : APACHE-2.0
   Official License URL   : https://www.apache.org/licenses/LICENSE-2.0
 
 ================================================================================
@@ -50,7 +50,7 @@ MODEL 3: openai/gpt-oss-120b
   ID                     : openai/gpt-oss-120b:free
   Canonical Slug         : openai/gpt-oss-120b
   HuggingFace ID         : openai/gpt-oss-120b
-  License Name           : Apache-2.0
+  License Name           : APACHE-2.0
   Official License URL   : https://www.apache.org/licenses/LICENSE-2.0
 
 ================================================================================
@@ -60,7 +60,7 @@ MODEL 4: openai/gpt-oss-20b
   ID                     : openai/gpt-oss-20b:free
   Canonical Slug         : openai/gpt-oss-20b
   HuggingFace ID         : openai/gpt-oss-20b
-  License Name           : Apache-2.0
+  License Name           : APACHE-2.0
   Official License URL   : https://www.apache.org/licenses/LICENSE-2.0
 
 ================================================================================
@@ -70,7 +70,7 @@ MODEL 5: qwen/qwen3-4b-04-28
   ID                     : qwen/qwen3-4b:free
   Canonical Slug         : qwen/qwen3-4b-04-28
   HuggingFace ID         : Qwen/Qwen3-4B
-  License Name           : Apache-2.0
+  License Name           : APACHE-2.0
   Official License URL   : https://www.apache.org/licenses/LICENSE-2.0
 
 ================================================================================
@@ -80,7 +80,7 @@ MODEL 6: qwen/qwen3-coder-480b-a35b-07-25
   ID                     : qwen/qwen3-coder:free
   Canonical Slug         : qwen/qwen3-coder-480b-a35b-07-25
   HuggingFace ID         : Qwen/Qwen3-Coder-480B-A35B-Instruct
-  License Name           : Apache-2.0
+  License Name           : APACHE-2.0
   Official License URL   : https://www.apache.org/licenses/LICENSE-2.0
 
 ================================================================================
@@ -90,7 +90,7 @@ MODEL 7: qwen/qwen3-next-80b-a3b-instruct-2509
   ID                     : qwen/qwen3-next-80b-a3b-instruct:free
   Canonical Slug         : qwen/qwen3-next-80b-a3b-instruct-2509
   HuggingFace ID         : Qwen/Qwen3-Next-80B-A3B-Instruct
-  License Name           : Apache-2.0
+  License Name           : APACHE-2.0
   Official License URL   : https://www.apache.org/licenses/LICENSE-2.0
 
 ================================================================================
@@ -100,7 +100,7 @@ MODEL 8: stepfun/step-3.5-flash
   ID                     : stepfun/step-3.5-flash:free
   Canonical Slug         : stepfun/step-3.5-flash
   HuggingFace ID         : stepfun-ai/Step-3.5-Flash
-  License Name           : Apache-2.0
+  License Name           : APACHE-2.0
   Official License URL   : https://www.apache.org/licenses/LICENSE-2.0
 
 ================================================================================
@@ -110,7 +110,7 @@ MODEL 9: venice/uncensored
   ID                     : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Canonical Slug         : venice/uncensored
   HuggingFace ID         : cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition
-  License Name           : Apache-2.0
+  License Name           : APACHE-2.0
   Official License URL   : https://www.apache.org/licenses/LICENSE-2.0
 
 ================================================================================
@@ -120,7 +120,7 @@ MODEL 10: nousresearch/hermes-3-llama-3.1-405b
   ID                     : nousresearch/hermes-3-llama-3.1-405b:free
   Canonical Slug         : nousresearch/hermes-3-llama-3.1-405b
   HuggingFace ID         : NousResearch/Hermes-3-Llama-3.1-405B
-  License Name           : Llama-3.1
+  License Name           : LLAMA-3.1
   Official License URL   : https://www.llama.com/llama3_1/license/
 
 ================================================================================

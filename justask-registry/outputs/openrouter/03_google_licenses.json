@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-23 08:11:38 IST",
+    "generated_at": "2026-03-23 10:09:32 IST",
     "total_models": 5,
     "pipeline_stage": "C_extract_google_licenses"
   },
@@ -13,7 +13,7 @@
       "clean_model_name": "Gemma 3n 2B",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "Gemma",
+      "license_name": "GEMMA",
       "license_url": "https://ai.google.dev/gemma/terms"
     },
     {
@@ -24,7 +24,7 @@
       "clean_model_name": "Gemma 3n 4B",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "Gemma",
+      "license_name": "GEMMA",
       "license_url": "https://ai.google.dev/gemma/terms"
     },
     {
@@ -35,7 +35,7 @@
       "clean_model_name": "Gemma 3 4B",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "Gemma",
+      "license_name": "GEMMA",
       "license_url": "https://ai.google.dev/gemma/terms"
     },
     {
@@ -46,7 +46,7 @@
       "clean_model_name": "Gemma 3 12B",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "Gemma",
+      "license_name": "GEMMA",
       "license_url": "https://ai.google.dev/gemma/terms"
     },
     {
@@ -57,7 +57,7 @@
       "clean_model_name": "Gemma 3 27B",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "Gemma",
+      "license_name": "GEMMA",
       "license_url": "https://ai.google.dev/gemma/terms"
     }
   ]

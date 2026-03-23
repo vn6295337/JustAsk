@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-23T02:41:09.163754+00:00",
+    "generated_at": "2026-03-23T10:06:18.249239+00:00",
     "source_file": "01_scraped_models.json",
     "processor": "step_03_extract_meta_licenses.py",
     "total_models": 2,
@@ -12,7 +12,7 @@
       "model_provider": "Groq",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "Llama-3.1",
+      "license_name": "LLAMA-3.1",
       "license_url": "https://www.llama.com/llama3_1/license/"
     },
     {
@@ -20,7 +20,7 @@
       "model_provider": "Groq",
       "license_info_text": "",
       "license_info_url": "",
-      "license_name": "Llama-3.3",
+      "license_name": "LLAMA-3.3",
       "license_url": "https://www.llama.com/llama3_3/license/"
     }
   ]

@@ -77,7 +77,7 @@ def get_meta_license_info(model_id: str, canonical_slug: str = '') -> Dict[str, 
         return {
             'license_info_text': '',
             'license_info_url': '',
-            'license_name': f'Llama-{guard_version}',
+            'license_name': f'LLAMA-{guard_version}',
             'license_url': f'https://www.llama.com/llama{guard_version}/license/'
         }
 
@@ -95,7 +95,7 @@ def get_meta_license_info(model_id: str, canonical_slug: str = '') -> Dict[str, 
             return {
                 'license_info_text': '',
                 'license_info_url': '',
-                'license_name': f'Llama-{version}',
+                'license_name': f'LLAMA-{version}',
                 'license_url': f'https://www.llama.com/llama{url_version}/license/'
             }
 
@@ -103,7 +103,7 @@ def get_meta_license_info(model_id: str, canonical_slug: str = '') -> Dict[str, 
     return {
         'license_info_text': '',
         'license_info_url': '',
-        'license_name': 'Unknown',
+        'license_name': 'UNKNOWN',
         'license_url': 'Unknown'
     }
 

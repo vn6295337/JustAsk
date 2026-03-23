@@ -1,6 +1,6 @@
 ================================================================================
 FINAL CONSOLIDATED LICENSE LIST REPORT
-Generated: 2026-03-23 08:11:53 IST
+Generated: 2026-03-23 10:10:30 IST
 ================================================================================
 
 SUMMARY:
@@ -17,19 +17,22 @@ SOURCE CATEGORY DISTRIBUTION:
   Proprietary: 6 models
 
 FINAL LICENSE DISTRIBUTION:
-  10 models: Apache-2.0
-   7 models: other
-   5 models: Gemma
+   9 models: APACHE-2.0
+   5 models: GEMMA
+   4 models: NVIDIA
+   2 models: LFM1.0
    2 models: xAI
    1 models: AWS
-   1 models: Llama-3.1
-   1 models: Llama-3.2
-   1 models: Llama-3.3
+   1 models: Apache-2.0
+   1 models: LLAMA-3.1
+   1 models: LLAMA-3.2
+   1 models: LLAMA-3.3
    1 models: MIT
+   1 models: MODIFIED MIT
    1 models: Modified MIT
    1 models: Upstage
 
-Total unique license types: 11
+Total unique license types: 14
 
 DETAILED FINAL MODEL INFORMATION:
 ================================================================================
@@ -43,7 +46,7 @@ MODEL 1: liquid/lfm-2.5-1.2b-instruct-20260120
   Clean Model Name: LFM2.5-1.2B-Instruct
   License Info Text: 
   License Info URL: 
-  License Name: other
+  License Name: LFM1.0
   License URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct/blob/main/LICENSE
   Source Category: custom
 
@@ -58,7 +61,7 @@ MODEL 2: liquid/lfm-2.5-1.2b-thinking-20260120
   Clean Model Name: LFM2.5-1.2B-Thinking
   License Info Text: 
   License Info URL: 
-  License Name: other
+  License Name: LFM1.0
   License URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE
   Source Category: custom
 
@@ -73,7 +76,7 @@ MODEL 3: minimax/minimax-m2.5-20260211
   Clean Model Name: MiniMax M2.5
   License Info Text: 
   License Info URL: 
-  License Name: other
+  License Name: MODIFIED MIT
   License URL: https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md
   Source Category: custom
 
@@ -88,7 +91,7 @@ MODEL 4: nvidia/nemotron-3-nano-30b-a3b
   Clean Model Name: Nemotron 3 Nano 30B A3B
   License Info Text: 
   License Info URL: 
-  License Name: other
+  License Name: NVIDIA
   License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md
   Source Category: custom
 
@@ -103,7 +106,7 @@ MODEL 5: nvidia/nemotron-3-super-120b-a12b-20230311
   Clean Model Name: Nemotron 3 Super
   License Info Text: 
   License Info URL: 
-  License Name: other
+  License Name: NVIDIA
   License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8/blob/main/README.md
   Source Category: custom
 
@@ -118,7 +121,7 @@ MODEL 6: nvidia/nemotron-nano-12b-v2-vl
   Clean Model Name: Nemotron Nano 12B 2 VL
   License Info Text: 
   License Info URL: 
-  License Name: other
+  License Name: NVIDIA
   License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16/blob/main/README.md
   Source Category: custom
 
@@ -133,7 +136,7 @@ MODEL 7: nvidia/nemotron-nano-9b-v2
   Clean Model Name: Nemotron Nano 9B V2
   License Info Text: 
   License Info URL: 
-  License Name: other
+  License Name: NVIDIA
   License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md
   Source Category: custom
 
@@ -148,7 +151,7 @@ MODEL 8: google/gemma-3-12b-it
   Clean Model Name: Gemma 3 12B
   License Info Text: 
   License Info URL: 
-  License Name: Gemma
+  License Name: GEMMA
   License URL: https://ai.google.dev/gemma/terms
   Source Category: google
 
@@ -163,7 +166,7 @@ MODEL 9: google/gemma-3-27b-it
   Clean Model Name: Gemma 3 27B
   License Info Text: 
   License Info URL: 
-  License Name: Gemma
+  License Name: GEMMA
   License URL: https://ai.google.dev/gemma/terms
   Source Category: google
 
@@ -178,7 +181,7 @@ MODEL 10: google/gemma-3-4b-it
   Clean Model Name: Gemma 3 4B
   License Info Text: 
   License Info URL: 
-  License Name: Gemma
+  License Name: GEMMA
   License URL: https://ai.google.dev/gemma/terms
   Source Category: google
 
@@ -193,7 +196,7 @@ MODEL 11: google/gemma-3n-e2b-it
   Clean Model Name: Gemma 3n 2B
   License Info Text: 
   License Info URL: 
-  License Name: Gemma
+  License Name: GEMMA
   License URL: https://ai.google.dev/gemma/terms
   Source Category: google
 
@@ -208,7 +211,7 @@ MODEL 12: google/gemma-3n-e4b-it
   Clean Model Name: Gemma 3n 4B
   License Info Text: 
   License Info URL: 
-  License Name: Gemma
+  License Name: GEMMA
   License URL: https://ai.google.dev/gemma/terms
   Source Category: google
 
@@ -223,7 +226,7 @@ MODEL 13: meta-llama/llama-3.2-3b-instruct
   Clean Model Name: Llama 3.2 3B Instruct
   License Info Text: 
   License Info URL: 
-  License Name: Llama-3.2
+  License Name: LLAMA-3.2
   License URL: https://www.llama.com/llama3_2/license/
   Source Category: meta
 
@@ -238,7 +241,7 @@ MODEL 14: meta-llama/llama-3.3-70b-instruct
   Clean Model Name: Llama 3.3 70B Instruct
   License Info Text: 
   License Info URL: 
-  License Name: Llama-3.3
+  License Name: LLAMA-3.3
   License URL: https://www.llama.com/llama3_3/license/
   Source Category: meta
 
@@ -253,7 +256,7 @@ MODEL 15: arcee-ai/trinity-mini-20251201
   Clean Model Name: Trinity Mini
   License Info Text: info
   License Info URL: https://huggingface.co/arcee-ai/Trinity-Mini/blob/main/README.md
-  License Name: Apache-2.0
+  License Name: APACHE-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
   Source Category: opensource
 
@@ -268,7 +271,7 @@ MODEL 16: mistralai/mistral-small-3.1-24b-instruct-2503
   Clean Model Name: Mistral Small 3.1 24B
   License Info Text: info
   License Info URL: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/blob/main/README.md
-  License Name: Apache-2.0
+  License Name: APACHE-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
   Source Category: opensource
 
@@ -283,7 +286,7 @@ MODEL 17: openai/gpt-oss-120b
   Clean Model Name: GPT OSS 120B
   License Info Text: info
   License Info URL: https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE
-  License Name: Apache-2.0
+  License Name: APACHE-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
   Source Category: opensource
 
@@ -298,7 +301,7 @@ MODEL 18: openai/gpt-oss-20b
   Clean Model Name: GPT OSS 20B
   License Info Text: info
   License Info URL: https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE
-  License Name: Apache-2.0
+  License Name: APACHE-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
   Source Category: opensource
 
@@ -313,7 +316,7 @@ MODEL 19: qwen/qwen3-4b-04-28
   Clean Model Name: Qwen3 4B
   License Info Text: info
   License Info URL: https://huggingface.co/Qwen/Qwen3-4B/blob/main/LICENSE
-  License Name: Apache-2.0
+  License Name: APACHE-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
   Source Category: opensource
 
@@ -328,7 +331,7 @@ MODEL 20: qwen/qwen3-coder-480b-a35b-07-25
   Clean Model Name: Qwen3 Coder 480B A35B
   License Info Text: info
   License Info URL: https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct/blob/main/LICENSE
-  License Name: Apache-2.0
+  License Name: APACHE-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
   Source Category: opensource
 
@@ -343,7 +346,7 @@ MODEL 21: qwen/qwen3-next-80b-a3b-instruct-2509
   Clean Model Name: Qwen3 Next 80B A3B Instruct
   License Info Text: info
   License Info URL: https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct/blob/main/LICENSE
-  License Name: Apache-2.0
+  License Name: APACHE-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
   Source Category: opensource
 
@@ -358,7 +361,7 @@ MODEL 22: stepfun/step-3.5-flash
   Clean Model Name: Step 3.5 Flash
   License Info Text: info
   License Info URL: https://huggingface.co/stepfun-ai/Step-3.5-Flash/blob/main/README.md
-  License Name: Apache-2.0
+  License Name: APACHE-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
   Source Category: opensource
 
@@ -373,7 +376,7 @@ MODEL 23: venice/uncensored
   Clean Model Name: Uncensored
   License Info Text: info
   License Info URL: https://huggingface.co/cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition/blob/main/README.md
-  License Name: Apache-2.0
+  License Name: APACHE-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
   Source Category: opensource
 
@@ -388,7 +391,7 @@ MODEL 24: nousresearch/hermes-3-llama-3.1-405b
   Clean Model Name: Hermes 3 405B Instruct
   License Info Text: info
   License Info URL: https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-405B/blob/main/README.md
-  License Name: Llama-3.1
+  License Name: LLAMA-3.1
   License URL: https://www.llama.com/llama3_1/license/
   Source Category: opensource
 

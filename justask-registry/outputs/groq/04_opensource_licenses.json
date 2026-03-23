@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-03-23T09:57:27.668314+00:00",
+    "generated_at": "2026-03-23T10:06:39.458414+00:00",
     "source_file": "01_scraped_models.json",
     "processor": "step_04_extract_opensource_licenses.py",
     "approach": "3-category processing: Meta (skipped), Google (hardcoded), Others (HF-scraped)",
@@ -27,7 +27,7 @@
       "raw_license_name": "apache-2.0",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE",
-      "license_name": "Apache-2.0",
+      "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
@@ -38,7 +38,7 @@
       "raw_license_name": "apache-2.0",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE",
-      "license_name": "Apache-2.0",
+      "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
@@ -49,7 +49,7 @@
       "raw_license_name": "apache-2.0",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/openai/whisper-large-v3/blob/main/README.md",
-      "license_name": "Apache-2.0",
+      "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
