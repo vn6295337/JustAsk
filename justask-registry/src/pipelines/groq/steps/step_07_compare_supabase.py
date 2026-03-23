@@ -297,33 +297,36 @@ def create_comparison_report(pipeline_data: List[Dict[str, Any]], supabase_data:
                 f.write(f" ... and {len(models_supabase_only) - 10} more")
             f.write("\n\n")
 
-        # Specific model details for models in both systems
-        if models_in_both:
-            f.write("SAMPLE MODEL COMPARISONS\n")
-            f.write("-" * 80 + "\n\n")
+        # Detailed comparison for ALL models
+        f.write("=" * 80 + "\n")
+        f.write("DETAILED COMPARISON BY MODEL\n")
+        f.write("=" * 80 + "\n\n")
 
-            # Show first few models in detail
-            for i, model_name in enumerate(sorted(models_in_both)[:3]):
-                pipeline_model = pipeline_lookup[model_name]
-                supabase_model = supabase_lookup[model_name]
+        # Show ALL models (both pipeline-only and those in both systems)
+        all_models_to_display = sorted(set(list(pipeline_lookup.keys()) + list(supabase_lookup.keys())))
+        all_models_to_display = [m for m in all_models_to_display if m]  # Remove empty names
 
-                f.write(f"MODEL: {model_name}\n")
-                f.write("-" * 50 + "\n")
-                f.write(f"{'Field Name':<25} | {'Pipeline Value':<25} | {'Supabase Value':<25}\n")
-                f.write("-" * 80 + "\n")
+        for model_name in all_models_to_display:
+            pipeline_model = pipeline_lookup.get(model_name, {})
+            supabase_model = supabase_lookup.get(model_name, {})
 
-                for field in fields_to_compare:
-                    pipeline_value = str(pipeline_model.get(field, '')).strip()
-                    supabase_raw = supabase_model.get(field, '')
-                    supabase_value = '' if supabase_raw is None else str(supabase_raw).strip()
+            f.write(f"MODEL: {model_name}\n")
+            f.write("-" * 80 + "\n")
+            f.write(f"{'Field Name':<25} | {'Pipeline Value':<25} | {'Supabase Value':<25}\n")
+            f.write("-" * 80 + "\n")
 
-                    # Truncate long values for display
-                    pipeline_display = pipeline_value[:22] + "..." if len(pipeline_value) > 25 else pipeline_value
-                    supabase_display = supabase_value[:22] + "..." if len(supabase_value) > 25 else supabase_value
+            for field in fields_to_compare:
+                pipeline_value = str(pipeline_model.get(field, '')).strip()
+                supabase_raw = supabase_model.get(field, '')
+                supabase_value = '' if supabase_raw is None else str(supabase_raw).strip()
 
-                    f.write(f"{field:<25} | {pipeline_display:<25} | {supabase_display:<25}\n")
+                # Truncate long values for display
+                pipeline_display = pipeline_value[:23] + ".." if len(pipeline_value) > 25 else pipeline_value
+                supabase_display = supabase_value[:23] + ".." if len(supabase_value) > 25 else supabase_value
 
-                f.write("\n")
+                f.write(f"{field:<25} | {pipeline_display:<25} | {supabase_display:<25}\n")
+
+            f.write("\n" + "=" * 80 + "\n\n")
 
     print(f"✅ Comparison report saved to: {REPORT_FILE}")
 
