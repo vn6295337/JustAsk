@@ -1,6 +1,6 @@
 FIELD COMPARISON REPORT: GOOGLE PIPELINE vs SUPABASE
 ================================================================================
-Generated: 2026-03-23 10:18:11 IST
+Generated: 2026-03-24 08:01:30 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -9,7 +9,7 @@ SUMMARY STATISTICS
 1. OVERALL STATISTICS:
    • Total models processed: 20
    • Models in both systems: 20
-   • Models with differences: 20
+   • Models with differences: 0
    • Models in pipeline only (not in Supabase): 0
    • Models in Supabase only (not in pipeline): 0
 
@@ -42,29 +42,8 @@ SUMMARY STATISTICS
      - Exact matches: 20
      - Differences: 0
    • license_name:
-     - Exact matches: 0
-     - Differences: 20
-     - Specific differences:
-       * Gemini 2.0 Flash 001: Pipeline='GEMINI' vs Supabase='Gemini'
-       * Imagen 4.0 Ultra Generate 001: Pipeline='GEMINI' vs Supabase='Gemini'
-       * Gemma 3n E2B IT: Pipeline='GEMMA' vs Supabase='Gemma'
-       * Gemma 3 4B IT: Pipeline='GEMMA' vs Supabase='Gemma'
-       * Gemma 3 12B IT: Pipeline='GEMMA' vs Supabase='Gemma'
-       * Gemini Embedding 001: Pipeline='GEMINI' vs Supabase='Gemini'
-       * Imagen 4.0 Fast Generate 001: Pipeline='GEMINI' vs Supabase='Gemini'
-       * Gemma 3 27B IT: Pipeline='GEMMA' vs Supabase='Gemma'
-       * AQA: Pipeline='GEMINI' vs Supabase='Gemini'
-       * Imagen 4.0 Generate 001: Pipeline='GEMINI' vs Supabase='Gemini'
-       * Gemma 3 1B IT: Pipeline='GEMMA' vs Supabase='Gemma'
-       * Gemini 2.0 Flash-Lite 001: Pipeline='GEMINI' vs Supabase='Gemini'
-       * Veo 3.0 Generate 001: Pipeline='GEMINI' vs Supabase='Gemini'
-       * Gemma 3n E4B IT: Pipeline='GEMMA' vs Supabase='Gemma'
-       * Gemini 2.0 Flash: Pipeline='GEMINI' vs Supabase='Gemini'
-       * Gemini 2.5 Flash: Pipeline='GEMINI' vs Supabase='Gemini'
-       * Gemini 2.5 Flash-Lite: Pipeline='GEMINI' vs Supabase='Gemini'
-       * Veo 3.0 Fast Generate 001: Pipeline='GEMINI' vs Supabase='Gemini'
-       * Gemini 2.5 Pro: Pipeline='GEMINI' vs Supabase='Gemini'
-       * Gemini 2.0 Flash-Lite: Pipeline='GEMINI' vs Supabase='Gemini'
+     - Exact matches: 20
+     - Differences: 0
    • license_url:
      - Exact matches: 20
      - Differences: 0
@@ -76,8 +55,7 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • Existing models with differences: 20
-     Models: AQA, Gemini 2.0 Flash, Gemini 2.0 Flash 001, Gemini 2.0 Flash-Lite, Gemini 2.0 Flash-Lite 001, Gemini 2.5 Flash, Gemini 2.5 Flash-Lite, Gemini 2.5 Pro, Gemini Embedding 001, Gemma 3 12B IT, Gemma 3 1B IT, Gemma 3 27B IT, Gemma 3 4B IT, Gemma 3n E2B IT, Gemma 3n E4B IT, Imagen 4.0 Fast Generate 001, Imagen 4.0 Generate 001, Imagen 4.0 Ultra Generate 001, Veo 3.0 Fast Generate 001, Veo 3.0 Generate 001
+   • Existing models with differences: 0
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
@@ -96,7 +74,7 @@ input_modalities          | Text                                               |
 output_modalities         | Text                                               | Text                                              
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | GEMINI                                             | Gemini                                            
+license_name              | GEMINI                                             | GEMINI                                            
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   | 15 requests/min, 1M tokens/min, 200 requests/day  
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -116,7 +94,7 @@ input_modalities          | Text, Image, Audio, Video                          |
 output_modalities         | Text                                               | Text                                              
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | GEMINI                                             | Gemini                                            
+license_name              | GEMINI                                             | GEMINI                                            
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   | 15 requests/min, 1M tokens/min, 200 requests/day  
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -136,7 +114,7 @@ input_modalities          | Text, Image, Audio, Video                          |
 output_modalities         | Text                                               | Text                                              
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | GEMINI                                             | Gemini                                            
+license_name              | GEMINI                                             | GEMINI                                            
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   | 15 requests/min, 1M tokens/min, 200 requests/day  
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -156,7 +134,7 @@ input_modalities          | Text, Image, Audio, Video                          |
 output_modalities         | Text                                               | Text                                              
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | GEMINI                                             | Gemini                                            
+license_name              | GEMINI                                             | GEMINI                                            
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   | 15 requests/min, 1M tokens/min, 200 requests/day  
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -176,7 +154,7 @@ input_modalities          | Text, Image, Audio, Video                          |
 output_modalities         | Text                                               | Text                                              
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | GEMINI                                             | Gemini                                            
+license_name              | GEMINI                                             | GEMINI                                            
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   | 15 requests/min, 1M tokens/min, 200 requests/day  
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -196,7 +174,7 @@ input_modalities          | Text, Image, Audio, Video                          |
 output_modalities         | Text                                               | Text                                              
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | GEMINI                                             | Gemini                                            
+license_name              | GEMINI                                             | GEMINI                                            
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | 10 requests/min, 250K tokens/min, 250 requests/day | 10 requests/min, 250K tokens/min, 250 requests/day
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -216,7 +194,7 @@ input_modalities          | Text, Image, Audio, Video, PDF                     |
 output_modalities         | Text                                               | Text                                              
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | GEMINI                                             | Gemini                                            
+license_name              | GEMINI                                             | GEMINI                                            
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | 10 requests/min, 250K tokens/min, 250 requests/day | 10 requests/min, 250K tokens/min, 250 requests/day
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -236,7 +214,7 @@ input_modalities          | Text, Image, Audio, Video, PDF                     |
 output_modalities         | Text                                               | Text                                              
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | GEMINI                                             | Gemini                                            
+license_name              | GEMINI                                             | GEMINI                                            
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | 5 requests/min, 250K tokens/min, 100 requests/day  | 5 requests/min, 250K tokens/min, 100 requests/day 
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -256,7 +234,7 @@ input_modalities          | Text                                               |
 output_modalities         | Text Embeddings                                    | Text Embeddings                                   
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | GEMINI                                             | Gemini                                            
+license_name              | GEMINI                                             | GEMINI                                            
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | 100 requests/min, 30K tokens/min, 1,000 requests.. | 100 requests/min, 30K tokens/min, 1,000 requests..
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -276,7 +254,7 @@ input_modalities          | Text, Image                                        |
 output_modalities         | Text                                               | Text                                              
 license_info_text         |                                                    | None                                              
 license_info_url          |                                                    | None                                              
-license_name              | GEMMA                                              | Gemma                                             
+license_name              | GEMMA                                              | GEMMA                                             
 license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
 rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -296,7 +274,7 @@ input_modalities          | Text, Image                                        |
 output_modalities         | Text                                               | Text                                              
 license_info_text         |                                                    | None                                              
 license_info_url          |                                                    | None                                              
-license_name              | GEMMA                                              | Gemma                                             
+license_name              | GEMMA                                              | GEMMA                                             
 license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
 rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -316,7 +294,7 @@ input_modalities          | Text, Image                                        |
 output_modalities         | Text                                               | Text                                              
 license_info_text         |                                                    | None                                              
 license_info_url          |                                                    | None                                              
-license_name              | GEMMA                                              | Gemma                                             
+license_name              | GEMMA                                              | GEMMA                                             
 license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
 rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -336,7 +314,7 @@ input_modalities          | Text, Image                                        |
 output_modalities         | Text                                               | Text                                              
 license_info_text         |                                                    | None                                              
 license_info_url          |                                                    | None                                              
-license_name              | GEMMA                                              | Gemma                                             
+license_name              | GEMMA                                              | GEMMA                                             
 license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
 rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -356,7 +334,7 @@ input_modalities          | Text, Image, Audio, Video                          |
 output_modalities         | Text                                               | Text                                              
 license_info_text         |                                                    | None                                              
 license_info_url          |                                                    | None                                              
-license_name              | GEMMA                                              | Gemma                                             
+license_name              | GEMMA                                              | GEMMA                                             
 license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
 rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -376,7 +354,7 @@ input_modalities          | Text, Image, Audio, Video                          |
 output_modalities         | Text                                               | Text                                              
 license_info_text         |                                                    | None                                              
 license_info_url          |                                                    | None                                              
-license_name              | GEMMA                                              | Gemma                                             
+license_name              | GEMMA                                              | GEMMA                                             
 license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
 rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -396,7 +374,7 @@ input_modalities          | Text                                               |
 output_modalities         | Image                                              | Image                                             
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | GEMINI                                             | Gemini                                            
+license_name              | GEMINI                                             | GEMINI                                            
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | Input: 480 tokens, Output: up to 4 images          | Input: 480 tokens, Output: up to 4 images         
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -416,7 +394,7 @@ input_modalities          | Text                                               |
 output_modalities         | Image                                              | Image                                             
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | GEMINI                                             | Gemini                                            
+license_name              | GEMINI                                             | GEMINI                                            
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | Input: 480 tokens, Output: up to 4 images          | Input: 480 tokens, Output: up to 4 images         
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -436,7 +414,7 @@ input_modalities          | Text                                               |
 output_modalities         | Image                                              | Image                                             
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | GEMINI                                             | Gemini                                            
+license_name              | GEMINI                                             | GEMINI                                            
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | Input: 480 tokens, Output: up to 4 images          | Input: 480 tokens, Output: up to 4 images         
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -456,7 +434,7 @@ input_modalities          | Text, Image                                        |
 output_modalities         | Audio, Video                                       | Audio, Video                                      
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | GEMINI                                             | Gemini                                            
+license_name              | GEMINI                                             | GEMINI                                            
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | Image input: up to 20MB, Output video: up to 2 m.. | Image input: up to 20MB, Output video: up to 2 m..
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
@@ -476,7 +454,7 @@ input_modalities          | Text, Image                                        |
 output_modalities         | Audio, Video                                       | Audio, Video                                      
 license_info_text         | Google                                             | Google                                            
 license_info_url          | https://developers.google.com/terms                | https://developers.google.com/terms               
-license_name              | GEMINI                                             | Gemini                                            
+license_name              | GEMINI                                             | GEMINI                                            
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | Image input: up to 20MB, Output video: up to 2 m.. | Image input: up to 20MB, Output video: up to 2 m..
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
