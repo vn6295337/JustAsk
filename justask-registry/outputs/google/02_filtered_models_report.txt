@@ -1,11 +1,11 @@
 === GOOGLE MODELS FILTERING REPORT ===
-Generated: 2026-03-26 08:13:50 IST
+Generated: 2026-03-27 08:16:03 IST
 
 === SUMMARY ===
-Total Input Models: 47
+Total Input Models: 48
 Models Included: 20
-Models Excluded: 27
-Filtering Success Rate: 42.6%
+Models Excluded: 28
+Filtering Success Rate: 41.7%
 
 === EXCLUDED MODELS ===
  1. gemini-2.5-flash-preview-tts
@@ -35,6 +35,7 @@ Filtering Success Rate: 42.6%
 25. gemini-2.5-flash-native-audio-latest
 26. gemini-2.5-flash-native-audio-preview-09-2025
 27. gemini-2.5-flash-native-audio-preview-12-2025
+28. gemini-3.1-flash-live-preview
 
 === INCLUDED MODELS ===
  1. gemini-2.5-flash
@@ -59,7 +60,7 @@ Filtering Success Rate: 42.6%
 20. veo-3.0-fast-generate-001
 
 === EXCLUSION BREAKDOWN ===
-22 models: Experimental/Preview model - production-ready models only
+23 models: Experimental/Preview model - production-ready models only
  1 models: Model requires billing/payment - free models only
  1 models: Preview model - gemini-2.5-flash-native-audio-preview-09-2025 (https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-live). Note: preview tag not mentioned in API response.
  1 models: Preview model - gemini-flash-latest is a preview pointer per Sep 25 2025 Google update (https://developers.googleblog.com/en/continuing-to-bring-you-our-latest-models-with-an-improved-gemini-2-5-flash-and-flash-lite-release/). Note: preview tag not mentioned in API response.

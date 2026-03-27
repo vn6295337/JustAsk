@@ -1,8 +1,8 @@
 GOOGLE API MODELS FETCH REPORT
 ==================================================
 
-Generated: 2026-03-26 08:13:49 IST
-Total Models: 47
+Generated: 2026-03-27 08:16:03 IST
+Total Models: 48
 
 MODELS LIST:
 --------------------
@@ -53,3 +53,4 @@ MODELS LIST:
 45. models/gemini-2.5-flash-native-audio-latest
 46. models/gemini-2.5-flash-native-audio-preview-09-2025
 47. models/gemini-2.5-flash-native-audio-preview-12-2025
+48. models/gemini-3.1-flash-live-preview

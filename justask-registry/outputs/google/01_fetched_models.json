@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-03-26 08:13:49 IST",
-    "total_models": 47,
+    "generated": "2026-03-27 08:16:03 IST",
+    "total_models": 48,
     "api_source": "Google Generative Language API"
   },
   "models": [
@@ -756,6 +756,21 @@
       "topK": 64,
       "maxTemperature": 2,
       "thinking": true
+    },
+    {
+      "name": "models/gemini-3.1-flash-live-preview",
+      "version": "3.1-flash-live-03-2026",
+      "displayName": "Gemini 3.1 Flash Live Preview",
+      "description": "Gemini 3.1 Flash Live Preview",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "bidiGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2
     }
   ]
 }
