@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-03-27 08:17:34 IST
+Generated: 2026-03-28 08:06:48 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 346
+  Total models: 347
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  62 models
@@ -360,6 +360,10 @@ PROVIDER BREAKDOWN (Descending Order):
     - mercury-2
     - mercury-coder
 
+  Kwaipilot       :   2 models
+    - kat-coder-pro
+    - kat-coder-pro-v2
+
   StepFun         :   2 models
     - step-3.5-flash
     - step-3.5-flash:free
@@ -393,9 +397,6 @@ PROVIDER BREAKDOWN (Descending Order):
 
   Deep Cogito     :   1 models
     - cogito-v2.1-671b
-
-  Kwaipilot       :   1 models
-    - kat-coder-pro
 
   IBM             :   1 models
     - granite-4.0-h-micro
