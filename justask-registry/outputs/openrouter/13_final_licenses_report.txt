@@ -1,10 +1,10 @@
 ================================================================================
 FINAL CONSOLIDATED LICENSE LIST REPORT
-Generated: 2026-03-28 08:07:02 IST
+Generated: 2026-03-29 08:23:07 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 31
+  Total models        : 29
   Input sources       : 4 pipeline stage files
   Processor           : step_13_final_licenses.py
   Output              : 13_final_licenses.json
@@ -13,11 +13,11 @@ SOURCE CATEGORY DISTRIBUTION:
   Custom: 7 models
   Google: 5 models
   Meta: 2 models
-  Opensource: 11 models
+  Opensource: 9 models
   Proprietary: 6 models
 
 FINAL LICENSE DISTRIBUTION:
-   9 models: APACHE-2.0
+   7 models: APACHE-2.0
    5 models: GEMMA
    4 models: NVIDIA
    2 models: LFM1.0
@@ -262,22 +262,7 @@ MODEL 15: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 16: mistralai/mistral-small-3.1-24b-instruct-2503
---------------------------------------------------
-  ID: mistralai/mistral-small-3.1-24b-instruct:free
-  Original Name: Mistral: Mistral Small 3.1 24B (free)
-  HuggingFace ID: mistralai/Mistral-Small-3.1-24B-Instruct-2503
-  Canonical Slug: mistralai/mistral-small-3.1-24b-instruct-2503
-  Clean Model Name: Mistral Small 3.1 24B
-  License Info Text: info
-  License Info URL: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/blob/main/README.md
-  License Name: APACHE-2.0
-  License URL: https://www.apache.org/licenses/LICENSE-2.0
-  Source Category: opensource
-
-================================================================================
-
-MODEL 17: openai/gpt-oss-120b
+MODEL 16: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -292,7 +277,7 @@ MODEL 17: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 18: openai/gpt-oss-20b
+MODEL 17: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -307,22 +292,7 @@ MODEL 18: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 19: qwen/qwen3-4b-04-28
---------------------------------------------------
-  ID: qwen/qwen3-4b:free
-  Original Name: Qwen: Qwen3 4B (free)
-  HuggingFace ID: Qwen/Qwen3-4B
-  Canonical Slug: qwen/qwen3-4b-04-28
-  Clean Model Name: Qwen3 4B
-  License Info Text: info
-  License Info URL: https://huggingface.co/Qwen/Qwen3-4B/blob/main/LICENSE
-  License Name: APACHE-2.0
-  License URL: https://www.apache.org/licenses/LICENSE-2.0
-  Source Category: opensource
-
-================================================================================
-
-MODEL 20: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 18: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -337,7 +307,7 @@ MODEL 20: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 21: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 19: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID: qwen/qwen3-next-80b-a3b-instruct:free
   Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
@@ -352,7 +322,7 @@ MODEL 21: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 22: stepfun/step-3.5-flash
+MODEL 20: stepfun/step-3.5-flash
 --------------------------------------------------
   ID: stepfun/step-3.5-flash:free
   Original Name: StepFun: Step 3.5 Flash (free)
@@ -367,7 +337,7 @@ MODEL 22: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 23: venice/uncensored
+MODEL 21: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -382,7 +352,7 @@ MODEL 23: venice/uncensored
 
 ================================================================================
 
-MODEL 24: nousresearch/hermes-3-llama-3.1-405b
+MODEL 22: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -397,7 +367,7 @@ MODEL 24: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 25: z-ai/glm-4.5-air
+MODEL 23: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)
@@ -412,7 +382,7 @@ MODEL 25: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 26: amazon/nova-2-lite-v1
+MODEL 24: amazon/nova-2-lite-v1
 --------------------------------------------------
   ID: amazon/nova-2-lite-v1:free
   Original Name: Amazon/Nova 2 Lite V1
@@ -427,7 +397,7 @@ MODEL 26: amazon/nova-2-lite-v1
 
 ================================================================================
 
-MODEL 27: kwaipilot/kat-coder-pro-v1
+MODEL 25: kwaipilot/kat-coder-pro-v1
 --------------------------------------------------
   ID: kwaipilot/kat-coder-pro-v1:free
   Original Name: Kwaipilot/Kat Coder Pro V1
@@ -442,7 +412,7 @@ MODEL 27: kwaipilot/kat-coder-pro-v1
 
 ================================================================================
 
-MODEL 28: mistralai/devstral-2512
+MODEL 26: mistralai/devstral-2512
 --------------------------------------------------
   ID: mistralai/devstral-2512:free
   Original Name: Mistralai/Devstral 2512
@@ -457,7 +427,7 @@ MODEL 28: mistralai/devstral-2512
 
 ================================================================================
 
-MODEL 29: upstage/solar-pro-3
+MODEL 27: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage/Solar Pro 3
@@ -472,7 +442,7 @@ MODEL 29: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 30: x-ai/grok-4-fast
+MODEL 28: x-ai/grok-4-fast
 --------------------------------------------------
   ID: x-ai/grok-4-fast:free
   Original Name: X Ai/Grok 4 Fast
@@ -487,7 +457,7 @@ MODEL 30: x-ai/grok-4-fast
 
 ================================================================================
 
-MODEL 31: x-ai/grok-4.1-fast
+MODEL 29: x-ai/grok-4.1-fast
 --------------------------------------------------
   ID: x-ai/grok-4.1-fast:free
   Original Name: X Ai/Grok 4.1 Fast

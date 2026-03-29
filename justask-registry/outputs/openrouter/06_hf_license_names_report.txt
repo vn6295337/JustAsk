@@ -1,16 +1,16 @@
 ================================================================================
 OTHER MODEL LICENSE NAME EXTRACTIONS REPORT
-Generated: 2026-03-28 08:06:58 IST
+Generated: 2026-03-29 08:23:03 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 18
+  Total models : 16
   Input        : 05_hf_license_urls.json
   Processor    : step_06_fetch_hf_license_names.py
   Output       : 06_hf_license_names.json
 
 LICENSE DISTRIBUTION:
-  apache-2.0: 9
+  apache-2.0: 7
   lfm1.0: 2
   llama3: 1
   mit: 1
@@ -158,25 +158,7 @@ MODEL 15: venice/uncensored
 
 ================================================================================
 
-MODEL 16: qwen/qwen3-4b-04-28
---------------------------------------------------
-  ID               : qwen/qwen3-4b:free
-  Canonical Slug   : qwen/qwen3-4b-04-28
-  HuggingFace ID   : Qwen/Qwen3-4B
-  Extracted License: apache-2.0
-
-================================================================================
-
-MODEL 17: mistralai/mistral-small-3.1-24b-instruct-2503
---------------------------------------------------
-  ID               : mistralai/mistral-small-3.1-24b-instruct:free
-  Canonical Slug   : mistralai/mistral-small-3.1-24b-instruct-2503
-  HuggingFace ID   : mistralai/Mistral-Small-3.1-24B-Instruct-2503
-  Extracted License: apache-2.0
-
-================================================================================
-
-MODEL 18: nousresearch/hermes-3-llama-3.1-405b
+MODEL 16: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID               : nousresearch/hermes-3-llama-3.1-405b:free
   Canonical Slug   : nousresearch/hermes-3-llama-3.1-405b

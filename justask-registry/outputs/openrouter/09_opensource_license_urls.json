@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-03-28 08:06:59 IST",
-    "total_models": 11,
+    "generated_at": "2026-03-29 08:23:04 IST",
+    "total_models": 9,
     "pipeline_stage": "I_opensource_license_urls"
   },
   "models": [
@@ -66,22 +66,6 @@
       "canonical_slug": "venice/uncensored",
       "name": "Venice: Uncensored (free)",
       "hugging_face_id": "cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition",
-      "license_name": "APACHE-2.0",
-      "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
-    },
-    {
-      "id": "qwen/qwen3-4b:free",
-      "canonical_slug": "qwen/qwen3-4b-04-28",
-      "name": "Qwen: Qwen3 4B (free)",
-      "hugging_face_id": "Qwen/Qwen3-4B",
-      "license_name": "APACHE-2.0",
-      "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
-    },
-    {
-      "id": "mistralai/mistral-small-3.1-24b-instruct:free",
-      "canonical_slug": "mistralai/mistral-small-3.1-24b-instruct-2503",
-      "name": "Mistral: Mistral Small 3.1 24B (free)",
-      "hugging_face_id": "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
       "license_name": "APACHE-2.0",
       "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },

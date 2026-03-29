@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-03-28 08:07:02 IST",
-    "total_models": 26,
+    "generated_at": "2026-03-29 08:23:07 IST",
+    "total_models": 24,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
@@ -165,24 +165,6 @@
       "hugging_face_id": "google/gemma-3n-E4B-it",
       "clean_model_name": "Gemma 3n E4B IT",
       "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "qwen/qwen3-4b:free",
-      "canonical_slug": "qwen/qwen3-4b-04-28",
-      "original_name": "Qwen: Qwen3 4B (free)",
-      "hugging_face_id": "Qwen/Qwen3-4B",
-      "clean_model_name": "Qwen3 4B",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "mistralai/mistral-small-3.1-24b-instruct:free",
-      "canonical_slug": "mistralai/mistral-small-3.1-24b-instruct-2503",
-      "original_name": "Mistral: Mistral Small 3.1 24B (free)",
-      "hugging_face_id": "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
-      "clean_model_name": "Mistral Small 3.1 24B",
-      "raw_input_modalities": "text, image",
       "raw_output_modalities": "text"
     },
     {
