@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-03-30 08:24:09 IST
+Generated: 2026-03-31 08:17:04 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 345
+  Total models: 348
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  62 models
@@ -71,7 +71,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - o4-mini-deep-research
     - o4-mini-high
 
-  Qwen            :  46 models
+  Qwen            :  47 models
     - qwen-2.5-7b-instruct
     - qwen-max
     - qwen-plus
@@ -117,9 +117,10 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3.5-9b
     - qwen3.5-flash-02-23
     - qwen3.5-plus-02-15
+    - qwen3.6-plus-preview:free
     - qwq-32b
 
-  Google          :  26 models
+  Google          :  28 models
     - gemini-2.0-flash-001
     - gemini-2.0-flash-lite-001
     - gemini-2.5-flash
@@ -146,6 +147,8 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemma-3n-e2b-it:free
     - gemma-3n-e4b-it
     - gemma-3n-e4b-it:free
+    - lyria-3-clip-preview
+    - lyria-3-pro-preview
 
   Mistral         :  22 models
     - codestral-2508
@@ -358,10 +361,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - mercury-2
     - mercury-coder
 
-  Kwaipilot       :   2 models
-    - kat-coder-pro
-    - kat-coder-pro-v2
-
   StepFun         :   2 models
     - step-3.5-flash
     - step-3.5-flash:free
@@ -377,6 +376,9 @@ PROVIDER BREAKDOWN (Descending Order):
   Inflection      :   2 models
     - inflection-3-pi
     - inflection-3-productivity
+
+  Kwaipilot       :   1 models
+    - kat-coder-pro-v2
 
   Upstage         :   1 models
     - solar-pro-3
@@ -423,6 +425,9 @@ PROVIDER BREAKDOWN (Descending Order):
   AlfredPros      :   1 models
     - codellama-7b-instruct-solidity
 
+  Reka            :   1 models
+    - reka-flash-3
+
   Microsoft       :   1 models
     - phi-4
 
@@ -435,4 +440,4 @@ PROVIDER BREAKDOWN (Descending Order):
   Mancer          :   1 models
     - weaver
 
-Total providers: 50
+Total providers: 51

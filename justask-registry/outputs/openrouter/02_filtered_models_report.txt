@@ -1,28 +1,28 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-03-30 08:24:09 IST
+Generated: 2026-03-31 08:17:04 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 345
+  Total models processed: 348
   Models passed all filters: 24
-  Models excluded: 321
-  Success rate: 7.0%
+  Models excluded: 324
+  Success rate: 6.9%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 345 models
+    Input: 348 models
     Excluded: 320 models (non-free pricing)
-    Remaining: 25 models
+    Remaining: 28 models
 
   Step 2 - Billing Description Filter:
-    Input: 25 models
+    Input: 28 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 25 models
+    Remaining: 28 models
 
   Step 3 - Keyword Filter:
-    Input: 25 models
-    Excluded: 1 models (preview/experimental/beta)
+    Input: 28 models
+    Excluded: 4 models (preview/experimental/beta)
     Remaining: 24 models
 
   Step 4 - Deduplication Filter:
@@ -43,9 +43,12 @@ No models found with billing requirements in description.
 ================================================================================
 STEP 3 - KEYWORD FILTER RESULTS (DETAILED)
 ================================================================================
-EXCLUDED FOR: PREVIEW/EXPERIMENTAL VERSION (1 models)
+EXCLUDED FOR: PREVIEW/EXPERIMENTAL VERSION (4 models)
 --------------------------------------------------
    1. Arcee AI: Trinity Large Preview (free)
+   2. Google: Lyria 3 Clip Preview
+   3. Google: Lyria 3 Pro Preview
+   4. Qwen: Qwen3.6 Plus Preview (free)
 
 ================================================================================
 STEP 4 - DEDUPLICATION FILTER RESULTS (DETAILED)
@@ -197,7 +200,7 @@ FINAL SUMMARY:
   Total models passed all filters: 24
   Models excluded by pricing: 320
   Models excluded by billing description: 0
-  Models excluded by keywords: 1
+  Models excluded by keywords: 4
   Models excluded by deduplication: 0
-  Total exclusions: 321
+  Total exclusions: 324
   ✓ All filtered models accounted for
