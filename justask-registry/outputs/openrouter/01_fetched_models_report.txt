@@ -1,6 +1,6 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-03-31 08:17:04 IST
+Generated: 2026-04-01 08:29:05 IST
 ================================================================================
 
 SUMMARY:
@@ -251,8 +251,8 @@ PROVIDER BREAKDOWN (Descending Order):
     - grok-4
     - grok-4-fast
     - grok-4.1-fast
-    - grok-4.20-beta
-    - grok-4.20-multi-agent-beta
+    - grok-4.20
+    - grok-4.20-multi-agent
     - grok-code-fast-1
 
   MiniMax         :   8 models
