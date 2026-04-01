@@ -1,8 +1,8 @@
 GOOGLE API MODELS FETCH REPORT
 ==================================================
 
-Generated: 2026-03-31 08:15:33 IST
-Total Models: 48
+Generated: 2026-04-01 08:27:27 IST
+Total Models: 49
 
 MODELS LIST:
 --------------------
@@ -50,7 +50,8 @@ MODELS LIST:
 42. models/veo-3.0-fast-generate-001
 43. models/veo-3.1-generate-preview
 44. models/veo-3.1-fast-generate-preview
-45. models/gemini-2.5-flash-native-audio-latest
-46. models/gemini-2.5-flash-native-audio-preview-09-2025
-47. models/gemini-2.5-flash-native-audio-preview-12-2025
-48. models/gemini-3.1-flash-live-preview
+45. models/veo-3.1-lite-generate-preview
+46. models/gemini-2.5-flash-native-audio-latest
+47. models/gemini-2.5-flash-native-audio-preview-09-2025
+48. models/gemini-2.5-flash-native-audio-preview-12-2025
+49. models/gemini-3.1-flash-live-preview

@@ -1,13 +1,16 @@
 === GOOGLE MODELS MODALITY SCRAPING REPORT ===
-Generated: 2026-03-31 08:15:38 IST
+Generated: 2026-04-01 08:27:31 IST
 
-Total Models: 9
+Total Models: 12
 
 imagen-4-ultra: Text → Image
 imagen-4-fast: Text → Image
 imagen-3: Text → Image
 veo-3.1-generate-preview: Text, Image → Video, Audio
 veo-3.1-fast-generate-preview: Text, Image → Video, Audio
+veo-3.1-lite-generate-preview: Text, Image → Video, Audio
+veo-3.0-generate-001: Text, Image → Video, Audio
+veo-3.0-fast-generate-001: Text, Image → Video, Audio
 veo-2.0-generate-001: Text, Image → Video
 gemma-3: text, image → text
 gemma-2: text → text, decoder-only

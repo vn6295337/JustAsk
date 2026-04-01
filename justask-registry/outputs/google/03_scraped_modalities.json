@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-03-31 08:15:38 IST",
-    "total_models": 9,
+    "generated": "2026-04-01 08:27:31 IST",
+    "total_models": 12,
     "scraping_source": "Google Documentation Web Scraper"
   },
   "modalities": {
@@ -22,6 +22,18 @@
       "output_modalities": "Video, Audio"
     },
     "veo-3.1-fast-generate-preview": {
+      "input_modalities": "Text, Image",
+      "output_modalities": "Video, Audio"
+    },
+    "veo-3.1-lite-generate-preview": {
+      "input_modalities": "Text, Image",
+      "output_modalities": "Video, Audio"
+    },
+    "veo-3.0-generate-001": {
+      "input_modalities": "Text, Image",
+      "output_modalities": "Video, Audio"
+    },
+    "veo-3.0-fast-generate-001": {
       "input_modalities": "Text, Image",
       "output_modalities": "Video, Audio"
     },
