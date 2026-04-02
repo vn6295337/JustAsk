@@ -1,11 +1,11 @@
 === GOOGLE MODELS FILTERING REPORT ===
-Generated: 2026-04-01 08:27:27 IST
+Generated: 2026-04-02 08:11:35 IST
 
 === SUMMARY ===
-Total Input Models: 49
+Total Input Models: 48
 Models Included: 20
-Models Excluded: 29
-Filtering Success Rate: 40.8%
+Models Excluded: 28
+Filtering Success Rate: 41.7%
 
 === EXCLUDED MODELS ===
  1. gemini-2.5-flash-preview-tts
@@ -14,29 +14,28 @@ Filtering Success Rate: 40.8%
  4. gemini-flash-lite-latest
  5. gemini-pro-latest
  6. gemini-2.5-flash-image
- 7. gemini-2.5-flash-lite-preview-09-2025
- 8. gemini-3-pro-preview
- 9. gemini-3-flash-preview
-10. gemini-3.1-pro-preview
-11. gemini-3.1-pro-preview-customtools
-12. gemini-3.1-flash-lite-preview
-13. gemini-3-pro-image-preview
-14. nano-banana-pro-preview
-15. gemini-3.1-flash-image-preview
-16. lyria-3-clip-preview
-17. lyria-3-pro-preview
-18. gemini-robotics-er-1.5-preview
-19. gemini-2.5-computer-use-preview-10-2025
-20. deep-research-pro-preview-12-2025
-21. gemini-embedding-2-preview
-22. veo-2.0-generate-001
-23. veo-3.1-generate-preview
-24. veo-3.1-fast-generate-preview
-25. veo-3.1-lite-generate-preview
-26. gemini-2.5-flash-native-audio-latest
-27. gemini-2.5-flash-native-audio-preview-09-2025
-28. gemini-2.5-flash-native-audio-preview-12-2025
-29. gemini-3.1-flash-live-preview
+ 7. gemini-3-pro-preview
+ 8. gemini-3-flash-preview
+ 9. gemini-3.1-pro-preview
+10. gemini-3.1-pro-preview-customtools
+11. gemini-3.1-flash-lite-preview
+12. gemini-3-pro-image-preview
+13. nano-banana-pro-preview
+14. gemini-3.1-flash-image-preview
+15. lyria-3-clip-preview
+16. lyria-3-pro-preview
+17. gemini-robotics-er-1.5-preview
+18. gemini-2.5-computer-use-preview-10-2025
+19. deep-research-pro-preview-12-2025
+20. gemini-embedding-2-preview
+21. veo-2.0-generate-001
+22. veo-3.1-generate-preview
+23. veo-3.1-fast-generate-preview
+24. veo-3.1-lite-generate-preview
+25. gemini-2.5-flash-native-audio-latest
+26. gemini-2.5-flash-native-audio-preview-09-2025
+27. gemini-2.5-flash-native-audio-preview-12-2025
+28. gemini-3.1-flash-live-preview
 
 === INCLUDED MODELS ===
  1. gemini-2.5-flash
@@ -61,7 +60,7 @@ Filtering Success Rate: 40.8%
 20. veo-3.0-fast-generate-001
 
 === EXCLUSION BREAKDOWN ===
-24 models: Experimental/Preview model - production-ready models only
+23 models: Experimental/Preview model - production-ready models only
  1 models: Model requires billing/payment - free models only
  1 models: Preview model - gemini-2.5-flash-native-audio-preview-09-2025 (https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-live). Note: preview tag not mentioned in API response.
  1 models: Preview model - gemini-flash-latest is a preview pointer per Sep 25 2025 Google update (https://developers.googleblog.com/en/continuing-to-bring-you-our-latest-models-with-an-improved-gemini-2-5-flash-and-flash-lite-release/). Note: preview tag not mentioned in API response.
