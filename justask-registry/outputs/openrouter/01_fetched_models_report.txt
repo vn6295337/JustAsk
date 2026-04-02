@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-04-01 08:29:05 IST
+Generated: 2026-04-02 08:13:18 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 348
+  Total models: 350
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  62 models
@@ -204,7 +204,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - llama-4-scout
     - llama-guard-4-12b
 
-  Z.ai            :  11 models
+  Z.ai            :  12 models
     - glm-4-32b
     - glm-4.5
     - glm-4.5-air
@@ -216,6 +216,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - glm-4.7-flash
     - glm-5
     - glm-5-turbo
+    - glm-5v-turbo
 
   NVIDIA          :  11 models
     - llama-3.1-nemotron-70b-instruct
@@ -255,6 +256,16 @@ PROVIDER BREAKDOWN (Descending Order):
     - grok-4.20-multi-agent
     - grok-code-fast-1
 
+  Arcee AI        :   8 models
+    - coder-large
+    - maestro-reasoning
+    - spotlight
+    - trinity-large-preview:free
+    - trinity-large-thinking
+    - trinity-mini
+    - trinity-mini:free
+    - virtuoso-large
+
   MiniMax         :   8 models
     - minimax-01
     - minimax-m1
@@ -264,15 +275,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - minimax-m2.5
     - minimax-m2.5:free
     - minimax-m2.7
-
-  Arcee AI        :   7 models
-    - coder-large
-    - maestro-reasoning
-    - spotlight
-    - trinity-large-preview:free
-    - trinity-mini
-    - trinity-mini:free
-    - virtuoso-large
 
   LiquidAI        :   5 models
     - lfm-2-24b-a2b
@@ -425,9 +427,6 @@ PROVIDER BREAKDOWN (Descending Order):
   AlfredPros      :   1 models
     - codellama-7b-instruct-solidity
 
-  Reka            :   1 models
-    - reka-flash-3
-
   Microsoft       :   1 models
     - phi-4
 
@@ -440,4 +439,4 @@ PROVIDER BREAKDOWN (Descending Order):
   Mancer          :   1 models
     - weaver
 
-Total providers: 51
+Total providers: 50
