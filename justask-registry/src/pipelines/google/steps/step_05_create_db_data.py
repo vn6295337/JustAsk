@@ -323,10 +323,18 @@ def get_license_info_google(model_name: str) -> Dict[str, str]:
             "license_name": "Unknown",
             "license_url": "Unknown"
         }
-    
+
     google_models = license_config['google_models']
-    
-    if 'gemma' in name_lower:
+
+    # Special case: Gemma 4 models use Apache 2.0 license
+    if 'gemma 4' in name_lower or 'gemma-4' in name_lower:
+        return {
+            "license_info_text": "",
+            "license_info_url": "",
+            "license_name": "APACHE-2.0",
+            "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+        }
+    elif 'gemma' in name_lower:
         return google_models['gemma']
     elif any(family in name_lower for family in ['gemini', 'embedding', 'imagen', 'veo', 'aqa']):
         return google_models['gemini']
