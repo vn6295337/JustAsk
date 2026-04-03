@@ -1,1 +1,1 @@
-Today - OpenRouter: Removed mistral-small-3.1-24b, qwen3-4b
+Today - Google: Added gemma-4-26b-a4b-it, gemma-4-31b-it | OpenRouter: Added qwen-3.6-plus
