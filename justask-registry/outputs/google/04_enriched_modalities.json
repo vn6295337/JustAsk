@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated": "2026-04-03 08:14:20 IST",
+    "generated": "2026-04-03 16:06:20 IST",
     "total_models": 22,
     "enrichment_source": "Google Pipeline 04_enrich_modalities"
   },
@@ -276,10 +276,10 @@
       "maxTemperature": 2,
       "thinking": true,
       "provider_slug": "gemma-4-26b-a4b-it",
-      "input_modalities": "Unknown",
-      "output_modalities": "Unknown",
-      "modality_source": "unknown",
-      "match_priority": 0
+      "input_modalities": "Text, Image, Video",
+      "output_modalities": "Text",
+      "modality_source": "hardcoded_config",
+      "match_priority": 6
     },
     {
       "name": "models/gemma-4-31b-it",
@@ -298,10 +298,10 @@
       "maxTemperature": 2,
       "thinking": true,
       "provider_slug": "gemma-4-31b-it",
-      "input_modalities": "Unknown",
-      "output_modalities": "Unknown",
-      "modality_source": "unknown",
-      "match_priority": 0
+      "input_modalities": "Text, Image, Video",
+      "output_modalities": "Text",
+      "modality_source": "hardcoded_config",
+      "match_priority": 6
     },
     {
       "name": "models/gemini-2.5-flash-lite",
