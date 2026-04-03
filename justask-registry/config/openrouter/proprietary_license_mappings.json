@@ -37,6 +37,12 @@
       "license_info_url": "",
       "license_name": "Upstage",
       "license_url": "https://www.upstage.ai/terms-of-service"
+    },
+    "qwen/qwen3.6-plus": {
+      "license_info_text": "",
+      "license_info_url": "",
+      "license_name": "QWEN",
+      "license_url": "https://qwen.ai/termsservice"
     }
   }
 }
