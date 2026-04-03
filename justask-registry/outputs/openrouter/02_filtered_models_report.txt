@@ -1,18 +1,18 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-04-02 08:13:18 IST
+Generated: 2026-04-03 08:15:46 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 350
-  Models passed all filters: 24
-  Models excluded: 326
-  Success rate: 6.9%
+  Total models processed: 349
+  Models passed all filters: 25
+  Models excluded: 324
+  Success rate: 7.2%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 350 models
-    Excluded: 322 models (non-free pricing)
+    Input: 349 models
+    Excluded: 321 models (non-free pricing)
     Remaining: 28 models
 
   Step 2 - Billing Description Filter:
@@ -22,18 +22,18 @@ STEP-BY-STEP FILTERING BREAKDOWN:
 
   Step 3 - Keyword Filter:
     Input: 28 models
-    Excluded: 4 models (preview/experimental/beta)
-    Remaining: 24 models
+    Excluded: 3 models (preview/experimental/beta)
+    Remaining: 25 models
 
   Step 4 - Deduplication Filter:
-    Input: 24 models
+    Input: 25 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 24 models
+    Final: 25 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 322 models with non-free pricing (details omitted due to volume)
+Excluded 321 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -43,12 +43,11 @@ No models found with billing requirements in description.
 ================================================================================
 STEP 3 - KEYWORD FILTER RESULTS (DETAILED)
 ================================================================================
-EXCLUDED FOR: PREVIEW/EXPERIMENTAL VERSION (4 models)
+EXCLUDED FOR: PREVIEW/EXPERIMENTAL VERSION (3 models)
 --------------------------------------------------
    1. Arcee AI: Trinity Large Preview (free)
    2. Google: Lyria 3 Clip Preview
    3. Google: Lyria 3 Pro Preview
-   4. Qwen: Qwen3.6 Plus Preview (free)
 
 ================================================================================
 STEP 4 - DEDUPLICATION FILTER RESULTS (DETAILED)
@@ -101,6 +100,21 @@ PROVIDER: NVIDIA (4 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
+PROVIDER: QWEN (3 models)
+--------------------------------------------------
+   1. Qwen: Qwen3 Coder 480B A35B (free)
+      ID: qwen/qwen3-coder:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+   2. Qwen: Qwen3 Next 80B A3B Instruct (free)
+      ID: qwen/qwen3-next-80b-a3b-instruct:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+   3. Qwen: Qwen3.6 Plus (free)
+      ID: qwen/qwen3.6-plus:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+
 PROVIDER: LIQUIDAI (2 models)
 --------------------------------------------------
    1. LiquidAI: LFM2.5-1.2B-Instruct (free)
@@ -109,17 +123,6 @@ PROVIDER: LIQUIDAI (2 models)
 
    2. LiquidAI: LFM2.5-1.2B-Thinking (free)
       ID: liquid/lfm-2.5-1.2b-thinking:free
-      Pricing: prompt=0, completion=0, request=N/A
-
-
-PROVIDER: QWEN (2 models)
---------------------------------------------------
-   1. Qwen: Qwen3 Coder 480B A35B (free)
-      ID: qwen/qwen3-coder:free
-      Pricing: prompt=0, completion=0, request=N/A
-
-   2. Qwen: Qwen3 Next 80B A3B Instruct (free)
-      ID: qwen/qwen3-next-80b-a3b-instruct:free
       Pricing: prompt=0, completion=0, request=N/A
 
 
@@ -197,10 +200,10 @@ PROVIDER: NOUS (1 models)
 ================================================================================
 FINAL SUMMARY:
   Total providers: 13
-  Total models passed all filters: 24
-  Models excluded by pricing: 322
+  Total models passed all filters: 25
+  Models excluded by pricing: 321
   Models excluded by billing description: 0
-  Models excluded by keywords: 4
+  Models excluded by keywords: 3
   Models excluded by deduplication: 0
-  Total exclusions: 326
+  Total exclusions: 324
   ✓ All filtered models accounted for

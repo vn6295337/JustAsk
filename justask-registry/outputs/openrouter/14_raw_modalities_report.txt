@@ -1,10 +1,10 @@
 ================================================================================
 RAW MODALITIES EXTRACTION REPORT
-Generated: 2026-04-02 08:13:36 IST
+Generated: 2026-04-03 08:16:00 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 24
+  Total models : 25
   Input        : 02_filtered_models.json
   Processor    : step_14_extract_modalities.py
   Output       : 14_raw_modalities.json
@@ -13,11 +13,12 @@ RAW INPUT MODALITIES DISTRIBUTION:
   19 models: text
    4 models: text, image
    1 models: image, text, video
+   1 models: text, image, video
 
-Total unique input types: 3
+Total unique input types: 4
 
 RAW OUTPUT MODALITIES DISTRIBUTION:
-  24 models: text
+  25 models: text
 
 Total unique output types: 1
 
@@ -25,8 +26,9 @@ RAW MODALITY COMBINATIONS (INPUT → OUTPUT):
   19 models: text → text
    4 models: text, image → text
    1 models: image, text, video → text
+   1 models: text, image, video → text
 
-Total unique combinations: 3
+Total unique combinations: 4
 
 DETAILED RAW MODALITY MODEL INFORMATION:
 ================================================================================
@@ -315,5 +317,17 @@ MODEL 24: google/gemma-3-4b-it
   Canonical Slug: google/gemma-3-4b-it
   Clean Model Name: Gemma 3 4B IT
   Raw Input Modalities: text, image
+  Raw Output Modalities: text
+
+================================================================================
+
+MODEL 25: qwen/qwen3.6-plus-04-02
+--------------------------------------------------
+  ID: qwen/qwen3.6-plus:free
+  Original Name: Qwen: Qwen3.6 Plus (free)
+  HuggingFace ID: 
+  Canonical Slug: qwen/qwen3.6-plus-04-02
+  Clean Model Name: Qwen3.6 Plus
+  Raw Input Modalities: text, image, video
   Raw Output Modalities: text
 

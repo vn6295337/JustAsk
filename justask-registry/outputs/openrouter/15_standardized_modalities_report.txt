@@ -1,10 +1,10 @@
 ================================================================================
 STANDARDIZED MODALITIES REPORT
-Generated: 2026-04-02 08:13:36 IST
+Generated: 2026-04-03 08:16:00 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 24
+  Total models : 25
   Input        : 14_raw_modalities.json
   Config       : modality_standardization.json
   Processor    : step_15_standardize_modalities.py
@@ -14,12 +14,12 @@ STANDARDIZED INPUT MODALITIES DISTRIBUTION:
   17 models: Text
    4 models: Text, Image
    2 models: Text, Image, Audio, Video
-   1 models: Text, Image, Video
+   2 models: Text, Image, Video
 
 Total unique input types: 4
 
 STANDARDIZED OUTPUT MODALITIES DISTRIBUTION:
-  24 models: Text
+  25 models: Text
 
 Total unique output types: 1
 
@@ -27,13 +27,13 @@ STANDARDIZED MODALITY COMBINATIONS (INPUT → OUTPUT):
   17 models: Text → Text
    4 models: Text, Image → Text
    2 models: Text, Image, Audio, Video → Text
-   1 models: Text, Image, Video → Text
+   2 models: Text, Image, Video → Text
 
 Total unique combinations: 4
 
 STANDARDIZATION IMPACT ANALYSIS:
-  Input modalities changed: 24 models
-  Output modalities changed: 24 models
+  Input modalities changed: 25 models
+  Output modalities changed: 25 models
   Input modalities unchanged: 0 models
   Output modalities unchanged: 0 models
 
@@ -370,6 +370,20 @@ MODEL 24: nvidia/nemotron-nano-12b-v2-vl
   Canonical Slug: nvidia/nemotron-nano-12b-v2-vl
   Clean Model Name: Nemotron Nano 12B 2 VL
   Raw Input Modalities: image, text, video
+  Raw Output Modalities: text
+  Standardized Input Modalities: Text, Image, Video
+  Standardized Output Modalities: Text
+
+================================================================================
+
+MODEL 25: qwen/qwen3.6-plus-04-02
+--------------------------------------------------
+  ID: qwen/qwen3.6-plus:free
+  Original Name: Qwen: Qwen3.6 Plus (free)
+  HuggingFace ID: 
+  Canonical Slug: qwen/qwen3.6-plus-04-02
+  Clean Model Name: Qwen3.6 Plus
+  Raw Input Modalities: text, image, video
   Raw Output Modalities: text
   Standardized Input Modalities: Text, Image, Video
   Standardized Output Modalities: Text

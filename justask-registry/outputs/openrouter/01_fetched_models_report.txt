@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-04-02 08:13:18 IST
+Generated: 2026-04-03 08:15:46 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 350
+  Total models: 349
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  62 models
@@ -117,10 +117,10 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3.5-9b
     - qwen3.5-flash-02-23
     - qwen3.5-plus-02-15
-    - qwen3.6-plus-preview:free
+    - qwen3.6-plus:free
     - qwq-32b
 
-  Google          :  28 models
+  Google          :  29 models
     - gemini-2.0-flash-001
     - gemini-2.0-flash-lite-001
     - gemini-2.5-flash
@@ -147,6 +147,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemma-3n-e2b-it:free
     - gemma-3n-e4b-it
     - gemma-3n-e4b-it:free
+    - gemma-4-31b-it
     - lyria-3-clip-preview
     - lyria-3-pro-preview
 
@@ -276,13 +277,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - minimax-m2.5:free
     - minimax-m2.7
 
-  LiquidAI        :   5 models
-    - lfm-2-24b-a2b
-    - lfm-2.2-6b
-    - lfm-2.5-1.2b-instruct:free
-    - lfm-2.5-1.2b-thinking:free
-    - lfm2-8b-a1b
-
   Amazon          :   5 models
     - nova-2-lite-v1
     - nova-lite-v1
@@ -362,6 +356,11 @@ PROVIDER BREAKDOWN (Descending Order):
     - mercury
     - mercury-2
     - mercury-coder
+
+  LiquidAI        :   3 models
+    - lfm-2-24b-a2b
+    - lfm-2.5-1.2b-instruct:free
+    - lfm-2.5-1.2b-thinking:free
 
   StepFun         :   2 models
     - step-3.5-flash

@@ -1,17 +1,17 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-04-02 08:13:39 IST
+Generated: 2026-04-03 08:16:03 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 24
-   • Total records in pipeline: 24
+   • Total unique model names: 25
+   • Total records in pipeline: 25
    • Total records in Supabase: 24
    • Models in both systems: 24
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 0
+   • Models in pipeline only (not in Supabase): 1
    • Models in Supabase only (not in pipeline): 0
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
@@ -56,6 +56,8 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
+   • New models (pipeline only): 1
+     Models: Qwen3.6 Plus
    • Existing models with differences: 0
 
 ================================================================================
@@ -479,6 +481,26 @@ license_name              | APACHE-2.0                | APACHE-2.0
 license_url               | https://www.apache.org/.. | https://www.apache.org/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+
+================================================================================
+
+MODEL: Qwen3.6 Plus
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | Alibaba Cloud             |                          
+human_readable_name       | Qwen3.6 Plus              |                          
+model_provider_country    | China                     |                          
+official_url              | https://alibabacloud.com/ |                          
+input_modalities          | Text, Image, Video        |                          
+output_modalities         | Text                      |                          
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              |                           |                          
+license_url               |                           |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 

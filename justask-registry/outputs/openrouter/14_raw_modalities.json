@@ -1,10 +1,19 @@
 {
   "metadata": {
-    "generated_at": "2026-04-02 08:13:36 IST",
-    "total_models": 24,
+    "generated_at": "2026-04-03 08:16:00 IST",
+    "total_models": 25,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
+    {
+      "id": "qwen/qwen3.6-plus:free",
+      "canonical_slug": "qwen/qwen3.6-plus-04-02",
+      "original_name": "Qwen: Qwen3.6 Plus (free)",
+      "hugging_face_id": "",
+      "clean_model_name": "Qwen3.6 Plus",
+      "raw_input_modalities": "text, image, video",
+      "raw_output_modalities": "text"
+    },
     {
       "id": "nvidia/nemotron-3-super-120b-a12b:free",
       "canonical_slug": "nvidia/nemotron-3-super-120b-a12b-20230311",
