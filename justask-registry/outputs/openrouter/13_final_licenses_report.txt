@@ -1,10 +1,10 @@
 ================================================================================
 FINAL CONSOLIDATED LICENSE LIST REPORT
-Generated: 2026-04-03 16:10:26 IST
+Generated: 2026-04-03 16:18:53 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 30
+  Total models        : 31
   Input sources       : 4 pipeline stage files
   Processor           : step_13_final_licenses.py
   Output              : 13_final_licenses.json
@@ -14,13 +14,14 @@ SOURCE CATEGORY DISTRIBUTION:
   Google: 5 models
   Meta: 2 models
   Opensource: 9 models
-  Proprietary: 7 models
+  Proprietary: 8 models
 
 FINAL LICENSE DISTRIBUTION:
    7 models: APACHE-2.0
    5 models: GEMMA
    4 models: NVIDIA
    2 models: LFM1.0
+   2 models: QWEN
    2 models: xAI
    1 models: AWS
    1 models: Apache-2.0
@@ -30,7 +31,6 @@ FINAL LICENSE DISTRIBUTION:
    1 models: MIT
    1 models: MODIFIED MIT
    1 models: Modified MIT
-   1 models: QWEN
    1 models: Upstage
 
 Total unique license types: 15
@@ -443,7 +443,22 @@ MODEL 27: qwen/qwen3.6-plus
 
 ================================================================================
 
-MODEL 28: upstage/solar-pro-3
+MODEL 28: qwen/qwen3.6-plus-04-02
+--------------------------------------------------
+  ID: qwen/qwen3.6-plus-04-02:free
+  Original Name: Qwen/Qwen3.6 Plus 04 02
+  HuggingFace ID: 
+  Canonical Slug: qwen/qwen3.6-plus-04-02
+  Clean Model Name: Qwen3.6 Plus 04 02
+  License Info Text: 
+  License Info URL: 
+  License Name: QWEN
+  License URL: https://qwen.ai/termsservice
+  Source Category: proprietary
+
+================================================================================
+
+MODEL 29: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage/Solar Pro 3
@@ -458,7 +473,7 @@ MODEL 28: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 29: x-ai/grok-4-fast
+MODEL 30: x-ai/grok-4-fast
 --------------------------------------------------
   ID: x-ai/grok-4-fast:free
   Original Name: X Ai/Grok 4 Fast
@@ -473,7 +488,7 @@ MODEL 29: x-ai/grok-4-fast
 
 ================================================================================
 
-MODEL 30: x-ai/grok-4.1-fast
+MODEL 31: x-ai/grok-4.1-fast
 --------------------------------------------------
   ID: x-ai/grok-4.1-fast:free
   Original Name: X Ai/Grok 4.1 Fast

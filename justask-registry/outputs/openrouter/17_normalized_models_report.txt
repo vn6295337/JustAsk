@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-04-03 16:10:27 IST
+Generated: 2026-04-03 16:18:54 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -45,13 +45,11 @@ LICENSE INFO URL (16 models):
   - Nemotron Nano 9B V2
   - Qwen3.6 Plus
 
-LICENSE NAME (2 models):
+LICENSE NAME (1 models):
   - Free Models Router
-  - Qwen3.6 Plus
 
-LICENSE URL (2 models):
+LICENSE URL (1 models):
   - Free Models Router
-  - Qwen3.6 Plus
 
 UNKNOWN OR 'NOT FOUND' VALUES:
 ------------------------------
@@ -62,8 +60,8 @@ DATA QUALITY SUMMARY:
 Total models: 25
 Missing license info text: 16 (64.0%)
 Missing license info url: 16 (64.0%)
-Missing license name: 2 (8.0%)
-Missing license url: 2 (8.0%)
+Missing license name: 1 (4.0%)
+Missing license url: 1 (4.0%)
 
 ================================================================================
 
@@ -93,9 +91,9 @@ COMPLETE MODEL RECORDS:
   3. Qwen3.6 Plus
      Provider           : Alibaba Cloud (China)
      Modalities         : Text, Image, Video → Text
-     License            : 
+     License            : QWEN
      License Info       : 
-     License URL        : 
+     License URL        : https://qwen.ai/termsservice
      Official URL       : https://alibabacloud.com/
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
