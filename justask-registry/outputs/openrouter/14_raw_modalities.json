@@ -1,10 +1,19 @@
 {
   "metadata": {
-    "generated_at": "2026-03-23 10:19:59 IST",
-    "total_models": 26,
+    "generated_at": "2026-04-03 08:16:00 IST",
+    "total_models": 25,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
+    {
+      "id": "qwen/qwen3.6-plus:free",
+      "canonical_slug": "qwen/qwen3.6-plus-04-02",
+      "original_name": "Qwen: Qwen3.6 Plus (free)",
+      "hugging_face_id": "",
+      "clean_model_name": "Qwen3.6 Plus",
+      "raw_input_modalities": "text, image, video",
+      "raw_output_modalities": "text"
+    },
     {
       "id": "nvidia/nemotron-3-super-120b-a12b:free",
       "canonical_slug": "nvidia/nemotron-3-super-120b-a12b-20230311",
@@ -165,24 +174,6 @@
       "hugging_face_id": "google/gemma-3n-E4B-it",
       "clean_model_name": "Gemma 3n E4B IT",
       "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "qwen/qwen3-4b:free",
-      "canonical_slug": "qwen/qwen3-4b-04-28",
-      "original_name": "Qwen: Qwen3 4B (free)",
-      "hugging_face_id": "Qwen/Qwen3-4B",
-      "clean_model_name": "Qwen3 4B",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "mistralai/mistral-small-3.1-24b-instruct:free",
-      "canonical_slug": "mistralai/mistral-small-3.1-24b-instruct-2503",
-      "original_name": "Mistral: Mistral Small 3.1 24B (free)",
-      "hugging_face_id": "mistralai/Mistral-Small-3.1-24B-Instruct-2503",
-      "clean_model_name": "Mistral Small 3.1 24B",
-      "raw_input_modalities": "text, image",
       "raw_output_modalities": "text"
     },
     {

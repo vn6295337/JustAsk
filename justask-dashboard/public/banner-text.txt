@@ -1,1 +1,1 @@
-Today - No updates
+Today - OpenRouter: Removed mistral-small-3.1-24b, qwen3-4b

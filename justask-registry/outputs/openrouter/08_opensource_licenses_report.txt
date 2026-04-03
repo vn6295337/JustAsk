@@ -1,17 +1,17 @@
 ================================================================================
 OPENSOURCE LICENSE MODELS REPORT
-Generated: 2026-03-23 10:19:55 IST
+Generated: 2026-04-03 08:15:56 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 11
+  Total models : 9
   Input        : 07_standardized_licenses.json
   Reference    : opensource_license_urls.json
   Processor    : step_08_bucketize_licenses.py
   Output       : 08_opensource_licenses.json
 
 OPENSOURCE LICENSE DISTRIBUTION:
-  APACHE-2.0: 9 models
+  APACHE-2.0: 7 models
   LLAMA-3.1: 1 models
   MIT: 1 models
 
@@ -29,16 +29,7 @@ MODEL 1: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 2: mistralai/mistral-small-3.1-24b-instruct-2503
---------------------------------------------------
-  ID              : mistralai/mistral-small-3.1-24b-instruct:free
-  Canonical Slug  : mistralai/mistral-small-3.1-24b-instruct-2503
-  HuggingFace ID  : mistralai/Mistral-Small-3.1-24B-Instruct-2503
-  License Name    : APACHE-2.0
-
-================================================================================
-
-MODEL 3: openai/gpt-oss-120b
+MODEL 2: openai/gpt-oss-120b
 --------------------------------------------------
   ID              : openai/gpt-oss-120b:free
   Canonical Slug  : openai/gpt-oss-120b
@@ -47,7 +38,7 @@ MODEL 3: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 4: openai/gpt-oss-20b
+MODEL 3: openai/gpt-oss-20b
 --------------------------------------------------
   ID              : openai/gpt-oss-20b:free
   Canonical Slug  : openai/gpt-oss-20b
@@ -56,16 +47,7 @@ MODEL 4: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 5: qwen/qwen3-4b-04-28
---------------------------------------------------
-  ID              : qwen/qwen3-4b:free
-  Canonical Slug  : qwen/qwen3-4b-04-28
-  HuggingFace ID  : Qwen/Qwen3-4B
-  License Name    : APACHE-2.0
-
-================================================================================
-
-MODEL 6: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 4: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID              : qwen/qwen3-coder:free
   Canonical Slug  : qwen/qwen3-coder-480b-a35b-07-25
@@ -74,7 +56,7 @@ MODEL 6: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 7: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 5: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID              : qwen/qwen3-next-80b-a3b-instruct:free
   Canonical Slug  : qwen/qwen3-next-80b-a3b-instruct-2509
@@ -83,7 +65,7 @@ MODEL 7: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 8: stepfun/step-3.5-flash
+MODEL 6: stepfun/step-3.5-flash
 --------------------------------------------------
   ID              : stepfun/step-3.5-flash:free
   Canonical Slug  : stepfun/step-3.5-flash
@@ -92,7 +74,7 @@ MODEL 8: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 9: venice/uncensored
+MODEL 7: venice/uncensored
 --------------------------------------------------
   ID              : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Canonical Slug  : venice/uncensored
@@ -101,7 +83,7 @@ MODEL 9: venice/uncensored
 
 ================================================================================
 
-MODEL 10: nousresearch/hermes-3-llama-3.1-405b
+MODEL 8: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID              : nousresearch/hermes-3-llama-3.1-405b:free
   Canonical Slug  : nousresearch/hermes-3-llama-3.1-405b
@@ -110,7 +92,7 @@ MODEL 10: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 11: z-ai/glm-4.5-air
+MODEL 9: z-ai/glm-4.5-air
 --------------------------------------------------
   ID              : z-ai/glm-4.5-air:free
   Canonical Slug  : z-ai/glm-4.5-air

@@ -1,39 +1,39 @@
 ================================================================================
 STANDARDIZED MODALITIES REPORT
-Generated: 2026-03-23 10:19:59 IST
+Generated: 2026-04-03 08:16:00 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 26
+  Total models : 25
   Input        : 14_raw_modalities.json
   Config       : modality_standardization.json
   Processor    : step_15_standardize_modalities.py
   Output       : 15_standardized_modalities.json
 
 STANDARDIZED INPUT MODALITIES DISTRIBUTION:
-  18 models: Text
-   5 models: Text, Image
+  17 models: Text
+   4 models: Text, Image
    2 models: Text, Image, Audio, Video
-   1 models: Text, Image, Video
+   2 models: Text, Image, Video
 
 Total unique input types: 4
 
 STANDARDIZED OUTPUT MODALITIES DISTRIBUTION:
-  26 models: Text
+  25 models: Text
 
 Total unique output types: 1
 
 STANDARDIZED MODALITY COMBINATIONS (INPUT → OUTPUT):
-  18 models: Text → Text
-   5 models: Text, Image → Text
+  17 models: Text → Text
+   4 models: Text, Image → Text
    2 models: Text, Image, Audio, Video → Text
-   1 models: Text, Image, Video → Text
+   2 models: Text, Image, Video → Text
 
 Total unique combinations: 4
 
 STANDARDIZATION IMPACT ANALYSIS:
-  Input modalities changed: 26 models
-  Output modalities changed: 26 models
+  Input modalities changed: 25 models
+  Output modalities changed: 25 models
   Input modalities unchanged: 0 models
   Output modalities unchanged: 0 models
 
@@ -208,21 +208,7 @@ MODEL 12: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 13: qwen/qwen3-4b-04-28
---------------------------------------------------
-  ID: qwen/qwen3-4b:free
-  Original Name: Qwen: Qwen3 4B (free)
-  HuggingFace ID: Qwen/Qwen3-4B
-  Canonical Slug: qwen/qwen3-4b-04-28
-  Clean Model Name: Qwen3 4B
-  Raw Input Modalities: text
-  Raw Output Modalities: text
-  Standardized Input Modalities: Text
-  Standardized Output Modalities: Text
-
-================================================================================
-
-MODEL 14: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 13: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -236,7 +222,7 @@ MODEL 14: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 15: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 14: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID: qwen/qwen3-next-80b-a3b-instruct:free
   Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
@@ -250,7 +236,7 @@ MODEL 15: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 16: stepfun/step-3.5-flash
+MODEL 15: stepfun/step-3.5-flash
 --------------------------------------------------
   ID: stepfun/step-3.5-flash:free
   Original Name: StepFun: Step 3.5 Flash (free)
@@ -264,7 +250,7 @@ MODEL 16: stepfun/step-3.5-flash
 
 ================================================================================
 
-MODEL 17: arcee-ai/trinity-mini-20251201
+MODEL 16: arcee-ai/trinity-mini-20251201
 --------------------------------------------------
   ID: arcee-ai/trinity-mini:free
   Original Name: Arcee AI: Trinity Mini (free)
@@ -278,7 +264,7 @@ MODEL 17: arcee-ai/trinity-mini-20251201
 
 ================================================================================
 
-MODEL 18: venice/uncensored
+MODEL 17: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -292,7 +278,7 @@ MODEL 18: venice/uncensored
 
 ================================================================================
 
-MODEL 19: openrouter/free
+MODEL 18: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -306,7 +292,7 @@ MODEL 19: openrouter/free
 
 ================================================================================
 
-MODEL 20: google/gemma-3-12b-it
+MODEL 19: google/gemma-3-12b-it
 --------------------------------------------------
   ID: google/gemma-3-12b-it:free
   Original Name: Google: Gemma 3 12B (free)
@@ -320,7 +306,7 @@ MODEL 20: google/gemma-3-12b-it
 
 ================================================================================
 
-MODEL 21: google/gemma-3-27b-it
+MODEL 20: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
@@ -334,7 +320,7 @@ MODEL 21: google/gemma-3-27b-it
 
 ================================================================================
 
-MODEL 22: google/gemma-3-4b-it
+MODEL 21: google/gemma-3-4b-it
 --------------------------------------------------
   ID: google/gemma-3-4b-it:free
   Original Name: Google: Gemma 3 4B (free)
@@ -348,21 +334,7 @@ MODEL 22: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 23: mistralai/mistral-small-3.1-24b-instruct-2503
---------------------------------------------------
-  ID: mistralai/mistral-small-3.1-24b-instruct:free
-  Original Name: Mistral: Mistral Small 3.1 24B (free)
-  HuggingFace ID: mistralai/Mistral-Small-3.1-24B-Instruct-2503
-  Canonical Slug: mistralai/mistral-small-3.1-24b-instruct-2503
-  Clean Model Name: Mistral Small 3.1 24B
-  Raw Input Modalities: text, image
-  Raw Output Modalities: text
-  Standardized Input Modalities: Text, Image
-  Standardized Output Modalities: Text
-
-================================================================================
-
-MODEL 24: google/gemma-3n-e2b-it
+MODEL 22: google/gemma-3n-e2b-it
 --------------------------------------------------
   ID: google/gemma-3n-e2b-it:free
   Original Name: Google: Gemma 3n 2B (free)
@@ -376,7 +348,7 @@ MODEL 24: google/gemma-3n-e2b-it
 
 ================================================================================
 
-MODEL 25: google/gemma-3n-e4b-it
+MODEL 23: google/gemma-3n-e4b-it
 --------------------------------------------------
   ID: google/gemma-3n-e4b-it:free
   Original Name: Google: Gemma 3n 4B (free)
@@ -390,7 +362,7 @@ MODEL 25: google/gemma-3n-e4b-it
 
 ================================================================================
 
-MODEL 26: nvidia/nemotron-nano-12b-v2-vl
+MODEL 24: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
@@ -398,6 +370,20 @@ MODEL 26: nvidia/nemotron-nano-12b-v2-vl
   Canonical Slug: nvidia/nemotron-nano-12b-v2-vl
   Clean Model Name: Nemotron Nano 12B 2 VL
   Raw Input Modalities: image, text, video
+  Raw Output Modalities: text
+  Standardized Input Modalities: Text, Image, Video
+  Standardized Output Modalities: Text
+
+================================================================================
+
+MODEL 25: qwen/qwen3.6-plus-04-02
+--------------------------------------------------
+  ID: qwen/qwen3.6-plus:free
+  Original Name: Qwen: Qwen3.6 Plus (free)
+  HuggingFace ID: 
+  Canonical Slug: qwen/qwen3.6-plus-04-02
+  Clean Model Name: Qwen3.6 Plus
+  Raw Input Modalities: text, image, video
   Raw Output Modalities: text
   Standardized Input Modalities: Text, Image, Video
   Standardized Output Modalities: Text

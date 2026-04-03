@@ -1,9 +1,9 @@
 === GOOGLE MODELS MODALITY ENRICHMENT REPORT ===
 
-Generated: 2026-03-23 10:18:08 IST
+Generated: 2026-04-03 08:14:20 IST
 
 === SUMMARY ===
-Total Models: 20
+Total Models: 22
 Hardcoded Matches: 2
 Priority 1 Matches (Exact): 0
 Priority 2 Matches (Normalized): 3
@@ -11,8 +11,8 @@ Embedding Matches: 1
 Gemma Pattern Matches: 6
 Gemini Pattern Matches: 7
 Unique Model Matches: 1
-No Matches: 0
-Overall Match Rate: 100.0%
+No Matches: 2
+Overall Match Rate: 90.9%
 
 === PRIORITY 2 MATCHES (NORMALIZED) ===
 
@@ -114,3 +114,8 @@ Overall Match Rate: 100.0%
  1. aqa
     Input: Text
     Output: Text
+
+=== NO MATCHES ===
+
+ 1. gemma-4-26b-a4b-it
+ 2. gemma-4-31b-it

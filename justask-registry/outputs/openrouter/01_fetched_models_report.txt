@@ -1,6 +1,6 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-03-23 10:19:42 IST
+Generated: 2026-04-03 08:15:46 IST
 ================================================================================
 
 SUMMARY:
@@ -71,9 +71,8 @@ PROVIDER BREAKDOWN (Descending Order):
     - o4-mini-deep-research
     - o4-mini-high
 
-  Qwen            :  48 models
+  Qwen            :  47 models
     - qwen-2.5-7b-instruct
-    - qwen-2.5-vl-7b-instruct
     - qwen-max
     - qwen-plus
     - qwen-plus-2025-07-28
@@ -92,7 +91,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3-30b-a3b-instruct-2507
     - qwen3-30b-a3b-thinking-2507
     - qwen3-32b
-    - qwen3-4b:free
     - qwen3-8b
     - qwen3-coder
     - qwen3-coder-30b-a3b-instruct
@@ -119,9 +117,10 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3.5-9b
     - qwen3.5-flash-02-23
     - qwen3.5-plus-02-15
+    - qwen3.6-plus:free
     - qwq-32b
 
-  Google          :  27 models
+  Google          :  29 models
     - gemini-2.0-flash-001
     - gemini-2.0-flash-lite-001
     - gemini-2.5-flash
@@ -133,7 +132,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemini-2.5-pro-preview-05-06
     - gemini-3-flash-preview
     - gemini-3-pro-image-preview
-    - gemini-3-pro-preview
     - gemini-3.1-flash-image-preview
     - gemini-3.1-flash-lite-preview
     - gemini-3.1-pro-preview
@@ -149,8 +147,11 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemma-3n-e2b-it:free
     - gemma-3n-e4b-it
     - gemma-3n-e4b-it:free
+    - gemma-4-31b-it
+    - lyria-3-clip-preview
+    - lyria-3-pro-preview
 
-  Mistral         :  24 models
+  Mistral         :  22 models
     - codestral-2508
     - devstral-2512
     - devstral-medium
@@ -167,30 +168,12 @@ PROVIDER BREAKDOWN (Descending Order):
     - mistral-small-24b-instruct-2501
     - mistral-small-2603
     - mistral-small-3.1-24b-instruct
-    - mistral-small-3.1-24b-instruct:free
     - mistral-small-3.2-24b-instruct
     - mistral-small-creative
     - mixtral-8x22b-instruct
     - mixtral-8x7b-instruct
-    - pixtral-12b
     - pixtral-large-2411
     - voxtral-small-24b-2507
-
-  Meta            :  14 models
-    - llama-3-70b-instruct
-    - llama-3-8b-instruct
-    - llama-3.1-405b
-    - llama-3.1-70b-instruct
-    - llama-3.1-8b-instruct
-    - llama-3.2-11b-vision-instruct
-    - llama-3.2-1b-instruct
-    - llama-3.2-3b-instruct
-    - llama-3.2-3b-instruct:free
-    - llama-3.3-70b-instruct
-    - llama-3.3-70b-instruct:free
-    - llama-4-maverick
-    - llama-4-scout
-    - llama-guard-4-12b
 
   Anthropic       :  13 models
     - claude-3-haiku
@@ -207,7 +190,22 @@ PROVIDER BREAKDOWN (Descending Order):
     - claude-sonnet-4.5
     - claude-sonnet-4.6
 
-  Z.ai            :  11 models
+  Meta            :  13 models
+    - llama-3-70b-instruct
+    - llama-3-8b-instruct
+    - llama-3.1-70b-instruct
+    - llama-3.1-8b-instruct
+    - llama-3.2-11b-vision-instruct
+    - llama-3.2-1b-instruct
+    - llama-3.2-3b-instruct
+    - llama-3.2-3b-instruct:free
+    - llama-3.3-70b-instruct
+    - llama-3.3-70b-instruct:free
+    - llama-4-maverick
+    - llama-4-scout
+    - llama-guard-4-12b
+
+  Z.ai            :  12 models
     - glm-4-32b
     - glm-4.5
     - glm-4.5-air
@@ -219,6 +217,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - glm-4.7-flash
     - glm-5
     - glm-5-turbo
+    - glm-5v-turbo
 
   NVIDIA          :  11 models
     - llama-3.1-nemotron-70b-instruct
@@ -254,9 +253,19 @@ PROVIDER BREAKDOWN (Descending Order):
     - grok-4
     - grok-4-fast
     - grok-4.1-fast
-    - grok-4.20-beta
-    - grok-4.20-multi-agent-beta
+    - grok-4.20
+    - grok-4.20-multi-agent
     - grok-code-fast-1
+
+  Arcee AI        :   8 models
+    - coder-large
+    - maestro-reasoning
+    - spotlight
+    - trinity-large-preview:free
+    - trinity-large-thinking
+    - trinity-mini
+    - trinity-mini:free
+    - virtuoso-large
 
   MiniMax         :   8 models
     - minimax-01
@@ -267,22 +276,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - minimax-m2.5
     - minimax-m2.5:free
     - minimax-m2.7
-
-  Arcee AI        :   7 models
-    - coder-large
-    - maestro-reasoning
-    - spotlight
-    - trinity-large-preview:free
-    - trinity-mini
-    - trinity-mini:free
-    - virtuoso-large
-
-  LiquidAI        :   5 models
-    - lfm-2-24b-a2b
-    - lfm-2.2-6b
-    - lfm-2.5-1.2b-instruct:free
-    - lfm-2.5-1.2b-thinking:free
-    - lfm2-8b-a1b
 
   Amazon          :   5 models
     - nova-2-lite-v1
@@ -364,6 +357,11 @@ PROVIDER BREAKDOWN (Descending Order):
     - mercury-2
     - mercury-coder
 
+  LiquidAI        :   3 models
+    - lfm-2-24b-a2b
+    - lfm-2.5-1.2b-instruct:free
+    - lfm-2.5-1.2b-thinking:free
+
   StepFun         :   2 models
     - step-3.5-flash
     - step-3.5-flash:free
@@ -379,6 +377,9 @@ PROVIDER BREAKDOWN (Descending Order):
   Inflection      :   2 models
     - inflection-3-pi
     - inflection-3-productivity
+
+  Kwaipilot       :   1 models
+    - kat-coder-pro-v2
 
   Upstage         :   1 models
     - solar-pro-3
@@ -397,9 +398,6 @@ PROVIDER BREAKDOWN (Descending Order):
 
   Deep Cogito     :   1 models
     - cogito-v2.1-671b
-
-  Kwaipilot       :   1 models
-    - kat-coder-pro
 
   IBM             :   1 models
     - granite-4.0-h-micro

@@ -1,5 +1,5 @@
 GROQ FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-03-23 10:19:17 IST
+Generated: 2026-04-03 08:15:26 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -8,7 +8,7 @@ SUMMARY STATISTICS
 Pipeline Models: 6
 Supabase Models: 6
 Models in Both Systems: 6
-Models with Field Differences: 5
+Models with Field Differences: 0
 Models Only in Pipeline: 0
 Models Only in Supabase: 0
 
@@ -70,8 +70,8 @@ Field: license_info_url
   Supabase Missing: 0
 
 Field: license_name
-  Exact Matches: 1 (16.7%)
-  Differences: 5
+  Exact Matches: 6 (100.0%)
+  Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
@@ -105,37 +105,12 @@ Field: max_completion_tokens
   Pipeline Missing: 0
   Supabase Missing: 0
 
-DETAILED FIELD DIFFERENCES
---------------------------------------------------------------------------------
-
-Field: license_name
-----------------------------------------
-Model: Gpt Oss 120b
-  Pipeline Value: 'APACHE-2.0'
-  Supabase Value: 'Apache-2.0'
-
-Model: Whisper Large V3
-  Pipeline Value: 'APACHE-2.0'
-  Supabase Value: 'Apache-2.0'
-
-Model: Gpt Oss 20b
-  Pipeline Value: 'APACHE-2.0'
-  Supabase Value: 'Apache-2.0'
-
-Model: Llama 3.1 8b
-  Pipeline Value: 'LLAMA-3.1'
-  Supabase Value: 'Llama-3.1'
-
-Model: Llama 3.3 70b Versatile
-  Pipeline Value: 'LLAMA-3.3'
-  Supabase Value: 'Llama-3.3'
-
-
-SAMPLE MODEL COMPARISONS
---------------------------------------------------------------------------------
+================================================================================
+DETAILED COMPARISON BY MODEL
+================================================================================
 
 MODEL: Gpt Oss 120b
---------------------------------------------------
+--------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
 inference_provider        | Groq                      | Groq                     
@@ -146,9 +121,9 @@ official_url              | https://groq.com/         | https://groq.com/
 input_modalities          | Text                      | Text                     
 output_modalities         | Text                      | Text                     
 license_info_text         | info                      | info                     
-license_info_url          | https://huggingface.co... | https://huggingface.co...
-license_name              | APACHE-2.0                | Apache-2.0               
-license_url               | https://www.apache.org... | https://www.apache.org...
+license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
+license_name              | APACHE-2.0                | APACHE-2.0               
+license_url               | https://www.apache.org/.. | https://www.apache.org/..
 rate_limits               | 250K TPM
 TPM
 1K RPM
@@ -156,12 +131,14 @@ RPM   | 250K TPM
 TPM
 1K RPM
 RPM  
-provider_api_access       | https://console.groq.c... | https://console.groq.c...
+provider_api_access       | https://console.groq.co.. | https://console.groq.co..
 context_window            |                           |                          
 max_completion_tokens     |                           |                          
 
+================================================================================
+
 MODEL: Gpt Oss 20b
---------------------------------------------------
+--------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
 inference_provider        | Groq                      | Groq                     
@@ -172,9 +149,9 @@ official_url              | https://groq.com/         | https://groq.com/
 input_modalities          | Text                      | Text                     
 output_modalities         | Text                      | Text                     
 license_info_text         | info                      | info                     
-license_info_url          | https://huggingface.co... | https://huggingface.co...
-license_name              | APACHE-2.0                | Apache-2.0               
-license_url               | https://www.apache.org... | https://www.apache.org...
+license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
+license_name              | APACHE-2.0                | APACHE-2.0               
+license_url               | https://www.apache.org/.. | https://www.apache.org/..
 rate_limits               | 250K TPM
 TPM
 1K RPM
@@ -182,12 +159,14 @@ RPM   | 250K TPM
 TPM
 1K RPM
 RPM  
-provider_api_access       | https://console.groq.c... | https://console.groq.c...
+provider_api_access       | https://console.groq.co.. | https://console.groq.co..
 context_window            |                           |                          
 max_completion_tokens     |                           |                          
 
+================================================================================
+
 MODEL: Llama 3.1 8b
---------------------------------------------------
+--------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
 inference_provider        | Groq                      | Groq                     
@@ -199,8 +178,8 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         |                           |                          
 license_info_url          |                           |                          
-license_name              | LLAMA-3.1                 | Llama-3.1                
-license_url               | https://www.llama.com/... | https://www.llama.com/...
+license_name              | LLAMA-3.1                 | LLAMA-3.1                
+license_url               | https://www.llama.com/l.. | https://www.llama.com/l..
 rate_limits               | 250K TPM
 TPM
 1K RPM
@@ -208,7 +187,93 @@ RPM   | 250K TPM
 TPM
 1K RPM
 RPM  
-provider_api_access       | https://console.groq.c... | https://console.groq.c...
+provider_api_access       | https://console.groq.co.. | https://console.groq.co..
 context_window            |                           |                          
 max_completion_tokens     |                           |                          
+
+================================================================================
+
+MODEL: Llama 3.3 70b Versatile
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | Groq                      | Groq                     
+model_provider            | Groq                      | Groq                     
+human_readable_name       | Llama 3.3 70b Versatile   | Llama 3.3 70b Versatile  
+model_provider_country    | United States             | United States            
+official_url              | https://groq.com/         | https://groq.com/        
+input_modalities          | Text                      | Text                     
+output_modalities         | Text                      | Text                     
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              | LLAMA-3.3                 | LLAMA-3.3                
+license_url               | https://www.llama.com/l.. | https://www.llama.com/l..
+rate_limits               | 300K TPM
+TPM
+1K RPM
+RPM   | 300K TPM
+TPM
+1K RPM
+RPM  
+provider_api_access       | https://console.groq.co.. | https://console.groq.co..
+context_window            |                           |                          
+max_completion_tokens     |                           |                          
+
+================================================================================
+
+MODEL: Whisper Large V3
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | Groq                      | Groq                     
+model_provider            | Groq                      | Groq                     
+human_readable_name       | Whisper Large V3          | Whisper Large V3         
+model_provider_country    | United States             | United States            
+official_url              | https://groq.com/         | https://groq.com/        
+input_modalities          | Audio                     | Audio                    
+output_modalities         | Text                      | Text                     
+license_info_text         | info                      | info                     
+license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
+license_name              | APACHE-2.0                | APACHE-2.0               
+license_url               | https://www.apache.org/.. | https://www.apache.org/..
+rate_limits               | 200K ASH
+ASH
+300 RPM
+RPM  | 200K ASH
+ASH
+300 RPM
+RPM 
+provider_api_access       | https://console.groq.co.. | https://console.groq.co..
+context_window            |                           |                          
+max_completion_tokens     |                           |                          
+
+================================================================================
+
+MODEL: Whisper Large V3 Turbo
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | Groq                      | Groq                     
+model_provider            | Groq                      | Groq                     
+human_readable_name       | Whisper Large V3 Turbo    | Whisper Large V3 Turbo   
+model_provider_country    | United States             | United States            
+official_url              | https://groq.com/         | https://groq.com/        
+input_modalities          | Audio                     | Audio                    
+output_modalities         | Text                      | Text                     
+license_info_text         | info                      | info                     
+license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
+license_name              | MIT                       | MIT                      
+license_url               | https://opensource.org/.. | https://opensource.org/..
+rate_limits               | 400K ASH
+ASH
+400 RPM
+RPM  | 400K ASH
+ASH
+400 RPM
+RPM 
+provider_api_access       | https://console.groq.co.. | https://console.groq.co..
+context_window            |                           |                          
+max_completion_tokens     |                           |                          
+
+================================================================================
 

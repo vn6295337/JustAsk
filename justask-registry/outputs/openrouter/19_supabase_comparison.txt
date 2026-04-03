@@ -1,86 +1,64 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-03-23 10:20:02 IST
+Generated: 2026-04-03 08:16:03 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 26
-   • Total records in pipeline: 26
-   • Total records in Supabase: 26
-   • Models in both systems: 26
-   • Models with differences: 22
-   • Models in pipeline only (not in Supabase): 0
+   • Total unique model names: 25
+   • Total records in pipeline: 25
+   • Total records in Supabase: 24
+   • Models in both systems: 24
+   • Models with differences: 0
+   • Models in pipeline only (not in Supabase): 1
    • Models in Supabase only (not in pipeline): 0
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
    • inference_provider:
-     - Exact matches: 26
+     - Exact matches: 24
      - Differences: 0
    • model_provider:
-     - Exact matches: 26
+     - Exact matches: 24
      - Differences: 0
    • human_readable_name:
-     - Exact matches: 26
+     - Exact matches: 24
      - Differences: 0
    • model_provider_country:
-     - Exact matches: 26
+     - Exact matches: 24
      - Differences: 0
    • official_url:
-     - Exact matches: 26
+     - Exact matches: 24
      - Differences: 0
    • input_modalities:
-     - Exact matches: 26
+     - Exact matches: 24
      - Differences: 0
    • output_modalities:
-     - Exact matches: 26
+     - Exact matches: 24
      - Differences: 0
    • license_info_text:
-     - Exact matches: 26
+     - Exact matches: 24
      - Differences: 0
    • license_info_url:
-     - Exact matches: 26
+     - Exact matches: 24
      - Differences: 0
    • license_name:
-     - Exact matches: 4
-     - Differences: 22
-     - Specific differences:
-       * Step 3.5 Flash: Pipeline='APACHE-2.0' vs Supabase='Apache-2.0'
-       * Gemma 3 4B IT: Pipeline='GEMMA' vs Supabase='Gemma'
-       * Gemma 3 27B IT: Pipeline='GEMMA' vs Supabase='Gemma'
-       * Qwen3 4B: Pipeline='APACHE-2.0' vs Supabase='Apache-2.0'
-       * Nemotron 3 Nano 30B A3B: Pipeline='NVIDIA' vs Supabase='nvidia-nemotron-open...'
-       * GPT OSS 120B: Pipeline='APACHE-2.0' vs Supabase='Apache-2.0'
-       * Qwen3 Coder 480B A35B: Pipeline='APACHE-2.0' vs Supabase='Apache-2.0'
-       * LFM2.5-1.2B-Thinking: Pipeline='LFM1.0' vs Supabase='lfm1.0'
-       * LFM2.5-1.2B-Instruct: Pipeline='LFM1.0' vs Supabase='lfm1.0'
-       * Uncensored: Pipeline='APACHE-2.0' vs Supabase='Apache-2.0'
-       * Hermes 3 405B Instruct: Pipeline='LLAMA-3.1' vs Supabase='Llama-3.1'
-       * Nemotron 3 Super: Pipeline='NVIDIA' vs Supabase='nvidia-nemotron-open...'
-       * Llama 3.3 70B Instruct: Pipeline='LLAMA-3.3' vs Supabase='Llama-3.3'
-       * Trinity Mini: Pipeline='APACHE-2.0' vs Supabase='Apache-2.0'
-       * GPT OSS 20B: Pipeline='APACHE-2.0' vs Supabase='Apache-2.0'
-       * Gemma 3n E4B IT: Pipeline='GEMMA' vs Supabase='Gemma'
-       * Gemma 3 12B IT: Pipeline='GEMMA' vs Supabase='Gemma'
-       * Qwen3 Next 80B A3B Instruct: Pipeline='APACHE-2.0' vs Supabase='Apache-2.0'
-       * MiniMax M2.5: Pipeline='MODIFIED MIT' vs Supabase='Modified MIT'
-       * Gemma 3n E2B IT: Pipeline='GEMMA' vs Supabase='Gemma'
-       * Mistral Small 3.1 24B: Pipeline='APACHE-2.0' vs Supabase='Apache-2.0'
-       * Llama 3.2 3B Instruct: Pipeline='LLAMA-3.2' vs Supabase='Llama-3.2'
+     - Exact matches: 24
+     - Differences: 0
    • license_url:
-     - Exact matches: 26
+     - Exact matches: 24
      - Differences: 0
    • rate_limits:
-     - Exact matches: 26
+     - Exact matches: 24
      - Differences: 0
    • provider_api_access:
-     - Exact matches: 26
+     - Exact matches: 24
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • Existing models with differences: 22
-     Models: GPT OSS 120B, GPT OSS 20B, Gemma 3 12B IT, Gemma 3 27B IT, Gemma 3 4B IT, Gemma 3n E2B IT, Gemma 3n E4B IT, Hermes 3 405B Instruct, LFM2.5-1.2B-Instruct, LFM2.5-1.2B-Thinking, Llama 3.2 3B Instruct, Llama 3.3 70B Instruct, MiniMax M2.5, Mistral Small 3.1 24B, Nemotron 3 Nano 30B A3B, Nemotron 3 Super, Qwen3 4B, Qwen3 Coder 480B A35B, Qwen3 Next 80B A3B Instruct, Step 3.5 Flash, Trinity Mini, Uncensored
+   • New models (pipeline only): 1
+     Models: Qwen3.6 Plus
+   • Existing models with differences: 0
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
@@ -139,7 +117,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         | info                      | info                     
 license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | APACHE-2.0                | Apache-2.0               
+license_name              | APACHE-2.0                | APACHE-2.0               
 license_url               | https://www.apache.org/.. | https://www.apache.org/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -159,7 +137,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         | info                      | info                     
 license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | APACHE-2.0                | Apache-2.0               
+license_name              | APACHE-2.0                | APACHE-2.0               
 license_url               | https://www.apache.org/.. | https://www.apache.org/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -179,7 +157,7 @@ input_modalities          | Text, Image               | Text, Image
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | GEMMA                     | Gemma                    
+license_name              | GEMMA                     | GEMMA                    
 license_url               | https://ai.google.dev/g.. | https://ai.google.dev/g..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -199,7 +177,7 @@ input_modalities          | Text, Image               | Text, Image
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | GEMMA                     | Gemma                    
+license_name              | GEMMA                     | GEMMA                    
 license_url               | https://ai.google.dev/g.. | https://ai.google.dev/g..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -219,7 +197,7 @@ input_modalities          | Text, Image               | Text, Image
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | GEMMA                     | Gemma                    
+license_name              | GEMMA                     | GEMMA                    
 license_url               | https://ai.google.dev/g.. | https://ai.google.dev/g..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -239,7 +217,7 @@ input_modalities          | Text, Image, Audio, Video | Text, Image, Audio, Vide
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | GEMMA                     | Gemma                    
+license_name              | GEMMA                     | GEMMA                    
 license_url               | https://ai.google.dev/g.. | https://ai.google.dev/g..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -259,7 +237,7 @@ input_modalities          | Text, Image, Audio, Video | Text, Image, Audio, Vide
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | GEMMA                     | Gemma                    
+license_name              | GEMMA                     | GEMMA                    
 license_url               | https://ai.google.dev/g.. | https://ai.google.dev/g..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -279,7 +257,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         | info                      | info                     
 license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | LLAMA-3.1                 | Llama-3.1                
+license_name              | LLAMA-3.1                 | LLAMA-3.1                
 license_url               | https://www.llama.com/l.. | https://www.llama.com/l..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -299,7 +277,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | LFM1.0                    | lfm1.0                   
+license_name              | LFM1.0                    | LFM1.0                   
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -319,7 +297,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | LFM1.0                    | lfm1.0                   
+license_name              | LFM1.0                    | LFM1.0                   
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -339,7 +317,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | LLAMA-3.2                 | Llama-3.2                
+license_name              | LLAMA-3.2                 | LLAMA-3.2                
 license_url               | https://www.llama.com/l.. | https://www.llama.com/l..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -359,7 +337,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | LLAMA-3.3                 | Llama-3.3                
+license_name              | LLAMA-3.3                 | LLAMA-3.3                
 license_url               | https://www.llama.com/l.. | https://www.llama.com/l..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -379,28 +357,8 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | MODIFIED MIT              | Modified MIT             
+license_name              | MODIFIED MIT              | MODIFIED MIT             
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
-rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
-provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
-
-================================================================================
-
-MODEL: Mistral Small 3.1 24B
---------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
---------------------------------------------------------------------------------
-inference_provider        | OpenRouter                | OpenRouter               
-model_provider            | Mistral AI                | Mistral AI               
-human_readable_name       | Mistral Small 3.1 24B     | Mistral Small 3.1 24B    
-model_provider_country    | France                    | France                   
-official_url              | https://mistral.ai/       | https://mistral.ai/      
-input_modalities          | Text, Image               | Text, Image              
-output_modalities         | Text                      | Text                     
-license_info_text         | info                      | info                     
-license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | APACHE-2.0                | Apache-2.0               
-license_url               | https://www.apache.org/.. | https://www.apache.org/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
 
@@ -419,7 +377,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | NVIDIA                    | nvidia-nemotron-open-mo..
+license_name              | NVIDIA                    | NVIDIA                   
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -439,7 +397,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | NVIDIA                    | nvidia-nemotron-open-mo..
+license_name              | NVIDIA                    | NVIDIA                   
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -486,26 +444,6 @@ provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s.
 
 ================================================================================
 
-MODEL: Qwen3 4B
---------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
---------------------------------------------------------------------------------
-inference_provider        | OpenRouter                | OpenRouter               
-model_provider            | Alibaba Cloud             | Alibaba Cloud            
-human_readable_name       | Qwen3 4B                  | Qwen3 4B                 
-model_provider_country    | China                     | China                    
-official_url              | https://alibabacloud.com/ | https://alibabacloud.com/
-input_modalities          | Text                      | Text                     
-output_modalities         | Text                      | Text                     
-license_info_text         | info                      | info                     
-license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | APACHE-2.0                | Apache-2.0               
-license_url               | https://www.apache.org/.. | https://www.apache.org/..
-rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
-provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
-
-================================================================================
-
 MODEL: Qwen3 Coder 480B A35B
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
@@ -519,7 +457,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         | info                      | info                     
 license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | APACHE-2.0                | Apache-2.0               
+license_name              | APACHE-2.0                | APACHE-2.0               
 license_url               | https://www.apache.org/.. | https://www.apache.org/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -539,10 +477,30 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         | info                      | info                     
 license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | APACHE-2.0                | Apache-2.0               
+license_name              | APACHE-2.0                | APACHE-2.0               
 license_url               | https://www.apache.org/.. | https://www.apache.org/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+
+================================================================================
+
+MODEL: Qwen3.6 Plus
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | Alibaba Cloud             |                          
+human_readable_name       | Qwen3.6 Plus              |                          
+model_provider_country    | China                     |                          
+official_url              | https://alibabacloud.com/ |                          
+input_modalities          | Text, Image, Video        |                          
+output_modalities         | Text                      |                          
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              |                           |                          
+license_url               |                           |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 
@@ -559,7 +517,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         | info                      | info                     
 license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | APACHE-2.0                | Apache-2.0               
+license_name              | APACHE-2.0                | APACHE-2.0               
 license_url               | https://www.apache.org/.. | https://www.apache.org/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -579,7 +537,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         | info                      | info                     
 license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | APACHE-2.0                | Apache-2.0               
+license_name              | APACHE-2.0                | APACHE-2.0               
 license_url               | https://www.apache.org/.. | https://www.apache.org/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
@@ -599,7 +557,7 @@ input_modalities          | Text                      | Text
 output_modalities         | Text                      | Text                     
 license_info_text         | info                      | info                     
 license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | APACHE-2.0                | Apache-2.0               
+license_name              | APACHE-2.0                | APACHE-2.0               
 license_url               | https://www.apache.org/.. | https://www.apache.org/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
