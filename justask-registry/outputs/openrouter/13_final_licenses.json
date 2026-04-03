@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-04-03 16:08:03 IST",
-    "total_models": 29,
+    "generated_at": "2026-04-03 16:10:26 IST",
+    "total_models": 30,
     "pipeline_stage": "M_final_list_of_licenses"
   },
   "models": [
@@ -280,6 +280,18 @@
       "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
       "source_category": "opensource"
+    },
+    {
+      "id": "qwen/qwen3.6-plus:free",
+      "canonical_slug": "qwen/qwen3.6-plus",
+      "original_name": "Qwen/Qwen3.6 Plus",
+      "hugging_face_id": "",
+      "clean_model_name": "Qwen3.6 Plus",
+      "license_info_text": "",
+      "license_info_url": "",
+      "license_name": "QWEN",
+      "license_url": "https://qwen.ai/termsservice",
+      "source_category": "proprietary"
     },
     {
       "id": "stepfun/step-3.5-flash:free",
