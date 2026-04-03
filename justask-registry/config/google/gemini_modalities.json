@@ -30,6 +30,18 @@
       "input_modalities": "Text, Image, Audio, Video, PDF",
       "output_modalities": "Text",
       "notes": "Gemini 2.5 Pro - advanced reasoning with PDF support"
+    },
+    "gemma-4-26b": {
+      "pattern": "^gemma-4-26b",
+      "input_modalities": "Text, Image, Video",
+      "output_modalities": "Text",
+      "notes": "Gemma 4 26B - multimodal model with image and video support"
+    },
+    "gemma-4-31b": {
+      "pattern": "^gemma-4-31b",
+      "input_modalities": "Text, Image, Video",
+      "output_modalities": "Text",
+      "notes": "Gemma 4 31B - larger multimodal model with image and video support"
     }
   }
 }

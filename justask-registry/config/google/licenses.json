@@ -7,10 +7,10 @@
       "license_url": "https://ai.google.dev/gemini-api/terms"
     },
     "gemma": {
-      "license_info_text": "",
-      "license_info_url": "",
-      "license_name": "GEMMA",
-      "license_url": "https://ai.google.dev/gemma/terms"
+      "license_info_text": "Apache License 2.0",
+      "license_info_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "license_name": "APACHE-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     }
   }
 }

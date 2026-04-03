@@ -31,6 +31,16 @@
     "veo-3.0-fast-generate-001": {
       "input_modalities": "Text, Image",
       "output_modalities": "Audio, Video"
+    },
+    "gemma-4-26b-a4b-it": {
+      "input_modalities": "Text, Image, Video",
+      "output_modalities": "Text",
+      "notes": "Gemma 4 26B with multimodal input support"
+    },
+    "gemma-4-31b-it": {
+      "input_modalities": "Text, Image, Video",
+      "output_modalities": "Text",
+      "notes": "Gemma 4 31B with multimodal input support"
     }
   }
 }
