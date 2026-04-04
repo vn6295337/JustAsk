@@ -1,6 +1,6 @@
 FIELD COMPARISON REPORT: GOOGLE PIPELINE vs SUPABASE
 ================================================================================
-Generated: 2026-04-03 16:06:22 IST
+Generated: 2026-04-04 08:04:28 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -8,55 +8,53 @@ SUMMARY STATISTICS
 
 1. OVERALL STATISTICS:
    • Total models processed: 22
-   • Models in both systems: 20
+   • Models in both systems: 22
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 2
+   • Models in pipeline only (not in Supabase): 0
    • Models in Supabase only (not in pipeline): 0
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
    • inference_provider:
-     - Exact matches: 20
+     - Exact matches: 22
      - Differences: 0
    • model_provider:
-     - Exact matches: 20
+     - Exact matches: 22
      - Differences: 0
    • human_readable_name:
-     - Exact matches: 20
+     - Exact matches: 22
      - Differences: 0
    • model_provider_country:
-     - Exact matches: 20
+     - Exact matches: 22
      - Differences: 0
    • official_url:
-     - Exact matches: 20
+     - Exact matches: 22
      - Differences: 0
    • input_modalities:
-     - Exact matches: 20
+     - Exact matches: 22
      - Differences: 0
    • output_modalities:
-     - Exact matches: 20
+     - Exact matches: 22
      - Differences: 0
    • license_info_text:
-     - Exact matches: 20
+     - Exact matches: 22
      - Differences: 0
    • license_info_url:
-     - Exact matches: 20
+     - Exact matches: 22
      - Differences: 0
    • license_name:
-     - Exact matches: 20
+     - Exact matches: 22
      - Differences: 0
    • license_url:
-     - Exact matches: 20
+     - Exact matches: 22
      - Differences: 0
    • rate_limits:
-     - Exact matches: 20
+     - Exact matches: 22
      - Differences: 0
    • provider_api_access:
-     - Exact matches: 20
+     - Exact matches: 22
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 2
-     Models: Gemma 4 26B A4B IT, Gemma 4 31B IT
    • Existing models with differences: 0
 
 ================================================================================
@@ -367,19 +365,19 @@ MODEL: Gemma 4 26B A4B IT
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemma 4 26B A4B IT                                 |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemma/              |                                                   
-input_modalities          | Text, Image, Video                                 |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         |                                                    |                                                   
-license_info_url          |                                                    |                                                   
-license_name              | APACHE-2.0                                         |                                                   
-license_url               | https://www.apache.org/licenses/LICENSE-2.0        |                                                   
-rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemma 4 26B A4B IT                                 | Gemma 4 26B A4B IT                                
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemma/              | https://deepmind.google/models/gemma/             
+input_modalities          | Text, Image, Video                                 | Text, Image, Video                                
+output_modalities         | Text                                               | Text                                              
+license_info_text         |                                                    | None                                              
+license_info_url          |                                                    | None                                              
+license_name              | APACHE-2.0                                         | APACHE-2.0                                        
+license_url               | https://www.apache.org/licenses/LICENSE-2.0        | https://www.apache.org/licenses/LICENSE-2.0       
+rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -387,19 +385,19 @@ MODEL: Gemma 4 31B IT
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             |                                                   
-model_provider            | Google                                             |                                                   
-human_readable_name       | Gemma 4 31B IT                                     |                                                   
-model_provider_country    | United States                                      |                                                   
-official_url              | https://deepmind.google/models/gemma/              |                                                   
-input_modalities          | Text, Image, Video                                 |                                                   
-output_modalities         | Text                                               |                                                   
-license_info_text         |                                                    |                                                   
-license_info_url          |                                                    |                                                   
-license_name              | APACHE-2.0                                         |                                                   
-license_url               | https://www.apache.org/licenses/LICENSE-2.0        |                                                   
-rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. |                                                   
-provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+inference_provider        | Google                                             | Google                                            
+model_provider            | Google                                             | Google                                            
+human_readable_name       | Gemma 4 31B IT                                     | Gemma 4 31B IT                                    
+model_provider_country    | United States                                      | United States                                     
+official_url              | https://deepmind.google/models/gemma/              | https://deepmind.google/models/gemma/             
+input_modalities          | Text, Image, Video                                 | Text, Image, Video                                
+output_modalities         | Text                                               | Text                                              
+license_info_text         |                                                    | None                                              
+license_info_url          |                                                    | None                                              
+license_name              | APACHE-2.0                                         | APACHE-2.0                                        
+license_url               | https://www.apache.org/licenses/LICENSE-2.0        | https://www.apache.org/licenses/LICENSE-2.0       
+rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
+provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
