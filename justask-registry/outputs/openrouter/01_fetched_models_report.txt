@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-04-04 08:06:01 IST
+Generated: 2026-04-05 08:23:55 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 350
+  Total models: 349
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  62 models
@@ -176,21 +176,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - pixtral-large-2411
     - voxtral-small-24b-2507
 
-  Anthropic       :  13 models
-    - claude-3-haiku
-    - claude-3.5-haiku
-    - claude-3.5-sonnet
-    - claude-3.7-sonnet
-    - claude-3.7-sonnet:thinking
-    - claude-haiku-4.5
-    - claude-opus-4
-    - claude-opus-4.1
-    - claude-opus-4.5
-    - claude-opus-4.6
-    - claude-sonnet-4
-    - claude-sonnet-4.5
-    - claude-sonnet-4.6
-
   Meta            :  13 models
     - llama-3-70b-instruct
     - llama-3-8b-instruct
@@ -219,6 +204,20 @@ PROVIDER BREAKDOWN (Descending Order):
     - glm-5
     - glm-5-turbo
     - glm-5v-turbo
+
+  Anthropic       :  12 models
+    - claude-3-haiku
+    - claude-3.5-haiku
+    - claude-3.7-sonnet
+    - claude-3.7-sonnet:thinking
+    - claude-haiku-4.5
+    - claude-opus-4
+    - claude-opus-4.1
+    - claude-opus-4.5
+    - claude-opus-4.6
+    - claude-sonnet-4
+    - claude-sonnet-4.5
+    - claude-sonnet-4.6
 
   NVIDIA          :  11 models
     - llama-3.1-nemotron-70b-instruct
