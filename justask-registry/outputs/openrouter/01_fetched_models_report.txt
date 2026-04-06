@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-04-05 08:23:55 IST
+Generated: 2026-04-06 08:25:09 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 349
+  Total models: 348
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  62 models
@@ -323,12 +323,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - kimi-k2-thinking
     - kimi-k2.5
 
-  AllenAI         :   4 models
-    - olmo-2-0325-32b-instruct
-    - olmo-3-32b-think
-    - olmo-3.1-32b-instruct
-    - olmo-3.1-32b-think
-
   TheDrummer      :   4 models
     - cydonia-24b-v4.1
     - rocinante-12b
@@ -361,6 +355,11 @@ PROVIDER BREAKDOWN (Descending Order):
     - lfm-2-24b-a2b
     - lfm-2.5-1.2b-instruct:free
     - lfm-2.5-1.2b-thinking:free
+
+  AllenAI         :   3 models
+    - olmo-2-0325-32b-instruct
+    - olmo-3-32b-think
+    - olmo-3.1-32b-instruct
 
   StepFun         :   2 models
     - step-3.5-flash
