@@ -1,18 +1,10 @@
 {
   "metadata": {
-    "generated_at": "2026-04-07 08:18:53 IST",
-    "total_models": 9,
+    "generated_at": "2026-04-09 08:14:37 IST",
+    "total_models": 8,
     "pipeline_stage": "I_opensource_license_urls"
   },
   "models": [
-    {
-      "id": "stepfun/step-3.5-flash:free",
-      "canonical_slug": "stepfun/step-3.5-flash",
-      "name": "StepFun: Step 3.5 Flash (free)",
-      "hugging_face_id": "stepfun-ai/Step-3.5-Flash",
-      "license_name": "APACHE-2.0",
-      "official_license_url": "https://www.apache.org/licenses/LICENSE-2.0"
-    },
     {
       "id": "arcee-ai/trinity-mini:free",
       "canonical_slug": "arcee-ai/trinity-mini-20251201",

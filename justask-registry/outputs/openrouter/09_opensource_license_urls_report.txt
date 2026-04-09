@@ -1,22 +1,22 @@
 ================================================================================
 OPENSOURCE LICENSE URLS ENRICHMENT REPORT
-Generated: 2026-04-07 08:18:53 IST
+Generated: 2026-04-09 08:14:37 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 9
+  Total models : 8
   Input        : 08_opensource_licenses.json
   Reference    : opensource_license_urls.json
   Processor    : step_09_opensource_license_urls.py
   Output       : 09_opensource_license_urls.json
 
 URL MAPPING STATISTICS:
-  Successful URL mappings: 9
+  Successful URL mappings: 8
   Failed URL mappings: 0
   Success rate: 100.0%
 
 LICENSE URL DISTRIBUTION:
-  APACHE-2.0 → https://www.apache.org/licenses/LICENSE-2.0: 7 models
+  APACHE-2.0 → https://www.apache.org/licenses/LICENSE-2.0: 6 models
   LLAMA-3.1 → https://www.llama.com/llama3_1/license/: 1 models
   MIT → https://opensource.org/licenses/MIT: 1 models
 
@@ -75,17 +75,7 @@ MODEL 5: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 6: stepfun/step-3.5-flash
---------------------------------------------------
-  ID                     : stepfun/step-3.5-flash:free
-  Canonical Slug         : stepfun/step-3.5-flash
-  HuggingFace ID         : stepfun-ai/Step-3.5-Flash
-  License Name           : APACHE-2.0
-  Official License URL   : https://www.apache.org/licenses/LICENSE-2.0
-
-================================================================================
-
-MODEL 7: venice/uncensored
+MODEL 6: venice/uncensored
 --------------------------------------------------
   ID                     : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Canonical Slug         : venice/uncensored
@@ -95,7 +85,7 @@ MODEL 7: venice/uncensored
 
 ================================================================================
 
-MODEL 8: nousresearch/hermes-3-llama-3.1-405b
+MODEL 7: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID                     : nousresearch/hermes-3-llama-3.1-405b:free
   Canonical Slug         : nousresearch/hermes-3-llama-3.1-405b
@@ -105,7 +95,7 @@ MODEL 8: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 9: z-ai/glm-4.5-air
+MODEL 8: z-ai/glm-4.5-air
 --------------------------------------------------
   ID                     : z-ai/glm-4.5-air:free
   Canonical Slug         : z-ai/glm-4.5-air

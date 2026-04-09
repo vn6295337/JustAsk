@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-04-07 08:18:42 IST
+Generated: 2026-04-09 08:14:28 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 348
+  Total models: 351
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  62 models
@@ -117,10 +117,10 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3.5-9b
     - qwen3.5-flash-02-23
     - qwen3.5-plus-02-15
-    - qwen3.6-plus:free
+    - qwen3.6-plus
     - qwq-32b
 
-  Google          :  30 models
+  Google          :  32 models
     - gemini-2.0-flash-001
     - gemini-2.0-flash-lite-001
     - gemini-2.5-flash
@@ -148,7 +148,9 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemma-3n-e4b-it
     - gemma-3n-e4b-it:free
     - gemma-4-26b-a4b-it
+    - gemma-4-26b-a4b-it:free
     - gemma-4-31b-it
+    - gemma-4-31b-it:free
     - lyria-3-clip-preview
     - lyria-3-pro-preview
 
@@ -176,6 +178,36 @@ PROVIDER BREAKDOWN (Descending Order):
     - pixtral-large-2411
     - voxtral-small-24b-2507
 
+  Anthropic       :  13 models
+    - claude-3-haiku
+    - claude-3.5-haiku
+    - claude-3.7-sonnet
+    - claude-3.7-sonnet:thinking
+    - claude-haiku-4.5
+    - claude-opus-4
+    - claude-opus-4.1
+    - claude-opus-4.5
+    - claude-opus-4.6
+    - claude-opus-4.6-fast
+    - claude-sonnet-4
+    - claude-sonnet-4.5
+    - claude-sonnet-4.6
+
+  Z.ai            :  13 models
+    - glm-4-32b
+    - glm-4.5
+    - glm-4.5-air
+    - glm-4.5-air:free
+    - glm-4.5v
+    - glm-4.6
+    - glm-4.6v
+    - glm-4.7
+    - glm-4.7-flash
+    - glm-5
+    - glm-5-turbo
+    - glm-5.1
+    - glm-5v-turbo
+
   Meta            :  13 models
     - llama-3-70b-instruct
     - llama-3-8b-instruct
@@ -190,34 +222,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - llama-4-maverick
     - llama-4-scout
     - llama-guard-4-12b
-
-  Z.ai            :  12 models
-    - glm-4-32b
-    - glm-4.5
-    - glm-4.5-air
-    - glm-4.5-air:free
-    - glm-4.5v
-    - glm-4.6
-    - glm-4.6v
-    - glm-4.7
-    - glm-4.7-flash
-    - glm-5
-    - glm-5-turbo
-    - glm-5v-turbo
-
-  Anthropic       :  12 models
-    - claude-3-haiku
-    - claude-3.5-haiku
-    - claude-3.7-sonnet
-    - claude-3.7-sonnet:thinking
-    - claude-haiku-4.5
-    - claude-opus-4
-    - claude-opus-4.1
-    - claude-opus-4.5
-    - claude-opus-4.6
-    - claude-sonnet-4
-    - claude-sonnet-4.5
-    - claude-sonnet-4.6
 
   NVIDIA          :  11 models
     - llama-3.1-nemotron-70b-instruct
@@ -361,10 +365,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - olmo-3-32b-think
     - olmo-3.1-32b-instruct
 
-  StepFun         :   2 models
-    - step-3.5-flash
-    - step-3.5-flash:free
-
   Relace          :   2 models
     - relace-apply-3
     - relace-search
@@ -379,6 +379,9 @@ PROVIDER BREAKDOWN (Descending Order):
 
   Kwaipilot       :   1 models
     - kat-coder-pro-v2
+
+  StepFun         :   1 models
+    - step-3.5-flash
 
   Upstage         :   1 models
     - solar-pro-3

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-04-07 08:18:48 IST",
-    "total_models": 16,
+    "generated_at": "2026-04-09 08:14:33 IST",
+    "total_models": 15,
     "pipeline_stage": "E_fetch_other_license_info_urls_from_hf"
   },
   "models": [
@@ -18,13 +18,6 @@
       "name": "MiniMax: MiniMax M2.5 (free)",
       "hugging_face_id": "MiniMaxAI/MiniMax-M2.5",
       "license_info_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md"
-    },
-    {
-      "id": "stepfun/step-3.5-flash:free",
-      "canonical_slug": "stepfun/step-3.5-flash",
-      "name": "StepFun: Step 3.5 Flash (free)",
-      "hugging_face_id": "stepfun-ai/Step-3.5-Flash",
-      "license_info_url": "https://huggingface.co/stepfun-ai/Step-3.5-Flash/blob/main/README.md"
     },
     {
       "id": "liquid/lfm-2.5-1.2b-thinking:free",

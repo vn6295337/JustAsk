@@ -1,62 +1,66 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-04-07 08:18:59 IST
+Generated: 2026-04-09 08:14:44 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 25
+   • Total unique model names: 27
    • Total records in pipeline: 25
    • Total records in Supabase: 25
-   • Models in both systems: 25
+   • Models in both systems: 23
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 0
-   • Models in Supabase only (not in pipeline): 0
+   • Models in pipeline only (not in Supabase): 2
+   • Models in Supabase only (not in pipeline): 2
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
    • inference_provider:
-     - Exact matches: 25
+     - Exact matches: 23
      - Differences: 0
    • model_provider:
-     - Exact matches: 25
+     - Exact matches: 23
      - Differences: 0
    • human_readable_name:
-     - Exact matches: 25
+     - Exact matches: 23
      - Differences: 0
    • model_provider_country:
-     - Exact matches: 25
+     - Exact matches: 23
      - Differences: 0
    • official_url:
-     - Exact matches: 25
+     - Exact matches: 23
      - Differences: 0
    • input_modalities:
-     - Exact matches: 25
+     - Exact matches: 23
      - Differences: 0
    • output_modalities:
-     - Exact matches: 25
+     - Exact matches: 23
      - Differences: 0
    • license_info_text:
-     - Exact matches: 25
+     - Exact matches: 23
      - Differences: 0
    • license_info_url:
-     - Exact matches: 25
+     - Exact matches: 23
      - Differences: 0
    • license_name:
-     - Exact matches: 25
+     - Exact matches: 23
      - Differences: 0
    • license_url:
-     - Exact matches: 25
+     - Exact matches: 23
      - Differences: 0
    • rate_limits:
-     - Exact matches: 25
+     - Exact matches: 23
      - Differences: 0
    • provider_api_access:
-     - Exact matches: 25
+     - Exact matches: 23
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
+   • New models (pipeline only): 2
+     Models: Gemma 4 26B A4b IT 20260403, Gemma 4 31B IT 20260402
    • Existing models with differences: 0
+   • Deprecated models (Supabase only): 2
+     Models: Qwen3.6 Plus, Step 3.5 Flash
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
@@ -239,6 +243,46 @@ license_name              | GEMMA                     | GEMMA
 license_url               | https://ai.google.dev/g.. | https://ai.google.dev/g..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+
+================================================================================
+
+MODEL: Gemma 4 26B A4b IT 20260403
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | Google                    |                          
+human_readable_name       | Gemma 4 26B A4b IT 2026.. |                          
+model_provider_country    | United States             |                          
+official_url              | https://ai.google.dev/g.. |                          
+input_modalities          | Text, Image, Video        |                          
+output_modalities         | Text                      |                          
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              | GEMMA                     |                          
+license_url               | https://ai.google.dev/g.. |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
+
+================================================================================
+
+MODEL: Gemma 4 31B IT 20260402
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | Google                    |                          
+human_readable_name       | Gemma 4 31B IT 20260402   |                          
+model_provider_country    | United States             |                          
+official_url              | https://ai.google.dev/g.. |                          
+input_modalities          | Text, Image, Video        |                          
+output_modalities         | Text                      |                          
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              | GEMMA                     |                          
+license_url               | https://ai.google.dev/g.. |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 
@@ -486,19 +530,19 @@ MODEL: Qwen3.6 Plus
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                | OpenRouter               
-model_provider            | Alibaba Cloud             | Alibaba Cloud            
-human_readable_name       | Qwen3.6 Plus              | Qwen3.6 Plus             
-model_provider_country    | China                     | China                    
-official_url              | https://alibabacloud.com/ | https://alibabacloud.com/
-input_modalities          | Text, Image, Video        | Text, Image, Video       
-output_modalities         | Text                      | Text                     
+inference_provider        |                           | OpenRouter               
+model_provider            |                           | Alibaba Cloud            
+human_readable_name       |                           | Qwen3.6 Plus             
+model_provider_country    |                           | China                    
+official_url              |                           | https://alibabacloud.com/
+input_modalities          |                           | Text, Image, Video       
+output_modalities         |                           | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | QWEN                      | QWEN                     
-license_url               | https://qwen.ai/termsse.. | https://qwen.ai/termsse..
-rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
-provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+license_name              |                           | QWEN                     
+license_url               |                           | https://qwen.ai/termsse..
+rate_limits               |                           | 20 requests/min 50/day   
+provider_api_access       |                           | https://openrouter.ai/s..
 
 ================================================================================
 
@@ -506,19 +550,19 @@ MODEL: Step 3.5 Flash
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                | OpenRouter               
-model_provider            | StepFun                   | StepFun                  
-human_readable_name       | Step 3.5 Flash            | Step 3.5 Flash           
-model_provider_country    | China                     | China                    
-official_url              | https://stepfun.ai/       | https://stepfun.ai/      
-input_modalities          | Text                      | Text                     
-output_modalities         | Text                      | Text                     
-license_info_text         | info                      | info                     
-license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | APACHE-2.0                | APACHE-2.0               
-license_url               | https://www.apache.org/.. | https://www.apache.org/..
-rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
-provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+inference_provider        |                           | OpenRouter               
+model_provider            |                           | StepFun                  
+human_readable_name       |                           | Step 3.5 Flash           
+model_provider_country    |                           | China                    
+official_url              |                           | https://stepfun.ai/      
+input_modalities          |                           | Text                     
+output_modalities         |                           | Text                     
+license_info_text         |                           | info                     
+license_info_url          |                           | https://huggingface.co/..
+license_name              |                           | APACHE-2.0               
+license_url               |                           | https://www.apache.org/..
+rate_limits               |                           | 20 requests/min 50/day   
+provider_api_access       |                           | https://openrouter.ai/s..
 
 ================================================================================
 

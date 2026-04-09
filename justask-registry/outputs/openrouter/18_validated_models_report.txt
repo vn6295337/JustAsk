@@ -1,6 +1,6 @@
 ================================================================================
 DATABASE DATA FINALIZATION REPORT
-Generated: 2026-04-07 08:18:58 IST
+Generated: 2026-04-09 08:14:42 IST
 ================================================================================
 
 SUMMARY:
@@ -23,9 +23,9 @@ FINALIZED DATABASE DATA SUMMARY:
 ================================================================================
 
 PROVIDER DISTRIBUTION (FINALIZED DATA):
-   5 models: Google
+   7 models: Google
    4 models: NVIDIA
-   3 models: Alibaba Cloud
+   2 models: Alibaba Cloud
    2 models: Liquid AI
    2 models: Meta
    2 models: OpenAI
@@ -34,10 +34,9 @@ PROVIDER DISTRIBUTION (FINALIZED DATA):
    1 models: MiniMax
    1 models: Nous Research
    1 models: OpenRouter
-   1 models: StepFun
    1 models: Z.AI
 
-Total providers: 13
+Total providers: 12
 
 FAMILY DISTRIBUTION (FINALIZED DATA):
   25 models: Unknown

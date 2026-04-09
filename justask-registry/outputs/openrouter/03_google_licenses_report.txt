@@ -1,17 +1,17 @@
 ================================================================================
 GOOGLE MODELS LICENSE EXTRACTION REPORT
-Generated: 2026-04-07 08:18:43 IST
+Generated: 2026-04-09 08:14:29 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 5
+  Total models : 7
   Input        : 02_filtered_models.json
   Config       : google_models_licenses.json
   Processor    : step_03_extract_google_licenses.py
   Output       : 03_google_licenses.json
 
 LICENSE DISTRIBUTION:
-  GEMMA: 5 models
+  GEMMA: 7 models
 
 Total license types: 1
 
@@ -81,6 +81,34 @@ MODEL 5: google/gemma-3n-e4b-it
   HuggingFace ID: google/gemma-3n-E4B-it
   Canonical Slug: google/gemma-3n-e4b-it
   Clean Model Name: Gemma 3n 4B
+  License Info Text: 
+  License Info URL: 
+  License Name: GEMMA
+  License URL: https://ai.google.dev/gemma/terms
+
+================================================================================
+
+MODEL 6: google/gemma-4-26b-a4b-it-20260403
+--------------------------------------------------
+  ID: google/gemma-4-26b-a4b-it:free
+  Original Name: Google: Gemma 4 26B A4B  (free)
+  HuggingFace ID: google/gemma-4-26B-A4B-it
+  Canonical Slug: google/gemma-4-26b-a4b-it-20260403
+  Clean Model Name: Gemma 4 26B A4B
+  License Info Text: 
+  License Info URL: 
+  License Name: GEMMA
+  License URL: https://ai.google.dev/gemma/terms
+
+================================================================================
+
+MODEL 7: google/gemma-4-31b-it-20260402
+--------------------------------------------------
+  ID: google/gemma-4-31b-it:free
+  Original Name: Google: Gemma 4 31B (free)
+  HuggingFace ID: google/gemma-4-31B-it
+  Canonical Slug: google/gemma-4-31b-it-20260402
+  Clean Model Name: Gemma 4 31B
   License Info Text: 
   License Info URL: 
   License Name: GEMMA
