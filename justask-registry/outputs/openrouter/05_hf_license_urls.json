@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-04-09 08:14:33 IST",
-    "total_models": 15,
+    "generated_at": "2026-04-10 08:26:04 IST",
+    "total_models": 14,
     "pipeline_stage": "E_fetch_other_license_info_urls_from_hf"
   },
   "models": [
@@ -39,13 +39,6 @@
       "name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
       "license_info_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md"
-    },
-    {
-      "id": "arcee-ai/trinity-mini:free",
-      "canonical_slug": "arcee-ai/trinity-mini-20251201",
-      "name": "Arcee AI: Trinity Mini (free)",
-      "hugging_face_id": "arcee-ai/Trinity-Mini",
-      "license_info_url": "https://huggingface.co/arcee-ai/Trinity-Mini/blob/main/README.md"
     },
     {
       "id": "nvidia/nemotron-nano-12b-v2-vl:free",

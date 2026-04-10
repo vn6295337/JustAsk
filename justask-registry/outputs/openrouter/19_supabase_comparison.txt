@@ -1,5 +1,5 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-04-09 08:14:44 IST
+Generated: 2026-04-10 08:26:17 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -7,60 +7,60 @@ SUMMARY STATISTICS
 
 1. OVERALL STATISTICS:
    • Total unique model names: 27
-   • Total records in pipeline: 25
+   • Total records in pipeline: 24
    • Total records in Supabase: 25
-   • Models in both systems: 23
+   • Models in both systems: 22
    • Models with differences: 0
    • Models in pipeline only (not in Supabase): 2
-   • Models in Supabase only (not in pipeline): 2
+   • Models in Supabase only (not in pipeline): 3
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
    • inference_provider:
-     - Exact matches: 23
+     - Exact matches: 22
      - Differences: 0
    • model_provider:
-     - Exact matches: 23
+     - Exact matches: 22
      - Differences: 0
    • human_readable_name:
-     - Exact matches: 23
+     - Exact matches: 22
      - Differences: 0
    • model_provider_country:
-     - Exact matches: 23
+     - Exact matches: 22
      - Differences: 0
    • official_url:
-     - Exact matches: 23
+     - Exact matches: 22
      - Differences: 0
    • input_modalities:
-     - Exact matches: 23
+     - Exact matches: 22
      - Differences: 0
    • output_modalities:
-     - Exact matches: 23
+     - Exact matches: 22
      - Differences: 0
    • license_info_text:
-     - Exact matches: 23
+     - Exact matches: 22
      - Differences: 0
    • license_info_url:
-     - Exact matches: 23
+     - Exact matches: 22
      - Differences: 0
    • license_name:
-     - Exact matches: 23
+     - Exact matches: 22
      - Differences: 0
    • license_url:
-     - Exact matches: 23
+     - Exact matches: 22
      - Differences: 0
    • rate_limits:
-     - Exact matches: 23
+     - Exact matches: 22
      - Differences: 0
    • provider_api_access:
-     - Exact matches: 23
+     - Exact matches: 22
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
    • New models (pipeline only): 2
      Models: Gemma 4 26B A4b IT 20260403, Gemma 4 31B IT 20260402
    • Existing models with differences: 0
-   • Deprecated models (Supabase only): 2
-     Models: Qwen3.6 Plus, Step 3.5 Flash
+   • Deprecated models (Supabase only): 3
+     Models: Qwen3.6 Plus, Step 3.5 Flash, Trinity Mini
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
@@ -570,19 +570,19 @@ MODEL: Trinity Mini
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                | OpenRouter               
-model_provider            | Arcee                     | Arcee                    
-human_readable_name       | Trinity Mini              | Trinity Mini             
-model_provider_country    | United States             | United States            
-official_url              | https://www.arcee.ai/     | https://www.arcee.ai/    
-input_modalities          | Text                      | Text                     
-output_modalities         | Text                      | Text                     
-license_info_text         | info                      | info                     
-license_info_url          | https://huggingface.co/.. | https://huggingface.co/..
-license_name              | APACHE-2.0                | APACHE-2.0               
-license_url               | https://www.apache.org/.. | https://www.apache.org/..
-rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
-provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+inference_provider        |                           | OpenRouter               
+model_provider            |                           | Arcee                    
+human_readable_name       |                           | Trinity Mini             
+model_provider_country    |                           | United States            
+official_url              |                           | https://www.arcee.ai/    
+input_modalities          |                           | Text                     
+output_modalities         |                           | Text                     
+license_info_text         |                           | info                     
+license_info_url          |                           | https://huggingface.co/..
+license_name              |                           | APACHE-2.0               
+license_url               |                           | https://www.apache.org/..
+rate_limits               |                           | 20 requests/min 50/day   
+provider_api_access       |                           | https://openrouter.ai/s..
 
 ================================================================================
 

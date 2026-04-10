@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-04-09 08:14:42 IST",
-    "total_models": 25,
+    "generated_at": "2026-04-10 08:26:14 IST",
+    "total_models": 24,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
@@ -164,26 +164,6 @@
       "model_provider_country": "United States",
       "model_family": "nvidia",
       "official_url": "https://build.nvidia.com/"
-    },
-    {
-      "id": "arcee-ai/trinity-mini:free",
-      "canonical_slug": "arcee-ai/trinity-mini-20251201",
-      "provider_slug": "trinity-mini-20251201",
-      "original_name": "Arcee AI: Trinity Mini (free)",
-      "hugging_face_id": "arcee-ai/Trinity-Mini",
-      "clean_model_name": "Trinity Mini",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model",
-      "inference_provider": "OpenRouter",
-      "model_provider": "Arcee",
-      "model_provider_country": "United States",
-      "model_family": "arcee",
-      "official_url": "https://www.arcee.ai/"
     },
     {
       "id": "nvidia/nemotron-nano-12b-v2-vl:free",

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-04-09 08:14:41 IST",
-    "total_models": 25,
+    "generated_at": "2026-04-10 08:26:14 IST",
+    "total_models": 24,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
@@ -74,15 +74,6 @@
       "original_name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
       "clean_model_name": "Nemotron 3 Nano 30B A3B",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "arcee-ai/trinity-mini:free",
-      "canonical_slug": "arcee-ai/trinity-mini-20251201",
-      "original_name": "Arcee AI: Trinity Mini (free)",
-      "hugging_face_id": "arcee-ai/Trinity-Mini",
-      "clean_model_name": "Trinity Mini",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text"
     },

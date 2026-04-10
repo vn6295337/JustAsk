@@ -1,34 +1,34 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-04-09 08:14:28 IST
+Generated: 2026-04-10 08:25:59 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 351
-  Models passed all filters: 25
+  Total models processed: 350
+  Models passed all filters: 24
   Models excluded: 326
-  Success rate: 7.1%
+  Success rate: 6.9%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 351 models
+    Input: 350 models
     Excluded: 323 models (non-free pricing)
-    Remaining: 28 models
+    Remaining: 27 models
 
   Step 2 - Billing Description Filter:
-    Input: 28 models
+    Input: 27 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 28 models
+    Remaining: 27 models
 
   Step 3 - Keyword Filter:
-    Input: 28 models
+    Input: 27 models
     Excluded: 3 models (preview/experimental/beta)
-    Remaining: 25 models
+    Remaining: 24 models
 
   Step 4 - Deduplication Filter:
-    Input: 25 models
+    Input: 24 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 25 models
+    Final: 24 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
@@ -166,13 +166,6 @@ PROVIDER: OPENROUTER (1 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
-PROVIDER: ARCEE AI (1 models)
---------------------------------------------------
-   1. Arcee AI: Trinity Mini (free)
-      ID: arcee-ai/trinity-mini:free
-      Pricing: prompt=0, completion=0, request=N/A
-
-
 PROVIDER: Z.AI (1 models)
 --------------------------------------------------
    1. Z.ai: GLM 4.5 Air (free)
@@ -196,8 +189,8 @@ PROVIDER: NOUS (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 12
-  Total models passed all filters: 25
+  Total providers: 11
+  Total models passed all filters: 24
   Models excluded by pricing: 323
   Models excluded by billing description: 0
   Models excluded by keywords: 3

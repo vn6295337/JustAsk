@@ -1,28 +1,28 @@
 ================================================================================
 RAW MODALITIES EXTRACTION REPORT
-Generated: 2026-04-09 08:14:41 IST
+Generated: 2026-04-10 08:26:14 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 25
+  Total models : 24
   Input        : 02_filtered_models.json
   Processor    : step_14_extract_modalities.py
   Output       : 14_raw_modalities.json
 
 RAW INPUT MODALITIES DISTRIBUTION:
-  18 models: text
+  17 models: text
    4 models: text, image
    3 models: image, text, video
 
 Total unique input types: 3
 
 RAW OUTPUT MODALITIES DISTRIBUTION:
-  25 models: text
+  24 models: text
 
 Total unique output types: 1
 
 RAW MODALITY COMBINATIONS (INPUT → OUTPUT):
-  18 models: text → text
+  17 models: text → text
    4 models: text, image → text
    3 models: image, text, video → text
 
@@ -259,19 +259,7 @@ MODEL 19: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 20: arcee-ai/trinity-mini-20251201
---------------------------------------------------
-  ID: arcee-ai/trinity-mini:free
-  Original Name: Arcee AI: Trinity Mini (free)
-  HuggingFace ID: arcee-ai/Trinity-Mini
-  Canonical Slug: arcee-ai/trinity-mini-20251201
-  Clean Model Name: Trinity Mini
-  Raw Input Modalities: text
-  Raw Output Modalities: text
-
-================================================================================
-
-MODEL 21: venice/uncensored
+MODEL 20: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -283,7 +271,7 @@ MODEL 21: venice/uncensored
 
 ================================================================================
 
-MODEL 22: openrouter/free
+MODEL 21: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -295,7 +283,7 @@ MODEL 22: openrouter/free
 
 ================================================================================
 
-MODEL 23: google/gemma-3-12b-it
+MODEL 22: google/gemma-3-12b-it
 --------------------------------------------------
   ID: google/gemma-3-12b-it:free
   Original Name: Google: Gemma 3 12B (free)
@@ -307,7 +295,7 @@ MODEL 23: google/gemma-3-12b-it
 
 ================================================================================
 
-MODEL 24: google/gemma-3-27b-it
+MODEL 23: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
@@ -319,7 +307,7 @@ MODEL 24: google/gemma-3-27b-it
 
 ================================================================================
 
-MODEL 25: google/gemma-3-4b-it
+MODEL 24: google/gemma-3-4b-it
 --------------------------------------------------
   ID: google/gemma-3-4b-it:free
   Original Name: Google: Gemma 3 4B (free)

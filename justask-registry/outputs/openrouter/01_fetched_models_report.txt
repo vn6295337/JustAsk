@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-04-09 08:14:28 IST
+Generated: 2026-04-10 08:25:59 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 351
+  Total models: 350
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  62 models
@@ -261,16 +261,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - grok-4.20-multi-agent
     - grok-code-fast-1
 
-  Arcee AI        :   8 models
-    - coder-large
-    - maestro-reasoning
-    - spotlight
-    - trinity-large-preview:free
-    - trinity-large-thinking
-    - trinity-mini
-    - trinity-mini:free
-    - virtuoso-large
-
   MiniMax         :   8 models
     - minimax-01
     - minimax-m1
@@ -280,6 +270,15 @@ PROVIDER BREAKDOWN (Descending Order):
     - minimax-m2.5
     - minimax-m2.5:free
     - minimax-m2.7
+
+  Arcee AI        :   7 models
+    - coder-large
+    - maestro-reasoning
+    - spotlight
+    - trinity-large-preview:free
+    - trinity-large-thinking
+    - trinity-mini
+    - virtuoso-large
 
   Amazon          :   5 models
     - nova-2-lite-v1
