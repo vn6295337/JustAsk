@@ -1,1 +1,1 @@
-Today - Google: Added gemma-4-26b-a4b-it, gemma-4-31b-it | OpenRouter: Added qwen-3.6-plus
+Today - OpenRouter: Added gemma-4-26b-a4b-it-20260403, gemma-4-31b-it-20260402. Removed qwen3.6-plus, step-3.5-flash, trinity-mini
