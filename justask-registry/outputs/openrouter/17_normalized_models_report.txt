@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-04-13 08:55:12 IST
+Generated: 2026-04-14 08:27:31 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -9,7 +9,8 @@ DATA QUALITY ISSUES:
 MISSING OR EMPTY VALUES:
 ------------------------------
 
-LICENSE INFO TEXT (17 models):
+LICENSE INFO TEXT (18 models):
+  - Elephant
   - Free Models Router
   - Gemma 3 12B IT
   - Gemma 3 27B IT
@@ -28,7 +29,8 @@ LICENSE INFO TEXT (17 models):
   - Nemotron Nano 12B 2 VL
   - Nemotron Nano 9B V2
 
-LICENSE INFO URL (17 models):
+LICENSE INFO URL (18 models):
+  - Elephant
   - Free Models Router
   - Gemma 3 12B IT
   - Gemma 3 27B IT
@@ -47,10 +49,12 @@ LICENSE INFO URL (17 models):
   - Nemotron Nano 12B 2 VL
   - Nemotron Nano 9B V2
 
-LICENSE NAME (1 models):
+LICENSE NAME (2 models):
+  - Elephant
   - Free Models Router
 
-LICENSE URL (1 models):
+LICENSE URL (2 models):
+  - Elephant
   - Free Models Router
 
 UNKNOWN OR 'NOT FOUND' VALUES:
@@ -59,11 +63,11 @@ UNKNOWN OR 'NOT FOUND' VALUES:
 
 DATA QUALITY SUMMARY:
 ------------------------------
-Total models: 24
-Missing license info text: 17 (70.8%)
-Missing license info url: 17 (70.8%)
-Missing license name: 1 (4.2%)
-Missing license url: 1 (4.2%)
+Total models: 25
+Missing license info text: 18 (72.0%)
+Missing license info url: 18 (72.0%)
+Missing license name: 2 (8.0%)
+Missing license url: 2 (8.0%)
 
 ================================================================================
 
@@ -290,7 +294,17 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 23. Free Models Router
+ 23. Elephant
+     Provider           : OpenRouter (United States)
+     Modalities         : Text → Text
+     License            : 
+     License Info       : 
+     License URL        : 
+     Official URL       : https://openrouter.ai/
+     Rate Limits        : 20 requests/min 50/day
+     Provider API Access: https://openrouter.ai/settings/keys
+
+ 24. Free Models Router
      Provider           : OpenRouter (United States)
      Modalities         : Text, Image → Text
      License            : 
@@ -300,7 +314,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 24. GLM 4.5 Air
+ 25. GLM 4.5 Air
      Provider           : Z.AI (China)
      Modalities         : Text → Text
      License            : MIT

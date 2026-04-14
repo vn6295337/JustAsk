@@ -1,17 +1,17 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-04-13 08:55:14 IST
+Generated: 2026-04-14 08:27:33 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 24
-   • Total records in pipeline: 24
+   • Total unique model names: 25
+   • Total records in pipeline: 25
    • Total records in Supabase: 24
    • Models in both systems: 24
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 0
+   • Models in pipeline only (not in Supabase): 1
    • Models in Supabase only (not in pipeline): 0
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
@@ -56,10 +56,32 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
+   • New models (pipeline only): 1
+     Models: Elephant
    • Existing models with differences: 0
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
+================================================================================
+
+MODEL: Elephant
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | OpenRouter                |                          
+human_readable_name       | Elephant                  |                          
+model_provider_country    | United States             |                          
+official_url              | https://openrouter.ai/    |                          
+input_modalities          | Text                      |                          
+output_modalities         | Text                      |                          
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              |                           |                          
+license_url               |                           |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
+
 ================================================================================
 
 MODEL: Free Models Router

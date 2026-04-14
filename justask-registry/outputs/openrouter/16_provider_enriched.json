@@ -1,10 +1,30 @@
 {
   "metadata": {
-    "generated_at": "2026-04-13 08:55:12 IST",
-    "total_models": 24,
+    "generated_at": "2026-04-14 08:27:30 IST",
+    "total_models": 25,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
+    {
+      "id": "openrouter/elephant-alpha",
+      "canonical_slug": "openrouter/elephant-alpha",
+      "provider_slug": "elephant-alpha",
+      "original_name": "Elephant",
+      "hugging_face_id": null,
+      "clean_model_name": "Elephant",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "OpenRouter",
+      "model_provider_country": "United States",
+      "model_family": "openrouter",
+      "official_url": "https://openrouter.ai/"
+    },
     {
       "id": "google/gemma-4-26b-a4b-it:free",
       "canonical_slug": "google/gemma-4-26b-a4b-it-20260403",

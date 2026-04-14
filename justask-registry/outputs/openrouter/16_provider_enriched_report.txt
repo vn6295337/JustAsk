@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-04-13 08:55:12 IST
+Generated: 2026-04-14 08:27:30 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 24
+  Total models      : 25
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -19,16 +19,16 @@ MODEL PROVIDER DISTRIBUTION:
    2 models: Liquid AI
    2 models: Meta
    2 models: OpenAI
+   2 models: OpenRouter
    1 models: Cognitive Computations
    1 models: MiniMax
    1 models: Nous Research
-   1 models: OpenRouter
    1 models: Z.AI
 
 Total unique model providers: 11
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
-  20 models: United States
+  21 models: United States
    3 models: China
    1 models: Singapore
 
@@ -41,10 +41,10 @@ MODEL FAMILY DISTRIBUTION:
    2 models: liquid ai
    2 models: meta
    2 models: openai
+   2 models: openrouter
    1 models: cognitive computations
    1 models: minimax
    1 models: nous research
-   1 models: openrouter
    1 models: z.ai
 
 Total unique model families: 11
@@ -360,7 +360,21 @@ MODEL 22: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 23: openrouter/free
+MODEL 23: openrouter/elephant-alpha
+--------------------------------------------------
+  ID: openrouter/elephant-alpha
+  Original Name: Elephant
+  HuggingFace ID: None
+  Canonical Slug: openrouter/elephant-alpha
+  Clean Model Name: Elephant
+  Model Provider: OpenRouter
+  Model Provider Country: United States
+  Model Family: openrouter
+  Official URL: https://openrouter.ai/
+
+================================================================================
+
+MODEL 24: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -374,7 +388,7 @@ MODEL 23: openrouter/free
 
 ================================================================================
 
-MODEL 24: z-ai/glm-4.5-air
+MODEL 25: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)

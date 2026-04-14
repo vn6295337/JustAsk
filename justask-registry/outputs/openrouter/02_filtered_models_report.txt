@@ -1,34 +1,34 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-04-13 08:54:51 IST
+Generated: 2026-04-14 08:27:15 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 349
-  Models passed all filters: 24
+  Total models processed: 350
+  Models passed all filters: 25
   Models excluded: 325
-  Success rate: 6.9%
+  Success rate: 7.1%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 349 models
+    Input: 350 models
     Excluded: 322 models (non-free pricing)
-    Remaining: 27 models
+    Remaining: 28 models
 
   Step 2 - Billing Description Filter:
-    Input: 27 models
+    Input: 28 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 27 models
+    Remaining: 28 models
 
   Step 3 - Keyword Filter:
-    Input: 27 models
+    Input: 28 models
     Excluded: 3 models (preview/experimental/beta)
-    Remaining: 24 models
+    Remaining: 25 models
 
   Step 4 - Deduplication Filter:
-    Input: 24 models
+    Input: 25 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 24 models
+    Final: 25 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
@@ -108,6 +108,17 @@ PROVIDER: NVIDIA (4 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
+PROVIDER: OPENROUTER (2 models)
+--------------------------------------------------
+   1. Elephant
+      ID: openrouter/elephant-alpha
+      Pricing: prompt=0, completion=0, request=N/A
+
+   2. Free Models Router
+      ID: openrouter/free
+      Pricing: prompt=0, completion=0, request=N/A
+
+
 PROVIDER: LIQUIDAI (2 models)
 --------------------------------------------------
    1. LiquidAI: LFM2.5-1.2B-Instruct (free)
@@ -159,13 +170,6 @@ PROVIDER: MINIMAX (1 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
-PROVIDER: OPENROUTER (1 models)
---------------------------------------------------
-   1. Free Models Router
-      ID: openrouter/free
-      Pricing: prompt=0, completion=0, request=N/A
-
-
 PROVIDER: Z.AI (1 models)
 --------------------------------------------------
    1. Z.ai: GLM 4.5 Air (free)
@@ -190,7 +194,7 @@ PROVIDER: NOUS (1 models)
 ================================================================================
 FINAL SUMMARY:
   Total providers: 11
-  Total models passed all filters: 24
+  Total models passed all filters: 25
   Models excluded by pricing: 322
   Models excluded by billing description: 0
   Models excluded by keywords: 3
