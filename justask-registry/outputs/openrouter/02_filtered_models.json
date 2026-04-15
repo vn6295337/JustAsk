@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-04-14 08:27:15 IST",
+    "generated_at": "2026-04-15 08:24:54 IST",
     "total_models": 25,
     "pipeline_stage": "B_filter_models"
   },
@@ -11,7 +11,7 @@
       "hugging_face_id": null,
       "name": "Elephant",
       "created": 1776052598,
-      "description": "Elephant Alpha is a 100B-parameter text model focused on intelligence efficiency, delivering strong reasoning performance while minimizing token usage. It supports a 256K context window with up to 32K output...",
+      "description": "Elephant Alpha is a 100B-parameter text model focused on intelligence efficiency, delivering strong performance while minimizing token usage. It supports a 256K context window with up to 32K output tokens,...",
       "context_length": 262144,
       "architecture": {
         "modality": "text->text",
