@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-04-15 08:25:11 IST",
-    "total_models": 25,
+    "generated_at": "2026-04-16 08:51:45 IST",
+    "total_models": 26,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
@@ -174,6 +174,15 @@
       "hugging_face_id": "google/gemma-3n-E4B-it",
       "clean_model_name": "Gemma 3n E4B IT",
       "raw_input_modalities": "text",
+      "raw_output_modalities": "text"
+    },
+    {
+      "id": "meta-llama/llama-guard-4-12b:free",
+      "canonical_slug": "meta-llama/llama-guard-4-12b",
+      "original_name": "Meta: Llama Guard 4 12B (free)",
+      "hugging_face_id": "meta-llama/Llama-Guard-4-12B",
+      "clean_model_name": "Llama Guard 4 12B",
+      "raw_input_modalities": "image, text",
       "raw_output_modalities": "text"
     },
     {

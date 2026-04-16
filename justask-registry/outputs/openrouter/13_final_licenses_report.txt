@@ -1,10 +1,10 @@
 ================================================================================
 FINAL CONSOLIDATED LICENSE LIST REPORT
-Generated: 2026-04-15 08:25:10 IST
+Generated: 2026-04-16 08:51:44 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 31
+  Total models        : 32
   Input sources       : 4 pipeline stage files
   Processor           : step_13_final_licenses.py
   Output              : 13_final_licenses.json
@@ -12,7 +12,7 @@ SUMMARY:
 SOURCE CATEGORY DISTRIBUTION:
   Custom: 7 models
   Google: 7 models
-  Meta: 2 models
+  Meta: 3 models
   Opensource: 7 models
   Proprietary: 8 models
 
@@ -28,12 +28,13 @@ FINAL LICENSE DISTRIBUTION:
    1 models: LLAMA-3.1
    1 models: LLAMA-3.2
    1 models: LLAMA-3.3
+   1 models: LLAMA-4
    1 models: MIT
    1 models: MODIFIED MIT
    1 models: Modified MIT
    1 models: Upstage
 
-Total unique license types: 15
+Total unique license types: 16
 
 DETAILED FINAL MODEL INFORMATION:
 ================================================================================
@@ -278,7 +279,22 @@ MODEL 16: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 17: openai/gpt-oss-120b
+MODEL 17: meta-llama/llama-guard-4-12b
+--------------------------------------------------
+  ID: meta-llama/llama-guard-4-12b:free
+  Original Name: Meta: Llama Guard 4 12B (free)
+  HuggingFace ID: meta-llama/Llama-Guard-4-12B
+  Canonical Slug: meta-llama/llama-guard-4-12b
+  Clean Model Name: Llama Guard 4 12B
+  License Info Text: 
+  License Info URL: 
+  License Name: LLAMA-4
+  License URL: https://www.llama.com/llama4/license/
+  Source Category: meta
+
+================================================================================
+
+MODEL 18: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -293,7 +309,7 @@ MODEL 17: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 18: openai/gpt-oss-20b
+MODEL 19: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -308,7 +324,7 @@ MODEL 18: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 19: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 20: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -323,7 +339,7 @@ MODEL 19: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 20: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 21: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID: qwen/qwen3-next-80b-a3b-instruct:free
   Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
@@ -338,7 +354,7 @@ MODEL 20: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 21: venice/uncensored
+MODEL 22: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -353,7 +369,7 @@ MODEL 21: venice/uncensored
 
 ================================================================================
 
-MODEL 22: nousresearch/hermes-3-llama-3.1-405b
+MODEL 23: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -368,7 +384,7 @@ MODEL 22: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 23: z-ai/glm-4.5-air
+MODEL 24: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)
@@ -383,7 +399,7 @@ MODEL 23: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 24: amazon/nova-2-lite-v1
+MODEL 25: amazon/nova-2-lite-v1
 --------------------------------------------------
   ID: amazon/nova-2-lite-v1:free
   Original Name: Amazon/Nova 2 Lite V1
@@ -398,7 +414,7 @@ MODEL 24: amazon/nova-2-lite-v1
 
 ================================================================================
 
-MODEL 25: kwaipilot/kat-coder-pro-v1
+MODEL 26: kwaipilot/kat-coder-pro-v1
 --------------------------------------------------
   ID: kwaipilot/kat-coder-pro-v1:free
   Original Name: Kwaipilot/Kat Coder Pro V1
@@ -413,7 +429,7 @@ MODEL 25: kwaipilot/kat-coder-pro-v1
 
 ================================================================================
 
-MODEL 26: mistralai/devstral-2512
+MODEL 27: mistralai/devstral-2512
 --------------------------------------------------
   ID: mistralai/devstral-2512:free
   Original Name: Mistralai/Devstral 2512
@@ -428,7 +444,7 @@ MODEL 26: mistralai/devstral-2512
 
 ================================================================================
 
-MODEL 27: qwen/qwen3.6-plus
+MODEL 28: qwen/qwen3.6-plus
 --------------------------------------------------
   ID: qwen/qwen3.6-plus:free
   Original Name: Qwen/Qwen3.6 Plus
@@ -443,7 +459,7 @@ MODEL 27: qwen/qwen3.6-plus
 
 ================================================================================
 
-MODEL 28: qwen/qwen3.6-plus-04-02
+MODEL 29: qwen/qwen3.6-plus-04-02
 --------------------------------------------------
   ID: qwen/qwen3.6-plus-04-02:free
   Original Name: Qwen/Qwen3.6 Plus 04 02
@@ -458,7 +474,7 @@ MODEL 28: qwen/qwen3.6-plus-04-02
 
 ================================================================================
 
-MODEL 29: upstage/solar-pro-3
+MODEL 30: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage/Solar Pro 3
@@ -473,7 +489,7 @@ MODEL 29: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 30: x-ai/grok-4-fast
+MODEL 31: x-ai/grok-4-fast
 --------------------------------------------------
   ID: x-ai/grok-4-fast:free
   Original Name: X Ai/Grok 4 Fast
@@ -488,7 +504,7 @@ MODEL 30: x-ai/grok-4-fast
 
 ================================================================================
 
-MODEL 31: x-ai/grok-4.1-fast
+MODEL 32: x-ai/grok-4.1-fast
 --------------------------------------------------
   ID: x-ai/grok-4.1-fast:free
   Original Name: X Ai/Grok 4.1 Fast

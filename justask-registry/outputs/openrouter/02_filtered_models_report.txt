@@ -1,34 +1,34 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-04-15 08:24:54 IST
+Generated: 2026-04-16 08:51:32 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 344
-  Models passed all filters: 25
+  Total models processed: 345
+  Models passed all filters: 26
   Models excluded: 319
-  Success rate: 7.3%
+  Success rate: 7.5%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 344 models
+    Input: 345 models
     Excluded: 316 models (non-free pricing)
-    Remaining: 28 models
+    Remaining: 29 models
 
   Step 2 - Billing Description Filter:
-    Input: 28 models
+    Input: 29 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 28 models
+    Remaining: 29 models
 
   Step 3 - Keyword Filter:
-    Input: 28 models
+    Input: 29 models
     Excluded: 3 models (preview/experimental/beta)
-    Remaining: 25 models
+    Remaining: 26 models
 
   Step 4 - Deduplication Filter:
-    Input: 25 models
+    Input: 26 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 25 models
+    Final: 26 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
@@ -108,6 +108,21 @@ PROVIDER: NVIDIA (4 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
+PROVIDER: META (3 models)
+--------------------------------------------------
+   1. Meta: Llama 3.2 3B Instruct (free)
+      ID: meta-llama/llama-3.2-3b-instruct:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+   2. Meta: Llama 3.3 70B Instruct (free)
+      ID: meta-llama/llama-3.3-70b-instruct:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+   3. Meta: Llama Guard 4 12B (free)
+      ID: meta-llama/llama-guard-4-12b:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+
 PROVIDER: OPENROUTER (2 models)
 --------------------------------------------------
    1. Elephant
@@ -152,17 +167,6 @@ PROVIDER: OPENAI (2 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
-PROVIDER: META (2 models)
---------------------------------------------------
-   1. Meta: Llama 3.2 3B Instruct (free)
-      ID: meta-llama/llama-3.2-3b-instruct:free
-      Pricing: prompt=0, completion=0, request=N/A
-
-   2. Meta: Llama 3.3 70B Instruct (free)
-      ID: meta-llama/llama-3.3-70b-instruct:free
-      Pricing: prompt=0, completion=0, request=N/A
-
-
 PROVIDER: MINIMAX (1 models)
 --------------------------------------------------
    1. MiniMax: MiniMax M2.5 (free)
@@ -194,7 +198,7 @@ PROVIDER: NOUS (1 models)
 ================================================================================
 FINAL SUMMARY:
   Total providers: 11
-  Total models passed all filters: 25
+  Total models passed all filters: 26
   Models excluded by pricing: 316
   Models excluded by billing description: 0
   Models excluded by keywords: 3

@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-04-15 08:25:11 IST
+Generated: 2026-04-16 08:51:45 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 25
+  Total models      : 26
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -15,9 +15,9 @@ SUMMARY:
 MODEL PROVIDER DISTRIBUTION:
    7 models: Google
    4 models: NVIDIA
+   3 models: Meta
    2 models: Alibaba Cloud
    2 models: Liquid AI
-   2 models: Meta
    2 models: OpenAI
    2 models: OpenRouter
    1 models: Cognitive Computations
@@ -28,7 +28,7 @@ MODEL PROVIDER DISTRIBUTION:
 Total unique model providers: 11
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
-  21 models: United States
+  22 models: United States
    3 models: China
    1 models: Singapore
 
@@ -37,9 +37,9 @@ Total unique countries: 3
 MODEL FAMILY DISTRIBUTION:
    7 models: gemma
    4 models: nvidia
+   3 models: meta
    2 models: alibaba cloud
    2 models: liquid ai
-   2 models: meta
    2 models: openai
    2 models: openrouter
    1 models: cognitive computations
@@ -248,7 +248,21 @@ MODEL 14: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 15: minimax/minimax-m2.5-20260211
+MODEL 15: meta-llama/llama-guard-4-12b
+--------------------------------------------------
+  ID: meta-llama/llama-guard-4-12b:free
+  Original Name: Meta: Llama Guard 4 12B (free)
+  HuggingFace ID: meta-llama/Llama-Guard-4-12B
+  Canonical Slug: meta-llama/llama-guard-4-12b
+  Clean Model Name: Llama Guard 4 12B
+  Model Provider: Meta
+  Model Provider Country: United States
+  Model Family: meta
+  Official URL: https://llama.meta.com/
+
+================================================================================
+
+MODEL 16: minimax/minimax-m2.5-20260211
 --------------------------------------------------
   ID: minimax/minimax-m2.5:free
   Original Name: MiniMax: MiniMax M2.5 (free)
@@ -262,7 +276,7 @@ MODEL 15: minimax/minimax-m2.5-20260211
 
 ================================================================================
 
-MODEL 16: nousresearch/hermes-3-llama-3.1-405b
+MODEL 17: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -276,7 +290,7 @@ MODEL 16: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 17: nvidia/nemotron-3-nano-30b-a3b
+MODEL 18: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -290,7 +304,7 @@ MODEL 17: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 18: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 19: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID: nvidia/nemotron-3-super-120b-a12b:free
   Original Name: NVIDIA: Nemotron 3 Super (free)
@@ -304,7 +318,7 @@ MODEL 18: nvidia/nemotron-3-super-120b-a12b-20230311
 
 ================================================================================
 
-MODEL 19: nvidia/nemotron-nano-12b-v2-vl
+MODEL 20: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
@@ -318,7 +332,7 @@ MODEL 19: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 20: nvidia/nemotron-nano-9b-v2
+MODEL 21: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -332,7 +346,7 @@ MODEL 20: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 21: openai/gpt-oss-120b
+MODEL 22: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -346,7 +360,7 @@ MODEL 21: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 22: openai/gpt-oss-20b
+MODEL 23: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -360,7 +374,7 @@ MODEL 22: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 23: openrouter/elephant-alpha
+MODEL 24: openrouter/elephant-alpha
 --------------------------------------------------
   ID: openrouter/elephant-alpha
   Original Name: Elephant
@@ -374,7 +388,7 @@ MODEL 23: openrouter/elephant-alpha
 
 ================================================================================
 
-MODEL 24: openrouter/free
+MODEL 25: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -388,7 +402,7 @@ MODEL 24: openrouter/free
 
 ================================================================================
 
-MODEL 25: z-ai/glm-4.5-air
+MODEL 26: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)

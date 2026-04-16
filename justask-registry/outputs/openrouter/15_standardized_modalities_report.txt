@@ -1,10 +1,10 @@
 ================================================================================
 STANDARDIZED MODALITIES REPORT
-Generated: 2026-04-15 08:25:11 IST
+Generated: 2026-04-16 08:51:45 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 25
+  Total models : 26
   Input        : 14_raw_modalities.json
   Config       : modality_standardization.json
   Processor    : step_15_standardize_modalities.py
@@ -12,28 +12,28 @@ SUMMARY:
 
 STANDARDIZED INPUT MODALITIES DISTRIBUTION:
   16 models: Text
-   4 models: Text, Image
+   5 models: Text, Image
    3 models: Text, Image, Video
    2 models: Text, Image, Audio, Video
 
 Total unique input types: 4
 
 STANDARDIZED OUTPUT MODALITIES DISTRIBUTION:
-  25 models: Text
+  26 models: Text
 
 Total unique output types: 1
 
 STANDARDIZED MODALITY COMBINATIONS (INPUT → OUTPUT):
   16 models: Text → Text
-   4 models: Text, Image → Text
+   5 models: Text, Image → Text
    3 models: Text, Image, Video → Text
    2 models: Text, Image, Audio, Video → Text
 
 Total unique combinations: 4
 
 STANDARDIZATION IMPACT ANALYSIS:
-  Input modalities changed: 25 models
-  Output modalities changed: 25 models
+  Input modalities changed: 26 models
+  Output modalities changed: 26 models
   Input modalities unchanged: 0 models
   Output modalities unchanged: 0 models
 
@@ -320,7 +320,21 @@ MODEL 20: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 21: google/gemma-3n-e2b-it
+MODEL 21: meta-llama/llama-guard-4-12b
+--------------------------------------------------
+  ID: meta-llama/llama-guard-4-12b:free
+  Original Name: Meta: Llama Guard 4 12B (free)
+  HuggingFace ID: meta-llama/Llama-Guard-4-12B
+  Canonical Slug: meta-llama/llama-guard-4-12b
+  Clean Model Name: Llama Guard 4 12B
+  Raw Input Modalities: image, text
+  Raw Output Modalities: text
+  Standardized Input Modalities: Text, Image
+  Standardized Output Modalities: Text
+
+================================================================================
+
+MODEL 22: google/gemma-3n-e2b-it
 --------------------------------------------------
   ID: google/gemma-3n-e2b-it:free
   Original Name: Google: Gemma 3n 2B (free)
@@ -334,7 +348,7 @@ MODEL 21: google/gemma-3n-e2b-it
 
 ================================================================================
 
-MODEL 22: google/gemma-3n-e4b-it
+MODEL 23: google/gemma-3n-e4b-it
 --------------------------------------------------
   ID: google/gemma-3n-e4b-it:free
   Original Name: Google: Gemma 3n 4B (free)
@@ -348,7 +362,7 @@ MODEL 22: google/gemma-3n-e4b-it
 
 ================================================================================
 
-MODEL 23: google/gemma-4-26b-a4b-it-20260403
+MODEL 24: google/gemma-4-26b-a4b-it-20260403
 --------------------------------------------------
   ID: google/gemma-4-26b-a4b-it:free
   Original Name: Google: Gemma 4 26B A4B  (free)
@@ -362,7 +376,7 @@ MODEL 23: google/gemma-4-26b-a4b-it-20260403
 
 ================================================================================
 
-MODEL 24: google/gemma-4-31b-it-20260402
+MODEL 25: google/gemma-4-31b-it-20260402
 --------------------------------------------------
   ID: google/gemma-4-31b-it:free
   Original Name: Google: Gemma 4 31B (free)
@@ -376,7 +390,7 @@ MODEL 24: google/gemma-4-31b-it-20260402
 
 ================================================================================
 
-MODEL 25: nvidia/nemotron-nano-12b-v2-vl
+MODEL 26: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
