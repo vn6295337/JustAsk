@@ -1,8 +1,8 @@
 GOOGLE API MODELS FETCH REPORT
 ==================================================
 
-Generated: 2026-04-15 08:23:17 IST
-Total Models: 51
+Generated: 2026-04-16 08:49:59 IST
+Total Models: 52
 
 MODELS LIST:
 --------------------
@@ -37,23 +37,24 @@ MODELS LIST:
 29. models/gemini-3.1-flash-image-preview
 30. models/lyria-3-clip-preview
 31. models/lyria-3-pro-preview
-32. models/gemini-robotics-er-1.5-preview
-33. models/gemini-robotics-er-1.6-preview
-34. models/gemini-2.5-computer-use-preview-10-2025
-35. models/deep-research-pro-preview-12-2025
-36. models/gemini-embedding-001
-37. models/gemini-embedding-2-preview
-38. models/aqa
-39. models/imagen-4.0-generate-001
-40. models/imagen-4.0-ultra-generate-001
-41. models/imagen-4.0-fast-generate-001
-42. models/veo-2.0-generate-001
-43. models/veo-3.0-generate-001
-44. models/veo-3.0-fast-generate-001
-45. models/veo-3.1-generate-preview
-46. models/veo-3.1-fast-generate-preview
-47. models/veo-3.1-lite-generate-preview
-48. models/gemini-2.5-flash-native-audio-latest
-49. models/gemini-2.5-flash-native-audio-preview-09-2025
-50. models/gemini-2.5-flash-native-audio-preview-12-2025
-51. models/gemini-3.1-flash-live-preview
+32. models/gemini-3.1-flash-tts-preview
+33. models/gemini-robotics-er-1.5-preview
+34. models/gemini-robotics-er-1.6-preview
+35. models/gemini-2.5-computer-use-preview-10-2025
+36. models/deep-research-pro-preview-12-2025
+37. models/gemini-embedding-001
+38. models/gemini-embedding-2-preview
+39. models/aqa
+40. models/imagen-4.0-generate-001
+41. models/imagen-4.0-ultra-generate-001
+42. models/imagen-4.0-fast-generate-001
+43. models/veo-2.0-generate-001
+44. models/veo-3.0-generate-001
+45. models/veo-3.0-fast-generate-001
+46. models/veo-3.1-generate-preview
+47. models/veo-3.1-fast-generate-preview
+48. models/veo-3.1-lite-generate-preview
+49. models/gemini-2.5-flash-native-audio-latest
+50. models/gemini-2.5-flash-native-audio-preview-09-2025
+51. models/gemini-2.5-flash-native-audio-preview-12-2025
+52. models/gemini-3.1-flash-live-preview

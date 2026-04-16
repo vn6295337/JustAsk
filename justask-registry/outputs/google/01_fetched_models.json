@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-04-15 08:23:17 IST",
-    "total_models": 51,
+    "generated": "2026-04-16 08:49:59 IST",
+    "total_models": 52,
     "api_source": "Google Generative Language API"
   },
   "models": [
@@ -539,6 +539,24 @@
       "topP": 0.95,
       "topK": 64,
       "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-3.1-flash-tts-preview",
+      "version": "3.1-flash-tts-preview",
+      "displayName": "Gemini 3.1 Flash TTS Preview",
+      "description": "Gemini 3.1 Flash TTS Preview",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 16384,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
     },
     {
       "name": "models/gemini-robotics-er-1.5-preview",
