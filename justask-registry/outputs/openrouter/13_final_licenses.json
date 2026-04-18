@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-04-17 08:27:46 IST",
+    "generated_at": "2026-04-18 08:18:59 IST",
     "total_models": 32,
     "pipeline_stage": "M_final_list_of_licenses"
   },
@@ -162,18 +162,6 @@
       "source_category": "meta"
     },
     {
-      "id": "meta-llama/llama-guard-4-12b:free",
-      "canonical_slug": "meta-llama/llama-guard-4-12b",
-      "original_name": "Meta: Llama Guard 4 12B (free)",
-      "hugging_face_id": "meta-llama/Llama-Guard-4-12B",
-      "clean_model_name": "Llama Guard 4 12B",
-      "license_info_text": "",
-      "license_info_url": "",
-      "license_name": "LLAMA-4",
-      "license_url": "https://www.llama.com/llama4/license/",
-      "source_category": "meta"
-    },
-    {
       "id": "minimax/minimax-m2.5:free",
       "canonical_slug": "minimax/minimax-m2.5-20260211",
       "original_name": "MiniMax: MiniMax M2.5 (free)",
@@ -196,6 +184,18 @@
       "license_name": "Modified MIT",
       "license_url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512/blob/main/LICENSE",
       "source_category": "proprietary"
+    },
+    {
+      "id": "moonshotai/kimi-k2.5",
+      "canonical_slug": "moonshotai/kimi-k2.5-0127",
+      "original_name": "MoonshotAI: Kimi K2.5",
+      "hugging_face_id": "moonshotai/Kimi-K2.5",
+      "clean_model_name": "Kimi K2.5",
+      "license_info_text": "",
+      "license_info_url": "",
+      "license_name": "MODIFIED MIT",
+      "license_url": "https://huggingface.co/moonshotai/Kimi-K2.5/blob/main/LICENSE",
+      "source_category": "custom"
     },
     {
       "id": "nousresearch/hermes-3-llama-3.1-405b:free",

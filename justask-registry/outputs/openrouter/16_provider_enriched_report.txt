@@ -1,6 +1,6 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-04-17 08:27:46 IST
+Generated: 2026-04-18 08:18:59 IST
 ================================================================================
 
 SUMMARY:
@@ -15,21 +15,22 @@ SUMMARY:
 MODEL PROVIDER DISTRIBUTION:
    7 models: Google
    4 models: NVIDIA
-   3 models: Meta
    2 models: Alibaba Cloud
    2 models: Liquid AI
+   2 models: Meta
    2 models: OpenAI
    2 models: OpenRouter
    1 models: Cognitive Computations
    1 models: MiniMax
+   1 models: Moonshot AI
    1 models: Nous Research
    1 models: Z.AI
 
-Total unique model providers: 11
+Total unique model providers: 12
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
-  22 models: United States
-   3 models: China
+  21 models: United States
+   4 models: China
    1 models: Singapore
 
 Total unique countries: 3
@@ -37,17 +38,18 @@ Total unique countries: 3
 MODEL FAMILY DISTRIBUTION:
    7 models: gemma
    4 models: nvidia
-   3 models: meta
    2 models: alibaba cloud
    2 models: liquid ai
+   2 models: meta
    2 models: openai
    2 models: openrouter
    1 models: cognitive computations
    1 models: minimax
+   1 models: moonshot ai
    1 models: nous research
    1 models: z.ai
 
-Total unique model families: 11
+Total unique model families: 12
 
 DETAILED PROVIDER ENRICHED MODEL INFORMATION:
 ================================================================================
@@ -248,21 +250,7 @@ MODEL 14: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 15: meta-llama/llama-guard-4-12b
---------------------------------------------------
-  ID: meta-llama/llama-guard-4-12b:free
-  Original Name: Meta: Llama Guard 4 12B (free)
-  HuggingFace ID: meta-llama/Llama-Guard-4-12B
-  Canonical Slug: meta-llama/llama-guard-4-12b
-  Clean Model Name: Llama Guard 4 12B
-  Model Provider: Meta
-  Model Provider Country: United States
-  Model Family: meta
-  Official URL: https://llama.meta.com/
-
-================================================================================
-
-MODEL 16: minimax/minimax-m2.5-20260211
+MODEL 15: minimax/minimax-m2.5-20260211
 --------------------------------------------------
   ID: minimax/minimax-m2.5:free
   Original Name: MiniMax: MiniMax M2.5 (free)
@@ -273,6 +261,20 @@ MODEL 16: minimax/minimax-m2.5-20260211
   Model Provider Country: Singapore
   Model Family: minimax
   Official URL: https://www.minimax.io/
+
+================================================================================
+
+MODEL 16: moonshotai/kimi-k2.5-0127
+--------------------------------------------------
+  ID: moonshotai/kimi-k2.5
+  Original Name: MoonshotAI: Kimi K2.5
+  HuggingFace ID: moonshotai/Kimi-K2.5
+  Canonical Slug: moonshotai/kimi-k2.5-0127
+  Clean Model Name: Kimi K2.5
+  Model Provider: Moonshot AI
+  Model Provider Country: China
+  Model Family: moonshot ai
+  Official URL: https://www.moonshot.ai/
 
 ================================================================================
 

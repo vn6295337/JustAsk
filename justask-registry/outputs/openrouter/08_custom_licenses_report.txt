@@ -1,10 +1,10 @@
 ================================================================================
 CUSTOM LICENSE MODELS REPORT
-Generated: 2026-04-17 08:27:42 IST
+Generated: 2026-04-18 08:18:55 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 7
+  Total models : 8
   Input        : 07_standardized_licenses.json
   Reference    : opensource_license_urls.json
   Processor    : step_08_bucketize_licenses.py
@@ -12,7 +12,7 @@ SUMMARY:
 
 CUSTOM LICENSE DISTRIBUTION:
   LFM1.0: 2 models
-  MODIFIED MIT: 1 models
+  MODIFIED MIT: 2 models
   NVIDIA: 4 models
 
 Total license types: 3
@@ -47,7 +47,16 @@ MODEL 3: minimax/minimax-m2.5-20260211
 
 ================================================================================
 
-MODEL 4: nvidia/nemotron-3-nano-30b-a3b
+MODEL 4: moonshotai/kimi-k2.5-0127
+--------------------------------------------------
+  ID              : moonshotai/kimi-k2.5
+  Canonical Slug  : moonshotai/kimi-k2.5-0127
+  HuggingFace ID  : moonshotai/Kimi-K2.5
+  License Name    : MODIFIED MIT
+
+================================================================================
+
+MODEL 5: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID              : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug  : nvidia/nemotron-3-nano-30b-a3b
@@ -56,7 +65,7 @@ MODEL 4: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 5: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 6: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID              : nvidia/nemotron-3-super-120b-a12b:free
   Canonical Slug  : nvidia/nemotron-3-super-120b-a12b-20230311
@@ -65,7 +74,7 @@ MODEL 5: nvidia/nemotron-3-super-120b-a12b-20230311
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-nano-12b-v2-vl
+MODEL 7: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID              : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug  : nvidia/nemotron-nano-12b-v2-vl
@@ -74,7 +83,7 @@ MODEL 6: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 7: nvidia/nemotron-nano-9b-v2
+MODEL 8: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID              : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug  : nvidia/nemotron-nano-9b-v2

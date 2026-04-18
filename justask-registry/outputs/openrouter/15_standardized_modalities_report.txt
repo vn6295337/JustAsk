@@ -1,6 +1,6 @@
 ================================================================================
 STANDARDIZED MODALITIES REPORT
-Generated: 2026-04-17 08:27:46 IST
+Generated: 2026-04-18 08:18:59 IST
 ================================================================================
 
 SUMMARY:
@@ -320,14 +320,14 @@ MODEL 20: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 21: meta-llama/llama-guard-4-12b
+MODEL 21: moonshotai/kimi-k2.5-0127
 --------------------------------------------------
-  ID: meta-llama/llama-guard-4-12b:free
-  Original Name: Meta: Llama Guard 4 12B (free)
-  HuggingFace ID: meta-llama/Llama-Guard-4-12B
-  Canonical Slug: meta-llama/llama-guard-4-12b
-  Clean Model Name: Llama Guard 4 12B
-  Raw Input Modalities: image, text
+  ID: moonshotai/kimi-k2.5
+  Original Name: MoonshotAI: Kimi K2.5
+  HuggingFace ID: moonshotai/Kimi-K2.5
+  Canonical Slug: moonshotai/kimi-k2.5-0127
+  Clean Model Name: Kimi K2.5
+  Raw Input Modalities: text, image
   Raw Output Modalities: text
   Standardized Input Modalities: Text, Image
   Standardized Output Modalities: Text

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-04-17 08:27:30 IST",
+    "generated_at": "2026-04-18 08:18:46 IST",
     "total_models": 26,
     "pipeline_stage": "B_filter_models"
   },
@@ -331,6 +331,72 @@
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/openrouter/free/endpoints"
+      }
+    },
+    {
+      "id": "moonshotai/kimi-k2.5",
+      "canonical_slug": "moonshotai/kimi-k2.5-0127",
+      "hugging_face_id": "moonshotai/Kimi-K2.5",
+      "name": "MoonshotAI: Kimi K2.5",
+      "created": 1769487076,
+      "description": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed...",
+      "context_length": 256000,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0",
+        "audio": "0",
+        "web_search": "0",
+        "input_cache_read": "0"
+      },
+      "top_provider": {
+        "context_length": 256000,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "min_p",
+        "parallel_tool_calls",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null
+      },
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/moonshotai/kimi-k2.5-0127/endpoints"
       }
     },
     {
@@ -969,49 +1035,6 @@
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/google/gemma-3n-e4b-it/endpoints"
-      }
-    },
-    {
-      "id": "meta-llama/llama-guard-4-12b:free",
-      "canonical_slug": "meta-llama/llama-guard-4-12b",
-      "hugging_face_id": "meta-llama/Llama-Guard-4-12B",
-      "name": "Meta: Llama Guard 4 12B (free)",
-      "created": 1745975193,
-      "description": "Llama Guard 4 is a Llama 4 Scout-derived multimodal pretrained model, fine-tuned for content safety classification. Similar to previous versions, it can be used to classify content in both LLM...",
-      "context_length": 163840,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "image",
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 163840,
-        "max_completion_tokens": 65000,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "seed",
-        "temperature",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "knowledge_cutoff": "2024-08-31",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/meta-llama/llama-guard-4-12b/endpoints"
       }
     },
     {

@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-04-17 08:27:30 IST
+Generated: 2026-04-18 08:18:46 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 345
+  Total models: 343
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  62 models
@@ -71,7 +71,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - o4-mini-deep-research
     - o4-mini-high
 
-  Qwen            :  46 models
+  Qwen            :  45 models
     - qwen-2.5-7b-instruct
     - qwen-max
     - qwen-plus
@@ -80,7 +80,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen-turbo
     - qwen-vl-max
     - qwen-vl-plus
-    - qwen2.5-vl-32b-instruct
     - qwen2.5-vl-72b-instruct
     - qwen3-14b
     - qwen3-235b-a22b
@@ -192,22 +191,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - claude-sonnet-4.5
     - claude-sonnet-4.6
 
-  Meta            :  14 models
-    - llama-3-70b-instruct
-    - llama-3-8b-instruct
-    - llama-3.1-70b-instruct
-    - llama-3.1-8b-instruct
-    - llama-3.2-11b-vision-instruct
-    - llama-3.2-1b-instruct
-    - llama-3.2-3b-instruct
-    - llama-3.2-3b-instruct:free
-    - llama-3.3-70b-instruct
-    - llama-3.3-70b-instruct:free
-    - llama-4-maverick
-    - llama-4-scout
-    - llama-guard-4-12b
-    - llama-guard-4-12b:free
-
   Z.ai            :  13 models
     - glm-4-32b
     - glm-4.5
@@ -222,6 +205,21 @@ PROVIDER BREAKDOWN (Descending Order):
     - glm-5-turbo
     - glm-5.1
     - glm-5v-turbo
+
+  Meta            :  13 models
+    - llama-3-70b-instruct
+    - llama-3-8b-instruct
+    - llama-3.1-70b-instruct
+    - llama-3.1-8b-instruct
+    - llama-3.2-11b-vision-instruct
+    - llama-3.2-1b-instruct
+    - llama-3.2-3b-instruct
+    - llama-3.2-3b-instruct:free
+    - llama-3.3-70b-instruct
+    - llama-3.3-70b-instruct:free
+    - llama-4-maverick
+    - llama-4-scout
+    - llama-guard-4-12b
 
   DeepSeek        :  11 models
     - deepseek-chat

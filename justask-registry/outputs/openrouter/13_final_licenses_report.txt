@@ -1,6 +1,6 @@
 ================================================================================
 FINAL CONSOLIDATED LICENSE LIST REPORT
-Generated: 2026-04-17 08:27:46 IST
+Generated: 2026-04-18 08:18:59 IST
 ================================================================================
 
 SUMMARY:
@@ -10,9 +10,9 @@ SUMMARY:
   Output              : 13_final_licenses.json
 
 SOURCE CATEGORY DISTRIBUTION:
-  Custom: 7 models
+  Custom: 8 models
   Google: 7 models
-  Meta: 3 models
+  Meta: 2 models
   Opensource: 7 models
   Proprietary: 8 models
 
@@ -21,6 +21,7 @@ FINAL LICENSE DISTRIBUTION:
    5 models: APACHE-2.0
    4 models: NVIDIA
    2 models: LFM1.0
+   2 models: MODIFIED MIT
    2 models: QWEN
    2 models: xAI
    1 models: AWS
@@ -28,13 +29,11 @@ FINAL LICENSE DISTRIBUTION:
    1 models: LLAMA-3.1
    1 models: LLAMA-3.2
    1 models: LLAMA-3.3
-   1 models: LLAMA-4
    1 models: MIT
-   1 models: MODIFIED MIT
    1 models: Modified MIT
    1 models: Upstage
 
-Total unique license types: 16
+Total unique license types: 15
 
 DETAILED FINAL MODEL INFORMATION:
 ================================================================================
@@ -84,7 +83,22 @@ MODEL 3: minimax/minimax-m2.5-20260211
 
 ================================================================================
 
-MODEL 4: nvidia/nemotron-3-nano-30b-a3b
+MODEL 4: moonshotai/kimi-k2.5-0127
+--------------------------------------------------
+  ID: moonshotai/kimi-k2.5
+  Original Name: MoonshotAI: Kimi K2.5
+  HuggingFace ID: moonshotai/Kimi-K2.5
+  Canonical Slug: moonshotai/kimi-k2.5-0127
+  Clean Model Name: Kimi K2.5
+  License Info Text: 
+  License Info URL: 
+  License Name: MODIFIED MIT
+  License URL: https://huggingface.co/moonshotai/Kimi-K2.5/blob/main/LICENSE
+  Source Category: custom
+
+================================================================================
+
+MODEL 5: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -99,7 +113,7 @@ MODEL 4: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 5: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 6: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID: nvidia/nemotron-3-super-120b-a12b:free
   Original Name: NVIDIA: Nemotron 3 Super (free)
@@ -114,7 +128,7 @@ MODEL 5: nvidia/nemotron-3-super-120b-a12b-20230311
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-nano-12b-v2-vl
+MODEL 7: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
@@ -129,7 +143,7 @@ MODEL 6: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 7: nvidia/nemotron-nano-9b-v2
+MODEL 8: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -144,7 +158,7 @@ MODEL 7: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 8: google/gemma-3-12b-it
+MODEL 9: google/gemma-3-12b-it
 --------------------------------------------------
   ID: google/gemma-3-12b-it:free
   Original Name: Google: Gemma 3 12B (free)
@@ -159,7 +173,7 @@ MODEL 8: google/gemma-3-12b-it
 
 ================================================================================
 
-MODEL 9: google/gemma-3-27b-it
+MODEL 10: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
@@ -174,7 +188,7 @@ MODEL 9: google/gemma-3-27b-it
 
 ================================================================================
 
-MODEL 10: google/gemma-3-4b-it
+MODEL 11: google/gemma-3-4b-it
 --------------------------------------------------
   ID: google/gemma-3-4b-it:free
   Original Name: Google: Gemma 3 4B (free)
@@ -189,7 +203,7 @@ MODEL 10: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 11: google/gemma-3n-e2b-it
+MODEL 12: google/gemma-3n-e2b-it
 --------------------------------------------------
   ID: google/gemma-3n-e2b-it:free
   Original Name: Google: Gemma 3n 2B (free)
@@ -204,7 +218,7 @@ MODEL 11: google/gemma-3n-e2b-it
 
 ================================================================================
 
-MODEL 12: google/gemma-3n-e4b-it
+MODEL 13: google/gemma-3n-e4b-it
 --------------------------------------------------
   ID: google/gemma-3n-e4b-it:free
   Original Name: Google: Gemma 3n 4B (free)
@@ -219,7 +233,7 @@ MODEL 12: google/gemma-3n-e4b-it
 
 ================================================================================
 
-MODEL 13: google/gemma-4-26b-a4b-it-20260403
+MODEL 14: google/gemma-4-26b-a4b-it-20260403
 --------------------------------------------------
   ID: google/gemma-4-26b-a4b-it:free
   Original Name: Google: Gemma 4 26B A4B  (free)
@@ -234,7 +248,7 @@ MODEL 13: google/gemma-4-26b-a4b-it-20260403
 
 ================================================================================
 
-MODEL 14: google/gemma-4-31b-it-20260402
+MODEL 15: google/gemma-4-31b-it-20260402
 --------------------------------------------------
   ID: google/gemma-4-31b-it:free
   Original Name: Google: Gemma 4 31B (free)
@@ -249,7 +263,7 @@ MODEL 14: google/gemma-4-31b-it-20260402
 
 ================================================================================
 
-MODEL 15: meta-llama/llama-3.2-3b-instruct
+MODEL 16: meta-llama/llama-3.2-3b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.2-3b-instruct:free
   Original Name: Meta: Llama 3.2 3B Instruct (free)
@@ -264,7 +278,7 @@ MODEL 15: meta-llama/llama-3.2-3b-instruct
 
 ================================================================================
 
-MODEL 16: meta-llama/llama-3.3-70b-instruct
+MODEL 17: meta-llama/llama-3.3-70b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.3-70b-instruct:free
   Original Name: Meta: Llama 3.3 70B Instruct (free)
@@ -275,21 +289,6 @@ MODEL 16: meta-llama/llama-3.3-70b-instruct
   License Info URL: 
   License Name: LLAMA-3.3
   License URL: https://www.llama.com/llama3_3/license/
-  Source Category: meta
-
-================================================================================
-
-MODEL 17: meta-llama/llama-guard-4-12b
---------------------------------------------------
-  ID: meta-llama/llama-guard-4-12b:free
-  Original Name: Meta: Llama Guard 4 12B (free)
-  HuggingFace ID: meta-llama/Llama-Guard-4-12B
-  Canonical Slug: meta-llama/llama-guard-4-12b
-  Clean Model Name: Llama Guard 4 12B
-  License Info Text: 
-  License Info URL: 
-  License Name: LLAMA-4
-  License URL: https://www.llama.com/llama4/license/
   Source Category: meta
 
 ================================================================================

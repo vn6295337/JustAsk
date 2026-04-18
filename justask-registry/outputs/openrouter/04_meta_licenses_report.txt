@@ -1,10 +1,10 @@
 ================================================================================
 META MODELS LICENSE EXTRACTION REPORT
-Generated: 2026-04-17 08:27:31 IST
+Generated: 2026-04-18 08:18:46 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 3
+  Total models : 2
   Input        : 02_filtered_models.json
   Processor    : step_04_extract_meta_licenses.py
   Output       : 04_meta_licenses.json
@@ -12,9 +12,8 @@ SUMMARY:
 LICENSE BREAKDOWN:
   LLAMA-3.2: 1 models
   LLAMA-3.3: 1 models
-  LLAMA-4: 1 models
 
-Total license types: 3
+Total license types: 2
 
 DETAILED META MODELS WITH LICENSES:
 ================================================================================
@@ -44,18 +43,4 @@ MODEL 2: meta-llama/llama-3.3-70b-instruct
   License Info URL: 
   License Name: LLAMA-3.3
   License URL: https://www.llama.com/llama3_3/license/
-
-================================================================================
-
-MODEL 3: meta-llama/llama-guard-4-12b
---------------------------------------------------
-  ID: meta-llama/llama-guard-4-12b:free
-  Original Name: Meta: Llama Guard 4 12B (free)
-  HuggingFace ID: meta-llama/Llama-Guard-4-12B
-  Canonical Slug: meta-llama/llama-guard-4-12b
-  Clean Model Name: Llama Guard 4 12B
-  License Info Text: 
-  License Info URL: 
-  License Name: LLAMA-4
-  License URL: https://www.llama.com/llama4/license/
 
