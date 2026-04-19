@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-04-18 08:18:50 IST",
-    "total_models": 15,
+    "generated_at": "2026-04-19 08:53:19 IST",
+    "total_models": 14,
     "pipeline_stage": "E_fetch_other_license_info_urls_from_hf"
   },
   "models": [
@@ -18,13 +18,6 @@
       "name": "MiniMax: MiniMax M2.5 (free)",
       "hugging_face_id": "MiniMaxAI/MiniMax-M2.5",
       "license_info_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md"
-    },
-    {
-      "id": "moonshotai/kimi-k2.5",
-      "canonical_slug": "moonshotai/kimi-k2.5-0127",
-      "name": "MoonshotAI: Kimi K2.5",
-      "hugging_face_id": "moonshotai/Kimi-K2.5",
-      "license_info_url": "https://huggingface.co/moonshotai/Kimi-K2.5/blob/main/LICENSE"
     },
     {
       "id": "liquid/lfm-2.5-1.2b-thinking:free",

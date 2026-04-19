@@ -1,17 +1,17 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-04-18 08:19:02 IST
+Generated: 2026-04-19 08:53:32 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 26
-   • Total records in pipeline: 26
+   • Total unique model names: 25
+   • Total records in pipeline: 25
    • Total records in Supabase: 24
    • Models in both systems: 24
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 2
+   • Models in pipeline only (not in Supabase): 1
    • Models in Supabase only (not in pipeline): 0
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
@@ -56,8 +56,8 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 2
-     Models: Elephant, Kimi K2.5
+   • New models (pipeline only): 1
+     Models: Elephant
    • Existing models with differences: 0
 
 ================================================================================
@@ -321,26 +321,6 @@ license_name              | LLAMA-3.1                 | LLAMA-3.1
 license_url               | https://www.llama.com/l.. | https://www.llama.com/l..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
-
-================================================================================
-
-MODEL: Kimi K2.5
---------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
---------------------------------------------------------------------------------
-inference_provider        | OpenRouter                |                          
-model_provider            | Moonshot AI               |                          
-human_readable_name       | Kimi K2.5                 |                          
-model_provider_country    | China                     |                          
-official_url              | https://www.moonshot.ai/  |                          
-input_modalities          | Text, Image               |                          
-output_modalities         | Text                      |                          
-license_info_text         |                           |                          
-license_info_url          |                           |                          
-license_name              | MODIFIED MIT              |                          
-license_url               | https://huggingface.co/.. |                          
-rate_limits               | 20 requests/min 50/day    |                          
-provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 

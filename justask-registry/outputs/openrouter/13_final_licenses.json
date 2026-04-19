@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-04-18 08:18:59 IST",
-    "total_models": 32,
+    "generated_at": "2026-04-19 08:53:29 IST",
+    "total_models": 31,
     "pipeline_stage": "M_final_list_of_licenses"
   },
   "models": [
@@ -184,18 +184,6 @@
       "license_name": "Modified MIT",
       "license_url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512/blob/main/LICENSE",
       "source_category": "proprietary"
-    },
-    {
-      "id": "moonshotai/kimi-k2.5",
-      "canonical_slug": "moonshotai/kimi-k2.5-0127",
-      "original_name": "MoonshotAI: Kimi K2.5",
-      "hugging_face_id": "moonshotai/Kimi-K2.5",
-      "clean_model_name": "Kimi K2.5",
-      "license_info_text": "",
-      "license_info_url": "",
-      "license_name": "MODIFIED MIT",
-      "license_url": "https://huggingface.co/moonshotai/Kimi-K2.5/blob/main/LICENSE",
-      "source_category": "custom"
     },
     {
       "id": "nousresearch/hermes-3-llama-3.1-405b:free",

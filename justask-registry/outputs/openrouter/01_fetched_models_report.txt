@@ -1,13 +1,13 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-04-18 08:18:46 IST
+Generated: 2026-04-19 08:53:13 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 343
+  Total models: 342
 
 PROVIDER BREAKDOWN (Descending Order):
-  OpenAI          :  62 models
+  OpenAI          :  61 models
     - gpt-3.5-turbo
     - gpt-3.5-turbo-0613
     - gpt-3.5-turbo-16k
@@ -29,7 +29,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - gpt-4o-mini-2024-07-18
     - gpt-4o-mini-search-preview
     - gpt-4o-search-preview
-    - gpt-4o:extended
     - gpt-5
     - gpt-5-chat
     - gpt-5-codex

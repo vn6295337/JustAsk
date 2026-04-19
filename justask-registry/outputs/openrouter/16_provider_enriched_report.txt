@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-04-18 08:18:59 IST
+Generated: 2026-04-19 08:53:30 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 26
+  Total models      : 25
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -22,15 +22,14 @@ MODEL PROVIDER DISTRIBUTION:
    2 models: OpenRouter
    1 models: Cognitive Computations
    1 models: MiniMax
-   1 models: Moonshot AI
    1 models: Nous Research
    1 models: Z.AI
 
-Total unique model providers: 12
+Total unique model providers: 11
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
   21 models: United States
-   4 models: China
+   3 models: China
    1 models: Singapore
 
 Total unique countries: 3
@@ -45,11 +44,10 @@ MODEL FAMILY DISTRIBUTION:
    2 models: openrouter
    1 models: cognitive computations
    1 models: minimax
-   1 models: moonshot ai
    1 models: nous research
    1 models: z.ai
 
-Total unique model families: 12
+Total unique model families: 11
 
 DETAILED PROVIDER ENRICHED MODEL INFORMATION:
 ================================================================================
@@ -264,21 +262,7 @@ MODEL 15: minimax/minimax-m2.5-20260211
 
 ================================================================================
 
-MODEL 16: moonshotai/kimi-k2.5-0127
---------------------------------------------------
-  ID: moonshotai/kimi-k2.5
-  Original Name: MoonshotAI: Kimi K2.5
-  HuggingFace ID: moonshotai/Kimi-K2.5
-  Canonical Slug: moonshotai/kimi-k2.5-0127
-  Clean Model Name: Kimi K2.5
-  Model Provider: Moonshot AI
-  Model Provider Country: China
-  Model Family: moonshot ai
-  Official URL: https://www.moonshot.ai/
-
-================================================================================
-
-MODEL 17: nousresearch/hermes-3-llama-3.1-405b
+MODEL 16: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -292,7 +276,7 @@ MODEL 17: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 18: nvidia/nemotron-3-nano-30b-a3b
+MODEL 17: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -306,7 +290,7 @@ MODEL 18: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 19: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 18: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID: nvidia/nemotron-3-super-120b-a12b:free
   Original Name: NVIDIA: Nemotron 3 Super (free)
@@ -320,7 +304,7 @@ MODEL 19: nvidia/nemotron-3-super-120b-a12b-20230311
 
 ================================================================================
 
-MODEL 20: nvidia/nemotron-nano-12b-v2-vl
+MODEL 19: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
@@ -334,7 +318,7 @@ MODEL 20: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 21: nvidia/nemotron-nano-9b-v2
+MODEL 20: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -348,7 +332,7 @@ MODEL 21: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 22: openai/gpt-oss-120b
+MODEL 21: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -362,7 +346,7 @@ MODEL 22: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 23: openai/gpt-oss-20b
+MODEL 22: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -376,7 +360,7 @@ MODEL 23: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 24: openrouter/elephant-alpha
+MODEL 23: openrouter/elephant-alpha
 --------------------------------------------------
   ID: openrouter/elephant-alpha
   Original Name: Elephant
@@ -390,7 +374,7 @@ MODEL 24: openrouter/elephant-alpha
 
 ================================================================================
 
-MODEL 25: openrouter/free
+MODEL 24: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -404,7 +388,7 @@ MODEL 25: openrouter/free
 
 ================================================================================
 
-MODEL 26: z-ai/glm-4.5-air
+MODEL 25: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)

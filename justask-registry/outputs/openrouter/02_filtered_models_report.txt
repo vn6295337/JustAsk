@@ -1,34 +1,34 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-04-18 08:18:46 IST
+Generated: 2026-04-19 08:53:13 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 343
-  Models passed all filters: 26
+  Total models processed: 342
+  Models passed all filters: 25
   Models excluded: 317
-  Success rate: 7.6%
+  Success rate: 7.3%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 343 models
+    Input: 342 models
     Excluded: 314 models (non-free pricing)
-    Remaining: 29 models
+    Remaining: 28 models
 
   Step 2 - Billing Description Filter:
-    Input: 29 models
+    Input: 28 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 29 models
+    Remaining: 28 models
 
   Step 3 - Keyword Filter:
-    Input: 29 models
+    Input: 28 models
     Excluded: 3 models (preview/experimental/beta)
-    Remaining: 26 models
+    Remaining: 25 models
 
   Step 4 - Deduplication Filter:
-    Input: 26 models
+    Input: 25 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 26 models
+    Final: 25 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
@@ -170,13 +170,6 @@ PROVIDER: MINIMAX (1 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
-PROVIDER: MOONSHOTAI (1 models)
---------------------------------------------------
-   1. MoonshotAI: Kimi K2.5
-      ID: moonshotai/kimi-k2.5
-      Pricing: prompt=0, completion=0, request=N/A
-
-
 PROVIDER: Z.AI (1 models)
 --------------------------------------------------
    1. Z.ai: GLM 4.5 Air (free)
@@ -200,8 +193,8 @@ PROVIDER: NOUS (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 12
-  Total models passed all filters: 26
+  Total providers: 11
+  Total models passed all filters: 25
   Models excluded by pricing: 314
   Models excluded by billing description: 0
   Models excluded by keywords: 3

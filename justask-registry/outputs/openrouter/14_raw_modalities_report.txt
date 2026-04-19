@@ -1,29 +1,29 @@
 ================================================================================
 RAW MODALITIES EXTRACTION REPORT
-Generated: 2026-04-18 08:18:59 IST
+Generated: 2026-04-19 08:53:29 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 26
+  Total models : 25
   Input        : 02_filtered_models.json
   Processor    : step_14_extract_modalities.py
   Output       : 14_raw_modalities.json
 
 RAW INPUT MODALITIES DISTRIBUTION:
   18 models: text
-   5 models: text, image
+   4 models: text, image
    3 models: image, text, video
 
 Total unique input types: 3
 
 RAW OUTPUT MODALITIES DISTRIBUTION:
-  26 models: text
+  25 models: text
 
 Total unique output types: 1
 
 RAW MODALITY COMBINATIONS (INPUT → OUTPUT):
   18 models: text → text
-   5 models: text, image → text
+   4 models: text, image → text
    3 models: image, text, video → text
 
 Total unique combinations: 3
@@ -326,18 +326,6 @@ MODEL 25: google/gemma-3-4b-it
   HuggingFace ID: google/gemma-3-4b-it
   Canonical Slug: google/gemma-3-4b-it
   Clean Model Name: Gemma 3 4B IT
-  Raw Input Modalities: text, image
-  Raw Output Modalities: text
-
-================================================================================
-
-MODEL 26: moonshotai/kimi-k2.5-0127
---------------------------------------------------
-  ID: moonshotai/kimi-k2.5
-  Original Name: MoonshotAI: Kimi K2.5
-  HuggingFace ID: moonshotai/Kimi-K2.5
-  Canonical Slug: moonshotai/kimi-k2.5-0127
-  Clean Model Name: Kimi K2.5
   Raw Input Modalities: text, image
   Raw Output Modalities: text
 

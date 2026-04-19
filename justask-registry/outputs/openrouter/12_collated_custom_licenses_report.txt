@@ -1,10 +1,10 @@
 ================================================================================
 COLLATED CUSTOM LICENSE INFORMATION REPORT
-Generated: 2026-04-18 08:18:58 IST
+Generated: 2026-04-19 08:53:29 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 8
+  Total models        : 7
   Input sources       : 10_custom_license_urls.json + 05_hf_license_urls.json
   Processor           : step_12_collate_custom.py
   Output              : 12_collated_custom_licenses.json
@@ -12,12 +12,12 @@ SUMMARY:
 CUSTOM LICENSE DISTRIBUTION:
    4 models: NVIDIA
    2 models: LFM1.0
-   2 models: MODIFIED MIT
+   1 models: MODIFIED MIT
 
 Total unique license types: 3
 
 LICENSE URL TYPE DISTRIBUTION:
-   3 models: LICENSE file
+   2 models: LICENSE file
    5 models: README.md file
 
 Total URL types: 2
@@ -67,21 +67,7 @@ MODEL 3: minimax/minimax-m2.5-20260211
 
 ================================================================================
 
-MODEL 4: moonshotai/kimi-k2.5-0127
---------------------------------------------------
-  ID: moonshotai/kimi-k2.5
-  Original Name: MoonshotAI: Kimi K2.5
-  HuggingFace ID: moonshotai/Kimi-K2.5
-  Canonical Slug: moonshotai/kimi-k2.5-0127
-  Clean Model Name: Kimi K2.5
-  License Info Text: 
-  License Info URL: 
-  License Name: MODIFIED MIT
-  License URL: https://huggingface.co/moonshotai/Kimi-K2.5/blob/main/LICENSE
-
-================================================================================
-
-MODEL 5: nvidia/nemotron-3-nano-30b-a3b
+MODEL 4: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -95,7 +81,7 @@ MODEL 5: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 5: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID: nvidia/nemotron-3-super-120b-a12b:free
   Original Name: NVIDIA: Nemotron 3 Super (free)
@@ -109,7 +95,7 @@ MODEL 6: nvidia/nemotron-3-super-120b-a12b-20230311
 
 ================================================================================
 
-MODEL 7: nvidia/nemotron-nano-12b-v2-vl
+MODEL 6: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
@@ -123,7 +109,7 @@ MODEL 7: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 8: nvidia/nemotron-nano-9b-v2
+MODEL 7: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)

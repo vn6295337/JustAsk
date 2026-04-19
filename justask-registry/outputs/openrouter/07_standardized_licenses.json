@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-04-18 08:18:55 IST",
-    "total_models": 15,
+    "generated_at": "2026-04-19 08:53:25 IST",
+    "total_models": 14,
     "pipeline_stage": "G_standardize_other_license_names_from_hf"
   },
   "models": [
@@ -18,14 +18,6 @@
       "canonical_slug": "minimax/minimax-m2.5-20260211",
       "name": "MiniMax: MiniMax M2.5 (free)",
       "hugging_face_id": "MiniMaxAI/MiniMax-M2.5",
-      "raw_extracted_license": "modified-mit",
-      "standardized_license_name": "MODIFIED MIT"
-    },
-    {
-      "id": "moonshotai/kimi-k2.5",
-      "canonical_slug": "moonshotai/kimi-k2.5-0127",
-      "name": "MoonshotAI: Kimi K2.5",
-      "hugging_face_id": "moonshotai/Kimi-K2.5",
       "raw_extracted_license": "modified-mit",
       "standardized_license_name": "MODIFIED MIT"
     },
