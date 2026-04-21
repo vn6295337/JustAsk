@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-04-20 08:55:31 IST
+Generated: 2026-04-21 08:28:28 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 342
+  Total models: 343
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  61 models
@@ -276,6 +276,13 @@ PROVIDER BREAKDOWN (Descending Order):
     - trinity-mini
     - virtuoso-large
 
+  MoonshotAI      :   5 models
+    - kimi-k2
+    - kimi-k2-0905
+    - kimi-k2-thinking
+    - kimi-k2.5
+    - kimi-k2.6
+
   Amazon          :   5 models
     - nova-2-lite-v1
     - nova-lite-v1
@@ -315,12 +322,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - aion-1.0-mini
     - aion-2.0
     - aion-rp-llama-3.1-8b
-
-  MoonshotAI      :   4 models
-    - kimi-k2
-    - kimi-k2-0905
-    - kimi-k2-thinking
-    - kimi-k2.5
 
   TheDrummer      :   4 models
     - cydonia-24b-v4.1
