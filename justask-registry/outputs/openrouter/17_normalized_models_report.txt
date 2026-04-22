@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-04-21 08:28:44 IST
+Generated: 2026-04-22 08:27:24 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -10,7 +10,6 @@ MISSING OR EMPTY VALUES:
 ------------------------------
 
 LICENSE INFO TEXT (18 models):
-  - Elephant
   - Free Models Router
   - Gemma 3 12B IT
   - Gemma 3 27B IT
@@ -21,6 +20,7 @@ LICENSE INFO TEXT (18 models):
   - Gemma 4 31B IT 20260402
   - LFM2.5-1.2B-Instruct
   - LFM2.5-1.2B-Thinking
+  - Ling-2.6-flash
   - Llama 3.2 3B Instruct
   - Llama 3.3 70B Instruct
   - MiniMax M2.5
@@ -30,7 +30,6 @@ LICENSE INFO TEXT (18 models):
   - Nemotron Nano 9B V2
 
 LICENSE INFO URL (18 models):
-  - Elephant
   - Free Models Router
   - Gemma 3 12B IT
   - Gemma 3 27B IT
@@ -41,6 +40,7 @@ LICENSE INFO URL (18 models):
   - Gemma 4 31B IT 20260402
   - LFM2.5-1.2B-Instruct
   - LFM2.5-1.2B-Thinking
+  - Ling-2.6-flash
   - Llama 3.2 3B Instruct
   - Llama 3.3 70B Instruct
   - MiniMax M2.5
@@ -50,16 +50,18 @@ LICENSE INFO URL (18 models):
   - Nemotron Nano 9B V2
 
 LICENSE NAME (2 models):
-  - Elephant
   - Free Models Router
+  - Ling-2.6-flash
 
 LICENSE URL (2 models):
-  - Elephant
   - Free Models Router
+  - Ling-2.6-flash
 
 UNKNOWN OR 'NOT FOUND' VALUES:
 ------------------------------
-✓ No unknown values found
+
+MODEL PROVIDER (1 models):
+  - Ling-2.6-flash
 
 DATA QUALITY SUMMARY:
 ------------------------------
@@ -68,6 +70,7 @@ Missing license info text: 18 (72.0%)
 Missing license info url: 18 (72.0%)
 Missing license name: 2 (8.0%)
 Missing license url: 2 (8.0%)
+Unknown model provider: 1 (4.0%)
 
 ================================================================================
 
@@ -294,9 +297,9 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 23. Elephant
+ 23. Free Models Router
      Provider           : OpenRouter (United States)
-     Modalities         : Text → Text
+     Modalities         : Text, Image → Text
      License            : 
      License Info       : 
      License URL        : 
@@ -304,13 +307,13 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 24. Free Models Router
-     Provider           : OpenRouter (United States)
-     Modalities         : Text, Image → Text
+ 24. Ling-2.6-flash
+     Provider           : Unknown (Unknown)
+     Modalities         : Text → Text
      License            : 
      License Info       : 
      License URL        : 
-     Official URL       : https://openrouter.ai/
+     Official URL       : Unknown
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 

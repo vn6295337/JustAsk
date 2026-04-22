@@ -1,13 +1,13 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-04-21 08:28:28 IST
+Generated: 2026-04-22 08:27:10 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 343
+  Total models: 346
 
 PROVIDER BREAKDOWN (Descending Order):
-  OpenAI          :  61 models
+  OpenAI          :  62 models
     - gpt-3.5-turbo
     - gpt-3.5-turbo-0613
     - gpt-3.5-turbo-16k
@@ -49,6 +49,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - gpt-5.3-chat
     - gpt-5.3-codex
     - gpt-5.4
+    - gpt-5.4-image-2
     - gpt-5.4-mini
     - gpt-5.4-nano
     - gpt-5.4-pro
@@ -174,7 +175,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - pixtral-large-2411
     - voxtral-small-24b-2507
 
-  Anthropic       :  14 models
+  Anthropic       :  15 models
     - claude-3-haiku
     - claude-3.5-haiku
     - claude-3.7-sonnet
@@ -186,6 +187,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - claude-opus-4.6
     - claude-opus-4.6-fast
     - claude-opus-4.7
+    - claude-opus-latest
     - claude-sonnet-4
     - claude-sonnet-4.5
     - claude-sonnet-4.6
@@ -367,6 +369,9 @@ PROVIDER BREAKDOWN (Descending Order):
     - inflection-3-pi
     - inflection-3-productivity
 
+  inclusionAI     :   1 models
+    - ling-2.6-flash:free
+
   Kwaipilot       :   1 models
     - kat-coder-pro-v2
 
@@ -427,4 +432,4 @@ PROVIDER BREAKDOWN (Descending Order):
   Mancer          :   1 models
     - weaver
 
-Total providers: 48
+Total providers: 49

@@ -1,16 +1,16 @@
 {
   "metadata": {
-    "generated_at": "2026-04-21 08:28:43 IST",
+    "generated_at": "2026-04-22 08:27:24 IST",
     "total_models": 25,
     "pipeline_stage": "O_standardize_raw_modalities"
   },
   "models": [
     {
-      "id": "openrouter/elephant-alpha",
-      "canonical_slug": "openrouter/elephant-alpha",
-      "original_name": "Elephant",
-      "hugging_face_id": null,
-      "clean_model_name": "Elephant",
+      "id": "inclusionai/ling-2.6-flash:free",
+      "canonical_slug": "inclusionai/ling-2.6-flash-20260421",
+      "original_name": "inclusionAI: Ling-2.6-flash (free)",
+      "hugging_face_id": "",
+      "clean_model_name": "Ling-2.6-flash",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text",
       "enhanced_input_modalities": "text",

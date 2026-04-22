@@ -1,5 +1,5 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-04-21 08:28:46 IST
+Generated: 2026-04-22 08:27:27 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -57,31 +57,11 @@ SUMMARY STATISTICS
 
 3. CATEGORIZED BREAKDOWN:
    • New models (pipeline only): 1
-     Models: Elephant
+     Models: Ling-2.6-flash
    • Existing models with differences: 0
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
-================================================================================
-
-MODEL: Elephant
---------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
---------------------------------------------------------------------------------
-inference_provider        | OpenRouter                |                          
-model_provider            | OpenRouter                |                          
-human_readable_name       | Elephant                  |                          
-model_provider_country    | United States             |                          
-official_url              | https://openrouter.ai/    |                          
-input_modalities          | Text                      |                          
-output_modalities         | Text                      |                          
-license_info_text         |                           |                          
-license_info_url          |                           |                          
-license_name              |                           |                          
-license_url               |                           |                          
-rate_limits               | 20 requests/min 50/day    |                          
-provider_api_access       | https://openrouter.ai/s.. |                          
-
 ================================================================================
 
 MODEL: Free Models Router
@@ -361,6 +341,26 @@ license_name              | LFM1.0                    | LFM1.0
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+
+================================================================================
+
+MODEL: Ling-2.6-flash
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | Unknown                   |                          
+human_readable_name       | Ling-2.6-flash            |                          
+model_provider_country    | Unknown                   |                          
+official_url              | Unknown                   |                          
+input_modalities          | Text                      |                          
+output_modalities         | Text                      |                          
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              |                           |                          
+license_url               |                           |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 

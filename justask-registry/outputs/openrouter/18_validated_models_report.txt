@@ -1,6 +1,6 @@
 ================================================================================
 DATABASE DATA FINALIZATION REPORT
-Generated: 2026-04-21 08:28:44 IST
+Generated: 2026-04-22 08:27:25 IST
 ================================================================================
 
 SUMMARY:
@@ -29,13 +29,14 @@ PROVIDER DISTRIBUTION (FINALIZED DATA):
    2 models: Liquid AI
    2 models: Meta
    2 models: OpenAI
-   2 models: OpenRouter
    1 models: Cognitive Computations
    1 models: MiniMax
    1 models: Nous Research
+   1 models: OpenRouter
+   1 models: Unknown
    1 models: Z.AI
 
-Total providers: 11
+Total providers: 12
 
 FAMILY DISTRIBUTION (FINALIZED DATA):
   25 models: Unknown

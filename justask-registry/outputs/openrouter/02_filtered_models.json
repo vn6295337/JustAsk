@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "generated_at": "2026-04-21 08:28:28 IST",
+    "generated_at": "2026-04-22 08:27:10 IST",
     "total_models": 25,
     "pipeline_stage": "B_filter_models"
   },
   "models": [
     {
-      "id": "openrouter/elephant-alpha",
-      "canonical_slug": "openrouter/elephant-alpha",
-      "hugging_face_id": null,
-      "name": "Elephant",
-      "created": 1776052598,
-      "description": "Elephant Alpha is a 100B-parameter text model focused on intelligence efficiency, delivering strong performance while minimizing token usage. It supports a 256K context window with up to 32K output tokens,...",
+      "id": "inclusionai/ling-2.6-flash:free",
+      "canonical_slug": "inclusionai/ling-2.6-flash-20260421",
+      "hugging_face_id": "",
+      "name": "inclusionAI: Ling-2.6-flash (free)",
+      "created": 1776795886,
+      "description": "Ling-2.6-flash is an instant (instruct) model from inclusionAI with 104B total parameters and 7.4B active parameters, designed for real-world agents that require fast responses, strong execution, and high token efficiency....",
       "context_length": 262144,
       "architecture": {
         "modality": "text->text",
@@ -35,12 +35,18 @@
       },
       "per_request_limits": null,
       "supported_parameters": [
+        "frequency_penalty",
         "max_tokens",
+        "presence_penalty",
+        "repetition_penalty",
         "response_format",
+        "seed",
+        "stop",
         "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
+        "top_k",
         "top_p"
       ],
       "default_parameters": {
@@ -54,7 +60,7 @@
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
-        "details": "/api/v1/models/openrouter/elephant-alpha/endpoints"
+        "details": "/api/v1/models/inclusionai/ling-2.6-flash-20260421/endpoints"
       }
     },
     {
