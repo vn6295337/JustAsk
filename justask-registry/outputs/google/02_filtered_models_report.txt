@@ -1,11 +1,11 @@
 === GOOGLE MODELS FILTERING REPORT ===
-Generated: 2026-04-21 08:26:50 IST
+Generated: 2026-04-22 08:25:37 IST
 
 === SUMMARY ===
-Total Input Models: 52
+Total Input Models: 54
 Models Included: 22
-Models Excluded: 30
-Filtering Success Rate: 42.3%
+Models Excluded: 32
+Filtering Success Rate: 40.7%
 
 === EXCLUDED MODELS ===
  1. gemini-2.5-flash-preview-tts
@@ -28,16 +28,18 @@ Filtering Success Rate: 42.3%
 18. gemini-robotics-er-1.5-preview
 19. gemini-robotics-er-1.6-preview
 20. gemini-2.5-computer-use-preview-10-2025
-21. deep-research-pro-preview-12-2025
-22. gemini-embedding-2-preview
-23. veo-2.0-generate-001
-24. veo-3.1-generate-preview
-25. veo-3.1-fast-generate-preview
-26. veo-3.1-lite-generate-preview
-27. gemini-2.5-flash-native-audio-latest
-28. gemini-2.5-flash-native-audio-preview-09-2025
-29. gemini-2.5-flash-native-audio-preview-12-2025
-30. gemini-3.1-flash-live-preview
+21. deep-research-max-preview-04-2026
+22. deep-research-preview-04-2026
+23. deep-research-pro-preview-12-2025
+24. gemini-embedding-2-preview
+25. veo-2.0-generate-001
+26. veo-3.1-generate-preview
+27. veo-3.1-fast-generate-preview
+28. veo-3.1-lite-generate-preview
+29. gemini-2.5-flash-native-audio-latest
+30. gemini-2.5-flash-native-audio-preview-09-2025
+31. gemini-2.5-flash-native-audio-preview-12-2025
+32. gemini-3.1-flash-live-preview
 
 === INCLUDED MODELS ===
  1. gemini-2.5-flash
@@ -64,7 +66,7 @@ Filtering Success Rate: 42.3%
 22. veo-3.0-fast-generate-001
 
 === EXCLUSION BREAKDOWN ===
-25 models: Experimental/Preview model - production-ready models only
+27 models: Experimental/Preview model - production-ready models only
  1 models: Model requires billing/payment - free models only
  1 models: Preview model - gemini-2.5-flash-native-audio-preview-09-2025 (https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-live). Note: preview tag not mentioned in API response.
  1 models: Preview model - gemini-flash-latest is a preview pointer per Sep 25 2025 Google update (https://developers.googleblog.com/en/continuing-to-bring-you-our-latest-models-with-an-improved-gemini-2-5-flash-and-flash-lite-release/). Note: preview tag not mentioned in API response.
