@@ -1,18 +1,18 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-04-22 08:27:10 IST
+Generated: 2026-04-23 08:49:28 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 346
-  Models passed all filters: 25
-  Models excluded: 321
-  Success rate: 7.2%
+  Total models processed: 348
+  Models passed all filters: 26
+  Models excluded: 322
+  Success rate: 7.5%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 346 models
-    Excluded: 318 models (non-free pricing)
+    Input: 348 models
+    Excluded: 320 models (non-free pricing)
     Remaining: 28 models
 
   Step 2 - Billing Description Filter:
@@ -22,18 +22,18 @@ STEP-BY-STEP FILTERING BREAKDOWN:
 
   Step 3 - Keyword Filter:
     Input: 28 models
-    Excluded: 3 models (preview/experimental/beta)
-    Remaining: 25 models
+    Excluded: 2 models (preview/experimental/beta)
+    Remaining: 26 models
 
   Step 4 - Deduplication Filter:
-    Input: 25 models
+    Input: 26 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 25 models
+    Final: 26 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 318 models with non-free pricing (details omitted due to volume)
+Excluded 320 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -43,11 +43,10 @@ No models found with billing requirements in description.
 ================================================================================
 STEP 3 - KEYWORD FILTER RESULTS (DETAILED)
 ================================================================================
-EXCLUDED FOR: PREVIEW/EXPERIMENTAL VERSION (3 models)
+EXCLUDED FOR: PREVIEW/EXPERIMENTAL VERSION (2 models)
 --------------------------------------------------
-   1. Arcee AI: Trinity Large Preview (free)
-   2. Google: Lyria 3 Clip Preview
-   3. Google: Lyria 3 Pro Preview
+   1. Google: Lyria 3 Clip Preview
+   2. Google: Lyria 3 Pro Preview
 
 ================================================================================
 STEP 4 - DEDUPLICATION FILTER RESULTS (DETAILED)
@@ -159,6 +158,13 @@ PROVIDER: INCLUSIONAI (1 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
+PROVIDER: BAIDU (1 models)
+--------------------------------------------------
+   1. Baidu: Qianfan-OCR-Fast (free)
+      ID: baidu/qianfan-ocr-fast:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+
 PROVIDER: MINIMAX (1 models)
 --------------------------------------------------
    1. MiniMax: MiniMax M2.5 (free)
@@ -196,11 +202,11 @@ PROVIDER: NOUS (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 12
-  Total models passed all filters: 25
-  Models excluded by pricing: 318
+  Total providers: 13
+  Total models passed all filters: 26
+  Models excluded by pricing: 320
   Models excluded by billing description: 0
-  Models excluded by keywords: 3
+  Models excluded by keywords: 2
   Models excluded by deduplication: 0
-  Total exclusions: 321
+  Total exclusions: 322
   ✓ All filtered models accounted for

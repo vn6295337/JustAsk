@@ -1,17 +1,17 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-04-22 08:27:27 IST
+Generated: 2026-04-23 08:49:43 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 25
-   • Total records in pipeline: 25
+   • Total unique model names: 26
+   • Total records in pipeline: 26
    • Total records in Supabase: 24
    • Models in both systems: 24
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 1
+   • Models in pipeline only (not in Supabase): 2
    • Models in Supabase only (not in pipeline): 0
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
@@ -56,8 +56,8 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 1
-     Models: Ling-2.6-flash
+   • New models (pipeline only): 2
+     Models: Ling-2.6-flash, Qianfan-OCR-Fast
    • Existing models with differences: 0
 
 ================================================================================
@@ -501,6 +501,26 @@ license_name              | NVIDIA                    | NVIDIA
 license_url               | https://huggingface.co/.. | https://huggingface.co/..
 rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
 provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+
+================================================================================
+
+MODEL: Qianfan-OCR-Fast
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | Unknown                   |                          
+human_readable_name       | Qianfan-OCR-Fast          |                          
+model_provider_country    | Unknown                   |                          
+official_url              | Unknown                   |                          
+input_modalities          | Text, Image               |                          
+output_modalities         | Text                      |                          
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              |                           |                          
+license_url               |                           |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
 
 ================================================================================
 

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-04-22 08:27:10 IST",
-    "total_models": 25,
+    "generated_at": "2026-04-23 08:49:28 IST",
+    "total_models": 26,
     "pipeline_stage": "B_filter_models"
   },
   "models": [
@@ -58,9 +58,65 @@
         "repetition_penalty": null
       },
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-04-29",
       "links": {
         "details": "/api/v1/models/inclusionai/ling-2.6-flash-20260421/endpoints"
+      }
+    },
+    {
+      "id": "baidu/qianfan-ocr-fast:free",
+      "canonical_slug": "baidu/qianfan-ocr-fast-20260420",
+      "hugging_face_id": "",
+      "name": "Baidu: Qianfan-OCR-Fast (free)",
+      "created": 1776707472,
+      "description": "Qianfan-OCR-Fast is a domain-specific multimodal large model purpose-built for OCR. By leveraging specialized OCR training data while preserving versatile multimodal intelligence, it provides a powerful performance upgrade over Qianfan-OCR.",
+      "context_length": 65536,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "top_provider": {
+        "context_length": 65536,
+        "max_completion_tokens": 28672,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "seed",
+        "stop",
+        "temperature",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/baidu/qianfan-ocr-fast-20260420/endpoints"
       }
     },
     {

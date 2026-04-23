@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-04-22 08:27:24 IST",
-    "total_models": 25,
+    "generated_at": "2026-04-23 08:49:41 IST",
+    "total_models": 26,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
@@ -23,6 +23,26 @@
       "model_provider": "Unknown",
       "model_provider_country": "Unknown",
       "model_family": "inclusionai",
+      "official_url": "Unknown"
+    },
+    {
+      "id": "baidu/qianfan-ocr-fast:free",
+      "canonical_slug": "baidu/qianfan-ocr-fast-20260420",
+      "provider_slug": "qianfan-ocr-fast-20260420",
+      "original_name": "Baidu: Qianfan-OCR-Fast (free)",
+      "hugging_face_id": "",
+      "clean_model_name": "Qianfan-OCR-Fast",
+      "raw_input_modalities": "image, text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "image, text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text, Image",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "Unknown",
+      "model_provider_country": "Unknown",
+      "model_family": "baidu",
       "official_url": "Unknown"
     },
     {

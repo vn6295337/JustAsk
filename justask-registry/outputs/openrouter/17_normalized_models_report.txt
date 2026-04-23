@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-04-22 08:27:24 IST
+Generated: 2026-04-23 08:49:41 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -9,7 +9,7 @@ DATA QUALITY ISSUES:
 MISSING OR EMPTY VALUES:
 ------------------------------
 
-LICENSE INFO TEXT (18 models):
+LICENSE INFO TEXT (19 models):
   - Free Models Router
   - Gemma 3 12B IT
   - Gemma 3 27B IT
@@ -28,8 +28,9 @@ LICENSE INFO TEXT (18 models):
   - Nemotron 3 Super
   - Nemotron Nano 12B 2 VL
   - Nemotron Nano 9B V2
+  - Qianfan-OCR-Fast
 
-LICENSE INFO URL (18 models):
+LICENSE INFO URL (19 models):
   - Free Models Router
   - Gemma 3 12B IT
   - Gemma 3 27B IT
@@ -48,29 +49,33 @@ LICENSE INFO URL (18 models):
   - Nemotron 3 Super
   - Nemotron Nano 12B 2 VL
   - Nemotron Nano 9B V2
+  - Qianfan-OCR-Fast
 
-LICENSE NAME (2 models):
+LICENSE NAME (3 models):
   - Free Models Router
   - Ling-2.6-flash
+  - Qianfan-OCR-Fast
 
-LICENSE URL (2 models):
+LICENSE URL (3 models):
   - Free Models Router
   - Ling-2.6-flash
+  - Qianfan-OCR-Fast
 
 UNKNOWN OR 'NOT FOUND' VALUES:
 ------------------------------
 
-MODEL PROVIDER (1 models):
+MODEL PROVIDER (2 models):
   - Ling-2.6-flash
+  - Qianfan-OCR-Fast
 
 DATA QUALITY SUMMARY:
 ------------------------------
-Total models: 25
-Missing license info text: 18 (72.0%)
-Missing license info url: 18 (72.0%)
-Missing license name: 2 (8.0%)
-Missing license url: 2 (8.0%)
-Unknown model provider: 1 (4.0%)
+Total models: 26
+Missing license info text: 19 (73.1%)
+Missing license info url: 19 (73.1%)
+Missing license name: 3 (11.5%)
+Missing license url: 3 (11.5%)
+Unknown model provider: 2 (7.7%)
 
 ================================================================================
 
@@ -317,7 +322,17 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 25. GLM 4.5 Air
+ 25. Qianfan-OCR-Fast
+     Provider           : Unknown (Unknown)
+     Modalities         : Text, Image → Text
+     License            : 
+     License Info       : 
+     License URL        : 
+     Official URL       : Unknown
+     Rate Limits        : 20 requests/min 50/day
+     Provider API Access: https://openrouter.ai/settings/keys
+
+ 26. GLM 4.5 Air
      Provider           : Z.AI (China)
      Modalities         : Text → Text
      License            : MIT

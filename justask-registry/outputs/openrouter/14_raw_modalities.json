@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-04-22 08:27:24 IST",
-    "total_models": 25,
+    "generated_at": "2026-04-23 08:49:40 IST",
+    "total_models": 26,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
@@ -12,6 +12,15 @@
       "hugging_face_id": "",
       "clean_model_name": "Ling-2.6-flash",
       "raw_input_modalities": "text",
+      "raw_output_modalities": "text"
+    },
+    {
+      "id": "baidu/qianfan-ocr-fast:free",
+      "canonical_slug": "baidu/qianfan-ocr-fast-20260420",
+      "original_name": "Baidu: Qianfan-OCR-Fast (free)",
+      "hugging_face_id": "",
+      "clean_model_name": "Qianfan-OCR-Fast",
+      "raw_input_modalities": "image, text",
       "raw_output_modalities": "text"
     },
     {

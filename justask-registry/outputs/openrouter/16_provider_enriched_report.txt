@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-04-22 08:27:24 IST
+Generated: 2026-04-23 08:49:41 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 25
+  Total models      : 26
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -12,12 +12,14 @@ SUMMARY:
 
 ACTION ITEMS - UNKNOWN MAPPINGS:
 ==================================================
-UNKNOWN PROVIDERS (1 models):
+UNKNOWN PROVIDERS (2 models):
   Add these provider mappings to provider_enrichment.json:
+    "baidu": ["Provider Name", "Country"],
     "inclusionai": ["Provider Name", "Country"],
 
-UNKNOWN OFFICIAL URLS (1 unique families):
+UNKNOWN OFFICIAL URLS (2 unique families):
   Add these URL mappings to family_official_urls:
+    "baidu": "https://official-url-here",
     "inclusionai": "https://official-url-here",
 
 ==================================================
@@ -29,11 +31,11 @@ MODEL PROVIDER DISTRIBUTION:
    2 models: Liquid AI
    2 models: Meta
    2 models: OpenAI
+   2 models: Unknown
    1 models: Cognitive Computations
    1 models: MiniMax
    1 models: Nous Research
    1 models: OpenRouter
-   1 models: Unknown
    1 models: Z.AI
 
 Total unique model providers: 12
@@ -41,8 +43,8 @@ Total unique model providers: 12
 MODEL PROVIDER COUNTRY DISTRIBUTION:
   20 models: United States
    3 models: China
+   2 models: Unknown
    1 models: Singapore
-   1 models: Unknown
 
 Total unique countries: 4
 
@@ -53,6 +55,7 @@ MODEL FAMILY DISTRIBUTION:
    2 models: liquid ai
    2 models: meta
    2 models: openai
+   1 models: baidu
    1 models: cognitive computations
    1 models: inclusionai
    1 models: minimax
@@ -60,7 +63,7 @@ MODEL FAMILY DISTRIBUTION:
    1 models: openrouter
    1 models: z.ai
 
-Total unique model families: 12
+Total unique model families: 13
 
 DETAILED PROVIDER ENRICHED MODEL INFORMATION:
 ================================================================================
@@ -93,7 +96,21 @@ MODEL 2: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 3: venice/uncensored
+MODEL 3: baidu/qianfan-ocr-fast-20260420
+--------------------------------------------------
+  ID: baidu/qianfan-ocr-fast:free
+  Original Name: Baidu: Qianfan-OCR-Fast (free)
+  HuggingFace ID: 
+  Canonical Slug: baidu/qianfan-ocr-fast-20260420
+  Clean Model Name: Qianfan-OCR-Fast
+  Model Provider: Unknown
+  Model Provider Country: Unknown
+  Model Family: baidu
+  Official URL: Unknown
+
+================================================================================
+
+MODEL 4: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -107,7 +124,7 @@ MODEL 3: venice/uncensored
 
 ================================================================================
 
-MODEL 4: google/gemma-3-12b-it
+MODEL 5: google/gemma-3-12b-it
 --------------------------------------------------
   ID: google/gemma-3-12b-it:free
   Original Name: Google: Gemma 3 12B (free)
@@ -121,7 +138,7 @@ MODEL 4: google/gemma-3-12b-it
 
 ================================================================================
 
-MODEL 5: google/gemma-3-27b-it
+MODEL 6: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
@@ -135,7 +152,7 @@ MODEL 5: google/gemma-3-27b-it
 
 ================================================================================
 
-MODEL 6: google/gemma-3-4b-it
+MODEL 7: google/gemma-3-4b-it
 --------------------------------------------------
   ID: google/gemma-3-4b-it:free
   Original Name: Google: Gemma 3 4B (free)
@@ -149,7 +166,7 @@ MODEL 6: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 7: google/gemma-3n-e2b-it
+MODEL 8: google/gemma-3n-e2b-it
 --------------------------------------------------
   ID: google/gemma-3n-e2b-it:free
   Original Name: Google: Gemma 3n 2B (free)
@@ -163,7 +180,7 @@ MODEL 7: google/gemma-3n-e2b-it
 
 ================================================================================
 
-MODEL 8: google/gemma-3n-e4b-it
+MODEL 9: google/gemma-3n-e4b-it
 --------------------------------------------------
   ID: google/gemma-3n-e4b-it:free
   Original Name: Google: Gemma 3n 4B (free)
@@ -177,7 +194,7 @@ MODEL 8: google/gemma-3n-e4b-it
 
 ================================================================================
 
-MODEL 9: google/gemma-4-26b-a4b-it-20260403
+MODEL 10: google/gemma-4-26b-a4b-it-20260403
 --------------------------------------------------
   ID: google/gemma-4-26b-a4b-it:free
   Original Name: Google: Gemma 4 26B A4B  (free)
@@ -191,7 +208,7 @@ MODEL 9: google/gemma-4-26b-a4b-it-20260403
 
 ================================================================================
 
-MODEL 10: google/gemma-4-31b-it-20260402
+MODEL 11: google/gemma-4-31b-it-20260402
 --------------------------------------------------
   ID: google/gemma-4-31b-it:free
   Original Name: Google: Gemma 4 31B (free)
@@ -205,7 +222,7 @@ MODEL 10: google/gemma-4-31b-it-20260402
 
 ================================================================================
 
-MODEL 11: inclusionai/ling-2.6-flash-20260421
+MODEL 12: inclusionai/ling-2.6-flash-20260421
 --------------------------------------------------
   ID: inclusionai/ling-2.6-flash:free
   Original Name: inclusionAI: Ling-2.6-flash (free)
@@ -219,7 +236,7 @@ MODEL 11: inclusionai/ling-2.6-flash-20260421
 
 ================================================================================
 
-MODEL 12: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 13: liquid/lfm-2.5-1.2b-instruct-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-instruct:free
   Original Name: LiquidAI: LFM2.5-1.2B-Instruct (free)
@@ -233,7 +250,7 @@ MODEL 12: liquid/lfm-2.5-1.2b-instruct-20260120
 
 ================================================================================
 
-MODEL 13: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 14: liquid/lfm-2.5-1.2b-thinking-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-thinking:free
   Original Name: LiquidAI: LFM2.5-1.2B-Thinking (free)
@@ -247,7 +264,7 @@ MODEL 13: liquid/lfm-2.5-1.2b-thinking-20260120
 
 ================================================================================
 
-MODEL 14: meta-llama/llama-3.2-3b-instruct
+MODEL 15: meta-llama/llama-3.2-3b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.2-3b-instruct:free
   Original Name: Meta: Llama 3.2 3B Instruct (free)
@@ -261,7 +278,7 @@ MODEL 14: meta-llama/llama-3.2-3b-instruct
 
 ================================================================================
 
-MODEL 15: meta-llama/llama-3.3-70b-instruct
+MODEL 16: meta-llama/llama-3.3-70b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.3-70b-instruct:free
   Original Name: Meta: Llama 3.3 70B Instruct (free)
@@ -275,7 +292,7 @@ MODEL 15: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 16: minimax/minimax-m2.5-20260211
+MODEL 17: minimax/minimax-m2.5-20260211
 --------------------------------------------------
   ID: minimax/minimax-m2.5:free
   Original Name: MiniMax: MiniMax M2.5 (free)
@@ -289,7 +306,7 @@ MODEL 16: minimax/minimax-m2.5-20260211
 
 ================================================================================
 
-MODEL 17: nousresearch/hermes-3-llama-3.1-405b
+MODEL 18: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -303,7 +320,7 @@ MODEL 17: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 18: nvidia/nemotron-3-nano-30b-a3b
+MODEL 19: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -317,7 +334,7 @@ MODEL 18: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 19: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 20: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID: nvidia/nemotron-3-super-120b-a12b:free
   Original Name: NVIDIA: Nemotron 3 Super (free)
@@ -331,7 +348,7 @@ MODEL 19: nvidia/nemotron-3-super-120b-a12b-20230311
 
 ================================================================================
 
-MODEL 20: nvidia/nemotron-nano-12b-v2-vl
+MODEL 21: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
@@ -345,7 +362,7 @@ MODEL 20: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 21: nvidia/nemotron-nano-9b-v2
+MODEL 22: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -359,7 +376,7 @@ MODEL 21: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 22: openai/gpt-oss-120b
+MODEL 23: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -373,7 +390,7 @@ MODEL 22: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 23: openai/gpt-oss-20b
+MODEL 24: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -387,7 +404,7 @@ MODEL 23: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 24: openrouter/free
+MODEL 25: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -401,7 +418,7 @@ MODEL 24: openrouter/free
 
 ================================================================================
 
-MODEL 25: z-ai/glm-4.5-air
+MODEL 26: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)
