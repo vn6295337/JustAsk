@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-04-22 08:25:37 IST",
-    "total_models": 22,
+    "generated": "2026-04-23 08:47:53 IST",
+    "total_models": 23,
     "filtering_source": "Google Pipeline B-Filter"
   },
   "models": [
@@ -258,6 +258,20 @@
       "displayName": "Gemini Embedding 001",
       "description": "Obtain a distributed representation of a text.",
       "inputTokenLimit": 2048,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens",
+        "asyncBatchEmbedContent"
+      ]
+    },
+    {
+      "name": "models/gemini-embedding-2",
+      "version": "2",
+      "displayName": "Gemini Embedding 2",
+      "description": "Obtain a distributed representation of multimodal content.",
+      "inputTokenLimit": 8192,
       "outputTokenLimit": 1,
       "supportedGenerationMethods": [
         "embedContent",

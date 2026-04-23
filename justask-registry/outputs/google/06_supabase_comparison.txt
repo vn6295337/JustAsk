@@ -1,16 +1,16 @@
 FIELD COMPARISON REPORT: GOOGLE PIPELINE vs SUPABASE
 ================================================================================
-Generated: 2026-04-22 08:25:44 IST
+Generated: 2026-04-23 08:48:00 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total models processed: 22
+   • Total models processed: 23
    • Models in both systems: 22
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 0
+   • Models in pipeline only (not in Supabase): 1
    • Models in Supabase only (not in pipeline): 0
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
@@ -55,6 +55,8 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
+   • New models (pipeline only): 1
+     Models: Gemini Embedding 2
    • Existing models with differences: 0
 
 ================================================================================
@@ -238,6 +240,26 @@ license_name              | GEMINI                                             |
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | 100 requests/min, 30K tokens/min, 1,000 requests.. | 100 requests/min, 30K tokens/min, 1,000 requests..
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
+
+==================================================================================================================================
+
+MODEL: Gemini Embedding 2
+----------------------------------------------------------------------------------------------------------------------------------
+Field Name                | Pipeline Value                                     | Supabase Value                                    
+----------------------------------------------------------------------------------------------------------------------------------
+inference_provider        | Google                                             |                                                   
+model_provider            | Google                                             |                                                   
+human_readable_name       | Gemini Embedding 2                                 |                                                   
+model_provider_country    | United States                                      |                                                   
+official_url              | https://deepmind.google/models/gemini/             |                                                   
+input_modalities          | Text                                               |                                                   
+output_modalities         | Text Embeddings                                    |                                                   
+license_info_text         | Google                                             |                                                   
+license_info_url          | https://developers.google.com/terms                |                                                   
+license_name              | GEMINI                                             |                                                   
+license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
+rate_limits               | 100 requests/min, 30K tokens/min, 1,000 requests.. |                                                   
+provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
 
 ==================================================================================================================================
 
