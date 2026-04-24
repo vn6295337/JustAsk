@@ -1,10 +1,19 @@
 {
   "metadata": {
-    "generated_at": "2026-04-23 08:49:40 IST",
-    "total_models": 26,
+    "generated_at": "2026-04-24 08:51:31 IST",
+    "total_models": 27,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
+    {
+      "id": "inclusionai/ling-2.6-1t:free",
+      "canonical_slug": "inclusionai/ling-2.6-1t-20260423",
+      "original_name": "inclusionAI: Ling-2.6-1T (free)",
+      "hugging_face_id": null,
+      "clean_model_name": "Ling-2.6-1T",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text"
+    },
     {
       "id": "inclusionai/ling-2.6-flash:free",
       "canonical_slug": "inclusionai/ling-2.6-flash-20260421",

@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-04-23 08:49:27 IST
+Generated: 2026-04-24 08:51:15 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 348
+  Total models: 351
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  62 models
@@ -356,6 +356,14 @@ PROVIDER BREAKDOWN (Descending Order):
     - lfm-2.5-1.2b-instruct:free
     - lfm-2.5-1.2b-thinking:free
 
+  inclusionAI     :   2 models
+    - ling-2.6-1t:free
+    - ling-2.6-flash:free
+
+  Tencent         :   2 models
+    - hunyuan-a13b-instruct
+    - hy3-preview:free
+
   AllenAI         :   2 models
     - olmo-3-32b-think
     - olmo-3.1-32b-instruct
@@ -371,9 +379,6 @@ PROVIDER BREAKDOWN (Descending Order):
   Inflection      :   2 models
     - inflection-3-pi
     - inflection-3-productivity
-
-  inclusionAI     :   1 models
-    - ling-2.6-flash:free
 
   Kwaipilot       :   1 models
     - kat-coder-pro-v2
@@ -399,6 +404,9 @@ PROVIDER BREAKDOWN (Descending Order):
   Prime Intellect :   1 models
     - intellect-3
 
+  Deep Cogito     :   1 models
+    - cogito-v2.1-671b
+
   IBM             :   1 models
     - granite-4.0-h-micro
 
@@ -410,9 +418,6 @@ PROVIDER BREAKDOWN (Descending Order):
 
   Venice          :   1 models
     - dolphin-mistral-24b-venice-edition:free
-
-  Tencent         :   1 models
-    - hunyuan-a13b-instruct
 
   TNG             :   1 models
     - deepseek-r1t2-chimera
@@ -432,4 +437,4 @@ PROVIDER BREAKDOWN (Descending Order):
   Mancer          :   1 models
     - weaver
 
-Total providers: 48
+Total providers: 49
