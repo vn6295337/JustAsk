@@ -1,13 +1,13 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-04-24 08:51:15 IST
+Generated: 2026-04-25 08:21:02 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 351
+  Total models: 355
 
 PROVIDER BREAKDOWN (Descending Order):
-  OpenAI          :  62 models
+  OpenAI          :  64 models
     - gpt-3.5-turbo
     - gpt-3.5-turbo-0613
     - gpt-3.5-turbo-16k
@@ -53,6 +53,8 @@ PROVIDER BREAKDOWN (Descending Order):
     - gpt-5.4-mini
     - gpt-5.4-nano
     - gpt-5.4-pro
+    - gpt-5.5
+    - gpt-5.5-pro
     - gpt-audio
     - gpt-audio-mini
     - gpt-oss-120b
@@ -192,6 +194,21 @@ PROVIDER BREAKDOWN (Descending Order):
     - claude-sonnet-4.5
     - claude-sonnet-4.6
 
+  DeepSeek        :  13 models
+    - deepseek-chat
+    - deepseek-chat-v3-0324
+    - deepseek-chat-v3.1
+    - deepseek-r1
+    - deepseek-r1-0528
+    - deepseek-r1-distill-llama-70b
+    - deepseek-r1-distill-qwen-32b
+    - deepseek-v3.1-terminus
+    - deepseek-v3.2
+    - deepseek-v3.2-exp
+    - deepseek-v3.2-speciale
+    - deepseek-v4-flash
+    - deepseek-v4-pro
+
   Z.ai            :  13 models
     - glm-4-32b
     - glm-4.5
@@ -221,19 +238,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - llama-4-maverick
     - llama-4-scout
     - llama-guard-4-12b
-
-  DeepSeek        :  11 models
-    - deepseek-chat
-    - deepseek-chat-v3-0324
-    - deepseek-chat-v3.1
-    - deepseek-r1
-    - deepseek-r1-0528
-    - deepseek-r1-distill-llama-70b
-    - deepseek-r1-distill-qwen-32b
-    - deepseek-v3.1-terminus
-    - deepseek-v3.2
-    - deepseek-v3.2-exp
-    - deepseek-v3.2-speciale
 
   xAI             :  10 models
     - grok-3
