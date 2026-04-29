@@ -1,34 +1,34 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-04-28 09:07:55 IST
+Generated: 2026-04-29 09:06:26 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 367
-  Models passed all filters: 27
+  Total models processed: 369
+  Models passed all filters: 29
   Models excluded: 340
-  Success rate: 7.4%
+  Success rate: 7.9%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 367 models
+    Input: 369 models
     Excluded: 337 models (non-free pricing)
-    Remaining: 30 models
+    Remaining: 32 models
 
   Step 2 - Billing Description Filter:
-    Input: 30 models
+    Input: 32 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 30 models
+    Remaining: 32 models
 
   Step 3 - Keyword Filter:
-    Input: 30 models
+    Input: 32 models
     Excluded: 3 models (preview/experimental/beta)
-    Remaining: 27 models
+    Remaining: 29 models
 
   Step 4 - Deduplication Filter:
-    Input: 27 models
+    Input: 29 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 27 models
+    Final: 29 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
@@ -89,33 +89,37 @@ PROVIDER: GOOGLE (7 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
-PROVIDER: NVIDIA (4 models)
+PROVIDER: NVIDIA (5 models)
 --------------------------------------------------
    1. NVIDIA: Nemotron 3 Nano 30B A3B (free)
       ID: nvidia/nemotron-3-nano-30b-a3b:free
       Pricing: prompt=0, completion=0, request=N/A
 
-   2. NVIDIA: Nemotron 3 Super (free)
+   2. NVIDIA: Nemotron 3 Nano Omni (free)
+      ID: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+   3. NVIDIA: Nemotron 3 Super (free)
       ID: nvidia/nemotron-3-super-120b-a12b:free
       Pricing: prompt=0, completion=0, request=N/A
 
-   3. NVIDIA: Nemotron Nano 12B 2 VL (free)
+   4. NVIDIA: Nemotron Nano 12B 2 VL (free)
       ID: nvidia/nemotron-nano-12b-v2-vl:free
       Pricing: prompt=0, completion=0, request=N/A
 
-   4. NVIDIA: Nemotron Nano 9B V2 (free)
+   5. NVIDIA: Nemotron Nano 9B V2 (free)
       ID: nvidia/nemotron-nano-9b-v2:free
       Pricing: prompt=0, completion=0, request=N/A
 
 
-PROVIDER: INCLUSIONAI (2 models)
+PROVIDER: POOLSIDE (2 models)
 --------------------------------------------------
-   1. inclusionAI: Ling-2.6-1T (free)
-      ID: inclusionai/ling-2.6-1t:free
+   1. Poolside: Laguna M.1 (free)
+      ID: poolside/laguna-m.1:free
       Pricing: prompt=0, completion=0, request=N/A
 
-   2. inclusionAI: Ling-2.6-flash (free)
-      ID: inclusionai/ling-2.6-flash:free
+   2. Poolside: Laguna XS.2 (free)
+      ID: poolside/laguna-xs.2:free
       Pricing: prompt=0, completion=0, request=N/A
 
 
@@ -163,6 +167,13 @@ PROVIDER: META (2 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
+PROVIDER: INCLUSIONAI (1 models)
+--------------------------------------------------
+   1. inclusionAI: Ling-2.6-1T (free)
+      ID: inclusionai/ling-2.6-1t:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+
 PROVIDER: BAIDU (1 models)
 --------------------------------------------------
    1. Baidu: Qianfan-OCR-Fast (free)
@@ -207,8 +218,8 @@ PROVIDER: NOUS (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 13
-  Total models passed all filters: 27
+  Total providers: 14
+  Total models passed all filters: 29
   Models excluded by pricing: 337
   Models excluded by billing description: 0
   Models excluded by keywords: 3

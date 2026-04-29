@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-04-28 09:07:54 IST
+Generated: 2026-04-29 09:06:26 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 367
+  Total models: 369
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  64 models
@@ -73,7 +73,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - o4-mini-deep-research
     - o4-mini-high
 
-  Qwen            :  50 models
+  Qwen            :  49 models
     - qwen-2.5-7b-instruct
     - qwen-max
     - qwen-plus
@@ -123,7 +123,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3.6-flash
     - qwen3.6-max-preview
     - qwen3.6-plus
-    - qwq-32b
 
   Google          :  31 models
     - gemini-2.0-flash-001
@@ -244,6 +243,19 @@ PROVIDER BREAKDOWN (Descending Order):
     - llama-4-scout
     - llama-guard-4-12b
 
+  NVIDIA          :  11 models
+    - llama-3.1-nemotron-70b-instruct
+    - llama-3.3-nemotron-super-49b-v1.5
+    - nemotron-3-nano-30b-a3b
+    - nemotron-3-nano-30b-a3b:free
+    - nemotron-3-nano-omni-30b-a3b-reasoning:free
+    - nemotron-3-super-120b-a12b
+    - nemotron-3-super-120b-a12b:free
+    - nemotron-nano-12b-v2-vl
+    - nemotron-nano-12b-v2-vl:free
+    - nemotron-nano-9b-v2
+    - nemotron-nano-9b-v2:free
+
   xAI             :  10 models
     - grok-3
     - grok-3-beta
@@ -255,18 +267,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - grok-4.20
     - grok-4.20-multi-agent
     - grok-code-fast-1
-
-  NVIDIA          :  10 models
-    - llama-3.1-nemotron-70b-instruct
-    - llama-3.3-nemotron-super-49b-v1.5
-    - nemotron-3-nano-30b-a3b
-    - nemotron-3-nano-30b-a3b:free
-    - nemotron-3-super-120b-a12b
-    - nemotron-3-super-120b-a12b:free
-    - nemotron-nano-12b-v2-vl
-    - nemotron-nano-12b-v2-vl:free
-    - nemotron-nano-9b-v2
-    - nemotron-nano-9b-v2:free
 
   MiniMax         :   8 models
     - minimax-01
@@ -365,9 +365,13 @@ PROVIDER BREAKDOWN (Descending Order):
     - lfm-2.5-1.2b-instruct:free
     - lfm-2.5-1.2b-thinking:free
 
+  Poolside        :   2 models
+    - laguna-m.1:free
+    - laguna-xs.2:free
+
   inclusionAI     :   2 models
     - ling-2.6-1t:free
-    - ling-2.6-flash:free
+    - ling-2.6-flash
 
   Tencent         :   2 models
     - hunyuan-a13b-instruct
@@ -446,4 +450,4 @@ PROVIDER BREAKDOWN (Descending Order):
   Mancer          :   1 models
     - weaver
 
-Total providers: 49
+Total providers: 50

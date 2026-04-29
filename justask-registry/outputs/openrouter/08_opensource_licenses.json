@@ -1,10 +1,17 @@
 {
   "metadata": {
-    "generated_at": "2026-04-28 09:08:04 IST",
-    "total_models": 7,
+    "generated_at": "2026-04-29 09:06:39 IST",
+    "total_models": 8,
     "pipeline_stage": "H_bucketize_other_license_names"
   },
   "models": [
+    {
+      "id": "poolside/laguna-xs.2:free",
+      "canonical_slug": "poolside/laguna-xs.2-20260421",
+      "name": "Poolside: Laguna XS.2 (free)",
+      "hugging_face_id": "poolside/Laguna-XS.2",
+      "license_name": "APACHE-2.0"
+    },
     {
       "id": "qwen/qwen3-next-80b-a3b-instruct:free",
       "canonical_slug": "qwen/qwen3-next-80b-a3b-instruct-2509",

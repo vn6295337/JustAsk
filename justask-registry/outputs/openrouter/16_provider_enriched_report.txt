@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-04-28 09:08:08 IST
+Generated: 2026-04-29 09:06:44 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 27
+  Total models      : 29
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -12,23 +12,25 @@ SUMMARY:
 
 ACTION ITEMS - UNKNOWN MAPPINGS:
 ==================================================
-UNKNOWN PROVIDERS (3 models):
+UNKNOWN PROVIDERS (4 models):
   Add these provider mappings to provider_enrichment.json:
     "baidu": ["Provider Name", "Country"],
     "inclusionai": ["Provider Name", "Country"],
-    "inclusionai": ["Provider Name", "Country"],
+    "poolside": ["Provider Name", "Country"],
+    "poolside": ["Provider Name", "Country"],
 
-UNKNOWN OFFICIAL URLS (3 unique families):
+UNKNOWN OFFICIAL URLS (4 unique families):
   Add these URL mappings to family_official_urls:
     "baidu": "https://official-url-here",
     "inclusionai": "https://official-url-here",
+    "poolside": "https://official-url-here",
 
 ==================================================
 
 MODEL PROVIDER DISTRIBUTION:
    7 models: Google
-   4 models: NVIDIA
-   3 models: Unknown
+   5 models: NVIDIA
+   4 models: Unknown
    2 models: Alibaba Cloud
    2 models: Liquid AI
    2 models: Meta
@@ -42,29 +44,30 @@ MODEL PROVIDER DISTRIBUTION:
 Total unique model providers: 12
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
-  20 models: United States
+  21 models: United States
+   4 models: Unknown
    3 models: China
-   3 models: Unknown
    1 models: Singapore
 
 Total unique countries: 4
 
 MODEL FAMILY DISTRIBUTION:
    7 models: gemma
-   4 models: nvidia
+   5 models: nvidia
    2 models: alibaba cloud
-   2 models: inclusionai
    2 models: liquid ai
    2 models: meta
    2 models: openai
+   2 models: poolside
    1 models: baidu
    1 models: cognitive computations
+   1 models: inclusionai
    1 models: minimax
    1 models: nous research
    1 models: openrouter
    1 models: z.ai
 
-Total unique model families: 13
+Total unique model families: 14
 
 DETAILED PROVIDER ENRICHED MODEL INFORMATION:
 ================================================================================
@@ -237,21 +240,7 @@ MODEL 12: inclusionai/ling-2.6-1t-20260423
 
 ================================================================================
 
-MODEL 13: inclusionai/ling-2.6-flash-20260421
---------------------------------------------------
-  ID: inclusionai/ling-2.6-flash:free
-  Original Name: inclusionAI: Ling-2.6-flash (free)
-  HuggingFace ID: 
-  Canonical Slug: inclusionai/ling-2.6-flash-20260421
-  Clean Model Name: Ling-2.6-flash
-  Model Provider: Unknown
-  Model Provider Country: Unknown
-  Model Family: inclusionai
-  Official URL: Unknown
-
-================================================================================
-
-MODEL 14: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 13: liquid/lfm-2.5-1.2b-instruct-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-instruct:free
   Original Name: LiquidAI: LFM2.5-1.2B-Instruct (free)
@@ -265,7 +254,7 @@ MODEL 14: liquid/lfm-2.5-1.2b-instruct-20260120
 
 ================================================================================
 
-MODEL 15: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 14: liquid/lfm-2.5-1.2b-thinking-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-thinking:free
   Original Name: LiquidAI: LFM2.5-1.2B-Thinking (free)
@@ -279,7 +268,7 @@ MODEL 15: liquid/lfm-2.5-1.2b-thinking-20260120
 
 ================================================================================
 
-MODEL 16: meta-llama/llama-3.2-3b-instruct
+MODEL 15: meta-llama/llama-3.2-3b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.2-3b-instruct:free
   Original Name: Meta: Llama 3.2 3B Instruct (free)
@@ -293,7 +282,7 @@ MODEL 16: meta-llama/llama-3.2-3b-instruct
 
 ================================================================================
 
-MODEL 17: meta-llama/llama-3.3-70b-instruct
+MODEL 16: meta-llama/llama-3.3-70b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.3-70b-instruct:free
   Original Name: Meta: Llama 3.3 70B Instruct (free)
@@ -307,7 +296,7 @@ MODEL 17: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 18: minimax/minimax-m2.5-20260211
+MODEL 17: minimax/minimax-m2.5-20260211
 --------------------------------------------------
   ID: minimax/minimax-m2.5:free
   Original Name: MiniMax: MiniMax M2.5 (free)
@@ -321,7 +310,7 @@ MODEL 18: minimax/minimax-m2.5-20260211
 
 ================================================================================
 
-MODEL 19: nousresearch/hermes-3-llama-3.1-405b
+MODEL 18: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -335,13 +324,27 @@ MODEL 19: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 20: nvidia/nemotron-3-nano-30b-a3b
+MODEL 19: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
   HuggingFace ID: nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
   Canonical Slug: nvidia/nemotron-3-nano-30b-a3b
   Clean Model Name: Nemotron 3 Nano 30B A3B
+  Model Provider: NVIDIA
+  Model Provider Country: United States
+  Model Family: nvidia
+  Official URL: https://build.nvidia.com/
+
+================================================================================
+
+MODEL 20: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+--------------------------------------------------
+  ID: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+  Original Name: NVIDIA: Nemotron 3 Nano Omni (free)
+  HuggingFace ID: None
+  Canonical Slug: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+  Clean Model Name: Nemotron 3 Nano Omni
   Model Provider: NVIDIA
   Model Provider Country: United States
   Model Family: nvidia
@@ -433,7 +436,35 @@ MODEL 26: openrouter/free
 
 ================================================================================
 
-MODEL 27: z-ai/glm-4.5-air
+MODEL 27: poolside/laguna-m.1-20260312
+--------------------------------------------------
+  ID: poolside/laguna-m.1:free
+  Original Name: Poolside: Laguna M.1 (free)
+  HuggingFace ID: None
+  Canonical Slug: poolside/laguna-m.1-20260312
+  Clean Model Name: Laguna M.1
+  Model Provider: Unknown
+  Model Provider Country: Unknown
+  Model Family: poolside
+  Official URL: Unknown
+
+================================================================================
+
+MODEL 28: poolside/laguna-xs.2-20260421
+--------------------------------------------------
+  ID: poolside/laguna-xs.2:free
+  Original Name: Poolside: Laguna XS.2 (free)
+  HuggingFace ID: poolside/Laguna-XS.2
+  Canonical Slug: poolside/laguna-xs.2-20260421
+  Clean Model Name: Laguna XS.2
+  Model Provider: Unknown
+  Model Provider Country: Unknown
+  Model Family: poolside
+  Official URL: Unknown
+
+================================================================================
+
+MODEL 29: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)

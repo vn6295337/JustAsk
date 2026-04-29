@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-04-28 09:08:06 IST",
-    "total_models": 7,
+    "generated_at": "2026-04-29 09:06:42 IST",
+    "total_models": 8,
     "pipeline_stage": "K_collate_opensource_licenses"
   },
   "models": [
@@ -35,6 +35,17 @@
       "clean_model_name": "GPT OSS 20B",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE",
+      "license_name": "APACHE-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "id": "poolside/laguna-xs.2:free",
+      "canonical_slug": "poolside/laguna-xs.2-20260421",
+      "original_name": "Poolside: Laguna XS.2 (free)",
+      "hugging_face_id": "poolside/Laguna-XS.2",
+      "clean_model_name": "Laguna XS.2",
+      "license_info_text": "info",
+      "license_info_url": "https://huggingface.co/poolside/Laguna-XS.2/blob/main/README.md",
       "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     },

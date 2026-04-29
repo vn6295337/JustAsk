@@ -1,10 +1,17 @@
 {
   "metadata": {
-    "generated_at": "2026-04-28 09:07:59 IST",
-    "total_models": 14,
+    "generated_at": "2026-04-29 09:06:33 IST",
+    "total_models": 15,
     "pipeline_stage": "E_fetch_other_license_info_urls_from_hf"
   },
   "models": [
+    {
+      "id": "poolside/laguna-xs.2:free",
+      "canonical_slug": "poolside/laguna-xs.2-20260421",
+      "name": "Poolside: Laguna XS.2 (free)",
+      "hugging_face_id": "poolside/Laguna-XS.2",
+      "license_info_url": "https://huggingface.co/poolside/Laguna-XS.2/blob/main/README.md"
+    },
     {
       "id": "nvidia/nemotron-3-super-120b-a12b:free",
       "canonical_slug": "nvidia/nemotron-3-super-120b-a12b-20230311",

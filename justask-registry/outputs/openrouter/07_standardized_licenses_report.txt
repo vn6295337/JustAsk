@@ -1,22 +1,22 @@
 ================================================================================
 STANDARDIZED OTHER LICENSE NAMES REPORT
-Generated: 2026-04-28 09:08:04 IST
+Generated: 2026-04-29 09:06:39 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 14
+  Total models : 15
   Input        : 06_hf_license_names.json
   Config       : license_standardization_rules.json
   Processor    : step_07_standardize_license_names.py
   Output       : 07_standardized_licenses.json
 
 STANDARDIZATION RESULTS:
-  Models with license transformations: 14
+  Models with license transformations: 15
   Models unchanged: 0
   Transformation rate: 100.0%
 
 STANDARDIZED LICENSE DISTRIBUTION:
-  APACHE-2.0: 5 models
+  APACHE-2.0: 6 models
   LFM1.0: 2 models
   LLAMA-3.1: 1 models
   MIT: 1 models
@@ -59,7 +59,17 @@ MODEL 2: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 3: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 3: poolside/laguna-xs.2-20260421
+--------------------------------------------------
+  ID                     : poolside/laguna-xs.2:free
+  Canonical Slug         : poolside/laguna-xs.2-20260421
+  HuggingFace ID         : poolside/Laguna-XS.2
+  Raw License            : apache-2.0
+  Standardized License   : APACHE-2.0
+
+================================================================================
+
+MODEL 4: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID                     : qwen/qwen3-coder:free
   Canonical Slug         : qwen/qwen3-coder-480b-a35b-07-25
@@ -69,7 +79,7 @@ MODEL 3: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 4: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 5: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID                     : qwen/qwen3-next-80b-a3b-instruct:free
   Canonical Slug         : qwen/qwen3-next-80b-a3b-instruct-2509
@@ -79,7 +89,7 @@ MODEL 4: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 5: venice/uncensored
+MODEL 6: venice/uncensored
 --------------------------------------------------
   ID                     : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Canonical Slug         : venice/uncensored
@@ -89,7 +99,7 @@ MODEL 5: venice/uncensored
 
 ================================================================================
 
-MODEL 6: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 7: liquid/lfm-2.5-1.2b-instruct-20260120
 --------------------------------------------------
   ID                     : liquid/lfm-2.5-1.2b-instruct:free
   Canonical Slug         : liquid/lfm-2.5-1.2b-instruct-20260120
@@ -99,7 +109,7 @@ MODEL 6: liquid/lfm-2.5-1.2b-instruct-20260120
 
 ================================================================================
 
-MODEL 7: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 8: liquid/lfm-2.5-1.2b-thinking-20260120
 --------------------------------------------------
   ID                     : liquid/lfm-2.5-1.2b-thinking:free
   Canonical Slug         : liquid/lfm-2.5-1.2b-thinking-20260120
@@ -109,7 +119,7 @@ MODEL 7: liquid/lfm-2.5-1.2b-thinking-20260120
 
 ================================================================================
 
-MODEL 8: nousresearch/hermes-3-llama-3.1-405b
+MODEL 9: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID                     : nousresearch/hermes-3-llama-3.1-405b:free
   Canonical Slug         : nousresearch/hermes-3-llama-3.1-405b
@@ -119,7 +129,7 @@ MODEL 8: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 9: z-ai/glm-4.5-air
+MODEL 10: z-ai/glm-4.5-air
 --------------------------------------------------
   ID                     : z-ai/glm-4.5-air:free
   Canonical Slug         : z-ai/glm-4.5-air
@@ -129,7 +139,7 @@ MODEL 9: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 10: minimax/minimax-m2.5-20260211
+MODEL 11: minimax/minimax-m2.5-20260211
 --------------------------------------------------
   ID                     : minimax/minimax-m2.5:free
   Canonical Slug         : minimax/minimax-m2.5-20260211
@@ -139,7 +149,7 @@ MODEL 10: minimax/minimax-m2.5-20260211
 
 ================================================================================
 
-MODEL 11: nvidia/nemotron-3-nano-30b-a3b
+MODEL 12: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID                     : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug         : nvidia/nemotron-3-nano-30b-a3b
@@ -149,7 +159,7 @@ MODEL 11: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 12: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 13: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID                     : nvidia/nemotron-3-super-120b-a12b:free
   Canonical Slug         : nvidia/nemotron-3-super-120b-a12b-20230311
@@ -159,7 +169,7 @@ MODEL 12: nvidia/nemotron-3-super-120b-a12b-20230311
 
 ================================================================================
 
-MODEL 13: nvidia/nemotron-nano-12b-v2-vl
+MODEL 14: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug         : nvidia/nemotron-nano-12b-v2-vl
@@ -169,7 +179,7 @@ MODEL 13: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 14: nvidia/nemotron-nano-9b-v2
+MODEL 15: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug         : nvidia/nemotron-nano-9b-v2

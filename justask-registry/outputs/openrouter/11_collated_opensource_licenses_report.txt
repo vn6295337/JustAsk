@@ -1,21 +1,21 @@
 ================================================================================
 COLLATED OPENSOURCE LICENSE INFORMATION REPORT
-Generated: 2026-04-28 09:08:06 IST
+Generated: 2026-04-29 09:06:42 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 7
+  Total models        : 8
   Input sources       : 3 pipeline stage files
   Processor           : step_11_collate_opensource.py
   Output              : 11_collated_opensource_licenses.json
 
 PIPELINE STAGE COVERAGE:
-  Step 05 (License Info URLs)    : 7 models
-  Step 08 Opensource Names       : 7 models
-  Step 09 Opensource URLs        : 7 models
+  Step 05 (License Info URLs)    : 8 models
+  Step 08 Opensource Names       : 8 models
+  Step 09 Opensource URLs        : 8 models
 
 OPENSOURCE LICENSE DISTRIBUTION:
-   5 models: APACHE-2.0
+   6 models: APACHE-2.0
    1 models: LLAMA-3.1
    1 models: MIT
 
@@ -52,7 +52,21 @@ MODEL 2: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 3: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 3: poolside/laguna-xs.2-20260421
+--------------------------------------------------
+  ID: poolside/laguna-xs.2:free
+  Original Name: Poolside: Laguna XS.2 (free)
+  HuggingFace ID: poolside/Laguna-XS.2
+  Canonical Slug: poolside/laguna-xs.2-20260421
+  Clean Model Name: Laguna XS.2
+  License Info Text: info
+  License Info URL: https://huggingface.co/poolside/Laguna-XS.2/blob/main/README.md
+  License Name: APACHE-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 4: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -66,7 +80,7 @@ MODEL 3: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 4: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 5: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID: qwen/qwen3-next-80b-a3b-instruct:free
   Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
@@ -80,7 +94,7 @@ MODEL 4: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 5: venice/uncensored
+MODEL 6: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -94,7 +108,7 @@ MODEL 5: venice/uncensored
 
 ================================================================================
 
-MODEL 6: nousresearch/hermes-3-llama-3.1-405b
+MODEL 7: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -108,7 +122,7 @@ MODEL 6: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 7: z-ai/glm-4.5-air
+MODEL 8: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)

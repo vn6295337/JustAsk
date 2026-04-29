@@ -1,16 +1,16 @@
 ================================================================================
 OTHER LICENSE INFO URLS REPORT
-Generated: 2026-04-28 09:07:59 IST
+Generated: 2026-04-29 09:06:33 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 14
+  Total models : 15
   Input        : 02_filtered_models.json
   Processor    : step_05_fetch_hf_license_urls.py
   Output       : 05_hf_license_urls.json
 
 LICENSE INFO URL BREAKDOWN:
-   8 models: README.md file
+   9 models: README.md file
    6 models: LICENSE file
 
 Total categories: 2
@@ -126,7 +126,16 @@ MODEL 12: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 13: venice/uncensored
+MODEL 13: poolside/laguna-xs.2-20260421
+--------------------------------------------------
+  ID              : poolside/laguna-xs.2:free
+  Canonical Slug  : poolside/laguna-xs.2-20260421
+  HuggingFace ID  : poolside/Laguna-XS.2
+  License Info URL: https://huggingface.co/poolside/Laguna-XS.2/blob/main/README.md
+
+================================================================================
+
+MODEL 14: venice/uncensored
 --------------------------------------------------
   ID              : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Canonical Slug  : venice/uncensored
@@ -135,7 +144,7 @@ MODEL 13: venice/uncensored
 
 ================================================================================
 
-MODEL 14: z-ai/glm-4.5-air
+MODEL 15: z-ai/glm-4.5-air
 --------------------------------------------------
   ID              : z-ai/glm-4.5-air:free
   Canonical Slug  : z-ai/glm-4.5-air
