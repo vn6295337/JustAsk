@@ -1,17 +1,17 @@
 ================================================================================
 STANDARDIZED MODALITIES REPORT
-Generated: 2026-04-30 09:07:19 IST
+Generated: 2026-05-01 09:19:03 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 29
+  Total models : 30
   Input        : 14_raw_modalities.json
   Config       : modality_standardization.json
   Processor    : step_15_standardize_modalities.py
   Output       : 15_standardized_modalities.json
 
 STANDARDIZED INPUT MODALITIES DISTRIBUTION:
-  18 models: Text
+  19 models: Text
    5 models: Text, Image
    3 models: Text, Image, Audio, Video
    3 models: Text, Image, Video
@@ -19,12 +19,12 @@ STANDARDIZED INPUT MODALITIES DISTRIBUTION:
 Total unique input types: 4
 
 STANDARDIZED OUTPUT MODALITIES DISTRIBUTION:
-  29 models: Text
+  30 models: Text
 
 Total unique output types: 1
 
 STANDARDIZED MODALITY COMBINATIONS (INPUT → OUTPUT):
-  18 models: Text → Text
+  19 models: Text → Text
    5 models: Text, Image → Text
    3 models: Text, Image, Audio, Video → Text
    3 models: Text, Image, Video → Text
@@ -32,8 +32,8 @@ STANDARDIZED MODALITY COMBINATIONS (INPUT → OUTPUT):
 Total unique combinations: 4
 
 STANDARDIZATION IMPACT ANALYSIS:
-  Input modalities changed: 29 models
-  Output modalities changed: 29 models
+  Input modalities changed: 30 models
+  Output modalities changed: 30 models
   Input modalities unchanged: 0 models
   Output modalities unchanged: 0 models
 
@@ -250,7 +250,21 @@ MODEL 15: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 16: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 16: openrouter/owl-alpha
+--------------------------------------------------
+  ID: openrouter/owl-alpha
+  Original Name: Owl Alpha
+  HuggingFace ID: None
+  Canonical Slug: openrouter/owl-alpha
+  Clean Model Name: Owl Alpha
+  Raw Input Modalities: text
+  Raw Output Modalities: text
+  Standardized Input Modalities: Text
+  Standardized Output Modalities: Text
+
+================================================================================
+
+MODEL 17: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -264,7 +278,7 @@ MODEL 16: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 17: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 18: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID: qwen/qwen3-next-80b-a3b-instruct:free
   Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
@@ -278,7 +292,7 @@ MODEL 17: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 18: venice/uncensored
+MODEL 19: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -292,7 +306,7 @@ MODEL 18: venice/uncensored
 
 ================================================================================
 
-MODEL 19: openrouter/free
+MODEL 20: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -306,7 +320,7 @@ MODEL 19: openrouter/free
 
 ================================================================================
 
-MODEL 20: google/gemma-3-12b-it
+MODEL 21: google/gemma-3-12b-it
 --------------------------------------------------
   ID: google/gemma-3-12b-it:free
   Original Name: Google: Gemma 3 12B (free)
@@ -320,7 +334,7 @@ MODEL 20: google/gemma-3-12b-it
 
 ================================================================================
 
-MODEL 21: google/gemma-3-27b-it
+MODEL 22: google/gemma-3-27b-it
 --------------------------------------------------
   ID: google/gemma-3-27b-it:free
   Original Name: Google: Gemma 3 27B (free)
@@ -334,7 +348,7 @@ MODEL 21: google/gemma-3-27b-it
 
 ================================================================================
 
-MODEL 22: google/gemma-3-4b-it
+MODEL 23: google/gemma-3-4b-it
 --------------------------------------------------
   ID: google/gemma-3-4b-it:free
   Original Name: Google: Gemma 3 4B (free)
@@ -348,7 +362,7 @@ MODEL 22: google/gemma-3-4b-it
 
 ================================================================================
 
-MODEL 23: baidu/qianfan-ocr-fast-20260420
+MODEL 24: baidu/qianfan-ocr-fast-20260420
 --------------------------------------------------
   ID: baidu/qianfan-ocr-fast:free
   Original Name: Baidu: Qianfan-OCR-Fast (free)
@@ -362,7 +376,7 @@ MODEL 23: baidu/qianfan-ocr-fast-20260420
 
 ================================================================================
 
-MODEL 24: google/gemma-3n-e2b-it
+MODEL 25: google/gemma-3n-e2b-it
 --------------------------------------------------
   ID: google/gemma-3n-e2b-it:free
   Original Name: Google: Gemma 3n 2B (free)
@@ -376,7 +390,7 @@ MODEL 24: google/gemma-3n-e2b-it
 
 ================================================================================
 
-MODEL 25: google/gemma-3n-e4b-it
+MODEL 26: google/gemma-3n-e4b-it
 --------------------------------------------------
   ID: google/gemma-3n-e4b-it:free
   Original Name: Google: Gemma 3n 4B (free)
@@ -390,7 +404,7 @@ MODEL 25: google/gemma-3n-e4b-it
 
 ================================================================================
 
-MODEL 26: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 27: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Original Name: NVIDIA: Nemotron 3 Nano Omni (free)
@@ -404,7 +418,7 @@ MODEL 26: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 
 ================================================================================
 
-MODEL 27: google/gemma-4-26b-a4b-it-20260403
+MODEL 28: google/gemma-4-26b-a4b-it-20260403
 --------------------------------------------------
   ID: google/gemma-4-26b-a4b-it:free
   Original Name: Google: Gemma 4 26B A4B  (free)
@@ -418,7 +432,7 @@ MODEL 27: google/gemma-4-26b-a4b-it-20260403
 
 ================================================================================
 
-MODEL 28: google/gemma-4-31b-it-20260402
+MODEL 29: google/gemma-4-31b-it-20260402
 --------------------------------------------------
   ID: google/gemma-4-31b-it:free
   Original Name: Google: Gemma 4 31B (free)
@@ -432,7 +446,7 @@ MODEL 28: google/gemma-4-31b-it-20260402
 
 ================================================================================
 
-MODEL 29: nvidia/nemotron-nano-12b-v2-vl
+MODEL 30: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)

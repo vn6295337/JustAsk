@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-04-30 09:07:20 IST
+Generated: 2026-05-01 09:19:03 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 29
+  Total models      : 30
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -35,16 +35,16 @@ MODEL PROVIDER DISTRIBUTION:
    2 models: Liquid AI
    2 models: Meta
    2 models: OpenAI
+   2 models: OpenRouter
    1 models: Cognitive Computations
    1 models: MiniMax
    1 models: Nous Research
-   1 models: OpenRouter
    1 models: Z.AI
 
 Total unique model providers: 12
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
-  21 models: United States
+  22 models: United States
    4 models: Unknown
    3 models: China
    1 models: Singapore
@@ -58,13 +58,13 @@ MODEL FAMILY DISTRIBUTION:
    2 models: liquid ai
    2 models: meta
    2 models: openai
+   2 models: openrouter
    2 models: poolside
    1 models: baidu
    1 models: cognitive computations
    1 models: inclusionai
    1 models: minimax
    1 models: nous research
-   1 models: openrouter
    1 models: z.ai
 
 Total unique model families: 14
@@ -436,7 +436,21 @@ MODEL 26: openrouter/free
 
 ================================================================================
 
-MODEL 27: poolside/laguna-m.1-20260312
+MODEL 27: openrouter/owl-alpha
+--------------------------------------------------
+  ID: openrouter/owl-alpha
+  Original Name: Owl Alpha
+  HuggingFace ID: None
+  Canonical Slug: openrouter/owl-alpha
+  Clean Model Name: Owl Alpha
+  Model Provider: OpenRouter
+  Model Provider Country: United States
+  Model Family: openrouter
+  Official URL: https://openrouter.ai/
+
+================================================================================
+
+MODEL 28: poolside/laguna-m.1-20260312
 --------------------------------------------------
   ID: poolside/laguna-m.1:free
   Original Name: Poolside: Laguna M.1 (free)
@@ -450,7 +464,7 @@ MODEL 27: poolside/laguna-m.1-20260312
 
 ================================================================================
 
-MODEL 28: poolside/laguna-xs.2-20260421
+MODEL 29: poolside/laguna-xs.2-20260421
 --------------------------------------------------
   ID: poolside/laguna-xs.2:free
   Original Name: Poolside: Laguna XS.2 (free)
@@ -464,7 +478,7 @@ MODEL 28: poolside/laguna-xs.2-20260421
 
 ================================================================================
 
-MODEL 29: z-ai/glm-4.5-air
+MODEL 30: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)

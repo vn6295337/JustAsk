@@ -1,10 +1,30 @@
 {
   "metadata": {
-    "generated_at": "2026-04-30 09:07:20 IST",
-    "total_models": 29,
+    "generated_at": "2026-05-01 09:19:03 IST",
+    "total_models": 30,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
+    {
+      "id": "openrouter/owl-alpha",
+      "canonical_slug": "openrouter/owl-alpha",
+      "provider_slug": "owl-alpha",
+      "original_name": "Owl Alpha",
+      "hugging_face_id": null,
+      "clean_model_name": "Owl Alpha",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "OpenRouter",
+      "model_provider_country": "United States",
+      "model_family": "openrouter",
+      "official_url": "https://openrouter.ai/"
+    },
     {
       "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
       "canonical_slug": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428",

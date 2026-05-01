@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-04-30 09:07:20 IST
+Generated: 2026-05-01 09:19:04 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -9,7 +9,7 @@ DATA QUALITY ISSUES:
 MISSING OR EMPTY VALUES:
 ------------------------------
 
-LICENSE INFO TEXT (21 models):
+LICENSE INFO TEXT (22 models):
   - Free Models Router
   - Gemma 3 12B IT
   - Gemma 3 27B IT
@@ -30,9 +30,10 @@ LICENSE INFO TEXT (21 models):
   - Nemotron 3 Super
   - Nemotron Nano 12B 2 VL
   - Nemotron Nano 9B V2
+  - Owl Alpha
   - Qianfan-OCR-Fast
 
-LICENSE INFO URL (21 models):
+LICENSE INFO URL (22 models):
   - Free Models Router
   - Gemma 3 12B IT
   - Gemma 3 27B IT
@@ -53,20 +54,23 @@ LICENSE INFO URL (21 models):
   - Nemotron 3 Super
   - Nemotron Nano 12B 2 VL
   - Nemotron Nano 9B V2
+  - Owl Alpha
   - Qianfan-OCR-Fast
 
-LICENSE NAME (5 models):
+LICENSE NAME (6 models):
   - Free Models Router
   - Laguna M.1
   - Ling-2.6-1T
   - Nemotron 3 Nano Omni
+  - Owl Alpha
   - Qianfan-OCR-Fast
 
-LICENSE URL (5 models):
+LICENSE URL (6 models):
   - Free Models Router
   - Laguna M.1
   - Ling-2.6-1T
   - Nemotron 3 Nano Omni
+  - Owl Alpha
   - Qianfan-OCR-Fast
 
 UNKNOWN OR 'NOT FOUND' VALUES:
@@ -80,12 +84,12 @@ MODEL PROVIDER (4 models):
 
 DATA QUALITY SUMMARY:
 ------------------------------
-Total models: 29
-Missing license info text: 21 (72.4%)
-Missing license info url: 21 (72.4%)
-Missing license name: 5 (17.2%)
-Missing license url: 5 (17.2%)
-Unknown model provider: 4 (13.8%)
+Total models: 30
+Missing license info text: 22 (73.3%)
+Missing license info url: 22 (73.3%)
+Missing license name: 6 (20.0%)
+Missing license url: 6 (20.0%)
+Unknown model provider: 4 (13.3%)
 
 ================================================================================
 
@@ -332,7 +336,17 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 25. Laguna M.1
+ 25. Owl Alpha
+     Provider           : OpenRouter (United States)
+     Modalities         : Text → Text
+     License            : 
+     License Info       : 
+     License URL        : 
+     Official URL       : https://openrouter.ai/
+     Rate Limits        : 20 requests/min 50/day
+     Provider API Access: https://openrouter.ai/settings/keys
+
+ 26. Laguna M.1
      Provider           : Unknown (Unknown)
      Modalities         : Text → Text
      License            : 
@@ -342,7 +356,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 26. Laguna XS.2
+ 27. Laguna XS.2
      Provider           : Unknown (Unknown)
      Modalities         : Text → Text
      License            : APACHE-2.0
@@ -352,7 +366,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 27. Ling-2.6-1T
+ 28. Ling-2.6-1T
      Provider           : Unknown (Unknown)
      Modalities         : Text → Text
      License            : 
@@ -362,7 +376,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 28. Qianfan-OCR-Fast
+ 29. Qianfan-OCR-Fast
      Provider           : Unknown (Unknown)
      Modalities         : Text, Image → Text
      License            : 
@@ -372,7 +386,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 29. GLM 4.5 Air
+ 30. GLM 4.5 Air
      Provider           : Z.AI (China)
      Modalities         : Text → Text
      License            : MIT

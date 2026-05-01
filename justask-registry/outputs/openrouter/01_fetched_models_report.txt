@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-04-30 09:07:06 IST
+Generated: 2026-05-01 09:18:49 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 368
+  Total models: 371
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  64 models
@@ -242,6 +242,19 @@ PROVIDER BREAKDOWN (Descending Order):
     - llama-4-scout
     - llama-guard-4-12b
 
+  xAI             :  11 models
+    - grok-3
+    - grok-3-beta
+    - grok-3-mini
+    - grok-3-mini-beta
+    - grok-4
+    - grok-4-fast
+    - grok-4.1-fast
+    - grok-4.20
+    - grok-4.20-multi-agent
+    - grok-4.3
+    - grok-code-fast-1
+
   NVIDIA          :  11 models
     - llama-3.1-nemotron-70b-instruct
     - llama-3.3-nemotron-super-49b-v1.5
@@ -254,18 +267,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - nemotron-nano-12b-v2-vl:free
     - nemotron-nano-9b-v2
     - nemotron-nano-9b-v2:free
-
-  xAI             :  10 models
-    - grok-3
-    - grok-3-beta
-    - grok-3-mini
-    - grok-3-mini-beta
-    - grok-4
-    - grok-4-fast
-    - grok-4.1-fast
-    - grok-4.20
-    - grok-4.20-multi-agent
-    - grok-code-fast-1
 
   MiniMax         :   8 models
     - minimax-01
@@ -364,6 +365,10 @@ PROVIDER BREAKDOWN (Descending Order):
     - lfm-2.5-1.2b-instruct:free
     - lfm-2.5-1.2b-thinking:free
 
+  IBM             :   2 models
+    - granite-4.0-h-micro
+    - granite-4.1-8b
+
   Poolside        :   2 models
     - laguna-m.1:free
     - laguna-xs.2:free
@@ -418,9 +423,6 @@ PROVIDER BREAKDOWN (Descending Order):
 
   Deep Cogito     :   1 models
     - cogito-v2.1-671b
-
-  IBM             :   1 models
-    - granite-4.0-h-micro
 
   AI21            :   1 models
     - jamba-large-1.7

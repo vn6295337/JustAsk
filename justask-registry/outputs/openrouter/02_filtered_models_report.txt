@@ -1,39 +1,39 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-04-30 09:07:07 IST
+Generated: 2026-05-01 09:18:50 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 368
-  Models passed all filters: 29
-  Models excluded: 339
-  Success rate: 7.9%
+  Total models processed: 371
+  Models passed all filters: 30
+  Models excluded: 341
+  Success rate: 8.1%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 368 models
-    Excluded: 336 models (non-free pricing)
-    Remaining: 32 models
+    Input: 371 models
+    Excluded: 338 models (non-free pricing)
+    Remaining: 33 models
 
   Step 2 - Billing Description Filter:
-    Input: 32 models
+    Input: 33 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 32 models
+    Remaining: 33 models
 
   Step 3 - Keyword Filter:
-    Input: 32 models
+    Input: 33 models
     Excluded: 3 models (preview/experimental/beta)
-    Remaining: 29 models
+    Remaining: 30 models
 
   Step 4 - Deduplication Filter:
-    Input: 29 models
+    Input: 30 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 29 models
+    Final: 30 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 336 models with non-free pricing (details omitted due to volume)
+Excluded 338 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -109,6 +109,17 @@ PROVIDER: NVIDIA (5 models)
 
    5. NVIDIA: Nemotron Nano 9B V2 (free)
       ID: nvidia/nemotron-nano-9b-v2:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+
+PROVIDER: OPENROUTER (2 models)
+--------------------------------------------------
+   1. Free Models Router
+      ID: openrouter/free
+      Pricing: prompt=0, completion=0, request=N/A
+
+   2. Owl Alpha
+      ID: openrouter/owl-alpha
       Pricing: prompt=0, completion=0, request=N/A
 
 
@@ -188,13 +199,6 @@ PROVIDER: MINIMAX (1 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
-PROVIDER: OPENROUTER (1 models)
---------------------------------------------------
-   1. Free Models Router
-      ID: openrouter/free
-      Pricing: prompt=0, completion=0, request=N/A
-
-
 PROVIDER: Z.AI (1 models)
 --------------------------------------------------
    1. Z.ai: GLM 4.5 Air (free)
@@ -219,10 +223,10 @@ PROVIDER: NOUS (1 models)
 ================================================================================
 FINAL SUMMARY:
   Total providers: 14
-  Total models passed all filters: 29
-  Models excluded by pricing: 336
+  Total models passed all filters: 30
+  Models excluded by pricing: 338
   Models excluded by billing description: 0
   Models excluded by keywords: 3
   Models excluded by deduplication: 0
-  Total exclusions: 339
+  Total exclusions: 341
   ✓ All filtered models accounted for
