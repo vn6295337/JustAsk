@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-04 09:09:14 IST",
-    "total_models": 371,
+    "generated_at": "2026-05-05 08:55:41 IST",
+    "total_models": 372,
     "pipeline_stage": "A_fetch_api_models"
   },
   "models": [
@@ -62,6 +62,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -121,10 +122,71 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/ibm-granite/granite-4.1-8b-20260429/endpoints"
+      }
+    },
+    {
+      "id": "mistralai/mistral-medium-3-5",
+      "canonical_slug": "mistralai/mistral-medium-3.5-20260430",
+      "hugging_face_id": null,
+      "name": "Mistral: Mistral Medium 3.5",
+      "created": 1777570439,
+      "description": "Mistral Medium 3.5 is a dense 128B instruction-following model from Mistral AI. It supports text and image inputs with text output, and is designed for agentic workflows, coding, and complex...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Mistral",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000015",
+        "completion": "0.0000075"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "max_tokens",
+        "presence_penalty",
+        "reasoning",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/mistralai/mistral-medium-3.5-20260430/endpoints"
       }
     },
     {
@@ -179,6 +241,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -235,6 +298,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -286,6 +350,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -337,6 +402,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -397,6 +463,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -455,6 +522,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-08-31",
       "expiration_date": null,
       "links": {
@@ -521,6 +589,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -589,6 +658,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -655,6 +725,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -717,6 +788,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -775,6 +847,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -826,6 +899,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -878,6 +952,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -906,13 +981,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001612",
-        "completion": "0.00000096525",
-        "input_cache_read": "0.0000001612"
+        "prompt": "0.00000015",
+        "completion": "0.000001",
+        "input_cache_read": "0.00000005"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 65536,
+        "max_completion_tokens": 262144,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -930,6 +1005,8 @@
         "stop",
         "structured_outputs",
         "temperature",
+        "tool_choice",
+        "tools",
         "top_k",
         "top_p"
       ],
@@ -938,6 +1015,7 @@
         "top_p": 0.95,
         "top_k": 20
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -990,6 +1068,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -1056,6 +1135,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -1112,6 +1192,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -1170,6 +1251,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -1235,6 +1317,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -1300,6 +1383,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -1358,6 +1442,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": "2026-05-07",
       "links": {
@@ -1414,6 +1499,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": "2026-05-08",
       "links": {
@@ -1471,6 +1557,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -1531,6 +1618,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -1593,6 +1681,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -1652,6 +1741,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -1710,6 +1800,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -1754,6 +1845,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -1810,6 +1902,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -1878,6 +1971,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -1936,6 +2030,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -1996,6 +2091,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -2063,6 +2159,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -2116,6 +2213,7 @@
         "top_p": 0.95,
         "top_k": 64
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -2179,6 +2277,7 @@
         "top_p": 0.95,
         "top_k": 64
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -2235,6 +2334,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -2301,6 +2401,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -2360,6 +2461,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -2416,6 +2518,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -2478,6 +2581,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -2537,6 +2641,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-09-01",
       "expiration_date": null,
       "links": {
@@ -2598,6 +2703,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-09-01",
       "expiration_date": null,
       "links": {
@@ -2650,6 +2756,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -2702,6 +2809,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -2763,6 +2871,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -2821,6 +2930,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -2881,6 +2991,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -2938,6 +3049,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -3002,6 +3114,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -3060,6 +3173,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-08-31",
       "expiration_date": null,
       "links": {
@@ -3118,6 +3232,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-08-31",
       "expiration_date": null,
       "links": {
@@ -3179,6 +3294,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -3241,6 +3357,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -3296,6 +3413,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -3335,6 +3453,7 @@
         "frequency_penalty",
         "include_reasoning",
         "logit_bias",
+        "logprobs",
         "max_tokens",
         "min_p",
         "presence_penalty",
@@ -3347,6 +3466,7 @@
         "tool_choice",
         "tools",
         "top_k",
+        "top_logprobs",
         "top_p"
       ],
       "default_parameters": {
@@ -3357,6 +3477,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -3415,6 +3536,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -3480,6 +3602,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -3537,6 +3660,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -3595,6 +3719,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -3650,6 +3775,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -3706,6 +3832,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -3772,6 +3899,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -3827,6 +3955,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -3884,6 +4013,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -3912,12 +4042,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000001625",
-        "completion": "0.0000013"
+        "prompt": "0.00000015",
+        "completion": "0.000001",
+        "input_cache_read": "0.00000005"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 65536,
+        "max_completion_tokens": 262144,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -3950,6 +4081,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4016,6 +4148,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4082,6 +4215,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4138,6 +4272,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4193,6 +4328,7 @@
         "presence_penalty": null,
         "repetition_penalty": 1.05
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4256,6 +4392,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4314,6 +4451,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4362,6 +4500,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4428,6 +4567,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4490,6 +4630,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4546,6 +4687,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4613,6 +4755,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4666,6 +4809,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4733,6 +4877,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4795,6 +4940,7 @@
         "top_p": 0.95,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4848,6 +4994,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4910,6 +5057,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -4968,6 +5116,7 @@
         "top_p": 0.95,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5027,6 +5176,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5085,6 +5235,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5137,6 +5288,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5204,6 +5356,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5258,6 +5411,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5304,6 +5458,7 @@
         "top_p": 0.95,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5351,6 +5506,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5405,6 +5561,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5457,6 +5614,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5516,6 +5674,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5575,6 +5734,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5635,6 +5795,7 @@
         "top_p": 0.95,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5688,6 +5849,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5745,6 +5907,7 @@
         "top_p": 0.95,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": "2026-05-07",
       "links": {
@@ -5800,6 +5963,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5855,6 +6019,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5915,6 +6080,7 @@
         "top_p": 0.9,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -5976,6 +6142,7 @@
         "top_p": 0.95,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6042,6 +6209,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6100,6 +6268,7 @@
         "top_p": 0.95,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6150,6 +6319,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6208,6 +6378,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6260,6 +6431,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6313,6 +6485,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6370,6 +6543,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6424,6 +6598,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6473,6 +6648,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6531,6 +6707,7 @@
         "top_p": 0.6,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6582,6 +6759,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6638,6 +6816,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6679,6 +6858,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6736,6 +6916,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6790,6 +6971,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6848,6 +7030,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6906,6 +7089,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -6964,6 +7148,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7019,6 +7204,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7072,6 +7258,7 @@
         "top_p": 0.75,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7130,6 +7317,7 @@
         "top_p": 0.95,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7193,6 +7381,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7248,6 +7437,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7309,6 +7499,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7365,6 +7556,7 @@
         "top_p": 0.95,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7424,6 +7616,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7485,8 +7678,9 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
-      "expiration_date": null,
+      "expiration_date": "2026-06-01",
       "links": {
         "details": "/api/v1/models/x-ai/grok-4.1-fast/endpoints"
       }
@@ -7541,6 +7735,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7598,6 +7793,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7651,6 +7847,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7707,6 +7904,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7763,6 +7961,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7823,6 +8022,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7873,6 +8073,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7927,6 +8128,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -7983,6 +8185,7 @@
         "top_p": 0.95,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -8036,6 +8239,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -8088,6 +8292,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -8146,6 +8351,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": "2026-05-07",
       "links": {
@@ -8206,6 +8412,7 @@
         "top_p": 0.95,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -8260,6 +8467,7 @@
         "presence_penalty": null,
         "repetition_penalty": 1
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -8310,6 +8518,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -8371,6 +8580,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -8431,6 +8641,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -8484,6 +8695,7 @@
         "temperature": 1,
         "top_p": 0.95
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -8542,6 +8754,7 @@
         "top_p": 0.8,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -8603,6 +8816,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -8665,6 +8879,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -8727,6 +8942,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -8788,6 +9004,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-03-31",
       "expiration_date": null,
       "links": {
@@ -8841,6 +9058,7 @@
         "top_p": 0.95,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -8898,6 +9116,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-01-31",
       "expiration_date": null,
       "links": {
@@ -8959,6 +9178,7 @@
         "presence_penalty": null,
         "repetition_penalty": 1
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -9020,6 +9240,7 @@
         "presence_penalty": null,
         "repetition_penalty": 1
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -9073,6 +9294,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-09-30",
       "expiration_date": null,
       "links": {
@@ -9135,6 +9357,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -9196,6 +9419,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-01-31",
       "expiration_date": null,
       "links": {
@@ -9255,6 +9479,7 @@
         "top_p": 0.95,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-07-31",
       "expiration_date": null,
       "links": {
@@ -9308,6 +9533,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-04-30",
       "expiration_date": null,
       "links": {
@@ -9353,6 +9579,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -9416,6 +9643,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-01-31",
       "expiration_date": null,
       "links": {
@@ -9476,6 +9704,7 @@
         "presence_penalty": null,
         "repetition_penalty": 1
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -9535,6 +9764,7 @@
         "top_p": 0.8,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -9587,6 +9817,7 @@
         "top_p": 1,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-06-30",
       "expiration_date": null,
       "links": {
@@ -9640,6 +9871,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-06-30",
       "expiration_date": null,
       "links": {
@@ -9692,6 +9924,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-09-30",
       "expiration_date": null,
       "links": {
@@ -9752,6 +9985,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -9813,8 +10047,9 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-09-30",
-      "expiration_date": null,
+      "expiration_date": "2026-06-01",
       "links": {
         "details": "/api/v1/models/x-ai/grok-4-fast/endpoints"
       }
@@ -9873,6 +10108,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -9925,6 +10161,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-06-30",
       "expiration_date": null,
       "links": {
@@ -9984,6 +10221,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-09-30",
       "expiration_date": null,
       "links": {
@@ -10033,6 +10271,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-09-30",
       "expiration_date": null,
       "links": {
@@ -10086,6 +10325,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-09-30",
       "expiration_date": null,
       "links": {
@@ -10140,6 +10380,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -10192,6 +10433,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -10244,6 +10486,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -10302,6 +10545,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -10355,6 +10599,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-12-31",
       "expiration_date": null,
       "links": {
@@ -10411,6 +10656,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-06-30",
       "expiration_date": null,
       "links": {
@@ -10464,8 +10710,9 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-09-30",
-      "expiration_date": null,
+      "expiration_date": "2026-06-01",
       "links": {
         "details": "/api/v1/models/x-ai/grok-code-fast-1/endpoints"
       }
@@ -10512,6 +10759,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -10560,6 +10808,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -10617,6 +10866,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -10676,6 +10926,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
@@ -10729,6 +10980,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-06-30",
       "expiration_date": null,
       "links": {
@@ -10782,6 +11034,7 @@
         "top_p": 0.8,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -10834,6 +11087,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -10891,6 +11145,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-12-31",
       "expiration_date": null,
       "links": {
@@ -10936,6 +11191,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -10982,6 +11238,7 @@
         "structured_outputs"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-09-30",
       "expiration_date": null,
       "links": {
@@ -11039,6 +11296,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-09-30",
       "expiration_date": null,
       "links": {
@@ -11097,6 +11355,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-05-31",
       "expiration_date": null,
       "links": {
@@ -11154,6 +11413,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-05-31",
       "expiration_date": null,
       "links": {
@@ -11204,6 +11464,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -11265,6 +11526,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -11315,6 +11577,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -11376,6 +11639,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -11437,6 +11701,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-01-31",
       "expiration_date": null,
       "links": {
@@ -11489,6 +11754,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -11540,6 +11806,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-06-30",
       "expiration_date": null,
       "links": {
@@ -11593,6 +11860,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-06-30",
       "expiration_date": null,
       "links": {
@@ -11650,6 +11918,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-12-31",
       "expiration_date": null,
       "links": {
@@ -11699,6 +11968,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-12-31",
       "expiration_date": null,
       "links": {
@@ -11755,6 +12025,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-12-31",
       "expiration_date": null,
       "links": {
@@ -11814,6 +12085,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-06-30",
       "expiration_date": null,
       "links": {
@@ -11861,6 +12133,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -11908,6 +12181,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-06-30",
       "expiration_date": null,
       "links": {
@@ -11961,6 +12235,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-06-30",
       "expiration_date": null,
       "links": {
@@ -12011,6 +12286,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-01-31",
       "expiration_date": null,
       "links": {
@@ -12074,6 +12350,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-01-31",
       "expiration_date": null,
       "links": {
@@ -12129,6 +12406,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-06-30",
       "expiration_date": null,
       "links": {
@@ -12175,6 +12453,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -12224,6 +12503,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-12-31",
       "expiration_date": null,
       "links": {
@@ -12276,6 +12556,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-06-30",
       "expiration_date": null,
       "links": {
@@ -12328,6 +12609,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -12375,6 +12657,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-04-30",
       "expiration_date": null,
       "links": {
@@ -12436,8 +12719,9 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-07-31",
-      "expiration_date": null,
+      "expiration_date": "2026-06-01",
       "links": {
         "details": "/api/v1/models/x-ai/grok-4-07-09/endpoints"
       }
@@ -12479,6 +12763,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -12526,6 +12811,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -12580,6 +12866,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-07-31",
       "expiration_date": null,
       "links": {
@@ -12625,6 +12912,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -12670,6 +12958,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -12720,6 +13009,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -12767,6 +13057,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -12823,6 +13114,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
@@ -12878,6 +13170,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -12941,6 +13234,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-01-31",
       "expiration_date": null,
       "links": {
@@ -13004,6 +13298,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-01-31",
       "expiration_date": null,
       "links": {
@@ -13057,6 +13352,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -13114,8 +13410,9 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-02-28",
-      "expiration_date": null,
+      "expiration_date": "2026-06-01",
       "links": {
         "details": "/api/v1/models/x-ai/grok-3-mini/endpoints"
       }
@@ -13167,8 +13464,9 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-02-28",
-      "expiration_date": null,
+      "expiration_date": "2026-06-01",
       "links": {
         "details": "/api/v1/models/x-ai/grok-3/endpoints"
       }
@@ -13225,6 +13523,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-01-31",
       "expiration_date": null,
       "links": {
@@ -13285,6 +13584,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -13344,6 +13644,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-01-31",
       "expiration_date": null,
       "links": {
@@ -13403,6 +13704,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-01-31",
       "expiration_date": null,
       "links": {
@@ -13446,6 +13748,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -13494,6 +13797,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -13547,6 +13851,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -13610,6 +13915,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-01-31",
       "expiration_date": null,
       "links": {
@@ -13659,6 +13965,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -13707,6 +14014,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -13757,6 +14065,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -13805,6 +14114,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -13856,6 +14166,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -13917,6 +14228,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -13980,6 +14292,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -14037,6 +14350,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -14093,6 +14407,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -14141,6 +14456,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -14195,6 +14511,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -14245,6 +14562,7 @@
         "tools"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -14295,6 +14613,7 @@
         "tools"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -14345,6 +14664,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -14396,6 +14716,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -14447,6 +14768,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -14495,6 +14817,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-06-30",
       "expiration_date": null,
       "links": {
@@ -14551,8 +14874,9 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-02-28",
-      "expiration_date": null,
+      "expiration_date": "2026-06-01",
       "links": {
         "details": "/api/v1/models/x-ai/grok-3-mini-beta/endpoints"
       }
@@ -14603,8 +14927,9 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-02-28",
-      "expiration_date": null,
+      "expiration_date": "2026-06-01",
       "links": {
         "details": "/api/v1/models/x-ai/grok-3-beta/endpoints"
       }
@@ -14655,6 +14980,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -14709,6 +15035,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -14763,6 +15090,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-07-31",
       "expiration_date": null,
       "links": {
@@ -14809,6 +15137,7 @@
         "structured_outputs"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
@@ -14858,6 +15187,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
@@ -14903,6 +15233,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -14955,6 +15286,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -14999,6 +15331,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -15053,6 +15386,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -15101,6 +15435,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -15144,6 +15479,7 @@
         "web_search_options"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
@@ -15187,6 +15523,7 @@
         "web_search_options"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
@@ -15242,6 +15579,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-01-31",
       "expiration_date": null,
       "links": {
@@ -15291,6 +15629,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -15349,6 +15688,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -15398,6 +15738,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -15447,6 +15788,7 @@
         "web_search_options"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -15494,6 +15836,7 @@
         "web_search_options"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -15543,6 +15886,7 @@
         "web_search_options"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -15602,6 +15946,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": "2026-06-01",
       "links": {
@@ -15638,8 +15983,8 @@
       },
       "top_provider": {
         "context_length": 200000,
-        "max_completion_tokens": 128000,
-        "is_moderated": true
+        "max_completion_tokens": 64000,
+        "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
@@ -15650,7 +15995,6 @@
         "temperature",
         "tool_choice",
         "tools",
-        "top_k",
         "top_p"
       ],
       "default_parameters": {
@@ -15661,8 +16005,9 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-10-31",
-      "expiration_date": "2026-05-05",
+      "expiration_date": "2026-05-11",
       "links": {
         "details": "/api/v1/models/anthropic/claude-3-7-sonnet-20250219/endpoints"
       }
@@ -15719,8 +16064,9 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-10-31",
-      "expiration_date": "2026-05-05",
+      "expiration_date": "2026-05-11",
       "links": {
         "details": "/api/v1/models/anthropic/claude-3-7-sonnet-20250219/endpoints"
       }
@@ -15771,6 +16117,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-09-30",
       "expiration_date": null,
       "links": {
@@ -15817,6 +16164,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -15869,6 +16217,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
@@ -15882,7 +16231,7 @@
       "name": "Google: Gemini 2.0 Flash",
       "created": 1738769413,
       "description": "Gemini Flash 2.0 offers a significantly faster time to first token (TTFT) compared to [Gemini Flash 1.5](/google/gemini-flash-1.5), while maintaining quality on par with larger models like [Gemini Pro 1.5](/google/gemini-pro-1.5). It...",
-      "context_length": 1000000,
+      "context_length": 1048576,
       "architecture": {
         "modality": "text+image+file+audio+video->text",
         "input_modalities": [
@@ -15909,7 +16258,7 @@
         "input_cache_write": "0.00000008333333333333334"
       },
       "top_provider": {
-        "context_length": 1000000,
+        "context_length": 1048576,
         "max_completion_tokens": 8192,
         "is_moderated": false
       },
@@ -15930,6 +16279,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": "2026-06-01",
       "links": {
@@ -15976,6 +16326,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -16019,6 +16370,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -16062,6 +16414,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -16103,6 +16456,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -16154,6 +16508,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -16201,6 +16556,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -16252,6 +16608,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -16300,6 +16657,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -16347,6 +16705,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -16402,6 +16761,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
@@ -16457,6 +16817,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
@@ -16509,6 +16870,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-07-31",
       "expiration_date": null,
       "links": {
@@ -16556,6 +16918,7 @@
         "web_search_options"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -16608,6 +16971,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-07-31",
       "expiration_date": null,
       "links": {
@@ -16667,6 +17031,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-07-31",
       "expiration_date": null,
       "links": {
@@ -16713,6 +17078,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-03-31",
       "expiration_date": null,
       "links": {
@@ -16766,6 +17132,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -16815,6 +17182,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -16860,6 +17228,7 @@
         "response_format",
         "seed",
         "stop",
+        "structured_outputs",
         "temperature",
         "tool_choice",
         "tools",
@@ -16867,6 +17236,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-07-31",
       "expiration_date": null,
       "links": {
@@ -16920,6 +17290,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -16976,6 +17347,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
@@ -17024,6 +17396,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -17071,6 +17444,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -17124,6 +17498,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -17169,6 +17544,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-10-31",
       "expiration_date": null,
       "links": {
@@ -17213,6 +17589,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-10-31",
       "expiration_date": null,
       "links": {
@@ -17258,6 +17635,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-10-31",
       "expiration_date": null,
       "links": {
@@ -17314,6 +17692,7 @@
         "web_search_options"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
@@ -17366,6 +17745,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-07-31",
       "expiration_date": null,
       "links": {
@@ -17418,6 +17798,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-03-31",
       "expiration_date": null,
       "links": {
@@ -17471,6 +17852,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-07-31",
       "expiration_date": null,
       "links": {
@@ -17517,6 +17899,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -17569,6 +17952,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-04-30",
       "expiration_date": null,
       "links": {
@@ -17622,6 +18006,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-07-31",
       "expiration_date": null,
       "links": {
@@ -17675,6 +18060,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -17731,6 +18117,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -17783,52 +18170,11 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": "2026-05-08",
       "links": {
         "details": "/api/v1/models/nvidia/llama-3.1-nemotron-70b-instruct/endpoints"
-      }
-    },
-    {
-      "id": "inflection/inflection-3-pi",
-      "canonical_slug": "inflection/inflection-3-pi",
-      "hugging_face_id": null,
-      "name": "Inflection: Inflection 3 Pi",
-      "created": 1728604800,
-      "description": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay. Pi...",
-      "context_length": 8000,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.0000025",
-        "completion": "0.00001"
-      },
-      "top_provider": {
-        "context_length": 8000,
-        "max_completion_tokens": 1024,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "max_tokens",
-        "stop",
-        "temperature",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "knowledge_cutoff": "2024-10-31",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/inflection/inflection-3-pi/endpoints"
       }
     },
     {
@@ -17867,10 +18213,54 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-10-31",
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/inflection/inflection-3-productivity/endpoints"
+      }
+    },
+    {
+      "id": "inflection/inflection-3-pi",
+      "canonical_slug": "inflection/inflection-3-pi",
+      "hugging_face_id": null,
+      "name": "Inflection: Inflection 3 Pi",
+      "created": 1728604800,
+      "description": "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including backstory, emotional intelligence, productivity, and safety. It has access to recent news, and excels in scenarios like customer support and roleplay. Pi...",
+      "context_length": 8000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000025",
+        "completion": "0.00001"
+      },
+      "top_provider": {
+        "context_length": 8000,
+        "max_completion_tokens": 1024,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "max_tokens",
+        "stop",
+        "temperature",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": "2024-10-31",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/inflection/inflection-3-pi/endpoints"
       }
     },
     {
@@ -17922,10 +18312,104 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-04-30",
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/thedrummer/rocinante-12b/endpoints"
+      }
+    },
+    {
+      "id": "meta-llama/llama-3.2-3b-instruct:free",
+      "canonical_slug": "meta-llama/llama-3.2-3b-instruct",
+      "hugging_face_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "name": "Meta: Llama 3.2 3B Instruct (free)",
+      "created": 1727222400,
+      "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it...",
+      "context_length": 131072,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Llama3",
+        "instruct_type": "llama3"
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "presence_penalty",
+        "stop",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": "2023-12-31",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/meta-llama/llama-3.2-3b-instruct/endpoints"
+      }
+    },
+    {
+      "id": "meta-llama/llama-3.2-3b-instruct",
+      "canonical_slug": "meta-llama/llama-3.2-3b-instruct",
+      "hugging_face_id": "meta-llama/Llama-3.2-3B-Instruct",
+      "name": "Meta: Llama 3.2 3B Instruct",
+      "created": 1727222400,
+      "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it...",
+      "context_length": 80000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Llama3",
+        "instruct_type": "llama3"
+      },
+      "pricing": {
+        "prompt": "0.000000051",
+        "completion": "0.00000034"
+      },
+      "top_provider": {
+        "context_length": 80000,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "presence_penalty",
+        "repetition_penalty",
+        "seed",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": "2023-12-31",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/meta-llama/llama-3.2-3b-instruct/endpoints"
       }
     },
     {
@@ -17968,6 +18452,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -18019,101 +18504,11 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/meta-llama/llama-3.2-11b-vision-instruct/endpoints"
-      }
-    },
-    {
-      "id": "meta-llama/llama-3.2-3b-instruct:free",
-      "canonical_slug": "meta-llama/llama-3.2-3b-instruct",
-      "hugging_face_id": "meta-llama/Llama-3.2-3B-Instruct",
-      "name": "Meta: Llama 3.2 3B Instruct (free)",
-      "created": 1727222400,
-      "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it...",
-      "context_length": 131072,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Llama3",
-        "instruct_type": "llama3"
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 131072,
-        "max_completion_tokens": null,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "stop",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "knowledge_cutoff": "2023-12-31",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/meta-llama/llama-3.2-3b-instruct/endpoints"
-      }
-    },
-    {
-      "id": "meta-llama/llama-3.2-3b-instruct",
-      "canonical_slug": "meta-llama/llama-3.2-3b-instruct",
-      "hugging_face_id": "meta-llama/Llama-3.2-3B-Instruct",
-      "name": "Meta: Llama 3.2 3B Instruct",
-      "created": 1727222400,
-      "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it...",
-      "context_length": 80000,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Llama3",
-        "instruct_type": "llama3"
-      },
-      "pricing": {
-        "prompt": "0.000000051",
-        "completion": "0.00000034"
-      },
-      "top_provider": {
-        "context_length": 80000,
-        "max_completion_tokens": null,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "repetition_penalty",
-        "seed",
-        "temperature",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "knowledge_cutoff": "2023-12-31",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/meta-llama/llama-3.2-3b-instruct/endpoints"
       }
     },
     {
@@ -18163,60 +18558,11 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/qwen/qwen-2.5-72b-instruct/endpoints"
-      }
-    },
-    {
-      "id": "cohere/command-r-08-2024",
-      "canonical_slug": "cohere/command-r-08-2024",
-      "hugging_face_id": null,
-      "name": "Cohere: Command R (08-2024)",
-      "created": 1724976000,
-      "description": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and...",
-      "context_length": 128000,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Cohere",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006"
-      },
-      "top_provider": {
-        "context_length": 128000,
-        "max_completion_tokens": 4000,
-        "is_moderated": true
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "knowledge_cutoff": "2024-03-31",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/cohere/command-r-08-2024/endpoints"
       }
     },
     {
@@ -18263,10 +18609,62 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-03-31",
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/cohere/command-r-plus-08-2024/endpoints"
+      }
+    },
+    {
+      "id": "cohere/command-r-08-2024",
+      "canonical_slug": "cohere/command-r-08-2024",
+      "hugging_face_id": null,
+      "name": "Cohere: Command R (08-2024)",
+      "created": 1724976000,
+      "description": "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) with improved performance for multilingual retrieval-augmented generation (RAG) and tool use. More broadly, it is better at math, code and reasoning and...",
+      "context_length": 128000,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Cohere",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00000015",
+        "completion": "0.0000006"
+      },
+      "top_provider": {
+        "context_length": 128000,
+        "max_completion_tokens": 4000,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": "2024-03-31",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/cohere/command-r-08-2024/endpoints"
       }
     },
     {
@@ -18316,6 +18714,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -18367,6 +18766,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -18412,6 +18812,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -18463,6 +18864,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -18514,6 +18916,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -18571,6 +18974,7 @@
         "web_search_options"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
@@ -18626,6 +19030,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -18679,6 +19084,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -18736,6 +19142,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-04-30",
       "expiration_date": null,
       "links": {
@@ -18792,6 +19199,7 @@
         "web_search_options"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
@@ -18849,6 +19257,7 @@
         "web_search_options"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
@@ -18897,6 +19306,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -18946,6 +19356,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -18995,66 +19406,11 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/nousresearch/hermes-2-pro-llama-3-8b/endpoints"
-      }
-    },
-    {
-      "id": "openai/gpt-4o",
-      "canonical_slug": "openai/gpt-4o",
-      "hugging_face_id": null,
-      "name": "OpenAI: GPT-4o",
-      "created": 1715558400,
-      "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...",
-      "context_length": 128000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "input_modalities": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "GPT",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.0000025",
-        "completion": "0.00001"
-      },
-      "top_provider": {
-        "context_length": 128000,
-        "max_completion_tokens": 16384,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_completion_tokens",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_logprobs",
-        "top_p",
-        "web_search_options"
-      ],
-      "default_parameters": {},
-      "knowledge_cutoff": "2023-10-31",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/openai/gpt-4o/endpoints"
       }
     },
     {
@@ -19107,6 +19463,7 @@
         "web_search_options"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
@@ -19114,50 +19471,60 @@
       }
     },
     {
-      "id": "meta-llama/llama-3-70b-instruct",
-      "canonical_slug": "meta-llama/llama-3-70b-instruct",
-      "hugging_face_id": "meta-llama/Meta-Llama-3-70B-Instruct",
-      "name": "Meta: Llama 3 70B Instruct",
-      "created": 1713398400,
-      "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong...",
-      "context_length": 8192,
+      "id": "openai/gpt-4o",
+      "canonical_slug": "openai/gpt-4o",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-4o",
+      "created": 1715558400,
+      "description": "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and image inputs with text outputs. It maintains the intelligence level of [GPT-4 Turbo](/models/openai/gpt-4-turbo) while being twice as...",
+      "context_length": 128000,
       "architecture": {
-        "modality": "text->text",
+        "modality": "text+image+file->text",
         "input_modalities": [
-          "text"
+          "text",
+          "image",
+          "file"
         ],
         "output_modalities": [
           "text"
         ],
-        "tokenizer": "Llama3",
-        "instruct_type": "llama3"
+        "tokenizer": "GPT",
+        "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000051",
-        "completion": "0.00000074"
+        "prompt": "0.0000025",
+        "completion": "0.00001"
       },
       "top_provider": {
-        "context_length": 8192,
-        "max_completion_tokens": 8000,
+        "context_length": 128000,
+        "max_completion_tokens": 16384,
         "is_moderated": false
       },
       "per_request_limits": null,
       "supported_parameters": [
         "frequency_penalty",
+        "logit_bias",
+        "logprobs",
+        "max_completion_tokens",
         "max_tokens",
         "presence_penalty",
-        "repetition_penalty",
+        "response_format",
         "seed",
         "stop",
+        "structured_outputs",
         "temperature",
-        "top_k",
-        "top_p"
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p",
+        "web_search_options"
       ],
       "default_parameters": {},
-      "knowledge_cutoff": "2023-12-31",
+      "supported_voices": null,
+      "knowledge_cutoff": "2023-10-31",
       "expiration_date": null,
       "links": {
-        "details": "/api/v1/models/meta-llama/llama-3-70b-instruct/endpoints"
+        "details": "/api/v1/models/openai/gpt-4o/endpoints"
       }
     },
     {
@@ -19206,10 +19573,59 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": "2026-05-07",
       "links": {
         "details": "/api/v1/models/meta-llama/llama-3-8b-instruct/endpoints"
+      }
+    },
+    {
+      "id": "meta-llama/llama-3-70b-instruct",
+      "canonical_slug": "meta-llama/llama-3-70b-instruct",
+      "hugging_face_id": "meta-llama/Meta-Llama-3-70B-Instruct",
+      "name": "Meta: Llama 3 70B Instruct",
+      "created": 1713398400,
+      "description": "Meta's latest class of model (Llama 3) launched with a variety of sizes & flavors. This 70B instruct-tuned version was optimized for high quality dialogue usecases. It has demonstrated strong...",
+      "context_length": 8192,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Llama3",
+        "instruct_type": "llama3"
+      },
+      "pricing": {
+        "prompt": "0.00000051",
+        "completion": "0.00000074"
+      },
+      "top_provider": {
+        "context_length": 8192,
+        "max_completion_tokens": 8000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "max_tokens",
+        "presence_penalty",
+        "repetition_penalty",
+        "seed",
+        "stop",
+        "temperature",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": "2023-12-31",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/meta-llama/llama-3-70b-instruct/endpoints"
       }
     },
     {
@@ -19258,6 +19674,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-01-31",
       "expiration_date": null,
       "links": {
@@ -19305,6 +19722,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-04-30",
       "expiration_date": null,
       "links": {
@@ -19358,6 +19776,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -19406,6 +19825,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-08-31",
       "expiration_date": null,
       "links": {
@@ -19458,6 +19878,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-11-30",
       "expiration_date": null,
       "links": {
@@ -19510,6 +19931,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -19562,6 +19984,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2021-09-30",
       "expiration_date": null,
       "links": {
@@ -19617,6 +20040,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": "2026-05-08",
       "links": {
@@ -19670,6 +20094,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -19741,6 +20166,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -19793,6 +20219,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-04-30",
       "expiration_date": null,
       "links": {
@@ -19843,6 +20270,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2021-09-30",
       "expiration_date": null,
       "links": {
@@ -19891,6 +20319,7 @@
       "default_parameters": {
         "temperature": 0.3
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2023-09-30",
       "expiration_date": null,
       "links": {
@@ -19944,6 +20373,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2021-09-30",
       "expiration_date": null,
       "links": {
@@ -19997,6 +20427,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-06-30",
       "expiration_date": null,
       "links": {
@@ -20051,6 +20482,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-06-30",
       "expiration_date": null,
       "links": {
@@ -20105,10 +20537,64 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-06-30",
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/gryphe/mythomax-l2-13b/endpoints"
+      }
+    },
+    {
+      "id": "openai/gpt-4-0314",
+      "canonical_slug": "openai/gpt-4-0314",
+      "hugging_face_id": null,
+      "name": "OpenAI: GPT-4 (older v0314)",
+      "created": 1685232000,
+      "description": "GPT-4-0314 is the first version of GPT-4 released, with a context length of 8,192 tokens, and was supported until June 14. Training data: up to Sep 2021.",
+      "context_length": 8191,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "GPT",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.00003",
+        "completion": "0.00006"
+      },
+      "top_provider": {
+        "context_length": 8191,
+        "max_completion_tokens": 4096,
+        "is_moderated": true
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p"
+      ],
+      "default_parameters": {},
+      "supported_voices": null,
+      "knowledge_cutoff": "2021-09-30",
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/openai/gpt-4-0314/endpoints"
       }
     },
     {
@@ -20158,6 +20644,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2021-09-30",
       "expiration_date": null,
       "links": {
@@ -20210,62 +20697,11 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2021-09-30",
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/openai/gpt-3.5-turbo/endpoints"
-      }
-    },
-    {
-      "id": "openai/gpt-4-0314",
-      "canonical_slug": "openai/gpt-4-0314",
-      "hugging_face_id": null,
-      "name": "OpenAI: GPT-4 (older v0314)",
-      "created": 1685232000,
-      "description": "GPT-4-0314 is the first version of GPT-4 released, with a context length of 8,192 tokens, and was supported until June 14. Training data: up to Sep 2021.",
-      "context_length": 8191,
-      "architecture": {
-        "modality": "text->text",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "GPT",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.00003",
-        "completion": "0.00006"
-      },
-      "top_provider": {
-        "context_length": 8191,
-        "max_completion_tokens": 4096,
-        "is_moderated": true
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "logit_bias",
-        "logprobs",
-        "max_tokens",
-        "presence_penalty",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_logprobs",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "knowledge_cutoff": "2021-09-30",
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/openai/gpt-4-0314/endpoints"
       }
     }
   ]

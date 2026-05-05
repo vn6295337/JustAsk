@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-05-04 09:09:14 IST
+Generated: 2026-05-05 08:55:41 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 371
+  Total models: 372
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  64 models
@@ -157,7 +157,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - lyria-3-clip-preview
     - lyria-3-pro-preview
 
-  Mistral         :  21 models
+  Mistral         :  22 models
     - codestral-2508
     - devstral-2512
     - devstral-medium
@@ -168,6 +168,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - mistral-7b-instruct-v0.1
     - mistral-large-2512
     - mistral-medium-3
+    - mistral-medium-3-5
     - mistral-medium-3.1
     - mistral-nemo
     - mistral-saba

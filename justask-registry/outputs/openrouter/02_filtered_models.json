@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-05-04 09:09:14 IST",
+    "generated_at": "2026-05-05 08:55:42 IST",
     "total_models": 30,
     "pipeline_stage": "B_filter_models"
   },
@@ -57,6 +57,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -113,6 +114,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -164,6 +166,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -215,6 +218,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -273,6 +277,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": "2026-05-07",
       "links": {
@@ -329,6 +334,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -382,6 +388,7 @@
         "top_p": 0.95,
         "top_k": 64
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -438,6 +445,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -493,6 +501,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -546,6 +555,7 @@
         "presence_penalty": null,
         "repetition_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -605,6 +615,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -659,6 +670,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -711,6 +723,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -761,6 +774,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -813,6 +827,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": null,
       "expiration_date": null,
       "links": {
@@ -862,6 +877,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-09-30",
       "expiration_date": null,
       "links": {
@@ -914,6 +930,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2025-03-31",
       "expiration_date": null,
       "links": {
@@ -964,6 +981,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -1014,6 +1032,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-06-30",
       "expiration_date": null,
       "links": {
@@ -1063,6 +1082,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-12-31",
       "expiration_date": null,
       "links": {
@@ -1110,6 +1130,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2025-06-30",
       "expiration_date": null,
       "links": {
@@ -1157,6 +1178,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-04-30",
       "expiration_date": null,
       "links": {
@@ -1200,6 +1222,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -1243,6 +1266,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -1288,6 +1312,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -1332,6 +1357,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -1381,6 +1407,7 @@
         "top_p": null,
         "frequency_penalty": null
       },
+      "supported_voices": null,
       "knowledge_cutoff": "2024-08-31",
       "expiration_date": null,
       "links": {
@@ -1428,6 +1455,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -1473,6 +1501,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
@@ -1518,6 +1547,7 @@
         "top_p"
       ],
       "default_parameters": {},
+      "supported_voices": null,
       "knowledge_cutoff": "2023-12-31",
       "expiration_date": null,
       "links": {
