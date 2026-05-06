@@ -1,67 +1,89 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-05-05 08:55:56 IST
+Generated: 2026-05-06 09:07:00 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 30
-   • Total records in pipeline: 30
+   • Total unique model names: 31
+   • Total records in pipeline: 26
    • Total records in Supabase: 24
-   • Models in both systems: 24
+   • Models in both systems: 19
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 6
-   • Models in Supabase only (not in pipeline): 0
+   • Models in pipeline only (not in Supabase): 7
+   • Models in Supabase only (not in pipeline): 5
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
    • inference_provider:
-     - Exact matches: 24
+     - Exact matches: 19
      - Differences: 0
    • model_provider:
-     - Exact matches: 24
+     - Exact matches: 19
      - Differences: 0
    • human_readable_name:
-     - Exact matches: 24
+     - Exact matches: 19
      - Differences: 0
    • model_provider_country:
-     - Exact matches: 24
+     - Exact matches: 19
      - Differences: 0
    • official_url:
-     - Exact matches: 24
+     - Exact matches: 19
      - Differences: 0
    • input_modalities:
-     - Exact matches: 24
+     - Exact matches: 19
      - Differences: 0
    • output_modalities:
-     - Exact matches: 24
+     - Exact matches: 19
      - Differences: 0
    • license_info_text:
-     - Exact matches: 24
+     - Exact matches: 19
      - Differences: 0
    • license_info_url:
-     - Exact matches: 24
+     - Exact matches: 19
      - Differences: 0
    • license_name:
-     - Exact matches: 24
+     - Exact matches: 19
      - Differences: 0
    • license_url:
-     - Exact matches: 24
+     - Exact matches: 19
      - Differences: 0
    • rate_limits:
-     - Exact matches: 24
+     - Exact matches: 19
      - Differences: 0
    • provider_api_access:
-     - Exact matches: 24
+     - Exact matches: 19
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 6
-     Models: Laguna M.1, Laguna XS.2, Ling-2.6-1T, Nemotron 3 Nano Omni, Owl Alpha, Qianfan-OCR-Fast
+   • New models (pipeline only): 7
+     Models: CoBuddy, Laguna M.1, Laguna XS.2, Ling-2.6-1T, Nemotron 3 Nano Omni, Owl Alpha, Qianfan-OCR-Fast
    • Existing models with differences: 0
+   • Deprecated models (Supabase only): 5
+     Models: Gemma 3 12B IT, Gemma 3 27B IT, Gemma 3 4B IT, Gemma 3n E2B IT, Gemma 3n E4B IT
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
+================================================================================
+
+MODEL: CoBuddy
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | Unknown                   |                          
+human_readable_name       | CoBuddy                   |                          
+model_provider_country    | Unknown                   |                          
+official_url              | Unknown                   |                          
+input_modalities          | Text                      |                          
+output_modalities         | Text                      |                          
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              |                           |                          
+license_url               |                           |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
+
 ================================================================================
 
 MODEL: Free Models Router
@@ -148,19 +170,19 @@ MODEL: Gemma 3 12B IT
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                | OpenRouter               
-model_provider            | Google                    | Google                   
-human_readable_name       | Gemma 3 12B IT            | Gemma 3 12B IT           
-model_provider_country    | United States             | United States            
-official_url              | https://ai.google.dev/g.. | https://ai.google.dev/g..
-input_modalities          | Text, Image               | Text, Image              
-output_modalities         | Text                      | Text                     
+inference_provider        |                           | OpenRouter               
+model_provider            |                           | Google                   
+human_readable_name       |                           | Gemma 3 12B IT           
+model_provider_country    |                           | United States            
+official_url              |                           | https://ai.google.dev/g..
+input_modalities          |                           | Text, Image              
+output_modalities         |                           | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | GEMMA                     | GEMMA                    
-license_url               | https://ai.google.dev/g.. | https://ai.google.dev/g..
-rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
-provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+license_name              |                           | GEMMA                    
+license_url               |                           | https://ai.google.dev/g..
+rate_limits               |                           | 20 requests/min 50/day   
+provider_api_access       |                           | https://openrouter.ai/s..
 
 ================================================================================
 
@@ -168,19 +190,19 @@ MODEL: Gemma 3 27B IT
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                | OpenRouter               
-model_provider            | Google                    | Google                   
-human_readable_name       | Gemma 3 27B IT            | Gemma 3 27B IT           
-model_provider_country    | United States             | United States            
-official_url              | https://ai.google.dev/g.. | https://ai.google.dev/g..
-input_modalities          | Text, Image               | Text, Image              
-output_modalities         | Text                      | Text                     
+inference_provider        |                           | OpenRouter               
+model_provider            |                           | Google                   
+human_readable_name       |                           | Gemma 3 27B IT           
+model_provider_country    |                           | United States            
+official_url              |                           | https://ai.google.dev/g..
+input_modalities          |                           | Text, Image              
+output_modalities         |                           | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | GEMMA                     | GEMMA                    
-license_url               | https://ai.google.dev/g.. | https://ai.google.dev/g..
-rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
-provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+license_name              |                           | GEMMA                    
+license_url               |                           | https://ai.google.dev/g..
+rate_limits               |                           | 20 requests/min 50/day   
+provider_api_access       |                           | https://openrouter.ai/s..
 
 ================================================================================
 
@@ -188,19 +210,19 @@ MODEL: Gemma 3 4B IT
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                | OpenRouter               
-model_provider            | Google                    | Google                   
-human_readable_name       | Gemma 3 4B IT             | Gemma 3 4B IT            
-model_provider_country    | United States             | United States            
-official_url              | https://ai.google.dev/g.. | https://ai.google.dev/g..
-input_modalities          | Text, Image               | Text, Image              
-output_modalities         | Text                      | Text                     
+inference_provider        |                           | OpenRouter               
+model_provider            |                           | Google                   
+human_readable_name       |                           | Gemma 3 4B IT            
+model_provider_country    |                           | United States            
+official_url              |                           | https://ai.google.dev/g..
+input_modalities          |                           | Text, Image              
+output_modalities         |                           | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | GEMMA                     | GEMMA                    
-license_url               | https://ai.google.dev/g.. | https://ai.google.dev/g..
-rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
-provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+license_name              |                           | GEMMA                    
+license_url               |                           | https://ai.google.dev/g..
+rate_limits               |                           | 20 requests/min 50/day   
+provider_api_access       |                           | https://openrouter.ai/s..
 
 ================================================================================
 
@@ -208,19 +230,19 @@ MODEL: Gemma 3n E2B IT
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                | OpenRouter               
-model_provider            | Google                    | Google                   
-human_readable_name       | Gemma 3n E2B IT           | Gemma 3n E2B IT          
-model_provider_country    | United States             | United States            
-official_url              | https://ai.google.dev/g.. | https://ai.google.dev/g..
-input_modalities          | Text, Image, Audio, Video | Text, Image, Audio, Video
-output_modalities         | Text                      | Text                     
+inference_provider        |                           | OpenRouter               
+model_provider            |                           | Google                   
+human_readable_name       |                           | Gemma 3n E2B IT          
+model_provider_country    |                           | United States            
+official_url              |                           | https://ai.google.dev/g..
+input_modalities          |                           | Text, Image, Audio, Video
+output_modalities         |                           | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | GEMMA                     | GEMMA                    
-license_url               | https://ai.google.dev/g.. | https://ai.google.dev/g..
-rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
-provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+license_name              |                           | GEMMA                    
+license_url               |                           | https://ai.google.dev/g..
+rate_limits               |                           | 20 requests/min 50/day   
+provider_api_access       |                           | https://openrouter.ai/s..
 
 ================================================================================
 
@@ -228,19 +250,19 @@ MODEL: Gemma 3n E4B IT
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | OpenRouter                | OpenRouter               
-model_provider            | Google                    | Google                   
-human_readable_name       | Gemma 3n E4B IT           | Gemma 3n E4B IT          
-model_provider_country    | United States             | United States            
-official_url              | https://ai.google.dev/g.. | https://ai.google.dev/g..
-input_modalities          | Text, Image, Audio, Video | Text, Image, Audio, Video
-output_modalities         | Text                      | Text                     
+inference_provider        |                           | OpenRouter               
+model_provider            |                           | Google                   
+human_readable_name       |                           | Gemma 3n E4B IT          
+model_provider_country    |                           | United States            
+official_url              |                           | https://ai.google.dev/g..
+input_modalities          |                           | Text, Image, Audio, Video
+output_modalities         |                           | Text                     
 license_info_text         |                           | None                     
 license_info_url          |                           | None                     
-license_name              | GEMMA                     | GEMMA                    
-license_url               | https://ai.google.dev/g.. | https://ai.google.dev/g..
-rate_limits               | 20 requests/min 50/day    | 20 requests/min 50/day   
-provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s..
+license_name              |                           | GEMMA                    
+license_url               |                           | https://ai.google.dev/g..
+rate_limits               |                           | 20 requests/min 50/day   
+provider_api_access       |                           | https://openrouter.ai/s..
 
 ================================================================================
 

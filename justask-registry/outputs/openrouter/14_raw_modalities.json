@@ -1,10 +1,19 @@
 {
   "metadata": {
-    "generated_at": "2026-05-05 08:55:53 IST",
-    "total_models": 30,
+    "generated_at": "2026-05-06 09:06:57 IST",
+    "total_models": 26,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
+    {
+      "id": "baidu/cobuddy:free",
+      "canonical_slug": "baidu/cobuddy-20260430",
+      "original_name": "Baidu Qianfan: CoBuddy (free)",
+      "hugging_face_id": null,
+      "clean_model_name": "CoBuddy",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text"
+    },
     {
       "id": "openrouter/owl-alpha",
       "canonical_slug": "openrouter/owl-alpha",
@@ -201,51 +210,6 @@
       "hugging_face_id": "cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition",
       "clean_model_name": "Uncensored",
       "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "google/gemma-3n-e2b-it:free",
-      "canonical_slug": "google/gemma-3n-e2b-it",
-      "original_name": "Google: Gemma 3n 2B (free)",
-      "hugging_face_id": "google/gemma-3n-E2B-it",
-      "clean_model_name": "Gemma 3n E2B IT",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "google/gemma-3n-e4b-it:free",
-      "canonical_slug": "google/gemma-3n-e4b-it",
-      "original_name": "Google: Gemma 3n 4B (free)",
-      "hugging_face_id": "google/gemma-3n-E4B-it",
-      "clean_model_name": "Gemma 3n E4B IT",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "google/gemma-3-4b-it:free",
-      "canonical_slug": "google/gemma-3-4b-it",
-      "original_name": "Google: Gemma 3 4B (free)",
-      "hugging_face_id": "google/gemma-3-4b-it",
-      "clean_model_name": "Gemma 3 4B IT",
-      "raw_input_modalities": "text, image",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "google/gemma-3-12b-it:free",
-      "canonical_slug": "google/gemma-3-12b-it",
-      "original_name": "Google: Gemma 3 12B (free)",
-      "hugging_face_id": "google/gemma-3-12b-it",
-      "clean_model_name": "Gemma 3 12B IT",
-      "raw_input_modalities": "text, image",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "google/gemma-3-27b-it:free",
-      "canonical_slug": "google/gemma-3-27b-it",
-      "original_name": "Google: Gemma 3 27B (free)",
-      "hugging_face_id": "google/gemma-3-27b-it",
-      "clean_model_name": "Gemma 3 27B IT",
-      "raw_input_modalities": "text, image",
       "raw_output_modalities": "text"
     },
     {

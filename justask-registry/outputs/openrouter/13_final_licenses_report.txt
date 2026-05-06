@@ -1,25 +1,25 @@
 ================================================================================
 FINAL CONSOLIDATED LICENSE LIST REPORT
-Generated: 2026-05-05 08:55:53 IST
+Generated: 2026-05-06 09:06:57 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 32
+  Total models        : 27
   Input sources       : 4 pipeline stage files
   Processor           : step_13_final_licenses.py
   Output              : 13_final_licenses.json
 
 SOURCE CATEGORY DISTRIBUTION:
   Custom: 7 models
-  Google: 7 models
+  Google: 2 models
   Meta: 2 models
   Opensource: 8 models
   Proprietary: 8 models
 
 FINAL LICENSE DISTRIBUTION:
-   7 models: GEMMA
    6 models: APACHE-2.0
    4 models: NVIDIA
+   2 models: GEMMA
    2 models: LFM1.0
    2 models: QWEN
    2 models: xAI
@@ -143,82 +143,7 @@ MODEL 7: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 8: google/gemma-3-12b-it
---------------------------------------------------
-  ID: google/gemma-3-12b-it:free
-  Original Name: Google: Gemma 3 12B (free)
-  HuggingFace ID: google/gemma-3-12b-it
-  Canonical Slug: google/gemma-3-12b-it
-  Clean Model Name: Gemma 3 12B
-  License Info Text: 
-  License Info URL: 
-  License Name: GEMMA
-  License URL: https://ai.google.dev/gemma/terms
-  Source Category: google
-
-================================================================================
-
-MODEL 9: google/gemma-3-27b-it
---------------------------------------------------
-  ID: google/gemma-3-27b-it:free
-  Original Name: Google: Gemma 3 27B (free)
-  HuggingFace ID: google/gemma-3-27b-it
-  Canonical Slug: google/gemma-3-27b-it
-  Clean Model Name: Gemma 3 27B
-  License Info Text: 
-  License Info URL: 
-  License Name: GEMMA
-  License URL: https://ai.google.dev/gemma/terms
-  Source Category: google
-
-================================================================================
-
-MODEL 10: google/gemma-3-4b-it
---------------------------------------------------
-  ID: google/gemma-3-4b-it:free
-  Original Name: Google: Gemma 3 4B (free)
-  HuggingFace ID: google/gemma-3-4b-it
-  Canonical Slug: google/gemma-3-4b-it
-  Clean Model Name: Gemma 3 4B
-  License Info Text: 
-  License Info URL: 
-  License Name: GEMMA
-  License URL: https://ai.google.dev/gemma/terms
-  Source Category: google
-
-================================================================================
-
-MODEL 11: google/gemma-3n-e2b-it
---------------------------------------------------
-  ID: google/gemma-3n-e2b-it:free
-  Original Name: Google: Gemma 3n 2B (free)
-  HuggingFace ID: google/gemma-3n-E2B-it
-  Canonical Slug: google/gemma-3n-e2b-it
-  Clean Model Name: Gemma 3n 2B
-  License Info Text: 
-  License Info URL: 
-  License Name: GEMMA
-  License URL: https://ai.google.dev/gemma/terms
-  Source Category: google
-
-================================================================================
-
-MODEL 12: google/gemma-3n-e4b-it
---------------------------------------------------
-  ID: google/gemma-3n-e4b-it:free
-  Original Name: Google: Gemma 3n 4B (free)
-  HuggingFace ID: google/gemma-3n-E4B-it
-  Canonical Slug: google/gemma-3n-e4b-it
-  Clean Model Name: Gemma 3n 4B
-  License Info Text: 
-  License Info URL: 
-  License Name: GEMMA
-  License URL: https://ai.google.dev/gemma/terms
-  Source Category: google
-
-================================================================================
-
-MODEL 13: google/gemma-4-26b-a4b-it-20260403
+MODEL 8: google/gemma-4-26b-a4b-it-20260403
 --------------------------------------------------
   ID: google/gemma-4-26b-a4b-it:free
   Original Name: Google: Gemma 4 26B A4B  (free)
@@ -233,7 +158,7 @@ MODEL 13: google/gemma-4-26b-a4b-it-20260403
 
 ================================================================================
 
-MODEL 14: google/gemma-4-31b-it-20260402
+MODEL 9: google/gemma-4-31b-it-20260402
 --------------------------------------------------
   ID: google/gemma-4-31b-it:free
   Original Name: Google: Gemma 4 31B (free)
@@ -248,7 +173,7 @@ MODEL 14: google/gemma-4-31b-it-20260402
 
 ================================================================================
 
-MODEL 15: meta-llama/llama-3.2-3b-instruct
+MODEL 10: meta-llama/llama-3.2-3b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.2-3b-instruct:free
   Original Name: Meta: Llama 3.2 3B Instruct (free)
@@ -263,7 +188,7 @@ MODEL 15: meta-llama/llama-3.2-3b-instruct
 
 ================================================================================
 
-MODEL 16: meta-llama/llama-3.3-70b-instruct
+MODEL 11: meta-llama/llama-3.3-70b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.3-70b-instruct:free
   Original Name: Meta: Llama 3.3 70B Instruct (free)
@@ -278,7 +203,7 @@ MODEL 16: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 17: openai/gpt-oss-120b
+MODEL 12: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -293,7 +218,7 @@ MODEL 17: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 18: openai/gpt-oss-20b
+MODEL 13: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -308,7 +233,7 @@ MODEL 18: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 19: poolside/laguna-xs.2-20260421
+MODEL 14: poolside/laguna-xs.2-20260421
 --------------------------------------------------
   ID: poolside/laguna-xs.2:free
   Original Name: Poolside: Laguna XS.2 (free)
@@ -323,7 +248,7 @@ MODEL 19: poolside/laguna-xs.2-20260421
 
 ================================================================================
 
-MODEL 20: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 15: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -338,7 +263,7 @@ MODEL 20: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 21: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 16: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID: qwen/qwen3-next-80b-a3b-instruct:free
   Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
@@ -353,7 +278,7 @@ MODEL 21: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 22: venice/uncensored
+MODEL 17: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -368,7 +293,7 @@ MODEL 22: venice/uncensored
 
 ================================================================================
 
-MODEL 23: nousresearch/hermes-3-llama-3.1-405b
+MODEL 18: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -383,7 +308,7 @@ MODEL 23: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 24: z-ai/glm-4.5-air
+MODEL 19: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)
@@ -398,7 +323,7 @@ MODEL 24: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 25: amazon/nova-2-lite-v1
+MODEL 20: amazon/nova-2-lite-v1
 --------------------------------------------------
   ID: amazon/nova-2-lite-v1:free
   Original Name: Amazon/Nova 2 Lite V1
@@ -413,7 +338,7 @@ MODEL 25: amazon/nova-2-lite-v1
 
 ================================================================================
 
-MODEL 26: kwaipilot/kat-coder-pro-v1
+MODEL 21: kwaipilot/kat-coder-pro-v1
 --------------------------------------------------
   ID: kwaipilot/kat-coder-pro-v1:free
   Original Name: Kwaipilot/Kat Coder Pro V1
@@ -428,7 +353,7 @@ MODEL 26: kwaipilot/kat-coder-pro-v1
 
 ================================================================================
 
-MODEL 27: mistralai/devstral-2512
+MODEL 22: mistralai/devstral-2512
 --------------------------------------------------
   ID: mistralai/devstral-2512:free
   Original Name: Mistralai/Devstral 2512
@@ -443,7 +368,7 @@ MODEL 27: mistralai/devstral-2512
 
 ================================================================================
 
-MODEL 28: qwen/qwen3.6-plus
+MODEL 23: qwen/qwen3.6-plus
 --------------------------------------------------
   ID: qwen/qwen3.6-plus:free
   Original Name: Qwen/Qwen3.6 Plus
@@ -458,7 +383,7 @@ MODEL 28: qwen/qwen3.6-plus
 
 ================================================================================
 
-MODEL 29: qwen/qwen3.6-plus-04-02
+MODEL 24: qwen/qwen3.6-plus-04-02
 --------------------------------------------------
   ID: qwen/qwen3.6-plus-04-02:free
   Original Name: Qwen/Qwen3.6 Plus 04 02
@@ -473,7 +398,7 @@ MODEL 29: qwen/qwen3.6-plus-04-02
 
 ================================================================================
 
-MODEL 30: upstage/solar-pro-3
+MODEL 25: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage/Solar Pro 3
@@ -488,7 +413,7 @@ MODEL 30: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 31: x-ai/grok-4-fast
+MODEL 26: x-ai/grok-4-fast
 --------------------------------------------------
   ID: x-ai/grok-4-fast:free
   Original Name: X Ai/Grok 4 Fast
@@ -503,7 +428,7 @@ MODEL 31: x-ai/grok-4-fast
 
 ================================================================================
 
-MODEL 32: x-ai/grok-4.1-fast
+MODEL 27: x-ai/grok-4.1-fast
 --------------------------------------------------
   ID: x-ai/grok-4.1-fast:free
   Original Name: X Ai/Grok 4.1 Fast

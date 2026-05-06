@@ -1,13 +1,13 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-05-05 08:55:41 IST
+Generated: 2026-05-06 09:06:44 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 372
+  Total models: 370
 
 PROVIDER BREAKDOWN (Descending Order):
-  OpenAI          :  64 models
+  OpenAI          :  65 models
     - gpt-3.5-turbo
     - gpt-3.5-turbo-0613
     - gpt-3.5-turbo-16k
@@ -57,6 +57,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - gpt-5.5-pro
     - gpt-audio
     - gpt-audio-mini
+    - gpt-chat-latest
     - gpt-oss-120b
     - gpt-oss-120b:free
     - gpt-oss-20b
@@ -124,7 +125,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3.6-max-preview
     - qwen3.6-plus
 
-  Google          :  31 models
+  Google          :  26 models
     - gemini-2.0-flash-001
     - gemini-2.0-flash-lite-001
     - gemini-2.5-flash
@@ -142,14 +143,9 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemini-3.1-pro-preview-customtools
     - gemma-2-27b-it
     - gemma-3-12b-it
-    - gemma-3-12b-it:free
     - gemma-3-27b-it
-    - gemma-3-27b-it:free
     - gemma-3-4b-it
-    - gemma-3-4b-it:free
-    - gemma-3n-e2b-it:free
     - gemma-3n-e4b-it
-    - gemma-3n-e4b-it:free
     - gemma-4-26b-a4b-it
     - gemma-4-26b-a4b-it:free
     - gemma-4-31b-it
@@ -390,6 +386,10 @@ PROVIDER BREAKDOWN (Descending Order):
     - relace-apply-3
     - relace-search
 
+  Microsoft       :   2 models
+    - phi-4
+    - phi-4-mini-instruct
+
   Morph           :   2 models
     - morph-v3-fast
     - morph-v3-large
@@ -397,6 +397,9 @@ PROVIDER BREAKDOWN (Descending Order):
   Inflection      :   2 models
     - inflection-3-pi
     - inflection-3-productivity
+
+  Baidu Qianfan   :   1 models
+    - cobuddy:free
 
   Kwaipilot       :   1 models
     - kat-coder-pro-v2
@@ -440,9 +443,6 @@ PROVIDER BREAKDOWN (Descending Order):
   AlfredPros      :   1 models
     - codellama-7b-instruct-solidity
 
-  Microsoft       :   1 models
-    - phi-4
-
   Sao10k          :   1 models
     - l3-euryale-70b
 
@@ -452,4 +452,4 @@ PROVIDER BREAKDOWN (Descending Order):
   Mancer          :   1 models
     - weaver
 
-Total providers: 50
+Total providers: 51
