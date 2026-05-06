@@ -1,6 +1,6 @@
 FIELD COMPARISON REPORT: GOOGLE PIPELINE vs SUPABASE
 ================================================================================
-Generated: 2026-05-05 08:54:03 IST
+Generated: 2026-05-06 09:05:14 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -8,56 +8,58 @@ SUMMARY STATISTICS
 
 1. OVERALL STATISTICS:
    • Total models processed: 23
-   • Models in both systems: 22
+   • Models in both systems: 16
    • Models with differences: 0
    • Models in pipeline only (not in Supabase): 1
-   • Models in Supabase only (not in pipeline): 0
+   • Models in Supabase only (not in pipeline): 6
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
    • inference_provider:
-     - Exact matches: 22
+     - Exact matches: 16
      - Differences: 0
    • model_provider:
-     - Exact matches: 22
+     - Exact matches: 16
      - Differences: 0
    • human_readable_name:
-     - Exact matches: 22
+     - Exact matches: 16
      - Differences: 0
    • model_provider_country:
-     - Exact matches: 22
+     - Exact matches: 16
      - Differences: 0
    • official_url:
-     - Exact matches: 22
+     - Exact matches: 16
      - Differences: 0
    • input_modalities:
-     - Exact matches: 22
+     - Exact matches: 16
      - Differences: 0
    • output_modalities:
-     - Exact matches: 22
+     - Exact matches: 16
      - Differences: 0
    • license_info_text:
-     - Exact matches: 22
+     - Exact matches: 16
      - Differences: 0
    • license_info_url:
-     - Exact matches: 22
+     - Exact matches: 16
      - Differences: 0
    • license_name:
-     - Exact matches: 22
+     - Exact matches: 16
      - Differences: 0
    • license_url:
-     - Exact matches: 22
+     - Exact matches: 16
      - Differences: 0
    • rate_limits:
-     - Exact matches: 22
+     - Exact matches: 16
      - Differences: 0
    • provider_api_access:
-     - Exact matches: 22
+     - Exact matches: 16
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
    • New models (pipeline only): 1
      Models: Gemini Embedding 2
    • Existing models with differences: 0
+   • Deprecated models (Supabase only): 6
+     Models: Gemma 3 12B IT, Gemma 3 1B IT, Gemma 3 27B IT, Gemma 3 4B IT, Gemma 3n E2B IT, Gemma 3n E4B IT
 
 ================================================================================
 DETAILED COMPARISON BY MODEL
@@ -267,19 +269,19 @@ MODEL: Gemma 3 12B IT
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             | Google                                            
-model_provider            | Google                                             | Google                                            
-human_readable_name       | Gemma 3 12B IT                                     | Gemma 3 12B IT                                    
-model_provider_country    | United States                                      | United States                                     
-official_url              | https://deepmind.google/models/gemma/              | https://deepmind.google/models/gemma/             
-input_modalities          | Text, Image                                        | Text, Image                                       
-output_modalities         | Text                                               | Text                                              
+inference_provider        |                                                    | Google                                            
+model_provider            |                                                    | Google                                            
+human_readable_name       |                                                    | Gemma 3 12B IT                                    
+model_provider_country    |                                                    | United States                                     
+official_url              |                                                    | https://deepmind.google/models/gemma/             
+input_modalities          |                                                    | Text, Image                                       
+output_modalities         |                                                    | Text                                              
 license_info_text         |                                                    | None                                              
 license_info_url          |                                                    | None                                              
-license_name              | GEMMA                                              | GEMMA                                             
-license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
-rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
-provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
+license_name              |                                                    | GEMMA                                             
+license_url               |                                                    | https://ai.google.dev/gemma/terms                 
+rate_limits               |                                                    | 30 requests/min, 15K tokens/min, 14,400 requests..
+provider_api_access       |                                                    | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -287,19 +289,19 @@ MODEL: Gemma 3 1B IT
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             | Google                                            
-model_provider            | Google                                             | Google                                            
-human_readable_name       | Gemma 3 1B IT                                      | Gemma 3 1B IT                                     
-model_provider_country    | United States                                      | United States                                     
-official_url              | https://deepmind.google/models/gemma/              | https://deepmind.google/models/gemma/             
-input_modalities          | Text, Image                                        | Text, Image                                       
-output_modalities         | Text                                               | Text                                              
+inference_provider        |                                                    | Google                                            
+model_provider            |                                                    | Google                                            
+human_readable_name       |                                                    | Gemma 3 1B IT                                     
+model_provider_country    |                                                    | United States                                     
+official_url              |                                                    | https://deepmind.google/models/gemma/             
+input_modalities          |                                                    | Text, Image                                       
+output_modalities         |                                                    | Text                                              
 license_info_text         |                                                    | None                                              
 license_info_url          |                                                    | None                                              
-license_name              | GEMMA                                              | GEMMA                                             
-license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
-rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
-provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
+license_name              |                                                    | GEMMA                                             
+license_url               |                                                    | https://ai.google.dev/gemma/terms                 
+rate_limits               |                                                    | 30 requests/min, 15K tokens/min, 14,400 requests..
+provider_api_access       |                                                    | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -307,19 +309,19 @@ MODEL: Gemma 3 27B IT
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             | Google                                            
-model_provider            | Google                                             | Google                                            
-human_readable_name       | Gemma 3 27B IT                                     | Gemma 3 27B IT                                    
-model_provider_country    | United States                                      | United States                                     
-official_url              | https://deepmind.google/models/gemma/              | https://deepmind.google/models/gemma/             
-input_modalities          | Text, Image                                        | Text, Image                                       
-output_modalities         | Text                                               | Text                                              
+inference_provider        |                                                    | Google                                            
+model_provider            |                                                    | Google                                            
+human_readable_name       |                                                    | Gemma 3 27B IT                                    
+model_provider_country    |                                                    | United States                                     
+official_url              |                                                    | https://deepmind.google/models/gemma/             
+input_modalities          |                                                    | Text, Image                                       
+output_modalities         |                                                    | Text                                              
 license_info_text         |                                                    | None                                              
 license_info_url          |                                                    | None                                              
-license_name              | GEMMA                                              | GEMMA                                             
-license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
-rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
-provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
+license_name              |                                                    | GEMMA                                             
+license_url               |                                                    | https://ai.google.dev/gemma/terms                 
+rate_limits               |                                                    | 30 requests/min, 15K tokens/min, 14,400 requests..
+provider_api_access       |                                                    | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -327,19 +329,19 @@ MODEL: Gemma 3 4B IT
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             | Google                                            
-model_provider            | Google                                             | Google                                            
-human_readable_name       | Gemma 3 4B IT                                      | Gemma 3 4B IT                                     
-model_provider_country    | United States                                      | United States                                     
-official_url              | https://deepmind.google/models/gemma/              | https://deepmind.google/models/gemma/             
-input_modalities          | Text, Image                                        | Text, Image                                       
-output_modalities         | Text                                               | Text                                              
+inference_provider        |                                                    | Google                                            
+model_provider            |                                                    | Google                                            
+human_readable_name       |                                                    | Gemma 3 4B IT                                     
+model_provider_country    |                                                    | United States                                     
+official_url              |                                                    | https://deepmind.google/models/gemma/             
+input_modalities          |                                                    | Text, Image                                       
+output_modalities         |                                                    | Text                                              
 license_info_text         |                                                    | None                                              
 license_info_url          |                                                    | None                                              
-license_name              | GEMMA                                              | GEMMA                                             
-license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
-rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
-provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
+license_name              |                                                    | GEMMA                                             
+license_url               |                                                    | https://ai.google.dev/gemma/terms                 
+rate_limits               |                                                    | 30 requests/min, 15K tokens/min, 14,400 requests..
+provider_api_access       |                                                    | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -347,19 +349,19 @@ MODEL: Gemma 3n E2B IT
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             | Google                                            
-model_provider            | Google                                             | Google                                            
-human_readable_name       | Gemma 3n E2B IT                                    | Gemma 3n E2B IT                                   
-model_provider_country    | United States                                      | United States                                     
-official_url              | https://deepmind.google/models/gemma/              | https://deepmind.google/models/gemma/             
-input_modalities          | Text, Image, Audio, Video                          | Text, Image, Audio, Video                         
-output_modalities         | Text                                               | Text                                              
+inference_provider        |                                                    | Google                                            
+model_provider            |                                                    | Google                                            
+human_readable_name       |                                                    | Gemma 3n E2B IT                                   
+model_provider_country    |                                                    | United States                                     
+official_url              |                                                    | https://deepmind.google/models/gemma/             
+input_modalities          |                                                    | Text, Image, Audio, Video                         
+output_modalities         |                                                    | Text                                              
 license_info_text         |                                                    | None                                              
 license_info_url          |                                                    | None                                              
-license_name              | GEMMA                                              | GEMMA                                             
-license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
-rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
-provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
+license_name              |                                                    | GEMMA                                             
+license_url               |                                                    | https://ai.google.dev/gemma/terms                 
+rate_limits               |                                                    | 30 requests/min, 15K tokens/min, 14,400 requests..
+provider_api_access       |                                                    | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 
@@ -367,19 +369,19 @@ MODEL: Gemma 3n E4B IT
 ----------------------------------------------------------------------------------------------------------------------------------
 Field Name                | Pipeline Value                                     | Supabase Value                                    
 ----------------------------------------------------------------------------------------------------------------------------------
-inference_provider        | Google                                             | Google                                            
-model_provider            | Google                                             | Google                                            
-human_readable_name       | Gemma 3n E4B IT                                    | Gemma 3n E4B IT                                   
-model_provider_country    | United States                                      | United States                                     
-official_url              | https://deepmind.google/models/gemma/              | https://deepmind.google/models/gemma/             
-input_modalities          | Text, Image, Audio, Video                          | Text, Image, Audio, Video                         
-output_modalities         | Text                                               | Text                                              
+inference_provider        |                                                    | Google                                            
+model_provider            |                                                    | Google                                            
+human_readable_name       |                                                    | Gemma 3n E4B IT                                   
+model_provider_country    |                                                    | United States                                     
+official_url              |                                                    | https://deepmind.google/models/gemma/             
+input_modalities          |                                                    | Text, Image, Audio, Video                         
+output_modalities         |                                                    | Text                                              
 license_info_text         |                                                    | None                                              
 license_info_url          |                                                    | None                                              
-license_name              | GEMMA                                              | GEMMA                                             
-license_url               | https://ai.google.dev/gemma/terms                  | https://ai.google.dev/gemma/terms                 
-rate_limits               | 30 requests/min, 15K tokens/min, 14,400 requests.. | 30 requests/min, 15K tokens/min, 14,400 requests..
-provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
+license_name              |                                                    | GEMMA                                             
+license_url               |                                                    | https://ai.google.dev/gemma/terms                 
+rate_limits               |                                                    | 30 requests/min, 15K tokens/min, 14,400 requests..
+provider_api_access       |                                                    | https://aistudio.google.com/apikey                
 
 ==================================================================================================================================
 

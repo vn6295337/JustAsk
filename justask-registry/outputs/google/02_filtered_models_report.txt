@@ -1,11 +1,11 @@
 === GOOGLE MODELS FILTERING REPORT ===
-Generated: 2026-05-05 08:53:56 IST
+Generated: 2026-05-06 09:05:06 IST
 
 === SUMMARY ===
-Total Input Models: 55
-Models Included: 23
+Total Input Models: 49
+Models Included: 17
 Models Excluded: 32
-Filtering Success Rate: 41.8%
+Filtering Success Rate: 34.7%
 
 === EXCLUDED MODELS ===
  1. gemini-2.5-flash-preview-tts
@@ -48,23 +48,17 @@ Filtering Success Rate: 41.8%
  4. gemini-2.0-flash-001
  5. gemini-2.0-flash-lite-001
  6. gemini-2.0-flash-lite
- 7. gemma-3-1b-it
- 8. gemma-3-4b-it
- 9. gemma-3-12b-it
-10. gemma-3-27b-it
-11. gemma-3n-e4b-it
-12. gemma-3n-e2b-it
-13. gemma-4-26b-a4b-it
-14. gemma-4-31b-it
-15. gemini-2.5-flash-lite
-16. gemini-embedding-001
-17. gemini-embedding-2
-18. aqa
-19. imagen-4.0-generate-001
-20. imagen-4.0-ultra-generate-001
-21. imagen-4.0-fast-generate-001
-22. veo-3.0-generate-001
-23. veo-3.0-fast-generate-001
+ 7. gemma-4-26b-a4b-it
+ 8. gemma-4-31b-it
+ 9. gemini-2.5-flash-lite
+10. gemini-embedding-001
+11. gemini-embedding-2
+12. aqa
+13. imagen-4.0-generate-001
+14. imagen-4.0-ultra-generate-001
+15. imagen-4.0-fast-generate-001
+16. veo-3.0-generate-001
+17. veo-3.0-fast-generate-001
 
 === EXCLUSION BREAKDOWN ===
 27 models: Experimental/Preview model - production-ready models only

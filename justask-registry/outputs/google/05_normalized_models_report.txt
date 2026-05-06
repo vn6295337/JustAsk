@@ -1,9 +1,9 @@
 === GOOGLE MODELS DATA NORMALIZATION REPORT ===
-Generated: 2026-05-05 08:54:01 IST
+Generated: 2026-05-06 09:05:12 IST
 
 === SUMMARY ===
-Total Models Processed: 23
-Successfully Normalized: 23
+Total Models Processed: 17
+Successfully Normalized: 17
 Normalization Success Rate: 100.0%
 
 === NORMALIZED MODELS ===
@@ -21,8 +21,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 10 requests/min, 250K tokens/min, 250 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.654993+00:00
-     Updated At: 2026-05-05T03:24:01.654999+00:00
+     Created At: 2026-05-06T03:35:12.002052+00:00
+     Updated At: 2026-05-06T03:35:12.002057+00:00
 
   2. Gemini 2.5 Pro
      ID: 
@@ -38,8 +38,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 5 requests/min, 250K tokens/min, 100 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.655241+00:00
-     Updated At: 2026-05-05T03:24:01.655245+00:00
+     Created At: 2026-05-06T03:35:12.002201+00:00
+     Updated At: 2026-05-06T03:35:12.002202+00:00
 
   3. Gemini 2.0 Flash
      ID: 
@@ -55,8 +55,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 15 requests/min, 1M tokens/min, 200 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.655504+00:00
-     Updated At: 2026-05-05T03:24:01.655507+00:00
+     Created At: 2026-05-06T03:35:12.002336+00:00
+     Updated At: 2026-05-06T03:35:12.002338+00:00
 
   4. Gemini 2.0 Flash 001
      ID: 
@@ -72,8 +72,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 15 requests/min, 1M tokens/min, 200 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.655700+00:00
-     Updated At: 2026-05-05T03:24:01.655703+00:00
+     Created At: 2026-05-06T03:35:12.002462+00:00
+     Updated At: 2026-05-06T03:35:12.002465+00:00
 
   5. Gemini 2.0 Flash-Lite 001
      ID: 
@@ -89,8 +89,8 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 15 requests/min, 1M tokens/min, 200 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.655915+00:00
-     Updated At: 2026-05-05T03:24:01.655918+00:00
+     Created At: 2026-05-06T03:35:12.002578+00:00
+     Updated At: 2026-05-06T03:35:12.002579+00:00
 
   6. Gemini 2.0 Flash-Lite
      ID: 
@@ -106,112 +106,10 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 15 requests/min, 1M tokens/min, 200 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.656100+00:00
-     Updated At: 2026-05-05T03:24:01.656103+00:00
+     Created At: 2026-05-06T03:35:12.002687+00:00
+     Updated At: 2026-05-06T03:35:12.002688+00:00
 
-  7. Gemma 3 1B IT
-     ID: 
-     Inference Provider: Google
-     Model Provider: Google
-     Model Provider Country: United States
-     Official URL: https://deepmind.google/models/gemma/
-     Input Modalities: Text, Image
-     Output Modalities: Text
-     License Info Text: 
-     License Info URL: 
-     License Name: GEMMA
-     License URL: https://ai.google.dev/gemma/terms
-     Rate Limits: 30 requests/min, 15K tokens/min, 14,400 requests/day
-     Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.656285+00:00
-     Updated At: 2026-05-05T03:24:01.656287+00:00
-
-  8. Gemma 3 4B IT
-     ID: 
-     Inference Provider: Google
-     Model Provider: Google
-     Model Provider Country: United States
-     Official URL: https://deepmind.google/models/gemma/
-     Input Modalities: Text, Image
-     Output Modalities: Text
-     License Info Text: 
-     License Info URL: 
-     License Name: GEMMA
-     License URL: https://ai.google.dev/gemma/terms
-     Rate Limits: 30 requests/min, 15K tokens/min, 14,400 requests/day
-     Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.656478+00:00
-     Updated At: 2026-05-05T03:24:01.656481+00:00
-
-  9. Gemma 3 12B IT
-     ID: 
-     Inference Provider: Google
-     Model Provider: Google
-     Model Provider Country: United States
-     Official URL: https://deepmind.google/models/gemma/
-     Input Modalities: Text, Image
-     Output Modalities: Text
-     License Info Text: 
-     License Info URL: 
-     License Name: GEMMA
-     License URL: https://ai.google.dev/gemma/terms
-     Rate Limits: 30 requests/min, 15K tokens/min, 14,400 requests/day
-     Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.656661+00:00
-     Updated At: 2026-05-05T03:24:01.656664+00:00
-
- 10. Gemma 3 27B IT
-     ID: 
-     Inference Provider: Google
-     Model Provider: Google
-     Model Provider Country: United States
-     Official URL: https://deepmind.google/models/gemma/
-     Input Modalities: Text, Image
-     Output Modalities: Text
-     License Info Text: 
-     License Info URL: 
-     License Name: GEMMA
-     License URL: https://ai.google.dev/gemma/terms
-     Rate Limits: 30 requests/min, 15K tokens/min, 14,400 requests/day
-     Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.656875+00:00
-     Updated At: 2026-05-05T03:24:01.656878+00:00
-
- 11. Gemma 3n E4B IT
-     ID: 
-     Inference Provider: Google
-     Model Provider: Google
-     Model Provider Country: United States
-     Official URL: https://deepmind.google/models/gemma/
-     Input Modalities: Text, Image, Audio, Video
-     Output Modalities: Text
-     License Info Text: 
-     License Info URL: 
-     License Name: GEMMA
-     License URL: https://ai.google.dev/gemma/terms
-     Rate Limits: 30 requests/min, 15K tokens/min, 14,400 requests/day
-     Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.657069+00:00
-     Updated At: 2026-05-05T03:24:01.657072+00:00
-
- 12. Gemma 3n E2B IT
-     ID: 
-     Inference Provider: Google
-     Model Provider: Google
-     Model Provider Country: United States
-     Official URL: https://deepmind.google/models/gemma/
-     Input Modalities: Text, Image, Audio, Video
-     Output Modalities: Text
-     License Info Text: 
-     License Info URL: 
-     License Name: GEMMA
-     License URL: https://ai.google.dev/gemma/terms
-     Rate Limits: 30 requests/min, 15K tokens/min, 14,400 requests/day
-     Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.657246+00:00
-     Updated At: 2026-05-05T03:24:01.657248+00:00
-
- 13. Gemma 4 26B A4B IT
+  7. Gemma 4 26B A4B IT
      ID: 
      Inference Provider: Google
      Model Provider: Google
@@ -225,10 +123,10 @@ Normalization Success Rate: 100.0%
      License URL: https://www.apache.org/licenses/LICENSE-2.0
      Rate Limits: 30 requests/min, 15K tokens/min, 14,400 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.657422+00:00
-     Updated At: 2026-05-05T03:24:01.657425+00:00
+     Created At: 2026-05-06T03:35:12.002802+00:00
+     Updated At: 2026-05-06T03:35:12.002804+00:00
 
- 14. Gemma 4 31B IT
+  8. Gemma 4 31B IT
      ID: 
      Inference Provider: Google
      Model Provider: Google
@@ -242,10 +140,10 @@ Normalization Success Rate: 100.0%
      License URL: https://www.apache.org/licenses/LICENSE-2.0
      Rate Limits: 30 requests/min, 15K tokens/min, 14,400 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.657594+00:00
-     Updated At: 2026-05-05T03:24:01.657596+00:00
+     Created At: 2026-05-06T03:35:12.002917+00:00
+     Updated At: 2026-05-06T03:35:12.002919+00:00
 
- 15. Gemini 2.5 Flash-Lite
+  9. Gemini 2.5 Flash-Lite
      ID: 
      Inference Provider: Google
      Model Provider: Google
@@ -259,10 +157,10 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 10 requests/min, 250K tokens/min, 250 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.657764+00:00
-     Updated At: 2026-05-05T03:24:01.657766+00:00
+     Created At: 2026-05-06T03:35:12.003025+00:00
+     Updated At: 2026-05-06T03:35:12.003027+00:00
 
- 16. Gemini Embedding 001
+ 10. Gemini Embedding 001
      ID: 
      Inference Provider: Google
      Model Provider: Google
@@ -276,10 +174,10 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 100 requests/min, 30K tokens/min, 1,000 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.657968+00:00
-     Updated At: 2026-05-05T03:24:01.657970+00:00
+     Created At: 2026-05-06T03:35:12.003133+00:00
+     Updated At: 2026-05-06T03:35:12.003134+00:00
 
- 17. Gemini Embedding 2
+ 11. Gemini Embedding 2
      ID: 
      Inference Provider: Google
      Model Provider: Google
@@ -293,10 +191,10 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 100 requests/min, 30K tokens/min, 1,000 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.658138+00:00
-     Updated At: 2026-05-05T03:24:01.658140+00:00
+     Created At: 2026-05-06T03:35:12.003238+00:00
+     Updated At: 2026-05-06T03:35:12.003239+00:00
 
- 18. AQA
+ 12. AQA
      ID: 
      Inference Provider: Google
      Model Provider: Google
@@ -310,10 +208,10 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: 15 requests/min, 1M tokens/min, 200 requests/day
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.658267+00:00
-     Updated At: 2026-05-05T03:24:01.658269+00:00
+     Created At: 2026-05-06T03:35:12.003327+00:00
+     Updated At: 2026-05-06T03:35:12.003329+00:00
 
- 19. Imagen 4.0 Generate 001
+ 13. Imagen 4.0 Generate 001
      ID: 
      Inference Provider: Google
      Model Provider: Google
@@ -327,10 +225,10 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: Input: 480 tokens, Output: up to 4 images
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.658440+00:00
-     Updated At: 2026-05-05T03:24:01.658443+00:00
+     Created At: 2026-05-06T03:35:12.003437+00:00
+     Updated At: 2026-05-06T03:35:12.003438+00:00
 
- 20. Imagen 4.0 Ultra Generate 001
+ 14. Imagen 4.0 Ultra Generate 001
      ID: 
      Inference Provider: Google
      Model Provider: Google
@@ -344,10 +242,10 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: Input: 480 tokens, Output: up to 4 images
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.658612+00:00
-     Updated At: 2026-05-05T03:24:01.658614+00:00
+     Created At: 2026-05-06T03:35:12.003547+00:00
+     Updated At: 2026-05-06T03:35:12.003548+00:00
 
- 21. Imagen 4.0 Fast Generate 001
+ 15. Imagen 4.0 Fast Generate 001
      ID: 
      Inference Provider: Google
      Model Provider: Google
@@ -361,10 +259,10 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: Input: 480 tokens, Output: up to 4 images
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.658788+00:00
-     Updated At: 2026-05-05T03:24:01.658790+00:00
+     Created At: 2026-05-06T03:35:12.003653+00:00
+     Updated At: 2026-05-06T03:35:12.003654+00:00
 
- 22. Veo 3.0 Generate 001
+ 16. Veo 3.0 Generate 001
      ID: 
      Inference Provider: Google
      Model Provider: Google
@@ -378,10 +276,10 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: Image input: up to 20MB, Output video: up to 2 minutes
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.658991+00:00
-     Updated At: 2026-05-05T03:24:01.658994+00:00
+     Created At: 2026-05-06T03:35:12.003763+00:00
+     Updated At: 2026-05-06T03:35:12.003764+00:00
 
- 23. Veo 3.0 Fast Generate 001
+ 17. Veo 3.0 Fast Generate 001
      ID: 
      Inference Provider: Google
      Model Provider: Google
@@ -395,5 +293,5 @@ Normalization Success Rate: 100.0%
      License URL: https://ai.google.dev/gemini-api/terms
      Rate Limits: Image input: up to 20MB, Output video: up to 2 minutes
      Provider API Access: https://aistudio.google.com/apikey
-     Created At: 2026-05-05T03:24:01.659167+00:00
-     Updated At: 2026-05-05T03:24:01.659169+00:00
+     Created At: 2026-05-06T03:35:12.003870+00:00
+     Updated At: 2026-05-06T03:35:12.003871+00:00
