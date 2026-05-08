@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-07 09:06:11 IST",
-    "total_models": 26,
+    "generated_at": "2026-05-08 09:01:53 IST",
+    "total_models": 25,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
@@ -103,26 +103,6 @@
       "model_provider": "Unknown",
       "model_provider_country": "Unknown",
       "model_family": "poolside",
-      "official_url": "Unknown"
-    },
-    {
-      "id": "inclusionai/ling-2.6-1t:free",
-      "canonical_slug": "inclusionai/ling-2.6-1t-20260423",
-      "provider_slug": "ling-2.6-1t-20260423",
-      "original_name": "inclusionAI: Ling-2.6-1T (free)",
-      "hugging_face_id": null,
-      "clean_model_name": "Ling-2.6-1T",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model",
-      "inference_provider": "OpenRouter",
-      "model_provider": "Unknown",
-      "model_provider_country": "Unknown",
-      "model_family": "inclusionai",
       "official_url": "Unknown"
     },
     {

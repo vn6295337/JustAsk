@@ -1,16 +1,16 @@
 ================================================================================
 RAW MODALITIES EXTRACTION REPORT
-Generated: 2026-05-07 09:06:11 IST
+Generated: 2026-05-08 09:01:52 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 26
+  Total models : 25
   Input        : 02_filtered_models.json
   Processor    : step_14_extract_modalities.py
   Output       : 14_raw_modalities.json
 
 RAW INPUT MODALITIES DISTRIBUTION:
-  20 models: text
+  19 models: text
    3 models: image, text, video
    1 models: image, text
    1 models: text, audio, image, video
@@ -19,12 +19,12 @@ RAW INPUT MODALITIES DISTRIBUTION:
 Total unique input types: 5
 
 RAW OUTPUT MODALITIES DISTRIBUTION:
-  26 models: text
+  25 models: text
 
 Total unique output types: 1
 
 RAW MODALITY COMBINATIONS (INPUT → OUTPUT):
-  20 models: text → text
+  19 models: text → text
    3 models: image, text, video → text
    1 models: image, text → text
    1 models: text, audio, image, video → text
@@ -191,19 +191,7 @@ MODEL 13: poolside/laguna-xs.2-20260421
 
 ================================================================================
 
-MODEL 14: inclusionai/ling-2.6-1t-20260423
---------------------------------------------------
-  ID: inclusionai/ling-2.6-1t:free
-  Original Name: inclusionAI: Ling-2.6-1T (free)
-  HuggingFace ID: None
-  Canonical Slug: inclusionai/ling-2.6-1t-20260423
-  Clean Model Name: Ling-2.6-1T
-  Raw Input Modalities: text
-  Raw Output Modalities: text
-
-================================================================================
-
-MODEL 15: meta-llama/llama-3.2-3b-instruct
+MODEL 14: meta-llama/llama-3.2-3b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.2-3b-instruct:free
   Original Name: Meta: Llama 3.2 3B Instruct (free)
@@ -215,7 +203,7 @@ MODEL 15: meta-llama/llama-3.2-3b-instruct
 
 ================================================================================
 
-MODEL 16: meta-llama/llama-3.3-70b-instruct
+MODEL 15: meta-llama/llama-3.3-70b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.3-70b-instruct:free
   Original Name: Meta: Llama 3.3 70B Instruct (free)
@@ -227,7 +215,7 @@ MODEL 16: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 17: minimax/minimax-m2.5-20260211
+MODEL 16: minimax/minimax-m2.5-20260211
 --------------------------------------------------
   ID: minimax/minimax-m2.5:free
   Original Name: MiniMax: MiniMax M2.5 (free)
@@ -239,7 +227,7 @@ MODEL 17: minimax/minimax-m2.5-20260211
 
 ================================================================================
 
-MODEL 18: nvidia/nemotron-3-nano-30b-a3b
+MODEL 17: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -251,7 +239,7 @@ MODEL 18: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 19: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 18: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID: nvidia/nemotron-3-super-120b-a12b:free
   Original Name: NVIDIA: Nemotron 3 Super (free)
@@ -263,7 +251,7 @@ MODEL 19: nvidia/nemotron-3-super-120b-a12b-20230311
 
 ================================================================================
 
-MODEL 20: nvidia/nemotron-nano-9b-v2
+MODEL 19: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -275,7 +263,7 @@ MODEL 20: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 21: openrouter/owl-alpha
+MODEL 20: openrouter/owl-alpha
 --------------------------------------------------
   ID: openrouter/owl-alpha
   Original Name: Owl Alpha
@@ -287,7 +275,7 @@ MODEL 21: openrouter/owl-alpha
 
 ================================================================================
 
-MODEL 22: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 21: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -299,7 +287,7 @@ MODEL 22: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 23: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 22: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID: qwen/qwen3-next-80b-a3b-instruct:free
   Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
@@ -311,7 +299,7 @@ MODEL 23: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 24: venice/uncensored
+MODEL 23: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -323,7 +311,7 @@ MODEL 24: venice/uncensored
 
 ================================================================================
 
-MODEL 25: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 24: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Original Name: NVIDIA: Nemotron 3 Nano Omni (free)
@@ -335,7 +323,7 @@ MODEL 25: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 
 ================================================================================
 
-MODEL 26: openrouter/free
+MODEL 25: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-07 09:06:11 IST",
-    "total_models": 26,
+    "generated_at": "2026-05-08 09:01:52 IST",
+    "total_models": 25,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
@@ -47,15 +47,6 @@
       "original_name": "Poolside: Laguna M.1 (free)",
       "hugging_face_id": null,
       "clean_model_name": "Laguna M.1",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "inclusionai/ling-2.6-1t:free",
-      "canonical_slug": "inclusionai/ling-2.6-1t-20260423",
-      "original_name": "inclusionAI: Ling-2.6-1T (free)",
-      "hugging_face_id": null,
-      "clean_model_name": "Ling-2.6-1T",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text"
     },
