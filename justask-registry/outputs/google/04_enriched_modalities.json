@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-05-07 09:04:22 IST",
-    "total_models": 17,
+    "generated": "2026-05-08 08:59:53 IST",
+    "total_models": 18,
     "enrichment_source": "Google Pipeline 04_enrich_modalities"
   },
   "models": [
@@ -212,6 +212,30 @@
       "output_modalities": "Text",
       "modality_source": "gemini_pattern",
       "match_priority": 7
+    },
+    {
+      "name": "models/gemini-3.1-flash-lite",
+      "version": "3.1-flash-lite-05-2026",
+      "displayName": "Gemini 3.1 Flash Lite",
+      "description": "Gemini 3.1 Flash Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true,
+      "provider_slug": "gemini-3.1-flash-lite",
+      "input_modalities": "Unknown",
+      "output_modalities": "Unknown",
+      "modality_source": "unknown",
+      "match_priority": 0
     },
     {
       "name": "models/gemini-embedding-001",

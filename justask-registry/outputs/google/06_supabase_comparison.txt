@@ -1,16 +1,16 @@
 FIELD COMPARISON REPORT: GOOGLE PIPELINE vs SUPABASE
 ================================================================================
-Generated: 2026-05-07 09:04:25 IST
+Generated: 2026-05-08 08:59:55 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total models processed: 23
+   • Total models processed: 24
    • Models in both systems: 16
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 1
+   • Models in pipeline only (not in Supabase): 2
    • Models in Supabase only (not in pipeline): 6
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
@@ -55,8 +55,8 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 1
-     Models: Gemini Embedding 2
+   • New models (pipeline only): 2
+     Models: Gemini 3.1 Flash-Lite, Gemini Embedding 2
    • Existing models with differences: 0
    • Deprecated models (Supabase only): 6
      Models: Gemma 3 12B IT, Gemma 3 1B IT, Gemma 3 27B IT, Gemma 3 4B IT, Gemma 3n E2B IT, Gemma 3n E4B IT
@@ -222,6 +222,26 @@ license_name              | GEMINI                                             |
 license_url               | https://ai.google.dev/gemini-api/terms             | https://ai.google.dev/gemini-api/terms            
 rate_limits               | 5 requests/min, 250K tokens/min, 100 requests/day  | 5 requests/min, 250K tokens/min, 100 requests/day 
 provider_api_access       | https://aistudio.google.com/apikey                 | https://aistudio.google.com/apikey                
+
+==================================================================================================================================
+
+MODEL: Gemini 3.1 Flash-Lite
+----------------------------------------------------------------------------------------------------------------------------------
+Field Name                | Pipeline Value                                     | Supabase Value                                    
+----------------------------------------------------------------------------------------------------------------------------------
+inference_provider        | Google                                             |                                                   
+model_provider            | Google                                             |                                                   
+human_readable_name       | Gemini 3.1 Flash-Lite                              |                                                   
+model_provider_country    | United States                                      |                                                   
+official_url              | https://deepmind.google/models/gemini/             |                                                   
+input_modalities          | Unknown                                            |                                                   
+output_modalities         | Unknown                                            |                                                   
+license_info_text         | Google                                             |                                                   
+license_info_url          | https://developers.google.com/terms                |                                                   
+license_name              | GEMINI                                             |                                                   
+license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
+rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   |                                                   
+provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
 
 ==================================================================================================================================
 
