@@ -1,6 +1,6 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-05-08 09:01:37 IST
+Generated: 2026-05-09 09:00:41 IST
 ================================================================================
 
 SUMMARY:
@@ -355,6 +355,11 @@ PROVIDER BREAKDOWN (Descending Order):
     - l3.1-euryale-70b
     - l3.3-euryale-70b
 
+  inclusionAI     :   3 models
+    - ling-2.6-1t
+    - ling-2.6-flash
+    - ring-2.6-1t:free
+
   LiquidAI        :   3 models
     - lfm-2-24b-a2b
     - lfm-2.5-1.2b-instruct:free
@@ -368,13 +373,9 @@ PROVIDER BREAKDOWN (Descending Order):
     - laguna-m.1:free
     - laguna-xs.2:free
 
-  inclusionAI     :   2 models
-    - ling-2.6-1t
-    - ling-2.6-flash
-
   Tencent         :   2 models
     - hunyuan-a13b-instruct
-    - hy3-preview:free
+    - hy3-preview
 
   Relace          :   2 models
     - relace-apply-3
@@ -434,9 +435,6 @@ PROVIDER BREAKDOWN (Descending Order):
   Venice          :   1 models
     - dolphin-mistral-24b-venice-edition:free
 
-  TNG             :   1 models
-    - deepseek-r1t2-chimera
-
   AlfredPros      :   1 models
     - codellama-7b-instruct-solidity
 
@@ -449,4 +447,4 @@ PROVIDER BREAKDOWN (Descending Order):
   Mancer          :   1 models
     - weaver
 
-Total providers: 51
+Total providers: 50

@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-05-08 09:01:53 IST
+Generated: 2026-05-09 09:00:53 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -9,7 +9,7 @@ DATA QUALITY ISSUES:
 MISSING OR EMPTY VALUES:
 ------------------------------
 
-LICENSE INFO TEXT (17 models):
+LICENSE INFO TEXT (18 models):
   - CoBuddy
   - Free Models Router
   - Gemma 4 26B A4b IT 20260403
@@ -27,8 +27,9 @@ LICENSE INFO TEXT (17 models):
   - Nemotron Nano 9B V2
   - Owl Alpha
   - Qianfan-OCR-Fast
+  - Ring-2.6-1T
 
-LICENSE INFO URL (17 models):
+LICENSE INFO URL (18 models):
   - CoBuddy
   - Free Models Router
   - Gemma 4 26B A4b IT 20260403
@@ -46,40 +47,44 @@ LICENSE INFO URL (17 models):
   - Nemotron Nano 9B V2
   - Owl Alpha
   - Qianfan-OCR-Fast
+  - Ring-2.6-1T
 
-LICENSE NAME (6 models):
+LICENSE NAME (7 models):
   - CoBuddy
   - Free Models Router
   - Laguna M.1
   - Nemotron 3 Nano Omni
   - Owl Alpha
   - Qianfan-OCR-Fast
+  - Ring-2.6-1T
 
-LICENSE URL (6 models):
+LICENSE URL (7 models):
   - CoBuddy
   - Free Models Router
   - Laguna M.1
   - Nemotron 3 Nano Omni
   - Owl Alpha
   - Qianfan-OCR-Fast
+  - Ring-2.6-1T
 
 UNKNOWN OR 'NOT FOUND' VALUES:
 ------------------------------
 
-MODEL PROVIDER (4 models):
+MODEL PROVIDER (5 models):
   - CoBuddy
   - Laguna M.1
   - Laguna XS.2
   - Qianfan-OCR-Fast
+  - Ring-2.6-1T
 
 DATA QUALITY SUMMARY:
 ------------------------------
-Total models: 25
-Missing license info text: 17 (68.0%)
-Missing license info url: 17 (68.0%)
-Missing license name: 6 (24.0%)
-Missing license url: 6 (24.0%)
-Unknown model provider: 4 (16.0%)
+Total models: 26
+Missing license info text: 18 (69.2%)
+Missing license info url: 18 (69.2%)
+Missing license name: 7 (26.9%)
+Missing license url: 7 (26.9%)
+Unknown model provider: 5 (19.2%)
 
 ================================================================================
 
@@ -326,7 +331,17 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 25. GLM 4.5 Air
+ 25. Ring-2.6-1T
+     Provider           : Unknown (Unknown)
+     Modalities         : Text → Text
+     License            : 
+     License Info       : 
+     License URL        : 
+     Official URL       : Unknown
+     Rate Limits        : 20 requests/min 50/day
+     Provider API Access: https://openrouter.ai/settings/keys
+
+ 26. GLM 4.5 Air
      Provider           : Z.AI (China)
      Modalities         : Text → Text
      License            : MIT

@@ -1,13 +1,13 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-05-08 09:01:37 IST
+Generated: 2026-05-09 09:00:41 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
   Total models processed: 367
-  Models passed all filters: 25
-  Models excluded: 342
-  Success rate: 6.8%
+  Models passed all filters: 26
+  Models excluded: 341
+  Success rate: 7.1%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
@@ -22,13 +22,13 @@ STEP-BY-STEP FILTERING BREAKDOWN:
 
   Step 3 - Keyword Filter:
     Input: 28 models
-    Excluded: 3 models (preview/experimental/beta)
-    Remaining: 25 models
+    Excluded: 2 models (preview/experimental/beta)
+    Remaining: 26 models
 
   Step 4 - Deduplication Filter:
-    Input: 25 models
+    Input: 26 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 25 models
+    Final: 26 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
@@ -43,11 +43,10 @@ No models found with billing requirements in description.
 ================================================================================
 STEP 3 - KEYWORD FILTER RESULTS (DETAILED)
 ================================================================================
-EXCLUDED FOR: PREVIEW/EXPERIMENTAL VERSION (3 models)
+EXCLUDED FOR: PREVIEW/EXPERIMENTAL VERSION (2 models)
 --------------------------------------------------
    1. Google: Lyria 3 Clip Preview
    2. Google: Lyria 3 Pro Preview
-   3. Tencent: Hy3 preview (free)
 
 ================================================================================
 STEP 4 - DEDUPLICATION FILTER RESULTS (DETAILED)
@@ -158,6 +157,13 @@ PROVIDER: META (2 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
+PROVIDER: INCLUSIONAI (1 models)
+--------------------------------------------------
+   1. inclusionAI: Ring-2.6-1T (free)
+      ID: inclusionai/ring-2.6-1t:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+
 PROVIDER: BAIDU QIANFAN (1 models)
 --------------------------------------------------
    1. Baidu Qianfan: CoBuddy (free)
@@ -202,11 +208,11 @@ PROVIDER: NOUS (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 14
-  Total models passed all filters: 25
+  Total providers: 15
+  Total models passed all filters: 26
   Models excluded by pricing: 339
   Models excluded by billing description: 0
-  Models excluded by keywords: 3
+  Models excluded by keywords: 2
   Models excluded by deduplication: 0
-  Total exclusions: 342
+  Total exclusions: 341
   ✓ All filtered models accounted for

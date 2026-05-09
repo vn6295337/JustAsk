@@ -1,10 +1,30 @@
 {
   "metadata": {
-    "generated_at": "2026-05-08 09:01:53 IST",
-    "total_models": 25,
+    "generated_at": "2026-05-09 09:00:53 IST",
+    "total_models": 26,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
+    {
+      "id": "inclusionai/ring-2.6-1t:free",
+      "canonical_slug": "inclusionai/ring-2.6-1t-20260508",
+      "provider_slug": "ring-2.6-1t-20260508",
+      "original_name": "inclusionAI: Ring-2.6-1T (free)",
+      "hugging_face_id": null,
+      "clean_model_name": "Ring-2.6-1T",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "Unknown",
+      "model_provider_country": "Unknown",
+      "model_family": "inclusionai",
+      "official_url": "Unknown"
+    },
     {
       "id": "baidu/cobuddy:free",
       "canonical_slug": "baidu/cobuddy-20260430",
