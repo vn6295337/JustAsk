@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-10 09:13:06 IST",
-    "total_models": 367,
+    "generated_at": "2026-05-11 09:26:32 IST",
+    "total_models": 365,
     "pipeline_stage": "A_fetch_api_models"
   },
   "models": [
@@ -5556,13 +5556,13 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000044",
-        "completion": "0.000002",
-        "input_cache_read": "0.00000022"
+        "prompt": "0.0000004",
+        "completion": "0.00000198",
+        "input_cache_read": "0.00000005"
       },
       "top_provider": {
         "context_length": 262144,
-        "max_completion_tokens": 65535,
+        "max_completion_tokens": 262144,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -15846,124 +15846,6 @@
       "expiration_date": "2026-06-01",
       "links": {
         "details": "/api/v1/models/google/gemini-2.0-flash-lite-001/endpoints"
-      }
-    },
-    {
-      "id": "anthropic/claude-3.7-sonnet",
-      "canonical_slug": "anthropic/claude-3-7-sonnet-20250219",
-      "hugging_face_id": "",
-      "name": "Anthropic: Claude 3.7 Sonnet",
-      "created": 1740422110,
-      "description": "Claude 3.7 Sonnet is an advanced large language model with improved reasoning, coding, and problem-solving capabilities. It introduces a hybrid reasoning approach, allowing users to choose between rapid responses and...",
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "input_modalities": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Claude",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.000003",
-        "completion": "0.000015",
-        "web_search": "0.01",
-        "input_cache_read": "0.0000003",
-        "input_cache_write": "0.00000375"
-      },
-      "top_provider": {
-        "context_length": 200000,
-        "max_completion_tokens": 64000,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "stop",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": null,
-        "top_p": null,
-        "top_k": null,
-        "frequency_penalty": null,
-        "presence_penalty": null,
-        "repetition_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": "2024-10-31",
-      "expiration_date": "2026-05-11",
-      "links": {
-        "details": "/api/v1/models/anthropic/claude-3-7-sonnet-20250219/endpoints"
-      }
-    },
-    {
-      "id": "anthropic/claude-3.7-sonnet:thinking",
-      "canonical_slug": "anthropic/claude-3-7-sonnet-20250219",
-      "hugging_face_id": "",
-      "name": "Anthropic: Claude 3.7 Sonnet (thinking)",
-      "created": 1740422110,
-      "description": "Claude 3.7 Sonnet is an advanced large language model with improved reasoning, coding, and problem-solving capabilities. It introduces a hybrid reasoning approach, allowing users to choose between rapid responses and...",
-      "context_length": 200000,
-      "architecture": {
-        "modality": "text+image+file->text",
-        "input_modalities": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Claude",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0.000003",
-        "completion": "0.000015",
-        "web_search": "0.01",
-        "input_cache_read": "0.0000003",
-        "input_cache_write": "0.00000375"
-      },
-      "top_provider": {
-        "context_length": 200000,
-        "max_completion_tokens": 64000,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "include_reasoning",
-        "max_tokens",
-        "reasoning",
-        "stop",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": null,
-        "top_p": null,
-        "top_k": null,
-        "frequency_penalty": null,
-        "presence_penalty": null,
-        "repetition_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": "2024-10-31",
-      "expiration_date": "2026-05-11",
-      "links": {
-        "details": "/api/v1/models/anthropic/claude-3-7-sonnet-20250219/endpoints"
       }
     },
     {

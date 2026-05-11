@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-05-10 09:13:06 IST
+Generated: 2026-05-11 09:26:32 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 367
+  Total models: 365
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  65 models
@@ -177,23 +177,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - pixtral-large-2411
     - voxtral-small-24b-2507
 
-  Anthropic       :  15 models
-    - claude-3-haiku
-    - claude-3.5-haiku
-    - claude-3.7-sonnet
-    - claude-3.7-sonnet:thinking
-    - claude-haiku-4.5
-    - claude-opus-4
-    - claude-opus-4.1
-    - claude-opus-4.5
-    - claude-opus-4.6
-    - claude-opus-4.6-fast
-    - claude-opus-4.7
-    - claude-opus-latest
-    - claude-sonnet-4
-    - claude-sonnet-4.5
-    - claude-sonnet-4.6
-
   DeepSeek        :  13 models
     - deepseek-chat
     - deepseek-chat-v3-0324
@@ -208,6 +191,21 @@ PROVIDER BREAKDOWN (Descending Order):
     - deepseek-v3.2-speciale
     - deepseek-v4-flash
     - deepseek-v4-pro
+
+  Anthropic       :  13 models
+    - claude-3-haiku
+    - claude-3.5-haiku
+    - claude-haiku-4.5
+    - claude-opus-4
+    - claude-opus-4.1
+    - claude-opus-4.5
+    - claude-opus-4.6
+    - claude-opus-4.6-fast
+    - claude-opus-4.7
+    - claude-opus-latest
+    - claude-sonnet-4
+    - claude-sonnet-4.5
+    - claude-sonnet-4.6
 
   Z.ai            :  13 models
     - glm-4-32b
