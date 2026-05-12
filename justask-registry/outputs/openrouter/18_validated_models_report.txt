@@ -1,11 +1,11 @@
 ================================================================================
 DATABASE DATA FINALIZATION REPORT
-Generated: 2026-05-11 09:26:54 IST
+Generated: 2026-05-12 09:10:17 IST
 ================================================================================
 
 SUMMARY:
-  Input models         : 26
-  Models kept          : 26
+  Input models         : 27
+  Models kept          : 27
   Models removed       : 0
   Input                : 17_normalized_models.json
   Config               : remove_models.json
@@ -31,14 +31,15 @@ PROVIDER DISTRIBUTION (FINALIZED DATA):
    2 models: Meta
    2 models: OpenAI
    2 models: OpenRouter
+   1 models: Arcee
    1 models: Cognitive Computations
    1 models: MiniMax
    1 models: Nous Research
    1 models: Z.AI
 
-Total providers: 12
+Total providers: 13
 
 FAMILY DISTRIBUTION (FINALIZED DATA):
-  26 models: Unknown
+  27 models: Unknown
 
 Total families: 1

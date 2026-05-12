@@ -1,39 +1,39 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-05-11 09:26:32 IST
+Generated: 2026-05-12 09:10:02 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
   Total models processed: 365
-  Models passed all filters: 26
-  Models excluded: 339
-  Success rate: 7.1%
+  Models passed all filters: 27
+  Models excluded: 338
+  Success rate: 7.4%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
     Input: 365 models
-    Excluded: 337 models (non-free pricing)
-    Remaining: 28 models
+    Excluded: 336 models (non-free pricing)
+    Remaining: 29 models
 
   Step 2 - Billing Description Filter:
-    Input: 28 models
+    Input: 29 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 28 models
+    Remaining: 29 models
 
   Step 3 - Keyword Filter:
-    Input: 28 models
+    Input: 29 models
     Excluded: 2 models (preview/experimental/beta)
-    Remaining: 26 models
+    Remaining: 27 models
 
   Step 4 - Deduplication Filter:
-    Input: 26 models
+    Input: 27 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 26 models
+    Final: 27 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 337 models with non-free pricing (details omitted due to volume)
+Excluded 336 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -178,6 +178,13 @@ PROVIDER: BAIDU (1 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
+PROVIDER: ARCEE AI (1 models)
+--------------------------------------------------
+   1. Arcee AI: Trinity Large Thinking (free)
+      ID: arcee-ai/trinity-large-thinking:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+
 PROVIDER: MINIMAX (1 models)
 --------------------------------------------------
    1. MiniMax: MiniMax M2.5 (free)
@@ -208,11 +215,11 @@ PROVIDER: NOUS (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 15
-  Total models passed all filters: 26
-  Models excluded by pricing: 337
+  Total providers: 16
+  Total models passed all filters: 27
+  Models excluded by pricing: 336
   Models excluded by billing description: 0
   Models excluded by keywords: 2
   Models excluded by deduplication: 0
-  Total exclusions: 339
+  Total exclusions: 338
   ✓ All filtered models accounted for

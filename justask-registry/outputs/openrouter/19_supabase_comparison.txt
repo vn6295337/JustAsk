@@ -1,17 +1,17 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-05-11 09:26:57 IST
+Generated: 2026-05-12 09:10:19 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 31
-   • Total records in pipeline: 26
+   • Total unique model names: 32
+   • Total records in pipeline: 27
    • Total records in Supabase: 24
    • Models in both systems: 19
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 7
+   • Models in pipeline only (not in Supabase): 8
    • Models in Supabase only (not in pipeline): 5
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
@@ -56,8 +56,8 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 7
-     Models: CoBuddy, Laguna M.1, Laguna XS.2, Nemotron 3 Nano Omni, Owl Alpha, Qianfan-OCR-Fast, Ring-2.6-1T
+   • New models (pipeline only): 8
+     Models: CoBuddy, Laguna M.1, Laguna XS.2, Nemotron 3 Nano Omni, Owl Alpha, Qianfan-OCR-Fast, Ring-2.6-1T, Trinity Large Thinking
    • Existing models with differences: 0
    • Deprecated models (Supabase only): 5
      Models: Gemma 3 12B IT, Gemma 3 27B IT, Gemma 3 4B IT, Gemma 3n E2B IT, Gemma 3n E4B IT
@@ -661,6 +661,26 @@ license_info_text         |                           |
 license_info_url          |                           |                          
 license_name              |                           |                          
 license_url               |                           |                          
+rate_limits               | 20 requests/min 50/day    |                          
+provider_api_access       | https://openrouter.ai/s.. |                          
+
+================================================================================
+
+MODEL: Trinity Large Thinking
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | OpenRouter                |                          
+model_provider            | Arcee                     |                          
+human_readable_name       | Trinity Large Thinking    |                          
+model_provider_country    | United States             |                          
+official_url              | https://www.arcee.ai/     |                          
+input_modalities          | Text                      |                          
+output_modalities         | Text                      |                          
+license_info_text         | info                      |                          
+license_info_url          | https://huggingface.co/.. |                          
+license_name              | APACHE-2.0                |                          
+license_url               | https://www.apache.org/.. |                          
 rate_limits               | 20 requests/min 50/day    |                          
 provider_api_access       | https://openrouter.ai/s.. |                          
 

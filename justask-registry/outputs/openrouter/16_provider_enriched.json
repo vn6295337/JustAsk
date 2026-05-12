@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-11 09:26:54 IST",
-    "total_models": 26,
+    "generated_at": "2026-05-12 09:10:17 IST",
+    "total_models": 27,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
@@ -184,6 +184,26 @@
       "model_provider_country": "United States",
       "model_family": "gemma",
       "official_url": "https://ai.google.dev/gemma"
+    },
+    {
+      "id": "arcee-ai/trinity-large-thinking:free",
+      "canonical_slug": "arcee-ai/trinity-large-thinking",
+      "provider_slug": "trinity-large-thinking",
+      "original_name": "Arcee AI: Trinity Large Thinking (free)",
+      "hugging_face_id": "arcee-ai/Trinity-Large-Thinking",
+      "clean_model_name": "Trinity Large Thinking",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "Arcee",
+      "model_provider_country": "United States",
+      "model_family": "arcee",
+      "official_url": "https://www.arcee.ai/"
     },
     {
       "id": "nvidia/nemotron-3-super-120b-a12b:free",

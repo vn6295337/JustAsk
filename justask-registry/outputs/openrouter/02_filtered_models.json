@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-11 09:26:32 IST",
-    "total_models": 26,
+    "generated_at": "2026-05-12 09:10:02 IST",
+    "total_models": 27,
     "pipeline_stage": "B_filter_models"
   },
   "models": [
@@ -494,6 +494,60 @@
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/google/gemma-4-31b-it-20260402/endpoints"
+      }
+    },
+    {
+      "id": "arcee-ai/trinity-large-thinking:free",
+      "canonical_slug": "arcee-ai/trinity-large-thinking",
+      "hugging_face_id": "arcee-ai/Trinity-Large-Thinking",
+      "name": "Arcee AI: Trinity Large Thinking (free)",
+      "created": 1775058318,
+      "description": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7...",
+      "context_length": 262144,
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Other",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0",
+        "completion": "0"
+      },
+      "top_provider": {
+        "context_length": 262144,
+        "max_completion_tokens": 80000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "max_tokens",
+        "reasoning",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_p"
+      ],
+      "default_parameters": {
+        "temperature": 0.3,
+        "top_p": 0.8,
+        "top_k": null,
+        "frequency_penalty": null,
+        "presence_penalty": null,
+        "repetition_penalty": null
+      },
+      "supported_voices": null,
+      "knowledge_cutoff": null,
+      "expiration_date": null,
+      "links": {
+        "details": "/api/v1/models/arcee-ai/trinity-large-thinking/endpoints"
       }
     },
     {

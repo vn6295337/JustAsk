@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-11 09:26:50 IST",
-    "total_models": 8,
+    "generated_at": "2026-05-12 09:10:12 IST",
+    "total_models": 9,
     "pipeline_stage": "H_bucketize_other_license_names"
   },
   "models": [
@@ -10,6 +10,13 @@
       "canonical_slug": "poolside/laguna-xs.2-20260421",
       "name": "Poolside: Laguna XS.2 (free)",
       "hugging_face_id": "poolside/Laguna-XS.2",
+      "license_name": "APACHE-2.0"
+    },
+    {
+      "id": "arcee-ai/trinity-large-thinking:free",
+      "canonical_slug": "arcee-ai/trinity-large-thinking",
+      "name": "Arcee AI: Trinity Large Thinking (free)",
+      "hugging_face_id": "arcee-ai/Trinity-Large-Thinking",
       "license_name": "APACHE-2.0"
     },
     {

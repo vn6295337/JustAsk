@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-11 09:26:53 IST",
-    "total_models": 27,
+    "generated_at": "2026-05-12 09:10:16 IST",
+    "total_models": 28,
     "pipeline_stage": "M_final_list_of_licenses"
   },
   "models": [
@@ -16,6 +16,18 @@
       "license_name": "AWS",
       "license_url": "https://docs.aws.amazon.com/ai/responsible-ai/nova-2-lite/overview.html",
       "source_category": "proprietary"
+    },
+    {
+      "id": "arcee-ai/trinity-large-thinking:free",
+      "canonical_slug": "arcee-ai/trinity-large-thinking",
+      "original_name": "Arcee AI: Trinity Large Thinking (free)",
+      "hugging_face_id": "arcee-ai/Trinity-Large-Thinking",
+      "clean_model_name": "Trinity Large Thinking",
+      "license_info_text": "info",
+      "license_info_url": "https://huggingface.co/arcee-ai/Trinity-Large-Thinking/blob/main/README.md",
+      "license_name": "APACHE-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_category": "opensource"
     },
     {
       "id": "google/gemma-4-26b-a4b-it:free",

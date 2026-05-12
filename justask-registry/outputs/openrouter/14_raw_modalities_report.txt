@@ -1,16 +1,16 @@
 ================================================================================
 RAW MODALITIES EXTRACTION REPORT
-Generated: 2026-05-11 09:26:53 IST
+Generated: 2026-05-12 09:10:16 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 26
+  Total models : 27
   Input        : 02_filtered_models.json
   Processor    : step_14_extract_modalities.py
   Output       : 14_raw_modalities.json
 
 RAW INPUT MODALITIES DISTRIBUTION:
-  20 models: text
+  21 models: text
    3 models: image, text, video
    1 models: image, text
    1 models: text, audio, image, video
@@ -19,12 +19,12 @@ RAW INPUT MODALITIES DISTRIBUTION:
 Total unique input types: 5
 
 RAW OUTPUT MODALITIES DISTRIBUTION:
-  26 models: text
+  27 models: text
 
 Total unique output types: 1
 
 RAW MODALITY COMBINATIONS (INPUT → OUTPUT):
-  20 models: text → text
+  21 models: text → text
    3 models: image, text, video → text
    1 models: image, text → text
    1 models: text, audio, image, video → text
@@ -311,7 +311,19 @@ MODEL 23: inclusionai/ring-2.6-1t-20260508
 
 ================================================================================
 
-MODEL 24: venice/uncensored
+MODEL 24: arcee-ai/trinity-large-thinking
+--------------------------------------------------
+  ID: arcee-ai/trinity-large-thinking:free
+  Original Name: Arcee AI: Trinity Large Thinking (free)
+  HuggingFace ID: arcee-ai/Trinity-Large-Thinking
+  Canonical Slug: arcee-ai/trinity-large-thinking
+  Clean Model Name: Trinity Large Thinking
+  Raw Input Modalities: text
+  Raw Output Modalities: text
+
+================================================================================
+
+MODEL 25: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -323,7 +335,7 @@ MODEL 24: venice/uncensored
 
 ================================================================================
 
-MODEL 25: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 26: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Original Name: NVIDIA: Nemotron 3 Nano Omni (free)
@@ -335,7 +347,7 @@ MODEL 25: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 
 ================================================================================
 
-MODEL 26: openrouter/free
+MODEL 27: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router

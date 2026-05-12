@@ -1,6 +1,6 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-05-11 09:26:32 IST
+Generated: 2026-05-12 09:10:01 IST
 ================================================================================
 
 SUMMARY:
@@ -261,6 +261,16 @@ PROVIDER BREAKDOWN (Descending Order):
     - nemotron-nano-9b-v2
     - nemotron-nano-9b-v2:free
 
+  Arcee AI        :   8 models
+    - coder-large
+    - maestro-reasoning
+    - spotlight
+    - trinity-large-preview
+    - trinity-large-thinking
+    - trinity-large-thinking:free
+    - trinity-mini
+    - virtuoso-large
+
   MiniMax         :   8 models
     - minimax-01
     - minimax-m1
@@ -270,15 +280,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - minimax-m2.5
     - minimax-m2.5:free
     - minimax-m2.7
-
-  Arcee AI        :   7 models
-    - coder-large
-    - maestro-reasoning
-    - spotlight
-    - trinity-large-preview
-    - trinity-large-thinking
-    - trinity-mini
-    - virtuoso-large
 
   Baidu           :   6 models
     - ernie-4.5-21b-a3b
