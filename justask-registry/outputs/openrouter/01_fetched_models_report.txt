@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-05-12 09:10:01 IST
+Generated: 2026-05-13 09:19:04 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 365
+  Total models: 363
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  65 models
@@ -74,15 +74,11 @@ PROVIDER BREAKDOWN (Descending Order):
     - o4-mini-deep-research
     - o4-mini-high
 
-  Qwen            :  49 models
+  Qwen            :  45 models
     - qwen-2.5-7b-instruct
-    - qwen-max
     - qwen-plus
     - qwen-plus-2025-07-28
     - qwen-plus-2025-07-28:thinking
-    - qwen-turbo
-    - qwen-vl-max
-    - qwen-vl-plus
     - qwen2.5-vl-72b-instruct
     - qwen3-14b
     - qwen3-235b-a22b
@@ -177,6 +173,22 @@ PROVIDER BREAKDOWN (Descending Order):
     - pixtral-large-2411
     - voxtral-small-24b-2507
 
+  Anthropic       :  14 models
+    - claude-3-haiku
+    - claude-3.5-haiku
+    - claude-haiku-4.5
+    - claude-opus-4
+    - claude-opus-4.1
+    - claude-opus-4.5
+    - claude-opus-4.6
+    - claude-opus-4.6-fast
+    - claude-opus-4.7
+    - claude-opus-4.7-fast
+    - claude-opus-latest
+    - claude-sonnet-4
+    - claude-sonnet-4.5
+    - claude-sonnet-4.6
+
   DeepSeek        :  13 models
     - deepseek-chat
     - deepseek-chat-v3-0324
@@ -191,21 +203,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - deepseek-v3.2-speciale
     - deepseek-v4-flash
     - deepseek-v4-pro
-
-  Anthropic       :  13 models
-    - claude-3-haiku
-    - claude-3.5-haiku
-    - claude-haiku-4.5
-    - claude-opus-4
-    - claude-opus-4.1
-    - claude-opus-4.5
-    - claude-opus-4.6
-    - claude-opus-4.6-fast
-    - claude-opus-4.7
-    - claude-opus-latest
-    - claude-sonnet-4
-    - claude-sonnet-4.5
-    - claude-sonnet-4.6
 
   Z.ai            :  13 models
     - glm-4-32b
@@ -392,6 +389,9 @@ PROVIDER BREAKDOWN (Descending Order):
     - inflection-3-pi
     - inflection-3-productivity
 
+  Perceptron      :   1 models
+    - perceptron-mk1
+
   Baidu Qianfan   :   1 models
     - cobuddy:free
 
@@ -446,4 +446,4 @@ PROVIDER BREAKDOWN (Descending Order):
   Mancer          :   1 models
     - weaver
 
-Total providers: 50
+Total providers: 51
