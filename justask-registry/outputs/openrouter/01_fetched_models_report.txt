@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-05-13 09:19:04 IST
+Generated: 2026-05-14 09:18:18 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 363
+  Total models: 364
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  65 models
@@ -189,7 +189,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - claude-sonnet-4.5
     - claude-sonnet-4.6
 
-  DeepSeek        :  13 models
+  DeepSeek        :  14 models
     - deepseek-chat
     - deepseek-chat-v3-0324
     - deepseek-chat-v3.1
@@ -202,6 +202,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - deepseek-v3.2-exp
     - deepseek-v3.2-speciale
     - deepseek-v4-flash
+    - deepseek-v4-flash:free
     - deepseek-v4-pro
 
   Z.ai            :  13 models

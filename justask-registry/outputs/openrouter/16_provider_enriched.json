@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-13 09:19:21 IST",
-    "total_models": 27,
+    "generated_at": "2026-05-14 09:18:39 IST",
+    "total_models": 28,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
@@ -124,6 +124,26 @@
       "model_provider_country": "Unknown",
       "model_family": "poolside",
       "official_url": "Unknown"
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash:free",
+      "canonical_slug": "deepseek/deepseek-v4-flash-20260423",
+      "provider_slug": "deepseek-v4-flash-20260423",
+      "original_name": "DeepSeek: DeepSeek V4 Flash (free)",
+      "hugging_face_id": "deepseek-ai/DeepSeek-V4-Flash",
+      "clean_model_name": "DeepSeek V4 Flash",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "DeepSeek",
+      "model_provider_country": "China",
+      "model_family": "deepseek",
+      "official_url": "https://deepseek.com/"
     },
     {
       "id": "baidu/qianfan-ocr-fast:free",

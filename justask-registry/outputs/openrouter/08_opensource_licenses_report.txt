@@ -1,10 +1,10 @@
 ================================================================================
 OPENSOURCE LICENSE MODELS REPORT
-Generated: 2026-05-13 09:19:16 IST
+Generated: 2026-05-14 09:18:34 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 9
+  Total models : 10
   Input        : 07_standardized_licenses.json
   Reference    : opensource_license_urls.json
   Processor    : step_08_bucketize_licenses.py
@@ -13,7 +13,7 @@ SUMMARY:
 OPENSOURCE LICENSE DISTRIBUTION:
   APACHE-2.0: 7 models
   LLAMA-3.1: 1 models
-  MIT: 1 models
+  MIT: 2 models
 
 Total license types: 3
 
@@ -92,7 +92,16 @@ MODEL 8: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 9: z-ai/glm-4.5-air
+MODEL 9: deepseek/deepseek-v4-flash-20260423
+--------------------------------------------------
+  ID              : deepseek/deepseek-v4-flash:free
+  Canonical Slug  : deepseek/deepseek-v4-flash-20260423
+  HuggingFace ID  : deepseek-ai/DeepSeek-V4-Flash
+  License Name    : MIT
+
+================================================================================
+
+MODEL 10: z-ai/glm-4.5-air
 --------------------------------------------------
   ID              : z-ai/glm-4.5-air:free
   Canonical Slug  : z-ai/glm-4.5-air

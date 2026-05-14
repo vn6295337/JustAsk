@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-13 09:19:16 IST",
-    "total_models": 16,
+    "generated_at": "2026-05-14 09:18:34 IST",
+    "total_models": 17,
     "pipeline_stage": "G_standardize_other_license_names_from_hf"
   },
   "models": [
@@ -12,6 +12,14 @@
       "hugging_face_id": "poolside/Laguna-XS.2",
       "raw_extracted_license": "apache-2.0",
       "standardized_license_name": "APACHE-2.0"
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash:free",
+      "canonical_slug": "deepseek/deepseek-v4-flash-20260423",
+      "name": "DeepSeek: DeepSeek V4 Flash (free)",
+      "hugging_face_id": "deepseek-ai/DeepSeek-V4-Flash",
+      "raw_extracted_license": "mit",
+      "standardized_license_name": "MIT"
     },
     {
       "id": "arcee-ai/trinity-large-thinking:free",

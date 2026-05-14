@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-13 09:19:11 IST",
-    "total_models": 16,
+    "generated_at": "2026-05-14 09:18:28 IST",
+    "total_models": 17,
     "pipeline_stage": "E_fetch_other_license_info_urls_from_hf"
   },
   "models": [
@@ -11,6 +11,13 @@
       "name": "Poolside: Laguna XS.2 (free)",
       "hugging_face_id": "poolside/Laguna-XS.2",
       "license_info_url": "https://huggingface.co/poolside/Laguna-XS.2/blob/main/README.md"
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash:free",
+      "canonical_slug": "deepseek/deepseek-v4-flash-20260423",
+      "name": "DeepSeek: DeepSeek V4 Flash (free)",
+      "hugging_face_id": "deepseek-ai/DeepSeek-V4-Flash",
+      "license_info_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash/blob/main/LICENSE"
     },
     {
       "id": "arcee-ai/trinity-large-thinking:free",

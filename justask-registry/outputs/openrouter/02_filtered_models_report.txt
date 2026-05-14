@@ -1,34 +1,34 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-05-13 09:19:05 IST
+Generated: 2026-05-14 09:18:19 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 363
-  Models passed all filters: 27
+  Total models processed: 364
+  Models passed all filters: 28
   Models excluded: 336
-  Success rate: 7.4%
+  Success rate: 7.7%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 363 models
+    Input: 364 models
     Excluded: 334 models (non-free pricing)
-    Remaining: 29 models
+    Remaining: 30 models
 
   Step 2 - Billing Description Filter:
-    Input: 29 models
+    Input: 30 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 29 models
+    Remaining: 30 models
 
   Step 3 - Keyword Filter:
-    Input: 29 models
+    Input: 30 models
     Excluded: 2 models (preview/experimental/beta)
-    Remaining: 27 models
+    Remaining: 28 models
 
   Step 4 - Deduplication Filter:
-    Input: 27 models
+    Input: 28 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 27 models
+    Final: 28 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
@@ -171,6 +171,13 @@ PROVIDER: BAIDU QIANFAN (1 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
+PROVIDER: DEEPSEEK (1 models)
+--------------------------------------------------
+   1. DeepSeek: DeepSeek V4 Flash (free)
+      ID: deepseek/deepseek-v4-flash:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+
 PROVIDER: BAIDU (1 models)
 --------------------------------------------------
    1. Baidu: Qianfan-OCR-Fast (free)
@@ -215,8 +222,8 @@ PROVIDER: NOUS (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 16
-  Total models passed all filters: 27
+  Total providers: 17
+  Total models passed all filters: 28
   Models excluded by pricing: 334
   Models excluded by billing description: 0
   Models excluded by keywords: 2

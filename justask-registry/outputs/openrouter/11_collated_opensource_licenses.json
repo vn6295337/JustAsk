@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-13 09:19:20 IST",
-    "total_models": 9,
+    "generated_at": "2026-05-14 09:18:38 IST",
+    "total_models": 10,
     "pipeline_stage": "K_collate_opensource_licenses"
   },
   "models": [
@@ -15,6 +15,17 @@
       "license_info_url": "https://huggingface.co/arcee-ai/Trinity-Large-Thinking/blob/main/README.md",
       "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash:free",
+      "canonical_slug": "deepseek/deepseek-v4-flash-20260423",
+      "original_name": "DeepSeek: DeepSeek V4 Flash (free)",
+      "hugging_face_id": "deepseek-ai/DeepSeek-V4-Flash",
+      "clean_model_name": "DeepSeek V4 Flash",
+      "license_info_text": "info",
+      "license_info_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash/blob/main/LICENSE",
+      "license_name": "MIT",
+      "license_url": "https://opensource.org/licenses/MIT"
     },
     {
       "id": "nousresearch/hermes-3-llama-3.1-405b:free",

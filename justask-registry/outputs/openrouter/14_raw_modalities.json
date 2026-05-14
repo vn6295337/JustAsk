@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-13 09:19:20 IST",
-    "total_models": 27,
+    "generated_at": "2026-05-14 09:18:39 IST",
+    "total_models": 28,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
@@ -56,6 +56,15 @@
       "original_name": "Poolside: Laguna M.1 (free)",
       "hugging_face_id": null,
       "clean_model_name": "Laguna M.1",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text"
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash:free",
+      "canonical_slug": "deepseek/deepseek-v4-flash-20260423",
+      "original_name": "DeepSeek: DeepSeek V4 Flash (free)",
+      "hugging_face_id": "deepseek-ai/DeepSeek-V4-Flash",
+      "clean_model_name": "DeepSeek V4 Flash",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text"
     },

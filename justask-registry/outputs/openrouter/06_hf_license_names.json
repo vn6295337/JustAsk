@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-13 09:19:16 IST",
-    "total_models": 16,
+    "generated_at": "2026-05-14 09:18:34 IST",
+    "total_models": 17,
     "pipeline_stage": "F_fetch_other_license_names_from_hf"
   },
   "models": [
@@ -11,6 +11,13 @@
       "name": "Poolside: Laguna XS.2 (free)",
       "hugging_face_id": "poolside/Laguna-XS.2",
       "extracted_license": "apache-2.0"
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash:free",
+      "canonical_slug": "deepseek/deepseek-v4-flash-20260423",
+      "name": "DeepSeek: DeepSeek V4 Flash (free)",
+      "hugging_face_id": "deepseek-ai/DeepSeek-V4-Flash",
+      "extracted_license": "mit"
     },
     {
       "id": "arcee-ai/trinity-large-thinking:free",
