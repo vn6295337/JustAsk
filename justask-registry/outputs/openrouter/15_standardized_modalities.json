@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-14 09:18:39 IST",
-    "total_models": 28,
+    "generated_at": "2026-05-15 09:22:45 IST",
+    "total_models": 27,
     "pipeline_stage": "O_standardize_raw_modalities"
   },
   "models": [
@@ -100,20 +100,6 @@
       "enhanced_input_modalities": "text",
       "enhanced_output_modalities": "text",
       "standardized_input_modalities": "Text",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model"
-    },
-    {
-      "id": "baidu/qianfan-ocr-fast:free",
-      "canonical_slug": "baidu/qianfan-ocr-fast-20260420",
-      "original_name": "Baidu: Qianfan-OCR-Fast (free)",
-      "hugging_face_id": "",
-      "clean_model_name": "Qianfan-OCR-Fast",
-      "raw_input_modalities": "image, text",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "image, text",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text, Image",
       "standardized_output_modalities": "Text",
       "google_enhancement_status": "no_google_model"
     },

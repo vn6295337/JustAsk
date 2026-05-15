@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-14 09:18:19 IST",
-    "total_models": 28,
+    "generated_at": "2026-05-15 09:22:26 IST",
+    "total_models": 27,
     "pipeline_stage": "B_filter_models"
   },
   "models": [
@@ -335,7 +335,7 @@
       "name": "DeepSeek: DeepSeek V4 Flash (free)",
       "created": 1777000666,
       "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
-      "context_length": 256000,
+      "context_length": 1048576,
       "architecture": {
         "modality": "text->text",
         "input_modalities": [
@@ -352,8 +352,8 @@
         "completion": "0"
       },
       "top_provider": {
-        "context_length": 256000,
-        "max_completion_tokens": 256000,
+        "context_length": 1048576,
+        "max_completion_tokens": 384000,
         "is_moderated": false
       },
       "per_request_limits": null,
@@ -376,63 +376,6 @@
       "expiration_date": null,
       "links": {
         "details": "/api/v1/models/deepseek/deepseek-v4-flash-20260423/endpoints"
-      }
-    },
-    {
-      "id": "baidu/qianfan-ocr-fast:free",
-      "canonical_slug": "baidu/qianfan-ocr-fast-20260420",
-      "hugging_face_id": "",
-      "name": "Baidu: Qianfan-OCR-Fast (free)",
-      "created": 1776707472,
-      "description": "Qianfan-OCR-Fast is a domain-specific multimodal large model purpose-built for OCR. By leveraging specialized OCR training data while preserving versatile multimodal intelligence, it provides a powerful performance upgrade over Qianfan-OCR.",
-      "context_length": 65536,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "image",
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 65536,
-        "max_completion_tokens": 28672,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "max_tokens",
-        "presence_penalty",
-        "reasoning",
-        "repetition_penalty",
-        "seed",
-        "stop",
-        "temperature",
-        "top_p"
-      ],
-      "default_parameters": {
-        "temperature": null,
-        "top_p": null,
-        "top_k": null,
-        "frequency_penalty": null,
-        "presence_penalty": null,
-        "repetition_penalty": null
-      },
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/baidu/qianfan-ocr-fast-20260420/endpoints"
       }
     },
     {

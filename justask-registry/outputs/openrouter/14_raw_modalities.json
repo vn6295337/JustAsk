@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-14 09:18:39 IST",
-    "total_models": 28,
+    "generated_at": "2026-05-15 09:22:45 IST",
+    "total_models": 27,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
@@ -66,15 +66,6 @@
       "hugging_face_id": "deepseek-ai/DeepSeek-V4-Flash",
       "clean_model_name": "DeepSeek V4 Flash",
       "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "baidu/qianfan-ocr-fast:free",
-      "canonical_slug": "baidu/qianfan-ocr-fast-20260420",
-      "original_name": "Baidu: Qianfan-OCR-Fast (free)",
-      "hugging_face_id": "",
-      "clean_model_name": "Qianfan-OCR-Fast",
-      "raw_input_modalities": "image, text",
       "raw_output_modalities": "text"
     },
     {

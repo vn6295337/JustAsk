@@ -1,39 +1,39 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-05-14 09:18:19 IST
+Generated: 2026-05-15 09:22:26 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
   Total models processed: 364
-  Models passed all filters: 28
-  Models excluded: 336
-  Success rate: 7.7%
+  Models passed all filters: 27
+  Models excluded: 337
+  Success rate: 7.4%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
     Input: 364 models
-    Excluded: 334 models (non-free pricing)
-    Remaining: 30 models
+    Excluded: 335 models (non-free pricing)
+    Remaining: 29 models
 
   Step 2 - Billing Description Filter:
-    Input: 30 models
+    Input: 29 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 30 models
+    Remaining: 29 models
 
   Step 3 - Keyword Filter:
-    Input: 30 models
+    Input: 29 models
     Excluded: 2 models (preview/experimental/beta)
-    Remaining: 28 models
+    Remaining: 27 models
 
   Step 4 - Deduplication Filter:
-    Input: 28 models
+    Input: 27 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 28 models
+    Final: 27 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 334 models with non-free pricing (details omitted due to volume)
+Excluded 335 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -178,13 +178,6 @@ PROVIDER: DEEPSEEK (1 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
-PROVIDER: BAIDU (1 models)
---------------------------------------------------
-   1. Baidu: Qianfan-OCR-Fast (free)
-      ID: baidu/qianfan-ocr-fast:free
-      Pricing: prompt=0, completion=0, request=N/A
-
-
 PROVIDER: ARCEE AI (1 models)
 --------------------------------------------------
    1. Arcee AI: Trinity Large Thinking (free)
@@ -222,11 +215,11 @@ PROVIDER: NOUS (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 17
-  Total models passed all filters: 28
-  Models excluded by pricing: 334
+  Total providers: 16
+  Total models passed all filters: 27
+  Models excluded by pricing: 335
   Models excluded by billing description: 0
   Models excluded by keywords: 2
   Models excluded by deduplication: 0
-  Total exclusions: 336
+  Total exclusions: 337
   ✓ All filtered models accounted for

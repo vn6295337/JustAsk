@@ -1,17 +1,17 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-05-14 09:18:42 IST
+Generated: 2026-05-15 09:22:48 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total unique model names: 33
-   • Total records in pipeline: 28
+   • Total unique model names: 32
+   • Total records in pipeline: 27
    • Total records in Supabase: 24
    • Models in both systems: 19
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 9
+   • Models in pipeline only (not in Supabase): 8
    • Models in Supabase only (not in pipeline): 5
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
@@ -56,8 +56,8 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 9
-     Models: CoBuddy, DeepSeek V4 Flash, Laguna M.1, Laguna XS.2, Nemotron 3 Nano Omni, Owl Alpha, Qianfan-OCR-Fast, Ring-2.6-1T, Trinity Large Thinking
+   • New models (pipeline only): 8
+     Models: CoBuddy, DeepSeek V4 Flash, Laguna M.1, Laguna XS.2, Nemotron 3 Nano Omni, Owl Alpha, Ring-2.6-1T, Trinity Large Thinking
    • Existing models with differences: 0
    • Deprecated models (Supabase only): 5
      Models: Gemma 3 12B IT, Gemma 3 27B IT, Gemma 3 4B IT, Gemma 3n E2B IT, Gemma 3n E4B IT
@@ -596,26 +596,6 @@ human_readable_name       | Owl Alpha                 |
 model_provider_country    | United States             |                          
 official_url              | https://openrouter.ai/    |                          
 input_modalities          | Text                      |                          
-output_modalities         | Text                      |                          
-license_info_text         |                           |                          
-license_info_url          |                           |                          
-license_name              |                           |                          
-license_url               |                           |                          
-rate_limits               | 20 requests/min 50/day    |                          
-provider_api_access       | https://openrouter.ai/s.. |                          
-
-================================================================================
-
-MODEL: Qianfan-OCR-Fast
---------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
---------------------------------------------------------------------------------
-inference_provider        | OpenRouter                |                          
-model_provider            | Unknown                   |                          
-human_readable_name       | Qianfan-OCR-Fast          |                          
-model_provider_country    | Unknown                   |                          
-official_url              | Unknown                   |                          
-input_modalities          | Text, Image               |                          
 output_modalities         | Text                      |                          
 license_info_text         |                           |                          
 license_info_url          |                           |                          

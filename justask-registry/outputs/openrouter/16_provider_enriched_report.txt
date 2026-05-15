@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-05-14 09:18:39 IST
+Generated: 2026-05-15 09:22:45 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 28
+  Total models      : 27
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -12,15 +12,14 @@ SUMMARY:
 
 ACTION ITEMS - UNKNOWN MAPPINGS:
 ==================================================
-UNKNOWN PROVIDERS (5 models):
+UNKNOWN PROVIDERS (4 models):
   Add these provider mappings to provider_enrichment.json:
-    "baidu": ["Provider Name", "Country"],
     "baidu": ["Provider Name", "Country"],
     "inclusionai": ["Provider Name", "Country"],
     "poolside": ["Provider Name", "Country"],
     "poolside": ["Provider Name", "Country"],
 
-UNKNOWN OFFICIAL URLS (5 unique families):
+UNKNOWN OFFICIAL URLS (4 unique families):
   Add these URL mappings to family_official_urls:
     "baidu": "https://official-url-here",
     "inclusionai": "https://official-url-here",
@@ -30,7 +29,7 @@ UNKNOWN OFFICIAL URLS (5 unique families):
 
 MODEL PROVIDER DISTRIBUTION:
    5 models: NVIDIA
-   5 models: Unknown
+   4 models: Unknown
    2 models: Alibaba Cloud
    2 models: Google
    2 models: Liquid AI
@@ -48,8 +47,8 @@ Total unique model providers: 14
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
   18 models: United States
-   5 models: Unknown
    4 models: China
+   4 models: Unknown
    1 models: Singapore
 
 Total unique countries: 4
@@ -57,7 +56,6 @@ Total unique countries: 4
 MODEL FAMILY DISTRIBUTION:
    5 models: nvidia
    2 models: alibaba cloud
-   2 models: baidu
    2 models: gemma
    2 models: liquid ai
    2 models: meta
@@ -65,6 +63,7 @@ MODEL FAMILY DISTRIBUTION:
    2 models: openrouter
    2 models: poolside
    1 models: arcee
+   1 models: baidu
    1 models: cognitive computations
    1 models: deepseek
    1 models: inclusionai
@@ -133,21 +132,7 @@ MODEL 4: baidu/cobuddy-20260430
 
 ================================================================================
 
-MODEL 5: baidu/qianfan-ocr-fast-20260420
---------------------------------------------------
-  ID: baidu/qianfan-ocr-fast:free
-  Original Name: Baidu: Qianfan-OCR-Fast (free)
-  HuggingFace ID: 
-  Canonical Slug: baidu/qianfan-ocr-fast-20260420
-  Clean Model Name: Qianfan-OCR-Fast
-  Model Provider: Unknown
-  Model Provider Country: Unknown
-  Model Family: baidu
-  Official URL: Unknown
-
-================================================================================
-
-MODEL 6: venice/uncensored
+MODEL 5: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -161,7 +146,7 @@ MODEL 6: venice/uncensored
 
 ================================================================================
 
-MODEL 7: deepseek/deepseek-v4-flash-20260423
+MODEL 6: deepseek/deepseek-v4-flash-20260423
 --------------------------------------------------
   ID: deepseek/deepseek-v4-flash:free
   Original Name: DeepSeek: DeepSeek V4 Flash (free)
@@ -175,7 +160,7 @@ MODEL 7: deepseek/deepseek-v4-flash-20260423
 
 ================================================================================
 
-MODEL 8: google/gemma-4-26b-a4b-it-20260403
+MODEL 7: google/gemma-4-26b-a4b-it-20260403
 --------------------------------------------------
   ID: google/gemma-4-26b-a4b-it:free
   Original Name: Google: Gemma 4 26B A4B  (free)
@@ -189,7 +174,7 @@ MODEL 8: google/gemma-4-26b-a4b-it-20260403
 
 ================================================================================
 
-MODEL 9: google/gemma-4-31b-it-20260402
+MODEL 8: google/gemma-4-31b-it-20260402
 --------------------------------------------------
   ID: google/gemma-4-31b-it:free
   Original Name: Google: Gemma 4 31B (free)
@@ -203,7 +188,7 @@ MODEL 9: google/gemma-4-31b-it-20260402
 
 ================================================================================
 
-MODEL 10: inclusionai/ring-2.6-1t-20260508
+MODEL 9: inclusionai/ring-2.6-1t-20260508
 --------------------------------------------------
   ID: inclusionai/ring-2.6-1t:free
   Original Name: inclusionAI: Ring-2.6-1T (free)
@@ -217,7 +202,7 @@ MODEL 10: inclusionai/ring-2.6-1t-20260508
 
 ================================================================================
 
-MODEL 11: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 10: liquid/lfm-2.5-1.2b-instruct-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-instruct:free
   Original Name: LiquidAI: LFM2.5-1.2B-Instruct (free)
@@ -231,7 +216,7 @@ MODEL 11: liquid/lfm-2.5-1.2b-instruct-20260120
 
 ================================================================================
 
-MODEL 12: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 11: liquid/lfm-2.5-1.2b-thinking-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-thinking:free
   Original Name: LiquidAI: LFM2.5-1.2B-Thinking (free)
@@ -245,7 +230,7 @@ MODEL 12: liquid/lfm-2.5-1.2b-thinking-20260120
 
 ================================================================================
 
-MODEL 13: meta-llama/llama-3.2-3b-instruct
+MODEL 12: meta-llama/llama-3.2-3b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.2-3b-instruct:free
   Original Name: Meta: Llama 3.2 3B Instruct (free)
@@ -259,7 +244,7 @@ MODEL 13: meta-llama/llama-3.2-3b-instruct
 
 ================================================================================
 
-MODEL 14: meta-llama/llama-3.3-70b-instruct
+MODEL 13: meta-llama/llama-3.3-70b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.3-70b-instruct:free
   Original Name: Meta: Llama 3.3 70B Instruct (free)
@@ -273,7 +258,7 @@ MODEL 14: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 15: minimax/minimax-m2.5-20260211
+MODEL 14: minimax/minimax-m2.5-20260211
 --------------------------------------------------
   ID: minimax/minimax-m2.5:free
   Original Name: MiniMax: MiniMax M2.5 (free)
@@ -287,7 +272,7 @@ MODEL 15: minimax/minimax-m2.5-20260211
 
 ================================================================================
 
-MODEL 16: nousresearch/hermes-3-llama-3.1-405b
+MODEL 15: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -301,7 +286,7 @@ MODEL 16: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 17: nvidia/nemotron-3-nano-30b-a3b
+MODEL 16: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -315,7 +300,7 @@ MODEL 17: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 18: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 17: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Original Name: NVIDIA: Nemotron 3 Nano Omni (free)
@@ -329,7 +314,7 @@ MODEL 18: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 
 ================================================================================
 
-MODEL 19: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 18: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID: nvidia/nemotron-3-super-120b-a12b:free
   Original Name: NVIDIA: Nemotron 3 Super (free)
@@ -343,7 +328,7 @@ MODEL 19: nvidia/nemotron-3-super-120b-a12b-20230311
 
 ================================================================================
 
-MODEL 20: nvidia/nemotron-nano-12b-v2-vl
+MODEL 19: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
@@ -357,7 +342,7 @@ MODEL 20: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 21: nvidia/nemotron-nano-9b-v2
+MODEL 20: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -371,7 +356,7 @@ MODEL 21: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 22: openai/gpt-oss-120b
+MODEL 21: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -385,7 +370,7 @@ MODEL 22: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 23: openai/gpt-oss-20b
+MODEL 22: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -399,7 +384,7 @@ MODEL 23: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 24: openrouter/free
+MODEL 23: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -413,7 +398,7 @@ MODEL 24: openrouter/free
 
 ================================================================================
 
-MODEL 25: openrouter/owl-alpha
+MODEL 24: openrouter/owl-alpha
 --------------------------------------------------
   ID: openrouter/owl-alpha
   Original Name: Owl Alpha
@@ -427,7 +412,7 @@ MODEL 25: openrouter/owl-alpha
 
 ================================================================================
 
-MODEL 26: poolside/laguna-m.1-20260312
+MODEL 25: poolside/laguna-m.1-20260312
 --------------------------------------------------
   ID: poolside/laguna-m.1:free
   Original Name: Poolside: Laguna M.1 (free)
@@ -441,7 +426,7 @@ MODEL 26: poolside/laguna-m.1-20260312
 
 ================================================================================
 
-MODEL 27: poolside/laguna-xs.2-20260421
+MODEL 26: poolside/laguna-xs.2-20260421
 --------------------------------------------------
   ID: poolside/laguna-xs.2:free
   Original Name: Poolside: Laguna XS.2 (free)
@@ -455,7 +440,7 @@ MODEL 27: poolside/laguna-xs.2-20260421
 
 ================================================================================
 
-MODEL 28: z-ai/glm-4.5-air
+MODEL 27: z-ai/glm-4.5-air
 --------------------------------------------------
   ID: z-ai/glm-4.5-air:free
   Original Name: Z.ai: GLM 4.5 Air (free)
