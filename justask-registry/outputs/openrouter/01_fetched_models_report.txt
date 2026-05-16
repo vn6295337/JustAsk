@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-05-15 09:22:26 IST
+Generated: 2026-05-16 09:04:50 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 364
+  Total models: 356
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI          :  65 models
@@ -235,19 +235,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - llama-4-scout
     - llama-guard-4-12b
 
-  xAI             :  11 models
-    - grok-3
-    - grok-3-beta
-    - grok-3-mini
-    - grok-3-mini-beta
-    - grok-4
-    - grok-4-fast
-    - grok-4.1-fast
-    - grok-4.20
-    - grok-4.20-multi-agent
-    - grok-4.3
-    - grok-code-fast-1
-
   NVIDIA          :   9 models
     - llama-3.3-nemotron-super-49b-v1.5
     - nemotron-3-nano-30b-a3b
@@ -355,7 +342,12 @@ PROVIDER BREAKDOWN (Descending Order):
   inclusionAI     :   3 models
     - ling-2.6-1t
     - ling-2.6-flash
-    - ring-2.6-1t:free
+    - ring-2.6-1t
+
+  xAI             :   3 models
+    - grok-4.20
+    - grok-4.20-multi-agent
+    - grok-4.3
 
   LiquidAI        :   3 models
     - lfm-2-24b-a2b
