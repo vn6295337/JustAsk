@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-05-19 09:26:58 IST",
-    "total_models": 18,
+    "generated": "2026-05-20 09:27:31 IST",
+    "total_models": 19,
     "enrichment_source": "Google Pipeline 04_enrich_modalities"
   },
   "models": [
@@ -232,6 +232,30 @@
       "maxTemperature": 2,
       "thinking": true,
       "provider_slug": "gemini-3.1-flash-lite",
+      "input_modalities": "Unknown",
+      "output_modalities": "Unknown",
+      "modality_source": "unknown",
+      "match_priority": 0
+    },
+    {
+      "name": "models/gemini-3.5-flash",
+      "version": "3.5-flash-05-2026",
+      "displayName": "Gemini 3.5 Flash",
+      "description": "Gemini 3.5 Flash",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true,
+      "provider_slug": "gemini-3.5-flash",
       "input_modalities": "Unknown",
       "output_modalities": "Unknown",
       "modality_source": "unknown",

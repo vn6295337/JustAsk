@@ -1,9 +1,9 @@
 === GOOGLE MODELS MODALITY ENRICHMENT REPORT ===
 
-Generated: 2026-05-19 09:26:58 IST
+Generated: 2026-05-20 09:27:31 IST
 
 === SUMMARY ===
-Total Models: 18
+Total Models: 19
 Hardcoded Matches: 4
 Priority 1 Matches (Exact): 0
 Priority 2 Matches (Normalized): 3
@@ -11,8 +11,8 @@ Embedding Matches: 2
 Gemma Pattern Matches: 0
 Gemini Pattern Matches: 7
 Unique Model Matches: 1
-No Matches: 1
-Overall Match Rate: 94.4%
+No Matches: 2
+Overall Match Rate: 89.5%
 
 === PRIORITY 2 MATCHES (NORMALIZED) ===
 
@@ -90,3 +90,4 @@ Overall Match Rate: 94.4%
 === NO MATCHES ===
 
  1. gemini-3.1-flash-lite
+ 2. gemini-3.5-flash
