@@ -1,10 +1,10 @@
 ================================================================================
 FINAL CONSOLIDATED LICENSE LIST REPORT
-Generated: 2026-05-19 09:28:56 IST
+Generated: 2026-05-20 09:29:28 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 29
+  Total models        : 30
   Input sources       : 4 pipeline stage files
   Processor           : step_13_final_licenses.py
   Output              : 13_final_licenses.json
@@ -13,15 +13,15 @@ SOURCE CATEGORY DISTRIBUTION:
   Custom: 7 models
   Google: 2 models
   Meta: 2 models
-  Opensource: 10 models
+  Opensource: 11 models
   Proprietary: 8 models
 
 FINAL LICENSE DISTRIBUTION:
    7 models: APACHE-2.0
    4 models: NVIDIA
+   3 models: MIT
    2 models: GEMMA
    2 models: LFM1.0
-   2 models: MIT
    2 models: QWEN
    2 models: xAI
    1 models: AWS
@@ -353,7 +353,22 @@ MODEL 21: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 22: amazon/nova-2-lite-v1
+MODEL 22: z-ai/glm-5.1-20260406
+--------------------------------------------------
+  ID: z-ai/glm-5.1
+  Original Name: Z.ai: GLM 5.1
+  HuggingFace ID: zai-org/GLM-5.1
+  Canonical Slug: z-ai/glm-5.1-20260406
+  Clean Model Name: GLM 5.1
+  License Info Text: info
+  License Info URL: https://huggingface.co/zai-org/GLM-5.1/blob/main/LICENSE
+  License Name: MIT
+  License URL: https://opensource.org/licenses/MIT
+  Source Category: opensource
+
+================================================================================
+
+MODEL 23: amazon/nova-2-lite-v1
 --------------------------------------------------
   ID: amazon/nova-2-lite-v1:free
   Original Name: Amazon/Nova 2 Lite V1
@@ -368,7 +383,7 @@ MODEL 22: amazon/nova-2-lite-v1
 
 ================================================================================
 
-MODEL 23: kwaipilot/kat-coder-pro-v1
+MODEL 24: kwaipilot/kat-coder-pro-v1
 --------------------------------------------------
   ID: kwaipilot/kat-coder-pro-v1:free
   Original Name: Kwaipilot/Kat Coder Pro V1
@@ -383,7 +398,7 @@ MODEL 23: kwaipilot/kat-coder-pro-v1
 
 ================================================================================
 
-MODEL 24: mistralai/devstral-2512
+MODEL 25: mistralai/devstral-2512
 --------------------------------------------------
   ID: mistralai/devstral-2512:free
   Original Name: Mistralai/Devstral 2512
@@ -398,7 +413,7 @@ MODEL 24: mistralai/devstral-2512
 
 ================================================================================
 
-MODEL 25: qwen/qwen3.6-plus
+MODEL 26: qwen/qwen3.6-plus
 --------------------------------------------------
   ID: qwen/qwen3.6-plus:free
   Original Name: Qwen/Qwen3.6 Plus
@@ -413,7 +428,7 @@ MODEL 25: qwen/qwen3.6-plus
 
 ================================================================================
 
-MODEL 26: qwen/qwen3.6-plus-04-02
+MODEL 27: qwen/qwen3.6-plus-04-02
 --------------------------------------------------
   ID: qwen/qwen3.6-plus-04-02:free
   Original Name: Qwen/Qwen3.6 Plus 04 02
@@ -428,7 +443,7 @@ MODEL 26: qwen/qwen3.6-plus-04-02
 
 ================================================================================
 
-MODEL 27: upstage/solar-pro-3
+MODEL 28: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage/Solar Pro 3
@@ -443,7 +458,7 @@ MODEL 27: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 28: x-ai/grok-4-fast
+MODEL 29: x-ai/grok-4-fast
 --------------------------------------------------
   ID: x-ai/grok-4-fast:free
   Original Name: X Ai/Grok 4 Fast
@@ -458,7 +473,7 @@ MODEL 28: x-ai/grok-4-fast
 
 ================================================================================
 
-MODEL 29: x-ai/grok-4.1-fast
+MODEL 30: x-ai/grok-4.1-fast
 --------------------------------------------------
   ID: x-ai/grok-4.1-fast:free
   Original Name: X Ai/Grok 4.1 Fast

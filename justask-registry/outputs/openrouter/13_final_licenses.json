@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-19 09:28:56 IST",
-    "total_models": 29,
+    "generated_at": "2026-05-20 09:29:28 IST",
+    "total_models": 30,
     "pipeline_stage": "M_final_list_of_licenses"
   },
   "models": [
@@ -349,6 +349,18 @@
       "clean_model_name": "GLM 4.5 Air",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/zai-org/GLM-4.5-Air/blob/main/README.md",
+      "license_name": "MIT",
+      "license_url": "https://opensource.org/licenses/MIT",
+      "source_category": "opensource"
+    },
+    {
+      "id": "z-ai/glm-5.1",
+      "canonical_slug": "z-ai/glm-5.1-20260406",
+      "original_name": "Z.ai: GLM 5.1",
+      "hugging_face_id": "zai-org/GLM-5.1",
+      "clean_model_name": "GLM 5.1",
+      "license_info_text": "info",
+      "license_info_url": "https://huggingface.co/zai-org/GLM-5.1/blob/main/LICENSE",
       "license_name": "MIT",
       "license_url": "https://opensource.org/licenses/MIT",
       "source_category": "opensource"

@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-05-19 09:28:57 IST
+Generated: 2026-05-20 09:29:29 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -69,12 +69,12 @@ MODEL PROVIDER (3 models):
 
 DATA QUALITY SUMMARY:
 ------------------------------
-Total models: 26
-Missing license info text: 16 (61.5%)
-Missing license info url: 16 (61.5%)
-Missing license name: 5 (19.2%)
-Missing license url: 5 (19.2%)
-Unknown model provider: 3 (11.5%)
+Total models: 27
+Missing license info text: 16 (59.3%)
+Missing license info url: 16 (59.3%)
+Missing license name: 5 (18.5%)
+Missing license url: 5 (18.5%)
+Unknown model provider: 3 (11.1%)
 
 ================================================================================
 
@@ -332,6 +332,16 @@ COMPLETE MODEL RECORDS:
      Provider API Access: https://openrouter.ai/settings/keys
 
  26. GLM 4.5 Air
+     Provider           : Z.AI (China)
+     Modalities         : Text → Text
+     License            : MIT
+     License Info       : info
+     License URL        : https://opensource.org/licenses/MIT
+     Official URL       : https://zhipuai.cn/en/
+     Rate Limits        : 20 requests/min 50/day
+     Provider API Access: https://openrouter.ai/settings/keys
+
+ 27. GLM 5.1
      Provider           : Z.AI (China)
      Modalities         : Text → Text
      License            : MIT

@@ -1,17 +1,17 @@
 ================================================================================
 STANDARDIZED OTHER LICENSE NAMES REPORT
-Generated: 2026-05-19 09:28:52 IST
+Generated: 2026-05-20 09:29:25 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 17
+  Total models : 18
   Input        : 06_hf_license_names.json
   Config       : license_standardization_rules.json
   Processor    : step_07_standardize_license_names.py
   Output       : 07_standardized_licenses.json
 
 STANDARDIZATION RESULTS:
-  Models with license transformations: 17
+  Models with license transformations: 18
   Models unchanged: 0
   Transformation rate: 100.0%
 
@@ -19,7 +19,7 @@ STANDARDIZED LICENSE DISTRIBUTION:
   APACHE-2.0: 7 models
   LFM1.0: 2 models
   LLAMA-3.1: 1 models
-  MIT: 2 models
+  MIT: 3 models
   MODIFIED MIT: 1 models
   NVIDIA: 4 models
 
@@ -159,7 +159,17 @@ MODEL 12: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 13: minimax/minimax-m2.5-20260211
+MODEL 13: z-ai/glm-5.1-20260406
+--------------------------------------------------
+  ID                     : z-ai/glm-5.1
+  Canonical Slug         : z-ai/glm-5.1-20260406
+  HuggingFace ID         : zai-org/GLM-5.1
+  Raw License            : mit
+  Standardized License   : MIT
+
+================================================================================
+
+MODEL 14: minimax/minimax-m2.5-20260211
 --------------------------------------------------
   ID                     : minimax/minimax-m2.5:free
   Canonical Slug         : minimax/minimax-m2.5-20260211
@@ -169,7 +179,7 @@ MODEL 13: minimax/minimax-m2.5-20260211
 
 ================================================================================
 
-MODEL 14: nvidia/nemotron-3-nano-30b-a3b
+MODEL 15: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID                     : nvidia/nemotron-3-nano-30b-a3b:free
   Canonical Slug         : nvidia/nemotron-3-nano-30b-a3b
@@ -179,7 +189,7 @@ MODEL 14: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 15: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 16: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID                     : nvidia/nemotron-3-super-120b-a12b:free
   Canonical Slug         : nvidia/nemotron-3-super-120b-a12b-20230311
@@ -189,7 +199,7 @@ MODEL 15: nvidia/nemotron-3-super-120b-a12b-20230311
 
 ================================================================================
 
-MODEL 16: nvidia/nemotron-nano-12b-v2-vl
+MODEL 17: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-12b-v2-vl:free
   Canonical Slug         : nvidia/nemotron-nano-12b-v2-vl
@@ -199,7 +209,7 @@ MODEL 16: nvidia/nemotron-nano-12b-v2-vl
 
 ================================================================================
 
-MODEL 17: nvidia/nemotron-nano-9b-v2
+MODEL 18: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID                     : nvidia/nemotron-nano-9b-v2:free
   Canonical Slug         : nvidia/nemotron-nano-9b-v2

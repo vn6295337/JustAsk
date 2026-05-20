@@ -1,17 +1,17 @@
 ================================================================================
 STANDARDIZED MODALITIES REPORT
-Generated: 2026-05-19 09:28:57 IST
+Generated: 2026-05-20 09:29:29 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 26
+  Total models : 27
   Input        : 14_raw_modalities.json
   Config       : modality_standardization.json
   Processor    : step_15_standardize_modalities.py
   Output       : 15_standardized_modalities.json
 
 STANDARDIZED INPUT MODALITIES DISTRIBUTION:
-  21 models: Text
+  22 models: Text
    3 models: Text, Image, Video
    1 models: Text, Image
    1 models: Text, Image, Audio, Video
@@ -19,12 +19,12 @@ STANDARDIZED INPUT MODALITIES DISTRIBUTION:
 Total unique input types: 4
 
 STANDARDIZED OUTPUT MODALITIES DISTRIBUTION:
-  26 models: Text
+  27 models: Text
 
 Total unique output types: 1
 
 STANDARDIZED MODALITY COMBINATIONS (INPUT → OUTPUT):
-  21 models: Text → Text
+  22 models: Text → Text
    3 models: Text, Image, Video → Text
    1 models: Text, Image → Text
    1 models: Text, Image, Audio, Video → Text
@@ -32,8 +32,8 @@ STANDARDIZED MODALITY COMBINATIONS (INPUT → OUTPUT):
 Total unique combinations: 4
 
 STANDARDIZATION IMPACT ANALYSIS:
-  Input modalities changed: 26 models
-  Output modalities changed: 26 models
+  Input modalities changed: 27 models
+  Output modalities changed: 27 models
   Input modalities unchanged: 0 models
   Output modalities unchanged: 0 models
 
@@ -82,7 +82,21 @@ MODEL 3: z-ai/glm-4.5-air
 
 ================================================================================
 
-MODEL 4: openai/gpt-oss-120b
+MODEL 4: z-ai/glm-5.1-20260406
+--------------------------------------------------
+  ID: z-ai/glm-5.1
+  Original Name: Z.ai: GLM 5.1
+  HuggingFace ID: zai-org/GLM-5.1
+  Canonical Slug: z-ai/glm-5.1-20260406
+  Clean Model Name: GLM 5.1
+  Raw Input Modalities: text
+  Raw Output Modalities: text
+  Standardized Input Modalities: Text
+  Standardized Output Modalities: Text
+
+================================================================================
+
+MODEL 5: openai/gpt-oss-120b
 --------------------------------------------------
   ID: openai/gpt-oss-120b:free
   Original Name: OpenAI: gpt-oss-120b (free)
@@ -96,7 +110,7 @@ MODEL 4: openai/gpt-oss-120b
 
 ================================================================================
 
-MODEL 5: openai/gpt-oss-20b
+MODEL 6: openai/gpt-oss-20b
 --------------------------------------------------
   ID: openai/gpt-oss-20b:free
   Original Name: OpenAI: gpt-oss-20b (free)
@@ -110,7 +124,7 @@ MODEL 5: openai/gpt-oss-20b
 
 ================================================================================
 
-MODEL 6: nousresearch/hermes-3-llama-3.1-405b
+MODEL 7: nousresearch/hermes-3-llama-3.1-405b
 --------------------------------------------------
   ID: nousresearch/hermes-3-llama-3.1-405b:free
   Original Name: Nous: Hermes 3 405B Instruct (free)
@@ -124,7 +138,7 @@ MODEL 6: nousresearch/hermes-3-llama-3.1-405b
 
 ================================================================================
 
-MODEL 7: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 8: liquid/lfm-2.5-1.2b-instruct-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-instruct:free
   Original Name: LiquidAI: LFM2.5-1.2B-Instruct (free)
@@ -138,7 +152,7 @@ MODEL 7: liquid/lfm-2.5-1.2b-instruct-20260120
 
 ================================================================================
 
-MODEL 8: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 9: liquid/lfm-2.5-1.2b-thinking-20260120
 --------------------------------------------------
   ID: liquid/lfm-2.5-1.2b-thinking:free
   Original Name: LiquidAI: LFM2.5-1.2B-Thinking (free)
@@ -152,7 +166,7 @@ MODEL 8: liquid/lfm-2.5-1.2b-thinking-20260120
 
 ================================================================================
 
-MODEL 9: poolside/laguna-m.1-20260312
+MODEL 10: poolside/laguna-m.1-20260312
 --------------------------------------------------
   ID: poolside/laguna-m.1:free
   Original Name: Poolside: Laguna M.1 (free)
@@ -166,7 +180,7 @@ MODEL 9: poolside/laguna-m.1-20260312
 
 ================================================================================
 
-MODEL 10: poolside/laguna-xs.2-20260421
+MODEL 11: poolside/laguna-xs.2-20260421
 --------------------------------------------------
   ID: poolside/laguna-xs.2:free
   Original Name: Poolside: Laguna XS.2 (free)
@@ -180,7 +194,7 @@ MODEL 10: poolside/laguna-xs.2-20260421
 
 ================================================================================
 
-MODEL 11: meta-llama/llama-3.2-3b-instruct
+MODEL 12: meta-llama/llama-3.2-3b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.2-3b-instruct:free
   Original Name: Meta: Llama 3.2 3B Instruct (free)
@@ -194,7 +208,7 @@ MODEL 11: meta-llama/llama-3.2-3b-instruct
 
 ================================================================================
 
-MODEL 12: meta-llama/llama-3.3-70b-instruct
+MODEL 13: meta-llama/llama-3.3-70b-instruct
 --------------------------------------------------
   ID: meta-llama/llama-3.3-70b-instruct:free
   Original Name: Meta: Llama 3.3 70B Instruct (free)
@@ -208,7 +222,7 @@ MODEL 12: meta-llama/llama-3.3-70b-instruct
 
 ================================================================================
 
-MODEL 13: minimax/minimax-m2.5-20260211
+MODEL 14: minimax/minimax-m2.5-20260211
 --------------------------------------------------
   ID: minimax/minimax-m2.5:free
   Original Name: MiniMax: MiniMax M2.5 (free)
@@ -222,7 +236,7 @@ MODEL 13: minimax/minimax-m2.5-20260211
 
 ================================================================================
 
-MODEL 14: nvidia/nemotron-3-nano-30b-a3b
+MODEL 15: nvidia/nemotron-3-nano-30b-a3b
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-30b-a3b:free
   Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
@@ -236,7 +250,7 @@ MODEL 14: nvidia/nemotron-3-nano-30b-a3b
 
 ================================================================================
 
-MODEL 15: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 16: nvidia/nemotron-3-super-120b-a12b-20230311
 --------------------------------------------------
   ID: nvidia/nemotron-3-super-120b-a12b:free
   Original Name: NVIDIA: Nemotron 3 Super (free)
@@ -250,7 +264,7 @@ MODEL 15: nvidia/nemotron-3-super-120b-a12b-20230311
 
 ================================================================================
 
-MODEL 16: nvidia/nemotron-nano-9b-v2
+MODEL 17: nvidia/nemotron-nano-9b-v2
 --------------------------------------------------
   ID: nvidia/nemotron-nano-9b-v2:free
   Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
@@ -264,7 +278,7 @@ MODEL 16: nvidia/nemotron-nano-9b-v2
 
 ================================================================================
 
-MODEL 17: openrouter/owl-alpha
+MODEL 18: openrouter/owl-alpha
 --------------------------------------------------
   ID: openrouter/owl-alpha
   Original Name: Owl Alpha
@@ -278,7 +292,7 @@ MODEL 17: openrouter/owl-alpha
 
 ================================================================================
 
-MODEL 18: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 19: qwen/qwen3-coder-480b-a35b-07-25
 --------------------------------------------------
   ID: qwen/qwen3-coder:free
   Original Name: Qwen: Qwen3 Coder 480B A35B (free)
@@ -292,7 +306,7 @@ MODEL 18: qwen/qwen3-coder-480b-a35b-07-25
 
 ================================================================================
 
-MODEL 19: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 20: qwen/qwen3-next-80b-a3b-instruct-2509
 --------------------------------------------------
   ID: qwen/qwen3-next-80b-a3b-instruct:free
   Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
@@ -306,7 +320,7 @@ MODEL 19: qwen/qwen3-next-80b-a3b-instruct-2509
 
 ================================================================================
 
-MODEL 20: arcee-ai/trinity-large-thinking
+MODEL 21: arcee-ai/trinity-large-thinking
 --------------------------------------------------
   ID: arcee-ai/trinity-large-thinking:free
   Original Name: Arcee AI: Trinity Large Thinking (free)
@@ -320,7 +334,7 @@ MODEL 20: arcee-ai/trinity-large-thinking
 
 ================================================================================
 
-MODEL 21: venice/uncensored
+MODEL 22: venice/uncensored
 --------------------------------------------------
   ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
   Original Name: Venice: Uncensored (free)
@@ -334,7 +348,7 @@ MODEL 21: venice/uncensored
 
 ================================================================================
 
-MODEL 22: openrouter/free
+MODEL 23: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -348,7 +362,7 @@ MODEL 22: openrouter/free
 
 ================================================================================
 
-MODEL 23: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 24: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Original Name: NVIDIA: Nemotron 3 Nano Omni (free)
@@ -362,7 +376,7 @@ MODEL 23: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 
 ================================================================================
 
-MODEL 24: google/gemma-4-26b-a4b-it-20260403
+MODEL 25: google/gemma-4-26b-a4b-it-20260403
 --------------------------------------------------
   ID: google/gemma-4-26b-a4b-it:free
   Original Name: Google: Gemma 4 26B A4B  (free)
@@ -376,7 +390,7 @@ MODEL 24: google/gemma-4-26b-a4b-it-20260403
 
 ================================================================================
 
-MODEL 25: google/gemma-4-31b-it-20260402
+MODEL 26: google/gemma-4-31b-it-20260402
 --------------------------------------------------
   ID: google/gemma-4-31b-it:free
   Original Name: Google: Gemma 4 31B (free)
@@ -390,7 +404,7 @@ MODEL 25: google/gemma-4-31b-it-20260402
 
 ================================================================================
 
-MODEL 26: nvidia/nemotron-nano-12b-v2-vl
+MODEL 27: nvidia/nemotron-nano-12b-v2-vl
 --------------------------------------------------
   ID: nvidia/nemotron-nano-12b-v2-vl:free
   Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-19 09:28:57 IST",
-    "total_models": 26,
+    "generated_at": "2026-05-20 09:29:29 IST",
+    "total_models": 27,
     "pipeline_stage": "O_standardize_raw_modalities"
   },
   "models": [
@@ -81,6 +81,20 @@
       "original_name": "DeepSeek: DeepSeek V4 Flash (free)",
       "hugging_face_id": "deepseek-ai/DeepSeek-V4-Flash",
       "clean_model_name": "DeepSeek V4 Flash",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model"
+    },
+    {
+      "id": "z-ai/glm-5.1",
+      "canonical_slug": "z-ai/glm-5.1-20260406",
+      "original_name": "Z.ai: GLM 5.1",
+      "hugging_face_id": "zai-org/GLM-5.1",
+      "clean_model_name": "GLM 5.1",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text",
       "enhanced_input_modalities": "text",

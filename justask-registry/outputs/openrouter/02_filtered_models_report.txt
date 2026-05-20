@@ -1,34 +1,34 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-05-19 09:28:42 IST
+Generated: 2026-05-20 09:29:13 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 356
-  Models passed all filters: 26
+  Total models processed: 357
+  Models passed all filters: 27
   Models excluded: 330
-  Success rate: 7.3%
+  Success rate: 7.6%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 356 models
+    Input: 357 models
     Excluded: 328 models (non-free pricing)
-    Remaining: 28 models
+    Remaining: 29 models
 
   Step 2 - Billing Description Filter:
-    Input: 28 models
+    Input: 29 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 28 models
+    Remaining: 29 models
 
   Step 3 - Keyword Filter:
-    Input: 28 models
+    Input: 29 models
     Excluded: 2 models (preview/experimental/beta)
-    Remaining: 26 models
+    Remaining: 27 models
 
   Step 4 - Deduplication Filter:
-    Input: 26 models
+    Input: 27 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 26 models
+    Final: 27 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
@@ -99,6 +99,17 @@ PROVIDER: POOLSIDE (2 models)
 
    2. Poolside: Laguna XS.2 (free)
       ID: poolside/laguna-xs.2:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+
+PROVIDER: Z.AI (2 models)
+--------------------------------------------------
+   1. Z.ai: GLM 4.5 Air (free)
+      ID: z-ai/glm-4.5-air:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+   2. Z.ai: GLM 5.1
+      ID: z-ai/glm-5.1
       Pricing: prompt=0, completion=0, request=N/A
 
 
@@ -185,13 +196,6 @@ PROVIDER: MINIMAX (1 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
-PROVIDER: Z.AI (1 models)
---------------------------------------------------
-   1. Z.ai: GLM 4.5 Air (free)
-      ID: z-ai/glm-4.5-air:free
-      Pricing: prompt=0, completion=0, request=N/A
-
-
 PROVIDER: VENICE (1 models)
 --------------------------------------------------
    1. Venice: Uncensored (free)
@@ -209,7 +213,7 @@ PROVIDER: NOUS (1 models)
 ================================================================================
 FINAL SUMMARY:
   Total providers: 15
-  Total models passed all filters: 26
+  Total models passed all filters: 27
   Models excluded by pricing: 328
   Models excluded by billing description: 0
   Models excluded by keywords: 2

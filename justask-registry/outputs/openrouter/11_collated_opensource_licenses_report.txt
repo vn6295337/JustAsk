@@ -1,22 +1,22 @@
 ================================================================================
 COLLATED OPENSOURCE LICENSE INFORMATION REPORT
-Generated: 2026-05-19 09:28:55 IST
+Generated: 2026-05-20 09:29:27 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 10
+  Total models        : 11
   Input sources       : 3 pipeline stage files
   Processor           : step_11_collate_opensource.py
   Output              : 11_collated_opensource_licenses.json
 
 PIPELINE STAGE COVERAGE:
-  Step 05 (License Info URLs)    : 10 models
-  Step 08 Opensource Names       : 10 models
-  Step 09 Opensource URLs        : 10 models
+  Step 05 (License Info URLs)    : 11 models
+  Step 08 Opensource Names       : 11 models
+  Step 09 Opensource URLs        : 11 models
 
 OPENSOURCE LICENSE DISTRIBUTION:
    7 models: APACHE-2.0
-   2 models: MIT
+   3 models: MIT
    1 models: LLAMA-3.1
 
 Total unique license types: 3
@@ -159,6 +159,20 @@ MODEL 10: z-ai/glm-4.5-air
   Clean Model Name: GLM 4.5 Air
   License Info Text: info
   License Info URL: https://huggingface.co/zai-org/GLM-4.5-Air/blob/main/README.md
+  License Name: MIT
+  License URL: https://opensource.org/licenses/MIT
+
+================================================================================
+
+MODEL 11: z-ai/glm-5.1-20260406
+--------------------------------------------------
+  ID: z-ai/glm-5.1
+  Original Name: Z.ai: GLM 5.1
+  HuggingFace ID: zai-org/GLM-5.1
+  Canonical Slug: z-ai/glm-5.1-20260406
+  Clean Model Name: GLM 5.1
+  License Info Text: info
+  License Info URL: https://huggingface.co/zai-org/GLM-5.1/blob/main/LICENSE
   License Name: MIT
   License URL: https://opensource.org/licenses/MIT
 

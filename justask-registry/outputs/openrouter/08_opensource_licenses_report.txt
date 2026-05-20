@@ -1,10 +1,10 @@
 ================================================================================
 OPENSOURCE LICENSE MODELS REPORT
-Generated: 2026-05-19 09:28:52 IST
+Generated: 2026-05-20 09:29:25 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 10
+  Total models : 11
   Input        : 07_standardized_licenses.json
   Reference    : opensource_license_urls.json
   Processor    : step_08_bucketize_licenses.py
@@ -13,7 +13,7 @@ SUMMARY:
 OPENSOURCE LICENSE DISTRIBUTION:
   APACHE-2.0: 7 models
   LLAMA-3.1: 1 models
-  MIT: 2 models
+  MIT: 3 models
 
 Total license types: 3
 
@@ -106,5 +106,14 @@ MODEL 10: z-ai/glm-4.5-air
   ID              : z-ai/glm-4.5-air:free
   Canonical Slug  : z-ai/glm-4.5-air
   HuggingFace ID  : zai-org/GLM-4.5-Air
+  License Name    : MIT
+
+================================================================================
+
+MODEL 11: z-ai/glm-5.1-20260406
+--------------------------------------------------
+  ID              : z-ai/glm-5.1
+  Canonical Slug  : z-ai/glm-5.1-20260406
+  HuggingFace ID  : zai-org/GLM-5.1
   License Name    : MIT
 

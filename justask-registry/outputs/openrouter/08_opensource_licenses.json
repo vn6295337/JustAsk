@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-05-19 09:28:52 IST",
-    "total_models": 10,
+    "generated_at": "2026-05-20 09:29:25 IST",
+    "total_models": 11,
     "pipeline_stage": "H_bucketize_other_license_names"
   },
   "models": [
@@ -17,6 +17,13 @@
       "canonical_slug": "deepseek/deepseek-v4-flash-20260423",
       "name": "DeepSeek: DeepSeek V4 Flash (free)",
       "hugging_face_id": "deepseek-ai/DeepSeek-V4-Flash",
+      "license_name": "MIT"
+    },
+    {
+      "id": "z-ai/glm-5.1",
+      "canonical_slug": "z-ai/glm-5.1-20260406",
+      "name": "Z.ai: GLM 5.1",
+      "hugging_face_id": "zai-org/GLM-5.1",
       "license_name": "MIT"
     },
     {
