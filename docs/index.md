@@ -81,6 +81,7 @@
 
 - [configuration.md](./operations/configuration.md) - Environment variables, rates
 - [troubleshooting.md](./operations/troubleshooting.md) - Installation, runtime, offline issues
+- [AI-Projects-Archive-and-Recovery.md](./AI-Projects-Archive-and-Recovery.md) - Sibling AI projects: remotes, HEADs, and how to restore them
 
 ---
 
@@ -98,6 +99,7 @@
 | Build APK | [apk-build.md](./deployment/apk-build.md) |
 | Configure | [configuration.md](./operations/configuration.md) |
 | Fix issues | [troubleshooting.md](./operations/troubleshooting.md) |
+| Recover an archived project | [AI-Projects-Archive-and-Recovery.md](./AI-Projects-Archive-and-Recovery.md) |
 
 ---
 
