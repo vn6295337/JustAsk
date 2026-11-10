@@ -172,11 +172,9 @@ def refresh_database_table(records: List[Dict]):
     """
     Refresh the ims.20_aa_performance_metrics table
 
-    Strategy: BACKUP + DELETE + INSERT
-    1. Create backup table
-    2. Delete all existing records
-    3. Insert new records
-    4. Drop backup on success
+    Strategy: DELETE + INSERT in one transaction.
+    A failure rolls back to the original rows, so no backup table is needed
+    (and the CI role needs no CREATE privilege on schema ims).
 
     Args:
         records: List of dictionaries to insert
@@ -220,20 +218,12 @@ def refresh_database_table(records: List[Dict]):
             cur.execute("ROLLBACK TO SAVEPOINT slug_check;")
             log(f"Slug check skipped: {e}")
 
-        # Step 1: Create backup table (inside the transaction; a rollback undoes everything)
-        log("Creating backup table...")
-        cur.execute('DROP TABLE IF EXISTS ims."20_aa_performance_metrics_backup";')
-        cur.execute('''
-            CREATE TABLE ims."20_aa_performance_metrics_backup" AS
-            SELECT * FROM ims."20_aa_performance_metrics";
-        ''')
-
-        # Step 2: Delete all existing records
+        # Step 1: Delete all existing records (same transaction as the insert)
         log("Deleting existing records...")
         cur.execute('DELETE FROM ims."20_aa_performance_metrics";')
         log(f"Deleted {cur.rowcount} records")
 
-        # Step 3: Insert new records
+        # Step 2: Insert new records
         log(f"Inserting {len(records)} new records...")
 
         insert_sql = """
@@ -266,21 +256,16 @@ def refresh_database_table(records: List[Dict]):
             raise RuntimeError(f"Insert verification failed: expected {len(records)}, found {inserted_count}")
         log(f"Inserted {inserted_count} records")
 
-        # Step 4: Commit and drop backup
+        # Step 3: Commit
         conn.commit()
         log("Transaction committed successfully")
-
-        cur.execute('DROP TABLE IF EXISTS ims."20_aa_performance_metrics_backup";')
-        conn.commit()
-        log("Backup table dropped")
 
         log("✅ Refresh completed successfully")
 
     except Exception as e:
         log(f"❌ Error during refresh: {e}")
         log("Rolling back transaction (existing data is left unchanged)...")
-        # The backup/delete/insert all ran in one transaction, so rollback restores the
-        # original table. No manual restore from the _backup table (it could be stale).
+        # Delete and insert ran in one transaction, so rollback restores the original rows.
         conn.rollback()
 
         raise
