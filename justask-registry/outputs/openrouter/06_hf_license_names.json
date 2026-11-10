@@ -1,135 +1,72 @@
 {
   "metadata": {
-    "generated_at": "2026-05-20 09:29:24 IST",
-    "total_models": 18,
+    "generated_at": "2026-11-10 11:13:13 IST",
+    "total_models": 9,
     "pipeline_stage": "F_fetch_other_license_names_from_hf"
   },
   "models": [
     {
-      "id": "poolside/laguna-xs.2:free",
-      "canonical_slug": "poolside/laguna-xs.2-20260421",
-      "name": "Poolside: Laguna XS.2 (free)",
-      "hugging_face_id": "poolside/Laguna-XS.2",
-      "extracted_license": "apache-2.0"
-    },
-    {
-      "id": "deepseek/deepseek-v4-flash:free",
-      "canonical_slug": "deepseek/deepseek-v4-flash-20260423",
-      "name": "DeepSeek: DeepSeek V4 Flash (free)",
-      "hugging_face_id": "deepseek-ai/DeepSeek-V4-Flash",
-      "extracted_license": "mit"
-    },
-    {
-      "id": "z-ai/glm-5.1",
-      "canonical_slug": "z-ai/glm-5.1-20260406",
-      "name": "Z.ai: GLM 5.1",
-      "hugging_face_id": "zai-org/GLM-5.1",
-      "extracted_license": "mit"
-    },
-    {
-      "id": "arcee-ai/trinity-large-thinking:free",
-      "canonical_slug": "arcee-ai/trinity-large-thinking",
-      "name": "Arcee AI: Trinity Large Thinking (free)",
-      "hugging_face_id": "arcee-ai/Trinity-Large-Thinking",
-      "extracted_license": "apache-2.0"
-    },
-    {
-      "id": "nvidia/nemotron-3-super-120b-a12b:free",
-      "canonical_slug": "nvidia/nemotron-3-super-120b-a12b-20230311",
-      "name": "NVIDIA: Nemotron 3 Super (free)",
-      "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
-      "extracted_license": "nvidia-nemotron-open-model-license"
-    },
-    {
-      "id": "minimax/minimax-m2.5:free",
-      "canonical_slug": "minimax/minimax-m2.5-20260211",
-      "name": "MiniMax: MiniMax M2.5 (free)",
-      "hugging_face_id": "MiniMaxAI/MiniMax-M2.5",
-      "extracted_license": "modified-mit"
-    },
-    {
-      "id": "liquid/lfm-2.5-1.2b-thinking:free",
-      "canonical_slug": "liquid/lfm-2.5-1.2b-thinking-20260120",
-      "name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
-      "hugging_face_id": "LiquidAI/LFM2.5-1.2B-Thinking",
+      "id": "liquid/lfm-3-1.7b:free",
+      "canonical_slug": "liquid/lfm-3-1.7b-20261106",
+      "name": "LiquidAI: LFM3-1.7B (free)",
+      "hugging_face_id": "LiquidAI/LFM3-1.7B",
       "extracted_license": "lfm1.0"
     },
     {
-      "id": "liquid/lfm-2.5-1.2b-instruct:free",
-      "canonical_slug": "liquid/lfm-2.5-1.2b-instruct-20260120",
-      "name": "LiquidAI: LFM2.5-1.2B-Instruct (free)",
-      "hugging_face_id": "LiquidAI/LFM2.5-1.2B-Instruct",
+      "id": "recursive/flint-v1.0:free",
+      "canonical_slug": "recursive/flint-v1.0-20261021",
+      "name": "Recursive: Flint (free)",
+      "hugging_face_id": "RecursiveSI/flint",
+      "extracted_license": "apache-2.0"
+    },
+    {
+      "id": "xingchen-agi/xing4.0-29b-a4b:free",
+      "canonical_slug": "xingchen-agi/xing4.0-29b-a4b-20261015",
+      "name": "XingChen: Xing4.0 29B A4B (free)",
+      "hugging_face_id": "XingChen-AGI/Xing4.0-29B-A4B",
+      "extracted_license": "apache-2.0"
+    },
+    {
+      "id": "nvidia/nemotron-3.5-super-vl:free",
+      "canonical_slug": "nvidia/nemotron-3.5-super-vl-20261015",
+      "name": "NVIDIA: Nemotron 3.5 Super VL (free)",
+      "hugging_face_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+      "extracted_license": "Unknown"
+    },
+    {
+      "id": "liquid/lfm-2.5-2.6b:free",
+      "canonical_slug": "liquid/lfm-2.5-2.6b-20260811",
+      "name": "LiquidAI: LFM2.5-2.6B (free)",
+      "hugging_face_id": "LiquidAI/LFM2.5-2.6B",
       "extracted_license": "lfm1.0"
     },
     {
-      "id": "nvidia/nemotron-3-nano-30b-a3b:free",
-      "canonical_slug": "nvidia/nemotron-3-nano-30b-a3b",
-      "name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
-      "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
-      "extracted_license": "nvidia-nemotron-open-model-license"
+      "id": "nvidia/nemotron-3.5-lightning:free",
+      "canonical_slug": "nvidia/nemotron-3.5-lightning-20260807",
+      "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+      "hugging_face_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "extracted_license": "openmdw-1.1"
     },
     {
-      "id": "nvidia/nemotron-nano-12b-v2-vl:free",
-      "canonical_slug": "nvidia/nemotron-nano-12b-v2-vl",
-      "name": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
-      "hugging_face_id": "nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16",
-      "extracted_license": "nvidia-open-model-license"
-    },
-    {
-      "id": "qwen/qwen3-next-80b-a3b-instruct:free",
-      "canonical_slug": "qwen/qwen3-next-80b-a3b-instruct-2509",
-      "name": "Qwen: Qwen3 Next 80B A3B Instruct (free)",
-      "hugging_face_id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+      "id": "cohere/north-mini-code:free",
+      "canonical_slug": "cohere/north-mini-code-20260617",
+      "name": "Cohere: North Mini Code (free)",
+      "hugging_face_id": "CohereLabs/North-Mini-Code-1.0",
       "extracted_license": "apache-2.0"
     },
     {
-      "id": "nvidia/nemotron-nano-9b-v2:free",
-      "canonical_slug": "nvidia/nemotron-nano-9b-v2",
-      "name": "NVIDIA: Nemotron Nano 9B V2 (free)",
-      "hugging_face_id": "nvidia/NVIDIA-Nemotron-Nano-9B-v2",
-      "extracted_license": "nvidia-open-model-license"
+      "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "canonical_slug": "nvidia/nemotron-3-ultra-550b-a55b-20260604",
+      "name": "NVIDIA: Nemotron 3 Ultra (free)",
+      "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "extracted_license": "openmdw-1.1"
     },
     {
-      "id": "openai/gpt-oss-120b:free",
-      "canonical_slug": "openai/gpt-oss-120b",
-      "name": "OpenAI: gpt-oss-120b (free)",
-      "hugging_face_id": "openai/gpt-oss-120b",
-      "extracted_license": "apache-2.0"
-    },
-    {
-      "id": "openai/gpt-oss-20b:free",
-      "canonical_slug": "openai/gpt-oss-20b",
-      "name": "OpenAI: gpt-oss-20b (free)",
-      "hugging_face_id": "openai/gpt-oss-20b",
-      "extracted_license": "apache-2.0"
-    },
-    {
-      "id": "z-ai/glm-4.5-air:free",
-      "canonical_slug": "z-ai/glm-4.5-air",
-      "name": "Z.ai: GLM 4.5 Air (free)",
-      "hugging_face_id": "zai-org/GLM-4.5-Air",
-      "extracted_license": "mit"
-    },
-    {
-      "id": "qwen/qwen3-coder:free",
-      "canonical_slug": "qwen/qwen3-coder-480b-a35b-07-25",
-      "name": "Qwen: Qwen3 Coder 480B A35B (free)",
-      "hugging_face_id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
-      "extracted_license": "apache-2.0"
-    },
-    {
-      "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
-      "canonical_slug": "venice/uncensored",
-      "name": "Venice: Uncensored (free)",
-      "hugging_face_id": "cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition",
-      "extracted_license": "apache-2.0"
-    },
-    {
-      "id": "nousresearch/hermes-3-llama-3.1-405b:free",
-      "canonical_slug": "nousresearch/hermes-3-llama-3.1-405b",
-      "name": "Nous: Hermes 3 405B Instruct (free)",
-      "hugging_face_id": "NousResearch/Hermes-3-Llama-3.1-405B",
-      "extracted_license": "llama3"
+      "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "canonical_slug": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428",
+      "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
+      "hugging_face_id": "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16",
+      "extracted_license": "nvidia-open-model-agreement"
     }
   ]
 }
