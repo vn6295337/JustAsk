@@ -3,11 +3,11 @@
 Shared Model-to-AA Mapping Utilities
 =====================================
 
-Single source of truth for refreshing ims.10_model_aa_mapping table.
-Used by all pipeline working_version refresh scripts.
+Single source of truth for refreshing justask."21_router-model-benchmark-map" table.
+Used by all pipeline 10_free-models-staging refresh scripts.
 
 Purpose:
-- Maps (inference_provider, provider_slug) from working_version to aa_slug
+- Maps (inference_provider, provider_slug) from 10_free-models-staging to aa_slug
 - Uses UPSERT pattern with ON CONFLICT for safe, idempotent updates
 - Provides enhanced error reporting for unmatched models
 
@@ -46,7 +46,7 @@ def normalize_slug(slug: str) -> str:
         "gemma-3-12b-it" -> "gemma-3-12b"
 
     Args:
-        slug: Original provider_slug from working_version
+        slug: Original provider_slug from 10_free-models-staging
 
     Returns:
         Normalized slug with special characters converted to hyphens
@@ -133,7 +133,7 @@ def fetch_working_version_models(
     inference_provider: Optional[str] = None
 ) -> List[Tuple[str, str]]:
     """
-    Fetch all unique (inference_provider, provider_slug) pairs from working_version.
+    Fetch all unique (inference_provider, provider_slug) pairs from 10_free-models-staging.
 
     Args:
         conn: Database connection
@@ -149,7 +149,7 @@ def fetch_working_version_models(
                     SELECT DISTINCT
                         inference_provider,
                         provider_slug
-                    FROM public.working_version
+                    FROM justask."10_free-models-staging"
                     WHERE provider_slug IS NOT NULL
                       AND provider_slug != ''
                       AND inference_provider = %s
@@ -160,7 +160,7 @@ def fetch_working_version_models(
                     SELECT DISTINCT
                         inference_provider,
                         provider_slug
-                    FROM public.working_version
+                    FROM justask."10_free-models-staging"
                     WHERE provider_slug IS NOT NULL
                       AND provider_slug != ''
                     ORDER BY inference_provider, provider_slug
@@ -169,13 +169,13 @@ def fetch_working_version_models(
             models = cur.fetchall()
             return models
     except Exception as e:
-        print(f"ERROR: Failed to fetch working_version models: {e}")
+        print(f"ERROR: Failed to fetch 10_free-models-staging models: {e}")
         return []
 
 
 def fetch_aa_performance_slugs(conn) -> List[str]:
     """
-    Fetch all unique aa_slug values from ims.20_aa_performance_metrics.
+    Fetch all unique aa_slug values from justask."20_router-benchmark-scores".
 
     Args:
         conn: Database connection
@@ -187,7 +187,7 @@ def fetch_aa_performance_slugs(conn) -> List[str]:
         with conn.cursor() as cur:
             cur.execute("""
                 SELECT DISTINCT aa_slug
-                FROM ims."20_aa_performance_metrics"
+                FROM justask."20_router-benchmark-scores"
                 ORDER BY aa_slug
             """)
             aa_slugs = [row[0] for row in cur.fetchall()]
@@ -322,7 +322,7 @@ def create_mappings(
         log("UNMATCHED MODELS WITH NEAREST AA_SLUG CANDIDATES")
         log("⚠️" * 35)
         log("")
-        log("The following models from working_version could not be automatically")
+        log("The following models from 10_free-models-staging could not be automatically")
         log("mapped to AA performance metrics. Review the nearest candidates below:")
         log("")
 
@@ -368,7 +368,7 @@ def upsert_mappings(
     commit: bool = True
 ) -> bool:
     """
-    Insert or update mappings in ims.10_model_aa_mapping using UPSERT pattern.
+    Insert or update mappings in justask."21_router-model-benchmark-map" using UPSERT pattern.
 
     Uses ON CONFLICT (inference_provider, provider_slug) DO UPDATE
     to safely handle duplicate keys.
@@ -392,7 +392,7 @@ def upsert_mappings(
             execute_values(
                 cur,
                 """
-                INSERT INTO ims."10_model_aa_mapping"
+                INSERT INTO justask."21_router-model-benchmark-map"
                 (inference_provider, provider_slug, aa_slug, created_at, updated_at)
                 VALUES %s
                 ON CONFLICT (inference_provider, provider_slug)
@@ -404,7 +404,7 @@ def upsert_mappings(
             )
             if commit:
                 conn.commit()
-            log(f"✅ Successfully upserted {len(mappings)} mappings to ims.10_model_aa_mapping")
+            log(f"✅ Successfully upserted {len(mappings)} mappings to justask.21_router-model-benchmark-map")
             return True
     except Exception as e:
         conn.rollback()
@@ -441,7 +441,7 @@ def write_comparison_report(
 
             f.write("UNMATCHED MODELS WITH NEAREST AA_SLUG CANDIDATES\n")
             f.write("=" * 120 + "\n\n")
-            f.write("The following models from working_version could not be automatically\n")
+            f.write("The following models from 10_free-models-staging could not be automatically\n")
             f.write("mapped to AA performance metrics. Review the nearest candidates below:\n\n")
 
             # Table header
@@ -506,7 +506,7 @@ def backup_provider_mappings(
             cur.execute(
                 """
                 SELECT inference_provider, provider_slug, aa_slug, created_at, updated_at
-                FROM ims."10_model_aa_mapping"
+                FROM justask."21_router-model-benchmark-map"
                 WHERE inference_provider = %s
                 """,
                 (inference_provider,)
@@ -540,7 +540,7 @@ def delete_provider_mappings(
         with conn.cursor() as cur:
             cur.execute(
                 """
-                DELETE FROM ims."10_model_aa_mapping"
+                DELETE FROM justask."21_router-model-benchmark-map"
                 WHERE inference_provider = %s
                 """,
                 (inference_provider,)
@@ -583,7 +583,7 @@ def restore_provider_mappings(
             execute_values(
                 cur,
                 """
-                INSERT INTO ims."10_model_aa_mapping"
+                INSERT INTO justask."21_router-model-benchmark-map"
                 (inference_provider, provider_slug, aa_slug, created_at, updated_at)
                 VALUES %s
                 """,
@@ -605,11 +605,11 @@ def refresh_model_aa_mapping(
     logger: Optional[logging.Logger] = None
 ) -> bool:
     """
-    Main entry point: Refresh ims.10_model_aa_mapping table from working_version.
+    Main entry point: Refresh justask."21_router-model-benchmark-map" table from 10_free-models-staging.
 
     This function:
-    1. Fetches models from working_version (optionally filtered by provider)
-    2. Fetches AA performance slugs from ims.20_aa_performance_metrics
+    1. Fetches models from 10_free-models-staging (optionally filtered by provider)
+    2. Fetches AA performance slugs from justask."20_router-benchmark-scores"
     3. Matches provider models to AA slugs using smart matching
     4. Upserts mappings with ON CONFLICT handling
     5. Provides enhanced reporting for unmatched models
@@ -637,11 +637,11 @@ def refresh_model_aa_mapping(
         log(f"Started: {datetime.now().isoformat()}")
         log("")
 
-        # Step 1: Fetch models from working_version
-        log("📁 Fetching models from working_version...")
+        # Step 1: Fetch models from 10_free-models-staging
+        log("📁 Fetching models from 10_free-models-staging...")
         models = fetch_working_version_models(conn, inference_provider)
         if not models:
-            log("⚠️  No models found in working_version")
+            log("⚠️  No models found in 10_free-models-staging")
             return False
         log(f"✅ Found {len(models)} unique models")
 

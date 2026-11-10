@@ -1,3 +1,6 @@
+-- HISTORICAL: do not run. These tables now live in schema justask under new names
+-- (see docs/database-map.md). Running this would recreate the old names and the
+-- anon write policies removed on 2026-11-10.
 -- Model Selection Score Table
 -- Purpose: Consolidated view of all models with performance metrics, rate limits, and selection scores
 -- Pattern: Selector-managed, computed from working_version + model_aa_mapping + aa_performance_metrics + rate_limits

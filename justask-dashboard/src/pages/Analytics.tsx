@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect, useRef, CSSProperties } from 'react';
-import { supabase } from '@/integrations/supabase/client';
+import { justaskDb } from '@/integrations/supabase/client';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Moon, Sun } from 'lucide-react';
 import ModelCountLineGraph from '@/components/ModelCountLineGraph';
@@ -21,8 +21,8 @@ const Analytics = () => {
 
   const fetchModelData = async () => {
     try {
-      const response = await supabase
-        .from('ai_models_main')
+      const response = await justaskDb
+        .from('11_free-models-live')
         .select('*')
         .order('id', { ascending: true });
 
@@ -34,7 +34,7 @@ const Analytics = () => {
 
       if (!response.data || response.data.length === 0) {
         console.warn('No data returned from Supabase');
-        throw new Error('No data available from ai_models_main table');
+        throw new Error('No data available from 11_free-models-live table');
       }
 
       return response.data;

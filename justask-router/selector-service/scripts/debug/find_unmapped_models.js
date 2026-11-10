@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Find models in working_version that don't have mappings
+ * Find models in 10_free-models-staging that don't have mappings
  */
 
 import 'dotenv/config';
@@ -12,16 +12,16 @@ const supabase = createClient(
 );
 
 async function findUnmappedModels() {
-  // Get all models from working_version
+  // Get all models from 10_free-models-staging
   const { data: models } = await supabase
-    .from('working_version')
+    .schema('justask').from('10_free-models-staging')
     .select('human_readable_name, inference_provider, provider_slug')
     .order('inference_provider');
 
   // Get model-aa mapping
   const { data: mappings } = await supabase
-    .schema('ims')
-    .from('10_model_aa_mapping')
+    .schema('justask')
+    .from('21_router-model-benchmark-map')
     .select('provider_slug, aa_slug, inference_provider');
 
   // Create lookup map
@@ -45,12 +45,12 @@ async function findUnmappedModels() {
   });
 
   console.log(`\n📊 Summary:`);
-  console.log(`   Total models in working_version: ${models.length}`);
+  console.log(`   Total models in 10_free-models-staging: ${models.length}`);
   console.log(`   Models WITH mappings: ${mapped.length}`);
   console.log(`   Models WITHOUT mappings: ${unmapped.length}`);
   console.log();
 
-  console.log(`\n❌ Models in working_version WITHOUT mappings (${unmapped.length}):`);
+  console.log(`\n❌ Models in 10_free-models-staging WITHOUT mappings (${unmapped.length}):`);
   console.log('='.repeat(80));
 
   // Group by provider
@@ -70,7 +70,7 @@ async function findUnmappedModels() {
     });
   });
 
-  console.log(`\n\n✅ Models in working_version WITH mappings (${mapped.length}):`);
+  console.log(`\n\n✅ Models in 10_free-models-staging WITH mappings (${mapped.length}):`);
   console.log('='.repeat(80));
 
   const mappedByProvider = {};

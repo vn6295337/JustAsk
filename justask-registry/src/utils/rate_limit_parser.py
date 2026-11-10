@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Rate Limit Parser
-Parses various rate limit text formats from working_version.rate_limits column
+Parses various rate limit text formats from 10_free-models-staging.rate_limits column
 Supports 3 primary formats covering 100% of text-generation models
 
 Ported from: justask-router/selector-service/src/utils/rateLimitParser.js
@@ -91,7 +91,7 @@ def parse_rate_limits(rate_limits_str: str, provider: str) -> Dict:
     Format 3 (Groq): "RPM: 30, TPM: 15K, RPD: 14.4K, TPD: 500K"
 
     Args:
-        rate_limits_str: Raw rate_limits string from working_version
+        rate_limits_str: Raw rate_limits string from 10_free-models-staging
         provider: inference_provider for fallback
 
     Returns:

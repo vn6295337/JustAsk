@@ -450,7 +450,7 @@ def find_modality_mapping(model_name: str, modality_mapping: Dict[str, Dict[str,
 
 def transform_to_google_schema(row: Dict[str, str], modality_mapping: Dict[str, Dict[str, str]]) -> Dict[str, str]:
     """
-    Transform flattened row to ai_models_main schema with documentation validation
+    Transform flattened row to 11_free-models-live schema with documentation validation
     Implements official URL-driven requirements and enhanced normalization patterns
     """
     
@@ -576,7 +576,7 @@ class GoogleNormalizationPipeline:
                     'inference_provider': 'Google',
                     'model_provider': 'Google',
                     'human_readable_name': clean_model_name(model.get('name', '')),
-                    'provider_slug': model.get('provider_slug', ''),  # For working_version table
+                    'provider_slug': model.get('provider_slug', ''),  # For 10_free-models-staging table
                     'model_provider_country': standardize_provider_data('', 'United States'),
                     'official_url': get_official_url_google(model.get('name', '')),
                     'input_modalities': standardize_modalities(model.get('input_modalities', 'Text')),

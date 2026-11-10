@@ -12,21 +12,21 @@ const supabase = createClient(
 );
 
 async function findModelsWithMetrics() {
-  // Get all models from working_version
+  // Get all models from 10_free-models-staging
   const { data: models } = await supabase
-    .from('working_version')
+    .schema('justask').from('10_free-models-staging')
     .select('human_readable_name, inference_provider, provider_slug');
 
   // Get model-aa mapping
   const { data: mappings } = await supabase
-    .schema('ims')
-    .from('10_model_aa_mapping')
+    .schema('justask')
+    .from('21_router-model-benchmark-map')
     .select('provider_slug, aa_slug, inference_provider');
 
   // Get all AA performance metrics
   const { data: metrics } = await supabase
-    .schema('ims')
-    .from('20_aa_performance_metrics')
+    .schema('justask')
+    .from('20_router-benchmark-scores')
     .select('aa_slug, intelligence_index, name');
 
   // Create lookup maps

@@ -40,7 +40,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Refresh working_version (Step 8)
+    - name: Refresh 10_free-models-staging (Step 8)
       if: ${{ inputs.step == 'refresh-working (Step 8)' || inputs.step == 'both' }}
       working-directory: justask-registry
       env:
@@ -49,18 +49,18 @@ jobs:
       run: |
         python -m src.main groq --steps 8
 
-    - name: Deploy to ai_models_main (Step 9) + Refresh AA Mapping
+    - name: Deploy to 11_free-models-live (Step 9) + Refresh AA Mapping
       if: ${{ inputs.step == 'deploy-main (Step 9)' || inputs.step == 'both' }}
       working-directory: justask-registry
       env:
         GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         PIPELINE_SUPABASE_URL: ${{ secrets.PIPELINE_SUPABASE_URL }}
       run: |
-        # Deploy to ai_models_main
+        # Deploy to 11_free-models-live
         python -m src.main groq --steps 9
 
-        # Refresh ims.10_model_aa_mapping for Groq
-        echo "Refreshing ims.10_model_aa_mapping for Groq..."
+        # Refresh justask.21_router-model-benchmark-map for Groq
+        echo "Refreshing justask.21_router-model-benchmark-map for Groq..."
         python - <<'PY'
         import sys
         from src.utils.db import get_pipeline_db_connection

@@ -174,7 +174,8 @@ def _check_ident(name: str) -> str:
 
 def _check_table(name: str) -> str:
     """Validate a (optionally schema-qualified / quoted) table name."""
-    if not isinstance(name, str) or not re.match(r'^[A-Za-z_][A-Za-z0-9_]*(\.("[A-Za-z0-9_]+"|[A-Za-z_][A-Za-z0-9_]*))?$', name):
+    # Quoted part allows digit-first, hyphenated names, e.g. justask."10_free-models-staging"
+    if not isinstance(name, str) or not re.match(r'^[A-Za-z_][A-Za-z0-9_]*(\.("[A-Za-z0-9_-]+"|[A-Za-z_][A-Za-z0-9_]*))?$', name):
         raise ValueError(f"Unsafe SQL table name: {name!r}")
     return name
 
@@ -283,7 +284,7 @@ def delete_rate_limits(conn, table_name: str, inference_provider: str, commit: b
     """Delete all rate limit records for a specific inference provider.
 
     Args:
-        table_name: Fully qualified table name (e.g., 'ims."30_rate_limits"')
+        table_name: Fully qualified table name (e.g., 'justask."22_router-provider-rate-limits"')
     """
     try:
         with conn.cursor() as cur:
@@ -309,7 +310,7 @@ def upsert_rate_limits(conn, table_name: str, rate_limit_records: List[Dict[str,
 
     Args:
         conn: Database connection
-        table_name: Fully qualified table name (e.g., 'ims."30_rate_limits"')
+        table_name: Fully qualified table name (e.g., 'justask."22_router-provider-rate-limits"')
         rate_limit_records: List of dictionaries with rate limit data
 
     Returns:

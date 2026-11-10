@@ -5,7 +5,7 @@ Supabase Groq Data Refresh Script - PostgreSQL Version
 ====================================
 
 This script refreshes Groq data in Supabase by:
-1. Deleting existing Groq records from working_version_v3 table
+1. Deleting existing Groq records from 10_free-models-staging table
 2. Loading finalized data from stage-5-data-normalization.json
 3. Inserting fresh Groq data into Supabase
 
@@ -87,7 +87,7 @@ JSON_FILE = get_input_file_path('06_normalized_models.json')
 LOG_FILE = get_output_file_path('08_refresh_working_report.txt')
 
 # Database configuration
-TABLE_NAME = "working_version"
+TABLE_NAME = 'justask."10_free-models-staging"'
 INFERENCE_PROVIDER = "Groq"
 
 # Setup logging
@@ -213,7 +213,7 @@ def main():
         if not replace_provider_records_atomic(
             conn, TABLE_NAME, INFERENCE_PROVIDER, prepared_models,
             tolerance=0,
-            rate_limit_table='ims."30_rate_limits"',
+            rate_limit_table='justask."22_router-provider-rate-limits"',
             rate_limit_records=rate_limit_records,
         ):
             logger.error("❌ REFRESH FAILED: transaction rolled back, original data untouched")
