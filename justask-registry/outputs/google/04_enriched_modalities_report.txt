@@ -1,38 +1,18 @@
 === GOOGLE MODELS MODALITY ENRICHMENT REPORT ===
 
-Generated: 2026-05-20 09:27:31 IST
+Generated: 2026-11-10 12:17:29 IST
 
 === SUMMARY ===
-Total Models: 19
-Hardcoded Matches: 4
+Total Models: 28
+Hardcoded Matches: 2
 Priority 1 Matches (Exact): 0
-Priority 2 Matches (Normalized): 3
+Priority 2 Matches (Normalized): 0
 Embedding Matches: 2
 Gemma Pattern Matches: 0
-Gemini Pattern Matches: 7
+Gemini Pattern Matches: 3
 Unique Model Matches: 1
-No Matches: 2
-Overall Match Rate: 89.5%
-
-=== PRIORITY 2 MATCHES (NORMALIZED) ===
-
- 1. imagen-4.0-generate-001
-    Filtered model's API ID normalized: 'imagen-4'
-    Scraped model's API ID normalized: 'imagen-4'
-    Input: Text
-    Output: Image
-
- 2. imagen-4.0-ultra-generate-001
-    Filtered model's API ID normalized: 'imagen-4'
-    Scraped model's API ID normalized: 'imagen-4'
-    Input: Text
-    Output: Image
-
- 3. imagen-4.0-fast-generate-001
-    Filtered model's API ID normalized: 'imagen-4'
-    Scraped model's API ID normalized: 'imagen-4'
-    Input: Text
-    Output: Image
+No Matches: 20
+Overall Match Rate: 28.6%
 
 === EMBEDDING MATCHES ===
 
@@ -56,27 +36,7 @@ Overall Match Rate: 89.5%
     Input: Text, Image, Audio, Video, PDF
     Output: Text
 
- 3. gemini-2.0-flash
-    Family: gemini-2.0-flash
-    Input: Text, Image, Audio, Video
-    Output: Text
-
- 4. gemini-2.0-flash-001
-    Family: gemini-2.0-flash
-    Input: Text, Image, Audio, Video
-    Output: Text
-
- 5. gemini-2.0-flash-lite-001
-    Family: gemini-2.0-flash-lite
-    Input: Text, Image, Audio, Video
-    Output: Text
-
- 6. gemini-2.0-flash-lite
-    Family: gemini-2.0-flash-lite
-    Input: Text, Image, Audio, Video
-    Output: Text
-
- 7. gemini-2.5-flash-lite
+ 3. gemini-2.5-flash-lite
     Family: gemini-2.5-flash-lite
     Input: Text, Image, Audio, Video, PDF
     Output: Text
@@ -90,4 +50,22 @@ Overall Match Rate: 89.5%
 === NO MATCHES ===
 
  1. gemini-3.1-flash-lite
- 2. gemini-3.5-flash
+ 2. gemini-3-pro-image
+ 3. gemini-3.1-flash-image
+ 4. gemini-3.1-flash-lite-image
+ 5. gemini-nano-banana-2.1
+ 6. gemini-3.5-flash
+ 7. gemini-3.5-flash-lite
+ 8. gemini-omni-1.1-flash
+ 9. gemini-omni-1.2-flash
+10. gemini-3.5-transcribe
+11. gemini-3.6-flash
+12. gemini-3.7-flash
+13. gemini-3.8-flash
+14. gemini-4-argon
+15. lyria-3.5
+16. gemini-3.8-flash-tts
+17. gemini-3.8-flash-lite-tts
+18. gemini-3.5-transcribe-live
+19. gemini-3.8-live
+20. gemini-3.8-live-extended-thinking

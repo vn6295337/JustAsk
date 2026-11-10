@@ -1,11 +1,11 @@
 === GOOGLE MODELS FILTERING REPORT ===
-Generated: 2026-05-20 09:27:26 IST
+Generated: 2026-11-10 12:17:24 IST
 
 === SUMMARY ===
-Total Input Models: 52
-Models Included: 19
+Total Input Models: 61
+Models Included: 28
 Models Excluded: 33
-Filtering Success Rate: 36.5%
+Filtering Success Rate: 45.9%
 
 === EXCLUDED MODELS ===
  1. gemini-2.5-flash-preview-tts
@@ -14,58 +14,66 @@ Filtering Success Rate: 36.5%
  4. gemini-flash-lite-latest
  5. gemini-pro-latest
  6. gemini-2.5-flash-image
- 7. gemini-3-pro-preview
- 8. gemini-3-flash-preview
- 9. gemini-3.1-pro-preview
-10. gemini-3.1-pro-preview-customtools
-11. gemini-3.1-flash-lite-preview
-12. gemini-3-pro-image-preview
-13. nano-banana-pro-preview
-14. gemini-3.1-flash-image-preview
+ 7. gemini-3-flash-preview
+ 8. gemini-3.1-pro-preview
+ 9. gemini-3.1-pro-preview-customtools
+10. gemini-3.1-flash-lite-preview
+11. gemini-3-pro-image-preview
+12. nano-banana-pro-preview
+13. gemini-3.1-flash-image-preview
+14. gemini-omni-flash-preview
 15. lyria-3-clip-preview
 16. lyria-3-pro-preview
 17. gemini-3.1-flash-tts-preview
-18. gemini-robotics-er-1.5-preview
-19. gemini-robotics-er-1.6-preview
-20. gemini-2.5-computer-use-preview-10-2025
-21. antigravity-preview-05-2026
-22. deep-research-max-preview-04-2026
-23. deep-research-preview-04-2026
-24. deep-research-pro-preview-12-2025
-25. gemini-embedding-2-preview
-26. veo-2.0-generate-001
-27. veo-3.1-generate-preview
-28. veo-3.1-fast-generate-preview
-29. veo-3.1-lite-generate-preview
-30. gemini-2.5-flash-native-audio-latest
-31. gemini-2.5-flash-native-audio-preview-09-2025
-32. gemini-2.5-flash-native-audio-preview-12-2025
-33. gemini-3.1-flash-live-preview
+18. gemini-robotics-er-2-preview
+19. gemini-2.5-computer-use-preview-10-2025
+20. antigravity-preview-05-2026
+21. antigravity-preview-09-2026
+22. antigravity-preview-latest
+23. deep-research-max-preview-04-2026
+24. deep-research-preview-04-2026
+25. deep-research-pro-preview-12-2025
+26. gemini-embedding-2-preview
+27. gemini-2.5-flash-native-audio-latest
+28. gemini-2.5-flash-native-audio-preview-09-2025
+29. gemini-2.5-flash-native-audio-preview-12-2025
+30. gemini-3.1-flash-live-preview
+31. gemini-robotics-er-2-streaming-preview
+32. gemini-3.5-live-translate-preview
+33. lyria-realtime-exp
 
 === INCLUDED MODELS ===
  1. gemini-2.5-flash
  2. gemini-2.5-pro
- 3. gemini-2.0-flash
- 4. gemini-2.0-flash-001
- 5. gemini-2.0-flash-lite-001
- 6. gemini-2.0-flash-lite
- 7. gemma-4-26b-a4b-it
- 8. gemma-4-31b-it
- 9. gemini-2.5-flash-lite
-10. gemini-3.1-flash-lite
+ 3. gemma-4-26b-a4b-it
+ 4. gemma-4-31b-it
+ 5. gemini-2.5-flash-lite
+ 6. gemini-3.1-flash-lite
+ 7. gemini-3-pro-image
+ 8. gemini-3.1-flash-image
+ 9. gemini-3.1-flash-lite-image
+10. gemini-nano-banana-2.1
 11. gemini-3.5-flash
-12. gemini-embedding-001
-13. gemini-embedding-2
-14. aqa
-15. imagen-4.0-generate-001
-16. imagen-4.0-ultra-generate-001
-17. imagen-4.0-fast-generate-001
-18. veo-3.0-generate-001
-19. veo-3.0-fast-generate-001
+12. gemini-3.5-flash-lite
+13. gemini-omni-1.1-flash
+14. gemini-omni-1.2-flash
+15. gemini-3.5-transcribe
+16. gemini-3.6-flash
+17. gemini-3.7-flash
+18. gemini-3.8-flash
+19. gemini-4-argon
+20. lyria-3.5
+21. gemini-3.8-flash-tts
+22. gemini-3.8-flash-lite-tts
+23. gemini-embedding-001
+24. gemini-embedding-2
+25. aqa
+26. gemini-3.5-transcribe-live
+27. gemini-3.8-live
+28. gemini-3.8-live-extended-thinking
 
 === EXCLUSION BREAKDOWN ===
-28 models: Experimental/Preview model - production-ready models only
- 1 models: Model requires billing/payment - free models only
+29 models: Experimental/Preview model - production-ready models only
  1 models: Preview model - gemini-2.5-flash-native-audio-preview-09-2025 (https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-live). Note: preview tag not mentioned in API response.
  1 models: Preview model - gemini-flash-latest is a preview pointer per Sep 25 2025 Google update (https://developers.googleblog.com/en/continuing-to-bring-you-our-latest-models-with-an-improved-gemini-2-5-flash-and-flash-lite-release/). Note: preview tag not mentioned in API response.
  1 models: Preview model - gemini-flash-lite-latest is a preview pointer per Sep 25 2025 Google update (https://developers.googleblog.com/en/continuing-to-bring-you-our-latest-models-with-an-improved-gemini-2-5-flash-and-flash-lite-release/). Note: preview tag not mentioned in API response.

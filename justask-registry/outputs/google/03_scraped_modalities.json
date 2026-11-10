@@ -1,46 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-05-20 09:27:31 IST",
-    "total_models": 12,
+    "generated": "2026-11-10 12:17:29 IST",
+    "total_models": 3,
     "scraping_source": "Google Documentation Web Scraper"
   },
   "modalities": {
-    "imagen-4-ultra": {
-      "input_modalities": "Text",
-      "output_modalities": "Image"
-    },
-    "imagen-4-fast": {
-      "input_modalities": "Text",
-      "output_modalities": "Image"
-    },
-    "imagen-3": {
-      "input_modalities": "Text",
-      "output_modalities": "Image"
-    },
-    "veo-3.1-generate-preview": {
-      "input_modalities": "Text, Image",
-      "output_modalities": "Video, Audio"
-    },
-    "veo-3.1-fast-generate-preview": {
-      "input_modalities": "Text, Image",
-      "output_modalities": "Video, Audio"
-    },
-    "veo-3.1-lite-generate-preview": {
-      "input_modalities": "Text, Image",
-      "output_modalities": "Video, Audio"
-    },
-    "veo-3.0-generate-001": {
-      "input_modalities": "Text, Image",
-      "output_modalities": "Video, Audio"
-    },
-    "veo-3.0-fast-generate-001": {
-      "input_modalities": "Text, Image",
-      "output_modalities": "Video, Audio"
-    },
-    "veo-2.0-generate-001": {
-      "input_modalities": "Text, Image",
-      "output_modalities": "Video"
-    },
     "gemma-3": {
       "input_modalities": "text, image",
       "output_modalities": "text"
