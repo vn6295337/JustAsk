@@ -1,5 +1,5 @@
 GROQ FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-11-10 12:18:44 IST
+Generated: 2026-11-10 19:35:43 IST
 ================================================================================
 
 SUMMARY STATISTICS
