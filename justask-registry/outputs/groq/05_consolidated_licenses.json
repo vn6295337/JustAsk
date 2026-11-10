@@ -1,54 +1,37 @@
 {
   "metadata": {
-    "generated_at": "2026-05-20T03:58:44.227800+00:00",
+    "generated_at": "2026-11-10T05:40:02.837639+00:00",
     "consolidation_processor": "step_05_consolidate_licenses.py",
     "source_files": [
       "03_meta_licenses.json",
       "04_opensource_licenses.json"
     ],
-    "total_models": 6,
+    "total_models": 4,
     "description": "Consolidated license information from all Groq model sources",
     "statistics": {
       "sources": {
-        "meta_models": 2,
+        "meta_models": 0,
         "hf_scraped_models": 4,
-        "total_consolidated": 6
+        "total_consolidated": 4
       },
       "providers": {
-        "Groq": 6
+        "Groq": 4
       },
       "licenses": {
-        "LLAMA-3.1": 1,
-        "LLAMA-3.3": 1,
         "APACHE-2.0": 3,
         "MIT": 1
       },
       "categories": {
-        "meta": 2,
         "opensource": 4
       }
     }
   },
   "license_urls": {
-    "LLAMA-3.1": "https://www.llama.com/llama3_1/license/",
-    "LLAMA-3.3": "https://www.llama.com/llama3_3/license/",
     "APACHE-2.0": "https://www.apache.org/licenses/LICENSE-2.0",
     "MIT": "https://opensource.org/licenses/MIT"
   },
   "provider_license_mappings": {
     "Groq": {
-      "llama-3.1-8b-instant": {
-        "license_info_text": "",
-        "license_info_url": "",
-        "license_name": "LLAMA-3.1",
-        "license_url": "https://www.llama.com/llama3_1/license/"
-      },
-      "llama-3.3-70b-versatile": {
-        "license_info_text": "",
-        "license_info_url": "",
-        "license_name": "LLAMA-3.3",
-        "license_url": "https://www.llama.com/llama3_3/license/"
-      },
       "gpt-oss-120b": {
         "license_info_text": "info",
         "license_info_url": "https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE",

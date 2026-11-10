@@ -1,21 +1,12 @@
 {
   "metadata": {
-    "extraction_timestamp": "2026-05-20T03:58:37.146914",
+    "extraction_timestamp": "2026-11-10T05:39:54.611139",
     "source_base_url": "https://console.groq.com/docs/model/",
-    "total_models": 6
+    "total_models": 5
   },
   "modalities": {
-    "llama-3.1-8b-instant": {
-      "model_id": "llama-3.1-8b-instant",
-      "input_modalities": [
-        "Text"
-      ],
-      "output_modalities": [
-        "Text"
-      ]
-    },
-    "llama-3.3-70b-versatile": {
-      "model_id": "llama-3.3-70b-versatile",
+    "Enterprise": {
+      "model_id": "Enterprise",
       "input_modalities": [
         "Text"
       ],

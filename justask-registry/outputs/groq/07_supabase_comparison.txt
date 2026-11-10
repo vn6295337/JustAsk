@@ -1,5 +1,5 @@
 GROQ FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-05-20 09:28:46 IST
+Generated: 2026-11-10 11:10:05 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -7,106 +7,141 @@ SUMMARY STATISTICS
 
 Pipeline Models: 6
 Supabase Models: 6
-Models in Both Systems: 6
+Models in Both Systems: 4
 Models with Field Differences: 0
-Models Only in Pipeline: 0
-Models Only in Supabase: 0
+Models Only in Pipeline: 1
+Models Only in Supabase: 2
 
 FIELD-BY-FIELD COMPARISON
 --------------------------------------------------------------------------------
 
 Field: inference_provider
-  Exact Matches: 6 (100.0%)
+  Exact Matches: 4 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: model_provider
-  Exact Matches: 6 (100.0%)
+  Exact Matches: 4 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: human_readable_name
-  Exact Matches: 6 (100.0%)
+  Exact Matches: 4 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: model_provider_country
-  Exact Matches: 6 (100.0%)
+  Exact Matches: 4 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: official_url
-  Exact Matches: 6 (100.0%)
+  Exact Matches: 4 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: input_modalities
-  Exact Matches: 6 (100.0%)
+  Exact Matches: 4 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: output_modalities
-  Exact Matches: 6 (100.0%)
+  Exact Matches: 4 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: license_info_text
-  Exact Matches: 6 (100.0%)
+  Exact Matches: 4 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: license_info_url
-  Exact Matches: 6 (100.0%)
+  Exact Matches: 4 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: license_name
-  Exact Matches: 6 (100.0%)
+  Exact Matches: 4 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: license_url
-  Exact Matches: 6 (100.0%)
+  Exact Matches: 4 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: rate_limits
-  Exact Matches: 6 (100.0%)
+  Exact Matches: 4 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: provider_api_access
-  Exact Matches: 6 (100.0%)
+  Exact Matches: 4 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: context_window
-  Exact Matches: 6 (100.0%)
+  Exact Matches: 4 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
 Field: max_completion_tokens
-  Exact Matches: 6 (100.0%)
+  Exact Matches: 4 (100.0%)
   Differences: 0
   Pipeline Missing: 0
   Supabase Missing: 0
 
+MODELS ONLY IN PIPELINE
+--------------------------------------------------------------------------------
+
+Count: 1
+     Models: Enterprise
+
+MODELS ONLY IN SUPABASE
+--------------------------------------------------------------------------------
+
+Count: 2
+     Models: Llama 3.1 8b, Llama 3.3 70b Versatile
+
 ================================================================================
 DETAILED COMPARISON BY MODEL
+================================================================================
+
+MODEL: Enterprise
+--------------------------------------------------------------------------------
+Field Name                | Pipeline Value            | Supabase Value           
+--------------------------------------------------------------------------------
+inference_provider        | Groq                      |                          
+model_provider            | Groq                      |                          
+human_readable_name       | Enterprise                |                          
+model_provider_country    | United States             |                          
+official_url              | https://groq.com/         |                          
+input_modalities          | Text                      |                          
+output_modalities         | Text                      |                          
+license_info_text         |                           |                          
+license_info_url          |                           |                          
+license_name              |                           |                          
+license_url               |                           |                          
+rate_limits               | Contact
+Sales             |                          
+provider_api_access       | https://console.groq.co.. |                          
+context_window            |                           |                          
+max_completion_tokens     |                           |                          
+
 ================================================================================
 
 MODEL: Gpt Oss 120b
@@ -169,25 +204,22 @@ MODEL: Llama 3.1 8b
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | Groq                      | Groq                     
-model_provider            | Groq                      | Groq                     
-human_readable_name       | Llama 3.1 8b              | Llama 3.1 8b             
-model_provider_country    | United States             | United States            
-official_url              | https://groq.com/         | https://groq.com/        
-input_modalities          | Text                      | Text                     
-output_modalities         | Text                      | Text                     
+inference_provider        |                           | Groq                     
+model_provider            |                           | Groq                     
+human_readable_name       |                           | Llama 3.1 8b             
+model_provider_country    |                           | United States            
+official_url              |                           | https://groq.com/        
+input_modalities          |                           | Text                     
+output_modalities         |                           | Text                     
 license_info_text         |                           |                          
 license_info_url          |                           |                          
-license_name              | LLAMA-3.1                 | LLAMA-3.1                
-license_url               | https://www.llama.com/l.. | https://www.llama.com/l..
-rate_limits               | 250K TPM
-TPM
-1K RPM
-RPM   | 250K TPM
+license_name              |                           | LLAMA-3.1                
+license_url               |                           | https://www.llama.com/l..
+rate_limits               |                           | 250K TPM
 TPM
 1K RPM
 RPM  
-provider_api_access       | https://console.groq.co.. | https://console.groq.co..
+provider_api_access       |                           | https://console.groq.co..
 context_window            |                           |                          
 max_completion_tokens     |                           |                          
 
@@ -197,25 +229,22 @@ MODEL: Llama 3.3 70b Versatile
 --------------------------------------------------------------------------------
 Field Name                | Pipeline Value            | Supabase Value           
 --------------------------------------------------------------------------------
-inference_provider        | Groq                      | Groq                     
-model_provider            | Groq                      | Groq                     
-human_readable_name       | Llama 3.3 70b Versatile   | Llama 3.3 70b Versatile  
-model_provider_country    | United States             | United States            
-official_url              | https://groq.com/         | https://groq.com/        
-input_modalities          | Text                      | Text                     
-output_modalities         | Text                      | Text                     
+inference_provider        |                           | Groq                     
+model_provider            |                           | Groq                     
+human_readable_name       |                           | Llama 3.3 70b Versatile  
+model_provider_country    |                           | United States            
+official_url              |                           | https://groq.com/        
+input_modalities          |                           | Text                     
+output_modalities         |                           | Text                     
 license_info_text         |                           |                          
 license_info_url          |                           |                          
-license_name              | LLAMA-3.3                 | LLAMA-3.3                
-license_url               | https://www.llama.com/l.. | https://www.llama.com/l..
-rate_limits               | 300K TPM
-TPM
-1K RPM
-RPM   | 300K TPM
+license_name              |                           | LLAMA-3.3                
+license_url               |                           | https://www.llama.com/l..
+rate_limits               |                           | 300K TPM
 TPM
 1K RPM
 RPM  
-provider_api_access       | https://console.groq.co.. | https://console.groq.co..
+provider_api_access       |                           | https://console.groq.co..
 context_window            |                           |                          
 max_completion_tokens     |                           |                          
 

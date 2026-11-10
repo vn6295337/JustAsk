@@ -1,7 +1,7 @@
 GROQ DATA NORMALIZATION REPORT
 ================================================================================
 
-Generated: 2026-05-20T03:58:44.547240
+Generated: 2026-11-10T05:40:03.087461
 Total Models: 6
 Pipeline Stage: 06_normalize_data
 
@@ -13,14 +13,14 @@ SOURCE FILES:
 
 NORMALIZED MODEL DATA:
 --------------------------------------------------------------------------------
-Model 1: Llama 3.1 8b
+Model 1: Enterprise
   Provider: Groq
-  License: LLAMA-3.1
+  License: 
   Modalities: Text → Text
 
-Model 2: Llama 3.3 70b Versatile
+Model 2: Enterprise
   Provider: Groq
-  License: LLAMA-3.3
+  License: 
   Modalities: Text → Text
 
 Model 3: Gpt Oss 120b
