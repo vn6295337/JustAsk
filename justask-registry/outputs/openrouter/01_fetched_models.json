@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-10 20:29:45 IST",
+    "generated_at": "2026-11-10 20:44:54 IST",
     "total_models": 429,
     "pipeline_stage": "A_fetch_api_models"
   },
@@ -1627,9 +1627,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.00000015",
-        "completion": "0.0000006",
-        "input_cache_read": "0.000000015",
+        "prompt": "0.000000075",
+        "completion": "0.0000003",
+        "input_cache_read": "0.0000000075",
         "overrides": [
           {
             "utc_start": 1500,
@@ -18985,9 +18985,9 @@
         "instruct_type": null
       },
       "pricing": {
-        "prompt": "0.0000000062",
+        "prompt": "0.000000007",
         "completion": "0.0000068",
-        "input_cache_read": "0.0000000052"
+        "input_cache_read": "0.000000006"
       },
       "top_provider": {
         "context_length": 1048576,
