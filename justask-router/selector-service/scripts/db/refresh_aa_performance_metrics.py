@@ -2,8 +2,8 @@
 """
 Refresh AA Performance Metrics Table (ims.20_aa_performance_metrics)
 
-Fetches latest model performance data from Artificial Analysis API and
-updates the ims.20_aa_performance_metrics table in Supabase.
+Fetches latest model performance data from the Artificial Analysis API
+(Free endpoint: /api/v2/language/models/free) and updates the ims.20_aa_performance_metrics table in Supabase.
 
 This script runs daily via GitHub Actions at 00:00 UTC.
 """
@@ -20,6 +20,11 @@ AA_API_BASE_URL = "https://artificialanalysis.ai/api/v2"
 AA_API_KEY = os.getenv("ARTIFICIALANALYSIS_API_KEY")
 PIPELINE_SUPABASE_URL = os.getenv("PIPELINE_SUPABASE_URL")
 
+# Sanity limits: refuse to replace the table with a truncated/empty API result
+MIN_RECORDS = int(os.getenv("AA_MIN_RECORDS", "50"))
+MIN_RATIO_OF_EXISTING = float(os.getenv("AA_MIN_RATIO_OF_EXISTING", "0.5"))
+MAX_PAGES = 20  # safety cap for pagination
+
 def log(message: str):
     """Print timestamped log message"""
     timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
@@ -27,44 +32,74 @@ def log(message: str):
 
 def fetch_aa_performance_data() -> List[Dict]:
     """
-    Fetch performance data from Artificial Analysis API
+    Fetch language model data from the Artificial Analysis Free endpoint.
+
+    The legacy /api/v2/data/llms/models endpoint was retired on 2026-11-04 (HTTP 410).
+    Replacement: GET /api/v2/language/models/free (paginated, x-api-key header).
+    Free-tier quota: 100 requests per 24-hour window; one refresh uses ~2-3 pages.
 
     Returns:
-        List of model performance dictionaries
+        List of model dictionaries (Free-shape)
     """
     log("Fetching data from Artificial Analysis API...")
 
     if not AA_API_KEY or AA_API_KEY == "your-api-key-here":
         raise ValueError("ARTIFICIALANALYSIS_API_KEY not configured")
 
-    url = f"{AA_API_BASE_URL}/data/llms/models"
+    url = f"{AA_API_BASE_URL}/language/models/free"
     headers = {
         "x-api-key": AA_API_KEY,
         "Accept": "application/json"
     }
 
-    response = requests.get(url, headers=headers, timeout=30)
+    models: List[Dict] = []
+    page = 1
+    while True:
+        if page > MAX_PAGES:
+            raise Exception(f"Pagination did not finish within {MAX_PAGES} pages; aborting")
 
-    if not response.ok:
-        raise Exception(f"API request failed: {response.status_code} - {response.text}")
+        response = requests.get(url, headers=headers, params={"page": page}, timeout=30)
+        if not response.ok:
+            raise Exception(f"API request failed (page {page}): {response.status_code} - {response.text[:500]}")
 
-    # Check rate limits
+        data = response.json()
+        batch = data.get("data")
+        if not isinstance(batch, list):
+            raise Exception(f"Invalid API response format (page {page})")
+
+        if page == 1:
+            log(f"Tier: {data.get('tier')} | Intelligence Index version: {data.get('intelligence_index_version')}")
+        models.extend(batch)
+
+        pagination = data.get("pagination") or {}
+        log(f"Page {page}/{pagination.get('total_pages', '?')}: {len(batch)} models")
+        if not pagination.get("has_more"):
+            break
+        page += 1
+
     rate_limit_remaining = response.headers.get("X-RateLimit-Remaining")
     if rate_limit_remaining:
-        log(f"Rate limit: {rate_limit_remaining} requests remaining")
+        log(f"Rate limit: {rate_limit_remaining} requests remaining in the current window")
 
-    data = response.json()
+    log(f"Fetched {len(models)} models from API")
+    return models
 
-    if not data.get("data") or not isinstance(data["data"], list):
-        raise Exception("Invalid API response format")
-
-    log(f"Fetched {len(data['data'])} models from API")
-
-    return data["data"]
+def blended_price_3_to_1(pricing: Dict) -> Optional[float]:
+    """3:1 input:output blend (the legacy API's price_1m_blended_3_to_1; not in the Free shape)."""
+    inp = pricing.get("price_1m_input_tokens")
+    out = pricing.get("price_1m_output_tokens")
+    if inp is None or out is None:
+        return None
+    return (3 * inp + out) / 4
 
 def transform_to_db_format(api_data: List[Dict]) -> List[Dict]:
     """
-    Transform API data to database schema format
+    Transform Free-shape API data to the ims.20_aa_performance_metrics schema.
+
+    Free-shape notes:
+    - Performance fields are nested under "performance".
+    - coding_index is always null (AA no longer publishes it); math_index is not provided.
+    - Per-benchmark scores (mmlu_pro, gpqa, ...) and creator slug are Pro-only: stored as NULL.
 
     Args:
         api_data: Raw data from Artificial Analysis API
@@ -77,15 +112,16 @@ def transform_to_db_format(api_data: List[Dict]) -> List[Dict]:
     records = []
 
     for model in api_data:
-        evaluations = model.get("evaluations", {})
-        pricing = model.get("pricing", {})
-        creator = model.get("model_creator", {})
+        evaluations = model.get("evaluations") or {}
+        pricing = model.get("pricing") or {}
+        creator = model.get("model_creator") or {}
+        performance = model.get("performance") or {}
 
         # Extract intelligence index (primary metric)
         intelligence_index = evaluations.get("artificial_analysis_intelligence_index")
 
-        # Skip models without intelligence index
-        if intelligence_index is None:
+        # Skip models without intelligence index or slug (slug is the join key)
+        if intelligence_index is None or not model.get("slug"):
             continue
 
         record = {
@@ -93,42 +129,42 @@ def transform_to_db_format(api_data: List[Dict]) -> List[Dict]:
             "aa_slug": model.get("slug"),
             "name": model.get("name"),
             "creator_name": creator.get("name"),
-            "creator_slug": creator.get("slug"),
+            "creator_slug": None,  # Pro-only
             "release_date": model.get("release_date"),
 
             # Performance metrics
             "intelligence_index": intelligence_index,
             "coding_index": evaluations.get("artificial_analysis_coding_index"),
-            "math_index": evaluations.get("artificial_analysis_math_index"),
+            "math_index": None,  # not provided by the Free endpoint
 
-            # Benchmarks
-            "mmlu_pro": evaluations.get("mmlu_pro"),
-            "gpqa": evaluations.get("gpqa"),
-            "hle": evaluations.get("hle"),
-            "livecodebench": evaluations.get("livecodebench"),
-            "scicode": evaluations.get("scicode"),
-            "math_500": evaluations.get("math_500"),
-            "aime": evaluations.get("aime"),
-            "aime_25": evaluations.get("aime_25"),
-            "ifbench": evaluations.get("ifbench"),
-            "lcr": evaluations.get("lcr"),
-            "terminalbench_hard": evaluations.get("terminalbench_hard"),
-            "tau2": evaluations.get("tau2"),
+            # Benchmarks (Pro-only)
+            "mmlu_pro": None,
+            "gpqa": None,
+            "hle": None,
+            "livecodebench": None,
+            "scicode": None,
+            "math_500": None,
+            "aime": None,
+            "aime_25": None,
+            "ifbench": None,
+            "lcr": None,
+            "terminalbench_hard": None,
+            "tau2": None,
 
             # Pricing
             "price_1m_input_tokens": pricing.get("price_1m_input_tokens"),
             "price_1m_output_tokens": pricing.get("price_1m_output_tokens"),
-            "price_1m_blended": pricing.get("price_1m_blended_3_to_1"),
+            "price_1m_blended": blended_price_3_to_1(pricing),
 
             # Latency
-            "median_output_tokens_per_second": model.get("median_output_tokens_per_second"),
-            "median_time_to_first_token_seconds": model.get("median_time_to_first_token_seconds"),
-            "median_time_to_first_answer_token": model.get("median_time_to_first_answer_token"),
+            "median_output_tokens_per_second": performance.get("median_output_tokens_per_second"),
+            "median_time_to_first_token_seconds": performance.get("median_time_to_first_token_seconds"),
+            "median_time_to_first_answer_token": performance.get("median_time_to_first_answer_token_seconds"),
         }
 
         records.append(record)
 
-    log(f"Transformed {len(records)} records (filtered out {len(api_data) - len(records)} without intelligence index)")
+    log(f"Transformed {len(records)} records (filtered out {len(api_data) - len(records)} without intelligence index or slug)")
 
     return records
 
@@ -155,23 +191,47 @@ def refresh_database_table(records: List[Dict]):
     cur = conn.cursor()
 
     try:
-        # Step 1: Create backup table
-        log("Creating backup table...")
-        cur.execute("""
-            DROP TABLE IF EXISTS ims."20_aa_performance_metrics_backup";
+        # Sanity check against the current table BEFORE touching anything
+        cur.execute('SELECT COUNT(*) FROM ims."20_aa_performance_metrics";')
+        existing_count = cur.fetchone()[0]
+        log(f"Existing records: {existing_count}")
 
+        if existing_count > 0 and len(records) < existing_count * MIN_RATIO_OF_EXISTING:
+            raise ValueError(
+                f"Refusing to replace {existing_count} existing records with only "
+                f"{len(records)} (< {MIN_RATIO_OF_EXISTING:.0%}); aborting without changes"
+            )
+
+        # Diagnostic only: do the mapped slugs (ims.10) still exist in the new data?
+        # The API migration could have changed slugs; a low match rate means the
+        # mapping needs a refresh before the next ranking run.
+        cur.execute("SAVEPOINT slug_check;")
+        try:
+            cur.execute('SELECT DISTINCT aa_slug FROM ims."10_model_aa_mapping" WHERE aa_slug IS NOT NULL;')
+            mapped = {row[0] for row in cur.fetchall()}
+            new_slugs = {r["aa_slug"] for r in records}
+            if mapped:
+                matched = len(mapped & new_slugs)
+                log(f"Mapped slugs found in new data: {matched}/{len(mapped)}")
+                if matched < len(mapped):
+                    log(f"⚠️  Missing mapped slugs (sample): {sorted(mapped - new_slugs)[:10]}")
+            cur.execute("RELEASE SAVEPOINT slug_check;")
+        except Exception as e:
+            cur.execute("ROLLBACK TO SAVEPOINT slug_check;")
+            log(f"Slug check skipped: {e}")
+
+        # Step 1: Create backup table (inside the transaction; a rollback undoes everything)
+        log("Creating backup table...")
+        cur.execute('DROP TABLE IF EXISTS ims."20_aa_performance_metrics_backup";')
+        cur.execute('''
             CREATE TABLE ims."20_aa_performance_metrics_backup" AS
             SELECT * FROM ims."20_aa_performance_metrics";
-        """)
-
-        backup_count = cur.rowcount
-        log(f"Backed up {backup_count} existing records")
+        ''')
 
         # Step 2: Delete all existing records
         log("Deleting existing records...")
         cur.execute('DELETE FROM ims."20_aa_performance_metrics";')
-        deleted_count = cur.rowcount
-        log(f"Deleted {deleted_count} records")
+        log(f"Deleted {cur.rowcount} records")
 
         # Step 3: Insert new records
         log(f"Inserting {len(records)} new records...")
@@ -198,7 +258,12 @@ def refresh_database_table(records: List[Dict]):
         """
 
         cur.executemany(insert_sql, records)
-        inserted_count = cur.rowcount
+
+        # executemany().rowcount is unreliable; verify with a count
+        cur.execute('SELECT COUNT(*) FROM ims."20_aa_performance_metrics";')
+        inserted_count = cur.fetchone()[0]
+        if inserted_count != len(records):
+            raise RuntimeError(f"Insert verification failed: expected {len(records)}, found {inserted_count}")
         log(f"Inserted {inserted_count} records")
 
         # Step 4: Commit and drop backup
@@ -213,21 +278,10 @@ def refresh_database_table(records: List[Dict]):
 
     except Exception as e:
         log(f"❌ Error during refresh: {e}")
-        log("Rolling back transaction...")
+        log("Rolling back transaction (existing data is left unchanged)...")
+        # The backup/delete/insert all ran in one transaction, so rollback restores the
+        # original table. No manual restore from the _backup table (it could be stale).
         conn.rollback()
-
-        # Restore from backup if available
-        try:
-            log("Attempting to restore from backup...")
-            cur.execute("""
-                DELETE FROM ims."20_aa_performance_metrics";
-                INSERT INTO ims."20_aa_performance_metrics"
-                SELECT * FROM ims."20_aa_performance_metrics_backup";
-            """)
-            conn.commit()
-            log("Restored from backup successfully")
-        except Exception as restore_error:
-            log(f"Failed to restore from backup: {restore_error}")
 
         raise
 
@@ -249,9 +303,11 @@ def main():
         # Step 2: Transform to database format
         db_records = transform_to_db_format(api_data)
 
-        if not db_records:
-            log("⚠️  No records to insert (all models missing intelligence index)")
-            return
+        if len(db_records) < MIN_RECORDS:
+            raise ValueError(
+                f"Only {len(db_records)} usable records (minimum {MIN_RECORDS}); "
+                "aborting without modifying the table"
+            )
 
         # Step 3: Refresh database table
         refresh_database_table(db_records)
