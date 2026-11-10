@@ -15,6 +15,7 @@ Record of changes applied to the Supabase project `askme` (`atilxlecbaqcksnrgzav
 | `applied/2026-11-10_03_lock-analytics-functions.sql` | Only the nightly job can run the analytics functions; their `search_path` is pinned |
 | `applied/2026-11-10_04_justask-schema.sql` | All 18 tables move to schema `justask` with numbered names; old names stay as compatibility views |
 | `applied/2026-11-10_05_analytics-functions-new-names.sql` | Analytics functions use the new table names |
+| `applied/2026-11-10_06_drop-asa-view.sql` | Instant SWOT Agent cache left off; `asa.analysis_cache` view and `asa` schema dropped |
 
 ## Not SQL
 
@@ -25,4 +26,4 @@ Record of changes applied to the Supabase project `askme` (`atilxlecbaqcksnrgzav
 
 ## Still to do
 
-- Drop the compatibility views and the empty `ims` and `asa` schemas once all code uses the new names, then remove `ims` from the exposed schemas.
+- Drop the compatibility views in `public` and `ims` and the empty `ims` schema once the router (Render) runs the new code, then remove `ims` from the exposed schemas.
