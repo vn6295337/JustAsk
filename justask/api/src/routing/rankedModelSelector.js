@@ -6,21 +6,36 @@
 
 const SELECTOR_SERVICE_URL = process.env.SELECTOR_SERVICE_URL || 'http://localhost:3001';
 
+const SELECTOR_TIMEOUT_MS = 3000;
+const SELECTOR_CACHE_TTL_MS = 60000;
+let selectorCache = { models: null, at: 0 };
+
 /**
  * Fetch ranked models from justask-router
  * @param {number} limit - Number of top models to fetch (default: 10)
  * @returns {Promise<Array>} Ranked list of models
  */
 export async function fetchRankedModels(limit = 10) {
+  const now = Date.now();
+  if (selectorCache.models && now - selectorCache.at < SELECTOR_CACHE_TTL_MS) {
+    return selectorCache.models;
+  }
+
   try {
-    const response = await fetch(`${SELECTOR_SERVICE_URL}/best-models?limit=${limit}`);
+    const response = await fetch(`${SELECTOR_SERVICE_URL}/best-models?limit=${limit}`, {
+      signal: AbortSignal.timeout(SELECTOR_TIMEOUT_MS),
+    });
 
     if (!response.ok) {
       throw new Error(`Selector service returned ${response.status}: ${response.statusText}`);
     }
 
     const data = await response.json();
-    return data.models || [];
+    const models = Array.isArray(data.models) ? data.models : [];
+    if (models.length > 0) {
+      selectorCache = { models, at: Date.now() };
+    }
+    return models;
   } catch (error) {
     console.error('[RankedModelSelector] Error fetching ranked models:', error.message);
     return [];
@@ -53,6 +68,11 @@ export async function getModelFallbackChain() {
     selectionScore: m.selectionScore,
     intelligenceIndex: m.intelligenceIndex
   }));
+}
+
+/** Test helper: clear the selector cache */
+export function _resetSelectorCache() {
+  selectorCache = { models: null, at: 0 };
 }
 
 export default {

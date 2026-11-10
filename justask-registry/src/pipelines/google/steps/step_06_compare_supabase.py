@@ -63,7 +63,6 @@ def get_db_connection():
     print(f"[DEBUG] PIPELINE_SUPABASE_URL environment variable: {'SET' if pipeline_url else 'NOT SET'}")
     if pipeline_url:
         print(f"[DEBUG] URL length: {len(pipeline_url)} characters")
-        print(f"[DEBUG] URL starts with: {pipeline_url[:20]}...")
 
     if not PSYCOPG2_AVAILABLE:
         print("psycopg2 not available - running in pipeline-only mode")
@@ -93,6 +92,11 @@ def load_pipeline_data() -> List[Dict[str, Any]]:
         print(f"Failed to load pipeline data: {e}")
         return []
 
+def _norm(value) -> str:
+    """Normalize a value for comparison: NULL/None -> '', else stripped string."""
+    return '' if value is None else str(value).strip()
+
+
 def load_supabase_data(conn) -> List[Dict[str, Any]]:
     """Load Google data from Supabase working_version table"""
     try:
@@ -119,7 +123,7 @@ def load_supabase_data(conn) -> List[Dict[str, Any]]:
         return data
     except Exception as e:
         print(f"Failed to load Supabase data: {e}")
-        return []
+        raise  # do not report every model as new on a failed query
 
 def create_comparison_report(pipeline_data: List[Dict[str, Any]], supabase_data: List[Dict[str, Any]]):
     """Generate field comparison report"""
@@ -163,10 +167,9 @@ def create_comparison_report(pipeline_data: List[Dict[str, Any]], supabase_data:
             models_in_both.append(model_name)
             # Compare fields for models in both systems
             for field in fields_to_compare:
-                pipeline_value = str(pipeline_model.get(field, '')).strip()
+                pipeline_value = _norm(pipeline_model.get(field))
                 # Handle Supabase NULL values properly - convert None to empty string
-                supabase_raw = supabase_model.get(field, '')
-                supabase_value = '' if supabase_raw is None else str(supabase_raw).strip()
+                supabase_value = _norm(supabase_model.get(field))
 
                 if pipeline_value == supabase_value:
                     field_stats[field]['exact_matches'] += 1
@@ -197,10 +200,9 @@ def create_comparison_report(pipeline_data: List[Dict[str, Any]], supabase_data:
             supabase_model = supabase_lookup[model_name]
             has_differences = False
             for field in fields_to_compare:
-                pipeline_value = str(pipeline_model.get(field, '')).strip()
+                pipeline_value = _norm(pipeline_model.get(field))
                 # Handle Supabase NULL values properly
-                supabase_raw = supabase_model.get(field, '')
-                supabase_value = '' if supabase_raw is None else str(supabase_raw).strip()
+                supabase_value = _norm(supabase_model.get(field))
                 if pipeline_value != supabase_value:
                     has_differences = True
                     break
@@ -264,10 +266,9 @@ def create_comparison_report(pipeline_data: List[Dict[str, Any]], supabase_data:
                 supabase_model = supabase_lookup[model_name]
                 has_differences = False
                 for field in fields_to_compare:
-                    pipeline_value = str(pipeline_model.get(field, '')).strip()
+                    pipeline_value = _norm(pipeline_model.get(field))
                     # Handle Supabase NULL values properly
-                    supabase_raw = supabase_model.get(field, '')
-                    supabase_value = '' if supabase_raw is None else str(supabase_raw).strip()
+                    supabase_value = _norm(supabase_model.get(field))
                     if pipeline_value != supabase_value:
                         has_differences = True
                         break
@@ -296,8 +297,8 @@ def create_comparison_report(pipeline_data: List[Dict[str, Any]], supabase_data:
             f.write("-" * 130 + "\n")
 
             for field in fields_to_compare:
-                pipeline_value = str(pipeline_model.get(field, '')).strip()
-                supabase_value = str(supabase_model.get(field, '')).strip()
+                pipeline_value = _norm(pipeline_model.get(field))
+                supabase_value = _norm(supabase_model.get(field))
 
                 # Truncate long values for display
                 pipeline_display = pipeline_value[:48] + ".." if len(pipeline_value) > 50 else pipeline_value

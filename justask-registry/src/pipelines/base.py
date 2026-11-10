@@ -74,14 +74,21 @@ class BasePipelineRunner(ABC):
             steps = self.default_steps
 
         result = []
-        for part in steps.split(','):
-            part = part.strip()
-            if '-' in part:
-                start, end = part.split('-')
-                result.extend(range(int(start), int(end) + 1))
-            else:
-                result.append(int(part))
+        try:
+            for part in steps.split(','):
+                part = part.strip()
+                if '-' in part:
+                    start, end = (int(x) for x in part.split('-'))
+                    if start > end:
+                        raise ValueError(f"reversed range '{part}'")
+                    result.extend(range(start, end + 1))
+                else:
+                    result.append(int(part))
+        except ValueError as e:
+            raise ValueError(f"Invalid --steps '{steps}': {e}") from None
 
+        if not result:
+            raise ValueError(f"Invalid --steps '{steps}': no steps selected")
         return sorted(set(result))
 
     def run_step(self, step_num: int) -> Tuple[bool, str]:
@@ -144,7 +151,11 @@ class BasePipelineRunner(ABC):
         Returns:
             True if all steps succeeded
         """
-        step_list = self.parse_steps(steps)
+        try:
+            step_list = self.parse_steps(steps)
+        except ValueError as e:
+            print(f"❌ {e}")
+            return False
 
         print(f"\n{'#'*60}")
         print(f"# {self.pipeline_name.upper()} PIPELINE")
@@ -161,9 +172,9 @@ class BasePipelineRunner(ABC):
 
         # Clean output directory if requested and running from step 1
         if clean and 1 in step_list:
-            clean_output_directory()
+            clean_output_directory(self.pipeline_name)
         else:
-            ensure_output_directory()
+            ensure_output_directory(self.pipeline_name)
 
         # Execute steps
         results = []

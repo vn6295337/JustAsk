@@ -36,12 +36,12 @@ describe('RateLimitTracker', () => {
       expect(stats['test-model'].limits.rpm).toBe(30); // Groq default
     });
 
-    it('should not re-initialize already initialized model', () => {
+    it('should keep usage but refresh limits when re-initialized', () => {
       rateLimitTracker.initializeModel('test-model', { rpm: 30 }, 'groq');
       rateLimitTracker.initializeModel('test-model', { rpm: 100 }, 'groq');
 
       const stats = rateLimitTracker.getStats();
-      expect(stats['test-model'].limits.rpm).toBe(30); // Original value
+      expect(stats['test-model'].limits.rpm).toBe(100); // Refreshed limits
     });
   });
 

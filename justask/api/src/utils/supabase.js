@@ -1,8 +1,14 @@
 import { createClient } from '@supabase/supabase-js';
 import config from '../config.js';
 
-// Initialize Supabase client
-const supabase = createClient(config.supabase.url, config.supabase.key);
+// Lazily initialize Supabase client (createClient throws on undefined URL/key)
+let supabase = null;
+const getSupabase = () => {
+  if (!supabase) {
+    supabase = createClient(config.supabase.url, config.supabase.key);
+  }
+  return supabase;
+};
 
 /**
  * Retrieve API keys from Supabase Vault at runtime
@@ -22,7 +28,9 @@ export const getApiKey = async (provider) => {
         case 'groq':
           return process.env.GROQ_API_KEY || 'dev-groq-key';
         case 'openrouter':
-          return process.env.OPENROUTER_API_KEY_2 || 'dev-openrouter-key';
+          return process.env.OPENROUTER_API_KEY_2 ||
+            process.env.OPENROUTER_API_KEY ||
+            'dev-openrouter-key';
         default:
           throw new Error(`Unknown provider: ${provider}`);
       }
@@ -32,8 +40,8 @@ export const getApiKey = async (provider) => {
     let key;
 
     if (provider === 'openrouter') {
-      // OpenRouter uses secondary key
-      key = process.env.OPENROUTER_API_KEY_2;
+      // Prefer the secondary key; fall back to the documented OPENROUTER_API_KEY
+      key = process.env.OPENROUTER_API_KEY_2 || process.env.OPENROUTER_API_KEY;
     } else {
       key = process.env[`${provider.toUpperCase()}_API_KEY`];
     }
@@ -56,7 +64,7 @@ export const getApiKey = async (provider) => {
  */
 export const testSupabaseConnection = async () => {
   try {
-    const { data, error } = await supabase
+    const { data, error } = await getSupabase()
       .from('requests')
       .select('count(*)', { count: 'exact', head: true });
 

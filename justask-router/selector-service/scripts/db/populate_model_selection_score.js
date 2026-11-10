@@ -6,7 +6,11 @@
  *
  * Only includes models that exist in ims.10_model_aa_mapping (i.e., have AA metrics)
  *
- * Usage: node populate_model_selection_score.js
+ * Usage: node populate_model_selection_score.js [--no-prune]
+ * Requires SUPABASE_SERVICE_KEY. Run manually; do not add to CI.
+ * By default rows not in the new set are deleted (use --no-prune to keep them).
+ *
+ * Scoring mirrors the runtime (src/services/modelSelector.js, intelligenceIndex.js).
  */
 
 import { createClient } from '@supabase/supabase-js';
@@ -15,9 +19,17 @@ import dotenv from 'dotenv';
 // Load environment variables
 dotenv.config();
 
+// Writes require the service role key (anon is read-only). Manual, human-run script only.
+if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_KEY) {
+  console.error('SUPABASE_URL and SUPABASE_SERVICE_KEY must be set (see .env.example). Aborting.');
+  process.exit(1);
+}
+
+const PRUNE = !process.argv.includes('--no-prune');
+
 const supabase = createClient(
   process.env.SUPABASE_URL,
-  process.env.SUPABASE_KEY
+  process.env.SUPABASE_SERVICE_KEY
 );
 
 // Scoring constants (from src/config/constants.js)
@@ -89,21 +101,20 @@ function calculateGeographyScore(country) {
  * Calculate license score based on license name
  */
 function calculateLicenseScore(licenseName) {
-  if (!licenseName) return 0.8; // Default for unknown
+  // Mirrors runtime getLicenseScore: exact open-source match, gemini = proprietary, else custom
+  if (!licenseName) return 0.9;
 
   const normalized = licenseName.trim();
-  const isOpenSource = OPEN_SOURCE_LICENSES.some(lic =>
-    normalized.toLowerCase().includes(lic.toLowerCase())
-  );
-
-  return isOpenSource ? 1.0 : 0.8;
+  if (OPEN_SOURCE_LICENSES.includes(normalized)) return 1.0;
+  if (normalized.toLowerCase().includes('gemini')) return 0.8;
+  return 0.9;
 }
 
 /**
  * Calculate latency score based on provider
  */
 function calculateLatencyScore(provider) {
-  return LATENCY_SCORES[provider] || 0.5;
+  return LATENCY_SCORES[String(provider || '').toLowerCase()] || 0.5;
 }
 
 /**
@@ -115,27 +126,19 @@ function calculateHeadroom(limit, usage) {
 }
 
 /**
- * Calculate overall headroom (average of RPM and TPM)
+ * Calculate overall headroom (minimum across all four metrics, as at runtime)
  */
-function calculateOverallHeadroom(rpmHeadroom, tpmHeadroom) {
-  // Use RPM headroom if TPM is unlimited (1.0)
-  if (tpmHeadroom === 1.0 && rpmHeadroom < 1.0) {
-    return rpmHeadroom;
-  }
-  // Use TPM headroom if RPM is unlimited (1.0)
-  if (rpmHeadroom === 1.0 && tpmHeadroom < 1.0) {
-    return tpmHeadroom;
-  }
-  // Average both if both are limited
-  return (rpmHeadroom + tpmHeadroom) / 2;
+function calculateOverallHeadroom(...headrooms) {
+  return Math.min(...headrooms);
 }
 
 /**
  * Calculate final selection score
  */
 function calculateSelectionScore(intelligenceIndex, latencyScore, overallHeadroom, geographyScore, licenseScore) {
-  // Normalize intelligence index to 0-1 scale (assume max is 100)
-  const normalizedIntelligence = intelligenceIndex ? intelligenceIndex / 100 : 0;
+  // Normalize intelligence index to 0-1 scale (assume max is 100).
+  // Missing index uses the runtime's moderate fallback (0.6), not 0.
+  const normalizedIntelligence = intelligenceIndex != null ? intelligenceIndex / 100 : 0.6;
 
   return (
     normalizedIntelligence * SELECTION_WEIGHTS.intelligenceIndex +
@@ -267,7 +270,7 @@ async function populateModelSelectionScore() {
       const rateLimitData = rateLimitsMap[modelName];
 
       // Calculate scores
-      const intelligenceIndex = metricsData?.intelligence_index || null;
+      const intelligenceIndex = metricsData?.intelligence_index ?? null;
       const latencyScore = calculateLatencyScore(mapping.inference_provider);
       const geographyScore = calculateGeographyScore(workingData.model_provider_country);
       const licenseScore = calculateLicenseScore(workingData.license_name);
@@ -288,7 +291,7 @@ async function populateModelSelectionScore() {
       const tpmHeadroom = calculateHeadroom(tpmLimit, tpmUsage);
       const tpdHeadroom = calculateHeadroom(tpdLimit, tpdUsage);
 
-      const overallHeadroom = calculateOverallHeadroom(rpmHeadroom, tpmHeadroom);
+      const overallHeadroom = calculateOverallHeadroom(rpmHeadroom, rpdHeadroom, tpmHeadroom, tpdHeadroom);
 
       // Calculate final selection score
       const selectionScore = calculateSelectionScore(
@@ -379,6 +382,30 @@ async function populateModelSelectionScore() {
     }
 
     console.log(`✅ Successfully populated ${inserted?.length || uniqueRecords.length} records\n`);
+
+    // Remove stale rows (models no longer mapped)
+    if (PRUNE && uniqueRecords.length > 0) {
+      const keep = new Set(uniqueRecords.map(r => r.model_name));
+      const { data: existing, error: existingError } = await supabase
+        .schema('ims')
+        .from('40_model_selection_score')
+        .select('model_name');
+      if (existingError) {
+        throw new Error(`Failed to list existing rows: ${existingError.message}`);
+      }
+      const stale = (existing || []).map(r => r.model_name).filter(n => !keep.has(n));
+      for (let i = 0; i < stale.length; i += 100) {
+        const { error: delError } = await supabase
+          .schema('ims')
+          .from('40_model_selection_score')
+          .delete()
+          .in('model_name', stale.slice(i, i + 100));
+        if (delError) {
+          throw new Error(`Failed to delete stale rows: ${delError.message}`);
+        }
+      }
+      console.log(`🧹 Removed ${stale.length} stale rows\n`);
+    }
 
     // Step 7: Display top 5 models by selection score
     console.log('🏆 Top 5 models by selection score:');

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { getApiKey } from '../utils/supabase.js';
 import config from '../config.js';
+import { ProviderError, toProviderError } from '../utils/errors.js';
 
 /**
  * Call OpenRouter API (fallback provider)
@@ -8,16 +9,19 @@ import config from '../config.js';
  * @param {string} query - User query
  * @param {boolean} enableWebSearch - Enable web search for news queries
  * @param {string} queryType - Query classification type for model selection
+ * @param {string} modelName - Explicit model (overrides query-type selection)
  * @returns {Promise<{response: string, model: string, usage: object}>}
  */
-export const callOpenRouter = async (query, enableWebSearch = false, queryType = null) => {
+export const callOpenRouter = async (query, enableWebSearch = false, queryType = null, modelName = null) => {
   try {
     const apiKey = await getApiKey('openrouter');
 
     // Select model based on query type
     let model = config.models.openrouter;
 
-    if (queryType === 'financial_analysis') {
+    if (modelName) {
+      model = modelName;
+    } else if (queryType === 'financial_analysis') {
       // Use GPT-OSS 120B for financial analysis (web search + reasoning for market data)
       model = config.models.openaiGptOss120b;
     } else if (queryType === 'business_news') {
@@ -63,13 +67,14 @@ export const callOpenRouter = async (query, enableWebSearch = false, queryType =
     );
 
     // Extract response text
-    const responseText =
-      response.data.choices?.[0]?.message?.content ||
-      'No response from OpenRouter';
+    const responseText = (response.data.choices?.[0]?.message?.content || '').trim();
+    if (!responseText) {
+      throw new ProviderError('openrouter', 'Empty completion', 502);
+    }
 
     return {
       response: responseText,
-      model: config.models.openrouter,
+      model,
       provider: 'openrouter',
       usage: {
         promptTokens: response.data.usage?.prompt_tokens || 0,
@@ -80,14 +85,7 @@ export const callOpenRouter = async (query, enableWebSearch = false, queryType =
   } catch (error) {
     console.error('OpenRouter API error:', error.message);
 
-    // Extract status code if available
-    const status = error.response?.status || error.code || 500;
-
-    throw {
-      provider: 'openrouter',
-      error: error.message,
-      status,
-    };
+    throw toProviderError('openrouter', error);
   }
 };
 

@@ -196,3 +196,11 @@ Response
 ## License
 
 MIT
+
+## Security configuration
+
+- `API_AUTH_TOKEN` (optional): when set, `POST /api/query` and `POST /api/queue/sync` require `Authorization: Bearer <token>` (or `X-API-Key`). When unset, auth is disabled and the API behaves as before. `/api/health` is always open.
+- Per-IP rate limits (per minute): `RATE_LIMIT_QUERY_PER_MIN` (default 30), `RATE_LIMIT_SYNC_PER_MIN` (default 4). Responses use 429 with `Retry-After`.
+- `/api/queue/sync`: max 20 queries per request, 20 s time budget (remaining items are returned as retryable), one sync at a time.
+- `NODE_ENV` defaults to `production`; set `NODE_ENV=development` explicitly for local placeholder keys.
+- `CORS_ORIGINS`: extra allowed origins, comma-separated.

@@ -38,6 +38,7 @@ Located in `scripts/db/`. Run manually via Supabase SQL Editor or psql:
 
 - `create_rate_limits_table.sql` - Schema for `ims.30_rate_limits`
 - `create_model_selection_score_table.sql` - Schema for `ims.40_model_selection_score`
+- `drop_anon_write_policies.sql` - Drops anon INSERT/UPDATE policies on the selector tables (run manually after the create scripts)
 
 ## Prerequisites
 
@@ -46,6 +47,7 @@ All scripts require environment variables set in `.env`:
 ```bash
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_KEY=your-anon-key
+SUPABASE_SERVICE_KEY=your-service-role-key  # ONLY for db/populate_*.js (manual, never CI)
 ARTIFICIALANALYSIS_API_KEY=your-api-key  # For validation scripts
 ```
 

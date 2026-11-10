@@ -32,23 +32,29 @@ class RateLimitTracker {
    * @param {string} provider - Provider name (for fallback)
    */
   initializeModel(modelName, limits = {}, provider = null) {
-    if (this.modelTracking[modelName]) {
-      return; // Already initialized
-    }
+    limits = limits || {};
 
     // Get limits from database or fallback to provider defaults
-    const providerDefaults = provider
+    const providerDefaults = typeof provider === 'string'
       ? RATE_LIMIT_DEFAULTS[provider.toLowerCase()]
       : null;
 
+    const resolved = {
+      rpm: limits.rpm || providerDefaults?.rpm || 20,
+      rpd: limits.rpd || providerDefaults?.rpd || null,
+      tpm: limits.tpm || providerDefaults?.tpm || null,
+      tpd: limits.tpd || providerDefaults?.tpd || null
+    };
+
+    if (this.modelTracking[modelName]) {
+      // Already tracked: keep usage history but pick up refreshed limits
+      this.modelTracking[modelName].limits = resolved;
+      return;
+    }
+
     this.modelTracking[modelName] = {
       // Rate limit values
-      limits: {
-        rpm: limits.rpm || providerDefaults?.rpm || 20,
-        rpd: limits.rpd || providerDefaults?.rpd || null,
-        tpm: limits.tpm || providerDefaults?.tpm || null,
-        tpd: limits.tpd || providerDefaults?.tpd || null
-      },
+      limits: resolved,
       // Event arrays (stored as timestamps)
       requests: [],  // { timestamp: number }
       tokens: []     // { timestamp: number, count: number }
@@ -83,7 +89,7 @@ class RateLimitTracker {
    * Accounts for ~4 chars per input token + estimated output (2x input)
    */
   estimateTokens(queryText) {
-    if (!queryText) return 0;
+    if (typeof queryText !== 'string' || !queryText) return 0;
     return Math.ceil(queryText.length * 0.75);
   }
 
@@ -203,6 +209,11 @@ class RateLimitTracker {
     this.cleanupInterval = setInterval(() => {
       this.cleanupOldRecords();
     }, 5 * 60 * 1000); // Every 5 minutes
+
+    // Do not keep the process alive just for cleanup
+    if (typeof this.cleanupInterval.unref === 'function') {
+      this.cleanupInterval.unref();
+    }
   }
 
   /**

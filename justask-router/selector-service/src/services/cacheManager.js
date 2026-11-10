@@ -5,17 +5,24 @@
 class CacheManager {
   constructor() {
     this.cache = new Map();
+    this.inflight = new Map(); // key -> Promise (dedupes concurrent fetches)
   }
 
   /**
    * Get value from cache
    * @param {string} key - Cache key
+   * @param {Object} [options]
+   * @param {boolean} [options.allowStale=false] - Return expired data too
    * @returns {any|null} Cached value or null if not found/expired
    */
-  get(key) {
+  get(key, { allowStale = false } = {}) {
     const entry = this.cache.get(key);
 
     if (!entry) {
+      return null;
+    }
+
+    if (!allowStale && Date.now() - entry.timestamp > entry.ttl) {
       return null;
     }
 
@@ -77,15 +84,28 @@ class CacheManager {
    * @returns {Promise<any>} Fresh data
    */
   async refresh(key, fetchFn, ttl) {
-    try {
-      const freshData = await fetchFn();
-      this.set(key, freshData, ttl);
-      return freshData;
-    } catch (error) {
-      console.error(`Cache refresh failed for key ${key}:`, error);
-      // Keep stale data on error
-      throw error;
+    // Concurrent callers share one in-flight fetch
+    const existing = this.inflight.get(key);
+    if (existing) {
+      return existing;
     }
+
+    const promise = (async () => {
+      try {
+        const freshData = await fetchFn();
+        this.set(key, freshData, ttl);
+        return freshData;
+      } catch (error) {
+        console.error(`Cache refresh failed for key ${key}:`, error);
+        // Keep stale data on error
+        throw error;
+      } finally {
+        this.inflight.delete(key);
+      }
+    })();
+
+    this.inflight.set(key, promise);
+    return promise;
   }
 
   /**
@@ -97,7 +117,7 @@ class CacheManager {
    */
   async getOrFetch(key, fetchFn, ttl) {
     const isExpired = this.isExpired(key);
-    const cachedData = this.get(key);
+    const cachedData = this.get(key, { allowStale: true });
 
     if (isExpired) {
       if (cachedData) {

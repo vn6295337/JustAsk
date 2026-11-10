@@ -7,6 +7,9 @@ import queryRoutes from './routes/query.js';
 
 const app = express();
 
+// Behind Render's proxy: use X-Forwarded-For for req.ip (per-IP rate limiting)
+app.set('trust proxy', 1);
+
 // ============================================
 // Middleware
 // ============================================
@@ -17,16 +20,18 @@ app.use(helmet());
 // CORS - Allow requests from mobile app
 app.use(
   cors({
+    // Explicit allowlist (add more via CORS_ORIGINS, comma-separated).
+    // Native mobile requests send no Origin header and are not affected.
     origin: [
       'http://localhost:8081', // Expo dev server
       'http://localhost:3000', // Local testing
       'http://localhost:19000', // Expo tunnel
       'http://localhost:19006', // Expo web
-      '*', // Allow all origins for MVP (restrict in production)
+      ...config.corsOrigins,
     ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-API-Key'],
   })
 );
 
@@ -34,7 +39,8 @@ app.use(
 app.use(morgan('combined'));
 
 // JSON body parser
-app.use(express.json());
+// 20 queries x 2000 chars (worst case JSON-escaped) fits well under 256kb
+app.use(express.json({ limit: '256kb' }));
 
 // ============================================
 // Routes
@@ -65,7 +71,9 @@ app.use((err, req, res, next) => {
   console.error('Error:', err);
 
   const status = err.status || err.statusCode || 500;
-  const message = err.message || 'Internal server error';
+  // Do not leak internal/upstream error text on 5xx
+  const message =
+    status >= 500 ? 'Internal server error' : err.message || 'Bad request';
 
   res.status(status).json({
     error: message,

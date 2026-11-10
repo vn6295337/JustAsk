@@ -12,10 +12,16 @@ on:
           - 'deploy-main (Step 9)'
           - 'both'
 
+concurrency:
+  group: registry-groq-deploy
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: read
 
     steps:
     - name: Checkout repository
@@ -55,12 +61,21 @@ jobs:
 
         # Refresh ims.10_model_aa_mapping for Groq
         echo "Refreshing ims.10_model_aa_mapping for Groq..."
-        python -c "
-        import os
-        import psycopg2
+        python - <<'PY'
+        import sys
+        from src.utils.db import get_pipeline_db_connection
         from src.utils.model_aa_mapping import refresh_model_aa_mapping
 
-        conn = psycopg2.connect(os.environ['PIPELINE_SUPABASE_URL'])
-        refresh_model_aa_mapping(conn, inference_provider='Groq')
-        conn.close()
-        "
+        # Shared connection helper (IPv4 hostaddr workaround for GitHub runners)
+        conn = get_pipeline_db_connection()
+        if conn is None:
+            print("ERROR: could not connect to database")
+            sys.exit(1)
+        try:
+            ok = refresh_model_aa_mapping(conn, inference_provider='Groq')
+        finally:
+            conn.close()
+        if not ok:
+            print("ERROR: refresh_model_aa_mapping failed")
+            sys.exit(1)
+        PY

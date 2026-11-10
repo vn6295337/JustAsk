@@ -1,6 +1,7 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { getApiKey } from '../utils/supabase.js';
 import config from '../config.js';
+import { ProviderError, toProviderError, withTimeout } from '../utils/errors.js';
 
 let geminiClient = null;
 
@@ -21,28 +22,41 @@ const initializeGemini = async () => {
 /**
  * Call Gemini API
  * @param {string} query - User query
+ * @param {string} modelName - Model to call (defaults to config)
  * @returns {Promise<{response: string, model: string, usage: object}>}
  */
-export const callGemini = async (query) => {
+export const callGemini = async (query, modelName = null) => {
+  const modelId = modelName || config.models.gemini;
   try {
     if (!geminiClient) {
       await initializeGemini();
     }
 
     const model = geminiClient.getGenerativeModel({
-      model: config.models.gemini,
+      model: modelId,
     });
 
-    const result = await model.generateContent(query);
+    const result = await withTimeout(
+      model.generateContent(query),
+      config.responseTimeouts.gemini,
+      'gemini'
+    );
 
     // Extract response text
-    const response =
-      result.response.candidates?.[0]?.content?.parts?.[0]?.text ||
-      'No response from Gemini';
+    const candidate = result.response.candidates?.[0];
+    const response = (candidate?.content?.parts || [])
+      .map((p) => p?.text || '')
+      .join('')
+      .trim();
+    if (!response) {
+      const reason =
+        result.response.promptFeedback?.blockReason || candidate?.finishReason || 'empty';
+      throw new ProviderError('gemini', `Empty or blocked completion (${reason})`, 502);
+    }
 
     return {
       response,
-      model: config.models.gemini,
+      model: modelId,
       provider: 'gemini',
       usage: {
         promptTokens: result.response.usageMetadata?.promptTokenCount || 0,
@@ -52,11 +66,7 @@ export const callGemini = async (query) => {
     };
   } catch (error) {
     console.error('Gemini API error:', error.message);
-    throw {
-      provider: 'gemini',
-      error: error.message,
-      status: error.status || 500,
-    };
+    throw toProviderError('gemini', error);
   }
 };
 

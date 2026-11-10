@@ -21,13 +21,11 @@ const Analytics = () => {
 
   const fetchModelData = async () => {
     try {
-      console.log('Fetching model data from ai_models_main...');
       const response = await supabase
         .from('ai_models_main')
         .select('*')
         .order('id', { ascending: true });
 
-      console.log('Supabase response:', response);
 
       if (response.error) {
         console.error('Supabase error:', response.error);
@@ -39,7 +37,6 @@ const Analytics = () => {
         throw new Error('No data available from ai_models_main table');
       }
 
-      console.log(`Successfully fetched ${response.data.length} records for analytics`);
       return response.data;
     } catch (err) {
       console.error('Error fetching data:', err);
@@ -47,18 +44,31 @@ const Analytics = () => {
     }
   };
 
+  const hasDataRef = useRef(false);
+
   useEffect(() => {
+    let cancelled = false;
+    let requestId = 0;
     const loadData = async () => {
+      const myId = ++requestId;
       try {
         const rawData = await fetchModelData();
-        console.log('Analytics raw data length:', rawData.length);
-        setModels(rawData);
+        if (cancelled || myId !== requestId) return;
+        hasDataRef.current = true;
+        setError(null);
+        // Exclude Dolphin models (Cognitive Computations), same as the main dashboard
+        setModels(rawData.filter((m: any) =>
+          !(m.model_provider === 'Cognitive Computations' &&
+            String(m.human_readable_name || '').toLowerCase().includes('dolphin'))
+        ));
         setLastRefresh(new Date());
       } catch (err: any) {
+        if (cancelled || myId !== requestId) return;
         console.error('Load data error:', err);
-        setError(err.message || 'Failed to load data');
+        // Keep showing last good data if a background refresh fails
+        if (!hasDataRef.current) setError(err.message || 'Failed to load data');
       } finally {
-        setLoading(false);
+        if (!cancelled && myId === requestId) setLoading(false);
       }
     };
 
@@ -68,20 +78,21 @@ const Analytics = () => {
     const interval = setInterval(loadData, 5 * 60 * 1000);
 
     // Cleanup interval on unmount
-    return () => clearInterval(interval);
+    return () => { cancelled = true; clearInterval(interval); };
   }, []);
 
   // Load banner text from file
   useEffect(() => {
+    const controller = new AbortController();
     const loadBannerText = async () => {
       try {
-        const response = await fetch('/banner-text.txt');
+        const response = await fetch('/banner-text.txt', { signal: controller.signal });
         if (response.ok) {
           const text = await response.text();
           setBannerText(text.trim() || "🔴 LIVE: JustAsk Dashboard - 50+ free AI models from 3 providers");
         }
       } catch (error) {
-        console.log('Using default banner text');
+        if (controller.signal.aborted) return;
         setBannerText("🔴 LIVE: JustAsk Dashboard - 50+ free AI models from 3 providers");
       }
     };
@@ -90,7 +101,7 @@ const Analytics = () => {
 
     // Poll for banner text changes every 30 seconds
     const bannerInterval = setInterval(loadBannerText, 30000);
-    return () => clearInterval(bannerInterval);
+    return () => { controller.abort(); clearInterval(bannerInterval); };
   }, []);
 
   // One-time keyframes
@@ -120,6 +131,7 @@ const Analytics = () => {
     window.addEventListener('resize', onResize);
 
     let fontDone = false;
+    let cancelled = false;
     const measureUnit = () => {
       if (!unitRef.current) return;
       const uw = Math.ceil(unitRef.current.getBoundingClientRect().width);
@@ -131,13 +143,14 @@ const Analytics = () => {
     // @ts-ignore
     const fonts = (document as any).fonts;
     if (fonts?.ready && typeof fonts.ready.then === 'function') {
-      fonts.ready.then(() => { fontDone = true; measure(); measureUnit(); });
+      fonts.ready.then(() => { if (cancelled) return; fontDone = true; measure(); measureUnit(); });
     }
 
     // Fallback
     const rAF = requestAnimationFrame(() => { if (!fontDone) { measureUnit(); } });
 
     return () => {
+      cancelled = true;
       window.removeEventListener('resize', onResize);
       cancelAnimationFrame(rAF);
     };

@@ -11,10 +11,28 @@ dotenv.config({ path: path.join(__dirname, '..', '.env') });
 
 export const config = {
   port: process.env.PORT || 3000,
-  nodeEnv: process.env.NODE_ENV || 'development',
+  // Defaults to production so placeholder dev keys are never used unless
+  // NODE_ENV=development is set explicitly.
+  nodeEnv: process.env.NODE_ENV || 'production',
   supabase: {
     url: process.env.SUPABASE_URL,
     key: process.env.SUPABASE_KEY,
+  },
+  // Optional shared token. If API_AUTH_TOKEN is unset, auth is disabled.
+  authToken: process.env.API_AUTH_TOKEN || '',
+  // Extra allowed CORS origins (comma-separated)
+  corsOrigins: (process.env.CORS_ORIGINS || '')
+    .split(',')
+    .map((o) => o.trim())
+    .filter(Boolean),
+  // Inbound (per-IP) limits, requests per minute
+  inboundLimits: {
+    query: parseInt(process.env.RATE_LIMIT_QUERY_PER_MIN, 10) || 30,
+    sync: parseInt(process.env.RATE_LIMIT_SYNC_PER_MIN, 10) || 4,
+  },
+  sync: {
+    maxBatch: 20,
+    timeBudgetMs: 20000,
   },
   logging: {
     level: process.env.LOG_LEVEL || 'info',

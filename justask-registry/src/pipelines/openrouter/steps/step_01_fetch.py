@@ -78,22 +78,7 @@ def get_supabase_client() -> Optional[Client]:
 def get_api_key(service):
     """Get API key from Supabase secrets or environment variables"""
     if service == 'openrouter':
-        # First try Supabase secrets
-        if SUPABASE_AVAILABLE:
-            client = get_supabase_client()
-            if client:
-                try:
-                    # Query the secrets table for OPENROUTER_API_KEY
-                    response = client.table('secrets').select('value').eq('name', 'OPENROUTER_API_KEY').execute()
-                    if response.data and len(response.data) > 0:
-                        api_key = response.data[0].get('value')
-                        if api_key:
-                            print("✓ Retrieved OpenRouter API key from Supabase secrets")
-                            return api_key
-                except Exception as e:
-                    print(f"Failed to retrieve API key from Supabase secrets: {e}")
-
-        # Fallback to environment variable
+        # Environment variable only (no anon-key reads of the secrets table)
         api_key = os.getenv('OPENROUTER_API_KEY')
         if api_key:
             print("✓ Retrieved OpenRouter API key from environment variable")

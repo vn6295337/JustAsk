@@ -73,10 +73,10 @@ def apply_provider_fallback(result: Dict, provider: str) -> Dict:
         fallback = fallbacks['openrouter']
 
     if fallback:
-        result['rpm'] = fallback['rpm']
-        result['rpd'] = fallback['rpd']
-        result['tpm'] = fallback['tpm']
-        result['tpd'] = fallback['tpd']
+        # Fill only fields that failed to parse; never overwrite parsed values.
+        for key in ('rpm', 'rpd', 'tpm', 'tpd'):
+            if result.get(key) is None:
+                result[key] = fallback[key]
         result['parseable'] = False
 
     return result
@@ -116,7 +116,8 @@ def parse_rate_limits(rate_limits_str: str, provider: str) -> Dict:
     if 'requests/min' in lower and ',' in lower:
         rpm_match = re.search(r'(\d+)\s*requests/min', rate_limits_str, re.IGNORECASE)
         tpm_match = re.search(r'([\d.]+[KkMm]?)\s*tokens/min', rate_limits_str, re.IGNORECASE)
-        rpd_match = re.search(r'([\d,]+)\s*requests/day', rate_limits_str, re.IGNORECASE)
+        # Accept both "200 requests/day" and "50/day"
+        rpd_match = re.search(r'([\d,]+)\s*(?:requests)?/day', rate_limits_str, re.IGNORECASE)
 
         if rpm_match:
             result['rpm'] = int(rpm_match.group(1))

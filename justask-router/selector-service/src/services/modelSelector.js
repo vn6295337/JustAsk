@@ -18,6 +18,19 @@ import {
 } from '../config/constants.js';
 
 /**
+ * Tracker key: provider-qualified so same-named models on different providers
+ * do not share rate-limit counters.
+ * @param {Object} model - Model row
+ * @returns {string} Tracker key
+ */
+export function trackerKey(model) {
+  const provider = typeof model.inference_provider === 'string'
+    ? model.inference_provider.toLowerCase()
+    : 'unknown';
+  return `${provider}:${model.human_readable_name}`;
+}
+
+/**
  * Select optimal model based on query characteristics
  * @param {Object} criteria - Selection criteria
  * @param {string} criteria.queryType - Query category
@@ -29,8 +42,10 @@ import {
 export async function selectModel(criteria) {
   const { queryType, queryText, modalities, complexityScore } = criteria;
 
-  // 1. Fetch models from cache/DB
-  const models = await getModels();
+  // 1. Fetch models from cache/DB (rows without a name cannot be tracked or returned)
+  const models = ((await getModels()) || []).filter(
+    m => m && typeof m.human_readable_name === 'string' && m.human_readable_name
+  );
 
   if (!models || models.length === 0) {
     throw new Error('No models available');
@@ -40,7 +55,7 @@ export async function selectModel(criteria) {
   models.forEach(model => {
     const limits = model.rate_limits_normalized || {};
     rateLimitTracker.initializeModel(
-      model.human_readable_name,
+      trackerKey(model),
       limits,
       model.inference_provider
     );
@@ -73,7 +88,12 @@ export async function selectModel(criteria) {
   if (matchedModels.length === 0) {
     // Relax headroom requirements if no matches
     console.warn('No models match headroom requirements, relaxing constraints');
-    return selectBestModel(scoredModels, queryText);
+    // Relax the complexity requirement but never pick an exhausted model
+    const available = scoredModels.filter(m => rateLimitTracker.getHeadroom(trackerKey(m)) > 0);
+    if (available.length === 0) {
+      throw new Error('No models available: all matching models are rate limited');
+    }
+    return selectBestModel(available, queryText);
   }
 
   // 7. Select best model and record usage
@@ -104,8 +124,8 @@ export function filterByModalities(models, requiredModalities = ['text']) {
   }
 
   return models.filter(model => {
-    const inputMods = (model.input_modalities || '').toLowerCase();
-    const outputMods = (model.output_modalities || '').toLowerCase();
+    const inputMods = String(model.input_modalities || '').toLowerCase();
+    const outputMods = String(model.output_modalities || '').toLowerCase();
 
     // Check if all required input modalities are present
     const hasRequiredInputs = requiredModalities.every(mod =>
@@ -141,7 +161,7 @@ export function calculateScores(models, queryType, complexityScore, intelligence
     const latencyScore = LATENCY_SCORES[provider] || 0.5;
 
     // Headroom score (per-model from tracker)
-    const headroomScore = rateLimitTracker.getHeadroom(model.human_readable_name);
+    const headroomScore = rateLimitTracker.getHeadroom(trackerKey(model));
 
     // Geography score
     const geographyScore = getGeographyScore(model);
@@ -224,8 +244,9 @@ export function matchComplexityToHeadroom(models, complexityScore) {
   }
 
   return models.filter(model => {
-    const headroom = rateLimitTracker.getHeadroom(model.human_readable_name);
-    return headroom >= requiredHeadroom;
+    const headroom = rateLimitTracker.getHeadroom(trackerKey(model));
+    // Exhausted models (headroom 0) are never eligible, even for low complexity
+    return headroom > 0 && headroom >= requiredHeadroom;
   });
 }
 
@@ -248,10 +269,11 @@ export function selectBestModel(models, queryText) {
   const provider = normalizeProviderName(topModel.inference_provider);
 
   // Record usage with token estimation
-  rateLimitTracker.recordUsage(topModel.human_readable_name, queryText);
+  const key = trackerKey(topModel);
+  rateLimitTracker.recordUsage(key, queryText);
 
   // Get current headroom for response
-  const headroom = rateLimitTracker.getHeadroom(topModel.human_readable_name);
+  const headroom = rateLimitTracker.getHeadroom(key);
 
   // Build selection reason
   const selectionReason = buildSelectionReason(topModel, headroom);
@@ -280,6 +302,7 @@ export function selectBestModel(models, queryText) {
  * @returns {string} Normalized provider name
  */
 function normalizeProviderName(provider) {
+  if (typeof provider !== 'string' || !provider) return 'unknown';
   const normalized = provider.toLowerCase();
   // Map 'google' to 'gemini' for JustAsk API compatibility
   if (normalized === 'google') {
@@ -358,4 +381,4 @@ function buildSelectionReason(model, headroom) {
   return reasons.join(', ') || 'Best overall match';
 }
 
-export default { selectModel, filterByModalities, calculateScores, matchComplexityToHeadroom, selectBestModel };
+export default { selectModel, trackerKey, filterByModalities, calculateScores, matchComplexityToHeadroom, selectBestModel };

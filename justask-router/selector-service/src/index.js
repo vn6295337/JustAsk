@@ -3,19 +3,19 @@
  * Express API server for dynamic AI model selection
  */
 
+import 'dotenv/config'; // must load before modules that read process.env at import time
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import dotenv from 'dotenv';
 import { selectModel } from './services/modelSelector.js';
 import cacheManager from './services/cacheManager.js';
 import rateLimitTracker from './utils/rateLimitTracker.js';
 import { initializeScores } from './services/intelligenceIndex.js';
-import { fetchLatestModels, testConnection } from './utils/supabase.js';
+import supabase, { fetchLatestModels, testConnection } from './utils/supabase.js';
 import { CACHE_TTLS } from './config/constants.js';
-
-dotenv.config();
+import { adminAuth, buildCorsOptions } from './middleware/adminAuth.js';
+import { validateSelectRequest, parseIntParam } from './utils/validation.js';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -23,29 +23,16 @@ const startTime = Date.now();
 
 // Middleware
 app.use(helmet());
-app.use(cors());
+app.use(cors(buildCorsOptions()));
 app.use(express.json());
 app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 
-// Health check endpoint
+// Health check endpoint (minimal: no per-model limits/usage or cache keys)
 app.get('/health', (req, res) => {
-  const uptime = (Date.now() - startTime) / 1000;
-  const cacheStats = cacheManager.getStats();
-  const rateLimitStats = rateLimitTracker.getStats();
-
   res.json({
     status: 'ok',
     timestamp: new Date().toISOString(),
-    uptime,
-    cache: {
-      size: cacheStats.size,
-      entries: cacheStats.entries.map(e => ({
-        key: e.key,
-        age: Math.round(e.age / 1000) + 's',
-        expired: e.expired
-      }))
-    },
-    rateLimits: rateLimitStats
+    uptime: (Date.now() - startTime) / 1000
   });
 });
 
@@ -77,30 +64,26 @@ app.get('/models', async (req, res) => {
 });
 
 // MVP: Get best model by Intelligence Index
+// Uses the same joined data as /select-model (public.working_version ->
+// ims.10_model_aa_mapping -> ims.20_aa_performance_metrics) via fetchLatestModels.
 app.get('/best-model', async (req, res) => {
   try {
     const { provider } = req.query;
-
-    // Use 3-table lookup: working_version → model_aa_mapping → aa_performance_metrics
-    const { createClient } = await import('@supabase/supabase-js');
-    const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
-
-    // Fetch working_version models
-    let modelsQuery = supabase
-      .from('working_version')
-      .select('inference_provider, human_readable_name');
-
-    if (provider) {
-      modelsQuery = modelsQuery.eq('inference_provider', provider);
+    if (provider !== undefined && typeof provider !== 'string') {
+      return res.status(400).json({ error: 'provider must be a string', code: 'INVALID_REQUEST' });
     }
 
-    const { data: models, error: modelsError } = await modelsQuery;
+    const all = await cacheManager.getOrFetch(
+      'ai_models_main',
+      fetchLatestModels,
+      CACHE_TTLS.models
+    );
 
-    if (modelsError) {
-      throw new Error(`Database query failed: ${modelsError.message}`);
-    }
+    const models = (all || []).filter(m =>
+      !provider || (m.inference_provider || '').toLowerCase() === provider.toLowerCase()
+    );
 
-    if (!models || models.length === 0) {
+    if (models.length === 0) {
       return res.status(404).json({
         error: 'No models found matching criteria',
         code: 'NO_MODELS_AVAILABLE',
@@ -108,49 +91,10 @@ app.get('/best-model', async (req, res) => {
       });
     }
 
-    // Fetch model name → AA slug mappings
-    const { data: mappings, error: mappingsError } = await supabase
-      .from('model_aa_mapping')
-      .select('model_name, aa_slug');
-
-    if (mappingsError) {
-      throw new Error(`Database query failed: ${mappingsError.message}`);
-    }
-
-    // Fetch AA metrics
-    const { data: metrics, error: metricsError } = await supabase
-      .from('aa_performance_metrics')
-      .select('slug, intelligence_index, coding_index, math_index, name')
-      .not('intelligence_index', 'is', null);
-
-    if (metricsError) {
-      throw new Error(`Database query failed: ${metricsError.message}`);
-    }
-
-    // Create lookup maps
-    const mappingMap = {};
-    (mappings || []).forEach(m => {
-      mappingMap[m.model_name] = m.aa_slug;
-    });
-
-    const metricsMap = {};
-    (metrics || []).forEach(m => {
-      metricsMap[m.slug] = m;
-    });
-
-    // 3-table join and find best model
     const modelsWithMetrics = models
-      .map(m => {
-        const aaSlug = mappingMap[m.human_readable_name];
-        const aaMetrics = aaSlug ? metricsMap[aaSlug] : null;
-        return {
-          ...m,
-          aaSlug,
-          metrics: aaMetrics
-        };
-      })
-      .filter(m => m.metrics && m.metrics.intelligence_index != null)
-      .sort((a, b) => b.metrics.intelligence_index - a.metrics.intelligence_index);
+      .filter(m => m.aa_performance_metrics && m.aa_performance_metrics.intelligence_index != null)
+      .sort((a, b) =>
+        b.aa_performance_metrics.intelligence_index - a.aa_performance_metrics.intelligence_index);
 
     if (modelsWithMetrics.length === 0) {
       return res.status(404).json({
@@ -161,15 +105,16 @@ app.get('/best-model', async (req, res) => {
     }
 
     const modelData = modelsWithMetrics[0];
+    const metrics = modelData.aa_performance_metrics;
 
     res.json({
       model: {
         provider: modelData.inference_provider,
-        modelSlug: modelData.aaSlug,
+        modelSlug: metrics.aa_slug,
         humanReadableName: modelData.human_readable_name,
-        intelligenceIndex: modelData.metrics.intelligence_index,
-        codingIndex: modelData.metrics.coding_index,
-        mathIndex: modelData.metrics.math_index
+        intelligenceIndex: metrics.intelligence_index,
+        codingIndex: metrics.coding_index,
+        mathIndex: metrics.math_index
       },
       selectionCriteria: {
         method: 'intelligence_index',
@@ -190,20 +135,17 @@ app.get('/best-model', async (req, res) => {
 // Get top N models from pre-computed selection scores
 app.get('/best-models', async (req, res) => {
   try {
-    const { limit = 5, provider } = req.query;
-    const limitNum = parseInt(limit, 10);
+    const { provider } = req.query;
+    const limitNum = parseIntParam(req.query.limit, 1, 50, 5);
 
-    if (limitNum < 1 || limitNum > 50) {
+    if (limitNum === null || (provider !== undefined && typeof provider !== 'string')) {
       return res.status(400).json({
-        error: 'Limit must be between 1 and 50',
+        error: 'limit must be an integer between 1 and 50 and provider must be a string',
         code: 'INVALID_REQUEST'
       });
     }
 
     // Use 40_model_selection_score for pre-computed rankings
-    const { createClient } = await import('@supabase/supabase-js');
-    const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
-
     let query = supabase
       .schema('ims')
       .from('40_model_selection_score')
@@ -257,46 +199,18 @@ app.get('/best-models', async (req, res) => {
 // Select optimal model
 app.post('/select-model', async (req, res) => {
   try {
-    const { queryType, queryText, modalities, complexityScore } = req.body;
-
-    // Validation
-    if (!queryType) {
-      return res.status(400).json({
-        error: 'Missing required field: queryType',
-        code: 'INVALID_REQUEST'
-      });
+    const validated = validateSelectRequest(req.body);
+    if (validated.error) {
+      return res.status(400).json({ error: validated.error, code: 'INVALID_REQUEST' });
     }
-
-    if (!queryText) {
-      return res.status(400).json({
-        error: 'Missing required field: queryText',
-        code: 'INVALID_REQUEST'
-      });
-    }
-
-    if (complexityScore === undefined || complexityScore === null) {
-      return res.status(400).json({
-        error: 'Missing required field: complexityScore',
-        code: 'INVALID_REQUEST'
-      });
-    }
-
-    if (complexityScore < 0 || complexityScore > 1) {
-      return res.status(400).json({
-        error: 'complexityScore must be between 0 and 1',
-        code: 'INVALID_REQUEST'
-      });
-    }
-
-    // Default modalities
-    const effectiveModalities = modalities || ['text'];
+    const { queryType, queryText, modalities, complexityScore } = validated.value;
 
     // Select model
     const startTime = Date.now();
     const selection = await selectModel({
       queryType,
       queryText,
-      modalities: effectiveModalities,
+      modalities,
       complexityScore
     });
 
@@ -323,8 +237,7 @@ app.post('/select-model', async (req, res) => {
         error: error.message,
         code: 'NO_MODELS_AVAILABLE',
         details: {
-          queryType: req.body.queryType,
-          modalities: req.body.modalities
+          queryType: typeof req.body?.queryType === 'string' ? req.body.queryType : undefined
         }
       });
     }
@@ -338,11 +251,10 @@ app.post('/select-model', async (req, res) => {
 });
 
 // Manually refresh cache
-app.post('/cache/refresh', async (req, res) => {
+app.post('/cache/refresh', adminAuth, async (req, res) => {
   try {
-    cacheManager.invalidate('ai_models_main');
-    const models = await fetchLatestModels();
-    cacheManager.set('ai_models_main', models, CACHE_TTLS.models);
+    // Fetch first; the cache is only replaced on success (old data survives a failure)
+    const models = await cacheManager.refresh('ai_models_main', fetchLatestModels, CACHE_TTLS.models);
 
     res.json({
       message: 'Cache refreshed',
@@ -359,7 +271,7 @@ app.post('/cache/refresh', async (req, res) => {
 });
 
 // Reset rate limit counters (for testing)
-app.post('/rate-limits/reset', (req, res) => {
+app.post('/rate-limits/reset', adminAuth, (req, res) => {
   rateLimitTracker.resetAll();
 
   res.json({

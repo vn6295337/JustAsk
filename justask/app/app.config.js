@@ -25,6 +25,7 @@ export default {
         backgroundColor: "#ffffff"
       },
       package: "com.justask.app",
+      allowBackup: false,
       permissions: [
         "android.permission.INTERNET",
         "android.permission.ACCESS_NETWORK_STATE"
@@ -41,6 +42,8 @@ export default {
       // Load environment variables
       backendUrl: process.env.EXPO_PUBLIC_BACKEND_URL || 'https://justask-api.onrender.com',
       apiTimeout: process.env.EXPO_PUBLIC_API_TIMEOUT || '30000',
+      // Optional shared token for the API (see api/.env.example API_AUTH_TOKEN)
+      apiToken: process.env.EXPO_PUBLIC_API_TOKEN || '',
       appVersion: process.env.EXPO_PUBLIC_APP_VERSION || '1.0.0',
       cacheTtlDays: process.env.EXPO_PUBLIC_CACHE_TTL_DAYS || '7',
       offlineQueueMaxSize: process.env.EXPO_PUBLIC_OFFLINE_QUEUE_MAX_SIZE || '10',

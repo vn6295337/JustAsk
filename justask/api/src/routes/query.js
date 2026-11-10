@@ -2,6 +2,16 @@ import express from 'express';
 import { validateQuery, validateBatchQueries } from '../middleware/validate.js';
 import { classifyQuery } from '../classification/classifier.js';
 import { executeWithRankedFallback } from '../failover/failover.js';
+import { ipRateLimit } from '../rate-limiting/limiter.js';
+import { requireToken } from '../middleware/auth.js';
+import config from '../config.js';
+
+// Only one /queue/sync may run at a time (protects provider quota on a
+// single instance); extra concurrent syncs get 429.
+let activeSyncs = 0;
+const MAX_CONCURRENT_SYNCS = 1;
+
+const timeoutSentinel = Symbol('sync-timeout');
 
 const router = express.Router();
 
@@ -11,7 +21,11 @@ const router = express.Router();
  * Request: { query: string }
  * Response: { response: string, llm_used: string, category: string, response_time: number }
  */
-router.post('/query', validateQuery, async (req, res) => {
+router.post(
+  '/query',
+  requireToken,
+  ipRateLimit('query', config.inboundLimits.query),
+  validateQuery, async (req, res) => {
   const startTime = Date.now();
 
   try {
@@ -27,9 +41,10 @@ router.post('/query', validateQuery, async (req, res) => {
 
     if (!result.success) {
       console.error(`[Query] All providers failed:`, result.error);
-      return res.status(500).json({
+      const status = result.status === 429 ? 429 : 500;
+      return res.status(status).json({
         error: result.error,
-        status: 500,
+        status,
       });
     }
 
@@ -52,7 +67,7 @@ router.post('/query', validateQuery, async (req, res) => {
     const responseTime = Date.now() - startTime;
 
     res.status(500).json({
-      error: error.message || 'Internal server error',
+      error: 'Internal server error',
       status: 500,
       response_time: responseTime,
     });
@@ -65,23 +80,77 @@ router.post('/query', validateQuery, async (req, res) => {
  * Request: { queries: [{ id: number, query: string, timestamp: number }] }
  * Response: { responses: [{id: number, response: string, llm_used: string, response_time: number, ...}] }
  */
-router.post('/queue/sync', validateBatchQueries, async (req, res) => {
+router.post(
+  '/queue/sync',
+  requireToken,
+  ipRateLimit('sync', config.inboundLimits.sync),
+  validateBatchQueries,
+  async (req, res) => {
+  if (activeSyncs >= MAX_CONCURRENT_SYNCS) {
+    res.set('Retry-After', '10');
+    return res.status(429).json({
+      error: 'A sync is already in progress. Please try again shortly.',
+      status: 429,
+    });
+  }
+  activeSyncs++;
   const startTime = Date.now();
+  const deadline = startTime + config.sync.timeBudgetMs;
 
   try {
     const queries = req.validatedQueries;
-    const responses = [];
+    const responses = (req.rejectedQueries || []).map((r) => ({
+      id: r.id,
+      query: r.query,
+      success: false,
+      permanent: true,
+      error: r.reason,
+      llm_used: null,
+      response_time: 0,
+    }));
 
     console.log(`[Sync] Processing ${queries.length} offline queries`);
 
     for (const queryItem of queries) {
       const itemStartTime = Date.now();
+      const remaining = deadline - itemStartTime;
+      if (remaining <= 0) {
+        responses.push({
+          id: queryItem.id,
+          query: queryItem.query,
+          success: false,
+          retryable: true,
+          deferred: true, // never started; no attempt consumed
+          error: 'Deferred: sync time budget exceeded',
+          llm_used: null,
+          response_time: 0,
+        });
+        continue;
+      }
       try {
         const { id, query } = queryItem;
 
-        // Classify and execute with ranked fallback
+        // Classify and execute with ranked fallback, bounded by remaining budget
         const classification = classifyQuery(query);
-        const result = await executeWithRankedFallback(query, classification.type);
+        let budgetTimer;
+        const result = await Promise.race([
+          executeWithRankedFallback(query, classification.type),
+          new Promise((resolve) => {
+            budgetTimer = setTimeout(() => resolve(timeoutSentinel), remaining);
+          }),
+        ]).finally(() => clearTimeout(budgetTimer));
+        if (result === timeoutSentinel) {
+          responses.push({
+            id,
+            query,
+            success: false,
+            retryable: true,
+            error: 'Deferred: sync time budget exceeded',
+            llm_used: null,
+            response_time: Date.now() - itemStartTime,
+          });
+          continue;
+        }
         const itemResponseTime = Date.now() - itemStartTime;
 
         if (result.success) {
@@ -99,6 +168,7 @@ router.post('/queue/sync', validateBatchQueries, async (req, res) => {
             id: id,
             query: query,
             success: false,
+            retryable: true,
             error: result.error,
             llm_used: null,
             response_time: itemResponseTime,
@@ -110,7 +180,8 @@ router.post('/queue/sync', validateBatchQueries, async (req, res) => {
           id: queryItem.id,
           query: queryItem.query,
           success: false,
-          error: error.message || 'Unknown error',
+          retryable: true,
+          error: 'Processing failed',
           llm_used: null,
           response_time: Date.now() - itemStartTime,
         });
@@ -129,11 +200,13 @@ router.post('/queue/sync', validateBatchQueries, async (req, res) => {
     console.error('[Sync] Unexpected error:', error);
     const responseTime = Date.now() - startTime;
 
-    res.status(400).json({
-      error: error.message || 'Invalid sync request',
-      status: 400,
+    res.status(500).json({
+      error: 'Sync failed',
+      status: 500,
       response_time: responseTime,
     });
+  } finally {
+    activeSyncs--;
   }
 });
 

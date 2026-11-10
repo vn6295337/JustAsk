@@ -53,12 +53,12 @@ describe('Intelligence Index Service', () => {
       const mockApiResponse = {
         data: [
           {
-            model_name: 'GPT-4',
-            artificial_analysis_intelligence_index: 95.5
+            slug: 'gpt-4',
+            evaluations: { artificial_analysis_intelligence_index: 95.5 }
           },
           {
-            model_name: 'Claude-3-Opus',
-            artificial_analysis_intelligence_index: 92.3
+            slug: 'claude-3-opus',
+            evaluations: { artificial_analysis_intelligence_index: 92.3 }
           }
         ]
       };
@@ -137,12 +137,12 @@ describe('Intelligence Index Service', () => {
       const mockApiResponse = {
         data: [
           {
-            model_name: 'Model-A',
-            artificial_analysis_intelligence_index: 85.0 // 0-100 scale
+            slug: 'model-a',
+            evaluations: { artificial_analysis_intelligence_index: 85.0 } // 0-100 scale
           },
           {
-            model_name: 'Model-B',
-            artificial_analysis_intelligence_index: 0.75 // Already 0-1
+            slug: 'model-b',
+            evaluations: { artificial_analysis_intelligence_index: 0.75 } // Already 0-1
           }
         ]
       };
@@ -168,12 +168,14 @@ describe('Intelligence Index Service', () => {
       const mockApiResponse = {
         data: [
           {
-            model_name: 'Model-C',
-            artificial_analysis_intelligence_index: null,
-            mmlu_pro: 80.0,
-            gpqa: 70.0,
-            artificial_analysis_coding_index: 75.0,
-            artificial_analysis_math_index: 65.0
+            slug: 'model-c',
+            evaluations: {
+              artificial_analysis_intelligence_index: null,
+              mmlu_pro: 80.0,
+              gpqa: 70.0,
+              artificial_analysis_coding_index: 75.0,
+              artificial_analysis_math_index: 65.0
+            }
           }
         ]
       };
@@ -192,30 +194,28 @@ describe('Intelligence Index Service', () => {
   });
 
   describe('getModelScore', () => {
-    test('should return score from scores map for exact match', () => {
+    test('should resolve score via the mapped AA slug, not human_readable_name', () => {
       const model = {
-        human_readable_name: 'GPT-4'
+        human_readable_name: 'GPT-4 (Groq)',
+        aa_slug: 'gpt-4',
+        aa_performance_metrics: { aa_slug: 'gpt-4', intelligence_index: 50 }
       };
 
-      const scoresMap = {
-        'gpt-4': 0.95
-      };
-
-      const score = getModelScore(model, scoresMap);
-      expect(score).toBe(0.95);
+      expect(getModelScore(model, { 'gpt-4': 0.95 })).toBe(0.95);
     });
 
-    test('should return score for partial match', () => {
+    test('should not match on human_readable_name even when it equals a map key', () => {
+      const model = { human_readable_name: 'gpt-4' }; // unmapped
+      expect(getModelScore(model, { 'gpt-4': 0.95 })).toBe(0.6);
+    });
+
+    test('should use joined AA metrics when scores map lacks the slug', () => {
       const model = {
-        human_readable_name: 'GPT-4-Turbo-Preview'
+        human_readable_name: 'X',
+        aa_performance_metrics: { aa_slug: 'x', intelligence_index: 42 }
       };
 
-      const scoresMap = {
-        'gpt-4-turbo': 0.93
-      };
-
-      const score = getModelScore(model, scoresMap);
-      expect(score).toBe(0.93);
+      expect(getModelScore(model, {})).toBeCloseTo(0.42, 5);
     });
 
     test('should use fallback scoring when no match found', () => {
@@ -243,6 +243,19 @@ describe('Intelligence Index Service', () => {
 
       const score = getModelScore(model, {});
       expect(score).toBe(0.6); // Default moderate score
+    });
+  });
+
+  describe('calculateFallbackScore size matching', () => {
+    test.each([
+      ['qwen3-32b', 0.6],
+      ['llama-3.2-11b', 0.6],
+      ['deepseek-14b', 0.6],
+      ['llama-3.2-1b', 0.3],
+      ['gemma-3-27b', 0.7],
+      ['llama-3.3-70b-versatile', 0.9]
+    ])('%s', (name, expected) => {
+      expect(calculateFallbackScore({ human_readable_name: name })).toBe(expected);
     });
   });
 
@@ -298,7 +311,7 @@ describe('Intelligence Index Service', () => {
   });
 
   describe('API Response Parsing', () => {
-    test('should handle API response with slug instead of model_name', async () => {
+    test('should key scores by AA slug', async () => {
       process.env.ARTIFICIAL_ANALYSIS_API_KEY = 'test-api-key';
       mockGet.mockResolvedValue(null);
 
@@ -306,7 +319,7 @@ describe('Intelligence Index Service', () => {
         data: [
           {
             slug: 'claude-3-opus',
-            artificial_analysis_intelligence_index: 92.0
+            evaluations: { artificial_analysis_intelligence_index: 92.0 }
           }
         ]
       };

@@ -19,8 +19,50 @@ class RateLimiter {
       };
     }
 
+    // Per-key (e.g. client IP) counters: key -> {count, windowStart}
+    this.keys = new Map();
+
     // Reset counts every minute
-    setInterval(() => this.resetWindows(), 60000);
+    const timer = setInterval(() => {
+      this.resetWindows();
+      this.pruneKeys();
+    }, 60000);
+    if (timer.unref) timer.unref();
+  }
+
+  /**
+   * Drop expired per-key windows
+   */
+  pruneKeys() {
+    const now = Date.now();
+    for (const [key, data] of this.keys) {
+      if (now - data.windowStart > 60000) this.keys.delete(key);
+    }
+  }
+
+  /**
+   * Fixed-window check for an arbitrary key (client IP + route bucket).
+   * @returns {{allowed: boolean, retryAfter?: number}}
+   */
+  checkKey(key, limit) {
+    const now = Date.now();
+    let data = this.keys.get(key);
+    if (!data || now - data.windowStart >= 60000) {
+      data = { count: 0, windowStart: now };
+      this.keys.set(key, data);
+    }
+    if (data.count >= limit) {
+      return {
+        allowed: false,
+        retryAfter: Math.max(1, Math.ceil((60000 - (now - data.windowStart)) / 1000)),
+      };
+    }
+    data.count++;
+    // Hard cap on memory: evict oldest if map grows too large
+    if (this.keys.size > 10000) {
+      this.keys.delete(this.keys.keys().next().value);
+    }
+    return { allowed: true };
   }
 
   /**
@@ -153,6 +195,24 @@ export const checkRateLimit = (provider) => {
  */
 export const getStatus = () => {
   return getLimiter().getStatus();
+};
+
+/**
+ * Express middleware: per-IP inbound rate limit.
+ * @param {string} bucket - Route bucket name
+ * @param {number} limit - Max requests per minute per IP
+ */
+export const ipRateLimit = (bucket, limit) => (req, res, next) => {
+  const ip = req.ip || req.socket?.remoteAddress || 'unknown';
+  const result = getLimiter().checkKey(`${bucket}:${ip}`, limit);
+  if (!result.allowed) {
+    res.set('Retry-After', String(result.retryAfter));
+    return res.status(429).json({
+      error: 'Too many requests. Please try again later.',
+      status: 429,
+    });
+  }
+  next();
 };
 
 export { RateLimiter };
