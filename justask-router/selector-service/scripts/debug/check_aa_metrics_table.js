@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Check ims.20_aa_performance_metrics table status
+ * Check justask."20_router-benchmark-scores" table status
  */
 
 import 'dotenv/config';
@@ -11,14 +11,14 @@ const supabase = createClient(
   process.env.SUPABASE_KEY
 );
 
-console.log('Checking ims.20_aa_performance_metrics table...\n');
+console.log('Checking justask."20_router-benchmark-scores" table...\n');
 
 async function checkTable() {
   try {
     // Get all records
     const { data: metrics, error } = await supabase
-      .schema('ims')
-      .from('20_aa_performance_metrics')
+      .schema('justask')
+      .from('20_router-benchmark-scores')
       .select('*');
 
     if (error) {

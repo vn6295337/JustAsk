@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Pipeline vs Supabase Field Comparison
-Compares field values between 18_validated_models.json and Supabase working_version table
+Compares field values between 18_validated_models.json and Supabase 10_free-models-staging table
 """
 
 import json
@@ -56,7 +56,7 @@ CONFIG_DIR = PROJECT_ROOT / "config" / "openrouter"
 # Configuration
 PIPELINE_DATA_FILE = get_input_file_path("18_validated_models.json")
 REPORT_FILE = get_output_file_path("19_supabase_comparison.txt")
-TABLE_NAME = "working_version"
+TABLE_NAME = 'justask."10_free-models-staging"'
 INFERENCE_PROVIDER = "OpenRouter"
 
 def get_db_connection():
@@ -108,7 +108,7 @@ def _norm(value) -> str:
 
 
 def load_supabase_data(conn) -> List[Dict[str, Any]]:
-    """Load OpenRouter data from Supabase working_version table"""
+    """Load OpenRouter data from Supabase 10_free-models-staging table"""
     try:
         print(f"Querying Supabase table '{TABLE_NAME}' for inference_provider='{INFERENCE_PROVIDER}'")
         with conn.cursor(cursor_factory=RealDictCursor) as cur:

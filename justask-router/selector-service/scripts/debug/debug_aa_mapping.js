@@ -14,14 +14,14 @@ const supabase = createClient(
 async function debugMapping() {
   // Get model-aa mapping
   const { data: mappings } = await supabase
-    .schema('ims')
-    .from('10_model_aa_mapping')
+    .schema('justask')
+    .from('21_router-model-benchmark-map')
     .select('*');
 
   // Get all AA performance metrics
   const { data: metrics } = await supabase
-    .schema('ims')
-    .from('20_aa_performance_metrics')
+    .schema('justask')
+    .from('20_router-benchmark-scores')
     .select('aa_slug, intelligence_index, name');
 
   const metricsMap = {};
@@ -30,8 +30,8 @@ async function debugMapping() {
   });
 
   console.log(`\n📊 Mapping Table Analysis:`);
-  console.log(`   Total mappings in ims.10_model_aa_mapping: ${mappings.length}`);
-  console.log(`   Total metrics in ims.20_aa_performance_metrics: ${metrics.length}`);
+  console.log(`   Total mappings in justask."21_router-model-benchmark-map": ${mappings.length}`);
+  console.log(`   Total metrics in justask."20_router-benchmark-scores": ${metrics.length}`);
   console.log();
 
   // Check which mappings have corresponding metrics

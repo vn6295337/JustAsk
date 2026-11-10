@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Refresh AA Performance Metrics Table (ims.20_aa_performance_metrics)
+Refresh AA Performance Metrics Table (justask."20_router-benchmark-scores")
 
 Fetches latest model performance data from the Artificial Analysis API
-(Free endpoint: /api/v2/language/models/free) and updates the ims.20_aa_performance_metrics table in Supabase.
+(Free endpoint: /api/v2/language/models/free) and updates the justask."20_router-benchmark-scores" table in Supabase.
 
 This script runs daily via GitHub Actions at 00:00 UTC.
 """
@@ -94,7 +94,7 @@ def blended_price_3_to_1(pricing: Dict) -> Optional[float]:
 
 def transform_to_db_format(api_data: List[Dict]) -> List[Dict]:
     """
-    Transform Free-shape API data to the ims.20_aa_performance_metrics schema.
+    Transform Free-shape API data to the justask."20_router-benchmark-scores" schema.
 
     Free-shape notes:
     - Performance fields are nested under "performance".
@@ -170,7 +170,7 @@ def transform_to_db_format(api_data: List[Dict]) -> List[Dict]:
 
 def refresh_database_table(records: List[Dict]):
     """
-    Refresh the ims.20_aa_performance_metrics table
+    Refresh the justask."20_router-benchmark-scores" table
 
     Strategy: DELETE + INSERT in one transaction.
     A failure rolls back to the original rows, so no backup table is needed
@@ -190,7 +190,7 @@ def refresh_database_table(records: List[Dict]):
 
     try:
         # Sanity check against the current table BEFORE touching anything
-        cur.execute('SELECT COUNT(*) FROM ims."20_aa_performance_metrics";')
+        cur.execute('SELECT COUNT(*) FROM justask."20_router-benchmark-scores";')
         existing_count = cur.fetchone()[0]
         log(f"Existing records: {existing_count}")
 
@@ -200,12 +200,12 @@ def refresh_database_table(records: List[Dict]):
                 f"{len(records)} (< {MIN_RATIO_OF_EXISTING:.0%}); aborting without changes"
             )
 
-        # Diagnostic only: do the mapped slugs (ims.10) still exist in the new data?
+        # Diagnostic only: do the mapped slugs (21_router-model-benchmark-map) still exist in the new data?
         # The API migration could have changed slugs; a low match rate means the
         # mapping needs a refresh before the next ranking run.
         cur.execute("SAVEPOINT slug_check;")
         try:
-            cur.execute('SELECT DISTINCT aa_slug FROM ims."10_model_aa_mapping" WHERE aa_slug IS NOT NULL;')
+            cur.execute('SELECT DISTINCT aa_slug FROM justask."21_router-model-benchmark-map" WHERE aa_slug IS NOT NULL;')
             mapped = {row[0] for row in cur.fetchall()}
             new_slugs = {r["aa_slug"] for r in records}
             if mapped:
@@ -220,14 +220,14 @@ def refresh_database_table(records: List[Dict]):
 
         # Step 1: Delete all existing records (same transaction as the insert)
         log("Deleting existing records...")
-        cur.execute('DELETE FROM ims."20_aa_performance_metrics";')
+        cur.execute('DELETE FROM justask."20_router-benchmark-scores";')
         log(f"Deleted {cur.rowcount} records")
 
         # Step 2: Insert new records
         log(f"Inserting {len(records)} new records...")
 
         insert_sql = """
-            INSERT INTO ims."20_aa_performance_metrics" (
+            INSERT INTO justask."20_router-benchmark-scores" (
                 aa_model_id, aa_slug, name, creator_name, creator_slug, release_date,
                 intelligence_index, coding_index, math_index,
                 mmlu_pro, gpqa, hle, livecodebench, scicode, math_500, aime, aime_25,
@@ -250,7 +250,7 @@ def refresh_database_table(records: List[Dict]):
         cur.executemany(insert_sql, records)
 
         # executemany().rowcount is unreliable; verify with a count
-        cur.execute('SELECT COUNT(*) FROM ims."20_aa_performance_metrics";')
+        cur.execute('SELECT COUNT(*) FROM justask."20_router-benchmark-scores";')
         inserted_count = cur.fetchone()[0]
         if inserted_count != len(records):
             raise RuntimeError(f"Insert verification failed: expected {len(records)}, found {inserted_count}")

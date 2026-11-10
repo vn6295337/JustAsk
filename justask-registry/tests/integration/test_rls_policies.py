@@ -40,13 +40,13 @@ print(f"Supabase URL: {SUPABASE_URL}")
 print("=" * 70)
 print()
 
-# Test 1: Read from ai_models_main (should SUCCEED - public read policy)
-print("Test 1: SELECT from ai_models_main (should SUCCEED)")
+# Test 1: Read from 11_free-models-live (should SUCCEED - public read policy)
+print("Test 1: SELECT from 11_free-models-live (should SUCCEED)")
 print("-" * 70)
 try:
-    response = supabase.table("ai_models_main").select("human_readable_name, inference_provider").limit(5).execute()
+    response = supabase.schema("justask").table("11_free-models-live").select("human_readable_name, inference_provider").limit(5).execute()
     if response.data:
-        print(f"✅ SUCCESS: Read {len(response.data)} records from ai_models_main")
+        print(f"✅ SUCCESS: Read {len(response.data)} records from 11_free-models-live")
         for record in response.data[:3]:
             print(f"   - {record.get('human_readable_name')} ({record.get('inference_provider')})")
     else:
@@ -55,11 +55,11 @@ except Exception as e:
     print(f"❌ FAILED: {e}")
 print()
 
-# Test 2: Write to ai_models_main (should FAIL - anon has no write access)
-print("Test 2: INSERT into ai_models_main (should FAIL)")
+# Test 2: Write to 11_free-models-live (should FAIL - anon has no write access)
+print("Test 2: INSERT into 11_free-models-live (should FAIL)")
 print("-" * 70)
 try:
-    response = supabase.table("ai_models_main").insert({
+    response = supabase.schema("justask").table("11_free-models-live").insert({
         "human_readable_name": "test-model-delete-me",
         "inference_provider": "Test"
     }).execute()
@@ -73,11 +73,11 @@ except Exception as e:
         print(f"⚠️  Write failed but with unexpected error: {e}")
 print()
 
-# Test 3: Read from working_version (should FAIL - no public policy)
-print("Test 3: SELECT from working_version (should FAIL - private table)")
+# Test 3: Read from 10_free-models-staging (should FAIL - no public policy)
+print("Test 3: SELECT from 10_free-models-staging (should FAIL - private table)")
 print("-" * 70)
 try:
-    response = supabase.table("working_version").select("human_readable_name").limit(5).execute()
+    response = supabase.schema("justask").table("10_free-models-staging").select("human_readable_name").limit(5).execute()
     if response.data:
         print(f"❌ SECURITY ISSUE: Read succeeded when it should have failed!")
         print(f"   Retrieved {len(response.data)} records")
@@ -91,11 +91,11 @@ except Exception as e:
         print(f"⚠️  Read failed but with unexpected error: {e}")
 print()
 
-# Test 4: Write to working_version (should FAIL - anon has no access)
-print("Test 4: INSERT into working_version (should FAIL)")
+# Test 4: Write to 10_free-models-staging (should FAIL - anon has no access)
+print("Test 4: INSERT into 10_free-models-staging (should FAIL)")
 print("-" * 70)
 try:
-    response = supabase.table("working_version").insert({
+    response = supabase.schema("justask").table("10_free-models-staging").insert({
         "human_readable_name": "test-model-delete-me",
         "inference_provider": "Test"
     }).execute()
@@ -112,8 +112,8 @@ print("=" * 70)
 print("RLS VERIFICATION COMPLETE")
 print("=" * 70)
 print("Expected results:")
-print("  ✅ Test 1: Read ai_models_main - SUCCESS (public read allowed)")
-print("  ✅ Test 2: Write ai_models_main - FAIL (anon cannot write)")
-print("  ✅ Test 3: Read working_version - FAIL (private table)")
-print("  ✅ Test 4: Write working_version - FAIL (anon cannot access)")
+print("  ✅ Test 1: Read 11_free-models-live - SUCCESS (public read allowed)")
+print("  ✅ Test 2: Write 11_free-models-live - FAIL (anon cannot write)")
+print("  ✅ Test 3: Read 10_free-models-staging - FAIL (private table)")
+print("  ✅ Test 4: Write 10_free-models-staging - FAIL (anon cannot access)")
 print("=" * 70)

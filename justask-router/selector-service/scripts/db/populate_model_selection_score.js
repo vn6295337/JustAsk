@@ -1,10 +1,10 @@
 /**
  * Populate Model Selection Score Table
  *
- * Script to populate ims.40_model_selection_score with consolidated data
- * from working_version, model_aa_mapping, aa_performance_metrics, and rate_limits
+ * Script to populate justask."23_router-model-ranking" with consolidated data
+ * from 10_free-models-staging, model_aa_mapping, aa_performance_metrics, and rate_limits
  *
- * Only includes models that exist in ims.10_model_aa_mapping (i.e., have AA metrics)
+ * Only includes models that exist in justask."21_router-model-benchmark-map" (i.e., have AA metrics)
  *
  * Usage: node populate_model_selection_score.js [--no-prune]
  * Requires SUPABASE_SERVICE_KEY. Run manually; do not add to CI.
@@ -60,7 +60,7 @@ const OPEN_SOURCE_LICENSES = [
 ];
 
 /**
- * Normalize provider_slug to match ims.10_model_aa_mapping format
+ * Normalize provider_slug to match justask."21_router-model-benchmark-map" format
  * Matches normalization in justask-registry/model_aa_mapping_utils.py
  */
 function normalizeProviderSlug(slug) {
@@ -153,11 +153,11 @@ async function populateModelSelectionScore() {
   console.log('🚀 Starting model selection score population...\n');
 
   try {
-    // Step 1: Fetch models from ims.10_model_aa_mapping (only mapped models)
-    console.log('📊 Fetching mapped models from ims.10_model_aa_mapping...');
+    // Step 1: Fetch models from justask."21_router-model-benchmark-map" (only mapped models)
+    console.log('📊 Fetching mapped models from justask."21_router-model-benchmark-map"...');
     const { data: mappings, error: mappingsError } = await supabase
-      .schema('ims')
-      .from('10_model_aa_mapping')
+      .schema('justask')
+      .from('21_router-model-benchmark-map')
       .select('provider_slug, aa_slug, inference_provider');
 
     if (mappingsError) {
@@ -166,18 +166,18 @@ async function populateModelSelectionScore() {
 
     console.log(`✅ Found ${mappings.length} mapped models\n`);
 
-    // Step 2: Fetch working_version data
-    console.log('📊 Fetching model details from working_version...');
+    // Step 2: Fetch 10_free-models-staging data
+    console.log('📊 Fetching model details from 10_free-models-staging...');
     const { data: workingModels, error: workingError } = await supabase
-      .from('working_version')
+      .schema('justask').from('10_free-models-staging')
       .select('provider_slug, human_readable_name, model_provider, inference_provider, model_provider_country, license_name');
 
     if (workingError) {
-      throw new Error(`Failed to fetch working_version: ${workingError.message}`);
+      throw new Error(`Failed to fetch 10_free-models-staging: ${workingError.message}`);
     }
 
     // Create lookup map by BOTH original and normalized provider_slug
-    // This handles mismatch between normalized slugs in mapping table and original slugs in working_version
+    // This handles mismatch between normalized slugs in mapping table and original slugs in 10_free-models-staging
     const workingMap = {};
     workingModels.forEach(m => {
       // Store by original slug
@@ -190,13 +190,13 @@ async function populateModelSelectionScore() {
       }
     });
 
-    console.log(`✅ Fetched ${workingModels.length} models from working_version\n`);
+    console.log(`✅ Fetched ${workingModels.length} models from 10_free-models-staging\n`);
 
     // Step 3: Fetch aa_performance_metrics
-    console.log('📊 Fetching performance metrics from ims.20_aa_performance_metrics...');
+    console.log('📊 Fetching performance metrics from justask."20_router-benchmark-scores"...');
     const { data: metrics, error: metricsError } = await supabase
-      .schema('ims')
-      .from('20_aa_performance_metrics')
+      .schema('justask')
+      .from('20_router-benchmark-scores')
       .select('aa_slug, intelligence_index');
 
     if (metricsError) {
@@ -212,10 +212,10 @@ async function populateModelSelectionScore() {
     console.log(`✅ Fetched ${metrics.length} performance metrics\n`);
 
     // Step 4: Fetch rate_limits
-    console.log('📊 Fetching rate limits from ims.30_rate_limits...');
+    console.log('📊 Fetching rate limits from justask."22_router-provider-rate-limits"...');
     const { data: rateLimits, error: rateLimitsError } = await supabase
-      .schema('ims')
-      .from('30_rate_limits')
+      .schema('justask')
+      .from('22_router-provider-rate-limits')
       .select('human_readable_name, rpm, rpd, tpm, tpd');
 
     if (rateLimitsError) {
@@ -248,7 +248,7 @@ async function populateModelSelectionScore() {
 
       // Skip if missing critical data
       if (!workingData) {
-        console.warn(`⚠️  Skipping ${mapping.inference_provider}:${providerSlug}: Not found in working_version`);
+        console.warn(`⚠️  Skipping ${mapping.inference_provider}:${providerSlug}: Not found in 10_free-models-staging`);
         skippedCount++;
         skippedModels.push({
           provider: mapping.inference_provider,
@@ -336,7 +336,7 @@ async function populateModelSelectionScore() {
     console.log('─'.repeat(120));
     console.log(`Direct matches:      ${matchStats.directMatch} (provider_slug exact match)`);
     console.log(`Normalized matches:  ${matchStats.normalizedMatch} (required normalization)`);
-    console.log(`Failed matches:      ${matchStats.noMatch} (not found in working_version)`);
+    console.log(`Failed matches:      ${matchStats.noMatch} (not found in 10_free-models-staging)`);
     console.log(`Total processed:     ${mappings.length}`);
     console.log(`Success rate:        ${((matchStats.directMatch + matchStats.normalizedMatch) / mappings.length * 100).toFixed(1)}%\n`);
 
@@ -348,7 +348,7 @@ async function populateModelSelectionScore() {
         console.log(`   ${m.provider}:${m.slug} (aa_slug: ${m.aa_slug})`);
         // Suggest possible original slug
         const denormalized = m.slug.replace(/-(\d)/g, '.$1'); // Try converting hyphens back to periods for version numbers
-        console.log(`      → Try checking working_version for: ${denormalized}`);
+        console.log(`      → Try checking 10_free-models-staging for: ${denormalized}`);
       });
       console.log();
     }
@@ -366,11 +366,11 @@ async function populateModelSelectionScore() {
     const duplicatesRemoved = records.length - uniqueRecords.length;
     console.log(`✅ Removed ${duplicatesRemoved} duplicates, ${uniqueRecords.length} unique records remain\n`);
 
-    // Step 6: Upsert into ims."40_model_selection_score"
-    console.log(`💾 Upserting ${uniqueRecords.length} records into ims."40_model_selection_score"...`);
+    // Step 6: Upsert into justask."23_router-model-ranking"
+    console.log(`💾 Upserting ${uniqueRecords.length} records into justask."23_router-model-ranking"...`);
     const { data: inserted, error: upsertError } = await supabase
-      .schema('ims')
-      .from('40_model_selection_score')
+      .schema('justask')
+      .from('23_router-model-ranking')
       .upsert(uniqueRecords, {
         onConflict: 'model_name',
         ignoreDuplicates: false
@@ -387,8 +387,8 @@ async function populateModelSelectionScore() {
     if (PRUNE && uniqueRecords.length > 0) {
       const keep = new Set(uniqueRecords.map(r => r.model_name));
       const { data: existing, error: existingError } = await supabase
-        .schema('ims')
-        .from('40_model_selection_score')
+        .schema('justask')
+        .from('23_router-model-ranking')
         .select('model_name');
       if (existingError) {
         throw new Error(`Failed to list existing rows: ${existingError.message}`);
@@ -396,8 +396,8 @@ async function populateModelSelectionScore() {
       const stale = (existing || []).map(r => r.model_name).filter(n => !keep.has(n));
       for (let i = 0; i < stale.length; i += 100) {
         const { error: delError } = await supabase
-          .schema('ims')
-          .from('40_model_selection_score')
+          .schema('justask')
+          .from('23_router-model-ranking')
           .delete()
           .in('model_name', stale.slice(i, i + 100));
         if (delError) {

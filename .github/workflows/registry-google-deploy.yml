@@ -40,7 +40,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Refresh working_version (Step 7)
+    - name: Refresh 10_free-models-staging (Step 7)
       if: ${{ inputs.step == 'refresh-working (Step 7)' || inputs.step == 'both' }}
       working-directory: justask-registry
       env:
@@ -49,18 +49,18 @@ jobs:
       run: |
         python -m src.main google --steps 7
 
-    - name: Deploy to ai_models_main (Step 8) + Refresh AA Mapping
+    - name: Deploy to 11_free-models-live (Step 8) + Refresh AA Mapping
       if: ${{ inputs.step == 'deploy-main (Step 8)' || inputs.step == 'both' }}
       working-directory: justask-registry
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         PIPELINE_SUPABASE_URL: ${{ secrets.PIPELINE_SUPABASE_URL }}
       run: |
-        # Deploy to ai_models_main
+        # Deploy to 11_free-models-live
         python -m src.main google --steps 8
 
-        # Refresh ims.10_model_aa_mapping for Google
-        echo "Refreshing ims.10_model_aa_mapping for Google..."
+        # Refresh justask.21_router-model-benchmark-map for Google
+        echo "Refreshing justask.21_router-model-benchmark-map for Google..."
         python - <<'PY'
         import sys
         from src.utils.db import get_pipeline_db_connection

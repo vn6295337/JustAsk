@@ -1,3 +1,6 @@
+-- HISTORICAL: do not run. These tables now live in schema justask under new names
+-- (see docs/database-map.md). Running this would recreate the old names and the
+-- anon write policies removed on 2026-11-10.
 -- Migration: Replace human_readable_name with provider_slug in ims."10_model_aa_mapping"
 -- Date: 2025-11-28
 -- Purpose: Use provider_slug for 1-1 matching instead of human_readable_name

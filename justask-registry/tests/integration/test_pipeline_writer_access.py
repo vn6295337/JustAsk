@@ -50,31 +50,31 @@ try:
 
     cursor = conn.cursor(cursor_factory=RealDictCursor)
 
-    # Test 1: Read from ai_models_main_v3
-    print("Test 1: SELECT from ai_models_main_v3")
+    # Test 1: Read from 11_free-models-live
+    print("Test 1: SELECT from 11_free-models-live")
     print("-" * 70)
-    cursor.execute("SELECT human_readable_name, inference_provider FROM ai_models_main_v3 LIMIT 3")
+    cursor.execute('SELECT human_readable_name, inference_provider FROM justask."11_free-models-live" LIMIT 3')
     rows = cursor.fetchall()
     print(f"✅ SUCCESS: Read {len(rows)} records")
     for row in rows:
         print(f"   - {row['human_readable_name']} ({row['inference_provider']})")
     print()
 
-    # Test 2: Read from working_version_v3
-    print("Test 2: SELECT from working_version_v3 (private table)")
+    # Test 2: Read from 10_free-models-staging
+    print("Test 2: SELECT from 10_free-models-staging (private table)")
     print("-" * 70)
-    cursor.execute("SELECT human_readable_name, inference_provider FROM working_version_v3 LIMIT 3")
+    cursor.execute('SELECT human_readable_name, inference_provider FROM justask."10_free-models-staging" LIMIT 3')
     rows = cursor.fetchall()
     print(f"✅ SUCCESS: Read {len(rows)} records from private table")
     for row in rows:
         print(f"   - {row['human_readable_name']} ({row['inference_provider']})")
     print()
 
-    # Test 3: Insert into ai_models_main_v3
-    print("Test 3: INSERT into ai_models_main_v3")
+    # Test 3: Insert into 11_free-models-live
+    print("Test 3: INSERT into 11_free-models-live")
     print("-" * 70)
     cursor.execute("""
-        INSERT INTO ai_models_main_v3
+        INSERT INTO justask."11_free-models-live"
         (inference_provider, human_readable_name, model_provider)
         VALUES ('Test', 'Claude Code Test Model', 'Test Provider')
         RETURNING id, human_readable_name
@@ -84,15 +84,15 @@ try:
     print(f"   Model: {inserted['human_readable_name']}")
 
     # Clean up - delete the test record
-    cursor.execute("DELETE FROM ai_models_main_v3 WHERE id = %s", (inserted['id'],))
+    cursor.execute('DELETE FROM justask."11_free-models-live" WHERE id = %s', (inserted['id'],))
     print(f"✅ Cleanup: Deleted test record")
     print()
 
-    # Test 4: Insert into working_version_v3
-    print("Test 4: INSERT into working_version_v3 (private table)")
+    # Test 4: Insert into 10_free-models-staging
+    print("Test 4: INSERT into 10_free-models-staging (private table)")
     print("-" * 70)
     cursor.execute("""
-        INSERT INTO working_version_v3
+        INSERT INTO justask."10_free-models-staging"
         (inference_provider, human_readable_name, model_provider)
         VALUES ('Test', 'Claude Code Test Staging', 'Test Provider')
         RETURNING id, human_readable_name
@@ -102,7 +102,7 @@ try:
     print(f"   Model: {inserted['human_readable_name']}")
 
     # Clean up - delete the test record
-    cursor.execute("DELETE FROM working_version_v3 WHERE id = %s", (inserted['id'],))
+    cursor.execute('DELETE FROM justask."10_free-models-staging" WHERE id = %s', (inserted['id'],))
     print(f"✅ Cleanup: Deleted test record")
     print()
 
@@ -111,7 +111,7 @@ try:
     print("-" * 70)
     cursor.execute("""
         SELECT inference_provider, COUNT(*) as count
-        FROM ai_models_main_v3
+        FROM justask."11_free-models-live"
         GROUP BY inference_provider
         ORDER BY count DESC
     """)
@@ -129,8 +129,8 @@ try:
     print("✅ ALL TESTS PASSED")
     print("=" * 70)
     print("pipeline_writer role has full access to:")
-    print("  ✅ ai_models_main_v3 (read/write)")
-    print("  ✅ working_version_v3 (read/write)")
+    print("  ✅ 11_free-models-live (read/write)")
+    print("  ✅ 10_free-models-staging (read/write)")
     print("=" * 70)
 
 except Exception as e:

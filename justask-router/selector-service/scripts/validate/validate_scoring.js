@@ -24,8 +24,8 @@ async function validateScoring() {
   try {
     // Step 1: Fetch models from 4-table JOIN
     console.log('📊 Step 1: Fetching models from 4-table JOIN...');
-    console.log('   Tables: working_version, ims.10_model_aa_mapping,');
-    console.log('           ims.20_aa_performance_metrics, ims.30_rate_limits');
+    console.log('   Tables: 10_free-models-staging, justask."21_router-model-benchmark-map",');
+    console.log('           justask."20_router-benchmark-scores", justask."22_router-provider-rate-limits"');
     console.log();
 
     const models = await fetchLatestModels();

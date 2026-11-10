@@ -2,7 +2,7 @@
  * Populate Rate Limits Table
  *
  * One-time script to populate rate_limits table with normalized data
- * from working_version.rate_limits column for text-generation models
+ * from 10_free-models-staging.rate_limits column for text-generation models
  *
  * Usage: node populate_rate_limits.js [--no-prune]
  * Requires SUPABASE_SERVICE_KEY. Run manually; do not add to CI.
@@ -33,10 +33,10 @@ async function populateRateLimits() {
   console.log('🚀 Starting rate limits population...\n');
 
   try {
-    // Step 1: Fetch text-generation models from working_version
-    console.log('📊 Fetching text-generation models from working_version...');
+    // Step 1: Fetch text-generation models from 10_free-models-staging
+    console.log('📊 Fetching text-generation models from 10_free-models-staging...');
     const { data: models, error: fetchError } = await supabase
-      .from('working_version')
+      .schema('justask').from('10_free-models-staging')
       .select('human_readable_name, inference_provider, rate_limits, output_modalities')
       .ilike('output_modalities', '%Text%')
       .not('output_modalities', 'ilike', '%Embedding%');
@@ -78,11 +78,11 @@ async function populateRateLimits() {
       console.log();
     }
 
-    // Step 4: Upsert into ims.30_rate_limits table
-    console.log(`💾 Upserting ${uniqueData.length} models into ims.30_rate_limits table...`);
+    // Step 4: Upsert into justask."22_router-provider-rate-limits" table
+    console.log(`💾 Upserting ${uniqueData.length} models into justask."22_router-provider-rate-limits" table...`);
     const { data: inserted, error: upsertError} = await supabase
-      .schema('ims')
-      .from('30_rate_limits')
+      .schema('justask')
+      .from('22_router-provider-rate-limits')
       .upsert(uniqueData, {
         onConflict: 'human_readable_name',
         ignoreDuplicates: false
@@ -95,12 +95,12 @@ async function populateRateLimits() {
 
     console.log(`✅ Successfully populated ${inserted?.length || uniqueData.length} models\n`);
 
-    // Remove stale rows (models no longer in working_version)
+    // Remove stale rows (models no longer in 10_free-models-staging)
     if (PRUNE && uniqueData.length > 0) {
       const keep = new Set(uniqueData.map(d => d.human_readable_name));
       const { data: existing, error: existingError } = await supabase
-        .schema('ims')
-        .from('30_rate_limits')
+        .schema('justask')
+        .from('22_router-provider-rate-limits')
         .select('human_readable_name');
       if (existingError) {
         throw new Error(`Failed to list existing rows: ${existingError.message}`);
@@ -108,8 +108,8 @@ async function populateRateLimits() {
       const stale = (existing || []).map(r => r.human_readable_name).filter(n => !keep.has(n));
       for (let i = 0; i < stale.length; i += 100) {
         const { error: delError } = await supabase
-          .schema('ims')
-          .from('30_rate_limits')
+          .schema('justask')
+          .from('22_router-provider-rate-limits')
           .delete()
           .in('human_readable_name', stale.slice(i, i + 100));
         if (delError) {
