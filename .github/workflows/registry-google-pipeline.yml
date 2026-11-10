@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: '0 0 * * *'  # Daily at 00:00 UTC
 
+concurrency:
+  group: registry-google-pipeline
+  cancel-in-progress: false
+
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
@@ -46,8 +50,19 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add justask-registry/outputs/google/
-        git diff --staged --quiet || git commit -m "Update Google pipeline outputs [skip ci]"
-        git push
+        if git diff --staged --quiet; then
+          echo "No output changes to commit"
+          exit 0
+        fi
+        git commit -m "Update Google pipeline outputs [skip ci]"
+        for i in 1 2 3; do
+          if git pull --rebase --autostash origin "$GITHUB_REF_NAME" && git push; then
+            exit 0
+          fi
+          sleep $((i * 5))
+        done
+        echo "ERROR: could not push outputs after 3 attempts"
+        exit 1
 
     - name: Upload outputs
       uses: actions/upload-artifact@v4

@@ -82,6 +82,7 @@
 - [configuration.md](./operations/configuration.md) - Environment variables, rates
 - [troubleshooting.md](./operations/troubleshooting.md) - Installation, runtime, offline issues
 - [AI-Projects-Archive-and-Recovery.md](./AI-Projects-Archive-and-Recovery.md) - Sibling AI projects: remotes, HEADs, and how to restore them
+- [audit/README.md](./audit/README.md) - 2026-11-02 codebase audit: findings by package, priorities, status
 
 ---
 

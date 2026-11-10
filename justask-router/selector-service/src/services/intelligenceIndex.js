@@ -25,14 +25,25 @@ function getApiKey() {
  * @returns {Promise<Object>} Map of model names to intelligence scores
  */
 export async function fetchIntelligenceScores() {
-  // Check cache first
+  // Check cache first (expired entries are not returned)
   const cached = await cacheManager.get('intelligenceIndex');
   if (cached) {
     console.log('Intelligence Index: Using cached scores');
     return cached;
   }
 
-  // Fetch from API if key available
+  // Share one in-flight fetch between concurrent callers
+  if (!inflightFetch) {
+    inflightFetch = loadScores().finally(() => {
+      inflightFetch = null;
+    });
+  }
+  return inflightFetch;
+}
+
+let inflightFetch = null;
+
+async function loadScores() {
   const apiKey = getApiKey();
   if (apiKey && apiKey !== 'your-api-key-here') {
     try {
@@ -45,14 +56,17 @@ export async function fetchIntelligenceScores() {
       return scores;
     } catch (error) {
       console.warn('Intelligence Index: API fetch failed, using fallback', error.message);
-      // Fall through to empty map (will use fallback scoring)
     }
   } else {
     console.log('Intelligence Index: No API key configured, using fallback scoring');
   }
 
-  // Return empty map if no API key or fetch failed
-  return {};
+  // Failure: keep serving stale scores if any, else empty map (size-based fallback).
+  // Negative-cache briefly so a failing API is not hit on every request.
+  const stale = await cacheManager.get('intelligenceIndex', { allowStale: true });
+  const fallback = stale || {};
+  await cacheManager.set('intelligenceIndex', fallback, CACHE_TTLS.negative);
+  return fallback;
 }
 
 /**
@@ -166,21 +180,28 @@ function normalizeScore(score) {
  * @param {Object} scoresMap - Map of slugs to scores from Artificial Analysis API
  * @returns {number} Intelligence score (0-1)
  */
-export function getModelScore(model, scoresMap) {
-  if (!model || !model.human_readable_name) {
+export function getModelScore(model, scoresMap = {}) {
+  if (!model) {
     return calculateFallbackScore(model);
   }
 
-  // Direct 1-to-1 matching using human_readable_name field from database
-  // human_readable_name should be stored in exact Artificial Analysis slug format
-  // Examples: "gemini-2-5-flash", "gemma-3-27b", "llama-3-3-70b-versatile"
-  const modelName = model.human_readable_name;
+  const map = scoresMap || {};
+  const metrics = model.aa_performance_metrics || null;
 
-  if (scoresMap[modelName]) {
-    return scoresMap[modelName];
+  // The scores map is keyed by Artificial Analysis slug. Resolve the model's AA slug
+  // through the mapping (ims.10_model_aa_mapping), never via human_readable_name.
+  const aaSlug = model.aa_slug || metrics?.aa_slug || null;
+
+  if (aaSlug && map[aaSlug] != null) {
+    return map[aaSlug];
   }
 
-  // Fallback to size-based scoring if no exact match
+  // Mapped metrics joined at fetch time (ims.20_aa_performance_metrics)
+  if (metrics && typeof metrics.intelligence_index === 'number' && Number.isFinite(metrics.intelligence_index)) {
+    return normalizeScore(metrics.intelligence_index);
+  }
+
+  // Fallback to size-based scoring if no mapped score
   return calculateFallbackScore(model);
 }
 
@@ -190,15 +211,18 @@ export function getModelScore(model, scoresMap) {
  * @returns {number} Fallback score (0-1)
  */
 export function calculateFallbackScore(model) {
-  if (!model || !model.human_readable_name) {
+  if (!model || typeof model.human_readable_name !== 'string') {
     return 0.6; // Default moderate score
   }
 
   const modelName = model.human_readable_name.toLowerCase();
 
   // Try to extract model size from name
+  // Match the size as a whole token so "qwen3-32b" does not hit "2b" and
+  // "llama-3.2-11b" does not hit "1b"
   for (const [size, score] of Object.entries(MODEL_SIZE_SCORES)) {
-    if (modelName.includes(size)) {
+    const re = new RegExp(`(?<![a-z0-9.])${size}(?![a-z0-9])`);
+    if (re.test(modelName)) {
       return score;
     }
   }

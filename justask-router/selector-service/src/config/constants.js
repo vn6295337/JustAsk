@@ -2,6 +2,8 @@
  * Configuration constants for model selection
  */
 
+import 'dotenv/config'; // CACHE_TTL below is read at import time
+
 // Selection scoring weights (must sum to 1.0)
 export const SELECTION_WEIGHTS = {
   intelligenceIndex: 0.35,
@@ -56,7 +58,8 @@ export const RATE_LIMIT_DEFAULTS = {
 // Cache TTLs
 export const CACHE_TTLS = {
   models: parseInt(process.env.CACHE_TTL || '1800000', 10),      // 30 minutes default
-  intelligenceIndex: 604800000                                    // 7 days
+  intelligenceIndex: 604800000,                                   // 7 days
+  negative: 300000                                                // 5 minutes (failed AA fetch)
 };
 
 // Open source licenses

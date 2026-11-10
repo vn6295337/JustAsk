@@ -2,10 +2,15 @@ import Constants from 'expo-constants';
 import Database from './Database';
 
 /**
- * Simple string hash function for cache keys (FNV-1a hash)
+ * Normalize query text for cache keys: case/whitespace-insensitive.
  */
-const simpleHash = (str) => {
-  let hash = 2166136261;
+const normalizeQuery = (text) => text.trim().replace(/\s+/g, ' ').toLowerCase();
+
+/**
+ * FNV-1a string hash with a configurable seed
+ */
+const fnv = (str, seed) => {
+  let hash = seed;
   for (let i = 0; i < str.length; i++) {
     hash ^= str.charCodeAt(i);
     hash += (hash << 1) + (hash << 4) + (hash << 7) + (hash << 8) + (hash << 24);
@@ -13,13 +18,30 @@ const simpleHash = (str) => {
   return (hash >>> 0).toString(36);
 };
 
+// Queries whose answers go stale quickly must never be served from cache
+const TIME_SENSITIVE =
+  /\b(today|tonight|tomorrow|yesterday|now|current(ly)?|latest|recent(ly)?|breaking|news|headlines?|trending|live|update[sd]?|price|prices|quote|stock|stocks|shares?|crypto|bitcoin|ethereum|exchange rate|rates?|weather|forecast|score|scores|this (morning|week|month|year)|right now|as of)\b/i;
+
+const UNCACHEABLE_CATEGORIES = new Set(['business_news', 'financial_analysis']);
+
 const CacheManager = {
+  normalizeQuery,
+
   /**
-   * Generate hash of query for cache key
+   * Hash of the normalized query (two independent 32-bit FNV passes).
+   * Collisions are still possible, so lookups also compare query_text.
    */
   getQueryHash: (queryText) => {
-    return simpleHash(queryText);
+    const n = normalizeQuery(queryText);
+    return `${fnv(n, 2166136261)}${fnv(n, 0x9747b28c)}`;
   },
+
+  /**
+   * False for time-sensitive queries (news, prices, "today", ...)
+   */
+  isCacheable: (queryText) => !!queryText?.trim() && !TIME_SENSITIVE.test(queryText),
+
+  isCacheableCategory: (category) => !UNCACHEABLE_CATEGORIES.has(category),
 
   /**
    * Check if cached response is valid (not expired)
@@ -32,9 +54,10 @@ const CacheManager = {
    * Get cached response if it exists and is valid
    */
   getCachedResponse: async (queryText) => {
-    if (!queryText?.trim()) return null;
+    if (!CacheManager.isCacheable(queryText)) return null;
 
     try {
+      const normalized = normalizeQuery(queryText);
       const hash = CacheManager.getQueryHash(queryText);
       const db = await Database.init();
 
@@ -45,6 +68,11 @@ const CacheManager = {
 
       if (!cached) {
         return null; // Cache miss
+      }
+
+      // Hash collision: same key, different query text
+      if (cached.query_text !== normalized) {
+        return null;
       }
 
       // Check if expired
@@ -72,26 +100,30 @@ const CacheManager = {
    * Save response to cache with TTL
    */
   saveToCache: async (queryText, response, llmUsed, category, responseTime) => {
-    if (!queryText?.trim()) return false;
+    if (!CacheManager.isCacheable(queryText) || !response?.trim()) return false;
+    if (!CacheManager.isCacheableCategory(category)) return false;
 
     try {
+      const normalized = normalizeQuery(queryText);
       const hash = CacheManager.getQueryHash(queryText);
       const cacheTTLDays = parseInt(Constants.expoConfig?.extra?.cacheTtlDays || '7', 10);
       const expiresAt = Date.now() + cacheTTLDays * 24 * 60 * 60 * 1000;
 
       const db = await Database.init();
 
-      // Check cache size before inserting
+      // Drop expired rows, then make room; skip caching if still over the limit
+      await CacheManager.deleteExpiredAll();
       const sizeOk = await CacheManager.checkAndEnforceSizeLimit();
       if (!sizeOk) {
-        console.warn('⚠️ Cache size limit reached, clearing oldest entries');
+        console.warn('⚠️ Cache size limit reached, response not cached');
+        return false;
       }
 
       await db.runAsync(
         `INSERT OR REPLACE INTO cache
          (query_hash, query_text, response, llm_used, category, response_time, expires_at)
          VALUES (?, ?, ?, ?, ?, ?, ?)`,
-        [hash, queryText, response, llmUsed, category, responseTime, expiresAt]
+        [hash, normalized, response, llmUsed, category, responseTime, expiresAt]
       );
 
       console.log('✅ Response cached for:', queryText);
@@ -103,13 +135,25 @@ const CacheManager = {
   },
 
   /**
-   * Get total cache size in MB
+   * Delete every expired entry
+   */
+  deleteExpiredAll: async () => {
+    try {
+      const db = await Database.init();
+      await db.runAsync('DELETE FROM cache WHERE expires_at <= ?', [Date.now()]);
+    } catch (error) {
+      console.error('❌ Delete expired entries error:', error);
+    }
+  },
+
+  /**
+   * Get total cache size in MB (UTF-8 bytes, not characters)
    */
   getCacheSize: async () => {
     try {
       const db = await Database.init();
       const result = await db.getFirstAsync(
-        `SELECT SUM(LENGTH(response)) as total_bytes FROM cache`
+        `SELECT SUM(LENGTH(CAST(response AS BLOB)) + LENGTH(CAST(COALESCE(query_text, '') AS BLOB))) as total_bytes FROM cache`
       );
 
       if (!result) {
@@ -125,36 +169,41 @@ const CacheManager = {
   },
 
   /**
-   * Check and enforce 50MB size limit
-   * Returns false if limit exceeded and cleanup didn't free enough space
+   * Enforce the size limit by evicting oldest entries (by actual byte size)
+   * until usage is under 90% of the limit.
+   * @returns {Promise<boolean>} true if the cache is under the limit afterwards
    */
   checkAndEnforceSizeLimit: async () => {
     try {
-      const cacheSizeLimit = parseFloat(Constants.expoConfig?.extra?.cacheSizeLimitMb || '50');
-      const currentSize = await CacheManager.getCacheSize();
+      const limitMb = parseFloat(Constants.expoConfig?.extra?.cacheSizeLimitMb || '50');
+      const currentMb = await CacheManager.getCacheSize();
 
-      if (currentSize > cacheSizeLimit) {
-        // Delete oldest entries by created_at until under limit
-        const db = await Database.init();
-        const entriesNeeded = Math.ceil((currentSize - cacheSizeLimit) / 2); // Rough estimate
-
-        const rows = await db.getAllAsync(
-          `SELECT id FROM cache ORDER BY created_at ASC LIMIT ?`,
-          [entriesNeeded]
-        );
-
-        if (rows.length > 0) {
-          for (const row of rows) {
-            await db.runAsync('DELETE FROM cache WHERE id = ?', [row.id]);
-          }
-
-          console.log(`🧹 Cleaned up ${rows.length} oldest cache entries`);
-        }
-
-        return false; // Size was over limit
+      if (currentMb <= limitMb) {
+        return true;
       }
 
-      return true; // Size is ok
+      const db = await Database.init();
+      const targetBytes = limitMb * 0.9 * 1024 * 1024;
+      let totalBytes = currentMb * 1024 * 1024;
+
+      const rows = await db.getAllAsync(
+        `SELECT id, LENGTH(CAST(response AS BLOB)) + LENGTH(CAST(COALESCE(query_text, '') AS BLOB)) AS bytes
+         FROM cache ORDER BY created_at ASC, id ASC`
+      );
+
+      const toDelete = [];
+      for (const row of rows) {
+        if (totalBytes <= targetBytes) break;
+        toDelete.push(row.id);
+        totalBytes -= row.bytes || 0;
+      }
+
+      for (const id of toDelete) {
+        await db.runAsync('DELETE FROM cache WHERE id = ?', [id]);
+      }
+      console.log(`🧹 Cleaned up ${toDelete.length} oldest cache entries`);
+
+      return totalBytes <= limitMb * 1024 * 1024;
     } catch (error) {
       console.error('❌ Cache size enforcement error:', error);
       return true; // Allow operation on error

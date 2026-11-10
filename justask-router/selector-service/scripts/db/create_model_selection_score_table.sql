@@ -55,22 +55,28 @@ CREATE INDEX IF NOT EXISTS idx_model_selection_score_intelligence_index ON ims."
 CREATE INDEX IF NOT EXISTS idx_model_selection_score_selection_score ON ims."40_model_selection_score"(selection_score);
 CREATE INDEX IF NOT EXISTS idx_model_selection_score_aa_slug ON ims."40_model_selection_score"(aa_slug);
 
+-- NOTE: the anon INSERT/UPDATE policies below are removed by drop_anon_write_policies.sql.
+-- Do not re-run this file after that migration without re-running it too.
+
 -- Enable Row Level Security
 ALTER TABLE ims."40_model_selection_score" ENABLE ROW LEVEL SECURITY;
 
 -- RLS Policy: Allow public read access
+DROP POLICY IF EXISTS "Allow public read access" ON ims."40_model_selection_score";
 CREATE POLICY "Allow public read access"
 ON ims."40_model_selection_score" FOR SELECT
 TO public
 USING (true);
 
 -- RLS Policy: Allow anon insert for setup scripts
+DROP POLICY IF EXISTS "Allow anon insert for setup" ON ims."40_model_selection_score";
 CREATE POLICY "Allow anon insert for setup"
 ON ims."40_model_selection_score" FOR INSERT
 TO anon
 WITH CHECK (true);
 
 -- RLS Policy: Allow anon update for usage tracking
+DROP POLICY IF EXISTS "Allow anon update for usage tracking" ON ims."40_model_selection_score";
 CREATE POLICY "Allow anon update for usage tracking"
 ON ims."40_model_selection_score" FOR UPDATE
 TO anon

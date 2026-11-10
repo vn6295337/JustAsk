@@ -125,7 +125,10 @@ selector-service/
 
 **Required:**
 - `SUPABASE_URL` - Supabase project URL
-- `SUPABASE_KEY` - Supabase anon key
+- `SUPABASE_KEY` - Supabase anon key (runtime, read-only)
+- `ADMIN_TOKEN` - Shared secret for `/cache/refresh` and `/rate-limits/reset` (header `X-Admin-Token`; 503 if unset)
+- `CORS_ORIGINS` - Comma-separated allowed origins (unset = no CORS)
+- `SUPABASE_SERVICE_KEY` - Only for manual `scripts/db/populate_*.js`; never on the runtime service
 
 **Optional:**
 - `ARTIFICIAL_ANALYSIS_API_KEY` - Intelligence Index API key

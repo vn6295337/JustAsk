@@ -92,6 +92,28 @@ Build an intelligent, data-driven model selection service that dynamically selec
 - **Decision:** Microservice (separate service)
 - **Rationale:** Clean separation, independent deployment, reusable
 - **Trade-off:** Network latency acceptable for <100ms target
+- **Status (2026-11-10):** Under review. Proposed: merge into the JustAsk API as a module. See "Review: Microservice Decision (2026-11-10)" below and the open decisions in [product-spec.md](../product-spec.md).
+
+#### Review: Microservice Decision (2026-11-10)
+
+**Why it was built as a separate service**
+- **Larger planned scope:** live scoring for every question, real-time quota tracking, and matching question difficulty to models.
+- **Separate origin:** started as its own project (own README, license and docs), later merged into this repo.
+- **Portfolio value:** shows microservice design.
+
+**Why the reasons no longer hold**
+- **Smaller job:** the API now calls `/best-models`, which only reads the ranking table that the populate script fills in advance (`ims."40_model_selection_score"`). `/select-model` (live scoring) is not used.
+- **No reuse:** the JustAsk API is the only caller.
+- **Free hosting cost:**
+  - Each Render free service sleeps after 15 minutes idle and takes about 1 minute to wake.
+  - With two services in a chain, both may need to wake.
+  - The 750 free hours a month can keep one service awake (about 730 hours), not two (about 1,460).
+- **Quota tracking can't work here:** the router never sees the actual AI calls, so it can't know when a model's free quota runs out.
+
+**Proposed change**
+- Move model selection into the JustAsk API as a module.
+- Track quotas in the same process that calls the models.
+- Keep the manual ranking step (populate scripts) unchanged.
 
 **Data Source**
 - **Decision:** Use working_version table (read-only) + model_aa_mapping + aa_performance_metrics (3-table architecture)
@@ -240,6 +262,7 @@ Build an intelligent, data-driven model selection service that dynamically selec
 | 2025-11-19 | 80% test coverage target | High confidence without diminishing returns | Comprehensive test suite required |
 | 2025-11-24 | Changed cache TTL to 24 hours | Match database update frequency from justask-registry | Reduced unnecessary cache refreshes |
 | 2025-11-24 | 3-table architecture (working_version + model_aa_mapping + aa_performance_metrics) | Keep working_version read-only, separate mapping layer | Clean separation: pipeline owns source, selector owns mappings |
+| 2026-11-10 | Microservice architecture under review; proposed merge into JustAsk API | Router only reads a pre-computed ranking; one caller; two Render free services double wake-ups and exceed free hours; quota tracking must sit where AI calls happen | Pending owner decision (see product-spec.md, Open Decisions) |
 
 ---
 

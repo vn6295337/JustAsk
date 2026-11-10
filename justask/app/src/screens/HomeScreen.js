@@ -79,6 +79,7 @@ const HomeScreen = () => {
 
         // Load chat history from database
         try {
+          await Database.recoverInterruptedMessages();
           const history = await Database.loadChatHistory();
           if (history.length > 0) {
             // replace existing messages to avoid duplicates on hot reload
@@ -168,7 +169,9 @@ const HomeScreen = () => {
       const startTime = Date.now();
 
       // Try to get cached response first
-      const cachedResult = await CacheManager.getCachedResponse(userQuery);
+      // Time-sensitive queries (news, prices, ...) bypass the cache entirely
+      const cacheable = CacheManager.isCacheable(userQuery);
+      const cachedResult = cacheable ? await CacheManager.getCachedResponse(userQuery) : null;
       if (cachedResult) {
         // Cache hit - update assistant message
         const updateData = {
@@ -201,14 +204,16 @@ const HomeScreen = () => {
         const result = await APIClient.query(userQuery);
         const elapsed = Date.now() - startTime;
 
-        // Save to cache
-        await CacheManager.saveToCache(
-          userQuery,
-          result.response,
-          result.llm_used,
-          result.category,
-          elapsed
-        );
+        // Save to cache (never time-sensitive queries or categories)
+        if (cacheable && CacheManager.isCacheableCategory(result.category)) {
+          await CacheManager.saveToCache(
+            userQuery,
+            result.response,
+            result.llm_used,
+            result.category,
+            elapsed
+          );
+        }
 
         // Update assistant message with response
         dispatch(updateMessage({
@@ -234,26 +239,46 @@ const HomeScreen = () => {
         }
         dispatch(setOfflineQueued(false));
       } catch (apiError) {
-        // API call failed - queue for offline sync
-        console.log('API call failed, queueing offline:', apiError.message);
-        const queueId = await Database.queueQuery(userQuery);
-        dispatch(updateMessage({
-          id: assistantMessageId,
-          updates: {
-            text: 'Query saved. Will sync when connection is restored.',
-            isQueued: true,
-          },
-        }));
-        try {
-          await Database.updateMessage(assistantMessageId, {
-            text: 'Query saved. Will sync when connection is restored.',
-            is_queued: 1,
-          });
-        } catch (error) {
-          console.error('Error updating message in DB:', error);
+        // Only network-level failures are queued; 4xx/5xx errors are surfaced
+        if (!apiError.isNetworkError) {
+          throw apiError;
         }
-        dispatch(setError('Cannot reach server. Query saved and will sync when connection is restored.'));
-        dispatch(setOfflineQueued(true));
+        console.log('Network error, queueing offline:', apiError.message);
+        let queued = false;
+        try {
+          await Database.queueQuery(userQuery, assistantMessageId);
+          queued = true;
+        } catch (queueError) {
+          if (queueError.code !== 'QUEUE_FULL') throw queueError;
+          const fullText = `${queueError.message}`;
+          dispatch(updateMessage({ id: assistantMessageId, updates: { text: fullText } }));
+          try {
+            await Database.updateMessage(assistantMessageId, { text: fullText });
+          } catch (error) {
+            console.error('Error updating message in DB:', error);
+          }
+          dispatch(setError(fullText));
+          dispatch(setOfflineQueued(false));
+        }
+        if (queued) {
+          dispatch(updateMessage({
+            id: assistantMessageId,
+            updates: {
+              text: 'Query saved. Will sync when connection is restored.',
+              isQueued: true,
+            },
+          }));
+          try {
+            await Database.updateMessage(assistantMessageId, {
+              text: 'Query saved. Will sync when connection is restored.',
+              is_queued: 1,
+            });
+          } catch (error) {
+            console.error('Error updating message in DB:', error);
+          }
+          dispatch(setError('Cannot reach server. Query saved and will sync when connection is restored.'));
+          dispatch(setOfflineQueued(true));
+        }
       }
     } catch (err) {
       // Only handle errors not already handled by offline queue

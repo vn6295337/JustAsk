@@ -48,8 +48,10 @@ function applyProviderFallback(result, provider) {
     result.rpd = fallback.rpd;
     result.tpm = fallback.tpm;
     result.tpd = fallback.tpd;
-    result.parseable = false;
   }
+
+  // Unknown provider: nothing was parsed and no fallback exists
+  result.parseable = false;
 
   return result;
 }
@@ -87,7 +89,8 @@ export function parseRateLimits(rateLimitsStr, provider) {
   if (lower.includes('requests/min') && lower.includes(',')) {
     const rpmMatch = rateLimitsStr.match(/(\d+)\s*requests\/min/i);
     const tpmMatch = rateLimitsStr.match(/([\d.]+[KkMm]?)\s*tokens\/min/i);
-    const rpdMatch = rateLimitsStr.match(/([\d,]+)\s*requests\/day/i);
+    // "200 requests/day" or bare "50/day"
+    const rpdMatch = rateLimitsStr.match(/([\d,]+)\s*(?:requests)?\/day/i);
 
     if (rpmMatch) result.rpm = parseInt(rpmMatch[1]);
     if (tpmMatch) result.tpm = parseTokenValue(tpmMatch[1]);
@@ -103,10 +106,10 @@ export function parseRateLimits(rateLimitsStr, provider) {
   // Characteristics: Contains "requests/min" and "/day" but no comma
   else if (lower.includes('requests/min') && lower.includes('/day')) {
     const rpmMatch = rateLimitsStr.match(/(\d+)\s*requests\/min/i);
-    const rpdMatch = rateLimitsStr.match(/(\d+)\/day/i);
+    const rpdMatch = rateLimitsStr.match(/([\d,]+)\s*(?:requests)?\/day/i);
 
     if (rpmMatch) result.rpm = parseInt(rpmMatch[1]);
-    if (rpdMatch) result.rpd = parseInt(rpdMatch[1]);
+    if (rpdMatch) result.rpd = parseInt(rpdMatch[1].replace(/,/g, ''));
 
     if (result.rpm !== null) {
       return result;
@@ -137,4 +140,20 @@ export function parseRateLimits(rateLimitsStr, provider) {
   }
 
   return result;
+}
+
+/**
+ * Parse rate limits for many working_version rows.
+ * @param {Array<{human_readable_name: string, inference_provider: string, rate_limits: string}>} models
+ * @returns {Array<Object>} Rows shaped for ims.30_rate_limits
+ */
+export function batchParseRateLimits(models) {
+  return (models || []).map(m => {
+    const parsed = parseRateLimits(m.rate_limits, m.inference_provider);
+    return {
+      human_readable_name: m.human_readable_name,
+      inference_provider: m.inference_provider,
+      ...parsed
+    };
+  });
 }

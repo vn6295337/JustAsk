@@ -62,6 +62,7 @@ from src.utils import (
     backup_records,
     delete_records,
     insert_records_batch,
+    replace_provider_records_atomic,
 )
 
 # Load environment variables
@@ -156,33 +157,12 @@ def prepare_data_for_insert(models: List[Dict[str, Any]]) -> List[Dict[str, Any]
     return prepared_models
 
 
-def restore_backup_data(conn, backup_data: List[Dict[str, Any]]) -> bool:
-    logger.info(f"🔄 Rolling back: Restoring {len(backup_data)} {INFERENCE_PROVIDER} records...")
-
-    if not backup_data:
-        logger.info("✅ No data to restore")
-        return True
-
-    auto_managed_fields = ['id', 'created_at', 'updated_at']
-    clean_backup = [{k: v for k, v in record.items() if k not in auto_managed_fields}
-                    for record in backup_data]
-
-    if insert_records_batch(conn, TABLE_NAME, clean_backup, batch_size=50):
-        final_count = get_record_count(conn, TABLE_NAME, INFERENCE_PROVIDER)
-        logger.info(f"✅ Rollback successful: {final_count} {INFERENCE_PROVIDER} records restored")
-        return True
-    else:
-        logger.error(f"❌ Rollback failed")
-        return False
-
-
 def main():
     logger.info("=" * 60)
     logger.info(f"SUPABASE {INFERENCE_PROVIDER.upper()} DATA REFRESH STARTED")
     logger.info("=" * 60)
     start_time = datetime.now()
     conn = None
-    backup_data = None
 
     try:
         conn = get_pipeline_db_connection()
@@ -208,24 +188,7 @@ def main():
             logger.error("❌ REFRESH FAILED: No valid models to insert")
             return False
 
-        logger.info("🛡️ CREATING BACKUP FOR ROLLBACK PROTECTION...")
-        backup_data = backup_records(conn, TABLE_NAME, INFERENCE_PROVIDER)
-        if backup_data is None:
-            logger.error("❌ REFRESH FAILED: Could not backup existing data - ABORTING")
-            return False
-
-        logger.info(f"✅ Backed up {len(backup_data)} existing {INFERENCE_PROVIDER} records")
-
-        logger.info(f"🗑️ Deleting existing {INFERENCE_PROVIDER} records from {TABLE_NAME}...")
-        if not delete_records(conn, TABLE_NAME, INFERENCE_PROVIDER):
-            logger.error("❌ REFRESH FAILED: Could not delete existing data")
-            return False
-
-        logger.info(f"✅ Successfully deleted {initial_count} {INFERENCE_PROVIDER} records")
-
-        logger.info(f"📤 Inserting {len(prepared_models)} models into {TABLE_NAME}...")
-
-        # Prepare rate limit records in parallel
+        # Prepare rate limit records (written in the same transaction)
         rate_limit_records = []
         try:
             for model in prepared_models:
@@ -241,55 +204,23 @@ def main():
                     'parseable': parsed['parseable']
                 })
         except Exception as e:
-            logger.warning(f"⚠️ Rate limit parsing failed: {str(e)}")
+            logger.warning(f"⚠️ Rate limit parsing failed, existing rate limits left untouched: {str(e)}")
+            rate_limit_records = []
 
-        # Insert working_version data (critical operation)
-        if not insert_records_batch(conn, TABLE_NAME, prepared_models, batch_size=100):
-            logger.error("❌ REFRESH FAILED: Data insertion failed - INITIATING ROLLBACK")
-            if restore_backup_data(conn, backup_data):
-                logger.info("✅ ROLLBACK SUCCESSFUL: Original data restored")
-            else:
-                logger.error("❌ ROLLBACK FAILED: Manual intervention required!")
+        # Atomic: delete + insert + rate limits + verify in ONE transaction.
+        # Any failure rolls back, leaving the previous rows intact.
+        logger.info(f"📤 Atomically replacing {initial_count} -> {len(prepared_models)} {INFERENCE_PROVIDER} rows in {TABLE_NAME}...")
+        if not replace_provider_records_atomic(
+            conn, TABLE_NAME, INFERENCE_PROVIDER, prepared_models,
+            tolerance=0,
+            rate_limit_table='ims."30_rate_limits"',
+            rate_limit_records=rate_limit_records,
+        ):
+            logger.error("❌ REFRESH FAILED: transaction rolled back, original data untouched")
             return False
 
-        logger.info(f"✅ Successfully inserted {len(prepared_models)} models")
-
-        # Insert rate limits (best-effort, non-blocking)
-        logger.info(f"📊 Attempting to update rate limits table...")
-        logger.info(f"📊 Rate limit records prepared: {len(rate_limit_records)}")
-        if rate_limit_records:
-            try:
-                logger.info(f"📊 Deleting existing {INFERENCE_PROVIDER} rate limits from ims.30_rate_limits...")
-                delete_result = delete_rate_limits(conn, 'ims."30_rate_limits"', INFERENCE_PROVIDER)
-                logger.info(f"📊 Delete result: {delete_result}")
-
-                logger.info(f"📊 Upserting {len(rate_limit_records)} rate limits to ims.30_rate_limits...")
-                upsert_result = upsert_rate_limits(conn, 'ims."30_rate_limits"', rate_limit_records)
-                logger.info(f"📊 Upsert result: {upsert_result}")
-
-                if delete_result and upsert_result:
-                    logger.info(f"✅ Updated {len(rate_limit_records)} rate limit records")
-                else:
-                    logger.warning(f"⚠️ Rate limits update partially failed")
-            except Exception as e:
-                logger.warning(f"⚠️ Rate limits update failed (non-critical): {str(e)}")
-                import traceback
-                logger.warning(f"Traceback: {traceback.format_exc()}")
-        else:
-            logger.warning("⚠️ No rate limit records to update")
-
-        # Note: Model-AA mappings are refreshed by workflow as a separate step
-
-        logger.info("🔍 Verifying insertion results...")
-        final_count = get_record_count(conn, TABLE_NAME, INFERENCE_PROVIDER)
-        if final_count != len(prepared_models):
-            logger.error(f"❌ Verification failed: Expected {len(prepared_models)}, found {final_count}")
-            logger.error("❌ REFRESH FAILED: Verification failed - INITIATING ROLLBACK")
-            if restore_backup_data(conn, backup_data):
-                logger.info("✅ ROLLBACK SUCCESSFUL: Original data restored")
-            else:
-                logger.error("❌ ROLLBACK FAILED: Manual intervention required!")
-            return False
+        final_count = len(prepared_models)
+        logger.info(f"✅ Replaced and verified {final_count} models (committed)")
 
         end_time = datetime.now()
         duration = end_time - start_time
@@ -299,7 +230,6 @@ def main():
         logger.info("=" * 60)
         logger.info(f"📊 Summary:")
         logger.info(f"   • Initial {INFERENCE_PROVIDER} records: {initial_count}")
-        logger.info(f"   • Records backed up: {len(backup_data)}")
         logger.info(f"   • Records deleted: {initial_count}")
         logger.info(f"   • New records inserted: {len(prepared_models)}")
         logger.info(f"   • Final record count: {final_count}")
@@ -313,12 +243,8 @@ def main():
 
     except Exception as e:
         logger.error(f"❌ UNEXPECTED ERROR: {str(e)}")
-        if backup_data and conn:
-            logger.info("🔄 Attempting emergency rollback...")
-            if restore_backup_data(conn, backup_data):
-                logger.info("✅ EMERGENCY ROLLBACK SUCCESSFUL")
-            else:
-                logger.error("❌ EMERGENCY ROLLBACK FAILED")
+        if conn:
+            conn.rollback()
         return False
 
     finally:

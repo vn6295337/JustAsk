@@ -3,6 +3,8 @@ import { callGroq } from '../providers/groq.js';
 import { callOpenRouter } from '../providers/openrouter.js';
 import { getModelFallbackChain } from '../routing/rankedModelSelector.js';
 import config from '../config.js';
+import { checkRateLimit } from '../rate-limiting/limiter.js';
+import { ProviderError, normalizeStatus } from '../utils/errors.js';
 
 /**
  * Execute query with specific provider
@@ -11,20 +13,20 @@ import config from '../config.js';
  * @param {boolean} enableWebSearch - Enable web search for news queries
  * @returns {Promise<object>} Provider response
  */
-const executeProvider = async (provider, query, enableWebSearch = false, queryType = null) => {
+const executeProvider = async (provider, query, enableWebSearch = false, queryType = null, modelName = null) => {
   switch (provider) {
     case config.providerNames.GEMINI:
-      return await callGemini(query);
+      return await callGemini(query, modelName);
     case config.providerNames.GROQ:
       // Use compound model for news and financial queries, standard for others
-      let groqModel = null;
-      if (queryType === 'business_news' || queryType === 'financial_analysis') {
+      let groqModel = modelName || null;
+      if (!groqModel && (queryType === 'business_news' || queryType === 'financial_analysis')) {
         groqModel = config.models.groqCompound;
       }
       return callGroq(query, groqModel);
     case config.providerNames.OPENROUTER:
       // For fallback: use GPT-OSS models for news/financial with browser search
-      return await callOpenRouter(query, enableWebSearch, queryType);
+      return await callOpenRouter(query, enableWebSearch, queryType, modelName);
     default:
       throw new Error(`Unknown provider: ${provider}`);
   }
@@ -45,13 +47,29 @@ export const executeWithRankedFallback = async (query, queryType = null) => {
 
     console.log(`[RankedFallback] Got ${modelChain.length} models in fallback chain`);
 
+    let lastStatus = 502;
+
     for (let i = 0; i < modelChain.length; i++) {
       const model = modelChain[i];
 
       try {
         console.log(`[RankedFallback] Attempting rank ${model.rank}: ${model.provider} - ${model.modelName}`);
 
-        const response = await executeProvider(model.provider, query, isNewsQuery, queryType);
+        // Outbound per-provider limiter: skip a provider that is out of quota
+        const rl = checkRateLimit(model.provider);
+        if (!rl.allowed && rl.retryAfter) {
+          throw new ProviderError(model.provider, 'Local provider rate limit reached', 429);
+        }
+
+        // Hardcoded fallback entries carry unverified model names: let the
+        // provider pick its configured/query-type model instead.
+        const response = await executeProvider(
+          model.provider,
+          query,
+          isNewsQuery,
+          queryType,
+          model.fallback ? null : model.modelName
+        );
 
         console.log(`[RankedFallback] Success with rank ${model.rank}`);
 
@@ -59,7 +77,7 @@ export const executeWithRankedFallback = async (query, queryType = null) => {
           success: true,
           response: response.response,
           llm_used: model.provider,
-          model_name: model.modelName,
+          model_name: response.model || model.modelName,
           model_rank: model.rank,
           selection_score: model.selectionScore,
           failover_count: i,
@@ -70,6 +88,8 @@ export const executeWithRankedFallback = async (query, queryType = null) => {
           `[RankedFallback] Rank ${model.rank} (${model.provider}) failed:`,
           error.message || error
         );
+
+        lastStatus = normalizeStatus(error);
 
         // Check error type
         if (error.status === 429) {
@@ -82,18 +102,27 @@ export const executeWithRankedFallback = async (query, queryType = null) => {
         if (i < modelChain.length - 1) {
           continue;
         } else {
-          throw error;
+          const err = new Error(error.message || 'All ranked models failed');
+          err.status = lastStatus;
+          throw err;
         }
       }
     }
 
-    throw new Error('No models available in ranked fallback chain');
+    const err = new Error('No models available in ranked fallback chain');
+    err.status = 503;
+    throw err;
   } catch (error) {
     console.error('[RankedFallback] All models exhausted:', error.message);
 
     return {
       success: false,
-      error: error.message || 'All ranked models failed',
+      // Generic message only; upstream detail stays in server logs
+      error:
+        error.status === 429
+          ? 'Providers are rate limited. Please try again shortly.'
+          : 'All providers failed to produce a response',
+      status: error.status === 429 ? 429 : 500,
       llm_used: null,
       model_rank: null,
       failover_count: null,

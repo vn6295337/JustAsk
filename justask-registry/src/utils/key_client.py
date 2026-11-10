@@ -12,8 +12,11 @@ class KeyClient:
     """Client for accessing API keys through Supabase Edge Functions"""
     
     def __init__(self):
-        self.base_url = "https://atilxlecbaqcksnrgzav.supabase.co/functions/v1"
-        self.anon_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF0aWx4bGVjYmFxY2tzbnJnemF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIzOTY5MTYsImV4cCI6MjA2Nzk3MjkxNn0.sYRFyQIEzZMlgg5RtHTXDSpvxl-KrJ8E7U3_UroIJog"
+        # Configuration comes from the environment (no hardcoded project URL / JWT).
+        # SUPABASE_FUNCTIONS_URL e.g. https://<ref>.supabase.co/functions/v1
+        self.base_url = (os.getenv('SUPABASE_FUNCTIONS_URL') or '').rstrip('/')
+        self.anon_key = os.getenv('SUPABASE_ANON_KEY') or ''
+        self.configured = bool(self.base_url and self.anon_key)
         # Get internal API key from environment
         internal_key = os.getenv('INTERNAL_API_KEY')
             
@@ -36,6 +39,8 @@ class KeyClient:
         Returns:
             API key string if successful, None if failed
         """
+        if not self.configured:
+            return None
         try:
             response = requests.post(
                 f"{self.base_url}/get-api-key",
@@ -72,6 +77,8 @@ class KeyClient:
         Returns:
             True if logged successfully, False otherwise
         """
+        if not self.configured:
+            return False
         try:
             response = requests.post(
                 f"{self.base_url}/log-usage",
@@ -105,6 +112,8 @@ class KeyClient:
         Returns:
             List of notifications if successful, None if failed
         """
+        if not self.configured:
+            return None
         try:
             response = requests.get(
                 f"{self.base_url}/notifications?action=list",
@@ -181,7 +190,7 @@ if __name__ == "__main__":
     # Test getting an API key
     key = get_api_key("openrouter")
     if key:
-        print(f"✅ Retrieved OpenRouter key: {key[:20]}...")
+        print("✅ Retrieved OpenRouter key")
     else:
         print("❌ Failed to retrieve OpenRouter key")
     

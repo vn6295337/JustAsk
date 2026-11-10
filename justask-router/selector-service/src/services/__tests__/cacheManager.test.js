@@ -2,6 +2,7 @@
  * Unit tests for Cache Manager
  */
 
+import { jest } from '@jest/globals';
 import cacheManager from '../cacheManager.js';
 
 describe('CacheManager', () => {
@@ -119,10 +120,43 @@ describe('CacheManager', () => {
       expect(result).toEqual({ stale: 'data' });
 
       // Fetch should be called for background refresh
-      await new Promise(resolve => setTimeout(resolve, 0));
+      await Promise.resolve();
       expect(fetchFn).toHaveBeenCalledTimes(1);
 
       jest.useRealTimers();
+    });
+
+    it('get() does not return expired entries unless allowStale', () => {
+      jest.useFakeTimers();
+      cacheManager.set('exp-key', 'v', 1000);
+      expect(cacheManager.get('exp-key')).toBe('v');
+
+      jest.advanceTimersByTime(1001);
+      expect(cacheManager.get('exp-key')).toBeNull();
+      expect(cacheManager.get('exp-key', { allowStale: true })).toBe('v');
+
+      jest.useRealTimers();
+    });
+
+    it('dedupes concurrent fetches for the same key', async () => {
+      let resolveFn;
+      const fetchFn = jest.fn(() => new Promise(r => { resolveFn = r; }));
+
+      const p1 = cacheManager.getOrFetch('dedupe-key', fetchFn, 1000);
+      const p2 = cacheManager.getOrFetch('dedupe-key', fetchFn, 1000);
+      resolveFn('data');
+
+      expect(await p1).toBe('data');
+      expect(await p2).toBe('data');
+      expect(fetchFn).toHaveBeenCalledTimes(1);
+    });
+
+    it('refresh keeps old data when the fetch fails', async () => {
+      cacheManager.set('keep-key', 'old', 1000);
+      await expect(
+        cacheManager.refresh('keep-key', jest.fn().mockRejectedValue(new Error('boom')), 1000)
+      ).rejects.toThrow('boom');
+      expect(cacheManager.get('keep-key')).toBe('old');
     });
   });
 

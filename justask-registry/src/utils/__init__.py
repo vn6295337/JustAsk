@@ -22,6 +22,7 @@ from .db import (
     load_staging_data,
     delete_rate_limits,
     upsert_rate_limits,
+    replace_provider_records_atomic,
 )
 
 from .key_client import (
@@ -60,6 +61,7 @@ __all__ = [
     'load_staging_data',
     'delete_rate_limits',
     'upsert_rate_limits',
+    'replace_provider_records_atomic',
     # Key client utilities
     'KeyClient',
     'get_api_key',

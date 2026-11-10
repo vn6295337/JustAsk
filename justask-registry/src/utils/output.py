@@ -84,12 +84,12 @@ def get_input_file_path(filename: str) -> str:
     return get_output_file_path(filename)
 
 
-def ensure_output_directory():
+def ensure_output_directory(pipeline: Optional[str] = None):
     """
     Ensure the outputs directory exists.
     Creates it if it doesn't exist.
     """
-    output_dir = Path(get_output_dir())
+    output_dir = Path(get_output_dir(pipeline))
     output_dir.mkdir(parents=True, exist_ok=True)
     print(f"📁 Output directory ensured: {output_dir}")
 
@@ -98,12 +98,15 @@ def ensure_output_directory():
 ensure_output_dir_exists = ensure_output_directory
 
 
-def clean_output_directory():
+def clean_output_directory(pipeline: Optional[str] = None):
     """
-    Clean the 02_outputs directory by removing all files
-    Keeps the directory structure but removes all contents
+    Clean a pipeline's outputs directory by removing all files.
+    Keeps .gitkeep. Pass `pipeline` explicitly when the module-global context
+    may be shared (e.g. parallel runs). Refuses to clean the base outputs/ dir.
     """
-    output_dir = Path(get_output_dir())
+    if not (pipeline or _current_pipeline):
+        raise ValueError("clean_output_directory: no pipeline set; refusing to clean base outputs/")
+    output_dir = Path(get_output_dir(pipeline))
 
     if output_dir.exists():
         print(f"🧹 Cleaning output directory: {output_dir}")

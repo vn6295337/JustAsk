@@ -56,149 +56,71 @@ const ModelCountLineGraph: React.FC<ModelCountLineGraphProps> = ({ currentModels
   const [unitWidth, setUnitWidth] = useState(0);
   const [ready, setReady] = useState(false);
 
-  // No longer using localStorage - data persisted in database
+  const [historyError, setHistoryError] = useState<string | null>(null);
 
-  // Load historical data from database
+  // Load historical data from database (read-only; snapshots are written by a server job)
   useEffect(() => {
+    const controller = new AbortController();
     const loadHistoricalData = async () => {
       try {
-        // Fetch all historical data (limit prevents runaway queries)
         const { data, error } = await supabase
           .from('analytics_history')
           .select('*')
           .order('timestamp', { ascending: true })
-          .limit(10000);
+          .limit(10000)
+          .abortSignal(controller.signal);
 
-        console.log('Raw Supabase response:', {
-          recordCount: data?.length || 0,
-          error,
-          sample: data?.slice(-5).map(d => ({ timestamp: d.timestamp, total: d.total_models }))
-        });
-
+        if (controller.signal.aborted) return;
         if (error) {
           console.error('Error loading historical data:', error);
+          setHistoryError('Failed to load history');
           return;
         }
+
+        const asCounts = (v: unknown): { [key: string]: number } => {
+          if (!v || typeof v !== 'object' || Array.isArray(v)) return {};
+          const out: { [key: string]: number } = {};
+          for (const [k, n] of Object.entries(v as Record<string, unknown>)) {
+            if (typeof n === 'number' && Number.isFinite(n)) out[k] = n;
+          }
+          return out;
+        };
 
         const formattedData: HistoricalDataPoint[] = (data || []).map((item: any) => ({
           id: item.id,
           timestamp: new Date(item.timestamp),
-          totalCount: item.total_models,
+          totalCount: Number(item.total_models) || 0,
           providerCounts: {
-            inferenceProviders: item.inference_provider_counts,
-            modelProviders: item.model_provider_counts
+            inferenceProviders: asCounts(item.inference_provider_counts),
+            modelProviders: asCounts(item.model_provider_counts)
           }
-        }));
+        })).filter(d => !isNaN(d.timestamp.getTime()));
 
-        console.log('Loaded historical data from Supabase:', {
-          total: formattedData.length,
-          dateRange: formattedData.length > 0 ? {
-            first: formattedData[0].timestamp.toISOString(),
-            last: formattedData[formattedData.length - 1].timestamp.toISOString()
-          } : null,
-          nov3Plus: formattedData.filter(d => d.timestamp >= new Date('2025-11-03T00:00:00Z')).length
-        });
-
+        setHistoryError(null);
         setHistoricalData(formattedData);
       } catch (error) {
+        if (controller.signal.aborted) return;
         console.error('Error loading historical data:', error);
+        setHistoryError('Failed to load history');
       }
     };
 
     loadHistoricalData();
+    return () => controller.abort();
   }, []);
-
-  // Save analytics snapshot to database
-  const saveAnalyticsSnapshot = async (
-    totalModels: number,
-    inferenceProviders: { [key: string]: number },
-    modelProviders: { [key: string]: number }
-  ) => {
-    try {
-      const { error } = await supabase.rpc('insert_analytics_snapshot', {
-        p_total_models: totalModels,
-        p_inference_provider_counts: inferenceProviders,
-        p_model_provider_counts: modelProviders
-      });
-
-      if (error) {
-        console.error('Error saving analytics snapshot:', error);
-        return false;
-      }
-      return true;
-    } catch (error) {
-      console.error('Error saving analytics snapshot:', error);
-      return false;
-    }
-  };
-
-  // Track analytics snapshots - save once per day (last update of the day)
-  useEffect(() => {
-    const collectAnalyticsData = async () => {
-      if (currentModels.length === 0) return;
-
-      // Calculate provider counts
-      const inferenceProviders: { [key: string]: number } = {};
-      const modelProviders: { [key: string]: number } = {};
-      
-      currentModels.forEach(model => {
-        const inferenceProvider = model.inference_provider || 'Unknown';
-        const modelProvider = model.model_provider || 'Unknown';
-        
-        inferenceProviders[inferenceProvider] = (inferenceProviders[inferenceProvider] || 0) + 1;
-        modelProviders[modelProvider] = (modelProviders[modelProvider] || 0) + 1;
-      });
-
-      // Always save - will overwrite existing data for the current day
-      console.log('Saving daily analytics snapshot:', {
-        totalModels: currentModels.length,
-        inferenceProviderCount: Object.keys(inferenceProviders).length,
-        modelProviderCount: Object.keys(modelProviders).length
-      });
-      
-      const success = await saveAnalyticsSnapshot(
-        currentModels.length,
-        inferenceProviders,
-        modelProviders
-      );
-
-      if (success) {
-        // Reload historical data to get the latest entry
-        const { data, error } = await supabase
-          .from('analytics_history')
-          .select('*')
-          .order('timestamp', { ascending: true })
-          .limit(10000);
-
-        if (!error && data) {
-          const formattedData: HistoricalDataPoint[] = data.map((item: any) => ({
-            id: item.id,
-            timestamp: new Date(item.timestamp),
-            totalCount: item.total_models,
-            providerCounts: {
-              inferenceProviders: item.inference_provider_counts,
-              modelProviders: item.model_provider_counts
-            }
-          }));
-          setHistoricalData(formattedData);
-        }
-      }
-    };
-
-    collectAnalyticsData();
-  }, [currentModels]);
 
   // Load banner text from file
   useEffect(() => {
+    const controller = new AbortController();
     const loadBannerText = async () => {
       try {
-        const response = await fetch('/banner-text.txt');
+        const response = await fetch('/banner-text.txt', { signal: controller.signal });
         if (response.ok) {
           const text = await response.text();
           setBannerText(text.trim() || "🔴 LIVE: JustAsk Dashboard - 50+ free AI models from 3 providers");
         }
       } catch (error) {
-        console.log('Using default banner text');
+        if (controller.signal.aborted) return;
         setBannerText("🔴 LIVE: JustAsk Dashboard - 50+ free AI models from 3 providers");
       }
     };
@@ -207,7 +129,7 @@ const ModelCountLineGraph: React.FC<ModelCountLineGraphProps> = ({ currentModels
 
     // Poll for banner text changes every 30 seconds
     const bannerInterval = setInterval(loadBannerText, 30000);
-    return () => clearInterval(bannerInterval);
+    return () => { controller.abort(); clearInterval(bannerInterval); };
   }, []);
 
   // One-time keyframes
@@ -237,6 +159,7 @@ const ModelCountLineGraph: React.FC<ModelCountLineGraphProps> = ({ currentModels
     window.addEventListener('resize', onResize);
 
     let fontDone = false;
+    let cancelled = false;
     const measureUnit = () => {
       if (!unitRef.current) return;
       const uw = Math.ceil(unitRef.current.getBoundingClientRect().width);
@@ -248,13 +171,14 @@ const ModelCountLineGraph: React.FC<ModelCountLineGraphProps> = ({ currentModels
     // @ts-ignore
     const fonts = (document as any).fonts;
     if (fonts?.ready && typeof fonts.ready.then === 'function') {
-      fonts.ready.then(() => { fontDone = true; measure(); measureUnit(); });
+      fonts.ready.then(() => { if (cancelled) return; fontDone = true; measure(); measureUnit(); });
     }
 
     // Fallback
     const rAF = requestAnimationFrame(() => { if (!fontDone) { measureUnit(); } });
 
     return () => {
+      cancelled = true;
       window.removeEventListener('resize', onResize);
       cancelAnimationFrame(rAF);
     };
@@ -293,11 +217,6 @@ const ModelCountLineGraph: React.FC<ModelCountLineGraphProps> = ({ currentModels
     // Convert back to array and sort by date
     const result = Array.from(dailyData.values()).sort((a, b) => a.timestamp.getTime() - b.timestamp.getTime());
 
-    console.log(`Time range: ${timeRange}, Total points: ${historicalData.length}, Daily points: ${result.length}`, {
-      cutoffTime: cutoffTime.toISOString(),
-      timeFiltered: timeFiltered.length,
-      nov3Plus: result.filter(d => d.timestamp >= new Date('2025-11-03T00:00:00Z')).length
-    });
 
     return result;
   }, [historicalData, timeRange]);
@@ -412,12 +331,6 @@ const ModelCountLineGraph: React.FC<ModelCountLineGraphProps> = ({ currentModels
       colorIndex++;
     });
 
-    console.log('Chart data prepared:', {
-      datasets: datasets.length,
-      dataPoints: datasets.length > 0 ? datasets[0].data.length : 0,
-      firstDate: datasets.length > 0 && datasets[0].data.length > 0 ? datasets[0].data[0].x : null,
-      lastDate: datasets.length > 0 && datasets[0].data.length > 0 ? datasets[0].data[datasets[0].data.length - 1].x : null
-    });
 
     return { datasets };
   }, [filteredData, selectedInferenceProviders, selectedModelProviders]);
@@ -617,8 +530,14 @@ const ModelCountLineGraph: React.FC<ModelCountLineGraphProps> = ({ currentModels
         </h2>
         <div className={`text-center py-8 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
           <Calendar className="w-12 h-12 mx-auto mb-4 opacity-50" />
-          <p>No historical data available yet.</p>
-          <p className="text-sm mt-2">Data is collected automatically when the dashboard refreshes (latest snapshot per day).</p>
+          {historyError ? (
+            <p className="text-red-500">{historyError}. Please try again later.</p>
+          ) : (
+            <>
+              <p>No historical data available yet.</p>
+              <p className="text-sm mt-2">Snapshots are recorded daily by a server job.</p>
+            </>
+          )}
         </div>
       </div>
     );

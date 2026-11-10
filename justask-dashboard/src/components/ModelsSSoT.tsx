@@ -44,6 +44,49 @@ interface QuickView {
   icon: React.ReactNode;
 }
 
+const SORT_KEYS: (keyof ModelRecord)[] = [
+  'provider', 'modelName', 'accessType', 'license', 'pricing',
+  'providerApiAccess', 'lastUpdated', 'modelOriginator', 'rateLimits', 'taskType'
+];
+
+const isRecentlyUpdated = (lastUpdated: string): boolean => {
+  const year = new Date().getFullYear();
+  const v = lastUpdated || '';
+  return v.includes(String(year)) || v.includes(String(year - 1));
+};
+
+// RFC 4180-style CSV parser (quoted fields, escaped quotes, commas/newlines in quotes)
+const parseCSV = (text: string): string[][] => {
+  const rows: string[][] = [];
+  let row: string[] = [];
+  let field = '';
+  let inQuotes = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (inQuotes) {
+      if (c === '"') {
+        if (text[i + 1] === '"') { field += '"'; i++; }
+        else inQuotes = false;
+      } else field += c;
+    } else if (c === '"') inQuotes = true;
+    else if (c === ',') { row.push(field); field = ''; }
+    else if (c === '\n' || c === '\r') {
+      if (c === '\r' && text[i + 1] === '\n') i++;
+      row.push(field); field = '';
+      rows.push(row); row = [];
+    } else field += c;
+  }
+  if (field !== '' || row.length > 0) { row.push(field); rows.push(row); }
+  return rows.filter(r => r.some(v => v.trim() !== ''));
+};
+
+const escapeCSVField = (value: unknown): string => {
+  let v = value == null ? '' : String(value);
+  // Neutralize spreadsheet formula injection
+  if (/^[=+\-@\t\r]/.test(v)) v = "'" + v;
+  return `"${v.replace(/"/g, '""')}"`;
+};
+
 const ModelsSSoT: React.FC<{ csvData?: string }> = ({ csvData }) => {
   // State management
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -71,6 +114,7 @@ const ModelsSSoT: React.FC<{ csvData?: string }> = ({ csvData }) => {
   const fetchModelData = async () => {
     try {
       setLoading(true);
+      setError(null);
       const response = await supabase
         .from('ai_models_discovery')
         .select('*')
@@ -159,11 +203,11 @@ const ModelsSSoT: React.FC<{ csvData?: string }> = ({ csvData }) => {
       ];
     }
 
-    const lines = csv.trim().split('\n');
-    const headers = lines[0].split(',').map(h => h.trim());
+    const parsed = parseCSV(csv.trim());
+    if (parsed.length === 0) return [];
+    const headers = parsed[0].map(h => h.trim());
     
-    return lines.slice(1).map(line => {
-      const values = line.split(',').map(v => v.trim());
+    return parsed.slice(1).map(values => {
       const record: any = {};
       
       headers.forEach((header, index) => {
@@ -181,11 +225,23 @@ const ModelsSSoT: React.FC<{ csvData?: string }> = ({ csvData }) => {
           'tasktype': 'taskType'
         }[key] || key;
         
-        record[mappedKey] = values[index] || '';
+        record[mappedKey] = (values[index] || '').trim();
       });
       
       return record as ModelRecord;
-    }).filter(record => record.modelName && record.provider);
+    }).filter(record => record.modelName && record.provider)
+      .map(record => ({
+        provider: String(record.provider ?? ''),
+        modelName: String(record.modelName ?? ''),
+        accessType: String(record.accessType ?? ''),
+        license: String(record.license ?? ''),
+        pricing: String(record.pricing ?? ''),
+        providerApiAccess: String(record.providerApiAccess ?? ''),
+        lastUpdated: String(record.lastUpdated ?? ''),
+        modelOriginator: String(record.modelOriginator ?? ''),
+        rateLimits: String(record.rateLimits ?? ''),
+        taskType: String(record.taskType ?? '')
+      }));
   };
 
   const models = useMemo(() => loadModels(csvData || ''), [csvData, rawData]);
@@ -222,8 +278,10 @@ const ModelsSSoT: React.FC<{ csvData?: string }> = ({ csvData }) => {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     if (params.get('search')) setSearchQuery(params.get('search') || '');
-    if (params.get('sort')) setSortBy(params.get('sort') as keyof ModelRecord);
-    if (params.get('order')) setSortOrder(params.get('order') as 'asc' | 'desc');
+    const sortParam = params.get('sort');
+    if (sortParam && (SORT_KEYS as string[]).includes(sortParam)) setSortBy(sortParam as keyof ModelRecord);
+    const orderParam = params.get('order');
+    if (orderParam === 'asc' || orderParam === 'desc') setSortOrder(orderParam);
   }, []);
 
   useEffect(() => {
@@ -242,7 +300,7 @@ const ModelsSSoT: React.FC<{ csvData?: string }> = ({ csvData }) => {
   const uniqueTaskTypes = useMemo(() => [...new Set(models.map(m => m.taskType))].sort(), [models]);
 
   // Quick views
-  const quickViews: QuickView[] = [
+  const quickViews: QuickView[] = useMemo(() => [
     {
       id: 'all',
       label: 'All Models',
@@ -264,10 +322,10 @@ const ModelsSSoT: React.FC<{ csvData?: string }> = ({ csvData }) => {
     {
       id: 'recent',
       label: 'Recently Updated',
-      filter: (models) => models.filter(m => m.lastUpdated.includes('2024') || m.lastUpdated.includes('2025')),
+      filter: (models) => models.filter(m => isRecentlyUpdated(m.lastUpdated)),
       icon: <Calendar className="w-4 h-4" />
     }
-  ];
+  ], []);
 
   // Filtered and sorted models
   const filteredModels = useMemo(() => {
@@ -304,9 +362,9 @@ const ModelsSSoT: React.FC<{ csvData?: string }> = ({ csvData }) => {
     }
 
     // Apply sort
-    filtered.sort((a, b) => {
-      const aVal = a[sortBy];
-      const bVal = b[sortBy];
+    filtered = [...filtered].sort((a, b) => {
+      const aVal = String(a[sortBy] ?? '');
+      const bVal = String(b[sortBy] ?? '');
       const comparison = aVal.localeCompare(bVal);
       return sortOrder === 'asc' ? comparison : -comparison;
     });
@@ -320,7 +378,7 @@ const ModelsSSoT: React.FC<{ csvData?: string }> = ({ csvData }) => {
     const csv = [
       headers.join(','),
       ...filteredModels.map(model =>
-        headers.map(header => `"${model[header as keyof ModelRecord]}"`).join(',')
+        headers.map(header => escapeCSVField(model[header as keyof ModelRecord])).join(',')
       )
     ].join('\n');
 
@@ -338,9 +396,7 @@ const ModelsSSoT: React.FC<{ csvData?: string }> = ({ csvData }) => {
   const selectedProviderCount = filters.providers.length > 0 
     ? models.filter(m => filters.providers.includes(m.provider)).length 
     : totalModels;
-  const recentlyUpdatedCount = models.filter(m => 
-    m.lastUpdated.includes('2024') || m.lastUpdated.includes('2025')
-  ).length;
+  const recentlyUpdatedCount = models.filter(m => isRecentlyUpdated(m.lastUpdated)).length;
 
   const baseClasses = {
     bg: isDarkMode ? 'bg-[#0A0A0A]' : 'bg-gray-50',
@@ -367,7 +423,15 @@ const ModelsSSoT: React.FC<{ csvData?: string }> = ({ csvData }) => {
   if (error) {
     return (
       <div className={`min-h-screen flex items-center justify-center ${baseClasses.bg}`}>
-        <div className="text-red-600">Error: {error}</div>
+        <div className="text-center">
+          <div className="text-red-600 mb-4">Error: {error}</div>
+          <button
+            onClick={() => { fetchModelData(); }}
+            className={`px-3 py-2 text-sm font-medium rounded-md border ${baseClasses.button}`}
+          >
+            Retry
+          </button>
+        </div>
       </div>
     );
   }
@@ -612,7 +676,7 @@ const ModelsSSoT: React.FC<{ csvData?: string }> = ({ csvData }) => {
           <div className="space-y-4">
             {filteredModels.map((model, index) => (
               <div
-                key={index}
+                key={`${model.provider}-${model.modelName}`}
                 onClick={() => setSelectedModel(model)}
                 className={`p-4 rounded-md ${baseClasses.surface} ${baseClasses.border} border ${baseClasses.surfaceHover} cursor-pointer transition-colors`}
               >
@@ -674,7 +738,7 @@ const ModelsSSoT: React.FC<{ csvData?: string }> = ({ csvData }) => {
                 <tbody>
                   {filteredModels.map((model, index) => (
                     <tr
-                      key={index}
+                      key={`${model.provider}-${model.modelName}`}
                       onClick={() => setSelectedModel(model)}
                       className={`${baseClasses.border} border-b last:border-b-0 ${baseClasses.surfaceHover} cursor-pointer transition-colors`}
                     >

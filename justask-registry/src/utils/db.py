@@ -5,6 +5,7 @@ Provides PostgreSQL connection helpers for pipeline_writer role
 """
 
 import os
+import re
 import socket
 import psycopg2
 from psycopg2.extras import execute_batch, RealDictCursor
@@ -161,6 +162,23 @@ def get_pipeline_db_connection():
         return None
 
 
+_IDENT_RE = re.compile(r'^[A-Za-z_][A-Za-z0-9_]*$')
+
+
+def _check_ident(name: str) -> str:
+    """Validate a SQL identifier (column name); raise ValueError otherwise."""
+    if not isinstance(name, str) or not _IDENT_RE.match(name):
+        raise ValueError(f"Unsafe SQL identifier: {name!r}")
+    return name
+
+
+def _check_table(name: str) -> str:
+    """Validate a (optionally schema-qualified / quoted) table name."""
+    if not isinstance(name, str) or not re.match(r'^[A-Za-z_][A-Za-z0-9_]*(\.("[A-Za-z0-9_]+"|[A-Za-z_][A-Za-z0-9_]*))?$', name):
+        raise ValueError(f"Unsafe SQL table name: {name!r}")
+    return name
+
+
 def get_record_count(conn, table_name: str, inference_provider: str) -> Optional[int]:
     """Get count of records for a specific inference provider."""
     try:
@@ -189,7 +207,7 @@ def backup_records(conn, table_name: str, inference_provider: str) -> Optional[L
         return None
 
 
-def delete_records(conn, table_name: str, inference_provider: str) -> bool:
+def delete_records(conn, table_name: str, inference_provider: str, commit: bool = True) -> bool:
     """Delete all records for a specific inference provider."""
     try:
         with conn.cursor() as cur:
@@ -197,7 +215,8 @@ def delete_records(conn, table_name: str, inference_provider: str) -> bool:
                 f"DELETE FROM {table_name} WHERE inference_provider = %s",
                 (inference_provider,)
             )
-        conn.commit()
+        if commit:
+            conn.commit()
         return True
     except Exception as e:
         logger.error(f"Failed to delete records: {str(e)}")
@@ -205,7 +224,7 @@ def delete_records(conn, table_name: str, inference_provider: str) -> bool:
         return False
 
 
-def insert_records_batch(conn, table_name: str, records: List[Dict[str, Any]], batch_size: int = 100) -> bool:
+def insert_records_batch(conn, table_name: str, records: List[Dict[str, Any]], batch_size: int = 100, commit: bool = True) -> bool:
     """
     Insert records in batches.
 
@@ -223,19 +242,21 @@ def insert_records_batch(conn, table_name: str, records: List[Dict[str, Any]], b
 
     try:
         # Get column names from first record
-        columns = list(records[0].keys())
+        columns = [_check_ident(c) for c in records[0].keys()]
         placeholders = ', '.join(['%s'] * len(columns))
         columns_str = ', '.join(columns)
 
+        _check_table(table_name)
         insert_sql = f"INSERT INTO {table_name} ({columns_str}) VALUES ({placeholders})"
 
         # Convert records to tuples
-        values = [tuple(record[col] for col in columns) for record in records]
+        values = [tuple(record.get(col) for col in columns) for record in records]
 
         with conn.cursor() as cur:
             execute_batch(cur, insert_sql, values, page_size=batch_size)
 
-        conn.commit()
+        if commit:
+            conn.commit()
         return True
 
     except Exception as e:
@@ -258,7 +279,7 @@ def load_staging_data(conn, staging_table: str, inference_provider: str) -> Opti
         return None
 
 
-def delete_rate_limits(conn, table_name: str, inference_provider: str) -> bool:
+def delete_rate_limits(conn, table_name: str, inference_provider: str, commit: bool = True) -> bool:
     """Delete all rate limit records for a specific inference provider.
 
     Args:
@@ -270,7 +291,8 @@ def delete_rate_limits(conn, table_name: str, inference_provider: str) -> bool:
             logger.info(f"Executing: {query} with provider={inference_provider}")
             cur.execute(query, (inference_provider,))
             deleted_count = cur.rowcount
-        conn.commit()
+        if commit:
+            conn.commit()
         logger.info(f"Deleted {deleted_count} rate limit records for {inference_provider}")
         return True
     except Exception as e:
@@ -281,7 +303,7 @@ def delete_rate_limits(conn, table_name: str, inference_provider: str) -> bool:
         return False
 
 
-def upsert_rate_limits(conn, table_name: str, rate_limit_records: List[Dict[str, Any]]) -> bool:
+def upsert_rate_limits(conn, table_name: str, rate_limit_records: List[Dict[str, Any]], commit: bool = True) -> bool:
     """
     Upsert rate limit records using ON CONFLICT strategy.
 
@@ -326,7 +348,8 @@ def upsert_rate_limits(conn, table_name: str, rate_limit_records: List[Dict[str,
         with conn.cursor() as cur:
             execute_batch(cur, upsert_sql, values, page_size=100)
 
-        conn.commit()
+        if commit:
+            conn.commit()
         logger.info(f"Successfully upserted {len(rate_limit_records)} rate limit records")
         return True
 
@@ -335,4 +358,56 @@ def upsert_rate_limits(conn, table_name: str, rate_limit_records: List[Dict[str,
         import traceback
         logger.error(f"Traceback: {traceback.format_exc()}")
         conn.rollback()
+        return False
+
+
+def replace_provider_records_atomic(
+    conn,
+    table_name: str,
+    inference_provider: str,
+    records: List[Dict[str, Any]],
+    tolerance: int = 0,
+    rate_limit_table: Optional[str] = None,
+    rate_limit_records: Optional[List[Dict[str, Any]]] = None,
+    batch_size: int = 100,
+) -> bool:
+    """Replace all rows of a provider in ONE transaction: delete + insert (+ rate
+    limits) + verify. Commits only if every step succeeded; otherwise rolls back,
+    leaving the previous rows untouched (no in-memory backup/restore needed).
+
+    Args:
+        tolerance: allowed abs difference between inserted and counted rows.
+        rate_limit_table / rate_limit_records: if both given, provider rate limits
+            are deleted and re-upserted inside the same transaction.
+    """
+    if not records:
+        logger.error("Refusing to replace provider records with an empty set")
+        return False
+    try:
+        if not delete_records(conn, table_name, inference_provider, commit=False):
+            conn.rollback()
+            return False
+        if not insert_records_batch(conn, table_name, records, batch_size=batch_size, commit=False):
+            conn.rollback()
+            return False
+        if rate_limit_table and rate_limit_records:
+            if not delete_rate_limits(conn, rate_limit_table, inference_provider, commit=False):
+                conn.rollback()
+                return False
+            if not upsert_rate_limits(conn, rate_limit_table, rate_limit_records, commit=False):
+                conn.rollback()
+                return False
+        final_count = get_record_count(conn, table_name, inference_provider)
+        if final_count is None or abs(final_count - len(records)) > tolerance:
+            logger.error(f"Verification failed: expected {len(records)}, found {final_count}; rolling back")
+            conn.rollback()
+            return False
+        conn.commit()
+        return True
+    except Exception as e:
+        logger.error(f"Atomic replace failed, rolled back: {str(e)}")
+        try:
+            conn.rollback()
+        except Exception:
+            pass
         return False

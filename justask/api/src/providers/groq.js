@@ -1,6 +1,7 @@
 import Groq from 'groq-sdk';
 import { getApiKey } from '../utils/supabase.js';
 import config from '../config.js';
+import { ProviderError, toProviderError } from '../utils/errors.js';
 
 let groqClient = null;
 
@@ -45,10 +46,18 @@ export const callGroq = async (query, modelOverride = null) => {
       model: model,
       temperature: 0.7,
       max_tokens: maxTokens,
-    });
+    }, { timeout: config.responseTimeouts.groq });
 
     // Extract response text
-    const response = message.choices?.[0]?.message?.content || 'No response from Groq';
+    const choice = message.choices?.[0];
+    const response = (choice?.message?.content || '').trim();
+    if (!response) {
+      throw new ProviderError(
+        'groq',
+        `Empty completion (${choice?.finish_reason || 'empty'})`,
+        502
+      );
+    }
 
     return {
       response,
@@ -62,11 +71,7 @@ export const callGroq = async (query, modelOverride = null) => {
     };
   } catch (error) {
     console.error('Groq API error:', error.message);
-    throw {
-      provider: 'groq',
-      error: error.message,
-      status: error.status || 500,
-    };
+    throw toProviderError('groq', error);
   }
 };
 

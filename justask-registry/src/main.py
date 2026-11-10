@@ -78,7 +78,7 @@ def run_pipeline(pipeline: str, steps: str = None, dry_run: bool = False, clean:
     return runner.run(steps=steps, dry_run=dry_run, clean=clean)
 
 
-def run_all_pipelines(steps: Dict[str, str] = None, parallel: bool = False, dry_run: bool = False) -> bool:
+def run_all_pipelines(steps: Dict[str, str] = None, parallel: bool = False, dry_run: bool = False, clean: bool = True) -> bool:
     """
     Run all pipelines.
 
@@ -86,6 +86,7 @@ def run_all_pipelines(steps: Dict[str, str] = None, parallel: bool = False, dry_
         steps: Dict of pipeline name to step specification
         parallel: If True, run pipelines in parallel
         dry_run: If True, only print what would be executed
+        clean: If False, skip cleaning output directories
 
     Returns:
         True if all pipelines succeeded
@@ -102,7 +103,8 @@ def run_all_pipelines(steps: Dict[str, str] = None, parallel: bool = False, dry_
                     run_pipeline,
                     pipeline,
                     steps.get(pipeline),
-                    dry_run
+                    dry_run,
+                    clean
                 ): pipeline
                 for pipeline in PIPELINE_RUNNERS
             }
@@ -122,7 +124,7 @@ def run_all_pipelines(steps: Dict[str, str] = None, parallel: bool = False, dry_
         all_success = True
 
         for pipeline in PIPELINE_RUNNERS:
-            success = run_pipeline(pipeline, steps.get(pipeline), dry_run)
+            success = run_pipeline(pipeline, steps.get(pipeline), dry_run, clean)
             if not success:
                 all_success = False
                 print(f"\n⚠️  Pipeline {pipeline} failed. Continuing with next pipeline...")
@@ -195,7 +197,8 @@ Examples:
         success = run_all_pipelines(
             steps=steps_dict,
             parallel=args.parallel,
-            dry_run=args.dry_run
+            dry_run=args.dry_run,
+            clean=not args.no_clean
         )
     else:
         success = run_pipeline(

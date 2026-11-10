@@ -364,7 +364,8 @@ def create_mappings(
 def upsert_mappings(
     conn,
     mappings: List[Tuple],
-    logger: Optional[logging.Logger] = None
+    logger: Optional[logging.Logger] = None,
+    commit: bool = True
 ) -> bool:
     """
     Insert or update mappings in ims.10_model_aa_mapping using UPSERT pattern.
@@ -401,7 +402,8 @@ def upsert_mappings(
                 """,
                 mappings
             )
-            conn.commit()
+            if commit:
+                conn.commit()
             log(f"✅ Successfully upserted {len(mappings)} mappings to ims.10_model_aa_mapping")
             return True
     except Exception as e:
@@ -518,7 +520,8 @@ def backup_provider_mappings(
 def delete_provider_mappings(
     conn,
     inference_provider: str,
-    logger: Optional[logging.Logger] = None
+    logger: Optional[logging.Logger] = None,
+    commit: bool = True
 ) -> bool:
     """
     Delete all mappings for a specific provider.
@@ -543,7 +546,8 @@ def delete_provider_mappings(
                 (inference_provider,)
             )
             deleted_count = cur.rowcount
-            conn.commit()
+            if commit:
+                conn.commit()
             log(f"Deleted {deleted_count} mappings for {inference_provider}")
             return True
     except Exception as e:
@@ -652,40 +656,19 @@ def refresh_model_aa_mapping(
         # Step 3: Create mappings with enhanced reporting
         mappings, unmatched_by_provider = create_mappings(models, aa_slugs, logger)
 
-        # Step 4: Complete refresh with backup/delete/insert pattern
-        # (similar to working_version refresh)
+        # Step 4: Atomic refresh: delete (provider only) + insert in ONE transaction.
+        # Any failure rolls back, leaving the existing mappings untouched.
         if inference_provider:
-            log(f"🔄 Performing complete refresh for {inference_provider}...")
-
-            # Step 4a: Backup existing mappings
-            log(f"💾 Backing up existing mappings for {inference_provider}...")
-            backup_mappings = backup_provider_mappings(conn, inference_provider, logger)
-            if backup_mappings is None:
-                log("⚠️  Backup failed, but continuing with refresh...")
-            else:
-                log(f"✅ Backed up {len(backup_mappings)} existing mappings")
-
-            # Step 4b: Delete existing mappings for this provider
-            log(f"🗑️  Deleting existing mappings for {inference_provider}...")
-            if not delete_provider_mappings(conn, inference_provider, logger):
-                log(f"❌ Failed to delete existing mappings, attempting rollback...")
-                if backup_mappings and restore_provider_mappings(conn, backup_mappings, logger):
-                    log("✅ Rollback successful - restored original mappings")
-                else:
-                    log("❌ Rollback failed - manual intervention may be required")
+            log(f"🔄 Performing atomic refresh for {inference_provider}...")
+            if not delete_provider_mappings(conn, inference_provider, logger, commit=False):
+                conn.rollback()
+                log("❌ Failed to delete existing mappings - rolled back, originals untouched")
                 return False
-            log(f"✅ Deleted existing mappings for {inference_provider}")
-
-        # Step 4c: Insert new mappings
-        if not upsert_mappings(conn, mappings, logger):
-            # Rollback on failure
-            if inference_provider and backup_mappings:
-                log(f"❌ Insert failed, attempting rollback...")
-                if restore_provider_mappings(conn, backup_mappings, logger):
-                    log("✅ Rollback successful - restored original mappings")
-                else:
-                    log("❌ Rollback failed - manual intervention may be required")
+        if not upsert_mappings(conn, mappings, logger, commit=False):
+            conn.rollback()
+            log("❌ Insert failed - rolled back, originals untouched")
             return False
+        conn.commit()
 
         # Step 5: Write comparison report to file
         if output_dir:

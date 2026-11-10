@@ -174,8 +174,8 @@ def fetch_google_models_with_pagination() -> List[Dict[str, Any]]:
             if response.status_code != 200:
                 print(f"⚠️ API error: HTTP {response.status_code}")
                 print(f"   Response body: {response.text[:500]}")
-                print(f"   Continuing with {len(all_models)} models fetched so far")
-                break
+                print(f"❌ Aborting: discarding {len(all_models)} partial models (a partial list would delete missing models downstream)")
+                return []
             
             try:
                 data = response.json()
@@ -190,7 +190,8 @@ def fetch_google_models_with_pagination() -> List[Dict[str, Any]]:
             except (ValueError, KeyError) as json_error:
                 print(f"⚠️ Failed to parse API response as JSON: {json_error}")
                 print(f"   Raw response: {response.text[:200]}")
-                break
+                print(f"❌ Aborting: discarding {len(all_models)} partial models")
+                return []
             
             # Check for next page
             page_token = data.get('nextPageToken')

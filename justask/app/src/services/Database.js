@@ -1,30 +1,45 @@
 import * as SQLite from 'expo-sqlite';
+import Constants from 'expo-constants';
 
 let db = null;
 let initPromise = null;
 
 const DATABASE_NAME = 'justask.db';
 
+// Queue entries that fail this many times are marked 'failed' (no more billing)
+const MAX_ATTEMPTS = 3;
+
+// Columns that updateMessage may set (everything else is ignored)
+const UPDATABLE_MESSAGE_COLUMNS = new Set([
+  'text',
+  'llm_used',
+  'category',
+  'response_time',
+  'is_cached',
+  'is_queued',
+]);
+
+const getQueueMaxSize = () =>
+  parseInt(Constants.expoConfig?.extra?.offlineQueueMaxSize, 10) || 10;
+
 const Database = {
+  MAX_ATTEMPTS,
+
   /**
-   * Initialize SQLite database (singleton with lock)
+   * Initialize SQLite database (singleton with lock).
+   * `db` is published only after tables exist, so concurrent callers never
+   * receive a half-initialized handle.
    */
   init: async () => {
-    // Return existing db if already initialized
     if (db) return db;
-
-    // If initialization is in progress, wait for it
     if (initPromise) return initPromise;
 
-    // Start initialization
     initPromise = (async () => {
       try {
-        db = await SQLite.openDatabaseAsync(DATABASE_NAME);
+        const handle = await SQLite.openDatabaseAsync(DATABASE_NAME);
+        await Database.createTables(handle);
+        db = handle;
         console.log('✅ Database initialized');
-
-        // Create tables if they don't exist
-        await Database.createTables();
-
         return db;
       } catch (error) {
         console.error('❌ Database init error:', error);
@@ -39,9 +54,7 @@ const Database = {
   /**
    * Create database tables
    */
-  createTables: async () => {
-    if (!db) return;
-
+  createTables: async (db) => {
     try {
       // Offline queue table
       await db.execAsync(`
@@ -50,9 +63,26 @@ const Database = {
           query TEXT NOT NULL,
           timestamp INTEGER NOT NULL,
           status TEXT DEFAULT 'pending',
+          attempts INTEGER DEFAULT 0,
+          last_error TEXT,
+          message_id TEXT,
           created_at INTEGER DEFAULT (strftime('%s', 'now'))
         );
       `);
+
+      // Migrate older installs that lack the newer queue columns
+      const queueCols = (await db.getAllAsync('PRAGMA table_info(offline_queue)')).map(
+        (c) => c.name
+      );
+      if (!queueCols.includes('attempts')) {
+        await db.execAsync('ALTER TABLE offline_queue ADD COLUMN attempts INTEGER DEFAULT 0');
+      }
+      if (!queueCols.includes('last_error')) {
+        await db.execAsync('ALTER TABLE offline_queue ADD COLUMN last_error TEXT');
+      }
+      if (!queueCols.includes('message_id')) {
+        await db.execAsync('ALTER TABLE offline_queue ADD COLUMN message_id TEXT');
+      }
 
       // Offline responses table
       await db.execAsync(`
@@ -102,20 +132,35 @@ const Database = {
       console.log('✅ Tables created');
     } catch (error) {
       console.error('❌ Create tables error:', error);
+      throw error;
     }
   },
 
   /**
-   * Queue a query for offline sync
+   * Queue a query for offline sync.
+   * @param {string} queryText
+   * @param {string|null} messageId - chat placeholder message to update on sync
+   * @throws {Error} with code 'QUEUE_FULL' when the pending cap is reached
    */
-  queueQuery: async (queryText) => {
-    if (!db) await Database.init();
+  queueQuery: async (queryText, messageId = null) => {
+    const db = await Database.init();
 
     try {
+      const row = await db.getFirstAsync(
+        'SELECT COUNT(*) AS n FROM offline_queue WHERE status = ?',
+        ['pending']
+      );
+      const max = getQueueMaxSize();
+      if ((row?.n || 0) >= max) {
+        const full = new Error(`Offline queue is full (${max} queries). Sync before adding more.`);
+        full.code = 'QUEUE_FULL';
+        throw full;
+      }
+
       const timestamp = Date.now();
       const result = await db.runAsync(
-        'INSERT INTO offline_queue (query, timestamp, status) VALUES (?, ?, ?)',
-        [queryText, timestamp, 'pending']
+        'INSERT INTO offline_queue (query, timestamp, status, message_id) VALUES (?, ?, ?, ?)',
+        [queryText, timestamp, 'pending', messageId]
       );
 
       const queueId = result.lastInsertRowId;
@@ -131,11 +176,11 @@ const Database = {
    * Get all pending queries
    */
   getPendingQueries: async () => {
-    if (!db) await Database.init();
+    const db = await Database.init();
 
     try {
       const queries = await db.getAllAsync(
-        'SELECT * FROM offline_queue WHERE status = ? ORDER BY created_at ASC',
+        'SELECT * FROM offline_queue WHERE status = ? ORDER BY created_at ASC, id ASC',
         ['pending']
       );
 
@@ -150,19 +195,27 @@ const Database = {
    * Save offline response
    */
   saveOfflineResponse: async (queueId, response, llmUsed, category, responseTime) => {
-    if (!db) await Database.init();
+    const db = await Database.init();
 
     try {
-      await db.runAsync(
-        'INSERT INTO offline_responses (queue_id, response, llm_used, category, response_time) VALUES (?, ?, ?, ?, ?)',
-        [queueId, response, llmUsed, category, responseTime]
-      );
+      // Insert response + mark synced atomically (no duplicates on partial failure)
+      await db.withTransactionAsync(async () => {
+        const existing = await db.getFirstAsync(
+          'SELECT id FROM offline_responses WHERE queue_id = ? LIMIT 1',
+          [queueId]
+        );
+        if (!existing) {
+          await db.runAsync(
+            'INSERT INTO offline_responses (queue_id, response, llm_used, category, response_time) VALUES (?, ?, ?, ?, ?)',
+            [queueId, response, llmUsed, category, responseTime]
+          );
+        }
 
-      // Mark as synced
-      await db.runAsync(
-        'UPDATE offline_queue SET status = ? WHERE id = ?',
-        ['synced', queueId]
-      );
+        await db.runAsync(
+          'UPDATE offline_queue SET status = ? WHERE id = ?',
+          ['synced', queueId]
+        );
+      });
 
       console.log('✅ Offline response saved');
     } catch (error) {
@@ -172,10 +225,36 @@ const Database = {
   },
 
   /**
+   * Record a failed sync attempt. The entry becomes 'failed' (never retried,
+   * never billed again) when `permanent` or MAX_ATTEMPTS is reached.
+   * @returns {Promise<string>} new status
+   */
+  recordSyncFailure: async (queueId, errorText, permanent = false) => {
+    const db = await Database.init();
+
+    try {
+      const row = await db.getFirstAsync(
+        'SELECT attempts FROM offline_queue WHERE id = ?',
+        [queueId]
+      );
+      const attempts = (row?.attempts || 0) + 1;
+      const status = permanent || attempts >= MAX_ATTEMPTS ? 'failed' : 'pending';
+      await db.runAsync(
+        'UPDATE offline_queue SET attempts = ?, last_error = ?, status = ? WHERE id = ? AND status = ?',
+        [attempts, String(errorText || '').slice(0, 200), status, queueId, 'pending']
+      );
+      return status;
+    } catch (error) {
+      console.error('❌ Record sync failure error:', error);
+      throw error;
+    }
+  },
+
+  /**
    * Get synced responses
    */
   getSyncedResponses: async () => {
-    if (!db) await Database.init();
+    const db = await Database.init();
 
     try {
       const responses = await db.getAllAsync(`
@@ -197,7 +276,7 @@ const Database = {
    * Save message to chat history
    */
   saveMessage: async (message) => {
-    if (!db) await Database.init();
+    const db = await Database.init();
 
     try {
       await db.runAsync(`
@@ -225,11 +304,16 @@ const Database = {
    * Update message in chat history
    */
   updateMessage: async (messageId, updates) => {
-    if (!db) await Database.init();
+    const db = await Database.init();
 
     try {
-      const setClauses = Object.keys(updates).map(key => `${key} = ?`).join(', ');
-      const values = Object.values(updates);
+      const keys = Object.keys(updates || {}).filter((k) => UPDATABLE_MESSAGE_COLUMNS.has(k));
+      if (keys.length === 0) {
+        console.warn('⚠️ updateMessage: no allowed columns in update');
+        return;
+      }
+      const setClauses = keys.map((key) => `${key} = ?`).join(', ');
+      const values = keys.map((key) => updates[key]);
       values.push(messageId);
 
       await db.runAsync(`
@@ -244,14 +328,26 @@ const Database = {
   },
 
   /**
+   * Replace "Thinking..." placeholders left behind by an app kill.
+   * Call once at startup, before loading history (nothing is in flight yet).
+   */
+  recoverInterruptedMessages: async () => {
+    const db = await Database.init();
+    await db.runAsync(
+      'UPDATE chat_history SET text = ? WHERE type = ? AND text = ? AND is_queued = 0',
+      ['Request interrupted. Please ask again.', 'assistant', 'Thinking...']
+    );
+  },
+
+  /**
    * Load all chat history
    */
   loadChatHistory: async () => {
-    if (!db) await Database.init();
+    const db = await Database.init();
 
     try {
       const rows = await db.getAllAsync(
-        'SELECT * FROM chat_history ORDER BY created_at ASC'
+        'SELECT * FROM chat_history ORDER BY created_at ASC, id ASC'
       );
 
       const messages = rows.map(row => ({
@@ -277,7 +373,7 @@ const Database = {
    * Clear all chat history
    */
   clearChatHistory: async () => {
-    if (!db) await Database.init();
+    const db = await Database.init();
 
     try {
       await db.execAsync('DELETE FROM chat_history');
@@ -292,9 +388,19 @@ const Database = {
    * Close database
    */
   close: async () => {
-    if (db) {
-      await db.closeAsync();
-      db = null;
+    const pending = initPromise;
+    if (pending) {
+      try {
+        await pending;
+      } catch (e) {
+        // init failed; nothing to close
+      }
+    }
+    const handle = db;
+    db = null;
+    initPromise = null;
+    if (handle) {
+      await handle.closeAsync();
       console.log('✅ Database closed');
     }
   },

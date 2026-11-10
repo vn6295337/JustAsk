@@ -22,22 +22,28 @@ CREATE INDEX IF NOT EXISTS idx_rate_limits_model_name ON rate_limits(model_name)
 CREATE INDEX IF NOT EXISTS idx_rate_limits_provider ON rate_limits(inference_provider);
 CREATE INDEX IF NOT EXISTS idx_rate_limits_rpm ON rate_limits(rpm);
 
+-- NOTE: the anon INSERT/UPDATE policies below are removed by drop_anon_write_policies.sql.
+-- Do not re-run this file after that migration without re-running it too.
+
 -- Enable Row Level Security
 ALTER TABLE rate_limits ENABLE ROW LEVEL SECURITY;
 
 -- RLS Policy: Allow public read access
+DROP POLICY IF EXISTS "Allow public read access" ON rate_limits;
 CREATE POLICY "Allow public read access"
 ON rate_limits FOR SELECT
 TO public
 USING (true);
 
 -- RLS Policy: Allow anon insert for setup scripts
+DROP POLICY IF EXISTS "Allow anon insert for setup" ON rate_limits;
 CREATE POLICY "Allow anon insert for setup"
 ON rate_limits FOR INSERT
 TO anon
 WITH CHECK (true);
 
 -- RLS Policy: Allow anon update for maintenance
+DROP POLICY IF EXISTS "Allow anon update for maintenance" ON rate_limits;
 CREATE POLICY "Allow anon update for maintenance"
 ON rate_limits FOR UPDATE
 TO anon

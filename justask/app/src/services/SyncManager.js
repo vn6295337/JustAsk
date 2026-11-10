@@ -2,22 +2,35 @@ import NetInfo from '@react-native-community/netinfo';
 import APIClient from './APIClient';
 import Database from './Database';
 import store from '../store';
-import { addMessage } from '../store/querySlice';
+import { addMessage, updateMessage } from '../store/querySlice';
+
+// Must not exceed the server's /queue/sync batch limit
+const BATCH_SIZE = 20;
 
 const SyncManager = {
   isSyncing: false,
+  _current: null,
 
   /**
-   * Start sync process if online
-   * Syncs all pending queries with exponential backoff retry
+   * Start sync process if online.
+   * `isSyncing` is set synchronously, so the reconnect handler and the manual
+   * Sync button share one in-flight run instead of duplicating LLM calls.
    */
-  syncPending: async () => {
-    // Prevent concurrent syncs
-    if (SyncManager.isSyncing) {
-      console.log('⏳ Sync already in progress');
-      return false;
+  syncPending: () => {
+    if (SyncManager._current) {
+      console.log('⏳ Sync already in progress, joining it');
+      return SyncManager._current;
     }
 
+    SyncManager.isSyncing = true;
+    SyncManager._current = SyncManager._run().finally(() => {
+      SyncManager.isSyncing = false;
+      SyncManager._current = null;
+    });
+    return SyncManager._current;
+  },
+
+  _run: async () => {
     try {
       // Check network status
       const networkState = await NetInfo.fetch();
@@ -26,66 +39,102 @@ const SyncManager = {
         return false;
       }
 
-      SyncManager.isSyncing = true;
-
       // Get pending queries
       const pending = await Database.getPendingQueries();
       if (pending.length === 0) {
         console.log('✅ No pending queries to sync');
-        SyncManager.isSyncing = false;
         return true;
       }
 
       console.log(`🔄 Syncing ${pending.length} pending queries...`);
 
-      // Attempt sync with retry
-      const result = await SyncManager.syncWithRetry(pending);
+      let synced = 0;
+      let failed = 0;
+      let aborted = false;
 
-      if (result.success) {
-        console.log(`✅ Synced ${result.synced} queries successfully`);
-        if (result.failed > 0) {
-          console.warn(`⚠️ ${result.failed} queries failed to sync`);
+      for (let i = 0; i < pending.length; i += BATCH_SIZE) {
+        const chunk = pending.slice(i, i + BATCH_SIZE);
+        try {
+          const result = await SyncManager.performSync(chunk);
+          synced += result.synced;
+          failed += result.failed;
+        } catch (error) {
+          // The server may have processed (and billed) part of this chunk before
+          // the request failed. Do NOT re-send immediately: count an attempt for
+          // each item and leave it for a later sync; items that reach the attempt
+          // limit become 'failed'. Stop here, the network/server is unhealthy.
+          console.error('❌ Sync batch failed:', error.message || error);
+          // 429 = our own rate limit / sync guard: the server did no work, so
+          // no attempt is consumed.
+          if (error.status !== 429) {
+            for (const q of chunk) {
+              await Database.recordSyncFailure(q.id, error.message || 'Sync request failed');
+            }
+          }
+          aborted = true;
+          break;
         }
-        return true;
-      } else {
-        console.error('❌ Sync failed after retries');
-        return false;
       }
+
+      console.log(`✅ Synced ${synced} queries, ${failed} failed`);
+      return !aborted;
     } catch (error) {
       console.error('❌ Sync error:', error.message);
       return false;
-    } finally {
-      SyncManager.isSyncing = false;
     }
   },
 
   /**
-   * Sync with exponential backoff retry
-   * Retries up to 3 times: 1s, 5s, 30s
+   * Update the chat placeholder for a queued query (or append a message for
+   * legacy queue rows that have no placeholder).
    */
-  syncWithRetry: async (queries, attempt = 1, maxAttempts = 3) => {
-    try {
-      const result = await SyncManager.performSync(queries);
-      return result;
-    } catch (error) {
-      if (attempt < maxAttempts) {
-        const delays = [1000, 5000, 30000]; // 1s, 5s, 30s
-        const delayMs = delays[attempt - 1];
+  _applyToChat: async (queuedQuery, fields) => {
+    const { text, llmUsed, category, responseTime } = fields;
+    const placeholderId = queuedQuery.message_id;
 
-        console.warn(
-          `⚠️ Sync attempt ${attempt} failed. Retrying in ${delayMs / 1000}s...`
-        );
-
-        await new Promise(resolve => setTimeout(resolve, delayMs));
-        return SyncManager.syncWithRetry(queries, attempt + 1, maxAttempts);
-      } else {
-        throw error;
+    if (placeholderId) {
+      store.dispatch(
+        updateMessage({
+          id: placeholderId,
+          updates: { text, llmUsed, category, responseTime, isCached: false, isQueued: false },
+        })
+      );
+      try {
+        await Database.updateMessage(placeholderId, {
+          text,
+          llm_used: llmUsed || null,
+          category: category || null,
+          response_time: responseTime || null,
+          is_cached: 0,
+          is_queued: 0,
+        });
+      } catch (dbError) {
+        console.error('Failed to update queued message in chat history:', dbError);
       }
+      return;
+    }
+
+    const message = {
+      id: `synced-${queuedQuery.id}-${Date.now()}`,
+      type: 'assistant',
+      text,
+      llmUsed,
+      category,
+      responseTime,
+      isCached: false,
+      isQueued: false,
+    };
+    store.dispatch(addMessage(message));
+    try {
+      await Database.saveMessage(message);
+    } catch (dbError) {
+      console.error('Failed to save synced message to chat history:', dbError);
     }
   },
 
   /**
-   * Perform the actual sync operation
+   * Send one batch (<= BATCH_SIZE) and apply per-item results.
+   * Throws only if the request itself fails.
    */
   performSync: async (queries) => {
     let synced = 0;
@@ -98,78 +147,74 @@ const SyncManager = {
       timestamp: q.timestamp || null,
     }));
 
-    try {
-      // Call backend sync endpoint with queue IDs
-      const syncResult = await APIClient.syncOfflineQueries(syncPayload);
+    const syncResult = await APIClient.syncOfflineQueries(syncPayload);
 
-      if (!syncResult.responses || !Array.isArray(syncResult.responses)) {
-        throw new Error('Invalid response format from sync endpoint');
-      }
+    if (!syncResult.responses || !Array.isArray(syncResult.responses)) {
+      throw new Error('Invalid response format from sync endpoint');
+    }
 
-      // Process each queued query by matching response by ID
-      for (let i = 0; i < queries.length; i++) {
-        const queuedQuery = queries[i];
+    for (const queuedQuery of queries) {
+      const responseData = syncResult.responses.find(r => String(r.id) === String(queuedQuery.id));
 
-        // Try to find a response that matches the queue id
-        const responseData = syncResult.responses.find(r => String(r.id) === String(queuedQuery.id));
-
-        if (responseData && responseData.response) {
+      if (responseData && responseData.success !== false && responseData.response) {
+        try {
+          const fields = {
+            text: responseData.response,
+            llmUsed: responseData.llm_used || 'unknown',
+            category: responseData.category || 'general',
+            responseTime: responseData.response_time || 0,
+          };
+          // Transactional: response row + 'synced' status together
+          await Database.saveOfflineResponse(
+            queuedQuery.id,
+            fields.text,
+            fields.llmUsed,
+            fields.category,
+            fields.responseTime
+          );
+          await SyncManager._applyToChat(queuedQuery, fields);
+          synced++;
+        } catch (saveError) {
+          console.error(
+            `❌ Failed to save response for queue ID ${queuedQuery.id}:`,
+            saveError.message || saveError
+          );
           try {
-            // Save the response to database using the original queue id
-            await Database.saveOfflineResponse(
-              queuedQuery.id,
-              responseData.response,
-              responseData.llm_used || 'unknown',
-              responseData.category || 'general',
-              responseData.response_time || 0
-            );
-
-            // Add response message to Redux store and chat history
-            const messageId = `synced-${queuedQuery.id}-${Date.now()}`;
-            const message = {
-              id: messageId,
-              type: 'assistant',
-              text: responseData.response,
-              llmUsed: responseData.llm_used || 'unknown',
-              category: responseData.category || 'general',
-              responseTime: responseData.response_time || 0,
-              isCached: false,
-              isQueued: false,
-            };
-
-            // Properly dispatch using imported action
-            store.dispatch(addMessage(message));
-
-            // Save to chat history
-            try {
-              await Database.saveMessage(message);
-            } catch (dbError) {
-              console.error('Failed to save synced message to chat history:', dbError);
-            }
-
-            synced++;
-          } catch (saveError) {
-            console.error(
-              `❌ Failed to save response for queue ID ${queuedQuery.id}:`,
-              saveError.message || saveError
-            );
-            failed++;
+            await Database.recordSyncFailure(queuedQuery.id, 'Failed to save response');
+          } catch (e) {
+            // ignore; nothing more to do
           }
-        } else {
-          console.warn(`⚠️ No response received from backend for queue ID ${queuedQuery.id}`);
           failed++;
         }
+      } else if (responseData?.deferred) {
+        // Server never started this item (time budget): leave pending, free retry
+        failed++;
+      } else {
+        // Failed item: count an attempt; 'permanent' (validation) or attempt cap => failed
+        const permanent = !!responseData?.permanent;
+        console.warn(`⚠️ Sync failed for queue ID ${queuedQuery.id}`);
+        try {
+          const status = await Database.recordSyncFailure(
+            queuedQuery.id,
+            responseData?.error || 'No response from backend',
+            permanent
+          );
+          if (status === 'failed') {
+            await SyncManager._applyToChat(queuedQuery, {
+              text: 'Could not answer this question. Please ask it again.',
+              llmUsed: null,
+              category: null,
+              responseTime: null,
+            });
+          }
+        } catch (dbError) {
+          console.error('Failed to record sync failure:', dbError);
+        }
+        failed++;
       }
-
-      return {
-        success: true,
-        synced,
-        failed,
-      };
-    } catch (error) {
-      console.error('❌ Sync perform error:', error.message || error);
-      throw error;
     }
+
+    return { success: true, synced, failed };
   },
 
   /**

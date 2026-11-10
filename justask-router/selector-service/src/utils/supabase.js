@@ -131,6 +131,7 @@ export async function fetchLatestModels() {
 
       return {
         ...model,
+        aa_slug: aaSlug || null,
         aa_performance_metrics: aaMetrics || null,
         rate_limits_normalized: rateLimitsData
       };

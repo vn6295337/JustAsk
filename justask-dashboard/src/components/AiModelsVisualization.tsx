@@ -3,6 +3,17 @@ import { supabase } from '@/integrations/supabase/client';
 import { ChevronDown, ChevronRight, Filter, X, Moon, Sun, BarChart3, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+// Only allow http(s) URLs in hrefs (blocks javascript:, data:, etc.)
+const safeUrl = (url: unknown): string | undefined => {
+  if (typeof url !== 'string' || !url.trim()) return undefined;
+  try {
+    const u = new URL(url.trim());
+    return u.protocol === 'https:' || u.protocol === 'http:' ? u.href : undefined;
+  } catch {
+    return undefined;
+  }
+};
+
 const AiModelsVisualization = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -44,13 +55,11 @@ const AiModelsVisualization = () => {
 
   const fetchModelData = async () => {
     try {
-      console.log('Fetching model data from ai_models_main...');
       const response = await supabase
         .from('ai_models_main')
         .select('*')
         .order('id', { ascending: true });
 
-      console.log('Supabase response:', response);
 
       if (response.error) {
         console.error('Supabase error:', response.error);
@@ -62,9 +71,6 @@ const AiModelsVisualization = () => {
         throw new Error('No data available from ai_models_main table');
       }
 
-      console.log(`Successfully fetched ${response.data.length} records`);
-      console.log('Sample record:', response.data[0]);
-      console.log('Sample record fields:', Object.keys(response.data[0]));
       return response.data;
     } catch (err) {
       console.error('Error fetching data:', err);
@@ -209,13 +215,10 @@ const AiModelsVisualization = () => {
     const aValue = getSortableValue(a, sortConfig.key);
     const bValue = getSortableValue(b, sortConfig.key);
     
-    if (aValue < bValue) {
-      return sortConfig.direction === 'asc' ? -1 : 1;
-    }
-    if (aValue > bValue) {
-      return sortConfig.direction === 'asc' ? 1 : -1;
-    }
-    return 0;
+    const cmp = typeof aValue === 'string' && typeof bValue === 'string'
+      ? aValue.localeCompare(bValue, undefined, { sensitivity: 'base' })
+      : (aValue < bValue ? -1 : aValue > bValue ? 1 : 0);
+    return sortConfig.direction === 'asc' ? cmp : -cmp;
   });
 
   // Toggle filter value
@@ -260,18 +263,27 @@ const AiModelsVisualization = () => {
   };
 
 
+  const hasDataRef = useRef(false);
+
   useEffect(() => {
+    let cancelled = false;
+    let requestId = 0;
     const loadData = async () => {
+      const myId = ++requestId;
       try {
         const rawData = await fetchModelData();
-        console.log('Raw data length:', rawData.length);
+        if (cancelled || myId !== requestId) return;
+        hasDataRef.current = true;
+        setError(null);
         setModels(rawData);
         setLastRefresh(new Date());
       } catch (err: any) {
+        if (cancelled || myId !== requestId) return;
         console.error('Load data error:', err);
-        setError(err.message || 'Failed to load data');
+        // Keep showing last good data if a background refresh fails
+        if (!hasDataRef.current) setError(err.message || 'Failed to load data');
       } finally {
-        setLoading(false);
+        if (!cancelled && myId === requestId) setLoading(false);
       }
     };
 
@@ -281,20 +293,21 @@ const AiModelsVisualization = () => {
     const interval = setInterval(loadData, 5 * 60 * 1000);
 
     // Cleanup interval on unmount
-    return () => clearInterval(interval);
+    return () => { cancelled = true; clearInterval(interval); };
   }, []);
 
   // Load banner text from file
   useEffect(() => {
+    const controller = new AbortController();
     const loadBannerText = async () => {
       try {
-        const response = await fetch('/banner-text.txt');
+        const response = await fetch('/banner-text.txt', { signal: controller.signal });
         if (response.ok) {
           const text = await response.text();
           setBannerText(text.trim() || "🔴 LIVE: JustAsk Dashboard - 50+ free AI models from 3 providers");
         }
       } catch (error) {
-        console.log('Using default banner text');
+        if (controller.signal.aborted) return;
         setBannerText("🔴 LIVE: JustAsk Dashboard - 50+ free AI models from 3 providers");
       }
     };
@@ -303,7 +316,7 @@ const AiModelsVisualization = () => {
 
     // Poll for banner text changes every 30 seconds
     const bannerInterval = setInterval(loadBannerText, 30000);
-    return () => clearInterval(bannerInterval);
+    return () => { controller.abort(); clearInterval(bannerInterval); };
   }, []);
 
   // One-time keyframes
@@ -333,6 +346,7 @@ const AiModelsVisualization = () => {
     window.addEventListener('resize', onResize);
 
     let fontDone = false;
+    let cancelled = false;
     const measureUnit = () => {
       if (!unitRef.current) return;
       const uw = Math.ceil(unitRef.current.getBoundingClientRect().width);
@@ -344,13 +358,14 @@ const AiModelsVisualization = () => {
     // @ts-ignore
     const fonts = (document as any).fonts;
     if (fonts?.ready && typeof fonts.ready.then === 'function') {
-      fonts.ready.then(() => { fontDone = true; measure(); measureUnit(); });
+      fonts.ready.then(() => { if (cancelled) return; fontDone = true; measure(); measureUnit(); });
     }
 
     // Fallback
     const rAF = requestAnimationFrame(() => { if (!fontDone) { measureUnit(); } });
 
     return () => {
+      cancelled = true;
       window.removeEventListener('resize', onResize);
       cancelAnimationFrame(rAF);
     };
@@ -658,7 +673,7 @@ const AiModelsVisualization = () => {
                 <tbody>
                   {filteredModels.map((model, index) => {
                     return (
-                      <tr key={index} className={`border-b ${darkMode ? 'border-gray-600' : 'border-gray-200'} ${index % 2 === 0 
+                      <tr key={model.id ?? `${model.inference_provider}-${model.human_readable_name}-${index}`} className={`border-b ${darkMode ? 'border-gray-600' : 'border-gray-200'} ${index % 2 === 0 
                         ? darkMode ? 'bg-gray-800/50' : 'bg-gray-50/50'
                         : darkMode ? 'bg-gray-900' : 'bg-white'
                       } ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-blue-50'} transition-colors`}>
@@ -690,9 +705,9 @@ const AiModelsVisualization = () => {
                           <div className="text-center">
                             {/* Top line: Info text with URL */}
                             {model.license_info_text && (
-                              model.license_info_url ? (
+                              safeUrl(model.license_info_url) ? (
                                 <a
-                                  href={model.license_info_url}
+                                  href={safeUrl(model.license_info_url)}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className={`${darkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-800'} hover:underline block`}
@@ -705,9 +720,9 @@ const AiModelsVisualization = () => {
                             )}
                             {/* Bottom line: License name with URL */}
                             {model.license_name && (
-                              model.license_url ? (
+                              safeUrl(model.license_url) ? (
                                 <a
-                                  href={model.license_url}
+                                  href={safeUrl(model.license_url)}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className={`${darkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-800'} hover:underline block`}

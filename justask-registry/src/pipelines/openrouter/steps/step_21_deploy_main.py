@@ -52,6 +52,7 @@ try:
         delete_records,
         insert_records_batch,
         load_staging_data,
+        replace_provider_records_atomic,
     )
 except ImportError as e:
     print(f"Error: Required utilities not found: {e}")
@@ -133,31 +134,6 @@ def prepare_data_for_production(staging_data: List[Dict[str, Any]]) -> List[Dict
     return prepared_models
 
 
-def restore_production_backup(conn, backup_data: List[Dict[str, Any]]) -> bool:
-    """Restore backed up records to production (rollback operation)."""
-    logger.info(f"🔄 Rolling back: Restoring {len(backup_data)} OpenRouter records to production...")
-
-    if not backup_data:
-        logger.info("✅ No production data to restore")
-        return True
-
-    # Remove auto-managed fields
-    auto_managed_fields = ['id', 'created_at', 'updated_at']
-    clean_backup = [{k: v for k, v in record.items() if k not in auto_managed_fields}
-                    for record in backup_data]
-
-    logger.info(f"   Prepared {len(clean_backup)} records for restoration")
-
-    # Use batch insert
-    if insert_records_batch(conn, PRODUCTION_TABLE, clean_backup, batch_size=50):
-        final_count = get_record_count(conn, PRODUCTION_TABLE, INFERENCE_PROVIDER)
-        logger.info(f"✅ Rollback successful: {final_count} OpenRouter records restored to production")
-        return True
-    else:
-        logger.error(f"❌ Rollback failed")
-        return False
-
-
 def main():
     """Main orchestration function for production deployment."""
     logger.info("=" * 70)
@@ -165,7 +141,6 @@ def main():
     logger.info("=" * 70)
     start_time = datetime.now()
     conn = None
-    backup_data = None
 
     try:
         # Step 1: Connect to database
@@ -205,48 +180,16 @@ def main():
             logger.error("❌ DEPLOYMENT FAILED: No valid data to deploy")
             return False
 
-        # Step 5: Backup existing production data
-        logger.info("🛡️ CREATING PRODUCTION BACKUP FOR ROLLBACK PROTECTION...")
-        backup_data = backup_records(conn, PRODUCTION_TABLE, INFERENCE_PROVIDER)
-        if backup_data is None:
-            logger.error("❌ DEPLOYMENT FAILED: Could not backup production data - ABORTING")
+        # Atomic: delete + insert + verify in ONE transaction; any failure rolls back.
+        logger.info(f"🚀 Atomically deploying {len(prepared_data)} models to {PRODUCTION_TABLE} (replacing {production_count})...")
+        if not replace_provider_records_atomic(
+            conn, PRODUCTION_TABLE, INFERENCE_PROVIDER, prepared_data, tolerance=0
+        ):
+            logger.error("❌ DEPLOYMENT FAILED: transaction rolled back, production data untouched")
             return False
 
-        logger.info(f"✅ Backed up {len(backup_data)} existing OpenRouter records from production")
-
-        # Step 6: Delete existing production data
-        logger.info(f"🗑️ Deleting existing OpenRouter records from {PRODUCTION_TABLE}...")
-        if not delete_records(conn, PRODUCTION_TABLE, INFERENCE_PROVIDER):
-            logger.error("❌ DEPLOYMENT FAILED: Could not delete existing production data")
-            return False
-
-        logger.info(f"✅ Successfully deleted {production_count} OpenRouter records from production")
-
-        # Step 7: Deploy new data
-        logger.info(f"🚀 Deploying {len(prepared_data)} models to production ({PRODUCTION_TABLE})...")
-        if not insert_records_batch(conn, PRODUCTION_TABLE, prepared_data, batch_size=100):
-            logger.error("❌ DEPLOYMENT FAILED: Data deployment failed - INITIATING ROLLBACK")
-            if restore_production_backup(conn, backup_data):
-                logger.info("✅ ROLLBACK SUCCESSFUL: Original production data restored")
-            else:
-                logger.error("❌ ROLLBACK FAILED: Manual intervention required!")
-            return False
-
-        logger.info(f"✅ Successfully deployed {len(prepared_data)} models to production")
-
-        # Step 8: Verify deployment
-        logger.info("🔍 Verifying production deployment results...")
-        final_count = get_record_count(conn, PRODUCTION_TABLE, INFERENCE_PROVIDER)
-
-        tolerance = max(1, int(len(prepared_data) * 0.05))  # 5% tolerance
-        if abs(final_count - len(prepared_data)) > tolerance:
-            logger.error(f"❌ Verification failed: Expected ~{len(prepared_data)}, found {final_count}")
-            logger.error("❌ DEPLOYMENT FAILED: Verification failed - INITIATING ROLLBACK")
-            if restore_production_backup(conn, backup_data):
-                logger.info("✅ ROLLBACK SUCCESSFUL: Original production data restored")
-            else:
-                logger.error("❌ ROLLBACK FAILED: Manual intervention required!")
-            return False
+        final_count = len(prepared_data)
+        logger.info(f"✅ Deployed and verified {final_count} models (committed)")
 
         # Success
         end_time = datetime.now()
@@ -257,7 +200,6 @@ def main():
         logger.info("=" * 70)
         logger.info(f"📊 Deployment Summary:")
         logger.info(f"   • Staging records processed: {len(staging_data)}")
-        logger.info(f"   • Production records backed up: {len(backup_data)}")
         logger.info(f"   • Production records deleted: {production_count}")
         logger.info(f"   • New records deployed: {len(prepared_data)}")
         logger.info(f"   • Final production count: {final_count}")
@@ -270,12 +212,8 @@ def main():
 
     except Exception as e:
         logger.error(f"❌ UNEXPECTED ERROR: {str(e)}")
-        if backup_data and conn:
-            logger.info("🔄 Attempting emergency rollback...")
-            if restore_production_backup(conn, backup_data):
-                logger.info("✅ EMERGENCY ROLLBACK SUCCESSFUL")
-            else:
-                logger.error("❌ EMERGENCY ROLLBACK FAILED")
+        if conn:
+            conn.rollback()
         return False
 
     finally:

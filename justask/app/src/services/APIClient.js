@@ -4,11 +4,15 @@ import Constants from 'expo-constants';
 const BACKEND_URL = Constants.expoConfig?.extra?.backendUrl || 'https://justask-api.onrender.com';
 const TIMEOUT = parseInt(Constants.expoConfig?.extra?.apiTimeout, 10) || 30000;
 
+// Optional shared token (must match API_AUTH_TOKEN on the server, if set)
+const API_TOKEN = Constants.expoConfig?.extra?.apiToken || '';
+
 const client = axios.create({
   baseURL: BACKEND_URL,
   timeout: TIMEOUT,
   headers: {
     'Content-Type': 'application/json',
+    ...(API_TOKEN ? { Authorization: `Bearer ${API_TOKEN}` } : {}),
   },
 });
 
@@ -64,7 +68,7 @@ const APIClient = {
  * Handle API errors and return user-friendly messages
  */
 function handleError(error) {
-  console.log('Full error object:', JSON.stringify(error, null, 2));
+  const wrap = (message, props) => Object.assign(new Error(message), props);
 
   if (error.response) {
     // Server responded with error status
@@ -72,13 +76,13 @@ function handleError(error) {
     const message = error.response.data?.error || 'Server error';
 
     if (status === 400) {
-      return new Error(`Invalid request: ${message}`);
+      return wrap(`Invalid request: ${message}`, { status });
     } else if (status === 429) {
-      return new Error('Rate limited. All providers are busy. Please try again in a moment.');
+      return wrap('Rate limited. All providers are busy. Please try again in a moment.', { status });
     } else if (status === 500) {
-      return new Error('All LLM providers unavailable. Please try again later.');
+      return wrap('All LLM providers unavailable. Please try again later.', { status });
     } else {
-      return new Error(`Error (${status}): ${message}`);
+      return wrap(`Error (${status}): ${message}`, { status });
     }
   } else if (error.request) {
     // Request made but no response
@@ -86,13 +90,13 @@ function handleError(error) {
     console.log('Request error details:', errorDetails);
 
     if (error.code === 'ECONNABORTED') {
-      return new Error(`Timeout after ${TIMEOUT}ms. Backend may be starting up (Render cold start). Please try again.`);
+      return wrap(`Timeout after ${TIMEOUT}ms. Backend may be starting up (Render cold start). Please try again.`, { isNetworkError: true });
     } else if (error.code === 'ECONNREFUSED') {
-      return new Error(`Cannot reach ${BACKEND_URL}. Check network connection.`);
+      return wrap(`Cannot reach ${BACKEND_URL}. Check network connection.`, { isNetworkError: true });
     } else if (error.code === 'NETWORK_ERROR' || error.code === 'ERR_NETWORK') {
-      return new Error(`Network error (${error.code}). Check your internet connection and try again.`);
+      return wrap(`Network error (${error.code}). Check your internet connection and try again.`, { isNetworkError: true });
     } else {
-      return new Error(`Network error: ${error.message || 'No response from server'}`);
+      return wrap(`Network error: ${error.message || 'No response from server'}`, { isNetworkError: true });
     }
   } else {
     // Other errors

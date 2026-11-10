@@ -4,7 +4,20 @@
  */
 
 const QUERY_MIN_LENGTH = 1;
+import config from '../config.js';
+
 const QUERY_MAX_LENGTH = 2000;
+
+// Event-handler attributes only count inside a tag ("region=EU" is fine);
+// "script>" only counts as a tag ("transcript>" is fine).
+const DANGEROUS_PATTERNS = [
+  /<\s*\/?\s*script\b/i,
+  /<\s*iframe\b/i,
+  /<[^>]*\bon[a-z]+\s*=/i,
+];
+
+export const hasDangerousContent = (text) =>
+  DANGEROUS_PATTERNS.some((pattern) => pattern.test(text));
 
 /**
  * Validate query input
@@ -59,19 +72,11 @@ export const validateQuery = (req, res, next) => {
 
     // Optional: Reject obviously malicious patterns
     // (This is a basic check; real security requires more)
-    const dangerousPatterns = [
-      /script>/i,           // Script tags
-      /<iframe/i,          // IFrames
-      /on\w+\s*=/i,        // Event handlers
-    ];
-
-    for (const pattern of dangerousPatterns) {
-      if (pattern.test(trimmedQuery)) {
-        return res.status(400).json({
-          error: 'Query contains potentially dangerous content',
-          status: 400,
-        });
-      }
+    if (hasDangerousContent(trimmedQuery)) {
+      return res.status(400).json({
+        error: 'Query contains potentially dangerous content',
+        status: 400,
+      });
     }
 
     // Attach validated query to request
@@ -110,34 +115,47 @@ export const validateBatchQueries = (req, res, next) => {
     }
 
     // Check if array doesn't exceed reasonable limit (prevent abuse)
-    if (queries.length > 100) {
+    const maxBatch = config.sync.maxBatch;
+    if (queries.length > maxBatch) {
       return res.status(400).json({
-        error: 'Cannot sync more than 100 queries at once',
+        error: `Cannot sync more than ${maxBatch} queries at once`,
         status: 400,
       });
     }
 
-    // Validate each query
-    const validatedQueries = queries.map((item, index) => {
-      if (!item.query || typeof item.query !== 'string') {
+    // Structural problems (not an object / no string query) reject the batch.
+    // Content problems (empty, too long, dangerous) reject only that item so
+    // one bad queued entry cannot block the rest.
+    const validatedQueries = [];
+    const rejectedQueries = [];
+
+    queries.forEach((item, index) => {
+      if (!item || typeof item !== 'object' || !item.query || typeof item.query !== 'string') {
         throw new Error(`Query ${index} is invalid`);
       }
 
       const trimmedQuery = item.query.trim();
+      let reason = null;
       if (trimmedQuery.length === 0 || trimmedQuery.length > QUERY_MAX_LENGTH) {
-        throw new Error(
-          `Query ${index} is invalid (empty or exceeds max length)`
-        );
+        reason = 'Query is empty or exceeds max length';
+      } else if (hasDangerousContent(trimmedQuery)) {
+        reason = 'Query contains potentially dangerous content';
+      }
+
+      if (reason) {
+        rejectedQueries.push({ id: item.id, query: trimmedQuery.slice(0, QUERY_MAX_LENGTH), reason });
+        return;
       }
 
       // Preserve id if provided (for offline queue sync)
-      return {
+      validatedQueries.push({
         id: item.id,
         query: trimmedQuery,
         timestamp: item.timestamp || Date.now(),
-      };
+      });
     });
 
+    req.rejectedQueries = rejectedQueries;
     req.validatedQueries = validatedQueries;
     next();
   } catch (error) {
