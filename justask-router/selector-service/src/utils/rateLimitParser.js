@@ -1,6 +1,6 @@
 /**
  * Rate Limit Parser
- * Parses various rate limit text formats from working_version.rate_limits column
+ * Parses various rate limit text formats from 10_free-models-staging.rate_limits column
  * Supports 3 primary formats covering 100% of text-generation models
  */
 
@@ -63,7 +63,7 @@ function applyProviderFallback(result, provider) {
  * Format 2 (OpenRouter): "20 requests/min 50/day"
  * Format 3 (Groq): "RPM: 30, TPM: 15K, RPD: 14.4K, TPD: 500K"
  *
- * @param {string} rateLimitsStr - Raw rate_limits string from working_version
+ * @param {string} rateLimitsStr - Raw rate_limits string from 10_free-models-staging
  * @param {string} provider - inference_provider for fallback
  * @returns {Object} Parsed rate limits with rpm, rpd, tpm, tpd
  */
@@ -143,9 +143,9 @@ export function parseRateLimits(rateLimitsStr, provider) {
 }
 
 /**
- * Parse rate limits for many working_version rows.
+ * Parse rate limits for many 10_free-models-staging rows.
  * @param {Array<{human_readable_name: string, inference_provider: string, rate_limits: string}>} models
- * @returns {Array<Object>} Rows shaped for ims.30_rate_limits
+ * @returns {Array<Object>} Rows shaped for justask."22_router-provider-rate-limits"
  */
 export function batchParseRateLimits(models) {
   return (models || []).map(m => {

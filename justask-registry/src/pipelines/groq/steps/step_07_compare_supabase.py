@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Groq Pipeline vs Supabase Field Comparison
-Compares field values between stage-5-data-normalization.json and Supabase working_version table
+Compares field values between stage-5-data-normalization.json and Supabase 10_free-models-staging table
 """
 
 import csv
@@ -57,7 +57,7 @@ except ImportError:
 # Configuration
 PIPELINE_DATA_FILE = get_input_file_path('06_normalized_models.json')
 REPORT_FILE = get_output_file_path('07_supabase_comparison.txt')
-TABLE_NAME = "working_version"
+TABLE_NAME = 'justask."10_free-models-staging"'
 INFERENCE_PROVIDER = "Groq"
 
 def get_db_connection():
@@ -110,7 +110,7 @@ def _norm(value) -> str:
 
 
 def load_supabase_data(conn) -> List[Dict[str, Any]]:
-    """Load Groq data from Supabase working_version table"""
+    """Load Groq data from Supabase 10_free-models-staging table"""
     try:
         print(f"Querying Supabase table '{TABLE_NAME}' for inference_provider='{INFERENCE_PROVIDER}'")
         with conn.cursor(cursor_factory=RealDictCursor) as cur:

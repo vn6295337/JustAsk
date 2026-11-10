@@ -53,7 +53,8 @@
 ## Database
 *Schema, tables, lifecycle*
 
-- [schema.md](./database/schema.md) - Tables, columns, indexes, relations
+- [database-map.md](./database-map.md) - Current tables (schema `justask`), groups, who writes them
+- [schema.md](./database/schema.md) - Tables, columns, indexes, relations (pre-2026-11 names)
 
 ---
 
@@ -94,7 +95,7 @@
 | Set up dev | [contributing.md](./development/contributing.md) |
 | Understand system | [system-overview.md](./architecture/system-overview.md) |
 | Call API | [endpoints.md](./api/endpoints.md) |
-| View database | [schema.md](./database/schema.md) |
+| View database | [database-map.md](./database-map.md) |
 | Test app | [testing/](./testing/) |
 | Deploy backend | [backend.md](./deployment/backend.md) |
 | Build APK | [apk-build.md](./deployment/apk-build.md) |

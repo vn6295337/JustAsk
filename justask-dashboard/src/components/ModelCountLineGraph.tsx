@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useLayoutEffect, useRef, CSSProperties } from 'react';
 import { Line } from 'react-chartjs-2';
-import { supabase } from '@/integrations/supabase/client';
+import { justaskDb } from '@/integrations/supabase/client';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -63,8 +63,8 @@ const ModelCountLineGraph: React.FC<ModelCountLineGraphProps> = ({ currentModels
     const controller = new AbortController();
     const loadHistoricalData = async () => {
       try {
-        const { data, error } = await supabase
-          .from('analytics_history')
+        const { data, error } = await justaskDb
+          .from('30_analytics-daily-model-counts')
           .select('*')
           .order('timestamp', { ascending: true })
           .limit(10000)

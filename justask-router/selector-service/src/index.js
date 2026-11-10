@@ -40,12 +40,12 @@ app.get('/health', (req, res) => {
 app.get('/models', async (req, res) => {
   try {
     const models = await cacheManager.getOrFetch(
-      'ai_models_main',
+      'models',
       fetchLatestModels,
       CACHE_TTLS.models
     );
 
-    const cacheAge = cacheManager.getAge('ai_models_main');
+    const cacheAge = cacheManager.getAge('models');
 
     res.json({
       models,
@@ -64,8 +64,8 @@ app.get('/models', async (req, res) => {
 });
 
 // MVP: Get best model by Intelligence Index
-// Uses the same joined data as /select-model (public.working_version ->
-// ims.10_model_aa_mapping -> ims.20_aa_performance_metrics) via fetchLatestModels.
+// Uses the same joined data as /select-model (justask."10_free-models-staging" ->
+// justask."21_router-model-benchmark-map" -> justask."20_router-benchmark-scores") via fetchLatestModels.
 app.get('/best-model', async (req, res) => {
   try {
     const { provider } = req.query;
@@ -74,7 +74,7 @@ app.get('/best-model', async (req, res) => {
     }
 
     const all = await cacheManager.getOrFetch(
-      'ai_models_main',
+      'models',
       fetchLatestModels,
       CACHE_TTLS.models
     );
@@ -145,10 +145,10 @@ app.get('/best-models', async (req, res) => {
       });
     }
 
-    // Use 40_model_selection_score for pre-computed rankings
+    // Use 23_router-model-ranking for pre-computed rankings
     let query = supabase
-      .schema('ims')
-      .from('40_model_selection_score')
+      .schema('justask')
+      .from('23_router-model-ranking')
       .select('model_name, inference_provider, provider_slug, intelligence_index, selection_score, rpm_limit, overall_headroom, latency_score')
       .order('selection_score', { ascending: false })
       .limit(limitNum);
@@ -254,7 +254,7 @@ app.post('/select-model', async (req, res) => {
 app.post('/cache/refresh', adminAuth, async (req, res) => {
   try {
     // Fetch first; the cache is only replaced on success (old data survives a failure)
-    const models = await cacheManager.refresh('ai_models_main', fetchLatestModels, CACHE_TTLS.models);
+    const models = await cacheManager.refresh('models', fetchLatestModels, CACHE_TTLS.models);
 
     res.json({
       message: 'Cache refreshed',
@@ -322,7 +322,7 @@ async function startServer() {
     // Pre-warm cache
     console.log('Pre-warming cache...');
     const models = await fetchLatestModels();
-    cacheManager.set('ai_models_main', models, CACHE_TTLS.models);
+    cacheManager.set('models', models, CACHE_TTLS.models);
     console.log(`✓ Cached ${models.length} models`);
 
     // Start listening

@@ -1,5 +1,5 @@
 // Supabase client. Requires VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY (see .env.example).
-import { createClient } from '@supabase/supabase-js';
+import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
@@ -19,3 +19,7 @@ export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABL
     autoRefreshToken: false,
   },
 });
+
+// JustAsk tables live in the "justask" schema (names: docs/database-map.md).
+// Generated types cover "public" only, so this client is untyped.
+export const justaskDb = (supabase as unknown as SupabaseClient).schema('justask');

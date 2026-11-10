@@ -189,14 +189,14 @@ export function getModelScore(model, scoresMap = {}) {
   const metrics = model.aa_performance_metrics || null;
 
   // The scores map is keyed by Artificial Analysis slug. Resolve the model's AA slug
-  // through the mapping (ims.10_model_aa_mapping), never via human_readable_name.
+  // through the mapping (justask."21_router-model-benchmark-map"), never via human_readable_name.
   const aaSlug = model.aa_slug || metrics?.aa_slug || null;
 
   if (aaSlug && map[aaSlug] != null) {
     return map[aaSlug];
   }
 
-  // Mapped metrics joined at fetch time (ims.20_aa_performance_metrics)
+  // Mapped metrics joined at fetch time (justask."20_router-benchmark-scores")
   if (metrics && typeof metrics.intelligence_index === 'number' && Number.isFinite(metrics.intelligence_index)) {
     return normalizeScore(metrics.intelligence_index);
   }

@@ -1,3 +1,6 @@
+-- HISTORICAL: do not run. These tables now live in schema justask under new names
+-- (see docs/database-map.md). Running this would recreate the old names and the
+-- anon write policies removed on 2026-11-10.
 -- Rate Limits Table
 -- Purpose: Store normalized rate limit data for text-generation models
 -- Pattern: Same as model_aa_mapping (selector-managed, not pipeline-managed)

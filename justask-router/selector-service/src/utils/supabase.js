@@ -1,5 +1,5 @@
 /**
- * Supabase database utilities for querying ai_models_main table
+ * Supabase database utilities for querying 11_free-models-live table
  */
 
 import { createClient } from '@supabase/supabase-js';
@@ -18,7 +18,7 @@ if (!supabaseUrl || !supabaseKey) {
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 /**
- * Normalize provider_slug to match format in ims.10_model_aa_mapping
+ * Normalize provider_slug to match format in justask."21_router-model-benchmark-map"
  *
  * This matches the normalization logic in model_aa_mapping_utils.py:
  * 1. Replace periods, spaces, underscores with hyphens
@@ -55,16 +55,16 @@ function normalizeProviderSlug(slug) {
 }
 
 /**
- * Fetch all models from working_version table with AA performance metrics and rate limits
- * Uses 4-table lookup: working_version → model_aa_mapping → aa_performance_metrics
+ * Fetch all models from 10_free-models-staging table with AA performance metrics and rate limits
+ * Uses 4-table lookup: 10_free-models-staging → model_aa_mapping → aa_performance_metrics
  *                                      → rate_limits
  * @returns {Promise<Array>} Array of model objects
  */
 export async function fetchLatestModels() {
   try {
-    // Fetch all models from working_version
+    // Fetch all models from 10_free-models-staging
     const { data: models, error: modelsError } = await supabase
-      .from('working_version')
+      .schema('justask').from('10_free-models-staging')
       .select('*')
       .order('updated_at', { ascending: false });
 
@@ -74,8 +74,8 @@ export async function fetchLatestModels() {
 
     // Fetch model provider_slug → AA slug mappings
     const { data: mappings, error: mappingsError } = await supabase
-      .schema('ims')
-      .from('10_model_aa_mapping')
+      .schema('justask')
+      .from('21_router-model-benchmark-map')
       .select('provider_slug, aa_slug, inference_provider');
 
     if (mappingsError) {
@@ -84,8 +84,8 @@ export async function fetchLatestModels() {
 
     // Fetch all AA performance metrics
     const { data: metrics, error: metricsError } = await supabase
-      .schema('ims')
-      .from('20_aa_performance_metrics')
+      .schema('justask')
+      .from('20_router-benchmark-scores')
       .select('aa_slug, intelligence_index, coding_index, math_index, name');
 
     if (metricsError) {
@@ -94,8 +94,8 @@ export async function fetchLatestModels() {
 
     // Fetch all rate limits
     const { data: rateLimits, error: rateLimitsError } = await supabase
-      .schema('ims')
-      .from('30_rate_limits')
+      .schema('justask')
+      .from('22_router-provider-rate-limits')
       .select('human_readable_name, rpm, rpd, tpm, tpd, parseable');
 
     if (rateLimitsError) {
@@ -119,7 +119,7 @@ export async function fetchLatestModels() {
       rateLimitsMap[r.human_readable_name] = r;
     });
 
-    // 4-table join: working_version → model_aa_mapping → aa_performance_metrics
+    // 4-table join: 10_free-models-staging → model_aa_mapping → aa_performance_metrics
     //                               → rate_limits
     const modelsWithMetrics = (models || []).map(model => {
       // Normalize provider_slug to match mapping table format
@@ -151,7 +151,7 @@ export async function fetchLatestModels() {
 export async function testConnection() {
   try {
     const { data, error } = await supabase
-      .from('working_version')
+      .schema('justask').from('10_free-models-staging')
       .select('id')
       .limit(1);
 

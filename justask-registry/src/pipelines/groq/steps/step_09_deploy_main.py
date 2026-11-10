@@ -4,10 +4,10 @@
 Production Deployment Script: Groq Data Migration - PostgreSQL Version
 ==============================================
 
-This script deploys Groq data from working_version to ai_models_main by:
-1. Backing up existing Groq records from ai_models_main
-2. Deleting existing Groq records from ai_models_main
-3. Copying Groq data from working_version to ai_models_main
+This script deploys Groq data from 10_free-models-staging to 11_free-models-live by:
+1. Backing up existing Groq records from 11_free-models-live
+2. Deleting existing Groq records from 11_free-models-live
+3. Copying Groq data from 10_free-models-staging to 11_free-models-live
 
 Features:
 - Direct PostgreSQL connection with pipeline_writer role
@@ -77,8 +77,8 @@ except ImportError:
 LOG_FILE = get_output_file_path('09_deploy_main_report.txt')
 
 # Database configuration
-STAGING_TABLE = "working_version"
-PRODUCTION_TABLE = "ai_models_main"
+STAGING_TABLE = 'justask."10_free-models-staging"'
+PRODUCTION_TABLE = 'justask."11_free-models-live"'
 INFERENCE_PROVIDER = "Groq"
 
 # Setup logging
@@ -108,7 +108,7 @@ def prepare_data_for_production(staging_data: List[Dict[str, Any]]) -> List[Dict
 
     prepared_models = []
     auto_managed_fields = ['id', 'created_at', 'updated_at']
-    excluded_fields = ['provider_slug']  # Not in ai_models_main schema
+    excluded_fields = ['provider_slug']  # Not in 11_free-models-live schema
 
     for model in staging_data:
         # Remove auto-managed fields and excluded fields

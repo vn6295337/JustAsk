@@ -5,7 +5,7 @@ Supabase OpenRouter Data Refresh Script - PostgreSQL Version
 ====================================
 
 This script refreshes OpenRouter data in Supabase by:
-1. Deleting existing OpenRouter records from working_version_v3 table
+1. Deleting existing OpenRouter records from 10_free-models-staging table
 2. Loading finalized data from 18_validated_models.json
 3. Inserting fresh OpenRouter data into Supabase
 
@@ -93,7 +93,7 @@ JSON_FILE = SCRIPT_DIR / get_input_file_path("18_validated_models.json")
 LOG_FILE = SCRIPT_DIR / get_output_file_path("20_refresh_working_report.txt")
 
 # Database configuration
-TABLE_NAME = "working_version"
+TABLE_NAME = 'justask."10_free-models-staging"'
 INFERENCE_PROVIDER = "OpenRouter"
 
 # Setup logging
@@ -235,7 +235,7 @@ def main():
         if not replace_provider_records_atomic(
             conn, TABLE_NAME, INFERENCE_PROVIDER, prepared_models,
             tolerance=0,
-            rate_limit_table='ims."30_rate_limits"',
+            rate_limit_table='justask."22_router-provider-rate-limits"',
             rate_limit_records=rate_limit_records,
         ):
             logger.error("❌ REFRESH FAILED: transaction rolled back, original data untouched")

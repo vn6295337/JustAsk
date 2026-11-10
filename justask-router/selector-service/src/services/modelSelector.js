@@ -106,7 +106,7 @@ export async function selectModel(criteria) {
  */
 async function getModels() {
   return await cacheManager.getOrFetch(
-    'ai_models_main',
+    'models',
     fetchLatestModels,
     CACHE_TTLS.models
   );
