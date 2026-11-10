@@ -1,31 +1,8 @@
 {
   "metadata": {
-    "generated_at": "2026-05-20 09:29:14 IST",
-    "total_models": 2,
+    "generated_at": "2026-11-10 19:41:49 IST",
+    "total_models": 0,
     "pipeline_stage": "D_extract_meta_licenses"
   },
-  "models": [
-    {
-      "id": "meta-llama/llama-3.3-70b-instruct:free",
-      "canonical_slug": "meta-llama/llama-3.3-70b-instruct",
-      "original_name": "Meta: Llama 3.3 70B Instruct (free)",
-      "hugging_face_id": "meta-llama/Llama-3.3-70B-Instruct",
-      "clean_model_name": "Llama 3.3 70B Instruct",
-      "license_info_text": "",
-      "license_info_url": "",
-      "license_name": "LLAMA-3.3",
-      "license_url": "https://www.llama.com/llama3_3/license/"
-    },
-    {
-      "id": "meta-llama/llama-3.2-3b-instruct:free",
-      "canonical_slug": "meta-llama/llama-3.2-3b-instruct",
-      "original_name": "Meta: Llama 3.2 3B Instruct (free)",
-      "hugging_face_id": "meta-llama/Llama-3.2-3B-Instruct",
-      "clean_model_name": "Llama 3.2 3B Instruct",
-      "license_info_text": "",
-      "license_info_url": "",
-      "license_name": "LLAMA-3.2",
-      "license_url": "https://www.llama.com/llama3_2/license/"
-    }
-  ]
+  "models": []
 }

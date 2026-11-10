@@ -497,9 +497,12 @@ def main():
         meta_models = identify_meta_models(stage1_data)
         
         if not meta_models:
-            print("WARNING: No Meta models found in Stage-1 data")
-            print("Please verify that Stage-1 data contains Meta models")
-            return False
+            # Valid outcome: the free model list can contain no Meta models
+            # (none as of 2026-11). Write empty outputs so later steps still run.
+            print("No Meta models in the filtered list; writing empty results")
+            save_meta_licensing_results([])
+            generate_meta_licenses_report([])
+            return True
         print()
         
         # Step 3: Generate license information

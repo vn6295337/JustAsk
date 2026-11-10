@@ -1,180 +1,100 @@
 ================================================================================
 OTHER LICENSE INFO URLS REPORT
-Generated: 2026-05-20 09:29:19 IST
+Generated: 2026-11-10 19:41:54 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 18
+  Total models : 9
   Input        : 02_filtered_models.json
   Processor    : step_05_fetch_hf_license_urls.py
   Output       : 05_hf_license_urls.json
 
 LICENSE INFO URL BREAKDOWN:
-  10 models: README.md file
-   8 models: LICENSE file
+   5 models: LICENSE file
+   3 models: README.md file
+   1 models: Unknown/Inaccessible
 
-Total categories: 2
+Total categories: 3
 
 DETAILED MODEL LICENSE INFO URLS:
 ================================================================================
 
-MODEL 1: deepseek/deepseek-v4-flash-20260423
+MODEL 1: liquid/lfm-2.5-2.6b-20260811
 --------------------------------------------------
-  ID              : deepseek/deepseek-v4-flash:free
-  Canonical Slug  : deepseek/deepseek-v4-flash-20260423
-  HuggingFace ID  : deepseek-ai/DeepSeek-V4-Flash
-  License Info URL: https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash/blob/main/LICENSE
+  ID              : liquid/lfm-2.5-2.6b:free
+  Canonical Slug  : liquid/lfm-2.5-2.6b-20260811
+  HuggingFace ID  : LiquidAI/LFM2.5-2.6B
+  License Info URL: https://huggingface.co/LiquidAI/LFM2.5-2.6B/blob/main/LICENSE
 
 ================================================================================
 
-MODEL 2: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 2: liquid/lfm-3-1.7b-20261106
 --------------------------------------------------
-  ID              : liquid/lfm-2.5-1.2b-instruct:free
-  Canonical Slug  : liquid/lfm-2.5-1.2b-instruct-20260120
-  HuggingFace ID  : LiquidAI/LFM2.5-1.2B-Instruct
-  License Info URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct/blob/main/LICENSE
+  ID              : liquid/lfm-3-1.7b:free
+  Canonical Slug  : liquid/lfm-3-1.7b-20261106
+  HuggingFace ID  : LiquidAI/LFM3-1.7B
+  License Info URL: https://huggingface.co/LiquidAI/LFM3-1.7B/blob/main/LICENSE
 
 ================================================================================
 
-MODEL 3: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 3: nvidia/nemotron-3.5-lightning-20260807
 --------------------------------------------------
-  ID              : liquid/lfm-2.5-1.2b-thinking:free
-  Canonical Slug  : liquid/lfm-2.5-1.2b-thinking-20260120
-  HuggingFace ID  : LiquidAI/LFM2.5-1.2B-Thinking
-  License Info URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE
+  ID              : nvidia/nemotron-3.5-lightning:free
+  Canonical Slug  : nvidia/nemotron-3.5-lightning-20260807
+  HuggingFace ID  : nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16
+  License Info URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16/blob/main/LICENSE
 
 ================================================================================
 
-MODEL 4: openai/gpt-oss-120b
+MODEL 4: recursive/flint-v1.0-20261021
 --------------------------------------------------
-  ID              : openai/gpt-oss-120b:free
-  Canonical Slug  : openai/gpt-oss-120b
-  HuggingFace ID  : openai/gpt-oss-120b
-  License Info URL: https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE
+  ID              : recursive/flint-v1.0:free
+  Canonical Slug  : recursive/flint-v1.0-20261021
+  HuggingFace ID  : RecursiveSI/flint
+  License Info URL: https://huggingface.co/RecursiveSI/flint/blob/main/LICENSE
 
 ================================================================================
 
-MODEL 5: openai/gpt-oss-20b
+MODEL 5: xingchen-agi/xing4.0-29b-a4b-20261015
 --------------------------------------------------
-  ID              : openai/gpt-oss-20b:free
-  Canonical Slug  : openai/gpt-oss-20b
-  HuggingFace ID  : openai/gpt-oss-20b
-  License Info URL: https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE
+  ID              : xingchen-agi/xing4.0-29b-a4b:free
+  Canonical Slug  : xingchen-agi/xing4.0-29b-a4b-20261015
+  HuggingFace ID  : XingChen-AGI/Xing4.0-29B-A4B
+  License Info URL: https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B/blob/main/LICENSE
 
 ================================================================================
 
-MODEL 6: qwen/qwen3-coder-480b-a35b-07-25
+MODEL 6: cohere/north-mini-code-20260617
 --------------------------------------------------
-  ID              : qwen/qwen3-coder:free
-  Canonical Slug  : qwen/qwen3-coder-480b-a35b-07-25
-  HuggingFace ID  : Qwen/Qwen3-Coder-480B-A35B-Instruct
-  License Info URL: https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct/blob/main/LICENSE
+  ID              : cohere/north-mini-code:free
+  Canonical Slug  : cohere/north-mini-code-20260617
+  HuggingFace ID  : CohereLabs/North-Mini-Code-1.0
+  License Info URL: https://huggingface.co/CohereLabs/North-Mini-Code-1.0/blob/main/README.md
 
 ================================================================================
 
-MODEL 7: qwen/qwen3-next-80b-a3b-instruct-2509
+MODEL 7: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
-  ID              : qwen/qwen3-next-80b-a3b-instruct:free
-  Canonical Slug  : qwen/qwen3-next-80b-a3b-instruct-2509
-  HuggingFace ID  : Qwen/Qwen3-Next-80B-A3B-Instruct
-  License Info URL: https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct/blob/main/LICENSE
+  ID              : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+  Canonical Slug  : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+  HuggingFace ID  : nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16
+  License Info URL: https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16/blob/main/README.md
 
 ================================================================================
 
-MODEL 8: z-ai/glm-5.1-20260406
+MODEL 8: nvidia/nemotron-3-ultra-550b-a55b-20260604
 --------------------------------------------------
-  ID              : z-ai/glm-5.1
-  Canonical Slug  : z-ai/glm-5.1-20260406
-  HuggingFace ID  : zai-org/GLM-5.1
-  License Info URL: https://huggingface.co/zai-org/GLM-5.1/blob/main/LICENSE
+  ID              : nvidia/nemotron-3-ultra-550b-a55b:free
+  Canonical Slug  : nvidia/nemotron-3-ultra-550b-a55b-20260604
+  HuggingFace ID  : nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16
+  License Info URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16/blob/main/README.md
 
 ================================================================================
 
-MODEL 9: arcee-ai/trinity-large-thinking
+MODEL 9: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
-  ID              : arcee-ai/trinity-large-thinking:free
-  Canonical Slug  : arcee-ai/trinity-large-thinking
-  HuggingFace ID  : arcee-ai/Trinity-Large-Thinking
-  License Info URL: https://huggingface.co/arcee-ai/Trinity-Large-Thinking/blob/main/README.md
-
-================================================================================
-
-MODEL 10: minimax/minimax-m2.5-20260211
---------------------------------------------------
-  ID              : minimax/minimax-m2.5:free
-  Canonical Slug  : minimax/minimax-m2.5-20260211
-  HuggingFace ID  : MiniMaxAI/MiniMax-M2.5
-  License Info URL: https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md
-
-================================================================================
-
-MODEL 11: nvidia/nemotron-3-nano-30b-a3b
---------------------------------------------------
-  ID              : nvidia/nemotron-3-nano-30b-a3b:free
-  Canonical Slug  : nvidia/nemotron-3-nano-30b-a3b
-  HuggingFace ID  : nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
-  License Info URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md
-
-================================================================================
-
-MODEL 12: nvidia/nemotron-3-super-120b-a12b-20230311
---------------------------------------------------
-  ID              : nvidia/nemotron-3-super-120b-a12b:free
-  Canonical Slug  : nvidia/nemotron-3-super-120b-a12b-20230311
-  HuggingFace ID  : nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8
-  License Info URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8/blob/main/README.md
-
-================================================================================
-
-MODEL 13: nvidia/nemotron-nano-12b-v2-vl
---------------------------------------------------
-  ID              : nvidia/nemotron-nano-12b-v2-vl:free
-  Canonical Slug  : nvidia/nemotron-nano-12b-v2-vl
-  HuggingFace ID  : nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16
-  License Info URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16/blob/main/README.md
-
-================================================================================
-
-MODEL 14: nvidia/nemotron-nano-9b-v2
---------------------------------------------------
-  ID              : nvidia/nemotron-nano-9b-v2:free
-  Canonical Slug  : nvidia/nemotron-nano-9b-v2
-  HuggingFace ID  : nvidia/NVIDIA-Nemotron-Nano-9B-v2
-  License Info URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md
-
-================================================================================
-
-MODEL 15: nousresearch/hermes-3-llama-3.1-405b
---------------------------------------------------
-  ID              : nousresearch/hermes-3-llama-3.1-405b:free
-  Canonical Slug  : nousresearch/hermes-3-llama-3.1-405b
-  HuggingFace ID  : NousResearch/Hermes-3-Llama-3.1-405B
-  License Info URL: https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-405B/blob/main/README.md
-
-================================================================================
-
-MODEL 16: poolside/laguna-xs.2-20260421
---------------------------------------------------
-  ID              : poolside/laguna-xs.2:free
-  Canonical Slug  : poolside/laguna-xs.2-20260421
-  HuggingFace ID  : poolside/Laguna-XS.2
-  License Info URL: https://huggingface.co/poolside/Laguna-XS.2/blob/main/README.md
-
-================================================================================
-
-MODEL 17: venice/uncensored
---------------------------------------------------
-  ID              : cognitivecomputations/dolphin-mistral-24b-venice-edition:free
-  Canonical Slug  : venice/uncensored
-  HuggingFace ID  : cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition
-  License Info URL: https://huggingface.co/cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition/blob/main/README.md
-
-================================================================================
-
-MODEL 18: z-ai/glm-4.5-air
---------------------------------------------------
-  ID              : z-ai/glm-4.5-air:free
-  Canonical Slug  : z-ai/glm-4.5-air
-  HuggingFace ID  : zai-org/GLM-4.5-Air
-  License Info URL: https://huggingface.co/zai-org/GLM-4.5-Air/blob/main/README.md
+  ID              : nvidia/nemotron-3.5-super-vl:free
+  Canonical Slug  : nvidia/nemotron-3.5-super-vl-20261015
+  HuggingFace ID  : nvidia/NVIDIA-Nemotron-3.5-Super-VL
+  License Info URL: Unknown
 

@@ -1,149 +1,130 @@
 ================================================================================
 FINAL CONSOLIDATED LICENSE LIST REPORT
-Generated: 2026-05-20 09:29:28 IST
+Generated: 2026-11-10 19:42:05 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 30
+  Total models        : 19
   Input sources       : 4 pipeline stage files
   Processor           : step_13_final_licenses.py
   Output              : 13_final_licenses.json
 
 SOURCE CATEGORY DISTRIBUTION:
-  Custom: 7 models
+  Custom: 6 models
   Google: 2 models
-  Meta: 2 models
-  Opensource: 11 models
+  Opensource: 3 models
   Proprietary: 8 models
 
 FINAL LICENSE DISTRIBUTION:
-   7 models: APACHE-2.0
-   4 models: NVIDIA
-   3 models: MIT
+   3 models: APACHE-2.0
    2 models: GEMMA
    2 models: LFM1.0
+   2 models: OPENMDW-1.1
    2 models: QWEN
    2 models: xAI
    1 models: AWS
    1 models: Apache-2.0
-   1 models: LLAMA-3.1
-   1 models: LLAMA-3.2
-   1 models: LLAMA-3.3
-   1 models: MODIFIED MIT
    1 models: Modified MIT
+   1 models: NVIDIA
+   1 models: UNKNOWN
    1 models: Upstage
 
-Total unique license types: 15
+Total unique license types: 12
 
 DETAILED FINAL MODEL INFORMATION:
 ================================================================================
 
-MODEL 1: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 1: liquid/lfm-2.5-2.6b-20260811
 --------------------------------------------------
-  ID: liquid/lfm-2.5-1.2b-instruct:free
-  Original Name: LiquidAI: LFM2.5-1.2B-Instruct (free)
-  HuggingFace ID: LiquidAI/LFM2.5-1.2B-Instruct
-  Canonical Slug: liquid/lfm-2.5-1.2b-instruct-20260120
-  Clean Model Name: LFM2.5-1.2B-Instruct
+  ID: liquid/lfm-2.5-2.6b:free
+  Original Name: LiquidAI: LFM2.5-2.6B (free)
+  HuggingFace ID: LiquidAI/LFM2.5-2.6B
+  Canonical Slug: liquid/lfm-2.5-2.6b-20260811
+  Clean Model Name: LFM2.5-2.6B
   License Info Text: 
   License Info URL: 
   License Name: LFM1.0
-  License URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct/blob/main/LICENSE
+  License URL: https://huggingface.co/LiquidAI/LFM2.5-2.6B/blob/main/LICENSE
   Source Category: custom
 
 ================================================================================
 
-MODEL 2: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 2: liquid/lfm-3-1.7b-20261106
 --------------------------------------------------
-  ID: liquid/lfm-2.5-1.2b-thinking:free
-  Original Name: LiquidAI: LFM2.5-1.2B-Thinking (free)
-  HuggingFace ID: LiquidAI/LFM2.5-1.2B-Thinking
-  Canonical Slug: liquid/lfm-2.5-1.2b-thinking-20260120
-  Clean Model Name: LFM2.5-1.2B-Thinking
+  ID: liquid/lfm-3-1.7b:free
+  Original Name: LiquidAI: LFM3-1.7B (free)
+  HuggingFace ID: LiquidAI/LFM3-1.7B
+  Canonical Slug: liquid/lfm-3-1.7b-20261106
+  Clean Model Name: LFM3-1.7B
   License Info Text: 
   License Info URL: 
   License Name: LFM1.0
-  License URL: https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE
+  License URL: https://huggingface.co/LiquidAI/LFM3-1.7B/blob/main/LICENSE
   Source Category: custom
 
 ================================================================================
 
-MODEL 3: minimax/minimax-m2.5-20260211
+MODEL 3: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
-  ID: minimax/minimax-m2.5:free
-  Original Name: MiniMax: MiniMax M2.5 (free)
-  HuggingFace ID: MiniMaxAI/MiniMax-M2.5
-  Canonical Slug: minimax/minimax-m2.5-20260211
-  Clean Model Name: MiniMax M2.5
-  License Info Text: 
-  License Info URL: 
-  License Name: MODIFIED MIT
-  License URL: https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md
-  Source Category: custom
-
-================================================================================
-
-MODEL 4: nvidia/nemotron-3-nano-30b-a3b
---------------------------------------------------
-  ID: nvidia/nemotron-3-nano-30b-a3b:free
-  Original Name: NVIDIA: Nemotron 3 Nano 30B A3B (free)
-  HuggingFace ID: nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
-  Canonical Slug: nvidia/nemotron-3-nano-30b-a3b
-  Clean Model Name: Nemotron 3 Nano 30B A3B
+  ID: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+  Original Name: NVIDIA: Nemotron 3 Nano Omni (free)
+  HuggingFace ID: nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16
+  Canonical Slug: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+  Clean Model Name: Nemotron 3 Nano Omni
   License Info Text: 
   License Info URL: 
   License Name: NVIDIA
-  License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md
+  License URL: https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16/blob/main/README.md
   Source Category: custom
 
 ================================================================================
 
-MODEL 5: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 4: nvidia/nemotron-3-ultra-550b-a55b-20260604
 --------------------------------------------------
-  ID: nvidia/nemotron-3-super-120b-a12b:free
-  Original Name: NVIDIA: Nemotron 3 Super (free)
-  HuggingFace ID: nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8
-  Canonical Slug: nvidia/nemotron-3-super-120b-a12b-20230311
-  Clean Model Name: Nemotron 3 Super
+  ID: nvidia/nemotron-3-ultra-550b-a55b:free
+  Original Name: NVIDIA: Nemotron 3 Ultra (free)
+  HuggingFace ID: nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16
+  Canonical Slug: nvidia/nemotron-3-ultra-550b-a55b-20260604
+  Clean Model Name: Nemotron 3 Ultra
   License Info Text: 
   License Info URL: 
-  License Name: NVIDIA
-  License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8/blob/main/README.md
+  License Name: OPENMDW-1.1
+  License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16/blob/main/README.md
   Source Category: custom
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-nano-12b-v2-vl
+MODEL 5: nvidia/nemotron-3.5-lightning-20260807
 --------------------------------------------------
-  ID: nvidia/nemotron-nano-12b-v2-vl:free
-  Original Name: NVIDIA: Nemotron Nano 12B 2 VL (free)
-  HuggingFace ID: nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16
-  Canonical Slug: nvidia/nemotron-nano-12b-v2-vl
-  Clean Model Name: Nemotron Nano 12B 2 VL
+  ID: nvidia/nemotron-3.5-lightning:free
+  Original Name: NVIDIA: Nemotron 3.5 Lightning (free)
+  HuggingFace ID: nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16
+  Canonical Slug: nvidia/nemotron-3.5-lightning-20260807
+  Clean Model Name: Nemotron 3.5 Lightning
   License Info Text: 
   License Info URL: 
-  License Name: NVIDIA
-  License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16/blob/main/README.md
+  License Name: OPENMDW-1.1
+  License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16/blob/main/LICENSE
   Source Category: custom
 
 ================================================================================
 
-MODEL 7: nvidia/nemotron-nano-9b-v2
+MODEL 6: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
-  ID: nvidia/nemotron-nano-9b-v2:free
-  Original Name: NVIDIA: Nemotron Nano 9B V2 (free)
-  HuggingFace ID: nvidia/NVIDIA-Nemotron-Nano-9B-v2
-  Canonical Slug: nvidia/nemotron-nano-9b-v2
-  Clean Model Name: Nemotron Nano 9B V2
+  ID: nvidia/nemotron-3.5-super-vl:free
+  Original Name: NVIDIA: Nemotron 3.5 Super VL (free)
+  HuggingFace ID: nvidia/NVIDIA-Nemotron-3.5-Super-VL
+  Canonical Slug: nvidia/nemotron-3.5-super-vl-20261015
+  Clean Model Name: Nemotron 3.5 Super VL
   License Info Text: 
   License Info URL: 
-  License Name: NVIDIA
-  License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md
+  License Name: UNKNOWN
+  License URL: Unknown
   Source Category: custom
 
 ================================================================================
 
-MODEL 8: google/gemma-4-26b-a4b-it-20260403
+MODEL 7: google/gemma-4-26b-a4b-it-20260403
 --------------------------------------------------
   ID: google/gemma-4-26b-a4b-it:free
   Original Name: Google: Gemma 4 26B A4B  (free)
@@ -158,7 +139,7 @@ MODEL 8: google/gemma-4-26b-a4b-it-20260403
 
 ================================================================================
 
-MODEL 9: google/gemma-4-31b-it-20260402
+MODEL 8: google/gemma-4-31b-it-20260402
 --------------------------------------------------
   ID: google/gemma-4-31b-it:free
   Original Name: Google: Gemma 4 31B (free)
@@ -173,202 +154,52 @@ MODEL 9: google/gemma-4-31b-it-20260402
 
 ================================================================================
 
-MODEL 10: meta-llama/llama-3.2-3b-instruct
+MODEL 9: cohere/north-mini-code-20260617
 --------------------------------------------------
-  ID: meta-llama/llama-3.2-3b-instruct:free
-  Original Name: Meta: Llama 3.2 3B Instruct (free)
-  HuggingFace ID: meta-llama/Llama-3.2-3B-Instruct
-  Canonical Slug: meta-llama/llama-3.2-3b-instruct
-  Clean Model Name: Llama 3.2 3B Instruct
-  License Info Text: 
-  License Info URL: 
-  License Name: LLAMA-3.2
-  License URL: https://www.llama.com/llama3_2/license/
-  Source Category: meta
-
-================================================================================
-
-MODEL 11: meta-llama/llama-3.3-70b-instruct
---------------------------------------------------
-  ID: meta-llama/llama-3.3-70b-instruct:free
-  Original Name: Meta: Llama 3.3 70B Instruct (free)
-  HuggingFace ID: meta-llama/Llama-3.3-70B-Instruct
-  Canonical Slug: meta-llama/llama-3.3-70b-instruct
-  Clean Model Name: Llama 3.3 70B Instruct
-  License Info Text: 
-  License Info URL: 
-  License Name: LLAMA-3.3
-  License URL: https://www.llama.com/llama3_3/license/
-  Source Category: meta
-
-================================================================================
-
-MODEL 12: arcee-ai/trinity-large-thinking
---------------------------------------------------
-  ID: arcee-ai/trinity-large-thinking:free
-  Original Name: Arcee AI: Trinity Large Thinking (free)
-  HuggingFace ID: arcee-ai/Trinity-Large-Thinking
-  Canonical Slug: arcee-ai/trinity-large-thinking
-  Clean Model Name: Trinity Large Thinking
+  ID: cohere/north-mini-code:free
+  Original Name: Cohere: North Mini Code (free)
+  HuggingFace ID: CohereLabs/North-Mini-Code-1.0
+  Canonical Slug: cohere/north-mini-code-20260617
+  Clean Model Name: North Mini Code
   License Info Text: info
-  License Info URL: https://huggingface.co/arcee-ai/Trinity-Large-Thinking/blob/main/README.md
+  License Info URL: https://huggingface.co/CohereLabs/North-Mini-Code-1.0/blob/main/README.md
   License Name: APACHE-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
   Source Category: opensource
 
 ================================================================================
 
-MODEL 13: openai/gpt-oss-120b
+MODEL 10: recursive/flint-v1.0-20261021
 --------------------------------------------------
-  ID: openai/gpt-oss-120b:free
-  Original Name: OpenAI: gpt-oss-120b (free)
-  HuggingFace ID: openai/gpt-oss-120b
-  Canonical Slug: openai/gpt-oss-120b
-  Clean Model Name: GPT OSS 120B
+  ID: recursive/flint-v1.0:free
+  Original Name: Recursive: Flint (free)
+  HuggingFace ID: RecursiveSI/flint
+  Canonical Slug: recursive/flint-v1.0-20261021
+  Clean Model Name: Flint
   License Info Text: info
-  License Info URL: https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE
+  License Info URL: https://huggingface.co/RecursiveSI/flint/blob/main/LICENSE
   License Name: APACHE-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
   Source Category: opensource
 
 ================================================================================
 
-MODEL 14: openai/gpt-oss-20b
+MODEL 11: xingchen-agi/xing4.0-29b-a4b-20261015
 --------------------------------------------------
-  ID: openai/gpt-oss-20b:free
-  Original Name: OpenAI: gpt-oss-20b (free)
-  HuggingFace ID: openai/gpt-oss-20b
-  Canonical Slug: openai/gpt-oss-20b
-  Clean Model Name: GPT OSS 20B
+  ID: xingchen-agi/xing4.0-29b-a4b:free
+  Original Name: XingChen: Xing4.0 29B A4B (free)
+  HuggingFace ID: XingChen-AGI/Xing4.0-29B-A4B
+  Canonical Slug: xingchen-agi/xing4.0-29b-a4b-20261015
+  Clean Model Name: Xing4.0 29B A4B
   License Info Text: info
-  License Info URL: https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE
+  License Info URL: https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B/blob/main/LICENSE
   License Name: APACHE-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
   Source Category: opensource
 
 ================================================================================
 
-MODEL 15: poolside/laguna-xs.2-20260421
---------------------------------------------------
-  ID: poolside/laguna-xs.2:free
-  Original Name: Poolside: Laguna XS.2 (free)
-  HuggingFace ID: poolside/Laguna-XS.2
-  Canonical Slug: poolside/laguna-xs.2-20260421
-  Clean Model Name: Laguna XS.2
-  License Info Text: info
-  License Info URL: https://huggingface.co/poolside/Laguna-XS.2/blob/main/README.md
-  License Name: APACHE-2.0
-  License URL: https://www.apache.org/licenses/LICENSE-2.0
-  Source Category: opensource
-
-================================================================================
-
-MODEL 16: qwen/qwen3-coder-480b-a35b-07-25
---------------------------------------------------
-  ID: qwen/qwen3-coder:free
-  Original Name: Qwen: Qwen3 Coder 480B A35B (free)
-  HuggingFace ID: Qwen/Qwen3-Coder-480B-A35B-Instruct
-  Canonical Slug: qwen/qwen3-coder-480b-a35b-07-25
-  Clean Model Name: Qwen3 Coder 480B A35B
-  License Info Text: info
-  License Info URL: https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct/blob/main/LICENSE
-  License Name: APACHE-2.0
-  License URL: https://www.apache.org/licenses/LICENSE-2.0
-  Source Category: opensource
-
-================================================================================
-
-MODEL 17: qwen/qwen3-next-80b-a3b-instruct-2509
---------------------------------------------------
-  ID: qwen/qwen3-next-80b-a3b-instruct:free
-  Original Name: Qwen: Qwen3 Next 80B A3B Instruct (free)
-  HuggingFace ID: Qwen/Qwen3-Next-80B-A3B-Instruct
-  Canonical Slug: qwen/qwen3-next-80b-a3b-instruct-2509
-  Clean Model Name: Qwen3 Next 80B A3B Instruct
-  License Info Text: info
-  License Info URL: https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct/blob/main/LICENSE
-  License Name: APACHE-2.0
-  License URL: https://www.apache.org/licenses/LICENSE-2.0
-  Source Category: opensource
-
-================================================================================
-
-MODEL 18: venice/uncensored
---------------------------------------------------
-  ID: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
-  Original Name: Venice: Uncensored (free)
-  HuggingFace ID: cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition
-  Canonical Slug: venice/uncensored
-  Clean Model Name: Uncensored
-  License Info Text: info
-  License Info URL: https://huggingface.co/cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition/blob/main/README.md
-  License Name: APACHE-2.0
-  License URL: https://www.apache.org/licenses/LICENSE-2.0
-  Source Category: opensource
-
-================================================================================
-
-MODEL 19: nousresearch/hermes-3-llama-3.1-405b
---------------------------------------------------
-  ID: nousresearch/hermes-3-llama-3.1-405b:free
-  Original Name: Nous: Hermes 3 405B Instruct (free)
-  HuggingFace ID: NousResearch/Hermes-3-Llama-3.1-405B
-  Canonical Slug: nousresearch/hermes-3-llama-3.1-405b
-  Clean Model Name: Hermes 3 405B Instruct
-  License Info Text: info
-  License Info URL: https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-405B/blob/main/README.md
-  License Name: LLAMA-3.1
-  License URL: https://www.llama.com/llama3_1/license/
-  Source Category: opensource
-
-================================================================================
-
-MODEL 20: deepseek/deepseek-v4-flash-20260423
---------------------------------------------------
-  ID: deepseek/deepseek-v4-flash:free
-  Original Name: DeepSeek: DeepSeek V4 Flash (free)
-  HuggingFace ID: deepseek-ai/DeepSeek-V4-Flash
-  Canonical Slug: deepseek/deepseek-v4-flash-20260423
-  Clean Model Name: DeepSeek V4 Flash
-  License Info Text: info
-  License Info URL: https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash/blob/main/LICENSE
-  License Name: MIT
-  License URL: https://opensource.org/licenses/MIT
-  Source Category: opensource
-
-================================================================================
-
-MODEL 21: z-ai/glm-4.5-air
---------------------------------------------------
-  ID: z-ai/glm-4.5-air:free
-  Original Name: Z.ai: GLM 4.5 Air (free)
-  HuggingFace ID: zai-org/GLM-4.5-Air
-  Canonical Slug: z-ai/glm-4.5-air
-  Clean Model Name: GLM 4.5 Air
-  License Info Text: info
-  License Info URL: https://huggingface.co/zai-org/GLM-4.5-Air/blob/main/README.md
-  License Name: MIT
-  License URL: https://opensource.org/licenses/MIT
-  Source Category: opensource
-
-================================================================================
-
-MODEL 22: z-ai/glm-5.1-20260406
---------------------------------------------------
-  ID: z-ai/glm-5.1
-  Original Name: Z.ai: GLM 5.1
-  HuggingFace ID: zai-org/GLM-5.1
-  Canonical Slug: z-ai/glm-5.1-20260406
-  Clean Model Name: GLM 5.1
-  License Info Text: info
-  License Info URL: https://huggingface.co/zai-org/GLM-5.1/blob/main/LICENSE
-  License Name: MIT
-  License URL: https://opensource.org/licenses/MIT
-  Source Category: opensource
-
-================================================================================
-
-MODEL 23: amazon/nova-2-lite-v1
+MODEL 12: amazon/nova-2-lite-v1
 --------------------------------------------------
   ID: amazon/nova-2-lite-v1:free
   Original Name: Amazon/Nova 2 Lite V1
@@ -383,7 +214,7 @@ MODEL 23: amazon/nova-2-lite-v1
 
 ================================================================================
 
-MODEL 24: kwaipilot/kat-coder-pro-v1
+MODEL 13: kwaipilot/kat-coder-pro-v1
 --------------------------------------------------
   ID: kwaipilot/kat-coder-pro-v1:free
   Original Name: Kwaipilot/Kat Coder Pro V1
@@ -398,7 +229,7 @@ MODEL 24: kwaipilot/kat-coder-pro-v1
 
 ================================================================================
 
-MODEL 25: mistralai/devstral-2512
+MODEL 14: mistralai/devstral-2512
 --------------------------------------------------
   ID: mistralai/devstral-2512:free
   Original Name: Mistralai/Devstral 2512
@@ -413,7 +244,7 @@ MODEL 25: mistralai/devstral-2512
 
 ================================================================================
 
-MODEL 26: qwen/qwen3.6-plus
+MODEL 15: qwen/qwen3.6-plus
 --------------------------------------------------
   ID: qwen/qwen3.6-plus:free
   Original Name: Qwen/Qwen3.6 Plus
@@ -428,7 +259,7 @@ MODEL 26: qwen/qwen3.6-plus
 
 ================================================================================
 
-MODEL 27: qwen/qwen3.6-plus-04-02
+MODEL 16: qwen/qwen3.6-plus-04-02
 --------------------------------------------------
   ID: qwen/qwen3.6-plus-04-02:free
   Original Name: Qwen/Qwen3.6 Plus 04 02
@@ -443,7 +274,7 @@ MODEL 27: qwen/qwen3.6-plus-04-02
 
 ================================================================================
 
-MODEL 28: upstage/solar-pro-3
+MODEL 17: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage/Solar Pro 3
@@ -458,7 +289,7 @@ MODEL 28: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 29: x-ai/grok-4-fast
+MODEL 18: x-ai/grok-4-fast
 --------------------------------------------------
   ID: x-ai/grok-4-fast:free
   Original Name: X Ai/Grok 4 Fast
@@ -473,7 +304,7 @@ MODEL 29: x-ai/grok-4-fast
 
 ================================================================================
 
-MODEL 30: x-ai/grok-4.1-fast
+MODEL 19: x-ai/grok-4.1-fast
 --------------------------------------------------
   ID: x-ai/grok-4.1-fast:free
   Original Name: X Ai/Grok 4.1 Fast

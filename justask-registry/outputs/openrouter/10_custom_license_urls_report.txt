@@ -1,108 +1,104 @@
 ================================================================================
 CUSTOM LICENSE URLS ENRICHMENT REPORT
-Generated: 2026-05-20 09:29:27 IST
+Generated: 2026-11-10 19:42:04 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 7
+  Total models : 6
   Input        : 08_custom_licenses.json
   Priority     : LICENSE → README.md → Base repository
   Processor    : step_10_custom_license_urls.py
   Output       : 10_custom_license_urls.json
 
 LICENSE URL TYPE DISTRIBUTION:
-  LICENSE file: 2 models
-  README.md file: 5 models
+  LICENSE file: 3 models
+  README.md file: 2 models
+  Inaccessible: 1 models
 
-Total URL types: 2
+Total URL types: 3
 
 URL RESOLUTION STATISTICS:
-  Successful URL resolutions: 7
-  Failed URL resolutions: 0
-  Success rate: 100.0%
+  Successful URL resolutions: 5
+  Failed URL resolutions: 1
+  Success rate: 83.3%
 
 CUSTOM LICENSE DISTRIBUTION:
   LFM1.0: 2 models
-  MODIFIED MIT: 1 models
-  NVIDIA: 4 models
+  NVIDIA: 1 models
+  OPENMDW-1.1: 2 models
+  UNKNOWN: 1 models
 
-Total license types: 3
+Total license types: 4
+
+MODELS WITH FAILED URL RESOLUTION (1 models):
+  NVIDIA: Nemotron 3.5 Super VL (free)
+    HF ID: nvidia/NVIDIA-Nemotron-3.5-Super-VL
+    Reason: Inaccessible
 
 DETAILED MODEL LICENSE URL MAPPINGS:
 ================================================================================
 
-MODEL 1: liquid/lfm-2.5-1.2b-instruct-20260120
+MODEL 1: liquid/lfm-2.5-2.6b-20260811
 --------------------------------------------------
-  ID                     : liquid/lfm-2.5-1.2b-instruct:free
-  Canonical Slug         : liquid/lfm-2.5-1.2b-instruct-20260120
-  HuggingFace ID         : LiquidAI/LFM2.5-1.2B-Instruct
+  ID                     : liquid/lfm-2.5-2.6b:free
+  Canonical Slug         : liquid/lfm-2.5-2.6b-20260811
+  HuggingFace ID         : LiquidAI/LFM2.5-2.6B
   License Name           : LFM1.0
-  License URL            : https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct/blob/main/LICENSE
+  License URL            : https://huggingface.co/LiquidAI/LFM2.5-2.6B/blob/main/LICENSE
   License URL Type       : LICENSE file
 
 ================================================================================
 
-MODEL 2: liquid/lfm-2.5-1.2b-thinking-20260120
+MODEL 2: liquid/lfm-3-1.7b-20261106
 --------------------------------------------------
-  ID                     : liquid/lfm-2.5-1.2b-thinking:free
-  Canonical Slug         : liquid/lfm-2.5-1.2b-thinking-20260120
-  HuggingFace ID         : LiquidAI/LFM2.5-1.2B-Thinking
+  ID                     : liquid/lfm-3-1.7b:free
+  Canonical Slug         : liquid/lfm-3-1.7b-20261106
+  HuggingFace ID         : LiquidAI/LFM3-1.7B
   License Name           : LFM1.0
-  License URL            : https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking/blob/main/LICENSE
+  License URL            : https://huggingface.co/LiquidAI/LFM3-1.7B/blob/main/LICENSE
   License URL Type       : LICENSE file
 
 ================================================================================
 
-MODEL 3: minimax/minimax-m2.5-20260211
+MODEL 3: nvidia/nemotron-3.5-lightning-20260807
 --------------------------------------------------
-  ID                     : minimax/minimax-m2.5:free
-  Canonical Slug         : minimax/minimax-m2.5-20260211
-  HuggingFace ID         : MiniMaxAI/MiniMax-M2.5
-  License Name           : MODIFIED MIT
-  License URL            : https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md
+  ID                     : nvidia/nemotron-3.5-lightning:free
+  Canonical Slug         : nvidia/nemotron-3.5-lightning-20260807
+  HuggingFace ID         : nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16
+  License Name           : OPENMDW-1.1
+  License URL            : https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16/blob/main/LICENSE
+  License URL Type       : LICENSE file
+
+================================================================================
+
+MODEL 4: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+--------------------------------------------------
+  ID                     : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+  Canonical Slug         : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+  HuggingFace ID         : nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16
+  License Name           : NVIDIA
+  License URL            : https://huggingface.co/nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16/blob/main/README.md
   License URL Type       : README.md file
 
 ================================================================================
 
-MODEL 4: nvidia/nemotron-3-nano-30b-a3b
+MODEL 5: nvidia/nemotron-3-ultra-550b-a55b-20260604
 --------------------------------------------------
-  ID                     : nvidia/nemotron-3-nano-30b-a3b:free
-  Canonical Slug         : nvidia/nemotron-3-nano-30b-a3b
-  HuggingFace ID         : nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16
-  License Name           : NVIDIA
-  License URL            : https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/README.md
+  ID                     : nvidia/nemotron-3-ultra-550b-a55b:free
+  Canonical Slug         : nvidia/nemotron-3-ultra-550b-a55b-20260604
+  HuggingFace ID         : nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16
+  License Name           : OPENMDW-1.1
+  License URL            : https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16/blob/main/README.md
   License URL Type       : README.md file
 
 ================================================================================
 
-MODEL 5: nvidia/nemotron-3-super-120b-a12b-20230311
+MODEL 6: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
-  ID                     : nvidia/nemotron-3-super-120b-a12b:free
-  Canonical Slug         : nvidia/nemotron-3-super-120b-a12b-20230311
-  HuggingFace ID         : nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8
-  License Name           : NVIDIA
-  License URL            : https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8/blob/main/README.md
-  License URL Type       : README.md file
-
-================================================================================
-
-MODEL 6: nvidia/nemotron-nano-12b-v2-vl
---------------------------------------------------
-  ID                     : nvidia/nemotron-nano-12b-v2-vl:free
-  Canonical Slug         : nvidia/nemotron-nano-12b-v2-vl
-  HuggingFace ID         : nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16
-  License Name           : NVIDIA
-  License URL            : https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16/blob/main/README.md
-  License URL Type       : README.md file
-
-================================================================================
-
-MODEL 7: nvidia/nemotron-nano-9b-v2
---------------------------------------------------
-  ID                     : nvidia/nemotron-nano-9b-v2:free
-  Canonical Slug         : nvidia/nemotron-nano-9b-v2
-  HuggingFace ID         : nvidia/NVIDIA-Nemotron-Nano-9B-v2
-  License Name           : NVIDIA
-  License URL            : https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-9B-v2/blob/main/README.md
-  License URL Type       : README.md file
+  ID                     : nvidia/nemotron-3.5-super-vl:free
+  Canonical Slug         : nvidia/nemotron-3.5-super-vl-20261015
+  HuggingFace ID         : nvidia/NVIDIA-Nemotron-3.5-Super-VL
+  License Name           : UNKNOWN
+  License URL            : Unknown
+  License URL Type       : Inaccessible
 
