@@ -1,17 +1,17 @@
 ================================================================================
 STANDARDIZED MODALITIES REPORT
-Generated: 2026-11-10 20:45:08 IST
+Generated: 2026-11-11 10:39:50 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 13
+  Total models : 12
   Input        : 14_raw_modalities.json
   Config       : modality_standardization.json
   Processor    : step_15_standardize_modalities.py
   Output       : 15_standardized_modalities.json
 
 STANDARDIZED INPUT MODALITIES DISTRIBUTION:
-   7 models: Text
+   6 models: Text
    3 models: Text, Image, Video
    2 models: Text, Image
    1 models: Text, Image, Audio, Video
@@ -19,12 +19,12 @@ STANDARDIZED INPUT MODALITIES DISTRIBUTION:
 Total unique input types: 4
 
 STANDARDIZED OUTPUT MODALITIES DISTRIBUTION:
-  13 models: Text
+  12 models: Text
 
 Total unique output types: 1
 
 STANDARDIZED MODALITY COMBINATIONS (INPUT → OUTPUT):
-   7 models: Text → Text
+   6 models: Text → Text
    3 models: Text, Image, Video → Text
    2 models: Text, Image → Text
    1 models: Text, Image, Audio, Video → Text
@@ -32,8 +32,8 @@ STANDARDIZED MODALITY COMBINATIONS (INPUT → OUTPUT):
 Total unique combinations: 4
 
 STANDARDIZATION IMPACT ANALYSIS:
-  Input modalities changed: 13 models
-  Output modalities changed: 13 models
+  Input modalities changed: 12 models
+  Output modalities changed: 12 models
   Input modalities unchanged: 0 models
   Output modalities unchanged: 0 models
 
@@ -124,21 +124,7 @@ MODEL 6: cohere/north-mini-code-20260617
 
 ================================================================================
 
-MODEL 7: xingchen-agi/xing4.0-29b-a4b-20261015
---------------------------------------------------
-  ID: xingchen-agi/xing4.0-29b-a4b:free
-  Original Name: XingChen: Xing4.0 29B A4B (free)
-  HuggingFace ID: XingChen-AGI/Xing4.0-29B-A4B
-  Canonical Slug: xingchen-agi/xing4.0-29b-a4b-20261015
-  Clean Model Name: Xing4.0 29B A4B
-  Raw Input Modalities: text
-  Raw Output Modalities: text
-  Standardized Input Modalities: Text
-  Standardized Output Modalities: Text
-
-================================================================================
-
-MODEL 8: openrouter/free
+MODEL 7: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -152,7 +138,7 @@ MODEL 8: openrouter/free
 
 ================================================================================
 
-MODEL 9: thinkingmachines/inkling-2-small-20261107
+MODEL 8: thinkingmachines/inkling-2-small-20261107
 --------------------------------------------------
   ID: thinkingmachines/inkling-2-small:free
   Original Name: Thinking Machines: Inkling 2 Small (free)
@@ -166,7 +152,7 @@ MODEL 9: thinkingmachines/inkling-2-small-20261107
 
 ================================================================================
 
-MODEL 10: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 9: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Original Name: NVIDIA: Nemotron 3 Nano Omni (free)
@@ -180,7 +166,7 @@ MODEL 10: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 
 ================================================================================
 
-MODEL 11: google/gemma-4-26b-a4b-it-20260403
+MODEL 10: google/gemma-4-26b-a4b-it-20260403
 --------------------------------------------------
   ID: google/gemma-4-26b-a4b-it:free
   Original Name: Google: Gemma 4 26B A4B  (free)
@@ -194,7 +180,7 @@ MODEL 11: google/gemma-4-26b-a4b-it-20260403
 
 ================================================================================
 
-MODEL 12: google/gemma-4-31b-it-20260402
+MODEL 11: google/gemma-4-31b-it-20260402
 --------------------------------------------------
   ID: google/gemma-4-31b-it:free
   Original Name: Google: Gemma 4 31B (free)
@@ -208,7 +194,7 @@ MODEL 12: google/gemma-4-31b-it-20260402
 
 ================================================================================
 
-MODEL 13: nvidia/nemotron-3.5-super-vl-20261015
+MODEL 12: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
   ID: nvidia/nemotron-3.5-super-vl:free
   Original Name: NVIDIA: Nemotron 3.5 Super VL (free)

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-11-10 20:44:59 IST",
-    "total_models": 9,
+    "generated_at": "2026-11-11 10:39:41 IST",
+    "total_models": 8,
     "pipeline_stage": "E_fetch_other_license_info_urls_from_hf"
   },
   "models": [
@@ -18,13 +18,6 @@
       "name": "Recursive: Flint (free)",
       "hugging_face_id": "RecursiveSI/flint",
       "license_info_url": "https://huggingface.co/RecursiveSI/flint/blob/main/LICENSE"
-    },
-    {
-      "id": "xingchen-agi/xing4.0-29b-a4b:free",
-      "canonical_slug": "xingchen-agi/xing4.0-29b-a4b-20261015",
-      "name": "XingChen: Xing4.0 29B A4B (free)",
-      "hugging_face_id": "XingChen-AGI/Xing4.0-29B-A4B",
-      "license_info_url": "https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B/blob/main/LICENSE"
     },
     {
       "id": "nvidia/nemotron-3.5-super-vl:free",

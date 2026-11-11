@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-11-10 20:45:08 IST
+Generated: 2026-11-11 10:39:51 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -44,24 +44,23 @@ LICENSE URL (2 models):
 UNKNOWN OR 'NOT FOUND' VALUES:
 ------------------------------
 
-MODEL PROVIDER (4 models):
+MODEL PROVIDER (3 models):
   - Flint
   - Inkling 2 Small
   - North Mini Code
-  - Xing4.0 29B A4B
 
 LICENSE NAME (1 models):
   - Nemotron 3.5 Super VL
 
 DATA QUALITY SUMMARY:
 ------------------------------
-Total models: 13
-Missing license info text: 10 (76.9%)
-Missing license info url: 10 (76.9%)
-Missing license name: 2 (15.4%)
-Missing license url: 2 (15.4%)
-Unknown model provider: 4 (30.8%)
-Unknown license name: 1 (7.7%)
+Total models: 12
+Missing license info text: 10 (83.3%)
+Missing license info url: 10 (83.3%)
+Missing license name: 2 (16.7%)
+Missing license url: 2 (16.7%)
+Unknown model provider: 3 (25.0%)
+Unknown license name: 1 (8.3%)
 
 ================================================================================
 
@@ -179,16 +178,6 @@ COMPLETE MODEL RECORDS:
      Provider API Access: https://openrouter.ai/settings/keys
 
  12. North Mini Code
-     Provider           : Unknown (Unknown)
-     Modalities         : Text → Text
-     License            : APACHE-2.0
-     License Info       : info
-     License URL        : https://www.apache.org/licenses/LICENSE-2.0
-     Official URL       : Unknown
-     Rate Limits        : 20 requests/min 50/day
-     Provider API Access: https://openrouter.ai/settings/keys
-
- 13. Xing4.0 29B A4B
      Provider           : Unknown (Unknown)
      Modalities         : Text → Text
      License            : APACHE-2.0

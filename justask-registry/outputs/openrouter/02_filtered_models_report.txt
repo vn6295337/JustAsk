@@ -1,39 +1,39 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-11-10 20:44:55 IST
+Generated: 2026-11-11 10:39:37 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 429
-  Models passed all filters: 13
-  Models excluded: 416
-  Success rate: 3.0%
+  Total models processed: 433
+  Models passed all filters: 12
+  Models excluded: 421
+  Success rate: 2.8%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 429 models
-    Excluded: 413 models (non-free pricing)
-    Remaining: 16 models
+    Input: 433 models
+    Excluded: 418 models (non-free pricing)
+    Remaining: 15 models
 
   Step 2 - Billing Description Filter:
-    Input: 16 models
+    Input: 15 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 16 models
+    Remaining: 15 models
 
   Step 3 - Keyword Filter:
-    Input: 16 models
+    Input: 15 models
     Excluded: 3 models (preview/experimental/beta)
-    Remaining: 13 models
+    Remaining: 12 models
 
   Step 4 - Deduplication Filter:
-    Input: 13 models
+    Input: 12 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 13 models
+    Final: 12 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 413 models with non-free pricing (details omitted due to volume)
+Excluded 418 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -113,13 +113,6 @@ PROVIDER: RECURSIVE (1 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
-PROVIDER: XINGCHEN (1 models)
---------------------------------------------------
-   1. XingChen: Xing4.0 29B A4B (free)
-      ID: xingchen-agi/xing4.0-29b-a4b:free
-      Pricing: prompt=0, completion=0, request=N/A
-
-
 PROVIDER: COHERE (1 models)
 --------------------------------------------------
    1. Cohere: North Mini Code (free)
@@ -136,11 +129,11 @@ PROVIDER: OPENROUTER (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 8
-  Total models passed all filters: 13
-  Models excluded by pricing: 413
+  Total providers: 7
+  Total models passed all filters: 12
+  Models excluded by pricing: 418
   Models excluded by billing description: 0
   Models excluded by keywords: 3
   Models excluded by deduplication: 0
-  Total exclusions: 416
+  Total exclusions: 421
   ✓ All filtered models accounted for

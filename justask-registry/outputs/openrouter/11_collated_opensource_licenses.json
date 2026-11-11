@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-11-10 20:45:07 IST",
-    "total_models": 3,
+    "generated_at": "2026-11-11 10:39:49 IST",
+    "total_models": 2,
     "pipeline_stage": "K_collate_opensource_licenses"
   },
   "models": [
@@ -24,17 +24,6 @@
       "clean_model_name": "Flint",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/RecursiveSI/flint/blob/main/LICENSE",
-      "license_name": "APACHE-2.0",
-      "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
-    },
-    {
-      "id": "xingchen-agi/xing4.0-29b-a4b:free",
-      "canonical_slug": "xingchen-agi/xing4.0-29b-a4b-20261015",
-      "original_name": "XingChen: Xing4.0 29B A4B (free)",
-      "hugging_face_id": "XingChen-AGI/Xing4.0-29B-A4B",
-      "clean_model_name": "Xing4.0 29B A4B",
-      "license_info_text": "info",
-      "license_info_url": "https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B/blob/main/LICENSE",
       "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     }

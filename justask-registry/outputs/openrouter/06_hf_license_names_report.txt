@@ -1,17 +1,17 @@
 ================================================================================
 OTHER MODEL LICENSE NAME EXTRACTIONS REPORT
-Generated: 2026-11-10 20:45:03 IST
+Generated: 2026-11-11 10:39:45 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 9
+  Total models : 8
   Input        : 05_hf_license_urls.json
   Processor    : step_06_fetch_hf_license_names.py
   Output       : 06_hf_license_names.json
 
 LICENSE DISTRIBUTION:
   Unknown: 1
-  apache-2.0: 3
+  apache-2.0: 2
   lfm1.0: 2
   nvidia-open-model-agreement: 1
   openmdw-1.1: 2
@@ -39,16 +39,7 @@ MODEL 2: recursive/flint-v1.0-20261021
 
 ================================================================================
 
-MODEL 3: xingchen-agi/xing4.0-29b-a4b-20261015
---------------------------------------------------
-  ID               : xingchen-agi/xing4.0-29b-a4b:free
-  Canonical Slug   : xingchen-agi/xing4.0-29b-a4b-20261015
-  HuggingFace ID   : XingChen-AGI/Xing4.0-29B-A4B
-  Extracted License: apache-2.0
-
-================================================================================
-
-MODEL 4: nvidia/nemotron-3.5-super-vl-20261015
+MODEL 3: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
   ID               : nvidia/nemotron-3.5-super-vl:free
   Canonical Slug   : nvidia/nemotron-3.5-super-vl-20261015
@@ -57,7 +48,7 @@ MODEL 4: nvidia/nemotron-3.5-super-vl-20261015
 
 ================================================================================
 
-MODEL 5: liquid/lfm-2.5-2.6b-20260811
+MODEL 4: liquid/lfm-2.5-2.6b-20260811
 --------------------------------------------------
   ID               : liquid/lfm-2.5-2.6b:free
   Canonical Slug   : liquid/lfm-2.5-2.6b-20260811
@@ -66,7 +57,7 @@ MODEL 5: liquid/lfm-2.5-2.6b-20260811
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-3.5-lightning-20260807
+MODEL 5: nvidia/nemotron-3.5-lightning-20260807
 --------------------------------------------------
   ID               : nvidia/nemotron-3.5-lightning:free
   Canonical Slug   : nvidia/nemotron-3.5-lightning-20260807
@@ -75,7 +66,7 @@ MODEL 6: nvidia/nemotron-3.5-lightning-20260807
 
 ================================================================================
 
-MODEL 7: cohere/north-mini-code-20260617
+MODEL 6: cohere/north-mini-code-20260617
 --------------------------------------------------
   ID               : cohere/north-mini-code:free
   Canonical Slug   : cohere/north-mini-code-20260617
@@ -84,7 +75,7 @@ MODEL 7: cohere/north-mini-code-20260617
 
 ================================================================================
 
-MODEL 8: nvidia/nemotron-3-ultra-550b-a55b-20260604
+MODEL 7: nvidia/nemotron-3-ultra-550b-a55b-20260604
 --------------------------------------------------
   ID               : nvidia/nemotron-3-ultra-550b-a55b:free
   Canonical Slug   : nvidia/nemotron-3-ultra-550b-a55b-20260604
@@ -93,7 +84,7 @@ MODEL 8: nvidia/nemotron-3-ultra-550b-a55b-20260604
 
 ================================================================================
 
-MODEL 9: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 8: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID               : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Canonical Slug   : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428

@@ -1,17 +1,17 @@
 ================================================================================
 OPENSOURCE LICENSE MODELS REPORT
-Generated: 2026-11-10 20:45:04 IST
+Generated: 2026-11-11 10:39:46 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 3
+  Total models : 2
   Input        : 07_standardized_licenses.json
   Reference    : opensource_license_urls.json
   Processor    : step_08_bucketize_licenses.py
   Output       : 08_opensource_licenses.json
 
 OPENSOURCE LICENSE DISTRIBUTION:
-  APACHE-2.0: 3 models
+  APACHE-2.0: 2 models
 
 Total license types: 1
 
@@ -32,14 +32,5 @@ MODEL 2: recursive/flint-v1.0-20261021
   ID              : recursive/flint-v1.0:free
   Canonical Slug  : recursive/flint-v1.0-20261021
   HuggingFace ID  : RecursiveSI/flint
-  License Name    : APACHE-2.0
-
-================================================================================
-
-MODEL 3: xingchen-agi/xing4.0-29b-a4b-20261015
---------------------------------------------------
-  ID              : xingchen-agi/xing4.0-29b-a4b:free
-  Canonical Slug  : xingchen-agi/xing4.0-29b-a4b-20261015
-  HuggingFace ID  : XingChen-AGI/Xing4.0-29B-A4B
   License Name    : APACHE-2.0
 

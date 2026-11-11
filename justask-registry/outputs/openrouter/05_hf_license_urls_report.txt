@@ -1,16 +1,16 @@
 ================================================================================
 OTHER LICENSE INFO URLS REPORT
-Generated: 2026-11-10 20:44:59 IST
+Generated: 2026-11-11 10:39:41 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 9
+  Total models : 8
   Input        : 02_filtered_models.json
   Processor    : step_05_fetch_hf_license_urls.py
   Output       : 05_hf_license_urls.json
 
 LICENSE INFO URL BREAKDOWN:
-   5 models: LICENSE file
+   4 models: LICENSE file
    3 models: README.md file
    1 models: Unknown/Inaccessible
 
@@ -55,16 +55,7 @@ MODEL 4: recursive/flint-v1.0-20261021
 
 ================================================================================
 
-MODEL 5: xingchen-agi/xing4.0-29b-a4b-20261015
---------------------------------------------------
-  ID              : xingchen-agi/xing4.0-29b-a4b:free
-  Canonical Slug  : xingchen-agi/xing4.0-29b-a4b-20261015
-  HuggingFace ID  : XingChen-AGI/Xing4.0-29B-A4B
-  License Info URL: https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B/blob/main/LICENSE
-
-================================================================================
-
-MODEL 6: cohere/north-mini-code-20260617
+MODEL 5: cohere/north-mini-code-20260617
 --------------------------------------------------
   ID              : cohere/north-mini-code:free
   Canonical Slug  : cohere/north-mini-code-20260617
@@ -73,7 +64,7 @@ MODEL 6: cohere/north-mini-code-20260617
 
 ================================================================================
 
-MODEL 7: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 6: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID              : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Canonical Slug  : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
@@ -82,7 +73,7 @@ MODEL 7: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 
 ================================================================================
 
-MODEL 8: nvidia/nemotron-3-ultra-550b-a55b-20260604
+MODEL 7: nvidia/nemotron-3-ultra-550b-a55b-20260604
 --------------------------------------------------
   ID              : nvidia/nemotron-3-ultra-550b-a55b:free
   Canonical Slug  : nvidia/nemotron-3-ultra-550b-a55b-20260604
@@ -91,7 +82,7 @@ MODEL 8: nvidia/nemotron-3-ultra-550b-a55b-20260604
 
 ================================================================================
 
-MODEL 9: nvidia/nemotron-3.5-super-vl-20261015
+MODEL 8: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
   ID              : nvidia/nemotron-3.5-super-vl:free
   Canonical Slug  : nvidia/nemotron-3.5-super-vl-20261015

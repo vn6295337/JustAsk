@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-11-10 20:45:08 IST
+Generated: 2026-11-11 10:39:51 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 13
+  Total models      : 12
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -12,25 +12,23 @@ SUMMARY:
 
 ACTION ITEMS - UNKNOWN MAPPINGS:
 ==================================================
-UNKNOWN PROVIDERS (4 models):
+UNKNOWN PROVIDERS (3 models):
   Add these provider mappings to provider_enrichment.json:
     "cohere": ["Provider Name", "Country"],
     "recursive": ["Provider Name", "Country"],
     "thinkingmachines": ["Provider Name", "Country"],
-    "xingchen-agi": ["Provider Name", "Country"],
 
-UNKNOWN OFFICIAL URLS (4 unique families):
+UNKNOWN OFFICIAL URLS (3 unique families):
   Add these URL mappings to family_official_urls:
     "cohere": "https://official-url-here",
     "recursive": "https://official-url-here",
     "thinkingmachines": "https://official-url-here",
-    "xingchen-agi": "https://official-url-here",
 
 ==================================================
 
 MODEL PROVIDER DISTRIBUTION:
    4 models: NVIDIA
-   4 models: Unknown
+   3 models: Unknown
    2 models: Google
    2 models: Liquid AI
    1 models: OpenRouter
@@ -39,7 +37,7 @@ Total unique model providers: 5
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
    9 models: United States
-   4 models: Unknown
+   3 models: Unknown
 
 Total unique countries: 2
 
@@ -51,9 +49,8 @@ MODEL FAMILY DISTRIBUTION:
    1 models: openrouter
    1 models: recursive
    1 models: thinkingmachines
-   1 models: xingchen-agi
 
-Total unique model families: 8
+Total unique model families: 7
 
 DETAILED PROVIDER ENRICHED MODEL INFORMATION:
 ================================================================================
@@ -222,19 +219,5 @@ MODEL 12: thinkingmachines/inkling-2-small-20261107
   Model Provider: Unknown
   Model Provider Country: Unknown
   Model Family: thinkingmachines
-  Official URL: Unknown
-
-================================================================================
-
-MODEL 13: xingchen-agi/xing4.0-29b-a4b-20261015
---------------------------------------------------
-  ID: xingchen-agi/xing4.0-29b-a4b:free
-  Original Name: XingChen: Xing4.0 29B A4B (free)
-  HuggingFace ID: XingChen-AGI/Xing4.0-29B-A4B
-  Canonical Slug: xingchen-agi/xing4.0-29b-a4b-20261015
-  Clean Model Name: Xing4.0 29B A4B
-  Model Provider: Unknown
-  Model Provider Country: Unknown
-  Model Family: xingchen-agi
   Official URL: Unknown
 

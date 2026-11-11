@@ -1,13 +1,13 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-11-10 20:44:54 IST
+Generated: 2026-11-11 10:39:36 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 429
+  Total models: 433
 
 PROVIDER BREAKDOWN (Descending Order):
-  OpenAI            :  81 models
+  OpenAI             :  81 models
     - gpt-3.5-turbo-0613
     - gpt-3.5-turbo-16k
     - gpt-4
@@ -90,7 +90,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - o3
     - o3-pro
 
-  Google            :  45 models
+  Google             :  47 models
     - gemini-2.5-flash
     - gemini-2.5-flash-image
     - gemini-2.5-flash-lite
@@ -121,6 +121,8 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemini-3.8-flash:batch
     - gemini-4-argon
     - gemini-4-argon:batch
+    - gemini-4-carbon
+    - gemini-4-carbon:batch
     - gemini-flash-latest
     - gemini-nano-banana-2.1
     - gemini-omni-1.1-flash
@@ -137,8 +139,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - lyria-3-clip-preview
     - lyria-3-pro-preview
 
-  Qwen              :  42 models
-    - qwen-2.5-7b-instruct
+  Qwen               :  41 models
     - qwen-plus
     - qwen2.5-vl-72b-instruct
     - qwen3-14b
@@ -181,7 +182,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3.8-max-prime
     - qwen3.8-omni-flash
 
-  Anthropic         :  26 models
+  Anthropic          :  26 models
     - claude-fable-5
     - claude-fable-5.1
     - claude-fable-5.1:batch
@@ -209,7 +210,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - claude-sonnet-5.5:batch
     - claude-sonnet-latest
 
-  Z.ai              :  22 models
+  Z.ai               :  22 models
     - glm-4.5
     - glm-4.5-air
     - glm-4.5v
@@ -233,7 +234,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - glm-flash-latest
     - glm-latest
 
-  DeepSeek          :  20 models
+  DeepSeek           :  20 models
     - deepseek-chat
     - deepseek-chat-v3-0324
     - deepseek-chat-v3.1
@@ -255,7 +256,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - deepseek-v4.1-flash-1017:batch
     - deepseek-v4.1-flash:batch
 
-  Mistral           :  19 models
+  Mistral            :  19 models
     - codestral-2508
     - devstral-2512
     - ministral-14b-2512
@@ -276,7 +277,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - mixtral-8x22b-instruct
     - voxtral-small-24b-2507
 
-  Meta              :  16 models
+  Meta               :  16 models
     - llama-3.1-70b-instruct
     - llama-3.1-8b-instruct
     - llama-3.2-1b-instruct
@@ -294,7 +295,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - muse-spark-open
     - muse-wonder
 
-  NVIDIA            :  11 models
+  NVIDIA             :  11 models
     - nemotron-3-nano-30b-a3b
     - nemotron-3-nano-omni-30b-a3b-reasoning:free
     - nemotron-3-super-120b-a12b
@@ -307,7 +308,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - nemotron-3.5-super-vl:free
     - switchyard
 
-  MoonshotAI        :  10 models
+  MoonshotAI         :  10 models
     - kimi-k2
     - kimi-k2-0905
     - kimi-k2-thinking
@@ -319,7 +320,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - kimi-k3:batch
     - kimi-latest
 
-  SpaceXAI          :  10 models
+  SpaceXAI           :  10 models
     - grok-4.20
     - grok-4.20-multi-agent
     - grok-4.3
@@ -331,7 +332,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - grok-4.7:batch
     - grok-build-0.1
 
-  Tencent           :   8 models
+  Tencent            :   8 models
     - hunyuan-a13b-instruct
     - hy-mt2-1.8b
     - hy-mt2-30b-a3b
@@ -341,7 +342,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - hy4
     - hy4-preview
 
-  AionLabs          :   6 models
+  AionLabs           :   6 models
     - aion-2.0
     - aion-3.0
     - aion-3.0-mini
@@ -349,7 +350,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - aion-3.5-mini
     - aion-rp-llama-3.1-8b
 
-  Cohere            :   6 models
+  Cohere             :   6 models
     - command-a
     - command-a-plus
     - command-r-08-2024
@@ -357,7 +358,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - command-r7b-12-2024
     - north-mini-code:free
 
-  ByteDance Seed    :   6 models
+  ByteDance Seed     :   6 models
     - seed-1.6
     - seed-1.6-flash
     - seed-2-1-turbo
@@ -365,165 +366,172 @@ PROVIDER BREAKDOWN (Descending Order):
     - seed-2.0-lite
     - seed-2.0-mini
 
-  MiniMax           :   5 models
+  MiniMax            :   5 models
     - minimax-m2.5
     - minimax-m2.7
     - minimax-m3
     - minimax-m3.1-flash
     - minimax-m3:batch
 
-  Xiaomi            :   5 models
+  Xiaomi             :   5 models
     - mimo-v2.5
     - mimo-v2.5-pro
     - mimo-v2.6-flash
     - mimo-v2.6-pro
     - mimo-v2.6-pro-ultraspeed
 
-  Amazon            :   5 models
+  Amazon             :   5 models
     - nova-2-lite-v1
     - nova-lite-v1
     - nova-micro-v1
     - nova-premier-v1
     - nova-pro-v1
 
-  Perplexity        :   5 models
+  Perplexity         :   5 models
     - sonar
     - sonar-deep-research
     - sonar-pro
     - sonar-pro-search
     - sonar-reasoning-pro
 
-  Thinking Machines :   4 models
+  Thinking Machines  :   4 models
     - inkling
     - inkling-2-small:free
     - inkling-small
     - inkling-small:batch
 
-  LiquidAI          :   4 models
+  LiquidAI           :   4 models
     - lfm-2.5-2.6b:free
     - lfm-2.5-24b-a2b
     - lfm-3-1.7b
     - lfm-3-1.7b:free
 
-  inclusionAI       :   4 models
+  inclusionAI        :   4 models
     - ling-3.0-flash
     - ling-3.0-flash-vl
     - ling-3.0-tiny
     - ling-3.1-flash
 
-  Morph             :   4 models
+  Morph              :   4 models
     - morph-v3-fast
     - morph-v3-fast:batch
     - morph-v3-large
     - morph-v3-large:batch
 
-  Nex AGI           :   3 models
+  Nex AGI            :   3 models
     - nex-n2.5-mini
     - nex-n2.5-pro
     - nex-n2.6
 
-  StepFun           :   3 models
+  StepFun            :   3 models
     - step-3.5-flash
     - step-3.7-flash
     - step-5-preview
 
-  Sakana            :   3 models
+  Sakana             :   3 models
     - fugu-max
     - fugu-ultra
     - fugu-ultra-v2
 
-  TheDrummer        :   3 models
+  TheDrummer         :   3 models
     - cydonia-24b-v4.1
     - skyfall-36b-v2
     - unslopnemo-12b
 
-  PrismML           :   2 models
+  Baidu              :   2 models
+    - ernie-5.5-flash-preview
+    - ernie-light-dt-1.0-intl
+
+  PrismML            :   2 models
     - ternary-bonsai-2-27b
     - ternary-bonsai-2-9b
 
-  Moondream         :   2 models
+  Moondream          :   2 models
     - moondream3-preview
     - moondream3.1-9b-a2b
 
-  ScaleDown         :   2 models
+  ScaleDown          :   2 models
     - extract
     - summarize
 
-  Perceptron        :   2 models
+  Perceptron         :   2 models
     - perceptron-mk1
     - perceptron-mk1.5
 
-  Upstage           :   2 models
+  Upstage            :   2 models
     - solar-mini4
     - solar-pro4
 
-  Inference.net     :   2 models
+  Inference.net      :   2 models
     - schematron-v2-small
     - schematron-v2-turbo
 
-  Relace            :   2 models
+  Relace             :   2 models
     - relace-apply-3
     - relace-search
 
-  Sao10K            :   2 models
+  Sao10K             :   2 models
     - l3-lunaris-8b
     - l3.1-euryale-70b
 
-  Ricursive         :   1 models
+  KT                 :   1 models
+    - midm-k-3.0-pro
+
+  Ricursive          :   1 models
     - ripple-65b-preview
 
-  Particle AI       :   1 models
+  Motif Technologies :   1 models
+    - motif-3
+
+  Particle AI        :   1 models
     - particle-1
 
-  Recursive         :   1 models
+  Recursive          :   1 models
     - flint-v1.0:free
 
-  Elorian           :   1 models
+  Elorian            :   1 models
     - glimpse
 
-  XingChen          :   1 models
-    - xing4.0-29b-a4b:free
-
-  Reflection        :   1 models
+  Reflection         :   1 models
     - beam-1.0-501b-a23b
 
-  Fireworks         :   1 models
+  Fireworks          :   1 models
     - ember-1
 
-  IBM               :   1 models
+  IBM                :   1 models
     - granite-4.2-8b
 
-  Dots Studio       :   1 models
+  Dots Studio        :   1 models
     - dots-3-note-preview:free
 
-  Meituan           :   1 models
+  Meituan            :   1 models
     - longcat-2.0
 
-  xAI               :   1 models
+  xAI                :   1 models
     - grok-latest
 
-  Writer            :   1 models
+  Writer             :   1 models
     - palmyra-x5
 
-  Nous              :   1 models
+  Nous               :   1 models
     - hermes-4-405b
 
-  ByteDance         :   1 models
+  ByteDance          :   1 models
     - ui-tars-1.5-7b
 
-  Venice            :   1 models
+  Venice             :   1 models
     - dolphin-mistral-24b-venice-edition
 
-  Microsoft         :   1 models
+  Microsoft          :   1 models
     - phi-4
 
-  Mancer            :   1 models
+  Mancer             :   1 models
     - weaver
 
-  TypeSafe          :   1 models
+  TypeSafe           :   1 models
     - jev-router
 
-  OpenRouter        :   1 models
+  OpenRouter         :   1 models
     - fusion
 
-Total providers: 54
+Total providers: 56

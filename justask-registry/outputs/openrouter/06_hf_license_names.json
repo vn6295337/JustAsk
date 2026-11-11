@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-11-10 20:45:03 IST",
-    "total_models": 9,
+    "generated_at": "2026-11-11 10:39:45 IST",
+    "total_models": 8,
     "pipeline_stage": "F_fetch_other_license_names_from_hf"
   },
   "models": [
@@ -17,13 +17,6 @@
       "canonical_slug": "recursive/flint-v1.0-20261021",
       "name": "Recursive: Flint (free)",
       "hugging_face_id": "RecursiveSI/flint",
-      "extracted_license": "apache-2.0"
-    },
-    {
-      "id": "xingchen-agi/xing4.0-29b-a4b:free",
-      "canonical_slug": "xingchen-agi/xing4.0-29b-a4b-20261015",
-      "name": "XingChen: Xing4.0 29B A4B (free)",
-      "hugging_face_id": "XingChen-AGI/Xing4.0-29B-A4B",
       "extracted_license": "apache-2.0"
     },
     {

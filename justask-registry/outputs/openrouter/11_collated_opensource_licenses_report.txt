@@ -1,21 +1,21 @@
 ================================================================================
 COLLATED OPENSOURCE LICENSE INFORMATION REPORT
-Generated: 2026-11-10 20:45:07 IST
+Generated: 2026-11-11 10:39:49 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 3
+  Total models        : 2
   Input sources       : 3 pipeline stage files
   Processor           : step_11_collate_opensource.py
   Output              : 11_collated_opensource_licenses.json
 
 PIPELINE STAGE COVERAGE:
-  Step 05 (License Info URLs)    : 3 models
-  Step 08 Opensource Names       : 3 models
-  Step 09 Opensource URLs        : 3 models
+  Step 05 (License Info URLs)    : 2 models
+  Step 08 Opensource Names       : 2 models
+  Step 09 Opensource URLs        : 2 models
 
 OPENSOURCE LICENSE DISTRIBUTION:
-   3 models: APACHE-2.0
+   2 models: APACHE-2.0
 
 Total unique license types: 1
 
@@ -45,20 +45,6 @@ MODEL 2: recursive/flint-v1.0-20261021
   Clean Model Name: Flint
   License Info Text: info
   License Info URL: https://huggingface.co/RecursiveSI/flint/blob/main/LICENSE
-  License Name: APACHE-2.0
-  License URL: https://www.apache.org/licenses/LICENSE-2.0
-
-================================================================================
-
-MODEL 3: xingchen-agi/xing4.0-29b-a4b-20261015
---------------------------------------------------
-  ID: xingchen-agi/xing4.0-29b-a4b:free
-  Original Name: XingChen: Xing4.0 29B A4B (free)
-  HuggingFace ID: XingChen-AGI/Xing4.0-29B-A4B
-  Canonical Slug: xingchen-agi/xing4.0-29b-a4b-20261015
-  Clean Model Name: Xing4.0 29B A4B
-  License Info Text: info
-  License Info URL: https://huggingface.co/XingChen-AGI/Xing4.0-29B-A4B/blob/main/LICENSE
   License Name: APACHE-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
 
