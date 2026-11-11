@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { AppState } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Provider } from 'react-redux';
@@ -9,10 +10,21 @@ import HomeScreen from './src/screens/HomeScreen';
 import SettingsScreen from './src/screens/SettingsScreen';
 import { ThemeProvider } from './src/theme/ThemeContext';
 import AgeGate from './src/components/AgeGate';
+import ServerWake from './src/services/ServerWake';
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+  // Start waking the server as soon as the app opens (and when it returns to
+  // the foreground), so most of the free-plan wake-up passes before the user asks.
+  useEffect(() => {
+    ServerWake.ensureAwake();
+    const sub = AppState.addEventListener('change', (s) => {
+      if (s === 'active') ServerWake.ensureAwake();
+    });
+    return () => sub.remove();
+  }, []);
+
   return (
     <Provider store={store}>
       <ThemeProvider>

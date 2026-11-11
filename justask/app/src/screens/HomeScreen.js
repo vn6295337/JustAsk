@@ -34,6 +34,8 @@ import Database from '../services/Database';
 import MessageBubble from '../components/MessageBubble';
 import { ThemeContext } from '../theme/ThemeContext';
 import { SkeletonMessageBubble } from '../components/SkeletonLoader';
+import ServerStatusBanner, { TIMEOUT_TEXT } from '../components/ServerStatusBanner';
+import ServerWake, { waitingText } from '../services/ServerWake';
 
 const HomeScreen = () => {
   const { theme } = useContext(ThemeContext);
@@ -199,9 +201,43 @@ const HomeScreen = () => {
         return;
       }
 
+      // Wake the server first if it may be asleep. While it wakes, show a
+      // running timer on the answer bubble; the question is sent automatically.
+      const waitStart = Date.now();
+      const waitTicker = setInterval(() => {
+        if (ServerWake.getState().status === 'waking') {
+          dispatch(updateMessage({
+            id: assistantMessageId,
+            updates: { text: waitingText(Date.now() - waitStart) },
+          }));
+        }
+      }, 1000);
+      let awake;
+      try {
+        awake = await ServerWake.ensureAwake();
+      } finally {
+        clearInterval(waitTicker);
+      }
+      if (!awake && ServerWake.getState().status === 'timeout') {
+        dispatch(updateMessage({ id: assistantMessageId, updates: { text: TIMEOUT_TEXT } }));
+        try {
+          await Database.updateMessage(assistantMessageId, { text: TIMEOUT_TEXT });
+        } catch (error) {
+          console.error('Error updating message in DB:', error);
+        }
+        dispatch(setError(TIMEOUT_TEXT));
+        return;
+      }
+      if (awake) {
+        dispatch(updateMessage({ id: assistantMessageId, updates: { text: 'Thinking...' } }));
+      }
+      // Not awake and not a timeout = fast network failure: the API call
+      // below fails too and the query goes to the offline queue.
+
       // Always try API call first (NetInfo can be unreliable on Android)
       try {
         const result = await APIClient.query(userQuery);
+        ServerWake.markOk();
         const elapsed = Date.now() - startTime;
 
         // Save to cache (never time-sensitive queries or categories)
@@ -342,6 +378,9 @@ const HomeScreen = () => {
 
   return (
     <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+      {/* Server wake-up status (free hosting sleeps when idle) */}
+      {!isOffline && <ServerStatusBanner />}
+
       {/* Status Bar */}
       {isOffline && (
         <View style={[styles.offlineBanner, { backgroundColor: theme.colors.offlineBg }]}>

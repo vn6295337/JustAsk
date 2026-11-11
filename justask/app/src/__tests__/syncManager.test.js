@@ -3,7 +3,10 @@ import SyncManager from '../services/SyncManager';
 import Database from '../services/Database';
 import APIClient from '../services/APIClient';
 
-jest.mock('../services/APIClient', () => ({ __esModule: true, default: { syncOfflineQueries: jest.fn() } }));
+jest.mock('../services/APIClient', () => ({
+  __esModule: true,
+  default: { syncOfflineQueries: jest.fn(), health: jest.fn().mockResolvedValue({ status: 'ok' }) },
+}));
 jest.mock('../store', () => ({ __esModule: true, default: { dispatch: jest.fn() } }));
 
 jest.spyOn(console, 'log').mockImplementation(() => {});
