@@ -1,8 +1,8 @@
 GOOGLE API MODELS FETCH REPORT
 ==================================================
 
-Generated: 2026-11-10 12:17:24 IST
-Total Models: 61
+Generated: 2026-11-11 10:37:50 IST
+Total Models: 62
 
 MODELS LIST:
 --------------------
@@ -39,31 +39,32 @@ MODELS LIST:
 31. models/gemini-3.7-flash
 32. models/gemini-3.8-flash
 33. models/gemini-4-argon
-34. models/lyria-3-clip-preview
-35. models/lyria-3-pro-preview
-36. models/lyria-3.5
-37. models/gemini-3.1-flash-tts-preview
-38. models/gemini-3.8-flash-tts
-39. models/gemini-3.8-flash-lite-tts
-40. models/gemini-robotics-er-2-preview
-41. models/gemini-2.5-computer-use-preview-10-2025
-42. models/antigravity-preview-05-2026
-43. models/antigravity-preview-09-2026
-44. models/antigravity-preview-latest
-45. models/deep-research-max-preview-04-2026
-46. models/deep-research-preview-04-2026
-47. models/deep-research-pro-preview-12-2025
-48. models/gemini-embedding-001
-49. models/gemini-embedding-2-preview
-50. models/gemini-embedding-2
-51. models/aqa
-52. models/gemini-3.5-transcribe-live
-53. models/gemini-2.5-flash-native-audio-latest
-54. models/gemini-2.5-flash-native-audio-preview-09-2025
-55. models/gemini-2.5-flash-native-audio-preview-12-2025
-56. models/gemini-3.1-flash-live-preview
-57. models/gemini-3.8-live
-58. models/gemini-3.8-live-extended-thinking
-59. models/gemini-robotics-er-2-streaming-preview
-60. models/gemini-3.5-live-translate-preview
-61. models/lyria-realtime-exp
+34. models/gemini-4-carbon
+35. models/lyria-3-clip-preview
+36. models/lyria-3-pro-preview
+37. models/lyria-3.5
+38. models/gemini-3.1-flash-tts-preview
+39. models/gemini-3.8-flash-tts
+40. models/gemini-3.8-flash-lite-tts
+41. models/gemini-robotics-er-2-preview
+42. models/gemini-2.5-computer-use-preview-10-2025
+43. models/antigravity-preview-05-2026
+44. models/antigravity-preview-09-2026
+45. models/antigravity-preview-latest
+46. models/deep-research-max-preview-04-2026
+47. models/deep-research-preview-04-2026
+48. models/deep-research-pro-preview-12-2025
+49. models/gemini-embedding-001
+50. models/gemini-embedding-2-preview
+51. models/gemini-embedding-2
+52. models/aqa
+53. models/gemini-3.5-transcribe-live
+54. models/gemini-2.5-flash-native-audio-latest
+55. models/gemini-2.5-flash-native-audio-preview-09-2025
+56. models/gemini-2.5-flash-native-audio-preview-12-2025
+57. models/gemini-3.1-flash-live-preview
+58. models/gemini-3.8-live
+59. models/gemini-3.8-live-extended-thinking
+60. models/gemini-robotics-er-2-streaming-preview
+61. models/gemini-3.5-live-translate-preview
+62. models/lyria-realtime-exp
