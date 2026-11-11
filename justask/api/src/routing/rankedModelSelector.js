@@ -1,44 +1,60 @@
 /**
  * Ranked Model Selector
- * Fetches pre-computed model rankings from justask-router
- * and provides fallback chain based on selection scores
+ * Reads the hand-approved model ranking (justask."23_router-model-ranking",
+ * built by justask-router/selector-service/scripts/db/populate_model_selection_score.js)
+ * directly from Supabase and provides the fallback chain.
+ * Replaces the separate justask-router service (one consumer, extra cold start).
  */
+import { getSupabase } from '../utils/supabase.js';
+import { withTimeout } from '../utils/errors.js';
 
-const SELECTOR_SERVICE_URL = process.env.SELECTOR_SERVICE_URL || 'http://localhost:3001';
-
-const SELECTOR_TIMEOUT_MS = 3000;
-const SELECTOR_CACHE_TTL_MS = 60000;
-let selectorCache = { models: null, at: 0 };
+const RANKING_TABLE = '23_router-model-ranking';
+const RANKING_TIMEOUT_MS = 3000;
+const RANKING_CACHE_TTL_MS = 5 * 60 * 1000;
+let rankingCache = { models: null, at: 0 };
 
 /**
- * Fetch ranked models from justask-router
+ * Fetch the top-ranked models (cached for 5 minutes)
  * @param {number} limit - Number of top models to fetch (default: 10)
- * @returns {Promise<Array>} Ranked list of models
+ * @returns {Promise<Array>} Ranked list of models, best first
  */
 export async function fetchRankedModels(limit = 10) {
   const now = Date.now();
-  if (selectorCache.models && now - selectorCache.at < SELECTOR_CACHE_TTL_MS) {
-    return selectorCache.models;
+  if (rankingCache.models && now - rankingCache.at < RANKING_CACHE_TTL_MS) {
+    return rankingCache.models;
   }
 
   try {
-    const response = await fetch(`${SELECTOR_SERVICE_URL}/best-models?limit=${limit}`, {
-      signal: AbortSignal.timeout(SELECTOR_TIMEOUT_MS),
-    });
+    const { data, error } = await withTimeout(
+      getSupabase()
+        .schema('justask')
+        .from(RANKING_TABLE)
+        .select('model_name, inference_provider, provider_slug, intelligence_index, selection_score')
+        .order('selection_score', { ascending: false })
+        .limit(limit),
+      RANKING_TIMEOUT_MS,
+      'supabase'
+    );
+    if (error) throw new Error(error.message);
 
-    if (!response.ok) {
-      throw new Error(`Selector service returned ${response.status}: ${response.statusText}`);
-    }
-
-    const data = await response.json();
-    const models = Array.isArray(data.models) ? data.models : [];
+    const models = (data || [])
+      .filter((m) => m.inference_provider && m.provider_slug)
+      .map((m, i) => ({
+        rank: i + 1,
+        provider: m.inference_provider,
+        modelName: m.provider_slug,
+        humanReadableName: m.model_name,
+        selectionScore: m.selection_score,
+        intelligenceIndex: m.intelligence_index,
+      }));
     if (models.length > 0) {
-      selectorCache = { models, at: Date.now() };
+      rankingCache = { models, at: Date.now() };
     }
     return models;
   } catch (error) {
     console.error('[RankedModelSelector] Error fetching ranked models:', error.message);
-    return [];
+    // Serve the last good ranking if there is one
+    return rankingCache.models || [];
   }
 }
 
@@ -52,7 +68,7 @@ export async function getModelFallbackChain() {
 
   if (rankedModels.length === 0) {
     console.warn('[RankedModelSelector] No ranked models available, using hardcoded fallback');
-    // Hardcoded fallback if selector service unavailable
+    // Last resort: providers use their configured default models
     return [
       { provider: 'groq', modelName: 'llama-3.1-70b-versatile', rank: 0, fallback: true },
       { provider: 'gemini', modelName: 'gemini-2.5-flash', rank: 0, fallback: true },
@@ -70,9 +86,9 @@ export async function getModelFallbackChain() {
   }));
 }
 
-/** Test helper: clear the selector cache */
+/** Test helper: clear the ranking cache */
 export function _resetSelectorCache() {
-  selectorCache = { models: null, at: 0 };
+  rankingCache = { models: null, at: 0 };
 }
 
 export default {

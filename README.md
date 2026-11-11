@@ -28,7 +28,7 @@ The AI model landscape is fragmented and constantly shifting:
 An AI assistant platform with intelligent model routing:
 
 - **Zero Friction** — Open the app, type a question, get an answer. No signup, no API keys, no configuration.
-- **Intelligent Routing** — 5-factor scoring algorithm selects optimal model in 5-6ms with automatic failover.
+- **Model Ranking** — Free models are ranked by a 4-factor score (quality, free-limit room, location, license). The ranking is rebuilt and approved by hand; the API tries models in rank order with automatic failover, and skips a model that reported "limit reached" until its limit resets.
 - **Privacy** — Chat history and cache stay on the device; the server stores no questions, answers or IP addresses. Questions are sent to third-party AI providers, and Google's free Gemini tier may use them to improve its products. For adults (18+) only; not available in the EU, EEA, UK or Switzerland. See [Data Privacy](justask/README.md#data-privacy).
 
 ## Why This Matters
@@ -44,22 +44,24 @@ User Query
     │
     ▼
 ┌─────────────┐     ┌─────────────────┐     ┌──────────────┐
-│ JustAsk App │────▶│ JustAsk Router  │────▶│ LLM Provider │
-│  (Mobile)   │     │ (Model Select)  │     │ (Gemini/Groq)│
-└─────────────┘     └─────────────────┘     └──────────────┘
+│ JustAsk App │────▶│   JustAsk API   │────▶│ LLM Provider │
+│  (Mobile)   │     │ (reads ranking) │     │ (Gemini/Groq/│
+└─────────────┘     └─────────────────┘     │  OpenRouter) │
+                           ▲                └──────────────┘
                            │
-                           ▼
                     ┌─────────────────┐
-                    │ JustAsk Registry│
-                    │ (Model Metadata)│
+                    │ Supabase        │◀── Registry pipeline (daily)
+                    │ model list +    │◀── Ranking script (manual)
+                    │ ranking table   │
                     └─────────────────┘
 ```
 
 ### Data Flow
 
 ```
-Registry Pipeline (daily) → Supabase → Router (query-time) → App → User
-                                    → Dashboard (visualization)
+Registry Pipeline (daily) → Supabase ← Ranking script (manual, human-approved)
+                              ├→ API (reads ranking at query time) → App → User
+                              └→ Dashboard (visualization)
 ```
 
 ---
@@ -71,7 +73,7 @@ justask/
 ├── justask/                 # Mobile app + API backend
 │   ├── app/                 # React Native (Expo) Android app
 │   └── api/                 # Node.js Express backend
-├── justask-router/          # Intelligent model selection service
+├── justask-router/          # Ranking scripts (manual) and benchmark refresh
 ├── justask-registry/        # AI model discovery pipeline
 └── justask-dashboard/       # Model visualization dashboard
 ```
@@ -83,7 +85,7 @@ justask/
 | Component | Purpose | Tech Stack |
 |-----------|---------|------------|
 | **JustAsk App** | Privacy-focused mobile AI assistant | React Native, Expo, Redux, SQLite |
-| **JustAsk Router** | Intelligent model selection (5-6ms latency) | Node.js, Express, Supabase |
+| **JustAsk Router** | Ranking scripts: build the model ranking (manual) and refresh benchmark scores (CI). Its server is retired; the API reads the ranking directly. | Node.js, Python, Supabase |
 | **JustAsk Registry** | 37-stage ETL pipeline for model discovery | Python, GitHub Actions |
 | **JustAsk Dashboard** | Model analytics and visualization | React, TypeScript, Chart.js |
 
@@ -113,14 +115,14 @@ cp .env.example .env
 npm run dev
 ```
 
-### Router (Model Selection)
+### Router (Ranking Scripts)
 
 ```bash
 cd justask-router/selector-service
 npm install
 cp .env.example .env
-# Edit .env with Supabase credentials
-npm run dev
+# Edit .env with SUPABASE_URL and SUPABASE_SERVICE_KEY
+node scripts/db/populate_model_selection_score.js   # rebuild the ranking (manual step)
 ```
 
 ### Registry (Data Pipeline)
@@ -198,7 +200,6 @@ No account needed.
 - `SUPABASE_KEY` — Supabase anon key
 
 **Optional:**
-- `SELECTOR_SERVICE_URL` — Router service URL (default: localhost:3001)
 - `PORT` — Service port
 
 See component READMEs for full configuration details.

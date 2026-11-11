@@ -13,6 +13,7 @@ jest.unstable_mockModule('../../routing/rankedModelSelector.js', () => ({ getMod
 const { executeWithRankedFallback } = await import('../failover.js');
 const { ProviderError } = await import('../../utils/errors.js');
 const { default: config } = await import('../../config.js');
+const { _resetExhaustion } = await import('../../rate-limiting/exhaustion.js');
 
 const chain = [
   { provider: 'groq', modelName: 'model-a', rank: 1 },
@@ -22,6 +23,7 @@ const chain = [
 
 beforeEach(() => {
   jest.clearAllMocks();
+  _resetExhaustion();
   getModelFallbackChain.mockResolvedValue(chain);
 });
 
@@ -68,5 +70,40 @@ describe('executeWithRankedFallback', () => {
     callGroq.mockResolvedValue({ response: 'ok', model: 'default-model' });
     await executeWithRankedFallback('q', 'business_news');
     expect(callGroq.mock.calls[0][1]).toBe(config.models.groqCompound);
+  });
+});
+
+describe('limit-reached memory', () => {
+  test('a model that returned 429 is skipped on the next request', async () => {
+    callGroq
+      .mockRejectedValueOnce(new ProviderError('groq', 'quota', 429))
+      .mockResolvedValueOnce({ response: 'ok', model: 'model-b' })
+      .mockResolvedValueOnce({ response: 'ok again', model: 'model-b' });
+    await executeWithRankedFallback('q1');
+    const r = await executeWithRankedFallback('q2');
+    expect(r.success).toBe(true);
+    expect(callGroq.mock.calls.map((c) => c[1])).toEqual(['model-a', 'model-b', 'model-b']);
+  });
+
+  test('when every model is marked out of quota, no provider is called and status is 429', async () => {
+    callGroq.mockRejectedValue(new ProviderError('groq', 'quota', 429));
+    callGemini.mockRejectedValue(new ProviderError('gemini', 'quota', 429));
+    await executeWithRankedFallback('q1');
+    jest.clearAllMocks();
+    const r = await executeWithRankedFallback('q2');
+    expect(r.success).toBe(false);
+    expect(r.status).toBe(429);
+    expect(callGroq).not.toHaveBeenCalled();
+    expect(callGemini).not.toHaveBeenCalled();
+  });
+
+  test('non-429 errors do not mark a model', async () => {
+    callGroq
+      .mockRejectedValueOnce(new ProviderError('groq', 'boom', 503))
+      .mockResolvedValueOnce({ response: 'ok', model: 'model-b' })
+      .mockResolvedValueOnce({ response: 'ok', model: 'model-a' });
+    await executeWithRankedFallback('q1');
+    await executeWithRankedFallback('q2');
+    expect(callGroq.mock.calls[2][1]).toBe('model-a');
   });
 });
