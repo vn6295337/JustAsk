@@ -15,31 +15,25 @@
 
 import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
 
-// Load environment variables
-dotenv.config();
-
-// Writes require the service role key (anon is read-only). Manual, human-run script only.
-if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_KEY) {
-  console.error('SUPABASE_URL and SUPABASE_SERVICE_KEY must be set (see .env.example). Aborting.');
-  process.exit(1);
-}
+const isMain = process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1];
 
 const PRUNE = !process.argv.includes('--no-prune');
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
-);
+let supabase = null;
 
-// Scoring constants (from src/config/constants.js)
-const SELECTION_WEIGHTS = {
-  intelligenceIndex: 0.35,
-  latency: 0.25,
-  rateLimitHeadroom: 0.25,
-  geography: 0.10,
-  license: 0.05
+// Scoring weights (decided 2026-11-11). Speed was removed: it was a fixed guess
+// per provider, not a measurement. Its 25% was shared out proportionally.
+export const SELECTION_WEIGHTS = {
+  intelligenceIndex: 0.47,
+  freeLimitRoom: 0.33,
+  geography: 0.13,
+  license: 0.07
 };
+
+// Room score for a model whose daily request limit (rpd) is not published
+export const UNKNOWN_LIMIT_ROOM_SCORE = 0.5;
 
 const LATENCY_SCORES = {
   groq: 1.0,
@@ -133,23 +127,40 @@ function calculateOverallHeadroom(...headrooms) {
 }
 
 /**
+ * Free-limit room score (0-1): the model's published daily request limit
+ * relative to the largest daily limit among the ranked models.
+ * Unknown limit -> UNKNOWN_LIMIT_ROOM_SCORE (not "unlimited").
+ */
+export function calculateFreeLimitRoom(rpdLimit, maxRpd) {
+  if (!rpdLimit || rpdLimit <= 0 || !maxRpd || maxRpd <= 0) return UNKNOWN_LIMIT_ROOM_SCORE;
+  return Math.min(1, rpdLimit / maxRpd);
+}
+
+/**
  * Calculate final selection score
  */
-function calculateSelectionScore(intelligenceIndex, latencyScore, overallHeadroom, geographyScore, licenseScore) {
+export function calculateSelectionScore(intelligenceIndex, freeLimitRoom, geographyScore, licenseScore) {
   // Normalize intelligence index to 0-1 scale (assume max is 100).
   // Missing index uses the runtime's moderate fallback (0.6), not 0.
   const normalizedIntelligence = intelligenceIndex != null ? intelligenceIndex / 100 : 0.6;
 
   return (
     normalizedIntelligence * SELECTION_WEIGHTS.intelligenceIndex +
-    latencyScore * SELECTION_WEIGHTS.latency +
-    overallHeadroom * SELECTION_WEIGHTS.rateLimitHeadroom +
+    freeLimitRoom * SELECTION_WEIGHTS.freeLimitRoom +
     geographyScore * SELECTION_WEIGHTS.geography +
     licenseScore * SELECTION_WEIGHTS.license
   );
 }
 
 async function populateModelSelectionScore() {
+  dotenv.config();
+  // Writes require the service role key (anon is read-only). Manual, human-run script only.
+  if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_KEY) {
+    console.error('SUPABASE_URL and SUPABASE_SERVICE_KEY must be set (see .env.example). Aborting.');
+    process.exit(1);
+  }
+  supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
+
   console.log('🚀 Starting model selection score population...\n');
 
   try {
@@ -269,7 +280,7 @@ async function populateModelSelectionScore() {
       const modelName = workingData.human_readable_name;
       const rateLimitData = rateLimitsMap[modelName];
 
-      // Calculate scores
+      // Calculate scores (latency_score is stored for reference only; not in the score)
       const intelligenceIndex = metricsData?.intelligence_index ?? null;
       const latencyScore = calculateLatencyScore(mapping.inference_provider);
       const geographyScore = calculateGeographyScore(workingData.model_provider_country);
@@ -291,16 +302,9 @@ async function populateModelSelectionScore() {
       const tpmHeadroom = calculateHeadroom(tpmLimit, tpmUsage);
       const tpdHeadroom = calculateHeadroom(tpdLimit, tpdUsage);
 
+      // Usage is always 0 here, so these headrooms are 1.0 and do not rank anything.
+      // overall_headroom is replaced below by the free-limit room score.
       const overallHeadroom = calculateOverallHeadroom(rpmHeadroom, rpdHeadroom, tpmHeadroom, tpdHeadroom);
-
-      // Calculate final selection score
-      const selectionScore = calculateSelectionScore(
-        intelligenceIndex,
-        latencyScore,
-        overallHeadroom,
-        geographyScore,
-        licenseScore
-      );
 
       records.push({
         model_name: modelName,
@@ -325,9 +329,24 @@ async function populateModelSelectionScore() {
         latency_score: latencyScore,
         geography_score: geographyScore,
         license_score: licenseScore,
-        selection_score: selectionScore
+        selection_score: null // set below, once the largest daily limit is known
       });
     }
+
+    // Step 5.1: Free-limit room and final scores
+    const maxRpd = Math.max(0, ...records.map(r => r.rpd_limit || 0));
+    console.log(`📏 Largest published daily limit among ranked models: ${maxRpd || 'none'} requests/day`);
+    for (const r of records) {
+      r.overall_headroom = calculateFreeLimitRoom(r.rpd_limit, maxRpd);
+      r.selection_score = calculateSelectionScore(
+        r.intelligence_index,
+        r.overall_headroom,
+        r.geography_score,
+        r.license_score
+      );
+    }
+    const unknownLimits = records.filter(r => !r.rpd_limit).length;
+    console.log(`   ${unknownLimits} of ${records.length} models have no published daily limit (room score ${UNKNOWN_LIMIT_ROOM_SCORE})\n`);
 
     console.log(`✅ Built ${records.length} records (skipped ${skippedCount})\n`);
 
@@ -418,7 +437,7 @@ async function populateModelSelectionScore() {
     topModels.forEach((model, index) => {
       console.log(`${index + 1}. ${model.model_name} (${model.inference_provider})`);
       console.log(`   Intelligence: ${model.intelligence_index?.toFixed(1) || 'N/A'} | Selection Score: ${model.selection_score.toFixed(3)}`);
-      console.log(`   Latency: ${model.latency_score.toFixed(2)} | Headroom: ${model.overall_headroom.toFixed(2)} | Geography: ${model.geography_score.toFixed(2)} | License: ${model.license_score.toFixed(2)}`);
+      console.log(`   Free-limit room: ${model.overall_headroom.toFixed(2)} (rpd ${model.rpd_limit ?? 'unknown'}) | Geography: ${model.geography_score.toFixed(2)} | License: ${model.license_score.toFixed(2)}`);
       console.log(`   RPM: ${model.rpm_limit || 'N/A'} | TPM: ${model.tpm_limit || 'N/A'}`);
       console.log();
     });
@@ -471,5 +490,7 @@ async function populateModelSelectionScore() {
   }
 }
 
-// Run the population
-populateModelSelectionScore();
+// Run the population (not when imported by tests)
+if (isMain) {
+  populateModelSelectionScore();
+}
