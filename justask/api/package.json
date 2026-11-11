@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "node --watch src/index.js",
     "start": "node src/index.js",
+    "postinstall": "node scripts/fetch-geo-db.js",
+    "geo:fetch": "node scripts/fetch-geo-db.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
     "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --watch",
     "lint": "eslint src/",
@@ -20,21 +22,22 @@
     "npm": ">=9.6.0"
   },
   "dependencies": {
-    "express": "4.18.2",
-    "axios": "1.6.5",
     "@google/generative-ai": "0.3.0",
-    "groq-sdk": "0.5.0",
     "@supabase/supabase-js": "2.38.4",
-    "express-rate-limit": "6.10.0",
+    "axios": "1.6.5",
     "cors": "2.8.5",
+    "dotenv": "16.3.1",
+    "express": "4.18.2",
+    "express-rate-limit": "6.10.0",
+    "groq-sdk": "0.5.0",
     "helmet": "7.1.0",
-    "morgan": "1.10.0",
-    "dotenv": "16.3.1"
+    "maxmind": "5.0.8",
+    "morgan": "1.10.0"
   },
   "devDependencies": {
+    "eslint": "8.54.0",
     "jest": "29.7.0",
-    "supertest": "6.3.3",
     "nodemon": "3.0.2",
-    "eslint": "8.54.0"
+    "supertest": "6.3.3"
   }
 }

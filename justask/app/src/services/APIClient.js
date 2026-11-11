@@ -77,6 +77,12 @@ function handleError(error) {
 
     if (status === 400) {
       return wrap(`Invalid request: ${message}`, { status });
+    } else if (status === 451) {
+      // Region block (EU, EEA, UK, Switzerland): permanent, never retry
+      return wrap(message || "Sorry, JustAsk isn't available in your region yet.", {
+        status,
+        permanent: true,
+      });
     } else if (status === 429) {
       return wrap('Rate limited. All providers are busy. Please try again in a moment.', { status });
     } else if (status === 500) {

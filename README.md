@@ -25,11 +25,11 @@ The AI model landscape is fragmented and constantly shifting:
 
 ## The Solution
 
-A privacy-focused AI assistant platform with intelligent model routing:
+An AI assistant platform with intelligent model routing:
 
 - **Zero Friction** — Open the app, type a question, get an answer. No signup, no API keys, no configuration.
 - **Intelligent Routing** — 5-factor scoring algorithm selects optimal model in 5-6ms with automatic failover.
-- **Privacy First** — All data stored locally on device. No history, no tracking, no cloud sync.
+- **Privacy** — Chat history and cache stay on the device; the server stores no questions, answers or IP addresses. Questions are sent to third-party AI providers, and Google's free Gemini tier may use them to improve its products. For adults (18+) only; not available in the EU, EEA, UK or Switzerland. See [Data Privacy](justask/README.md#data-privacy).
 
 ## Why This Matters
 

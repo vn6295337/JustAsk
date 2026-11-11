@@ -16,6 +16,7 @@ import CacheManager from '../services/CacheManager';
 import SyncManager from '../services/SyncManager';
 import Database from '../services/Database';
 import { ThemeContext } from '../theme/ThemeContext';
+import PrivacyModal from '../components/PrivacyModal';
 import { useDispatch } from 'react-redux';
 import { clearMessages } from '../store/querySlice';
 
@@ -27,6 +28,7 @@ const SettingsScreen = () => {
   const [isSyncing, setIsSyncing] = useState(false);
   const [syncedResponses, setSyncedResponses] = useState([]);
   const [chatCount, setChatCount] = useState(0);
+  const [showPrivacy, setShowPrivacy] = useState(false);
   const APP_VERSION = Constants.expoConfig?.extra?.appVersion || '1.0.0';
   const CACHE_LIMIT = parseInt(Constants.expoConfig?.extra?.cacheSizeLimitMb, 10) || 50;
   const BACKEND_URL = Constants.expoConfig?.extra?.backendUrl || 'Not configured';
@@ -161,6 +163,7 @@ const SettingsScreen = () => {
 
   return (
     <ScrollView style={[styles.container, { backgroundColor: theme.colors.background }]}>
+      <PrivacyModal visible={showPrivacy} onClose={() => setShowPrivacy(false)} />
       <View style={[styles.section, { backgroundColor: theme.colors.surface }]}>
         <Text style={[styles.sectionTitle, { color: theme.colors.textTertiary }]}>Appearance</Text>
         <View style={[styles.settingItem, { borderTopColor: theme.colors.border }]}>
@@ -189,6 +192,13 @@ const SettingsScreen = () => {
 
       <View style={[styles.section, { backgroundColor: theme.colors.surface }]}>
         <Text style={[styles.sectionTitle, { color: theme.colors.textTertiary }]}>App Information</Text>
+        <TouchableOpacity style={[styles.settingItem, { borderTopColor: theme.colors.border }]} onPress={() => setShowPrivacy(true)}>
+          <View>
+            <Text style={[styles.settingLabel, { color: theme.colors.textSecondary }]}>Privacy and Terms</Text>
+            <Text style={[styles.settingValue, { color: theme.colors.textTertiary }]}>Where your questions go and what we keep</Text>
+          </View>
+          <Ionicons name="shield-checkmark-outline" size={24} color={theme.colors.primary} />
+        </TouchableOpacity>
         <View style={[styles.settingItem, { borderTopColor: theme.colors.border }]}>
           <View>
             <Text style={[styles.settingLabel, { color: theme.colors.textSecondary }]}>Version</Text>

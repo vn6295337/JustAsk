@@ -1,6 +1,6 @@
 # JustAsk
 
-**A Proof-of-Concept demonstrating intelligent AI routing, product thinking, and privacy-first system design.**
+**A Proof-of-Concept demonstrating intelligent AI routing and product thinking.**
 
 [![Dashboard](https://img.shields.io/badge/Dashboard-Live-blue)](https://justask-dashboard.vercel.app/)
 
@@ -47,7 +47,7 @@ JustAsk eliminates this complexity through intelligent multi-provider routing:
 **For Competitive Positioning:**
 - Abstracts away the "which model should I use?" decision entirely
 - Automatically adapts as the AI landscape evolves
-- Privacy-first design with no data collection or cloud storage
+- No accounts; chat history stays on the device
 
 ---
 
@@ -59,7 +59,7 @@ JustAsk eliminates this complexity through intelligent multi-provider routing:
 |----------|-----------|-----------------|
 | Multi-provider routing | No single provider dependency | 99%+ availability through cascade failover |
 | 37-stage ETL pipeline | Each provider returns incompatible formats | Single source of truth for 50+ models |
-| Privacy-first architecture | All data stored locally on device | Zero compliance burden, user trust |
+| On-device history | Chat history and cache stay on the device; server stores no questions or IP addresses | Smaller data footprint (questions still go to third-party AI providers) |
 | 5-factor scoring algorithm | Balance quality, speed, availability | Optimal model selection in 5-6ms |
 | Free-tier only | Validate pattern before investing | Minimal infrastructure cost |
 
@@ -70,7 +70,7 @@ JustAsk eliminates this complexity through intelligent multi-provider routing:
 
 **User-Centric Choices:**
 - Every response shows which LLM answered, response time, and whether it was cached—full transparency
-- 7-day local cache balances performance with privacy—no permanent storage
+- 7-day local answer cache for speed; chat history stays on the device until the user clears it
 - API keys stored server-side in Supabase Vault—users never see or manage credentials
 
 ---
@@ -83,7 +83,7 @@ JustAsk eliminates this complexity through intelligent multi-provider routing:
 - **Offline-First Design** — Local queue with automatic sync when connection restored
 - **Real-Time Benchmarks** — Integration with Artificial Analysis Intelligence Index for performance data
 - **Change Visibility** — Dashboard tracking model additions, deprecations, and rate limit updates
-- **Privacy-First Architecture** — No history storage, no tracking, no cloud sync
+- **On-Device History** — No server-side history or IP logging; no cloud sync
 - **Rapid Prototyping** — Complete platform built and deployed using vibe coding methodology
 
 ---

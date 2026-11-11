@@ -66,9 +66,14 @@ const SyncManager = {
           console.error('❌ Sync batch failed:', error.message || error);
           // 429 = our own rate limit / sync guard: the server did no work, so
           // no attempt is consumed.
+          // 451 = region block: permanent, so fail the items now (no retries).
           if (error.status !== 429) {
             for (const q of chunk) {
-              await Database.recordSyncFailure(q.id, error.message || 'Sync request failed');
+              await Database.recordSyncFailure(
+                q.id,
+                error.message || 'Sync request failed',
+                error.status === 451
+              );
             }
           }
           aborted = true;

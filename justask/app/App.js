@@ -8,6 +8,7 @@ import store from './src/store';
 import HomeScreen from './src/screens/HomeScreen';
 import SettingsScreen from './src/screens/SettingsScreen';
 import { ThemeProvider } from './src/theme/ThemeContext';
+import AgeGate from './src/components/AgeGate';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,6 +16,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <ThemeProvider>
+        <AgeGate>
         <NavigationContainer>
         <Tab.Navigator
           screenOptions={({ route }) => ({
@@ -64,6 +66,7 @@ export default function App() {
           />
         </Tab.Navigator>
         </NavigationContainer>
+        </AgeGate>
       </ThemeProvider>
     </Provider>
   );
