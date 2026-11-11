@@ -52,11 +52,12 @@ const APIClient = {
 
   /**
    * Health check endpoint
+   * @param {number} [timeoutMs] - override the default timeout (used to wait for a cold start)
    * @returns {Promise<{status}>}
    */
-  health: async () => {
+  health: async (timeoutMs) => {
     try {
-      const response = await client.get('/api/health');
+      const response = await client.get('/api/health', timeoutMs ? { timeout: timeoutMs } : undefined);
       return response.data;
     } catch (error) {
       throw handleError(error);
@@ -96,7 +97,7 @@ function handleError(error) {
     console.log('Request error details:', errorDetails);
 
     if (error.code === 'ECONNABORTED') {
-      return wrap(`Timeout after ${TIMEOUT}ms. Backend may be starting up (Render cold start). Please try again.`, { isNetworkError: true });
+      return wrap(`Timeout after ${TIMEOUT}ms. Backend may be starting up (Render cold start). Please try again.`, { isNetworkError: true, code: error.code });
     } else if (error.code === 'ECONNREFUSED') {
       return wrap(`Cannot reach ${BACKEND_URL}. Check network connection.`, { isNetworkError: true });
     } else if (error.code === 'NETWORK_ERROR' || error.code === 'ERR_NETWORK') {

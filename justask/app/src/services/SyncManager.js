@@ -1,5 +1,6 @@
 import NetInfo from '@react-native-community/netinfo';
 import APIClient from './APIClient';
+import ServerWake from './ServerWake';
 import Database from './Database';
 import store from '../store';
 import { addMessage, updateMessage } from '../store/querySlice';
@@ -44,6 +45,12 @@ const SyncManager = {
       if (pending.length === 0) {
         console.log('✅ No pending queries to sync');
         return true;
+      }
+
+      // Do not spend sync attempts on a sleeping server: wait for it to wake
+      if (!(await ServerWake.ensureAwake())) {
+        console.log('❌ Server not awake, sync deferred');
+        return false;
       }
 
       console.log(`🔄 Syncing ${pending.length} pending queries...`);
