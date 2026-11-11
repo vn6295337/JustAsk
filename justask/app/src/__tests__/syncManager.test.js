@@ -109,4 +109,14 @@ describe('SyncManager', () => {
     await SyncManager.syncPending();
     expect((await Database.getPendingQueries())[0].attempts).toBe(0);
   });
+
+  test('451 region block fails queued items immediately (no retries)', async () => {
+    await Database.queueQuery('q1');
+    await Database.queueQuery('q2');
+    APIClient.syncOfflineQueries.mockRejectedValue(
+      Object.assign(new Error('region'), { status: 451, permanent: true })
+    );
+    await SyncManager.syncPending();
+    expect(await Database.getPendingQueries()).toHaveLength(0);
+  });
 });

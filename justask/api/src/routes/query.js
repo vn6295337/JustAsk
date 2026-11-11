@@ -4,6 +4,7 @@ import { classifyQuery } from '../classification/classifier.js';
 import { executeWithRankedFallback } from '../failover/failover.js';
 import { ipRateLimit } from '../rate-limiting/limiter.js';
 import { requireToken } from '../middleware/auth.js';
+import { blockRestrictedRegions } from '../middleware/regionBlock.js';
 import config from '../config.js';
 
 // Only one /queue/sync may run at a time (protects provider quota on a
@@ -23,6 +24,7 @@ const router = express.Router();
  */
 router.post(
   '/query',
+  blockRestrictedRegions,
   requireToken,
   ipRateLimit('query', config.inboundLimits.query),
   validateQuery, async (req, res) => {
@@ -82,6 +84,7 @@ router.post(
  */
 router.post(
   '/queue/sync',
+  blockRestrictedRegions,
   requireToken,
   ipRateLimit('sync', config.inboundLimits.sync),
   validateBatchQueries,

@@ -4,6 +4,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import config from './config.js';
 import queryRoutes from './routes/query.js';
+import { loadGeoDb } from './middleware/regionBlock.js';
 
 const app = express();
 
@@ -35,8 +36,9 @@ app.use(
   })
 );
 
-// HTTP logging
-app.use(morgan('combined'));
+// HTTP logging. 'tiny' omits the client IP address and user agent:
+// the privacy notice states the server does not store IP addresses.
+app.use(morgan('tiny'));
 
 // JSON body parser
 // 20 queries x 2000 chars (worst case JSON-escaped) fits well under 256kb
@@ -84,6 +86,16 @@ app.use((err, req, res, next) => {
 // ============================================
 // Server Startup
 // ============================================
+
+// Region block needs the geo database. Fail closed: refuse to start without it,
+// so Render keeps the previous deploy instead of serving blocked regions.
+try {
+  await loadGeoDb();
+  console.log('[RegionBlock] Geo database loaded');
+} catch (error) {
+  console.error('[RegionBlock] FATAL: geo database failed to load:', error.message);
+  process.exit(1);
+}
 
 const PORT = config.port;
 const NODE_ENV = config.nodeEnv;

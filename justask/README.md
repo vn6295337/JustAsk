@@ -2,7 +2,7 @@
 
 **Version:** 1.0.0
 
-Mobile app and API backend for intelligent LLM query routing. Automatically routes user queries to the best free LLM provider (Gemini, Groq, OpenRouter) with built-in failover, offline queueing, and privacy-first design.
+Mobile app and API backend for intelligent LLM query routing. Automatically routes user queries to the best free LLM provider (Gemini, Groq, OpenRouter) with built-in failover and offline queueing.
 
 ---
 
@@ -26,7 +26,7 @@ justask/
 │  Android App (React Native + Expo)                          │
 │  ├── Search UI + Response Display                           │
 │  ├── Offline Queue (SQLite)                                 │
-│  └── 7-day Response Cache (Privacy-focused)                 │
+│  └── 7-day Response Cache                                   │
 │           ↓ [HTTP / Offline Detection]                      │
 │  Backend API (Node.js + Express on Render)                  │
 │  ├── Query Classification (Keyword-based)                   │
@@ -51,7 +51,7 @@ justask/
 | **Intelligent Classification** | Keyword-based query routing (instant, no LLM call overhead) |
 | **Multi-Provider Failover** | Automatic fallback chain ensures reliability |
 | **Offline-First** | Queue queries locally, sync when online |
-| **Privacy-Focused** | No history, temporary cache only (7-day TTL), local storage only |
+| **On-Device Data** | Chat history and 7-day cache on the device; server stores no questions or IP addresses |
 | **Zero Configuration** | No API keys needed in app or local config |
 | **Free to Use** | All free-tier LLM providers, free backend hosting (Render) |
 
@@ -108,19 +108,26 @@ NODE_ENV=development
 
 ## Data Privacy
 
-**What we do:**
-- Store queries + responses locally on device only
-- Cache responses for 7 days (performance + privacy balance)
-- Manage API keys server-side (Supabase Vault)
-- No user authentication required
-- No cloud sync
+This section matches the in-app Privacy and Terms screen (`app/src/legal/privacyText.js`). Keep them in sync.
 
-**What we don't do:**
-- Store query history
-- Track user behavior
-- Collect personal data
-- Expose API keys in APK
-- Require user accounts
+**Who can use JustAsk**
+- You must be 18 or older (in-app age check).
+- JustAsk is not available in the EU, EEA, UK or Switzerland. The API returns HTTP 451 for those regions.
+
+**Where questions go**
+- The server sends each question to an AI provider: Google (Gemini), Groq, or OpenRouter. OpenRouter passes it on to one of several AI providers.
+- Google may use questions to improve its products, and Google staff may read them (Gemini API free tier).
+- The other providers may keep questions for a limited time, and some may use them to train AI. OpenRouter requests set `data_collection: "deny"`.
+- Users are told not to type personal or private information.
+
+**What we keep**
+- The server does not save questions, answers or IP addresses. Request logs omit the client IP. The hosting provider (Render) may keep basic technical logs.
+- Chat history is stored only on the device, until the user deletes it in Settings.
+- Cached answers are stored on the device for 7 days, then deleted.
+- API keys are managed server-side; none ship in the app.
+
+**Credits**
+- IP Geolocation by [DB-IP](https://db-ip.com), licensed under CC BY 4.0.
 
 ---
 

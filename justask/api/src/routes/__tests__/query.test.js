@@ -18,6 +18,10 @@ jest.unstable_mockModule('../../utils/supabase.js', () => ({
 const { default: queryRoutes } = await import('../query.js');
 const { default: config } = await import('../../config.js');
 const { ipRateLimit } = await import('../../rate-limiting/limiter.js');
+const { setGeoReader } = await import('../../middleware/regionBlock.js');
+
+// Region block: every address resolves to an unknown country (allowed)
+setGeoReader({ get: () => null });
 
 const buildApp = () => {
   const a = express();

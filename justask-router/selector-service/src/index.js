@@ -25,7 +25,8 @@ const startTime = Date.now();
 app.use(helmet());
 app.use(cors(buildCorsOptions()));
 app.use(express.json());
-app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
+// No client IP or user agent in logs ('tiny' omits both)
+app.use(morgan(process.env.NODE_ENV === 'production' ? 'tiny' : 'dev'));
 
 // Health check endpoint (minimal: no per-model limits/usage or cache keys)
 app.get('/health', (req, res) => {

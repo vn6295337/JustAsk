@@ -40,6 +40,9 @@ export const callOpenRouter = async (query, enableWebSearch = false, queryType =
       ],
       temperature: 0.7,
       max_tokens: 2048,
+      // Route only to providers that do not store or train on prompts.
+      // A model with no matching endpoint errors and failover moves on.
+      provider: { data_collection: 'deny' },
     };
 
     // Add browser search tool for GPT-OSS models (news and financial queries)
