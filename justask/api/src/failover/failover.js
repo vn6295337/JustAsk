@@ -4,6 +4,7 @@ import { callOpenRouter } from '../providers/openrouter.js';
 import { getModelFallbackChain } from '../routing/rankedModelSelector.js';
 import config from '../config.js';
 import { checkRateLimit } from '../rate-limiting/limiter.js';
+import { isExhausted, markExhausted } from '../rate-limiting/exhaustion.js';
 import { ProviderError, normalizeStatus } from '../utils/errors.js';
 
 /**
@@ -51,6 +52,18 @@ export const executeWithRankedFallback = async (query, queryType = null) => {
 
     for (let i = 0; i < modelChain.length; i++) {
       const model = modelChain[i];
+      // Fallback entries let the provider pick its default model
+      const effectiveModel = model.fallback ? null : model.modelName;
+
+      // Skip a model that recently answered "limit reached", until it resets
+      if (isExhausted(model.provider, effectiveModel)) {
+        console.log(`[RankedFallback] Skipping rank ${model.rank} (${model.provider}): limit reached earlier`);
+        lastStatus = 429;
+        if (i < modelChain.length - 1) continue;
+        const err = new Error('All ranked models are out of quota');
+        err.status = 429;
+        throw err;
+      }
 
       try {
         console.log(`[RankedFallback] Attempting rank ${model.rank}: ${model.provider} - ${model.modelName}`);
@@ -58,7 +71,9 @@ export const executeWithRankedFallback = async (query, queryType = null) => {
         // Outbound per-provider limiter: skip a provider that is out of quota
         const rl = checkRateLimit(model.provider);
         if (!rl.allowed && rl.retryAfter) {
-          throw new ProviderError(model.provider, 'Local provider rate limit reached', 429);
+          const localErr = new ProviderError(model.provider, 'Local provider rate limit reached', 429);
+          localErr.local = true; // our own per-minute limiter, not the provider
+          throw localErr;
         }
 
         // Hardcoded fallback entries carry unverified model names: let the
@@ -68,7 +83,7 @@ export const executeWithRankedFallback = async (query, queryType = null) => {
           query,
           isNewsQuery,
           queryType,
-          model.fallback ? null : model.modelName
+          effectiveModel
         );
 
         console.log(`[RankedFallback] Success with rank ${model.rank}`);
@@ -93,6 +108,10 @@ export const executeWithRankedFallback = async (query, queryType = null) => {
 
         // Check error type
         if (error.status === 429) {
+          if (!error.local) {
+            const ms = markExhausted(model.provider, effectiveModel, error.retryAfterMs);
+            console.log(`[RankedFallback] Limit reached; skipping this model for ${Math.round(ms / 1000)}s`);
+          }
           console.log(`[RankedFallback] Rate limited, trying next model`);
         } else if (error.status >= 500) {
           console.log(`[RankedFallback] Server error, trying next model`);

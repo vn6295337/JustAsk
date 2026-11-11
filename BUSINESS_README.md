@@ -26,7 +26,7 @@ JustAsk eliminates this complexity through intelligent multi-provider routing:
 
 - **Zero Friction Access** — Open the app, type a question, get an answer. No signup, no API keys, no provider selection. The complexity is invisible to users.
 
-- **Intelligent Routing** — System automatically selects the best available model using a 5-factor scoring algorithm (Intelligence Index, Latency, Rate Limit Headroom, Geography, License). Returns optimal model with fallback chain.
+- **Model Ranking** — Free models are ranked by a 4-factor score (Intelligence Index, free-limit room, geography, license). The ranking is rebuilt and approved by hand; the API tries models in rank order with a fallback chain.
 
 - **Provider Abstraction** — When a better model launches on any provider, it automatically becomes available. No code changes. No migration project. The intelligent selector routes to it based on merit.
 
@@ -60,7 +60,7 @@ JustAsk eliminates this complexity through intelligent multi-provider routing:
 | Multi-provider routing | No single provider dependency | 99%+ availability through cascade failover |
 | 37-stage ETL pipeline | Each provider returns incompatible formats | Single source of truth for 50+ models |
 | On-device history | Chat history and cache stay on the device; server stores no questions or IP addresses | Smaller data footprint (questions still go to third-party AI providers) |
-| 5-factor scoring algorithm | Balance quality, speed, availability | Optimal model selection in 5-6ms |
+| 4-factor ranking, approved by hand | Balance quality and free-limit room; a human reviews each ranking change | Predictable routing; no per-request scoring cost |
 | Free-tier only | Validate pattern before investing | Minimal infrastructure cost |
 
 **Architectural Trade-offs Considered:**
@@ -78,7 +78,7 @@ JustAsk eliminates this complexity through intelligent multi-provider routing:
 ## PoC Capabilities
 
 - **Unified Data Integration** — 37-stage ETL pipeline aggregating model data from 3 providers into consistent catalog
-- **Intelligent Model Selection** — Multi-factor scoring with real-time rate limit tracking and automatic failover
+- **Model Selection** — 4-factor ranking with automatic failover; models that report "limit reached" are skipped until their limit resets
 - **Zero-Config Mobile Access** — React Native app requiring no signup, API keys, or configuration. Three-step UX: type question, tap send, get answer
 - **Offline-First Design** — Local queue with automatic sync when connection restored
 - **Real-Time Benchmarks** — Integration with Artificial Analysis Intelligence Index for performance data

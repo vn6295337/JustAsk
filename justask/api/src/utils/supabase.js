@@ -3,7 +3,7 @@ import config from '../config.js';
 
 // Lazily initialize Supabase client (createClient throws on undefined URL/key)
 let supabase = null;
-const getSupabase = () => {
+export const getSupabase = () => {
   if (!supabase) {
     supabase = createClient(config.supabase.url, config.supabase.key);
   }

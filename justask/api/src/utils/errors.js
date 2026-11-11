@@ -32,11 +32,39 @@ export const normalizeStatus = (error) => {
 };
 
 /**
+ * How long a provider asked us to wait, in ms, from its response headers:
+ * Retry-After (seconds or HTTP date), or X-RateLimit-Reset (epoch ms or s,
+ * as sent by OpenRouter). Returns null if neither is present or parseable.
+ */
+export const retryAfterMsFrom = (error, now = Date.now()) => {
+  const h = error?.response?.headers || error?.headers;
+  if (!h) return null;
+  const get = (k) => (typeof h.get === 'function' ? h.get(k) : h[k] ?? h[k.toLowerCase()]);
+
+  const ra = get('retry-after');
+  if (ra != null && ra !== '') {
+    const secs = Number(ra);
+    if (Number.isFinite(secs) && secs >= 0) return secs * 1000;
+    const date = Date.parse(ra);
+    if (!Number.isNaN(date)) return Math.max(0, date - now);
+  }
+
+  const reset = Number(get('x-ratelimit-reset'));
+  if (Number.isFinite(reset) && reset > 0) {
+    if (reset > 1e12) return Math.max(0, reset - now); // epoch ms
+    if (reset > 1e9) return Math.max(0, reset * 1000 - now); // epoch s
+  }
+  return null;
+};
+
+/**
  * Wrap any upstream error as a ProviderError.
  */
 export const toProviderError = (provider, error) => {
   if (error instanceof ProviderError) return error;
-  return new ProviderError(provider, error?.message, normalizeStatus(error));
+  const wrapped = new ProviderError(provider, error?.message, normalizeStatus(error));
+  wrapped.retryAfterMs = retryAfterMsFrom(error);
+  return wrapped;
 };
 
 /**
