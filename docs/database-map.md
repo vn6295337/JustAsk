@@ -81,11 +81,9 @@ Supabase project `askme` (`atilxlecbaqcksnrgzav`), Mumbai region. Updated 2026-1
 | Ranking scripts (manual) | Service role key | Tables 22, 23 |
 | Nightly analytics job | `postgres` (via `pg_cron`) | Table 30 |
 
-## Compatibility Views (Temporary)
+## Old Names
 
-- The old names still work as views in `public` and `ims`: `public.working_version`, `public.ai_models_main`, `ims."10_model_aa_mapping"` and so on. (`asa.analysis_cache` and the `asa` schema were dropped.)
-- Each view points to its new table and applies the caller's own permissions.
-- They will be dropped once all code uses the new names. Do not use them in new code.
+- The pre-2026-11 names (`public.working_version`, `public.ai_models_main`, `ims."10_model_aa_mapping"` and so on) no longer exist. Mapping: [database/applied/2026-11-10_04_justask-schema.sql](../database/applied/2026-11-10_04_justask-schema.sql).
 
 ## Supabase-Managed Schemas
 

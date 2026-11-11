@@ -17,13 +17,15 @@ Record of changes applied to the Supabase project `askme` (`atilxlecbaqcksnrgzav
 | `applied/2026-11-10_05_analytics-functions-new-names.sql` | Analytics functions use the new table names |
 | `applied/2026-11-10_06_drop-asa-view.sql` | Instant SWOT Agent cache left off; `asa.analysis_cache` view and `asa` schema dropped |
 
+## 2026-11-11
+
+| File | Change |
+|---|---|
+| `applied/2026-11-11_07_drop-compatibility-views.sql` | Remaining 17 compatibility views and the empty `ims` schema dropped; API exposes `public, justask` |
+
 ## Not SQL
 
 - Deleted all 8 Edge Functions (`get-api-key` gave provider keys to anyone with the public anon key). Backup: `~/backups/supabase-askme-edge-functions-20261110/` on the owner's machine.
 - Deleted the `GEMINI_API_KEY`, `GROQ_API_KEY` and `OPENROUTER_API_KEY` Edge Function secrets. The provider keys were rotated.
 - New random password for `pipeline_writer`, stored only in the GitHub secret `PIPELINE_SUPABASE_URL`.
-- API setting: exposed schemas are `public, ims, justask`.
-
-## Still to do
-
-- Drop the compatibility views in `public` and `ims` and the empty `ims` schema once the router (Render) runs the new code, then remove `ims` from the exposed schemas.
+- API setting: exposed schemas are `public, justask` (since 2026-11-11).
