@@ -12,9 +12,9 @@ const supabase = createClient(
 );
 
 async function findModelsWithMetrics() {
-  // Get all models from 10_free-models-staging
+  // Get all models from 11_free-models-live
   const { data: models } = await supabase
-    .schema('justask').from('10_free-models-staging')
+    .schema('justask').from('11_free-models-live')
     .select('human_readable_name, inference_provider, provider_slug');
 
   // Get model-aa mapping

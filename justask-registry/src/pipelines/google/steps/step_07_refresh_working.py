@@ -187,33 +187,14 @@ def main():
             logger.error("❌ REFRESH FAILED: No valid models to insert")
             return False
 
-        # Prepare rate limit records (written in the same transaction)
-        rate_limit_records = []
-        try:
-            for model in prepared_models:
-                parsed = parse_rate_limits(model.get('rate_limits', ''), INFERENCE_PROVIDER)
-                rate_limit_records.append({
-                    'human_readable_name': model.get('human_readable_name'),
-                    'inference_provider': INFERENCE_PROVIDER,
-                    'rpm': parsed['rpm'],
-                    'rpd': parsed['rpd'],
-                    'tpm': parsed['tpm'],
-                    'tpd': parsed['tpd'],
-                    'raw_string': model.get('rate_limits', ''),
-                    'parseable': parsed['parseable']
-                })
-        except Exception as e:
-            logger.warning(f"⚠️ Rate limit parsing failed, existing rate limits left untouched: {str(e)}")
-            rate_limit_records = []
+        # Rate limits (22) are published with the live list in the deploy step, not from staging.
 
-        # Atomic: delete + insert + rate limits + verify in ONE transaction.
+        # Atomic: delete + insert + verify in ONE transaction.
         # Any failure rolls back, leaving the previous rows intact.
         logger.info(f"📤 Atomically replacing {initial_count} -> {len(prepared_models)} {INFERENCE_PROVIDER} rows in {TABLE_NAME}...")
         if not replace_provider_records_atomic(
             conn, TABLE_NAME, INFERENCE_PROVIDER, prepared_models,
             tolerance=0,
-            rate_limit_table='justask."22_router-provider-rate-limits"',
-            rate_limit_records=rate_limit_records,
         ):
             logger.error("❌ REFRESH FAILED: transaction rolled back, original data untouched")
             return False
@@ -232,7 +213,6 @@ def main():
         logger.info(f"   • Records deleted: {initial_count}")
         logger.info(f"   • New records inserted: {len(prepared_models)}")
         logger.info(f"   • Final record count: {final_count}")
-        logger.info(f"   • Rate limits table: Updated")
         logger.info(f"   • Model-AA mappings: Refreshed for {INFERENCE_PROVIDER}")
         logger.info(f"   • Processing time: {duration}")
         logger.info(f"   • Report file: {LOG_FILE}")

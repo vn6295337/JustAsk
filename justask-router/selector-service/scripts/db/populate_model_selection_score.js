@@ -2,7 +2,7 @@
  * Populate Model Selection Score Table
  *
  * Script to populate justask."23_router-model-ranking" with consolidated data
- * from 10_free-models-staging, model_aa_mapping, aa_performance_metrics, and rate_limits
+ * from 11_free-models-live, model_aa_mapping, aa_performance_metrics, and rate_limits
  *
  * Only includes models that exist in justask."21_router-model-benchmark-map" (i.e., have AA metrics)
  *
@@ -166,18 +166,18 @@ async function populateModelSelectionScore() {
 
     console.log(`✅ Found ${mappings.length} mapped models\n`);
 
-    // Step 2: Fetch 10_free-models-staging data
-    console.log('📊 Fetching model details from 10_free-models-staging...');
+    // Step 2: Fetch 11_free-models-live data
+    console.log('📊 Fetching model details from 11_free-models-live...');
     const { data: workingModels, error: workingError } = await supabase
-      .schema('justask').from('10_free-models-staging')
+      .schema('justask').from('11_free-models-live')
       .select('provider_slug, human_readable_name, model_provider, inference_provider, model_provider_country, license_name');
 
     if (workingError) {
-      throw new Error(`Failed to fetch 10_free-models-staging: ${workingError.message}`);
+      throw new Error(`Failed to fetch 11_free-models-live: ${workingError.message}`);
     }
 
     // Create lookup map by BOTH original and normalized provider_slug
-    // This handles mismatch between normalized slugs in mapping table and original slugs in 10_free-models-staging
+    // This handles mismatch between normalized slugs in mapping table and original slugs in 11_free-models-live
     const workingMap = {};
     workingModels.forEach(m => {
       // Store by original slug
@@ -190,7 +190,7 @@ async function populateModelSelectionScore() {
       }
     });
 
-    console.log(`✅ Fetched ${workingModels.length} models from 10_free-models-staging\n`);
+    console.log(`✅ Fetched ${workingModels.length} models from 11_free-models-live\n`);
 
     // Step 3: Fetch aa_performance_metrics
     console.log('📊 Fetching performance metrics from justask."20_router-benchmark-scores"...');
@@ -248,7 +248,7 @@ async function populateModelSelectionScore() {
 
       // Skip if missing critical data
       if (!workingData) {
-        console.warn(`⚠️  Skipping ${mapping.inference_provider}:${providerSlug}: Not found in 10_free-models-staging`);
+        console.warn(`⚠️  Skipping ${mapping.inference_provider}:${providerSlug}: Not found in 11_free-models-live`);
         skippedCount++;
         skippedModels.push({
           provider: mapping.inference_provider,
@@ -336,7 +336,7 @@ async function populateModelSelectionScore() {
     console.log('─'.repeat(120));
     console.log(`Direct matches:      ${matchStats.directMatch} (provider_slug exact match)`);
     console.log(`Normalized matches:  ${matchStats.normalizedMatch} (required normalization)`);
-    console.log(`Failed matches:      ${matchStats.noMatch} (not found in 10_free-models-staging)`);
+    console.log(`Failed matches:      ${matchStats.noMatch} (not found in 11_free-models-live)`);
     console.log(`Total processed:     ${mappings.length}`);
     console.log(`Success rate:        ${((matchStats.directMatch + matchStats.normalizedMatch) / mappings.length * 100).toFixed(1)}%\n`);
 
@@ -348,7 +348,7 @@ async function populateModelSelectionScore() {
         console.log(`   ${m.provider}:${m.slug} (aa_slug: ${m.aa_slug})`);
         // Suggest possible original slug
         const denormalized = m.slug.replace(/-(\d)/g, '.$1'); // Try converting hyphens back to periods for version numbers
-        console.log(`      → Try checking 10_free-models-staging for: ${denormalized}`);
+        console.log(`      → Try checking 11_free-models-live for: ${denormalized}`);
       });
       console.log();
     }

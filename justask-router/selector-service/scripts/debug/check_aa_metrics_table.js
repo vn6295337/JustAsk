@@ -50,12 +50,10 @@ async function checkTable() {
     // Statistics
     const withIntelligence = metrics.filter(m => m.intelligence_index !== null);
     const withCoding = metrics.filter(m => m.coding_index !== null);
-    const withMath = metrics.filter(m => m.math_index !== null);
 
     console.log('Data completeness:');
     console.log(`  Intelligence Index: ${withIntelligence.length}/${metrics.length} (${(withIntelligence.length/metrics.length*100).toFixed(1)}%)`);
     console.log(`  Coding Index: ${withCoding.length}/${metrics.length} (${(withCoding.length/metrics.length*100).toFixed(1)}%)`);
-    console.log(`  Math Index: ${withMath.length}/${metrics.length} (${(withMath.length/metrics.length*100).toFixed(1)}%)`);
     console.log();
 
     // Check if there's a timestamp field

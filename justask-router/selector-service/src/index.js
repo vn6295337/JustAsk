@@ -64,7 +64,7 @@ app.get('/models', async (req, res) => {
 });
 
 // MVP: Get best model by Intelligence Index
-// Uses the same joined data as /select-model (justask."10_free-models-staging" ->
+// Uses the same joined data as /select-model (justask."11_free-models-live" ->
 // justask."21_router-model-benchmark-map" -> justask."20_router-benchmark-scores") via fetchLatestModels.
 app.get('/best-model', async (req, res) => {
   try {
@@ -113,8 +113,7 @@ app.get('/best-model', async (req, res) => {
         modelSlug: metrics.aa_slug,
         humanReadableName: modelData.human_readable_name,
         intelligenceIndex: metrics.intelligence_index,
-        codingIndex: metrics.coding_index,
-        mathIndex: metrics.math_index
+        codingIndex: metrics.coding_index
       },
       selectionCriteria: {
         method: 'intelligence_index',

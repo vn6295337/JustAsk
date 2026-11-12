@@ -1,6 +1,6 @@
 # JustAsk Database Map
 
-Supabase project `askme` (`atilxlecbaqcksnrgzav`), Mumbai region. Updated 2026-11-10.
+Supabase project `askme` (`atilxlecbaqcksnrgzav`), Mumbai region. Updated 2026-11-11.
 
 - All JustAsk tables live in schema `justask`.
 - Table names start with a digit and contain hyphens, so SQL must quote them: `justask."11_free-models-live"`.
@@ -10,9 +10,11 @@ Supabase project `askme` (`atilxlecbaqcksnrgzav`), Mumbai region. Updated 2026-1
 ## Data Flow
 
 - Registry pipelines (CI) write `10_free-models-staging`; the registry deploy copies it to `11_free-models-live`.
+- Rule: `10` is incoming only (read only by the CI compare and deploy steps); `11` is outgoing only (written only by the deploy step, from `10`). Both have the same columns.
+- The deploy step publishes only if the publish gate passes: same columns in `10` and `11`; no drop of more than 20% in a provider's model count (override: workflow input `allow_large_drop`); no empty `inference_provider`, `provider_slug`, `human_readable_name` or `rate_limits`; no duplicate `provider_slug`. Each result is written to the GitHub Actions run summary.
 - The dashboard reads `11_free-models-live`.
 - The nightly benchmark refresh (CI) writes `20_router-benchmark-scores`.
-- The registry deploy writes `21_router-model-benchmark-map`; the registry refresh writes `22_router-provider-rate-limits`.
+- The registry deploy writes `22_router-provider-rate-limits` in the same transaction as `11`, then builds `21_router-model-benchmark-map` from `11`.
 - The ranking script (manual) reads tables 10, 20, 21 and 22 and writes `23_router-model-ranking`.
 - The router serves that ranking to the API through `/best-models`.
 - The nightly database job reads `11_free-models-live` and writes `30_analytics-daily-model-counts`, which the dashboard reads.
@@ -21,16 +23,16 @@ Supabase project `askme` (`atilxlecbaqcksnrgzav`), Mumbai region. Updated 2026-1
 
 | Table | Role | Written by | Read by |
 |---|---|---|---|
-| `10_free-models-staging` | Model list before publishing | Registry refresh step (CI) | Router, registry compare steps |
-| `11_free-models-live` | Published model list | Registry deploy step (CI) | Dashboard, nightly analytics job |
+| `10_free-models-staging` | Model list before publishing (incoming only) | Registry refresh step (CI) | Registry compare and deploy steps only |
+| `11_free-models-live` | Published model list (outgoing only) | Registry deploy step (CI), copied from `10` | Dashboard, router, ranking script, mapping refresh, nightly analytics job |
 
 ## 2. Router
 
 | Table | Role | Written by | Read by |
 |---|---|---|---|
-| `20_router-benchmark-scores` | Model quality scores from Artificial Analysis | Nightly benchmark refresh (CI) | Router, ranking script |
+| `20_router-benchmark-scores` | Model scores, prices and speed from the Artificial Analysis Free API, one column per Free-tier field | Nightly benchmark refresh (CI) | Router, ranking script, registry mapping |
 | `21_router-model-benchmark-map` | Links each model to its Artificial Analysis entry | Registry deploy step (CI) | Router, ranking script |
-| `22_router-provider-rate-limits` | Provider rate limits | Registry refresh step (CI), `populate_rate_limits.js` (manual) | Router, ranking script |
+| `22_router-provider-rate-limits` | Provider rate limits | Registry deploy step (CI), `populate_rate_limits.js` (manual) | Router, ranking script |
 | `23_router-model-ranking` | Final model ranking | `populate_model_selection_score.js` (manual) | Router `/best-models` |
 
 ## 3. Analytics

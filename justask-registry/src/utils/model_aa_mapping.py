@@ -4,10 +4,10 @@ Shared Model-to-AA Mapping Utilities
 =====================================
 
 Single source of truth for refreshing justask."21_router-model-benchmark-map" table.
-Used by all pipeline 10_free-models-staging refresh scripts.
+Used by the deploy workflows after publishing (reads the published list).
 
 Purpose:
-- Maps (inference_provider, provider_slug) from 10_free-models-staging to aa_slug
+- Maps (inference_provider, provider_slug) from 11_free-models-live to aa_slug
 - Uses UPSERT pattern with ON CONFLICT for safe, idempotent updates
 - Provides enhanced error reporting for unmatched models
 
@@ -46,7 +46,7 @@ def normalize_slug(slug: str) -> str:
         "gemma-3-12b-it" -> "gemma-3-12b"
 
     Args:
-        slug: Original provider_slug from 10_free-models-staging
+        slug: Original provider_slug from 11_free-models-live
 
     Returns:
         Normalized slug with special characters converted to hyphens
@@ -133,7 +133,7 @@ def fetch_working_version_models(
     inference_provider: Optional[str] = None
 ) -> List[Tuple[str, str]]:
     """
-    Fetch all unique (inference_provider, provider_slug) pairs from 10_free-models-staging.
+    Fetch all unique (inference_provider, provider_slug) pairs from 11_free-models-live.
 
     Args:
         conn: Database connection
@@ -149,7 +149,7 @@ def fetch_working_version_models(
                     SELECT DISTINCT
                         inference_provider,
                         provider_slug
-                    FROM justask."10_free-models-staging"
+                    FROM justask."11_free-models-live"
                     WHERE provider_slug IS NOT NULL
                       AND provider_slug != ''
                       AND inference_provider = %s
@@ -160,7 +160,7 @@ def fetch_working_version_models(
                     SELECT DISTINCT
                         inference_provider,
                         provider_slug
-                    FROM justask."10_free-models-staging"
+                    FROM justask."11_free-models-live"
                     WHERE provider_slug IS NOT NULL
                       AND provider_slug != ''
                     ORDER BY inference_provider, provider_slug
@@ -169,7 +169,7 @@ def fetch_working_version_models(
             models = cur.fetchall()
             return models
     except Exception as e:
-        print(f"ERROR: Failed to fetch 10_free-models-staging models: {e}")
+        print(f"ERROR: Failed to fetch 11_free-models-live models: {e}")
         return []
 
 
@@ -322,7 +322,7 @@ def create_mappings(
         log("UNMATCHED MODELS WITH NEAREST AA_SLUG CANDIDATES")
         log("⚠️" * 35)
         log("")
-        log("The following models from 10_free-models-staging could not be automatically")
+        log("The following models from 11_free-models-live could not be automatically")
         log("mapped to AA performance metrics. Review the nearest candidates below:")
         log("")
 
@@ -441,7 +441,7 @@ def write_comparison_report(
 
             f.write("UNMATCHED MODELS WITH NEAREST AA_SLUG CANDIDATES\n")
             f.write("=" * 120 + "\n\n")
-            f.write("The following models from 10_free-models-staging could not be automatically\n")
+            f.write("The following models from 11_free-models-live could not be automatically\n")
             f.write("mapped to AA performance metrics. Review the nearest candidates below:\n\n")
 
             # Table header
@@ -605,10 +605,10 @@ def refresh_model_aa_mapping(
     logger: Optional[logging.Logger] = None
 ) -> bool:
     """
-    Main entry point: Refresh justask."21_router-model-benchmark-map" table from 10_free-models-staging.
+    Main entry point: Refresh justask."21_router-model-benchmark-map" table from 11_free-models-live.
 
     This function:
-    1. Fetches models from 10_free-models-staging (optionally filtered by provider)
+    1. Fetches models from 11_free-models-live (optionally filtered by provider)
     2. Fetches AA performance slugs from justask."20_router-benchmark-scores"
     3. Matches provider models to AA slugs using smart matching
     4. Upserts mappings with ON CONFLICT handling
@@ -637,11 +637,11 @@ def refresh_model_aa_mapping(
         log(f"Started: {datetime.now().isoformat()}")
         log("")
 
-        # Step 1: Fetch models from 10_free-models-staging
-        log("📁 Fetching models from 10_free-models-staging...")
+        # Step 1: Fetch models from 11_free-models-live
+        log("📁 Fetching models from 11_free-models-live...")
         models = fetch_working_version_models(conn, inference_provider)
         if not models:
-            log("⚠️  No models found in 10_free-models-staging")
+            log("⚠️  No models found in 11_free-models-live")
             return False
         log(f"✅ Found {len(models)} unique models")
 

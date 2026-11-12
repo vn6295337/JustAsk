@@ -2,7 +2,7 @@
  * Populate Rate Limits Table
  *
  * One-time script to populate rate_limits table with normalized data
- * from 10_free-models-staging.rate_limits column for text-generation models
+ * from 11_free-models-live.rate_limits column for text-generation models
  *
  * Usage: node populate_rate_limits.js [--no-prune]
  * Requires SUPABASE_SERVICE_KEY. Run manually; do not add to CI.
@@ -33,10 +33,10 @@ async function populateRateLimits() {
   console.log('🚀 Starting rate limits population...\n');
 
   try {
-    // Step 1: Fetch text-generation models from 10_free-models-staging
-    console.log('📊 Fetching text-generation models from 10_free-models-staging...');
+    // Step 1: Fetch text-generation models from 11_free-models-live
+    console.log('📊 Fetching text-generation models from 11_free-models-live...');
     const { data: models, error: fetchError } = await supabase
-      .schema('justask').from('10_free-models-staging')
+      .schema('justask').from('11_free-models-live')
       .select('human_readable_name, inference_provider, rate_limits, output_modalities')
       .ilike('output_modalities', '%Text%')
       .not('output_modalities', 'ilike', '%Embedding%');
@@ -95,7 +95,7 @@ async function populateRateLimits() {
 
     console.log(`✅ Successfully populated ${inserted?.length || uniqueData.length} models\n`);
 
-    // Remove stale rows (models no longer in 10_free-models-staging)
+    // Remove stale rows (models no longer in 11_free-models-live)
     if (PRUNE && uniqueData.length > 0) {
       const keep = new Set(uniqueData.map(d => d.human_readable_name));
       const { data: existing, error: existingError } = await supabase
