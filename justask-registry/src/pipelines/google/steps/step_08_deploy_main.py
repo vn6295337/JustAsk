@@ -60,6 +60,13 @@ from src.utils import (
     load_staging_data,
     replace_provider_records_atomic,
 )
+from src.utils.publish_gate import (
+    check_column_parity,
+    check_rows,
+    large_drop_overridden,
+    write_publish_summary,
+)
+from src.utils.rate_limit_parser import build_rate_limit_records
 
 # Load environment variables
 try:
@@ -83,6 +90,7 @@ LOG_FILE = get_output_file_path("08_deploy_main_report.txt")
 # Database configuration
 STAGING_TABLE = 'justask."10_free-models-staging"'
 PRODUCTION_TABLE = 'justask."11_free-models-live"'
+RATE_LIMIT_TABLE = 'justask."22_router-provider-rate-limits"'
 INFERENCE_PROVIDER = "Google"
 
 # Setup logging
@@ -112,7 +120,7 @@ def prepare_data_for_production(staging_data: List[Dict[str, Any]]) -> List[Dict
 
     prepared_models = []
     auto_managed_fields = ['id', 'created_at', 'updated_at']
-    excluded_fields = ['provider_slug']  # Not in 11_free-models-live schema
+    excluded_fields = []  # 10 and 11 have the same columns (publish gate checks this)
 
     for model in staging_data:
         # Remove auto-managed fields and excluded fields
@@ -160,6 +168,7 @@ def main():
 
         if staging_count == 0:
             logger.error("❌ DEPLOYMENT FAILED: No Google data in staging table")
+            write_publish_summary(INFERENCE_PROVIDER, production_count, 0, False, ['no staged rows for this provider'])
             return False
 
         # Step 3: Load staging data
@@ -167,9 +176,24 @@ def main():
         staging_data = load_staging_data(conn, STAGING_TABLE, INFERENCE_PROVIDER)
         if not staging_data:
             logger.error("❌ DEPLOYMENT FAILED: Could not load staging data")
+            write_publish_summary(INFERENCE_PROVIDER, production_count, staging_count, False, ['could not load staged rows'])
             return False
 
         logger.info(f"✅ Loaded {len(staging_data)} Google records from staging")
+
+        # Publish gate (Option A): block unless columns match and the staged rows pass the checks
+        failures = check_column_parity(conn, STAGING_TABLE, PRODUCTION_TABLE)
+        failures += check_rows(staging_data, production_count)
+        overridden = large_drop_overridden(staging_data, production_count)
+        if failures:
+            for reason in failures:
+                logger.error(f"❌ PUBLISH BLOCKED: {reason}")
+            write_publish_summary(INFERENCE_PROVIDER, production_count, len(staging_data), False, failures)
+            return False
+        if overridden:
+            logger.warning("⚠️ LARGE-DROP OVERRIDE USED: publishing a model-count drop above the limit "
+                           f"({production_count} -> {len(staging_data)})")
+        logger.info("✅ Publish gate passed")
 
         # Step 4: Prepare data for production
         prepared_data = prepare_data_for_production(staging_data)
@@ -180,12 +204,17 @@ def main():
         # Atomic: delete + insert + verify in ONE transaction; any failure rolls back.
         logger.info(f"🚀 Atomically deploying {len(prepared_data)} models to {PRODUCTION_TABLE} (replacing {production_count})...")
         if not replace_provider_records_atomic(
-            conn, PRODUCTION_TABLE, INFERENCE_PROVIDER, prepared_data, tolerance=0
+            conn, PRODUCTION_TABLE, INFERENCE_PROVIDER, prepared_data, tolerance=0,
+            rate_limit_table=RATE_LIMIT_TABLE,
+            rate_limit_records=build_rate_limit_records(prepared_data, INFERENCE_PROVIDER),
         ):
             logger.error("❌ DEPLOYMENT FAILED: transaction rolled back, production data untouched")
+            write_publish_summary(INFERENCE_PROVIDER, production_count, len(staging_data), False,
+                                  ['publish transaction failed and was rolled back'])
             return False
 
         final_count = len(prepared_data)
+        write_publish_summary(INFERENCE_PROVIDER, production_count, len(staging_data), True, [], overridden)
         logger.info(f"✅ Deployed and verified {final_count} models (committed)")
 
         # Success

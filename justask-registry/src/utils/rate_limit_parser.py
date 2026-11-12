@@ -8,7 +8,7 @@ Ported from: justask-router/selector-service/src/utils/rateLimitParser.js
 """
 
 import re
-from typing import Dict, Optional
+from typing import Any, Dict, List, Optional
 
 
 def parse_token_value(value_str: str) -> Optional[int]:
@@ -169,3 +169,22 @@ def parse_rate_limits(rate_limits_str: str, provider: str) -> Dict:
         return apply_provider_fallback(result, provider)
 
     return result
+
+
+def build_rate_limit_records(models: List[Dict[str, Any]], provider: str) -> List[Dict[str, Any]]:
+    """Rows for justask."22_router-provider-rate-limits", one per model, parsed from rate_limits."""
+    records = []
+    for model in models:
+        raw = model.get('rate_limits') or ''
+        parsed = parse_rate_limits(raw, provider)
+        records.append({
+            'human_readable_name': model.get('human_readable_name'),
+            'inference_provider': provider,
+            'rpm': parsed['rpm'],
+            'rpd': parsed['rpd'],
+            'tpm': parsed['tpm'],
+            'tpd': parsed['tpd'],
+            'raw_string': raw,
+            'parseable': parsed['parseable'],
+        })
+    return records

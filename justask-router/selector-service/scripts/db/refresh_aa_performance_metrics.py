@@ -25,6 +25,19 @@ MIN_RECORDS = int(os.getenv("AA_MIN_RECORDS", "50"))
 MIN_RATIO_OF_EXISTING = float(os.getenv("AA_MIN_RATIO_OF_EXISTING", "0.5"))
 MAX_PAGES = 20  # safety cap for pagination
 
+# Columns written by this script (one per AA Free-tier field); must match the transform's record keys
+DB_COLUMNS = [
+    "aa_model_id", "aa_slug", "name", "release_date", "creator_id", "creator_name",
+    "intelligence_index_version", "intelligence_index", "coding_index", "agentic_index",
+    "finance_and_accounting_index", "strategy_and_ops_index", "legal_index",
+    "healthcare_and_medical_index", "engineering_index", "economics_index",
+    "intelligence_index_cost_total", "intelligence_index_cost_per_task",
+    "price_1m_input_tokens", "price_1m_output_tokens",
+    "price_1m_cache_hit_tokens", "price_1m_cache_write_tokens",
+    "mean_output_tokens_per_second", "mean_time_to_first_token_seconds",
+    "mean_time_to_first_answer_token_seconds",
+]
+
 def log(message: str):
     """Print timestamped log message"""
     timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
@@ -69,6 +82,10 @@ def fetch_aa_performance_data() -> List[Dict]:
 
         if page == 1:
             log(f"Tier: {data.get('tier')} | Intelligence Index version: {data.get('intelligence_index_version')}")
+        # intelligence_index_version is response-level; keep it with each model of this page
+        for m in batch:
+            if isinstance(m, dict):
+                m["_intelligence_index_version"] = data.get("intelligence_index_version")
         models.extend(batch)
 
         pagination = data.get("pagination") or {}
@@ -84,22 +101,14 @@ def fetch_aa_performance_data() -> List[Dict]:
     log(f"Fetched {len(models)} models from API")
     return models
 
-def blended_price_3_to_1(pricing: Dict) -> Optional[float]:
-    """3:1 input:output blend (the legacy API's price_1m_blended_3_to_1; not in the Free shape)."""
-    inp = pricing.get("price_1m_input_tokens")
-    out = pricing.get("price_1m_output_tokens")
-    if inp is None or out is None:
-        return None
-    return (3 * inp + out) / 4
-
 def transform_to_db_format(api_data: List[Dict]) -> List[Dict]:
     """
     Transform Free-shape API data to the justask."20_router-benchmark-scores" schema.
 
-    Free-shape notes:
-    - Performance fields are nested under "performance".
-    - coding_index is always null (AA no longer publishes it); math_index is not provided.
-    - Per-benchmark scores (mmlu_pro, gpqa, ...) and creator slug are Pro-only: stored as NULL.
+    One column per Free-tier field (AA leaf names without the "artificial_analysis_" prefix).
+    - coding_index and agentic_index: AA no longer publishes them (always null); kept to match the API.
+    - Speed comes from performance_v3 (means); the old "performance" medians are null from 2026-12-10.
+    - Per-benchmark scores, creator slug and blended price are Pro-only and not stored.
 
     Args:
         api_data: Raw data from Artificial Analysis API
@@ -115,7 +124,9 @@ def transform_to_db_format(api_data: List[Dict]) -> List[Dict]:
         evaluations = model.get("evaluations") or {}
         pricing = model.get("pricing") or {}
         creator = model.get("model_creator") or {}
-        performance = model.get("performance") or {}
+        performance_v3 = model.get("performance_v3") or {}
+        index_cost = model.get("artificial_analysis_intelligence_index_cost") or {}
+        cost_per_task = index_cost.get("cost_per_task") or {}
 
         # Extract intelligence index (primary metric)
         intelligence_index = evaluations.get("artificial_analysis_intelligence_index")
@@ -128,38 +139,36 @@ def transform_to_db_format(api_data: List[Dict]) -> List[Dict]:
             "aa_model_id": model.get("id"),
             "aa_slug": model.get("slug"),
             "name": model.get("name"),
-            "creator_name": creator.get("name"),
-            "creator_slug": None,  # Pro-only
             "release_date": model.get("release_date"),
+            "creator_id": creator.get("id"),
+            "creator_name": creator.get("name"),
 
-            # Performance metrics
+            # Evaluations
+            "intelligence_index_version": model.get("_intelligence_index_version"),
             "intelligence_index": intelligence_index,
             "coding_index": evaluations.get("artificial_analysis_coding_index"),
-            "math_index": None,  # not provided by the Free endpoint
+            "agentic_index": evaluations.get("artificial_analysis_agentic_index"),
+            "finance_and_accounting_index": evaluations.get("artificial_analysis_finance_and_accounting_index"),
+            "strategy_and_ops_index": evaluations.get("artificial_analysis_strategy_and_ops_index"),
+            "legal_index": evaluations.get("artificial_analysis_legal_index"),
+            "healthcare_and_medical_index": evaluations.get("artificial_analysis_healthcare_and_medical_index"),
+            "engineering_index": evaluations.get("artificial_analysis_engineering_index"),
+            "economics_index": evaluations.get("artificial_analysis_economics_index"),
 
-            # Benchmarks (Pro-only)
-            "mmlu_pro": None,
-            "gpqa": None,
-            "hle": None,
-            "livecodebench": None,
-            "scicode": None,
-            "math_500": None,
-            "aime": None,
-            "aime_25": None,
-            "ifbench": None,
-            "lcr": None,
-            "terminalbench_hard": None,
-            "tau2": None,
+            # Cost to run the Intelligence Index (USD)
+            "intelligence_index_cost_total": index_cost.get("total_cost"),
+            "intelligence_index_cost_per_task": cost_per_task.get("total_cost"),
 
-            # Pricing
+            # Pricing (per 1M tokens)
             "price_1m_input_tokens": pricing.get("price_1m_input_tokens"),
             "price_1m_output_tokens": pricing.get("price_1m_output_tokens"),
-            "price_1m_blended": blended_price_3_to_1(pricing),
+            "price_1m_cache_hit_tokens": pricing.get("price_1m_cache_hit_tokens"),
+            "price_1m_cache_write_tokens": pricing.get("price_1m_cache_write_tokens"),
 
-            # Latency
-            "median_output_tokens_per_second": performance.get("median_output_tokens_per_second"),
-            "median_time_to_first_token_seconds": performance.get("median_time_to_first_token_seconds"),
-            "median_time_to_first_answer_token": performance.get("median_time_to_first_answer_token_seconds"),
+            # Speed (performance_v3 headline means)
+            "mean_output_tokens_per_second": performance_v3.get("mean_output_tokens_per_second"),
+            "mean_time_to_first_token_seconds": performance_v3.get("mean_time_to_first_token_seconds"),
+            "mean_time_to_first_answer_token_seconds": performance_v3.get("mean_time_to_first_answer_token_seconds"),
         }
 
         records.append(record)
@@ -226,26 +235,13 @@ def refresh_database_table(records: List[Dict]):
         # Step 2: Insert new records
         log(f"Inserting {len(records)} new records...")
 
-        insert_sql = """
-            INSERT INTO justask."20_router-benchmark-scores" (
-                aa_model_id, aa_slug, name, creator_name, creator_slug, release_date,
-                intelligence_index, coding_index, math_index,
-                mmlu_pro, gpqa, hle, livecodebench, scicode, math_500, aime, aime_25,
-                ifbench, lcr, terminalbench_hard, tau2,
-                price_1m_input_tokens, price_1m_output_tokens, price_1m_blended,
-                median_output_tokens_per_second, median_time_to_first_token_seconds,
-                median_time_to_first_answer_token
-            ) VALUES (
-                %(aa_model_id)s, %(aa_slug)s, %(name)s, %(creator_name)s, %(creator_slug)s,
-                %(release_date)s, %(intelligence_index)s, %(coding_index)s, %(math_index)s,
-                %(mmlu_pro)s, %(gpqa)s, %(hle)s, %(livecodebench)s, %(scicode)s,
-                %(math_500)s, %(aime)s, %(aime_25)s, %(ifbench)s, %(lcr)s,
-                %(terminalbench_hard)s, %(tau2)s, %(price_1m_input_tokens)s,
-                %(price_1m_output_tokens)s, %(price_1m_blended)s,
-                %(median_output_tokens_per_second)s, %(median_time_to_first_token_seconds)s,
-                %(median_time_to_first_answer_token)s
-            )
-        """
+        insert_sql = (
+            'INSERT INTO justask."20_router-benchmark-scores" ('
+            + ", ".join(DB_COLUMNS)
+            + ") VALUES ("
+            + ", ".join(f"%({c})s" for c in DB_COLUMNS)
+            + ")"
+        )
 
         cur.executemany(insert_sql, records)
 

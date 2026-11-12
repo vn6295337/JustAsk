@@ -55,16 +55,16 @@ function normalizeProviderSlug(slug) {
 }
 
 /**
- * Fetch all models from 10_free-models-staging table with AA performance metrics and rate limits
- * Uses 4-table lookup: 10_free-models-staging → model_aa_mapping → aa_performance_metrics
+ * Fetch all models from 11_free-models-live table with AA performance metrics and rate limits
+ * Uses 4-table lookup: 11_free-models-live → model_aa_mapping → aa_performance_metrics
  *                                      → rate_limits
  * @returns {Promise<Array>} Array of model objects
  */
 export async function fetchLatestModels() {
   try {
-    // Fetch all models from 10_free-models-staging
+    // Fetch all models from 11_free-models-live
     const { data: models, error: modelsError } = await supabase
-      .schema('justask').from('10_free-models-staging')
+      .schema('justask').from('11_free-models-live')
       .select('*')
       .order('updated_at', { ascending: false });
 
@@ -86,7 +86,7 @@ export async function fetchLatestModels() {
     const { data: metrics, error: metricsError } = await supabase
       .schema('justask')
       .from('20_router-benchmark-scores')
-      .select('aa_slug, intelligence_index, coding_index, math_index, name');
+      .select('aa_slug, intelligence_index, coding_index, name');
 
     if (metricsError) {
       throw new Error(`Supabase query error: ${metricsError.message}`);
@@ -119,7 +119,7 @@ export async function fetchLatestModels() {
       rateLimitsMap[r.human_readable_name] = r;
     });
 
-    // 4-table join: 10_free-models-staging → model_aa_mapping → aa_performance_metrics
+    // 4-table join: 11_free-models-live → model_aa_mapping → aa_performance_metrics
     //                               → rate_limits
     const modelsWithMetrics = (models || []).map(model => {
       // Normalize provider_slug to match mapping table format
@@ -151,7 +151,7 @@ export async function fetchLatestModels() {
 export async function testConnection() {
   try {
     const { data, error } = await supabase
-      .schema('justask').from('10_free-models-staging')
+      .schema('justask').from('11_free-models-live')
       .select('id')
       .limit(1);
 

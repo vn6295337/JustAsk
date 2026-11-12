@@ -11,6 +11,11 @@ on:
           - 'refresh-working (Step 7)'
           - 'deploy-main (Step 8)'
           - 'both'
+      allow_large_drop:
+        description: 'Publish even if the model count drops more than 20% (use only for an intended drop)'
+        required: false
+        type: boolean
+        default: false
 
 concurrency:
   group: registry-google-deploy
@@ -55,6 +60,7 @@ jobs:
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         PIPELINE_SUPABASE_URL: ${{ secrets.PIPELINE_SUPABASE_URL }}
+        PUBLISH_ALLOW_LARGE_DROP: ${{ inputs.allow_large_drop }}
       run: |
         # Deploy to 11_free-models-live
         python -m src.main google --steps 8

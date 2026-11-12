@@ -24,7 +24,7 @@ async function validateScoring() {
   try {
     // Step 1: Fetch models from 4-table JOIN
     console.log('📊 Step 1: Fetching models from 4-table JOIN...');
-    console.log('   Tables: 10_free-models-staging, justask."21_router-model-benchmark-map",');
+    console.log('   Tables: 11_free-models-live, justask."21_router-model-benchmark-map",');
     console.log('           justask."20_router-benchmark-scores", justask."22_router-provider-rate-limits"');
     console.log();
 
