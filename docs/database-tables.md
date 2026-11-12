@@ -1,6 +1,6 @@
 # JustAsk Database Tables
 
-Plain-English reference for the main tables in schema `justask` (Supabase project `askme`). Updated 2026-11-12.
+Plain-English reference for the main tables in schema `justask` (Supabase project `askme`). Updated 2026-11-12 (after #17).
 
 - Overview of all tables and how data flows between them: [database-map.md](database-map.md).
 - Each table below has: what it does, what happens to it in order, who can access it, and its fields.
@@ -77,8 +77,9 @@ Plain-English reference for the main tables in schema `justask` (Supabase projec
 | 3 | Daily, after the draft refresh. | **Read** | Compared with the draft (table 10). A report lists what publishing would change. | Daily pipeline `registry-<provider>-pipeline.yml`. | Google step 7, Groq step 8, OpenRouter step 20 (compare draft with live) | `pipeline_writer` |
 | 4 | Daily, 23:59 UTC. | **Read** | Models are counted, in total and per provider. The counts are saved as one row in table 30. | Database job `daily-analytics-collection` (pg_cron). Function `public.collect_daily_analytics()`. | — | `postgres` |
 | 5 | Each time a dashboard page loads. | **Read** | The model list is shown in the dashboard. | Dashboard pages `AiModelsVisualization.tsx` and `Analytics.tsx`. | — | anon (public key) |
-| 6 | When the router's cache expires (every 30 minutes). | **Read** | Used to pick a model for each question, together with tables 20, 21 and 22. | Router on Render (justask-router). Script `supabase.js`. | — | anon (public key) |
-| 7 | When you run the ranking script by hand. | **Read** | Used to compute the model ranking, saved to table 23. | Script `populate_model_selection_score.js`. | — | `service_role` |
+| 6 | When you run the ranking script by hand. | **Read** | Used to compute the model ranking, saved to table 23. | Script `populate_model_selection_score.js`. | — | `service_role` |
+
+- Not read by the API. Since #17 the API reads only the ranking (`23_router-model-ranking`). The router service on Render can still read this table, but nothing calls it.
 
 ### Who can access it
 
@@ -132,8 +133,9 @@ Same fields as `10_free-models-staging`; a published row is a copy of its draft 
 |---|---|---|---|---|---|---|
 | 1 | Daily, 00:00 UTC (GitHub often starts it hours late). | **Written** | Artificial Analysis's free model list is fetched (about 735 models). Models without an intelligence score are skipped (about 120 kept). All rows are replaced at once (all or nothing). Refused if fewer than 50 models, or less than half of the current count. | Workflow `refresh-aa-performance-metrics.yml`. Script `refresh_aa_performance_metrics.py`. | — | `pipeline_writer` |
 | 2 | When you choose to publish a provider. | **Read** | The list of AA model slugs is used to link our models to AA entries (table 21). | Deploy workflow `registry-<provider>-deploy.yml`, AA mapping refresh. Script `model_aa_mapping.py`. | — | `pipeline_writer` |
-| 3 | When the router's cache expires (every 30 minutes). | **Read** | Intelligence scores are used to pick a model for each question. | Router on Render (justask-router). Script `supabase.js`. | — | anon (public key) |
-| 4 | When you run the ranking script by hand. | **Read** | Intelligence scores are used to compute the model ranking (table 23). | Script `populate_model_selection_score.js`. | — | `service_role` |
+| 3 | When you run the ranking script by hand. | **Read** | Intelligence scores are used to compute the model ranking (table 23). | Script `populate_model_selection_score.js`. | — | `service_role` |
+
+- Not read by the API. Since #17 the API reads only the ranking (`23_router-model-ranking`). The router service on Render can still read this table, but nothing calls it.
 
 ### Who can access it
 
@@ -193,6 +195,5 @@ Same fields as `10_free-models-staging`; a published row is a copy of its draft 
 | `model_aa_mapping.py` | `justask-registry/src/utils/model_aa_mapping.py` |
 | `refresh_aa_performance_metrics.py` | `justask-router/selector-service/scripts/db/refresh_aa_performance_metrics.py` |
 | `populate_model_selection_score.js` | `justask-router/selector-service/scripts/db/populate_model_selection_score.js` |
-| `supabase.js` (router) | `justask-router/selector-service/src/utils/supabase.js` |
 | `AiModelsVisualization.tsx`, `Analytics.tsx` | `justask-dashboard/src/components/`, `justask-dashboard/src/pages/` |
 | `public.collect_daily_analytics()` | Database function; scheduled by `pg_cron` job `daily-analytics-collection` |
