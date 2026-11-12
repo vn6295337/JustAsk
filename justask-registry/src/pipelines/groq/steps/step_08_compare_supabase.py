@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Groq Pipeline vs Supabase Field Comparison
-Compares field values between stage-5-data-normalization.json and Supabase 10_free-models-staging table
+Compares the draft (10_free-models-staging) with the live list (11_free-models-live) for this provider
 """
 
 import csv
@@ -55,9 +55,9 @@ except ImportError:
     pass
 
 # Configuration
-PIPELINE_DATA_FILE = get_input_file_path('06_normalized_models.json')
-REPORT_FILE = get_output_file_path('07_supabase_comparison.txt')
-TABLE_NAME = 'justask."10_free-models-staging"'
+DRAFT_TABLE = 'justask."10_free-models-staging"'  # draft, written by the refresh step just before this one
+REPORT_FILE = get_output_file_path('08_supabase_comparison.txt')
+TABLE_NAME = 'justask."11_free-models-live"'  # live
 INFERENCE_PROVIDER = "Groq"
 
 def get_db_connection():
@@ -80,29 +80,21 @@ def get_db_connection():
     return conn
 
 def load_pipeline_data() -> List[Dict[str, Any]]:
-    """Load pipeline data from stage-5-data-normalization.json"""
+    """Load this provider's draft rows from table 10 (written by the refresh step just before this one)."""
+    conn = get_db_connection()
+    if not conn:
+        raise RuntimeError(f"Could not connect to the database to read the draft ({DRAFT_TABLE})")
     try:
-        if not os.path.exists(PIPELINE_DATA_FILE):
-            print(f"❌ ERROR: {PIPELINE_DATA_FILE} not found")
-            print("Please run the Groq pipeline first to generate the normalized data")
-            return []
-
-        with open(PIPELINE_DATA_FILE, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-
-        # Handle both old format (list) and new format (dict with metadata)
-        if isinstance(data, list):
-            models = data
-        elif isinstance(data, dict) and 'models' in data:
-            models = data['models']
-        else:
-            raise ValueError("Unexpected data format in input file")
-
-        print(f"Loaded {len(models)} models from pipeline data")
-        return models
-    except Exception as e:
-        print(f"Failed to load pipeline data: {e}")
-        return []
+        with conn.cursor(cursor_factory=RealDictCursor) as cur:
+            cur.execute(
+                f"SELECT * FROM {DRAFT_TABLE} WHERE inference_provider = %s",
+                (INFERENCE_PROVIDER,)
+            )
+            data = [dict(row) for row in cur.fetchall()]
+    finally:
+        conn.close()
+    print(f"Loaded {len(data)} draft models from {DRAFT_TABLE}")
+    return data
 
 def _norm(value) -> str:
     """Normalize a value for comparison: NULL/None -> '', else stripped string."""
@@ -237,8 +229,8 @@ def create_comparison_report(pipeline_data: List[Dict[str, Any]], supabase_data:
         f.write(f"Supabase Models: {len(supabase_data)}\n")
         f.write(f"Models in Both Systems: {len(models_in_both)}\n")
         f.write(f"Models with Field Differences: {models_with_differences_count}\n")
-        f.write(f"Models Only in Pipeline: {len(models_pipeline_only)}\n")
-        f.write(f"Models Only in Supabase: {len(models_supabase_only)}\n\n")
+        f.write(f"Models Only in Draft (added on publish): {len(models_pipeline_only)}\n")
+        f.write(f"Models Only in Live (removed on publish): {len(models_supabase_only)}\n\n")
 
         # Field-by-field statistics
         f.write("FIELD-BY-FIELD COMPARISON\n")
@@ -314,7 +306,7 @@ def create_comparison_report(pipeline_data: List[Dict[str, Any]], supabase_data:
 
             f.write(f"MODEL: {model_name}\n")
             f.write("-" * 80 + "\n")
-            f.write(f"{'Field Name':<25} | {'Pipeline Value':<25} | {'Supabase Value':<25}\n")
+            f.write(f"{'Field Name':<25} | {'Draft (table 10)':<25} | {'Live (table 11)':<25}\n")
             f.write("-" * 80 + "\n")
 
             for field in fields_to_compare:
@@ -369,4 +361,5 @@ def main():
     print(f"📄 Report saved to: {REPORT_FILE}")
 
 if __name__ == "__main__":
-    main()
+    # main() returns False on failure; make that a non-zero exit so the pipeline step fails visibly
+    sys.exit(1 if main() is False else 0)

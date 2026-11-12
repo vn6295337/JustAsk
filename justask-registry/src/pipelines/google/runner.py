@@ -42,15 +42,15 @@ class GooglePipelineRunner(BasePipelineRunner):
             3: 'step_03_scrape_modalities.py',
             4: 'step_04_enrich_modalities.py',
             5: 'step_05_create_db_data.py',
-            6: 'step_06_compare_supabase.py',
-            7: 'step_07_refresh_working.py',
+            6: 'step_06_refresh_working.py',
+            7: 'step_07_compare_supabase.py',
             8: 'step_08_deploy_main.py',
         }
 
     @property
     def default_steps(self) -> str:
-        """Default steps to run (excluding manual deploy steps 7-8)."""
-        return '1-6'
+        """Default steps to run (daily: fetch, refresh draft, compare draft with live; publish step 8 is manual)."""
+        return '1-7'
 
     # Legacy letter to step number mapping for backward compatibility
     LEGACY_MAPPING = {
@@ -84,8 +84,8 @@ def parse_arguments():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples (new style):
-  python -m src.pipelines.google.runner                  # Run default steps 1-6
-  python -m src.pipelines.google.runner --steps 1-6      # Run steps 1 through 6
+  python -m src.pipelines.google.runner                  # Run default steps 1-7
+  python -m src.pipelines.google.runner --steps 1-7      # Run steps 1 through 7
   python -m src.pipelines.google.runner --steps 1,3,5    # Run specific steps
   python -m src.pipelines.google.runner --dry-run        # Preview execution
 

@@ -9,7 +9,7 @@ Supabase project `askme` (`atilxlecbaqcksnrgzav`), Mumbai region. Updated 2026-1
 
 ## Data Flow
 
-- Registry pipelines (CI) write `10_free-models-staging`; the registry deploy copies it to `11_free-models-live`.
+- The daily registry pipelines (CI) refresh `10_free-models-staging`, then compare it with `11_free-models-live` and report what publishing would change. The registry deploy (manual) copies `10` to `11`.
 - Rule: `10` is incoming only (read only by the CI compare and deploy steps); `11` is outgoing only (written only by the deploy step, from `10`). Both have the same columns.
 - The deploy step publishes only if the publish gate passes: same columns in `10` and `11`; no drop of more than 20% in a provider's model count (override: workflow input `allow_large_drop`); no empty `inference_provider`, `provider_slug`, `human_readable_name` or `rate_limits`; no duplicate `provider_slug`. Each result is written to the GitHub Actions run summary.
 - The dashboard reads `11_free-models-live`.
@@ -23,7 +23,7 @@ Supabase project `askme` (`atilxlecbaqcksnrgzav`), Mumbai region. Updated 2026-1
 
 | Table | Role | Written by | Read by |
 |---|---|---|---|
-| `10_free-models-staging` | Model list before publishing (incoming only) | Registry refresh step (CI) | Registry compare and deploy steps only |
+| `10_free-models-staging` | Model list before publishing (incoming only) | Daily registry pipeline, refresh step (CI) | Registry compare step (daily) and publish step (manual) only |
 | `11_free-models-live` | Published model list (outgoing only) | Registry deploy step (CI), copied from `10` | Dashboard, router, ranking script, mapping refresh, nightly analytics job |
 
 ## 2. Router

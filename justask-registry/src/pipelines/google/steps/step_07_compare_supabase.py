@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Google Pipeline vs Supabase Field Comparison
-Compares field values between 05_normalized_models.json and Supabase 10_free-models-staging table
+Compares the draft (10_free-models-staging) with the live list (11_free-models-live) for this provider
 """
 
 import json
@@ -51,9 +51,9 @@ except ImportError:
     pass
 
 # Configuration
-PIPELINE_DATA_FILE = get_input_file_path('05_normalized_models.json')
-REPORT_FILE = get_output_file_path('06_supabase_comparison.txt')
-TABLE_NAME = 'justask."10_free-models-staging"'
+DRAFT_TABLE = 'justask."10_free-models-staging"'  # draft, written by the refresh step just before this one
+REPORT_FILE = get_output_file_path('07_supabase_comparison.txt')
+TABLE_NAME = 'justask."11_free-models-live"'  # live
 INFERENCE_PROVIDER = "Google"
 
 def get_db_connection():
@@ -76,21 +76,21 @@ def get_db_connection():
     return conn
 
 def load_pipeline_data() -> List[Dict[str, Any]]:
-    """Load pipeline data from 05_normalized_models.json"""
+    """Load this provider's draft rows from table 10 (written by the refresh step just before this one)."""
+    conn = get_db_connection()
+    if not conn:
+        raise RuntimeError(f"Could not connect to the database to read the draft ({DRAFT_TABLE})")
     try:
-        with open(PIPELINE_DATA_FILE, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-
-        # Ensure data is a list
-        if not isinstance(data, list):
-            print(f"Expected list, got {type(data)}")
-            return []
-
-        print(f"Loaded {len(data)} models from pipeline data")
-        return data
-    except Exception as e:
-        print(f"Failed to load pipeline data: {e}")
-        return []
+        with conn.cursor(cursor_factory=RealDictCursor) as cur:
+            cur.execute(
+                f"SELECT * FROM {DRAFT_TABLE} WHERE inference_provider = %s",
+                (INFERENCE_PROVIDER,)
+            )
+            data = [dict(row) for row in cur.fetchall()]
+    finally:
+        conn.close()
+    print(f"Loaded {len(data)} draft models from {DRAFT_TABLE}")
+    return data
 
 def _norm(value) -> str:
     """Normalize a value for comparison: NULL/None -> '', else stripped string."""
@@ -293,7 +293,7 @@ def create_comparison_report(pipeline_data: List[Dict[str, Any]], supabase_data:
 
             f.write(f"MODEL: {model_name}\n")
             f.write("-" * 130 + "\n")
-            f.write(f"{'Field Name':<25} | {'Pipeline Value':<50} | {'Supabase Value':<50}\n")
+            f.write(f"{'Field Name':<25} | {'Draft (table 10)':<50} | {'Live (table 11)':<50}\n")
             f.write("-" * 130 + "\n")
 
             for field in fields_to_compare:
@@ -358,4 +358,5 @@ def main():
         return False
 
 if __name__ == "__main__":
-    main()
+    # main() returns False on failure; make that a non-zero exit so the pipeline step fails visibly
+    sys.exit(1 if main() is False else 0)

@@ -3,14 +3,6 @@ name: OpenRouter Deploy (Working → Main)
 on:
   workflow_dispatch:
     inputs:
-      step:
-        description: 'Which step to run'
-        required: true
-        type: choice
-        options:
-          - 'refresh-working (Step 20)'
-          - 'deploy-main (Step 21)'
-          - 'both'
       allow_large_drop:
         description: 'Publish even if the model count drops more than 20% (use only for an intended drop)'
         required: false
@@ -45,18 +37,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Refresh 10_free-models-staging (Step 20)
-      if: ${{ inputs.step == 'refresh-working (Step 20)' || inputs.step == 'both' }}
-      working-directory: justask-registry
-      env:
-        OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        HUGGINGFACE_API_KEY: ${{ secrets.HUGGINGFACE_API_KEY }}
-        PIPELINE_SUPABASE_URL: ${{ secrets.PIPELINE_SUPABASE_URL }}
-      run: |
-        python -m src.main openrouter --steps 20
-
     - name: Deploy to 11_free-models-live (Step 21) + Refresh AA Mapping
-      if: ${{ inputs.step == 'deploy-main (Step 21)' || inputs.step == 'both' }}
       working-directory: justask-registry
       env:
         OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}

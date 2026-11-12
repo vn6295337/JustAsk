@@ -10,8 +10,8 @@ Steps:
     4. step_04_extract_opensource_licenses - Extract open-source licenses
     5. step_05_consolidate_licenses - Consolidate all license information
     6. step_06_normalize_data - Normalize data for database
-    7. step_07_compare_supabase - Compare with existing Supabase data
-    8. step_08_refresh_working - Refresh working/staging table (manual)
+    7. step_07_refresh_working - Refresh the draft table 10 (daily)
+    8. step_08_compare_supabase - Compare draft (10) with live (11) (daily)
     9. step_09_deploy_main - Deploy to main table (manual)
 
 Usage:
