@@ -6,6 +6,7 @@ Supabase project `askme` (`atilxlecbaqcksnrgzav`), Mumbai region. Updated 2026-1
 - Table names start with a digit and contain hyphens, so SQL must quote them: `justask."11_free-models-live"`.
 - Name format: `<group number><order>_<group>-<what it holds>`.
 - Change history: [database/README.md](../database/README.md).
+- Plain-English reference for tables 10, 11 and 20 (timeline, access, fields): [database-tables.md](database-tables.md).
 
 ## Data Flow
 
