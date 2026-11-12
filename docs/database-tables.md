@@ -88,7 +88,7 @@ Plain-English reference for the main tables in schema justask (Supabase project 
 | CI pipelines | pipeline_writer | Read and write (write only by the publish step) |
 | Ranking script, admin scripts | service_role | Read and write (reads only) |
 | Nightly analytics job | postgres | Read |
-| Dashboard, API, router | anon (public key) | Read |
+| Dashboard | anon (public key) | Read |
 
 ### Fields
 
@@ -117,6 +117,7 @@ Same fields as 10_free-models-staging; a published row is a copy of its draft ro
 ### Rules
 - Written only by the publish step, and only after the publish check passes.
 - Has exactly the same columns as 10_free-models-staging.
+- The database also enforces: provider_slug and rate_limits are required, and each provider_slug appears only once per provider. A publish that breaks these rules is rolled back.
 
 ---
 
