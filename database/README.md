@@ -36,6 +36,7 @@ Record of changes applied to the Supabase project `askme` (`atilxlecbaqcksnrgzav
 | `applied/2026-11-12_13_live-table-tidy.sql` | `11_free-models-live`: current description; names changed from `ai_models_main_working_version_*` to `free_models_live_*`; no-op `pipeline_writer` policy dropped; `authenticated` read permission removed; `provider_slug` and `rate_limits` required and `(inference_provider, provider_slug)` unique |
 | `applied/2026-11-12_14_benchmark-table-tidy.sql` | `20_router-benchmark-scores`: current description; names changed from `aa_performance_metrics_*` / `idx_aa_metrics_*` to `router_benchmark_scores_*` (keys, index, trigger); no-op `service_role` policy dropped; `authenticated` read permission removed; duplicate index on `aa_slug` dropped |
 | `applied/2026-11-12_15_benchmark-map-tidy.sql` | `21_router-model-benchmark-map`: current description; names changed from `model_aa_mapping_*` / `unique_provider_model` / `idx_*` to `router_model_benchmark_map_*` (keys, indexes, sequence); `authenticated` read permission removed |
+| `applied/2026-11-12_16_benchmark-map-timestamptz.sql` | `21_router-model-benchmark-map`: `created_at` and `updated_at` become `timestamptz` (existing values read as UTC); the mapping refresh now writes time-zone-aware times |
 
 ## Not SQL
 
