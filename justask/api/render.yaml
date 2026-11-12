@@ -17,8 +17,6 @@ services:
         sync: false
       - key: SUPABASE_KEY
         sync: false
-      - key: SELECTOR_SERVICE_URL
-        value: https://justask-router.onrender.com
 
     healthCheckPath: /api/health
     healthCheckInterval: 300  # Check every 5 minutes

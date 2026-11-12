@@ -30,7 +30,7 @@ justask/
 │           ↓ [HTTP / Offline Detection]                      │
 │  Backend API (Node.js + Express on Render)                  │
 │  ├── Query Classification (Keyword-based)                   │
-│  ├── Provider Routing via justask-router                    │
+│  ├── Ranked model chain (read from Supabase)                │
 │  ├── Failover Chain (Primary → Secondary → Tertiary)        │
 │  └── Global Rate Limiting                                   │
 │           ↓ [Supabase Vault]                                │
@@ -84,7 +84,6 @@ Backend requires `.env`:
 ```env
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_KEY=your-public-key
-SELECTOR_SERVICE_URL=https://justask-router.onrender.com
 PORT=3000
 NODE_ENV=development
 ```
