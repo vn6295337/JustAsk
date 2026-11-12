@@ -1,11 +1,11 @@
 === GOOGLE MODELS FILTERING REPORT ===
-Generated: 2026-11-11 10:37:50 IST
+Generated: 2026-11-12 11:41:33 IST
 
 === SUMMARY ===
-Total Input Models: 62
-Models Included: 29
+Total Input Models: 63
+Models Included: 30
 Models Excluded: 33
-Filtering Success Rate: 46.8%
+Filtering Success Rate: 47.6%
 
 === EXCLUDED MODELS ===
  1. gemini-2.5-flash-preview-tts
@@ -72,6 +72,7 @@ Filtering Success Rate: 46.8%
 27. gemini-3.5-transcribe-live
 28. gemini-3.8-live
 29. gemini-3.8-live-extended-thinking
+30. gemini-decision-1
 
 === EXCLUSION BREAKDOWN ===
 29 models: Experimental/Preview model - production-ready models only

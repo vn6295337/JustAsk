@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-11-11 10:37:50 IST",
-    "total_models": 29,
+    "generated": "2026-11-12 11:41:33 IST",
+    "total_models": 30,
     "filtering_source": "Google Pipeline B-Filter"
   },
   "models": [
@@ -505,6 +505,17 @@
       "topK": 64,
       "maxTemperature": 2,
       "thinking": true
+    },
+    {
+      "name": "models/gemini-decision-1",
+      "version": "gemini-decision-1",
+      "displayName": "Gemini Decision 1",
+      "description": "Gemini Decision 1",
+      "inputTokenLimit": 262144,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "createDecision"
+      ]
     }
   ]
 }

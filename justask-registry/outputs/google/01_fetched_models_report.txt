@@ -1,8 +1,8 @@
 GOOGLE API MODELS FETCH REPORT
 ==================================================
 
-Generated: 2026-11-11 10:37:50 IST
-Total Models: 62
+Generated: 2026-11-12 11:41:33 IST
+Total Models: 63
 
 MODELS LIST:
 --------------------
@@ -68,3 +68,4 @@ MODELS LIST:
 60. models/gemini-robotics-er-2-streaming-preview
 61. models/gemini-3.5-live-translate-preview
 62. models/lyria-realtime-exp
+63. models/gemini-decision-1

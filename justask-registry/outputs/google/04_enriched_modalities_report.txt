@@ -1,9 +1,9 @@
 === GOOGLE MODELS MODALITY ENRICHMENT REPORT ===
 
-Generated: 2026-11-11 10:37:54 IST
+Generated: 2026-11-12 11:41:38 IST
 
 === SUMMARY ===
-Total Models: 29
+Total Models: 30
 Hardcoded Matches: 2
 Priority 1 Matches (Exact): 0
 Priority 2 Matches (Normalized): 0
@@ -11,8 +11,8 @@ Embedding Matches: 2
 Gemma Pattern Matches: 0
 Gemini Pattern Matches: 3
 Unique Model Matches: 1
-No Matches: 21
-Overall Match Rate: 27.6%
+No Matches: 22
+Overall Match Rate: 26.7%
 
 === EMBEDDING MATCHES ===
 
@@ -70,3 +70,4 @@ Overall Match Rate: 27.6%
 19. gemini-3.5-transcribe-live
 20. gemini-3.8-live
 21. gemini-3.8-live-extended-thinking
+22. gemini-decision-1

@@ -1,16 +1,16 @@
 FIELD COMPARISON REPORT: GOOGLE PIPELINE vs SUPABASE
 ================================================================================
-Generated: 2026-11-11 10:37:57 IST
+Generated: 2026-11-12 11:41:46 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total models processed: 29
+   • Total models processed: 30
    • Models in both systems: 28
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 1
+   • Models in pipeline only (not in Supabase): 2
    • Models in Supabase only (not in pipeline): 0
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
@@ -55,8 +55,8 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 1
-     Models: Gemini 4 Carbon
+   • New models (pipeline only): 2
+     Models: Gemini 4 Carbon, Gemini Decision 1
    • Existing models with differences: 0
 
 ================================================================================
@@ -65,7 +65,7 @@ DETAILED COMPARISON BY MODEL
 
 MODEL: AQA
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -85,7 +85,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 2.5 Flash
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -105,7 +105,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 2.5 Flash-Lite
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -125,7 +125,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 2.5 Pro
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -145,7 +145,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 3 Pro Image
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -165,7 +165,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 3.1 Flash Image
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -185,7 +185,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 3.1 Flash-Lite
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -205,7 +205,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 3.1 Flash-Lite Image
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -225,7 +225,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 3.5 Flash
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -245,7 +245,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 3.5 Flash-Lite
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -265,7 +265,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 3.5 Transcribe
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -285,7 +285,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 3.5 Transcribe Live
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -305,7 +305,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 3.6 Flash
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -325,7 +325,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 3.7 Flash
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -345,7 +345,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 3.8 Flash
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -365,7 +365,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 3.8 Flash Tts
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -385,7 +385,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 3.8 Flash-Lite Tts
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -405,7 +405,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 3.8 Live
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -425,7 +425,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 3.8 Live Extended Thinking
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -445,7 +445,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 4 Argon
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -465,7 +465,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini 4 Carbon
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             |                                                   
 model_provider            | Google                                             |                                                   
@@ -483,9 +483,29 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 ==================================================================================================================================
 
+MODEL: Gemini Decision 1
+----------------------------------------------------------------------------------------------------------------------------------
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
+----------------------------------------------------------------------------------------------------------------------------------
+inference_provider        | Google                                             |                                                   
+model_provider            | Google                                             |                                                   
+human_readable_name       | Gemini Decision 1                                  |                                                   
+model_provider_country    | United States                                      |                                                   
+official_url              | https://deepmind.google/models/gemini/             |                                                   
+input_modalities          | Unknown                                            |                                                   
+output_modalities         | Unknown                                            |                                                   
+license_info_text         | Google                                             |                                                   
+license_info_url          | https://developers.google.com/terms                |                                                   
+license_name              | GEMINI                                             |                                                   
+license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
+rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   |                                                   
+provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+
+==================================================================================================================================
+
 MODEL: Gemini Embedding 001
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -505,7 +525,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini Embedding 2
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -525,7 +545,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini Nano Banana 2.1
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -545,7 +565,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini Omni 1.1 Flash
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -565,7 +585,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemini Omni 1.2 Flash
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -585,7 +605,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemma 4 26B A4B IT
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -605,7 +625,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Gemma 4 31B IT
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            
@@ -625,7 +645,7 @@ provider_api_access       | https://aistudio.google.com/apikey                 |
 
 MODEL: Lyria 3.5
 ----------------------------------------------------------------------------------------------------------------------------------
-Field Name                | Pipeline Value                                     | Supabase Value                                    
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
 ----------------------------------------------------------------------------------------------------------------------------------
 inference_provider        | Google                                             | Google                                            
 model_provider            | Google                                             | Google                                            

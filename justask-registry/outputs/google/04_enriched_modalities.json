@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-11-11 10:37:54 IST",
-    "total_models": 29,
+    "generated": "2026-11-12 11:41:38 IST",
+    "total_models": 30,
     "enrichment_source": "Google Pipeline 04_enrich_modalities"
   },
   "models": [
@@ -646,6 +646,22 @@
       "maxTemperature": 2,
       "thinking": true,
       "provider_slug": "gemini-3.8-live-extended-thinking",
+      "input_modalities": "Unknown",
+      "output_modalities": "Unknown",
+      "modality_source": "unknown",
+      "match_priority": 0
+    },
+    {
+      "name": "models/gemini-decision-1",
+      "version": "gemini-decision-1",
+      "displayName": "Gemini Decision 1",
+      "description": "Gemini Decision 1",
+      "inputTokenLimit": 262144,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "createDecision"
+      ],
+      "provider_slug": "gemini-decision-1",
       "input_modalities": "Unknown",
       "output_modalities": "Unknown",
       "modality_source": "unknown",
