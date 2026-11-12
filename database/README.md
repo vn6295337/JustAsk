@@ -37,6 +37,8 @@ Record of changes applied to the Supabase project `askme` (`atilxlecbaqcksnrgzav
 | `applied/2026-11-12_14_benchmark-table-tidy.sql` | `20_router-benchmark-scores`: current description; names changed from `aa_performance_metrics_*` / `idx_aa_metrics_*` to `router_benchmark_scores_*` (keys, index, trigger); no-op `service_role` policy dropped; `authenticated` read permission removed; duplicate index on `aa_slug` dropped |
 | `applied/2026-11-12_15_benchmark-map-tidy.sql` | `21_router-model-benchmark-map`: current description; names changed from `model_aa_mapping_*` / `unique_provider_model` / `idx_*` to `router_model_benchmark_map_*` (keys, indexes, sequence); `authenticated` read permission removed |
 | `applied/2026-11-12_16_benchmark-map-timestamptz.sql` | `21_router-model-benchmark-map`: `created_at` and `updated_at` become `timestamptz` (existing values read as UTC); the mapping refresh now writes time-zone-aware times |
+| `applied/2026-11-12_17_timestamptz-22-23-pin-analytics-utc.sql` | Tables 22 and 23: `created_at`/`updated_at` become `timestamptz` (read as UTC); analytics functions pinned to UTC so the nightly snapshot keeps counting by UTC day |
+| `applied/2026-11-12_18_database-timezone-ist.sql` | Database default time zone set to `Asia/Kolkata`: times are shown in IST (`+05:30`). Stored values unchanged; schedules (GitHub Actions, `pg_cron`) stay in UTC |
 
 ## Not SQL
 

@@ -4,6 +4,7 @@ Plain-English reference for the main tables in schema justask (Supabase project 
 
 - Overview of all tables and how data flows between them: [database-map.md](database-map.md).
 - Each table below has: what it does, what happens to it in order, who can access it, and its fields.
+- Times: the database shows times in IST (UTC + 5:30) since 2026-11-12. Schedules below are in UTC, as GitHub Actions and pg_cron run them.
 - "Login" is the database role that does the work. anon is the public key used by the dashboard and the API.
 
 ---
