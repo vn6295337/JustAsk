@@ -1,6 +1,6 @@
 # JustAsk Database Tables
 
-Plain-English reference for the main tables in schema `justask` (Supabase project `askme`). Updated 2026-11-12.
+Plain-English reference for the main tables in schema `justask` (Supabase project `askme`). Updated 2026-11-12 (after #17).
 
 - Overview of all tables and how data flows between them: [database-map.md](database-map.md).
 - Each table below has: what it does, what happens to it in order, who can access it, and its fields.
@@ -17,32 +17,11 @@ Plain-English reference for the main tables in schema `justask` (Supabase projec
 
 ### What happens to it, in order
 
-```
-┌─────┬────────────────────┬───────────┬──────────────────────────────────────┬──────────────────────────────────────┐
-│ #   │ When               │ Action    │ What happens to the table            │ Done by                              │
-├─────┼────────────────────┼───────────┼──────────────────────────────────────┼──────────────────────────────────────┤
-│ 1   │ • Daily, 00:00 UTC │ Written   │ • The provider's rows are replaced   │ • Daily pipeline                     │
-│     │ • Google first,    │           │   with the list fetched that day     │   registry-<provider>-pipeline.yml   │
-│     │   then Groq, then  │           │ • All at once (all or nothing)       │ • Google step 6, Groq step 7,        │
-│     │   OpenRouter       │           │                                      │   OpenRouter step 19 (refresh draft) │
-│     │                    │           │                                      │ • Login pipeline_writer              │
-├─────┼────────────────────┼───────────┼──────────────────────────────────────┼──────────────────────────────────────┤
-│ 2   │ • Straight after 1 │ Read      │ • The draft is compared with the     │ • Same daily pipeline                │
-│     │                    │           │   live list (table 11)               │ • Google step 7, Groq step 8,        │
-│     │                    │           │ • A report lists the models          │   OpenRouter step 20 (compare draft  │
-│     │                    │           │   publishing would add, remove or    │   with live)                         │
-│     │                    │           │   change                             │ • Login pipeline_writer              │
-├─────┼────────────────────┼───────────┼──────────────────────────────────────┼──────────────────────────────────────┤
-│ 3   │ • When you choose  │ Read      │ • The draft is checked: same columns │ • Deploy workflow                    │
-│     │   to publish       │           │   as 11, no big drop in model count, │   registry-<provider>-deploy.yml     │
-│     │                    │           │   required fields filled, no         │ • Google step 8, Groq step 9,        │
-│     │                    │           │   duplicates                         │   OpenRouter step 21 (publish)       │
-│     │                    │           │ • If it passes, it is copied to      │ • Login pipeline_writer              │
-│     │                    │           │   table 11                           │                                      │
-│     │                    │           │ • If it fails, nothing is published  │                                      │
-│     │                    │           │   and the reason is logged           │                                      │
-└─────┴────────────────────┴───────────┴──────────────────────────────────────┴──────────────────────────────────────┘
-```
+| # | When | Action | What happens to the table | Done by | Step | Login |
+|---|---|---|---|---|---|---|
+| 1 | Daily, 00:00 UTC. Google first, then Groq, then OpenRouter. | **Written** | The provider's rows are replaced with the list fetched that day. All at once (all or nothing). | Daily pipeline `registry-<provider>-pipeline.yml`. | Google step 6, Groq step 7, OpenRouter step 19 (refresh draft) | `pipeline_writer` |
+| 2 | Straight after 1. | **Read** | The draft is compared with the live list (table 11). A report lists the models publishing would add, remove or change. | Same daily pipeline. | Google step 7, Groq step 8, OpenRouter step 20 (compare draft with live) | `pipeline_writer` |
+| 3 | When you choose to publish. | **Read** | The draft is checked: same columns as 11, no big drop in model count, required fields filled, no duplicates. If it passes, it is copied to table 11. If it fails, nothing is published and the reason is logged. | Deploy workflow `registry-<provider>-deploy.yml`. | Google step 8, Groq step 9, OpenRouter step 21 (publish) | `pipeline_writer` |
 
 - Never read by the dashboard, the API or the router. The public `anon` key has no access.
 
@@ -91,51 +70,16 @@ Plain-English reference for the main tables in schema `justask` (Supabase projec
 
 ### What happens to it, in order
 
-```
-┌─────┬────────────────────┬───────────┬──────────────────────────────────────┬──────────────────────────────────────┐
-│ #   │ When               │ Action    │ What happens to the table            │ Done by                              │
-├─────┼────────────────────┼───────────┼──────────────────────────────────────┼──────────────────────────────────────┤
-│ 1   │ • When you choose  │ Written   │ • The provider's rows are replaced   │ • Deploy workflow                    │
-│     │   to publish       │           │   with the checked draft from table  │   registry-<provider>-deploy.yml     │
-│     │                    │           │   10                                 │ • Google step 8, Groq step 9,        │
-│     │                    │           │ • Rate limits (table 22) are         │   OpenRouter step 21 (publish)       │
-│     │                    │           │   replaced in the same transaction   │ • Login pipeline_writer              │
-│     │                    │           │ • All or nothing                     │                                      │
-├─────┼────────────────────┼───────────┼──────────────────────────────────────┼──────────────────────────────────────┤
-│ 2   │ • Straight after 1 │ Read      │ • The provider's models are linked   │ • Same deploy workflow, AA mapping   │
-│     │                    │           │   to their Artificial Analysis       │   refresh                            │
-│     │                    │           │   entries                            │ • Script model_aa_mapping.py         │
-│     │                    │           │ • The links are written to table 21  │ • Login pipeline_writer              │
-├─────┼────────────────────┼───────────┼──────────────────────────────────────┼──────────────────────────────────────┤
-│ 3   │ • Daily, after the │ Read      │ • Compared with the draft (table 10) │ • Daily pipeline                     │
-│     │   draft refresh    │           │ • A report lists what publishing     │   registry-<provider>-pipeline.yml   │
-│     │                    │           │   would change                       │ • Google step 7, Groq step 8,        │
-│     │                    │           │                                      │   OpenRouter step 20 (compare draft  │
-│     │                    │           │                                      │   with live)                         │
-│     │                    │           │                                      │ • Login pipeline_writer              │
-├─────┼────────────────────┼───────────┼──────────────────────────────────────┼──────────────────────────────────────┤
-│ 4   │ • Daily, 23:59 UTC │ Read      │ • Models are counted, in total and   │ • Database job                       │
-│     │                    │           │   per provider                       │   daily-analytics-collection         │
-│     │                    │           │ • The counts are saved as one row in │   (pg_cron)                          │
-│     │                    │           │   table 30                           │ • Function                           │
-│     │                    │           │                                      │   public.collect_daily_analytics()   │
-│     │                    │           │                                      │ • Login postgres                     │
-├─────┼────────────────────┼───────────┼──────────────────────────────────────┼──────────────────────────────────────┤
-│ 5   │ • Each time a      │ Read      │ • The model list is shown in the     │ • Dashboard pages                    │
-│     │   dashboard page   │           │   dashboard                          │   AiModelsVisualization.tsx and      │
-│     │   loads            │           │                                      │   Analytics.tsx                      │
-│     │                    │           │                                      │ • Public key (anon)                  │
-├─────┼────────────────────┼───────────┼──────────────────────────────────────┼──────────────────────────────────────┤
-│ 6   │ • When the         │ Read      │ • Used to pick a model for each      │ • Router on Render (justask-router)  │
-│     │   router's cache   │           │   question, together with tables 20, │ • Script supabase.js                 │
-│     │   expires (every   │           │   21 and 22                          │ • Public key (anon)                  │
-│     │   30 minutes)      │           │                                      │                                      │
-├─────┼────────────────────┼───────────┼──────────────────────────────────────┼──────────────────────────────────────┤
-│ 7   │ • When you run the │ Read      │ • Used to compute the model ranking, │ • Script                             │
-│     │   ranking script   │           │   saved to table 23                  │   populate_model_selection_score.js  │
-│     │   by hand          │           │                                      │ • Login service_role                 │
-└─────┴────────────────────┴───────────┴──────────────────────────────────────┴──────────────────────────────────────┘
-```
+| # | When | Action | What happens to the table | Done by | Step | Login |
+|---|---|---|---|---|---|---|
+| 1 | When you choose to publish. | **Written** | The provider's rows are replaced with the checked draft from table 10. Rate limits (table 22) are replaced in the same transaction. All or nothing. | Deploy workflow `registry-<provider>-deploy.yml`. | Google step 8, Groq step 9, OpenRouter step 21 (publish) | `pipeline_writer` |
+| 2 | Straight after 1. | **Read** | The provider's models are linked to their Artificial Analysis entries. The links are written to table 21. | Same deploy workflow, AA mapping refresh. Script `model_aa_mapping.py`. | — | `pipeline_writer` |
+| 3 | Daily, after the draft refresh. | **Read** | Compared with the draft (table 10). A report lists what publishing would change. | Daily pipeline `registry-<provider>-pipeline.yml`. | Google step 7, Groq step 8, OpenRouter step 20 (compare draft with live) | `pipeline_writer` |
+| 4 | Daily, 23:59 UTC. | **Read** | Models are counted, in total and per provider. The counts are saved as one row in table 30. | Database job `daily-analytics-collection` (pg_cron). Function `public.collect_daily_analytics()`. | — | `postgres` |
+| 5 | Each time a dashboard page loads. | **Read** | The model list is shown in the dashboard. | Dashboard pages `AiModelsVisualization.tsx` and `Analytics.tsx`. | — | anon (public key) |
+| 6 | When you run the ranking script by hand. | **Read** | Used to compute the model ranking, saved to table 23. | Script `populate_model_selection_score.js`. | — | `service_role` |
+
+- Not read by the API. Since #17 the API reads only the ranking (`23_router-model-ranking`). The router service on Render can still read this table, but nothing calls it.
 
 ### Who can access it
 
@@ -185,36 +129,13 @@ Same fields as `10_free-models-staging`; a published row is a copy of its draft 
 
 ### What happens to it, in order
 
-```
-┌─────┬────────────────────┬───────────┬──────────────────────────────────────┬──────────────────────────────────────┐
-│ #   │ When               │ Action    │ What happens to the table            │ Done by                              │
-├─────┼────────────────────┼───────────┼──────────────────────────────────────┼──────────────────────────────────────┤
-│ 1   │ • Daily, 00:00 UTC │ Written   │ • Artificial Analysis's free model   │ • Workflow                           │
-│     │   (GitHub often    │           │   list is fetched (about 735 models) │   refresh-aa-performance-metrics.yml │
-│     │   starts it hours  │           │ • Models without an intelligence     │ • Script                             │
-│     │   late)            │           │   score are skipped (about 120 kept) │   refresh_aa_performance_metrics.py  │
-│     │                    │           │ • All rows are replaced at once (all │ • Login pipeline_writer              │
-│     │                    │           │   or nothing)                        │                                      │
-│     │                    │           │ • Refused if fewer than 50 models,   │                                      │
-│     │                    │           │   or less than half of the current   │                                      │
-│     │                    │           │   count                              │                                      │
-├─────┼────────────────────┼───────────┼──────────────────────────────────────┼──────────────────────────────────────┤
-│ 2   │ • When you choose  │ Read      │ • The list of AA model slugs is used │ • Deploy workflow                    │
-│     │   to publish a     │           │   to link our models to AA entries   │   registry-<provider>-deploy.yml, AA │
-│     │   provider         │           │   (table 21)                         │   mapping refresh                    │
-│     │                    │           │                                      │ • Script model_aa_mapping.py         │
-│     │                    │           │                                      │ • Login pipeline_writer              │
-├─────┼────────────────────┼───────────┼──────────────────────────────────────┼──────────────────────────────────────┤
-│ 3   │ • When the         │ Read      │ • Intelligence scores are used to    │ • Router on Render (justask-router)  │
-│     │   router's cache   │           │   pick a model for each question     │ • Script supabase.js                 │
-│     │   expires (every   │           │                                      │ • Public key (anon)                  │
-│     │   30 minutes)      │           │                                      │                                      │
-├─────┼────────────────────┼───────────┼──────────────────────────────────────┼──────────────────────────────────────┤
-│ 4   │ • When you run the │ Read      │ • Intelligence scores are used to    │ • Script                             │
-│     │   ranking script   │           │   compute the model ranking (table   │   populate_model_selection_score.js  │
-│     │   by hand          │           │   23)                                │ • Login service_role                 │
-└─────┴────────────────────┴───────────┴──────────────────────────────────────┴──────────────────────────────────────┘
-```
+| # | When | Action | What happens to the table | Done by | Step | Login |
+|---|---|---|---|---|---|---|
+| 1 | Daily, 00:00 UTC (GitHub often starts it hours late). | **Written** | Artificial Analysis's free model list is fetched (about 735 models). Models without an intelligence score are skipped (about 120 kept). All rows are replaced at once (all or nothing). Refused if fewer than 50 models, or less than half of the current count. | Workflow `refresh-aa-performance-metrics.yml`. Script `refresh_aa_performance_metrics.py`. | — | `pipeline_writer` |
+| 2 | When you choose to publish a provider. | **Read** | The list of AA model slugs is used to link our models to AA entries (table 21). | Deploy workflow `registry-<provider>-deploy.yml`, AA mapping refresh. Script `model_aa_mapping.py`. | — | `pipeline_writer` |
+| 3 | When you run the ranking script by hand. | **Read** | Intelligence scores are used to compute the model ranking (table 23). | Script `populate_model_selection_score.js`. | — | `service_role` |
+
+- Not read by the API. Since #17 the API reads only the ranking (`23_router-model-ranking`). The router service on Render can still read this table, but nothing calls it.
 
 ### Who can access it
 
@@ -274,6 +195,5 @@ Same fields as `10_free-models-staging`; a published row is a copy of its draft 
 | `model_aa_mapping.py` | `justask-registry/src/utils/model_aa_mapping.py` |
 | `refresh_aa_performance_metrics.py` | `justask-router/selector-service/scripts/db/refresh_aa_performance_metrics.py` |
 | `populate_model_selection_score.js` | `justask-router/selector-service/scripts/db/populate_model_selection_score.js` |
-| `supabase.js` (router) | `justask-router/selector-service/src/utils/supabase.js` |
 | `AiModelsVisualization.tsx`, `Analytics.tsx` | `justask-dashboard/src/components/`, `justask-dashboard/src/pages/` |
 | `public.collect_daily_analytics()` | Database function; scheduled by `pg_cron` job `daily-analytics-collection` |
