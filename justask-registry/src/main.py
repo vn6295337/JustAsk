@@ -5,13 +5,13 @@ AI Models Discoverer - Unified CLI Entry Point.
 This script provides a unified interface for running all discovery pipelines.
 
 Usage:
-    python -m src.main google --steps 1-6
-    python -m src.main groq --steps 1-7
-    python -m src.main openrouter --steps 1-19
+    python -m src.main google --steps 1-7
+    python -m src.main groq --steps 1-8
+    python -m src.main openrouter --steps 1-20
     python -m src.main all --parallel
 
 Examples:
-    # Run Google pipeline (default steps 1-6)
+    # Run Google pipeline (default steps 1-7)
     python -m src.main google
 
     # Run specific steps
@@ -140,7 +140,7 @@ def main():
         epilog="""
 Examples:
     python -m src.main google                    # Run Google pipeline (default steps)
-    python -m src.main groq --steps 1-7          # Run Groq pipeline steps 1-7
+    python -m src.main groq --steps 1-8          # Run Groq pipeline steps 1-8
     python -m src.main openrouter --steps 1,3,5  # Run specific steps
     python -m src.main all                       # Run all pipelines sequentially
     python -m src.main all --parallel            # Run all pipelines in parallel

@@ -9,8 +9,8 @@ Steps:
     3. step_03_scrape_modalities - Scrape modality information
     4. step_04_enrich_modalities - Enrich modality data
     5. step_05_create_db_data - Create database-ready records
-    6. step_06_compare_supabase - Compare with existing Supabase data
-    7. step_07_refresh_working - Refresh working/staging table (manual)
+    6. step_06_refresh_working - Refresh the draft table 10 (daily)
+    7. step_07_compare_supabase - Compare draft (10) with live (11) (daily)
     8. step_08_deploy_main - Deploy to main table (manual)
 
 Usage:

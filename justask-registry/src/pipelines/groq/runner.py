@@ -39,15 +39,15 @@ class GroqPipelineRunner(BasePipelineRunner):
             4: 'step_04_extract_opensource_licenses.py',
             5: 'step_05_consolidate_licenses.py',
             6: 'step_06_normalize_data.py',
-            7: 'step_07_compare_supabase.py',
-            8: 'step_08_refresh_working.py',
+            7: 'step_07_refresh_working.py',
+            8: 'step_08_compare_supabase.py',
             9: 'step_09_deploy_main.py',
         }
 
     @property
     def default_steps(self) -> str:
-        """Default steps to run (excluding manual deploy steps 8-9)."""
-        return '1-7'
+        """Default steps to run (daily: fetch, refresh draft, compare draft with live; publish step 9 is manual)."""
+        return '1-8'
 
     # Legacy letter to step number mapping for backward compatibility
     LEGACY_MAPPING = {
@@ -81,8 +81,8 @@ def parse_arguments():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples (new style):
-  python -m src.pipelines.groq.runner                   # Run default steps 1-7
-  python -m src.pipelines.groq.runner --steps 1-7       # Run steps 1 through 7
+  python -m src.pipelines.groq.runner                   # Run default steps 1-8
+  python -m src.pipelines.groq.runner --steps 1-8       # Run steps 1 through 8
   python -m src.pipelines.groq.runner --steps 1,3,5     # Run specific steps
   python -m src.pipelines.groq.runner --dry-run         # Preview execution
 

@@ -90,7 +90,7 @@ except ImportError:
 # Configuration
 SCRIPT_DIR = Path(__file__).parent
 JSON_FILE = SCRIPT_DIR / get_input_file_path("18_validated_models.json")
-LOG_FILE = SCRIPT_DIR / get_output_file_path("20_refresh_working_report.txt")
+LOG_FILE = SCRIPT_DIR / get_output_file_path("19_refresh_working_report.txt")
 
 # Database configuration
 TABLE_NAME = 'justask."10_free-models-staging"'

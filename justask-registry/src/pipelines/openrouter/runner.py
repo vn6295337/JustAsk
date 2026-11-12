@@ -51,15 +51,15 @@ class OpenRouterPipelineRunner(BasePipelineRunner):
             16: 'step_16_enrich_provider.py',
             17: 'step_17_create_db_data.py',
             18: 'step_18_filter_db_data.py',
-            19: 'step_19_compare_supabase.py',
-            20: 'step_20_refresh_working.py',
+            19: 'step_19_refresh_working.py',
+            20: 'step_20_compare_supabase.py',
             21: 'step_21_deploy_main.py',
         }
 
     @property
     def default_steps(self) -> str:
-        """Default steps to run (excluding manual deploy steps 20-21)."""
-        return '1-19'
+        """Default steps to run (daily: fetch, refresh draft, compare draft with live; publish step 21 is manual)."""
+        return '1-20'
 
     # Legacy letter to step number mapping for backward compatibility
     LEGACY_MAPPING = {
@@ -95,8 +95,8 @@ def parse_arguments():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples (new style):
-  python -m src.pipelines.openrouter.runner                 # Run default steps 1-19
-  python -m src.pipelines.openrouter.runner --steps 1-19    # Run steps 1 through 19
+  python -m src.pipelines.openrouter.runner                 # Run default steps 1-20
+  python -m src.pipelines.openrouter.runner --steps 1-20    # Run steps 1 through 20
   python -m src.pipelines.openrouter.runner --steps 1,3,5   # Run specific steps
   python -m src.pipelines.openrouter.runner --dry-run       # Preview execution
 

@@ -24,8 +24,8 @@ Steps:
     16. step_16_enrich_provider - Enrich provider information
     17. step_17_create_db_data - Create database-ready records
     18. step_18_filter_db_data - Filter database data
-    19. step_19_compare_supabase - Compare with existing Supabase data
-    20. step_20_refresh_working - Refresh working/staging table (manual)
+    19. step_19_refresh_working - Refresh the draft table 10 (daily)
+    20. step_20_compare_supabase - Compare draft (10) with live (11) (daily)
     21. step_21_deploy_main - Deploy to main table (manual)
 
 Usage:

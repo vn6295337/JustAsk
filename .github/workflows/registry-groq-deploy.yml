@@ -3,14 +3,6 @@ name: Groq Deploy (Working → Main)
 on:
   workflow_dispatch:
     inputs:
-      step:
-        description: 'Which step to run'
-        required: true
-        type: choice
-        options:
-          - 'refresh-working (Step 8)'
-          - 'deploy-main (Step 9)'
-          - 'both'
       allow_large_drop:
         description: 'Publish even if the model count drops more than 20% (use only for an intended drop)'
         required: false
@@ -45,17 +37,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Refresh 10_free-models-staging (Step 8)
-      if: ${{ inputs.step == 'refresh-working (Step 8)' || inputs.step == 'both' }}
-      working-directory: justask-registry
-      env:
-        GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-        PIPELINE_SUPABASE_URL: ${{ secrets.PIPELINE_SUPABASE_URL }}
-      run: |
-        python -m src.main groq --steps 8
-
     - name: Deploy to 11_free-models-live (Step 9) + Refresh AA Mapping
-      if: ${{ inputs.step == 'deploy-main (Step 9)' || inputs.step == 'both' }}
       working-directory: justask-registry
       env:
         GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}

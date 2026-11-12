@@ -34,9 +34,10 @@ justask-registry/
 
 ```bash
 # Run from project root
-python3 -m src.main google --steps 1-6
-python3 -m src.main groq --steps 1-7
-python3 -m src.main openrouter --steps 1-19
+python3 -m src.main google --steps 1-7      # daily: fetch, refresh draft (6), compare draft with live (7)
+python3 -m src.main groq --steps 1-8        # daily: ... refresh draft (7), compare (8)
+python3 -m src.main openrouter --steps 1-20 # daily: ... refresh draft (19), compare (20)
+# Publish (manual): Google step 8, Groq step 9, OpenRouter step 21, via registry-<provider>-deploy.yml
 
 # Dry run
 python3 -m src.main google --dry-run
