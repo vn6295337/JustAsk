@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-11-11 10:39:51 IST
+Generated: 2026-11-12 11:43:37 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -49,9 +49,6 @@ MODEL PROVIDER (3 models):
   - Inkling 2 Small
   - North Mini Code
 
-LICENSE NAME (1 models):
-  - Nemotron 3.5 Super VL
-
 DATA QUALITY SUMMARY:
 ------------------------------
 Total models: 12
@@ -60,7 +57,6 @@ Missing license info url: 10 (83.3%)
 Missing license name: 2 (16.7%)
 Missing license url: 2 (16.7%)
 Unknown model provider: 3 (25.0%)
-Unknown license name: 1 (8.3%)
 
 ================================================================================
 
@@ -140,9 +136,9 @@ COMPLETE MODEL RECORDS:
   8. Nemotron 3.5 Super VL
      Provider           : NVIDIA (United States)
      Modalities         : Text, Image, Video → Text
-     License            : UNKNOWN
+     License            : OPENMDW-1.1
      License Info       : 
-     License URL        : Unknown
+     License URL        : https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16/blob/main/README.md
      Official URL       : https://build.nvidia.com/
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys

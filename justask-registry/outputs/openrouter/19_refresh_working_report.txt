@@ -1,0 +1,28 @@
+Supabase OpenRouter Working Version Refresh Report
+Last Run: 2026-11-12 11:43:38 IST
+============================================================
+
+2026-11-12 06:13:38,495 - INFO - ============================================================
+2026-11-12 06:13:38,495 - INFO - SUPABASE OPENROUTER DATA REFRESH STARTED
+2026-11-12 06:13:38,495 - INFO - ============================================================
+2026-11-12 06:13:39,764 - INFO - ✅ Database connection established
+2026-11-12 06:13:39,764 - INFO -    Target table: justask."10_free-models-staging"
+2026-11-12 06:13:40,178 - INFO - 📁 Loading finalized JSON data from /home/runner/work/JustAsk/JustAsk/justask-registry/outputs/openrouter/18_validated_models.json...
+2026-11-12 06:13:40,178 - INFO - ✅ Loaded 12 valid OpenRouter models from JSON
+2026-11-12 06:13:40,178 - INFO - 🧹 Preparing data for database insertion...
+2026-11-12 06:13:40,179 - INFO - ✅ Prepared 12 models for insertion
+2026-11-12 06:13:40,179 - INFO - 📤 Atomically replacing 24 -> 12 OpenRouter rows in justask."10_free-models-staging"...
+2026-11-12 06:13:41,006 - INFO - ✅ Replaced and verified 12 models (committed)
+2026-11-12 06:13:41,007 - INFO - ============================================================
+2026-11-12 06:13:41,007 - INFO - 🎉 SUPABASE OPENROUTER DATA REFRESH COMPLETED SUCCESSFULLY
+2026-11-12 06:13:41,007 - INFO - ============================================================
+2026-11-12 06:13:41,007 - INFO - 📊 Summary:
+2026-11-12 06:13:41,007 - INFO -    • Initial OpenRouter records: 24
+2026-11-12 06:13:41,007 - INFO -    • Records deleted: 24
+2026-11-12 06:13:41,007 - INFO -    • New records inserted: 12
+2026-11-12 06:13:41,007 - INFO -    • Final record count: 12
+2026-11-12 06:13:41,007 - INFO -    • Model-AA mappings: Refreshed for OpenRouter
+2026-11-12 06:13:41,007 - INFO -    • Processing time: 0:00:02.511300
+2026-11-12 06:13:41,007 - INFO -    • Report file: /home/runner/work/JustAsk/JustAsk/justask-registry/outputs/openrouter/19_refresh_working_report.txt
+2026-11-12 06:13:41,007 - INFO - ============================================================
+2026-11-12 06:13:41,007 - INFO - Database connection closed

@@ -1,5 +1,5 @@
 FIELD COMPARISON REPORT: PIPELINE vs SUPABASE
-Generated: 2026-11-11 10:39:53 IST
+Generated: 2026-11-12 11:43:44 IST
 ================================================================================
 
 SUMMARY STATISTICS
@@ -68,7 +68,7 @@ DETAILED COMPARISON BY MODEL
 
 MODEL: Flint
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        | OpenRouter                |                          
 model_provider            | Unknown                   |                          
@@ -88,7 +88,7 @@ provider_api_access       | https://openrouter.ai/s.. |
 
 MODEL: Free Models Router
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        | OpenRouter                | OpenRouter               
 model_provider            | OpenRouter                | OpenRouter               
@@ -108,7 +108,7 @@ provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s.
 
 MODEL: GLM 4.5 Air
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | Z.AI                     
@@ -128,7 +128,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: GPT OSS 120B
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | OpenAI                   
@@ -148,7 +148,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: GPT OSS 20B
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | OpenAI                   
@@ -168,7 +168,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: Gemma 3 12B IT
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | Google                   
@@ -188,7 +188,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: Gemma 3 27B IT
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | Google                   
@@ -208,7 +208,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: Gemma 3 4B IT
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | Google                   
@@ -228,7 +228,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: Gemma 3n E2B IT
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | Google                   
@@ -248,7 +248,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: Gemma 3n E4B IT
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | Google                   
@@ -268,7 +268,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: Gemma 4 26B A4b IT 20260403
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        | OpenRouter                | OpenRouter               
 model_provider            | Google                    | Google                   
@@ -288,7 +288,7 @@ provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s.
 
 MODEL: Gemma 4 31B IT 20260402
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        | OpenRouter                | OpenRouter               
 model_provider            | Google                    | Google                   
@@ -308,7 +308,7 @@ provider_api_access       | https://openrouter.ai/s.. | https://openrouter.ai/s.
 
 MODEL: Hermes 3 405B Instruct
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | Nous Research            
@@ -328,7 +328,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: Inkling 2 Small
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        | OpenRouter                |                          
 model_provider            | Unknown                   |                          
@@ -348,7 +348,7 @@ provider_api_access       | https://openrouter.ai/s.. |
 
 MODEL: LFM2.5-1.2B-Instruct
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | Liquid AI                
@@ -368,7 +368,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: LFM2.5-1.2B-Thinking
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | Liquid AI                
@@ -388,7 +388,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: LFM2.5-2.6B
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        | OpenRouter                |                          
 model_provider            | Liquid AI                 |                          
@@ -408,7 +408,7 @@ provider_api_access       | https://openrouter.ai/s.. |
 
 MODEL: LFM3-1.7B
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        | OpenRouter                |                          
 model_provider            | Liquid AI                 |                          
@@ -428,7 +428,7 @@ provider_api_access       | https://openrouter.ai/s.. |
 
 MODEL: Llama 3.2 3B Instruct
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | Meta                     
@@ -448,7 +448,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: Llama 3.3 70B Instruct
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | Meta                     
@@ -468,7 +468,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: MiniMax M2.5
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | MiniMax                  
@@ -488,7 +488,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: Nemotron 3 Nano 30B A3B
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | NVIDIA                   
@@ -508,7 +508,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: Nemotron 3 Nano Omni
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        | OpenRouter                |                          
 model_provider            | NVIDIA                    |                          
@@ -528,7 +528,7 @@ provider_api_access       | https://openrouter.ai/s.. |
 
 MODEL: Nemotron 3 Super
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | NVIDIA                   
@@ -548,7 +548,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: Nemotron 3 Ultra
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        | OpenRouter                |                          
 model_provider            | NVIDIA                    |                          
@@ -568,7 +568,7 @@ provider_api_access       | https://openrouter.ai/s.. |
 
 MODEL: Nemotron 3.5 Lightning
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        | OpenRouter                |                          
 model_provider            | NVIDIA                    |                          
@@ -588,7 +588,7 @@ provider_api_access       | https://openrouter.ai/s.. |
 
 MODEL: Nemotron 3.5 Super VL
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        | OpenRouter                |                          
 model_provider            | NVIDIA                    |                          
@@ -599,8 +599,8 @@ input_modalities          | Text, Image, Video        |
 output_modalities         | Text                      |                          
 license_info_text         |                           |                          
 license_info_url          |                           |                          
-license_name              | UNKNOWN                   |                          
-license_url               | Unknown                   |                          
+license_name              | OPENMDW-1.1               |                          
+license_url               | https://huggingface.co/.. |                          
 rate_limits               | 20 requests/min 50/day    |                          
 provider_api_access       | https://openrouter.ai/s.. |                          
 
@@ -608,7 +608,7 @@ provider_api_access       | https://openrouter.ai/s.. |
 
 MODEL: Nemotron Nano 12B 2 VL
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | NVIDIA                   
@@ -628,7 +628,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: Nemotron Nano 9B V2
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | NVIDIA                   
@@ -648,7 +648,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: North Mini Code
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        | OpenRouter                |                          
 model_provider            | Unknown                   |                          
@@ -668,7 +668,7 @@ provider_api_access       | https://openrouter.ai/s.. |
 
 MODEL: Qwen3 Coder 480B A35B
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | Alibaba Cloud            
@@ -688,7 +688,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: Qwen3 Next 80B A3B Instruct
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | Alibaba Cloud            
@@ -708,7 +708,7 @@ provider_api_access       |                           | https://openrouter.ai/s.
 
 MODEL: Uncensored
 --------------------------------------------------------------------------------
-Field Name                | Pipeline Value            | Supabase Value           
+Field Name                | Draft (table 10)          | Live (table 11)          
 --------------------------------------------------------------------------------
 inference_provider        |                           | OpenRouter               
 model_provider            |                           | Cognitive Computations   

@@ -1,6 +1,6 @@
 ================================================================================
 STANDARDIZED MODALITIES REPORT
-Generated: 2026-11-11 10:39:50 IST
+Generated: 2026-11-12 11:43:37 IST
 ================================================================================
 
 SUMMARY:
@@ -198,7 +198,7 @@ MODEL 12: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
   ID: nvidia/nemotron-3.5-super-vl:free
   Original Name: NVIDIA: Nemotron 3.5 Super VL (free)
-  HuggingFace ID: nvidia/NVIDIA-Nemotron-3.5-Super-VL
+  HuggingFace ID: nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16
   Canonical Slug: nvidia/nemotron-3.5-super-vl-20261015
   Clean Model Name: Nemotron 3.5 Super VL
   Raw Input Modalities: text, image, video

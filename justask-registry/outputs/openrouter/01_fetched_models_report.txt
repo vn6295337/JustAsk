@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-11-11 10:39:36 IST
+Generated: 2026-11-12 11:43:21 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 433
+  Total models: 432
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI             :  81 models
@@ -295,6 +295,19 @@ PROVIDER BREAKDOWN (Descending Order):
     - muse-spark-open
     - muse-wonder
 
+  MoonshotAI         :  11 models
+    - kimi-k2
+    - kimi-k2-0905
+    - kimi-k2-thinking
+    - kimi-k2.5
+    - kimi-k2.6
+    - kimi-k2.7-code
+    - kimi-k3
+    - kimi-k3.1-pro
+    - kimi-k3.1-pro:batch
+    - kimi-k3:batch
+    - kimi-latest
+
   NVIDIA             :  11 models
     - nemotron-3-nano-30b-a3b
     - nemotron-3-nano-omni-30b-a3b-reasoning:free
@@ -307,18 +320,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - nemotron-3.5-super-vl
     - nemotron-3.5-super-vl:free
     - switchyard
-
-  MoonshotAI         :  10 models
-    - kimi-k2
-    - kimi-k2-0905
-    - kimi-k2-thinking
-    - kimi-k2.5
-    - kimi-k2.6
-    - kimi-k2.7-code
-    - kimi-k3
-    - kimi-k3.1-pro
-    - kimi-k3:batch
-    - kimi-latest
 
   SpaceXAI           :  10 models
     - grok-4.20
@@ -357,14 +358,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - command-r-plus-08-2024
     - command-r7b-12-2024
     - north-mini-code:free
-
-  ByteDance Seed     :   6 models
-    - seed-1.6
-    - seed-1.6-flash
-    - seed-2-1-turbo
-    - seed-2.0-code
-    - seed-2.0-lite
-    - seed-2.0-mini
 
   MiniMax            :   5 models
     - minimax-m2.5
@@ -433,13 +426,18 @@ PROVIDER BREAKDOWN (Descending Order):
     - fugu-ultra
     - fugu-ultra-v2
 
+  ByteDance Seed     :   3 models
+    - seed-2-1-turbo
+    - seed-2.0-lite
+    - seed-2.0-mini
+
   TheDrummer         :   3 models
     - cydonia-24b-v4.1
     - skyfall-36b-v2
     - unslopnemo-12b
 
   Baidu              :   2 models
-    - ernie-5.5-flash-preview
+    - ernie-5.5-flash-preview:free
     - ernie-light-dt-1.0-intl
 
   PrismML            :   2 models
