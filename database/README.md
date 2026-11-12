@@ -35,6 +35,10 @@ Record of changes applied to the Supabase project `askme` (`atilxlecbaqcksnrgzav
 | `applied/2026-11-12_12_staging-table-tidy.sql` | `10_free-models-staging`: current table description; index, primary key and sequence names changed from `working_version_duplicate_duplicate_*` to `free_models_staging_*`; no-op `pipeline_writer` policy dropped (that role bypasses RLS; grants control access) |
 | `applied/2026-11-12_13_live-table-tidy.sql` | `11_free-models-live`: current description; names changed from `ai_models_main_working_version_*` to `free_models_live_*`; no-op `pipeline_writer` policy dropped; `authenticated` read permission removed; `provider_slug` and `rate_limits` required and `(inference_provider, provider_slug)` unique |
 | `applied/2026-11-12_14_benchmark-table-tidy.sql` | `20_router-benchmark-scores`: current description; names changed from `aa_performance_metrics_*` / `idx_aa_metrics_*` to `router_benchmark_scores_*` (keys, index, trigger); no-op `service_role` policy dropped; `authenticated` read permission removed; duplicate index on `aa_slug` dropped |
+| `applied/2026-11-12_15_benchmark-map-tidy.sql` | `21_router-model-benchmark-map`: current description; names changed from `model_aa_mapping_*` / `unique_provider_model` / `idx_*` to `router_model_benchmark_map_*` (keys, indexes, sequence); `authenticated` read permission removed |
+| `applied/2026-11-12_16_benchmark-map-timestamptz.sql` | `21_router-model-benchmark-map`: `created_at` and `updated_at` become `timestamptz` (existing values read as UTC); the mapping refresh now writes time-zone-aware times |
+| `applied/2026-11-12_17_timestamptz-22-23-pin-analytics-utc.sql` | Tables 22 and 23: `created_at`/`updated_at` become `timestamptz` (read as UTC); analytics functions pinned to UTC so the nightly snapshot keeps counting by UTC day |
+| `applied/2026-11-12_18_database-timezone-ist.sql` | Database default time zone set to `Asia/Kolkata`: times are shown in IST (`+05:30`). Stored values unchanged; schedules (GitHub Actions, `pg_cron`) stay in UTC |
 
 ## Not SQL
 

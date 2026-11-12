@@ -17,7 +17,7 @@ Last Updated: 2025-12-04
 """
 
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Optional, List, Tuple, Dict, Any
 import logging
 
@@ -282,8 +282,8 @@ def create_mappings(
                 inference_provider,
                 normalized_provider_slug,
                 aa_slug,
-                datetime.utcnow(),
-                datetime.utcnow()
+                datetime.now(timezone.utc),  # time-zone aware: correct whatever the session time zone
+                datetime.now(timezone.utc)
             ))
             matched_by_provider[inference_provider] = matched_by_provider.get(inference_provider, 0) + 1
         else:
