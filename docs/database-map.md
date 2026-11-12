@@ -78,7 +78,7 @@ Supabase project `askme` (`atilxlecbaqcksnrgzav`), Mumbai region. Updated 2026-1
 
 | Who | Login | Can write |
 |---|---|---|
-| Dashboard, router, API | Anon key | Nothing. Read-only on groups 1–3. |
+| Dashboard, router, API | Anon key | Nothing. Read-only on tables 11, 20–23 and 30; no access to 10 (staging). |
 | CI pipelines | `pipeline_writer` | Tables 10, 11, 20, 21, 22 |
 | Ranking scripts (manual) | Service role key | Tables 22, 23 |
 | Nightly analytics job | `postgres` (via `pg_cron`) | Table 30 |
