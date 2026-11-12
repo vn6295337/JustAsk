@@ -46,9 +46,6 @@ from src.utils import (
     set_current_pipeline,
     get_project_root,
     get_pipeline_db_connection,
-    delete_rate_limits,
-    upsert_rate_limits,
-    parse_rate_limits,
 )
 set_current_pipeline('groq')
 
