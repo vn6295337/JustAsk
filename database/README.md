@@ -32,6 +32,7 @@ Record of changes applied to the Supabase project `askme` (`atilxlecbaqcksnrgzav
 |---|---|
 | `applied/2026-11-11_11_benchmark-scores-drop-old-fields.sql` | `20_router-benchmark-scores` drops the 18 columns the Artificial Analysis Free API cannot fill (Pro-only or retired benchmarks, creator slug, blended price, old median speed). All were empty |
 | `applied/2026-11-11_09_staging-private.sql` | Public roles (`anon`, `authenticated`) lose read access to `10_free-models-staging`; only CI (`pipeline_writer`) and `service_role` can read it |
+| `applied/2026-11-12_12_staging-table-tidy.sql` | `10_free-models-staging`: current table description; index, primary key and sequence names changed from `working_version_duplicate_duplicate_*` to `free_models_staging_*`; no-op `pipeline_writer` policy dropped (that role bypasses RLS; grants control access) |
 
 ## Not SQL
 
