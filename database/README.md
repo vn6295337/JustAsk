@@ -34,6 +34,7 @@ Record of changes applied to the Supabase project `askme` (`atilxlecbaqcksnrgzav
 | `applied/2026-11-11_09_staging-private.sql` | Public roles (`anon`, `authenticated`) lose read access to `10_free-models-staging`; only CI (`pipeline_writer`) and `service_role` can read it |
 | `applied/2026-11-12_12_staging-table-tidy.sql` | `10_free-models-staging`: current table description; index, primary key and sequence names changed from `working_version_duplicate_duplicate_*` to `free_models_staging_*`; no-op `pipeline_writer` policy dropped (that role bypasses RLS; grants control access) |
 | `applied/2026-11-12_13_live-table-tidy.sql` | `11_free-models-live`: current description; names changed from `ai_models_main_working_version_*` to `free_models_live_*`; no-op `pipeline_writer` policy dropped; `authenticated` read permission removed; `provider_slug` and `rate_limits` required and `(inference_provider, provider_slug)` unique |
+| `applied/2026-11-12_14_benchmark-table-tidy.sql` | `20_router-benchmark-scores`: current description; names changed from `aa_performance_metrics_*` / `idx_aa_metrics_*` to `router_benchmark_scores_*` (keys, index, trigger); no-op `service_role` policy dropped; `authenticated` read permission removed; duplicate index on `aa_slug` dropped |
 
 ## Not SQL
 

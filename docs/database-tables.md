@@ -144,7 +144,7 @@ Same fields as 10_free-models-staging; a published row is a copy of its draft ro
 |---|---|---|
 | Benchmark refresh, registry mapping | pipeline_writer | Read, insert, delete |
 | Ranking script, admin scripts | service_role | Read and write (reads only) |
-| Dashboard, API, router | anon (public key) | Read |
+| Public key | anon | Read (no current reader: the router is not called since #17, and the API reads only table 23) |
 
 ### Fields
 
