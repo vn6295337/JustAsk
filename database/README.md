@@ -26,7 +26,12 @@ Record of changes applied to the Supabase project `askme` (`atilxlecbaqcksnrgzav
 | `applied/2026-11-11_08_live-provider-slug.sql` | `11_free-models-live` gets `provider_slug`, backfilled from `10`; the two tables now have the same columns |
 | `pending/2026-11-11_09_staging-private.sql` | **Not applied.** Public roles lose read access to `10_free-models-staging`. Apply after the code reading `11` instead of `10` is merged and deployed |
 | `applied/2026-11-11_10_benchmark-scores-add-aa-fields.sql` | `20_router-benchmark-scores` gets the 16 Artificial Analysis Free API fields it lacked (capability indexes, index version, creator id, index cost, cache prices, `performance_v3` speed, agentic index) |
-| `pending/2026-11-11_11_benchmark-scores-drop-old-fields.sql` | **Not applied.** Drops the 18 columns the Free API cannot fill (Pro-only or retired benchmarks, creator slug, blended price, old median speed). Apply after the new refresh script and router code are merged to main |
+
+## 2026-11-12
+
+| File | Change |
+|---|---|
+| `applied/2026-11-11_11_benchmark-scores-drop-old-fields.sql` | `20_router-benchmark-scores` drops the 18 columns the Artificial Analysis Free API cannot fill (Pro-only or retired benchmarks, creator slug, blended price, old median speed). All were empty |
 
 ## Not SQL
 

@@ -1,6 +1,5 @@
--- NOT APPLIED. Apply only after the new refresh_aa_performance_metrics.py (which no longer writes these
--- columns) is merged to main AND the router code that selected math_index is merged. Otherwise the nightly
--- refresh fails (it rolls back and keeps old data) and the router's /best-model query errors.
+-- Applied 2026-11-12 via the Supabase Management API, after PR #12 was merged and the AA refresh
+-- (run 43140060439) filled the new columns. All 18 dropped columns were empty in all 122 rows.
 -- Step 2 of 2 of aligning justask."20_router-benchmark-scores" with the Artificial Analysis Free API.
 begin;
 alter table justask."20_router-benchmark-scores"
