@@ -1,16 +1,16 @@
 FIELD COMPARISON REPORT: GOOGLE PIPELINE vs SUPABASE
 ================================================================================
-Generated: 2026-11-12 11:41:46 IST
+Generated: 2026-11-13 11:02:51 IST
 ================================================================================
 
 SUMMARY STATISTICS
 --------------------------------------------------------------------------------
 
 1. OVERALL STATISTICS:
-   • Total models processed: 30
+   • Total models processed: 31
    • Models in both systems: 28
    • Models with differences: 0
-   • Models in pipeline only (not in Supabase): 2
+   • Models in pipeline only (not in Supabase): 3
    • Models in Supabase only (not in pipeline): 0
 
 2. FIELD-BY-FIELD ANALYSIS (for models in both systems):
@@ -55,8 +55,8 @@ SUMMARY STATISTICS
      - Differences: 0
 
 3. CATEGORIZED BREAKDOWN:
-   • New models (pipeline only): 2
-     Models: Gemini 4 Carbon, Gemini Decision 1
+   • New models (pipeline only): 3
+     Models: Gemini 4 Carbon, Gemini 4 Hydrogen, Gemini Decision 1
    • Existing models with differences: 0
 
 ================================================================================
@@ -470,6 +470,26 @@ Field Name                | Draft (table 10)                                   |
 inference_provider        | Google                                             |                                                   
 model_provider            | Google                                             |                                                   
 human_readable_name       | Gemini 4 Carbon                                    |                                                   
+model_provider_country    | United States                                      |                                                   
+official_url              | https://deepmind.google/models/gemini/             |                                                   
+input_modalities          | Unknown                                            |                                                   
+output_modalities         | Unknown                                            |                                                   
+license_info_text         | Google                                             |                                                   
+license_info_url          | https://developers.google.com/terms                |                                                   
+license_name              | GEMINI                                             |                                                   
+license_url               | https://ai.google.dev/gemini-api/terms             |                                                   
+rate_limits               | 15 requests/min, 1M tokens/min, 200 requests/day   |                                                   
+provider_api_access       | https://aistudio.google.com/apikey                 |                                                   
+
+==================================================================================================================================
+
+MODEL: Gemini 4 Hydrogen
+----------------------------------------------------------------------------------------------------------------------------------
+Field Name                | Draft (table 10)                                   | Live (table 11)                                   
+----------------------------------------------------------------------------------------------------------------------------------
+inference_provider        | Google                                             |                                                   
+model_provider            | Google                                             |                                                   
+human_readable_name       | Gemini 4 Hydrogen                                  |                                                   
 model_provider_country    | United States                                      |                                                   
 official_url              | https://deepmind.google/models/gemini/             |                                                   
 input_modalities          | Unknown                                            |                                                   

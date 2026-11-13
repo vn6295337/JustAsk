@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-11-12 11:41:33 IST",
-    "total_models": 63,
+    "generated": "2026-11-13 11:02:38 IST",
+    "total_models": 64,
     "api_source": "Google Generative Language API"
   },
   "models": [
@@ -611,6 +611,24 @@
       "description": "Gemini 4 Carbon",
       "inputTokenLimit": 1048576,
       "outputTokenLimit": 32768,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-4-hydrogen",
+      "version": "3.0",
+      "displayName": "Gemini 4 Hydrogen",
+      "description": "Gemini 4 Hydrogen",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
       "supportedGenerationMethods": [
         "generateContent",
         "countTokens",

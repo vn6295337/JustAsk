@@ -1,11 +1,11 @@
 === GOOGLE MODELS FILTERING REPORT ===
-Generated: 2026-11-12 11:41:33 IST
+Generated: 2026-11-13 11:02:38 IST
 
 === SUMMARY ===
-Total Input Models: 63
-Models Included: 30
+Total Input Models: 64
+Models Included: 31
 Models Excluded: 33
-Filtering Success Rate: 47.6%
+Filtering Success Rate: 48.4%
 
 === EXCLUDED MODELS ===
  1. gemini-2.5-flash-preview-tts
@@ -63,16 +63,17 @@ Filtering Success Rate: 47.6%
 18. gemini-3.8-flash
 19. gemini-4-argon
 20. gemini-4-carbon
-21. lyria-3.5
-22. gemini-3.8-flash-tts
-23. gemini-3.8-flash-lite-tts
-24. gemini-embedding-001
-25. gemini-embedding-2
-26. aqa
-27. gemini-3.5-transcribe-live
-28. gemini-3.8-live
-29. gemini-3.8-live-extended-thinking
-30. gemini-decision-1
+21. gemini-4-hydrogen
+22. lyria-3.5
+23. gemini-3.8-flash-tts
+24. gemini-3.8-flash-lite-tts
+25. gemini-embedding-001
+26. gemini-embedding-2
+27. aqa
+28. gemini-3.5-transcribe-live
+29. gemini-3.8-live
+30. gemini-3.8-live-extended-thinking
+31. gemini-decision-1
 
 === EXCLUSION BREAKDOWN ===
 29 models: Experimental/Preview model - production-ready models only

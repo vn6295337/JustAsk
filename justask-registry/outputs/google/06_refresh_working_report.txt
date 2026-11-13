@@ -1,28 +1,28 @@
 Supabase Google Working Version Refresh Report
-Last Run: 2026-11-12 06:11:39
+Last Run: 2026-11-13 05:32:44
 ============================================================
 
-2026-11-12 06:11:39,319 - INFO - ============================================================
-2026-11-12 06:11:39,319 - INFO - SUPABASE GOOGLE DATA REFRESH STARTED
-2026-11-12 06:11:39,319 - INFO - ============================================================
-2026-11-12 06:11:40,908 - INFO - ✅ Database connection established
-2026-11-12 06:11:40,908 - INFO -    Target table: justask."10_free-models-staging"
-2026-11-12 06:11:41,413 - INFO - 📁 Loading finalized JSON data from /home/runner/work/JustAsk/JustAsk/justask-registry/outputs/google/05_normalized_models.json...
-2026-11-12 06:11:41,413 - INFO - ✅ Loaded 30 valid Google models from JSON
-2026-11-12 06:11:41,413 - INFO - 🧹 Preparing data for database insertion...
-2026-11-12 06:11:41,413 - INFO - ✅ Prepared 30 models for insertion
-2026-11-12 06:11:41,413 - INFO - 📤 Atomically replacing 28 -> 30 Google rows in justask."10_free-models-staging"...
-2026-11-12 06:11:42,604 - INFO - ✅ Replaced and verified 30 models (committed)
-2026-11-12 06:11:42,604 - INFO - ============================================================
-2026-11-12 06:11:42,604 - INFO - 🎉 SUPABASE GOOGLE DATA REFRESH COMPLETED SUCCESSFULLY
-2026-11-12 06:11:42,604 - INFO - ============================================================
-2026-11-12 06:11:42,604 - INFO - 📊 Summary:
-2026-11-12 06:11:42,604 - INFO -    • Initial Google records: 28
-2026-11-12 06:11:42,605 - INFO -    • Records deleted: 28
-2026-11-12 06:11:42,605 - INFO -    • New records inserted: 30
-2026-11-12 06:11:42,605 - INFO -    • Final record count: 30
-2026-11-12 06:11:42,605 - INFO -    • Model-AA mappings: Refreshed for Google
-2026-11-12 06:11:42,605 - INFO -    • Processing time: 0:00:03.285295
-2026-11-12 06:11:42,605 - INFO -    • Report file: /home/runner/work/JustAsk/JustAsk/justask-registry/outputs/google/06_refresh_working_report.txt
-2026-11-12 06:11:42,605 - INFO - ============================================================
-2026-11-12 06:11:42,605 - INFO - Database connection closed
+2026-11-13 05:32:44,336 - INFO - ============================================================
+2026-11-13 05:32:44,336 - INFO - SUPABASE GOOGLE DATA REFRESH STARTED
+2026-11-13 05:32:44,336 - INFO - ============================================================
+2026-11-13 05:32:45,866 - INFO - ✅ Database connection established
+2026-11-13 05:32:45,866 - INFO -    Target table: justask."10_free-models-staging"
+2026-11-13 05:32:46,399 - INFO - 📁 Loading finalized JSON data from /home/runner/work/JustAsk/JustAsk/justask-registry/outputs/google/05_normalized_models.json...
+2026-11-13 05:32:46,400 - INFO - ✅ Loaded 31 valid Google models from JSON
+2026-11-13 05:32:46,400 - INFO - 🧹 Preparing data for database insertion...
+2026-11-13 05:32:46,400 - INFO - ✅ Prepared 31 models for insertion
+2026-11-13 05:32:46,400 - INFO - 📤 Atomically replacing 30 -> 31 Google rows in justask."10_free-models-staging"...
+2026-11-13 05:32:47,678 - INFO - ✅ Replaced and verified 31 models (committed)
+2026-11-13 05:32:47,678 - INFO - ============================================================
+2026-11-13 05:32:47,678 - INFO - 🎉 SUPABASE GOOGLE DATA REFRESH COMPLETED SUCCESSFULLY
+2026-11-13 05:32:47,678 - INFO - ============================================================
+2026-11-13 05:32:47,678 - INFO - 📊 Summary:
+2026-11-13 05:32:47,678 - INFO -    • Initial Google records: 30
+2026-11-13 05:32:47,678 - INFO -    • Records deleted: 30
+2026-11-13 05:32:47,678 - INFO -    • New records inserted: 31
+2026-11-13 05:32:47,678 - INFO -    • Final record count: 31
+2026-11-13 05:32:47,678 - INFO -    • Model-AA mappings: Refreshed for Google
+2026-11-13 05:32:47,678 - INFO -    • Processing time: 0:00:03.341810
+2026-11-13 05:32:47,678 - INFO -    • Report file: /home/runner/work/JustAsk/JustAsk/justask-registry/outputs/google/06_refresh_working_report.txt
+2026-11-13 05:32:47,678 - INFO - ============================================================
+2026-11-13 05:32:47,678 - INFO - Database connection closed
