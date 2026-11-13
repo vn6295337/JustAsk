@@ -131,8 +131,9 @@ def transform_to_db_format(api_data: List[Dict]) -> List[Dict]:
         # Extract intelligence index (primary metric)
         intelligence_index = evaluations.get("artificial_analysis_intelligence_index")
 
-        # Skip models without intelligence index or slug (slug is the join key)
-        if intelligence_index is None or not model.get("slug"):
+        # Keep every model with a slug (the join key). Models AA has not scored keep an empty
+        # intelligence_index, so table 21 can tell "AA lists it unscored" from "no AA entry".
+        if not model.get("slug") or not model.get("id") or not model.get("name"):
             continue
 
         record = {
@@ -173,7 +174,23 @@ def transform_to_db_format(api_data: List[Dict]) -> List[Dict]:
 
         records.append(record)
 
-    log(f"Transformed {len(records)} records (filtered out {len(api_data) - len(records)} without intelligence index or slug)")
+    # aa_slug and aa_model_id are unique in the table: keep one record per slug and per id,
+    # preferring a scored one, so a duplicate in AA's list cannot fail the whole refresh.
+    skipped = len(api_data) - len(records)
+    records.sort(key=lambda r: r["intelligence_index"] is None)
+    seen_slugs, seen_ids, unique_records = set(), set(), []
+    for r in records:
+        if r["aa_slug"] in seen_slugs or r["aa_model_id"] in seen_ids:
+            continue
+        seen_slugs.add(r["aa_slug"]); seen_ids.add(r["aa_model_id"])
+        unique_records.append(r)
+    if len(unique_records) != len(records):
+        log(f"Dropped {len(records) - len(unique_records)} duplicate slug/id records")
+    records = unique_records
+
+    scored = sum(1 for r in records if r["intelligence_index"] is not None)
+    log(f"Transformed {len(records)} records ({scored} with an intelligence score; "
+        f"skipped {skipped} without slug, id or name)")
 
     return records
 

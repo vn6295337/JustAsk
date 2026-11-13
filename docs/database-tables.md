@@ -76,9 +76,10 @@ Plain-English reference for the main tables in schema justask (Supabase project 
 | 1 | When you choose to publish. | **Written** | The provider's rows are replaced with the checked draft from table 10. Rate limits (table 22) are replaced in the same transaction. All or nothing. | Deploy workflow registry-{provider}-deploy.yml. | Google step 8, Groq step 9, OpenRouter step 21 (publish) | pipeline_writer |
 | 2 | Straight after 1. | **Read** | The provider's models are linked to their Artificial Analysis entries. The links are written to table 21. | Same deploy workflow, AA mapping refresh. Script model_aa_mapping.py. | — | pipeline_writer |
 | 3 | Daily, after the draft refresh. | **Read** | Compared with the draft (table 10). A report lists what publishing would change. | Daily pipeline registry-{provider}-pipeline.yml. | Google step 7, Groq step 8, OpenRouter step 20 (compare draft with live) | pipeline_writer |
-| 4 | Daily, 23:59 UTC. | **Read** | Models are counted, in total and per provider. The counts are saved as one row in table 30. | Database job daily-analytics-collection (pg_cron). Function public.collect_daily_analytics(). | — | postgres |
-| 5 | Each time a dashboard page loads. | **Read** | The model list is shown in the dashboard. | Dashboard pages AiModelsVisualization.tsx and Analytics.tsx. | — | anon (public key) |
-| 6 | When you run the ranking script by hand. | **Read** | Used to compute the model ranking, saved to table 23. | Script populate_model_selection_score.js. | — | service_role |
+| 4 | Daily, after the AA benchmark refresh. | **Read** | All providers' models are linked again to their Artificial Analysis entries. The links are written to table 21. | Workflow refresh-aa-performance-metrics.yml. Script model_aa_mapping.py. | — | pipeline_writer |
+| 5 | Daily, 23:59 UTC. | **Read** | Models are counted, in total and per provider. The counts are saved as one row in table 30. | Database job daily-analytics-collection (pg_cron). Function public.collect_daily_analytics(). | — | postgres |
+| 6 | Each time a dashboard page loads. | **Read** | The model list is shown in the dashboard. | Dashboard pages AiModelsVisualization.tsx and Analytics.tsx. | — | anon (public key) |
+| 7 | When you run the ranking script by hand. | **Read** | Used to compute the model ranking, saved to table 23. | Script populate_model_selection_score.js. | — | service_role |
 
 - Not read by the API. Since #17 the API reads only the ranking (23_router-model-ranking). The router service on Render can still read this table, but nothing calls it.
 
@@ -133,9 +134,10 @@ Same fields as 10_free-models-staging; a published row is a copy of its draft ro
 
 | # | When | Action | What happens to the table | Done by | Step | Login |
 |---|---|---|---|---|---|---|
-| 1 | Daily, 00:00 UTC (GitHub often starts it hours late). | **Written** | Artificial Analysis's free model list is fetched (about 735 models). Models without an intelligence score are skipped (about 120 kept). All rows are replaced at once (all or nothing). Refused if fewer than 50 models, or less than half of the current count. | Workflow refresh-aa-performance-metrics.yml. Script refresh_aa_performance_metrics.py. | — | pipeline_writer |
-| 2 | When you choose to publish a provider. | **Read** | The list of AA model slugs is used to link our models to AA entries (table 21). | Deploy workflow registry-{provider}-deploy.yml, AA mapping refresh. Script model_aa_mapping.py. | — | pipeline_writer |
-| 3 | When you run the ranking script by hand. | **Read** | Intelligence scores are used to compute the model ranking (table 23). | Script populate_model_selection_score.js. | — | service_role |
+| 1 | Daily, 00:00 UTC (GitHub often starts it hours late). | **Written** | Artificial Analysis's free model list is fetched (about 735 models). All are kept; about 120 have an intelligence score, the rest have it empty. All rows are replaced at once (all or nothing). Refused if fewer than 50 models, or less than half of the current count. | Workflow refresh-aa-performance-metrics.yml. Script refresh_aa_performance_metrics.py. | — | pipeline_writer |
+| 2 | Straight after 1. | **Read** | AA slugs and scores are used to link all providers' models to AA entries (table 21). | Same workflow. Script model_aa_mapping.py. | — | pipeline_writer |
+| 3 | When you choose to publish a provider. | **Read** | AA slugs and scores are used to link the provider's models to AA entries (table 21). | Deploy workflow registry-{provider}-deploy.yml, AA mapping refresh. Script model_aa_mapping.py. | — | pipeline_writer |
+| 4 | When you run the ranking script by hand. | **Read** | Intelligence scores are used to compute the model ranking (table 23). | Script populate_model_selection_score.js. | — | service_role |
 
 - Not read by the API. Since #17 the API reads only the ranking (23_router-model-ranking). The router service on Render can still read this table, but nothing calls it.
 
@@ -181,7 +183,7 @@ Same fields as 10_free-models-staging; a published row is a copy of its draft ro
 | updated_at | When the row was last changed | (ours) | 2026-11-12 02:15 UTC |
 
 ### Rules
-- Only models that have an intelligence score are kept.
+- Every AA model with a slug is kept. intelligence_index is empty for models AA has not scored (most of the list).
 - The whole table is replaced on each refresh; rows are never edited one at a time.
 - Empty means AA has no value for that model; it never means zero.
 - aa_slug and aa_model_id are unique.

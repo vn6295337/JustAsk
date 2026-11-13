@@ -1,726 +1,292 @@
 #!/usr/bin/env python3
 """
-Shared Model-to-AA Mapping Utilities
-=====================================
+Model-to-Artificial-Analysis links (justask."21_router-model-benchmark-map")
+===========================================================================
 
-Single source of truth for refreshing justask."21_router-model-benchmark-map" table.
-Used by the deploy workflows after publishing (reads the published list).
+Builds one row per model in 11_free-models-live, saying how it links to an
+Artificial Analysis (AA) entry in 20_router-benchmark-scores:
 
-Purpose:
-- Maps (inference_provider, provider_slug) from 11_free-models-live to aa_slug
-- Uses UPSERT pattern with ON CONFLICT for safe, idempotent updates
-- Provides enhanced error reporting for unmatched models
+    status                  aa_slug   meaning
+    linked                  set       matched to a scored AA entry
+    linked_effort_unknown   set       matched, but AA scores several effort levels
+                                      (low / medium / high ...) and we cannot tell which
+                                      one the free API runs; linked to AA's plain slug
+    aa_unscored             set       AA lists the model but has no intelligence score
+    not_chat_model          empty     embedding, voice, image, transcription, music ...
+    no_match                empty     no AA entry found
 
-Author: AI Models Discovery Pipeline
-Version: 3.0 (Unified)
-Last Updated: 2025-12-04
+Rows have source 'auto' (made here) or 'manual' (set by hand). A refresh deletes and
+rebuilds 'auto' rows only; a model with a 'manual' row is never touched.
+
+Matching is strict: our slug and the AA slug, both in the same format (lowercase,
+hyphens, no date or "-it"/"-preview"-style ending), must be identical, optionally after a
+single known maker prefix on AA's side (e.g. "nvidia-"). No "contains" or "ends with".
+
+Run by:
+- the publish step of each provider (deploy workflows), for that provider;
+- the daily AA refresh workflow, for all providers.
 """
 
+import os
+import re
 import sys
-from datetime import datetime, timezone
-from typing import Optional, List, Tuple, Dict, Any
 import logging
+from collections import Counter
+from typing import Any, Dict, Iterable, List, Optional, Set, Tuple
 
 try:
     import psycopg2
     from psycopg2.extras import execute_values
-    import re
-    from difflib import SequenceMatcher
 except ImportError:
     print("Error: psycopg2 package not found. Install with: pip install psycopg2-binary")
     sys.exit(1)
 
+MAP_TABLE = 'justask."21_router-model-benchmark-map"'
+LIVE_TABLE = 'justask."11_free-models-live"'
+SCORES_TABLE = 'justask."20_router-benchmark-scores"'
+
+LINKED = 'linked'
+LINKED_EFFORT_UNKNOWN = 'linked_effort_unknown'
+AA_UNSCORED = 'aa_unscored'
+NOT_CHAT_MODEL = 'not_chat_model'
+NO_MATCH = 'no_match'
+STATUSES = (LINKED, LINKED_EFFORT_UNKNOWN, AA_UNSCORED, NOT_CHAT_MODEL, NO_MATCH)
+SCORED_STATUSES = (LINKED, LINKED_EFFORT_UNKNOWN)  # what the ranking uses
+
+# AA effort-level variants of one model: "<slug>-low", "<slug>-medium", ...
+EFFORT_SUFFIXES = ('minimal', 'low', 'medium', 'high', 'xhigh', 'max', 'reasoning', 'non-reasoning')
+# One-word maker prefixes AA puts in front of some slugs ("nvidia-nemotron-...")
+MAKER_PREFIXES = ('nvidia', 'meta', 'google', 'mistral', 'deepseek', 'openai', 'microsoft',
+                  'ibm', 'amazon', 'cohere', 'xai', 'alibaba', 'moonshotai', 'minimax')
+# Slug words that mark a model that does not answer chat questions
+NON_CHAT_WORDS = {'embedding', 'embeddings', 'tts', 'transcribe', 'whisper', 'image', 'imagen',
+                  'veo', 'lyria', 'music', 'banana', 'aqa', 'guard', 'live'}
+# Endings the providers add that AA leaves out
+STRIP_SUFFIXES = ('-instruct', '-chat', '-it', '-turbo', '-preview', '-exp')
+DATE_SUFFIX = re.compile(r'-(\d{8}|\d{4}|\d{2}-\d{2})$')
+
 
 def normalize_slug(slug: str) -> str:
-    """
-    Normalize provider_slug to match aa_slug format.
+    """Bring a provider slug to AA's format: lowercase, hyphens, no date or common suffix.
 
-    Converts special characters (periods, spaces, underscores) to hyphens
-    to maintain consistency with aa_slug naming convention.
-    Also strips common suffixes like -it, -instruct, -chat.
-
-    Examples:
-        "gpt-4.0" -> "gpt-4-0"
-        "llama 3.1" -> "llama-3-1"
-        "model_name_v2" -> "model-name-v2"
-        "gemma-3-12b-it" -> "gemma-3-12b"
-
-    Args:
-        slug: Original provider_slug from 11_free-models-live
-
-    Returns:
-        Normalized slug with special characters converted to hyphens
+    "gemini-3.5-flash" -> "gemini-3-5-flash"; "gemma-4-31b-it-20260402" -> "gemma-4-31b";
+    "qwen3-next-80b-a3b-instruct-2509" -> "qwen3-next-80b-a3b".
     """
     if not slug:
-        return slug
-
-    # Replace periods, spaces, and underscores with hyphens
-    normalized = re.sub(r'[.\s_]+', '-', slug)
-
-    # Remove consecutive hyphens
-    normalized = re.sub(r'-+', '-', normalized)
-
-    # Remove leading/trailing hyphens
-    normalized = normalized.strip('-')
-
-    # Convert to lowercase for consistency
-    normalized = normalized.lower()
-
-    # Strip common model suffixes for better matching
-    # Order matters: strip longer suffixes first
-    suffixes_to_strip = [
-        '-instruct',
-        '-chat',
-        '-it',
-        '-turbo',
-        '-preview',
-        '-exp'
-    ]
-    for suffix in suffixes_to_strip:
-        if normalized.endswith(suffix):
-            normalized = normalized[:-len(suffix)]
-            break  # Only strip one suffix
-
-    return normalized
+        return ''
+    s = re.sub(r'[.\s_]+', '-', slug.strip().lower())
+    s = re.sub(r'-+', '-', s).strip('-')
+    s = DATE_SUFFIX.sub('', s)
+    for suffix in STRIP_SUFFIXES:
+        if s.endswith(suffix):
+            s = s[:-len(suffix)]
+            break
+    return s
 
 
-def calculate_similarity(str1: str, str2: str) -> float:
-    """
-    Calculate similarity ratio between two strings using SequenceMatcher.
-
-    Args:
-        str1: First string
-        str2: Second string
-
-    Returns:
-        Similarity ratio between 0.0 and 1.0 (1.0 = identical)
-    """
-    return SequenceMatcher(None, str1.lower(), str2.lower()).ratio()
-
-
-def find_nearest_aa_slugs(
-    provider_slug: str,
-    aa_slugs: List[str],
-    top_n: int = 5
-) -> List[Tuple[str, float]]:
-    """
-    Find the top N nearest aa_slugs for a given provider_slug using similarity scoring.
-
-    Args:
-        provider_slug: The provider slug to match
-        aa_slugs: List of available aa_slug values
-        top_n: Number of top matches to return (default: 5)
-
-    Returns:
-        List of (aa_slug, similarity_score) tuples, sorted by similarity (highest first)
-    """
-    # Normalize provider_slug for comparison
-    normalized_provider = normalize_slug(provider_slug)
-
-    # Calculate similarity scores for all aa_slugs
-    similarities = []
-    for aa_slug in aa_slugs:
-        score = calculate_similarity(normalized_provider, aa_slug)
-        similarities.append((aa_slug, score))
-
-    # Sort by similarity score (descending) and return top N
-    similarities.sort(key=lambda x: x[1], reverse=True)
-    return similarities[:top_n]
+def is_chat_model(provider_slug: str, output_modalities: Optional[str]) -> bool:
+    """False for embedding, voice, image, transcription, music and similar models."""
+    words = set(re.split(r'[-.\s_/]+', (provider_slug or '').lower()))
+    if words & NON_CHAT_WORDS:
+        return False
+    out = (output_modalities or '').strip().lower()
+    if 'embedding' in out:
+        return False
+    if out and out != 'unknown' and 'text' not in out:
+        return False
+    return True
 
 
-def fetch_working_version_models(
-    conn,
-    inference_provider: Optional[str] = None
-) -> List[Tuple[str, str]]:
-    """
-    Fetch all unique (inference_provider, provider_slug) pairs from 11_free-models-live.
-
-    Args:
-        conn: Database connection
-        inference_provider: Optional filter for specific provider
-
-    Returns:
-        List of (inference_provider, provider_slug) tuples
-    """
-    try:
-        with conn.cursor() as cur:
-            if inference_provider:
-                cur.execute("""
-                    SELECT DISTINCT
-                        inference_provider,
-                        provider_slug
-                    FROM justask."11_free-models-live"
-                    WHERE provider_slug IS NOT NULL
-                      AND provider_slug != ''
-                      AND inference_provider = %s
-                    ORDER BY inference_provider, provider_slug
-                """, (inference_provider,))
-            else:
-                cur.execute("""
-                    SELECT DISTINCT
-                        inference_provider,
-                        provider_slug
-                    FROM justask."11_free-models-live"
-                    WHERE provider_slug IS NOT NULL
-                      AND provider_slug != ''
-                    ORDER BY inference_provider, provider_slug
-                """)
-
-            models = cur.fetchall()
-            return models
-    except Exception as e:
-        print(f"ERROR: Failed to fetch 11_free-models-live models: {e}")
-        return []
-
-
-def fetch_aa_performance_slugs(conn) -> List[str]:
-    """
-    Fetch all unique aa_slug values from justask."20_router-benchmark-scores".
-
-    Args:
-        conn: Database connection
-
-    Returns:
-        List of aa_slug strings
-    """
-    try:
-        with conn.cursor() as cur:
-            cur.execute("""
-                SELECT DISTINCT aa_slug
-                FROM justask."20_router-benchmark-scores"
-                ORDER BY aa_slug
-            """)
-            aa_slugs = [row[0] for row in cur.fetchall()]
-            return aa_slugs
-    except Exception as e:
-        print(f"ERROR: Failed to fetch AA performance slugs: {e}")
-        return []
-
-
-def match_provider_slug_to_aa_slug(
-    provider_slug: str,
-    inference_provider: str,
-    aa_slugs: List[str]
-) -> Optional[str]:
-    """
-    Attempt to match provider_slug to aa_slug using multiple strategies.
-
-    Normalizes provider_slug first to match aa_slug format (converts special
-    characters like periods, spaces, underscores to hyphens).
-
-    Matching strategies (in order):
-    1. Exact match: normalized_provider_slug == aa_slug
-    2. Suffix match: aa_slug ends with normalized_provider_slug
-    3. Contains match: normalized_provider_slug in aa_slug
-
-    Args:
-        provider_slug: The model slug from provider (will be normalized)
-        inference_provider: The provider name (for logging)
-        aa_slugs: List of available aa_slug values
-
-    Returns:
-        Matched aa_slug or None if no match found
-    """
-    # Normalize provider_slug to match aa_slug format
-    normalized_slug = normalize_slug(provider_slug)
-
-    # Strategy 1: Exact match
-    for aa_slug in aa_slugs:
-        if aa_slug.lower() == normalized_slug:
-            return aa_slug
-
-    # Strategy 2: Suffix match (e.g., "llama-3-1-8b-instant" matches "meta-llama-3-1-8b-instant")
-    for aa_slug in aa_slugs:
-        if aa_slug.lower().endswith(normalized_slug):
-            return aa_slug
-
-    # Strategy 3: Contains match (e.g., "gpt-4o" in "gpt-4o-2024-05-13")
-    for aa_slug in aa_slugs:
-        if normalized_slug in aa_slug.lower():
-            return aa_slug
-
+def find_aa_slug(provider_slug: str, aa_slugs: Set[str]) -> Optional[str]:
+    """Strict match: both slugs in the same format must be identical, optionally after one
+    known maker prefix on AA's side ("nvidia-..."). An exact AA slug wins over a normalized one."""
+    norm = normalize_slug(provider_slug)
+    if not norm:
+        return None
+    candidates = [norm] + [f'{prefix}-{norm}' for prefix in MAKER_PREFIXES]
+    for c in candidates:
+        if c in aa_slugs:
+            return c
+    by_norm: Dict[str, str] = {}
+    for aa in sorted(aa_slugs):
+        by_norm.setdefault(normalize_slug(aa), aa)
+    for c in candidates:
+        if c in by_norm:
+            return by_norm[c]
     return None
 
 
-def create_mappings(
-    models: List[Tuple[str, str]],
-    aa_slugs: List[str],
-    logger: Optional[logging.Logger] = None
-) -> Tuple[List[Tuple], Dict[str, List[Tuple[str, List[Tuple[str, float]]]]]]:
-    """
-    Create mappings between provider_slug and aa_slug with enhanced reporting.
-
-    Args:
-        models: List of (inference_provider, provider_slug) tuples
-        aa_slugs: List of available aa_slug values
-        logger: Optional logger for output
-
-    Returns:
-        Tuple of (mappings_list, unmatched_with_nearest_dict)
-        where unmatched_with_nearest_dict maps provider to list of
-        (provider_slug, nearest_matches) tuples
-    """
-    log = logger.info if logger else print
-
-    mappings = []
-    unmatched_by_provider: Dict[str, List[Tuple[str, List[Tuple[str, float]]]]] = {}
-    matched_by_provider: Dict[str, int] = {}
-
-    log("")
-    log("=" * 70)
-    log("MATCHING PROVIDER MODELS TO AA PERFORMANCE SLUGS")
-    log("=" * 70)
-
-    for inference_provider, provider_slug in models:
-        aa_slug = match_provider_slug_to_aa_slug(provider_slug, inference_provider, aa_slugs)
-
-        if aa_slug:
-            # Normalize provider_slug to match aa_slug format (convert special chars to hyphens)
-            normalized_provider_slug = normalize_slug(provider_slug)
-
-            mappings.append((
-                inference_provider,
-                normalized_provider_slug,
-                aa_slug,
-                datetime.now(timezone.utc),  # time-zone aware: correct whatever the session time zone
-                datetime.now(timezone.utc)
-            ))
-            matched_by_provider[inference_provider] = matched_by_provider.get(inference_provider, 0) + 1
-        else:
-            # Find nearest aa_slugs for unmatched models
-            nearest_matches = find_nearest_aa_slugs(provider_slug, aa_slugs, top_n=5)
-
-            if inference_provider not in unmatched_by_provider:
-                unmatched_by_provider[inference_provider] = []
-            unmatched_by_provider[inference_provider].append((provider_slug, nearest_matches))
-
-    # Calculate statistics
-    total_models = len(models)
-    total_matched = len(mappings)
-    total_unmatched = total_models - total_matched
-    match_rate = (total_matched / total_models * 100) if total_models > 0 else 0
-
-    log("")
-    log("=" * 70)
-    log("MAPPING RESULTS SUMMARY")
-    log("=" * 70)
-    log(f"✅ Total models processed: {total_models}")
-    log(f"✅ Successfully matched: {total_matched} ({match_rate:.1f}%)")
-    log(f"⚠️  Unmatched models: {total_unmatched}")
-    log("")
-
-    # Show matched breakdown by provider
-    if matched_by_provider:
-        log("Matched by provider:")
-        for provider in sorted(matched_by_provider.keys()):
-            log(f"  • {provider}: {matched_by_provider[provider]} models")
-        log("")
-
-    # Enhanced unmatched reporting - TABULAR display with nearest matches
-    if unmatched_by_provider:
-        log("⚠️" * 35)
-        log("UNMATCHED MODELS WITH NEAREST AA_SLUG CANDIDATES")
-        log("⚠️" * 35)
-        log("")
-        log("The following models from 11_free-models-live could not be automatically")
-        log("mapped to AA performance metrics. Review the nearest candidates below:")
-        log("")
-
-        # Table header
-        log("=" * 120)
-        log(f"{'PROVIDER':<20} | {'PROVIDER_SLUG':<35} | {'NEAREST AA_SLUG CANDIDATES (Top 5)'}")
-        log("=" * 120)
-
-        for provider in sorted(unmatched_by_provider.keys()):
-            unmatched_models = unmatched_by_provider[provider]
-
-            for provider_slug, nearest_matches in sorted(unmatched_models, key=lambda x: x[0]):
-                # First row with provider and slug
-                if nearest_matches:
-                    # First candidate on same line as provider and slug
-                    aa_slug, score = nearest_matches[0]
-                    log(f"{provider:<20} | {provider_slug:<35} | • {aa_slug:<40} (similarity: {score*100:.1f}%)")
-
-                    # Remaining candidates on subsequent lines
-                    for aa_slug, score in nearest_matches[1:]:
-                        log(f"{'':<20} | {'':<35} | • {aa_slug:<40} (similarity: {score*100:.1f}%)")
-                else:
-                    log(f"{provider:<20} | {provider_slug:<35} | (no similar candidates found)")
-
-                # Separator between models
-                log(f"{'-'*20}-|-{'-'*35}-|-{'-'*60}")
-
-            # Extra spacing between providers
-            log("")
-
-        log("=" * 120)
-        log("END OF UNMATCHED MODELS REPORT")
-        log("=" * 120)
-        log("")
-
-    return mappings, unmatched_by_provider
+def has_effort_variants(aa_slug: str, aa_slugs: Set[str]) -> bool:
+    return any(f'{aa_slug}-{suffix}' in aa_slugs for suffix in EFFORT_SUFFIXES)
 
 
-def upsert_mappings(
-    conn,
-    mappings: List[Tuple],
-    logger: Optional[logging.Logger] = None,
-    commit: bool = True
-) -> bool:
-    """
-    Insert or update mappings in justask."21_router-model-benchmark-map" using UPSERT pattern.
+def classify(provider_slug: str, output_modalities: Optional[str],
+             aa_scores: Dict[str, Optional[float]]) -> Tuple[str, Optional[str]]:
+    """Return (status, aa_slug) for one model. aa_scores: {aa_slug: intelligence_index or None}."""
+    if not is_chat_model(provider_slug, output_modalities):
+        return NOT_CHAT_MODEL, None
+    aa_slugs = set(aa_scores)
+    aa_slug = find_aa_slug(provider_slug, aa_slugs)
+    if aa_slug is None:
+        return NO_MATCH, None
+    if aa_scores.get(aa_slug) is None:
+        return AA_UNSCORED, aa_slug
+    if has_effort_variants(aa_slug, aa_slugs):
+        return LINKED_EFFORT_UNKNOWN, aa_slug
+    return LINKED, aa_slug
 
-    Uses ON CONFLICT (inference_provider, provider_slug) DO UPDATE
-    to safely handle duplicate keys.
 
-    Args:
-        conn: Database connection
-        mappings: List of (inference_provider, provider_slug, aa_slug, created_at, updated_at) tuples
-        logger: Optional logger for output
+def coverage(rows: Iterable[Dict[str, Any]]) -> Tuple[int, int]:
+    """(chat models with a scored link, chat models)."""
+    rows = list(rows)
+    chat = [r for r in rows if r['status'] != NOT_CHAT_MODEL]
+    return sum(1 for r in chat if r['status'] in SCORED_STATUSES), len(chat)
 
-    Returns:
-        True if successful, False otherwise
-    """
-    log = logger.info if logger else print
 
-    if not mappings:
-        log("⚠️  No mappings to insert")
-        return True
+def _fetch_live_models(conn, inference_provider: Optional[str]) -> List[Tuple[str, str, Optional[str]]]:
+    sql = (f"SELECT inference_provider, provider_slug, output_modalities FROM {LIVE_TABLE} "
+           "WHERE provider_slug IS NOT NULL AND provider_slug <> ''")
+    params: Tuple = ()
+    if inference_provider:
+        sql += " AND inference_provider = %s"
+        params = (inference_provider,)
+    with conn.cursor() as cur:
+        cur.execute(sql + " ORDER BY inference_provider, provider_slug", params)
+        return cur.fetchall()
 
+
+def _fetch_aa_scores(conn) -> Dict[str, Optional[float]]:
+    with conn.cursor() as cur:
+        cur.execute(f"SELECT aa_slug, intelligence_index FROM {SCORES_TABLE} WHERE aa_slug IS NOT NULL")
+        return {slug: (float(score) if score is not None else None) for slug, score in cur.fetchall()}
+
+
+def _fetch_manual_keys(conn, inference_provider: Optional[str]) -> Set[Tuple[str, str]]:
+    sql = f"SELECT inference_provider, provider_slug FROM {MAP_TABLE} WHERE source = 'manual'"
+    params: Tuple = ()
+    if inference_provider:
+        sql += " AND inference_provider = %s"
+        params = (inference_provider,)
+    with conn.cursor() as cur:
+        cur.execute(sql, params)
+        return set(cur.fetchall())
+
+
+def build_rows(models: List[Tuple[str, str, Optional[str]]], aa_scores: Dict[str, Optional[float]],
+               manual_keys: Set[Tuple[str, str]]) -> List[Dict[str, Any]]:
+    """One 'auto' row per live model that has no manual row."""
+    rows = []
+    for provider, slug, output_modalities in models:
+        if (provider, slug) in manual_keys:
+            continue
+        status, aa_slug = classify(slug, output_modalities, aa_scores)
+        rows.append({'inference_provider': provider, 'provider_slug': slug,
+                     'aa_slug': aa_slug, 'status': status})
+    return rows
+
+
+def _report(rows: List[Dict[str, Any]], manual_count: int, log) -> List[str]:
+    lines = []
+    by_provider: Dict[str, Counter] = {}
+    for r in rows:
+        by_provider.setdefault(r['inference_provider'], Counter())[r['status']] += 1
+    for provider in sorted(by_provider):
+        c = by_provider[provider]
+        lines.append(f"{provider}: " + ", ".join(f"{s} {c[s]}" for s in STATUSES if c[s]))
+    linked, chat = coverage(rows)
+    pct = f"{linked / chat * 100:.0f}%" if chat else "n/a"
+    lines.append(f"Coverage (auto rows): {linked} of {chat} chat models have a scored link ({pct})")
+    if manual_count:
+        lines.append(f"Manual rows kept unchanged: {manual_count}")
+    for line in lines:
+        log(f"   {line}")
+    review = [r for r in rows if r['status'] in (LINKED_EFFORT_UNKNOWN, NO_MATCH)]
+    if review:
+        log("   To review:")
+        for r in review:
+            log(f"     {r['status']:<22} {r['inference_provider']}/{r['provider_slug']}"
+                + (f" -> {r['aa_slug']}" if r['aa_slug'] else ""))
+    return lines
+
+
+def _write_step_summary(title: str, lines: List[str]) -> None:
+    path = os.getenv('GITHUB_STEP_SUMMARY')
+    if not path:
+        return
     try:
-        with conn.cursor() as cur:
-            execute_values(
-                cur,
-                """
-                INSERT INTO justask."21_router-model-benchmark-map"
-                (inference_provider, provider_slug, aa_slug, created_at, updated_at)
-                VALUES %s
-                ON CONFLICT (inference_provider, provider_slug)
-                DO UPDATE SET
-                    aa_slug = EXCLUDED.aa_slug,
-                    updated_at = EXCLUDED.updated_at
-                """,
-                mappings
-            )
-            if commit:
-                conn.commit()
-            log(f"✅ Successfully upserted {len(mappings)} mappings to justask.21_router-model-benchmark-map")
-            return True
-    except Exception as e:
-        conn.rollback()
-        log(f"❌ ERROR: Failed to upsert mappings: {e}")
-        import traceback
-        log(f"Traceback: {traceback.format_exc()}")
-        return False
-
-
-def write_comparison_report(
-    unmatched_by_provider: Dict[str, List[Tuple[str, List[Tuple[str, float]]]]],
-    output_file: str
-) -> bool:
-    """
-    Write unmatched models comparison report to a file.
-
-    Args:
-        unmatched_by_provider: Dictionary mapping provider to list of (slug, nearest_matches)
-        output_file: Path to output file
-
-    Returns:
-        True if successful, False otherwise
-    """
-    try:
-        with open(output_file, 'w', encoding='utf-8') as f:
-            f.write(f"Slug Comparison Report\n")
-            f.write(f"Generated: {datetime.now().isoformat()}\n")
-            f.write("=" * 120 + "\n\n")
-
-            if not unmatched_by_provider:
-                f.write("✅ All models successfully matched to AA performance metrics!\n")
-                f.write("No unmatched models to report.\n")
-                return True
-
-            f.write("UNMATCHED MODELS WITH NEAREST AA_SLUG CANDIDATES\n")
-            f.write("=" * 120 + "\n\n")
-            f.write("The following models from 11_free-models-live could not be automatically\n")
-            f.write("mapped to AA performance metrics. Review the nearest candidates below:\n\n")
-
-            # Table header
-            f.write("=" * 120 + "\n")
-            f.write(f"{'PROVIDER':<20} | {'PROVIDER_SLUG':<35} | {'NEAREST AA_SLUG CANDIDATES (Top 5)'}\n")
-            f.write("=" * 120 + "\n")
-
-            for provider in sorted(unmatched_by_provider.keys()):
-                unmatched_models = unmatched_by_provider[provider]
-
-                for provider_slug, nearest_matches in sorted(unmatched_models, key=lambda x: x[0]):
-                    # First row with provider and slug
-                    if nearest_matches:
-                        # First candidate on same line as provider and slug
-                        aa_slug, score = nearest_matches[0]
-                        f.write(f"{provider:<20} | {provider_slug:<35} | • {aa_slug:<40} (similarity: {score*100:.1f}%)\n")
-
-                        # Remaining candidates on subsequent lines
-                        for aa_slug, score in nearest_matches[1:]:
-                            f.write(f"{'':<20} | {'':<35} | • {aa_slug:<40} (similarity: {score*100:.1f}%)\n")
-                    else:
-                        f.write(f"{provider:<20} | {provider_slug:<35} | (no similar candidates found)\n")
-
-                    # Separator between models
-                    f.write(f"{'-'*20}-|-{'-'*35}-|-{'-'*60}\n")
-
-                # Extra spacing between providers
-                f.write("\n")
-
-            f.write("=" * 120 + "\n")
-            f.write("END OF COMPARISON REPORT\n")
-            f.write("=" * 120 + "\n")
-
-        return True
-
-    except Exception as e:
-        print(f"ERROR: Failed to write comparison report: {e}")
-        return False
-
-
-def backup_provider_mappings(
-    conn,
-    inference_provider: str,
-    logger: Optional[logging.Logger] = None
-) -> Optional[List[Tuple]]:
-    """
-    Backup all mappings for a specific provider.
-
-    Args:
-        conn: Database connection
-        inference_provider: Provider to backup (e.g., "Groq")
-        logger: Optional logger
-
-    Returns:
-        List of tuples (inference_provider, provider_slug, aa_slug, created_at, updated_at)
-        or None on error
-    """
-    log = logger.info if logger else print
-
-    try:
-        with conn.cursor() as cur:
-            cur.execute(
-                """
-                SELECT inference_provider, provider_slug, aa_slug, created_at, updated_at
-                FROM justask."21_router-model-benchmark-map"
-                WHERE inference_provider = %s
-                """,
-                (inference_provider,)
-            )
-            return cur.fetchall()
-    except Exception as e:
-        log(f"❌ ERROR: Failed to backup mappings: {e}")
-        return None
-
-
-def delete_provider_mappings(
-    conn,
-    inference_provider: str,
-    logger: Optional[logging.Logger] = None,
-    commit: bool = True
-) -> bool:
-    """
-    Delete all mappings for a specific provider.
-
-    Args:
-        conn: Database connection
-        inference_provider: Provider to delete (e.g., "Groq")
-        logger: Optional logger
-
-    Returns:
-        True if successful, False otherwise
-    """
-    log = logger.info if logger else print
-
-    try:
-        with conn.cursor() as cur:
-            cur.execute(
-                """
-                DELETE FROM justask."21_router-model-benchmark-map"
-                WHERE inference_provider = %s
-                """,
-                (inference_provider,)
-            )
-            deleted_count = cur.rowcount
-            if commit:
-                conn.commit()
-            log(f"Deleted {deleted_count} mappings for {inference_provider}")
-            return True
-    except Exception as e:
-        conn.rollback()
-        log(f"❌ ERROR: Failed to delete mappings: {e}")
-        return False
-
-
-def restore_provider_mappings(
-    conn,
-    backup_mappings: List[Tuple],
-    logger: Optional[logging.Logger] = None
-) -> bool:
-    """
-    Restore mappings from backup.
-
-    Args:
-        conn: Database connection
-        backup_mappings: List of tuples from backup
-        logger: Optional logger
-
-    Returns:
-        True if successful, False otherwise
-    """
-    log = logger.info if logger else print
-
-    if not backup_mappings:
-        log("No backup mappings to restore")
-        return True
-
-    try:
-        with conn.cursor() as cur:
-            execute_values(
-                cur,
-                """
-                INSERT INTO justask."21_router-model-benchmark-map"
-                (inference_provider, provider_slug, aa_slug, created_at, updated_at)
-                VALUES %s
-                """,
-                backup_mappings
-            )
-            conn.commit()
-            log(f"✅ Restored {len(backup_mappings)} mappings from backup")
-            return True
-    except Exception as e:
-        conn.rollback()
-        log(f"❌ ERROR: Failed to restore mappings: {e}")
-        return False
+        with open(path, 'a', encoding='utf-8') as fh:
+            fh.write(f"### {title}\n\n" + "\n".join(f"- {l}" for l in lines) + "\n\n")
+    except OSError:
+        pass
 
 
 def refresh_model_aa_mapping(
     conn,
     inference_provider: Optional[str] = None,
     output_dir: Optional[str] = None,
-    logger: Optional[logging.Logger] = None
+    logger: Optional[logging.Logger] = None,
 ) -> bool:
-    """
-    Main entry point: Refresh justask."21_router-model-benchmark-map" table from 11_free-models-live.
+    """Rebuild the 'auto' rows of table 21 for one provider (or all), in one transaction.
 
-    This function:
-    1. Fetches models from 11_free-models-live (optionally filtered by provider)
-    2. Fetches AA performance slugs from justask."20_router-benchmark-scores"
-    3. Matches provider models to AA slugs using smart matching
-    4. Upserts mappings with ON CONFLICT handling
-    5. Provides enhanced reporting for unmatched models
-    6. Writes comparison report to slugs_comparison.txt
-
-    Args:
-        conn: Database connection (must be open)
-        inference_provider: Optional provider filter (e.g., "Groq")
-        output_dir: Optional directory for slugs_comparison.txt (default: current dir)
-        logger: Optional logger for structured output
-
-    Returns:
-        True if successful, False on critical error
+    Fails closed: if table 20 or table 11 is empty, nothing is changed.
+    output_dir is accepted for backward compatibility and not used.
     """
     log = logger.info if logger else print
-
+    scope = inference_provider or 'all providers'
     try:
-        log("")
-        log("=" * 70)
-        if inference_provider:
-            log(f"REFRESHING MODEL-AA MAPPINGS FOR: {inference_provider}")
-        else:
-            log("REFRESHING MODEL-AA MAPPINGS FOR: ALL PROVIDERS")
-        log("=" * 70)
-        log(f"Started: {datetime.now().isoformat()}")
-        log("")
-
-        # Step 1: Fetch models from 11_free-models-live
-        log("📁 Fetching models from 11_free-models-live...")
-        models = fetch_working_version_models(conn, inference_provider)
+        log(f"Refreshing model -> AA links ({MAP_TABLE}) for {scope}")
+        models = _fetch_live_models(conn, inference_provider)
         if not models:
-            log("⚠️  No models found in 11_free-models-live")
+            log(f"No models in {LIVE_TABLE} for {scope}; nothing changed")
             return False
-        log(f"✅ Found {len(models)} unique models")
-
-        # Step 2: Fetch AA performance slugs
-        log("📁 Fetching AA performance metric slugs...")
-        aa_slugs = fetch_aa_performance_slugs(conn)
-        if not aa_slugs:
-            log("⚠️  No AA performance slugs found")
+        aa_scores = _fetch_aa_scores(conn)
+        if not aa_scores:
+            log(f"No rows in {SCORES_TABLE}; nothing changed")
             return False
-        log(f"✅ Found {len(aa_slugs)} AA performance slugs")
+        manual_keys = _fetch_manual_keys(conn, inference_provider)
+        rows = build_rows(models, aa_scores, manual_keys)
 
-        # Step 3: Create mappings with enhanced reporting
-        mappings, unmatched_by_provider = create_mappings(models, aa_slugs, logger)
-
-        # Step 4: Atomic refresh: delete (provider only) + insert in ONE transaction.
-        # Any failure rolls back, leaving the existing mappings untouched.
-        if inference_provider:
-            log(f"🔄 Performing atomic refresh for {inference_provider}...")
-            if not delete_provider_mappings(conn, inference_provider, logger, commit=False):
-                conn.rollback()
-                log("❌ Failed to delete existing mappings - rolled back, originals untouched")
-                return False
-        if not upsert_mappings(conn, mappings, logger, commit=False):
-            conn.rollback()
-            log("❌ Insert failed - rolled back, originals untouched")
-            return False
+        with conn.cursor() as cur:
+            if inference_provider:
+                cur.execute(f"DELETE FROM {MAP_TABLE} WHERE source = 'auto' AND inference_provider = %s",
+                            (inference_provider,))
+            else:
+                cur.execute(f"DELETE FROM {MAP_TABLE} WHERE source = 'auto'")
+            if rows:
+                execute_values(
+                    cur,
+                    f"INSERT INTO {MAP_TABLE} (inference_provider, provider_slug, aa_slug, source, status) "
+                    "VALUES %s ON CONFLICT (inference_provider, provider_slug) DO NOTHING",
+                    [(r['inference_provider'], r['provider_slug'], r['aa_slug'], 'auto', r['status'])
+                     for r in rows],
+                )
         conn.commit()
 
-        # Step 5: Write comparison report to file
-        if output_dir:
-            from pathlib import Path
-            output_file = Path(output_dir) / "slugs_comparison.txt"
-            log(f"📄 Writing comparison report to: {output_file}")
-            if write_comparison_report(unmatched_by_provider, str(output_file)):
-                log(f"✅ Comparison report saved: {output_file}")
-            else:
-                log(f"⚠️  Failed to write comparison report (non-critical)")
-
-        log("")
-        log("=" * 70)
-        log("✅ MODEL-AA MAPPING REFRESH COMPLETED")
-        log("=" * 70)
-        log(f"Completed: {datetime.now().isoformat()}")
-        log("")
-
+        log(f"Wrote {len(rows)} auto rows for {scope} ({len(models)} live models)")
+        lines = _report(rows, len(manual_keys), log)
+        _write_step_summary(f"Model -> AA links: {scope}", lines)
         return True
-
-    except Exception as e:
-        log(f"❌ ERROR: Unexpected error during mapping refresh: {e}")
-        import traceback
-        log(f"Traceback: {traceback.format_exc()}")
+    except Exception as e:  # noqa: BLE001 - roll back and report any failure
+        log(f"ERROR: link refresh failed, rolled back, table unchanged: {e}")
+        try:
+            conn.rollback()
+        except Exception:
+            pass
         return False
 
 
 if __name__ == "__main__":
-    """
-    Standalone execution for testing or manual runs.
-    Requires PIPELINE_SUPABASE_URL environment variable.
-    """
-    import os
+    # python -m src.utils.model_aa_mapping [provider]   (no provider = all providers)
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+    from src.utils.db import get_pipeline_db_connection
 
-    DATABASE_URL = os.environ.get('PIPELINE_SUPABASE_URL')
-
-    if not DATABASE_URL:
-        print("ERROR: PIPELINE_SUPABASE_URL environment variable not set")
+    provider = sys.argv[1] if len(sys.argv) > 1 else None
+    conn = get_pipeline_db_connection()
+    if conn is None:
+        print("ERROR: could not connect to database (PIPELINE_SUPABASE_URL)")
         sys.exit(1)
-
-    print("Connecting to database...")
     try:
-        conn = psycopg2.connect(DATABASE_URL)
-        print("✅ Connected to database")
-
-        success = refresh_model_aa_mapping(conn)
-
+        ok = refresh_model_aa_mapping(conn, inference_provider=provider)
+    finally:
         conn.close()
-        print("Database connection closed")
-
-        sys.exit(0 if success else 1)
-
-    except Exception as e:
-        print(f"❌ FATAL ERROR: {e}")
-        sys.exit(1)
+    sys.exit(0 if ok else 1)

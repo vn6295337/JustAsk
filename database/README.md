@@ -39,6 +39,7 @@ Record of changes applied to the Supabase project `askme` (`atilxlecbaqcksnrgzav
 | `applied/2026-11-12_16_benchmark-map-timestamptz.sql` | `21_router-model-benchmark-map`: `created_at` and `updated_at` become `timestamptz` (existing values read as UTC); the mapping refresh now writes time-zone-aware times |
 | `applied/2026-11-12_17_timestamptz-22-23-pin-analytics-utc.sql` | Tables 22 and 23: `created_at`/`updated_at` become `timestamptz` (read as UTC); analytics functions pinned to UTC so the nightly snapshot keeps counting by UTC day |
 | `applied/2026-11-12_18_database-timezone-ist.sql` | Database default time zone set to `Asia/Kolkata`: times are shown in IST (`+05:30`). Stored values unchanged; schedules (GitHub Actions, `pg_cron`) stay in UTC |
+| `applied/2026-11-13_19_benchmark-map-statuses.sql` | `21_router-model-benchmark-map`: `aa_slug` optional; new `source` (auto / manual), `status` (linked, linked_effort_unknown, aa_unscored, not_chat_model, no_match) and `note` columns with checks |
 
 ## Not SQL
 

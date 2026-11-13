@@ -35,6 +35,16 @@ jobs:
       run: |
         python scripts/db/refresh_aa_performance_metrics.py
 
+    - name: Install registry dependencies
+      run: pip install -r justask-registry/requirements.txt
+
+    - name: Rebuild model -> AA links (table 21, all providers)
+      working-directory: justask-registry
+      env:
+        PIPELINE_SUPABASE_URL: ${{ secrets.PIPELINE_SUPABASE_URL }}
+      run: |
+        python -m src.utils.model_aa_mapping
+
     - name: Summary
       if: always()
       run: |

@@ -35,6 +35,9 @@ export const SELECTION_WEIGHTS = {
 // Room score for a model whose daily request limit (rpd) is not published
 export const UNKNOWN_LIMIT_ROOM_SCORE = 0.5;
 
+// Table 21 statuses whose AA entry has an intelligence score (see justask-registry model_aa_mapping.py)
+export const SCORED_LINK_STATUSES = ['linked', 'linked_effort_unknown'];
+
 const LATENCY_SCORES = {
   groq: 1.0,
   gemini: 0.8,
@@ -52,37 +55,6 @@ const OPEN_SOURCE_LICENSES = [
   'Llama-2', 'Llama-3', 'Llama-3.1', 'Llama-3.2', 'Llama-3.3', 'Llama-4',
   'Gemma', 'CC0-1.0', 'CC-BY-4.0', 'CC-BY-SA-4.0'
 ];
-
-/**
- * Normalize provider_slug to match justask."21_router-model-benchmark-map" format
- * Matches normalization in justask-registry/model_aa_mapping_utils.py
- */
-function normalizeProviderSlug(slug) {
-  if (!slug) return slug;
-
-  // Replace periods, spaces, underscores with hyphens
-  let normalized = slug.replace(/[.\s_]+/g, '-');
-
-  // Remove consecutive hyphens
-  normalized = normalized.replace(/-+/g, '-');
-
-  // Strip leading/trailing hyphens
-  normalized = normalized.replace(/^-+|-+$/g, '');
-
-  // Convert to lowercase
-  normalized = normalized.toLowerCase();
-
-  // Strip ONE common suffix (longest first)
-  const suffixes = ['-instruct', '-chat', '-it', '-turbo', '-preview', '-exp'];
-  for (const suffix of suffixes) {
-    if (normalized.endsWith(suffix)) {
-      normalized = normalized.slice(0, -suffix.length);
-      break;
-    }
-  }
-
-  return normalized;
-}
 
 /**
  * Calculate geography score based on country
@@ -164,12 +136,14 @@ async function populateModelSelectionScore() {
   console.log('🚀 Starting model selection score population...\n');
 
   try {
-    // Step 1: Fetch models from justask."21_router-model-benchmark-map" (only mapped models)
-    console.log('📊 Fetching mapped models from justask."21_router-model-benchmark-map"...');
+    // Step 1: Fetch models with a scored AA link from justask."21_router-model-benchmark-map"
+    // (status linked or linked_effort_unknown; provider_slug is table 11's original slug)
+    console.log('📊 Fetching linked models from justask."21_router-model-benchmark-map"...');
     const { data: mappings, error: mappingsError } = await supabase
       .schema('justask')
       .from('21_router-model-benchmark-map')
-      .select('provider_slug, aa_slug, inference_provider');
+      .select('provider_slug, aa_slug, inference_provider, status')
+      .in('status', SCORED_LINK_STATUSES);
 
     if (mappingsError) {
       throw new Error(`Failed to fetch mappings: ${mappingsError.message}`);
@@ -187,18 +161,10 @@ async function populateModelSelectionScore() {
       throw new Error(`Failed to fetch 11_free-models-live: ${workingError.message}`);
     }
 
-    // Create lookup map by BOTH original and normalized provider_slug
-    // This handles mismatch between normalized slugs in mapping table and original slugs in 11_free-models-live
+    // Lookup by provider + original slug (the same slug can exist at two providers)
     const workingMap = {};
     workingModels.forEach(m => {
-      // Store by original slug
-      workingMap[m.provider_slug] = m;
-
-      // Also store by normalized slug
-      const normalized = normalizeProviderSlug(m.provider_slug);
-      if (normalized !== m.provider_slug) {
-        workingMap[normalized] = m;
-      }
+      workingMap[`${m.inference_provider}:${m.provider_slug}`] = m;
     });
 
     console.log(`✅ Fetched ${workingModels.length} models from 11_free-models-live\n`);
@@ -254,7 +220,7 @@ async function populateModelSelectionScore() {
 
     for (const mapping of mappings) {
       const providerSlug = mapping.provider_slug;
-      const workingData = workingMap[providerSlug];
+      const workingData = workingMap[`${mapping.inference_provider}:${providerSlug}`];
       const metricsData = metricsMap[mapping.aa_slug];
 
       // Skip if missing critical data
