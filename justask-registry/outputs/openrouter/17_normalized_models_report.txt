@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-11-12 11:43:37 IST
+Generated: 2026-11-13 11:04:56 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -9,54 +9,60 @@ DATA QUALITY ISSUES:
 MISSING OR EMPTY VALUES:
 ------------------------------
 
-LICENSE INFO TEXT (10 models):
+LICENSE INFO TEXT (11 models):
+  - Apodex 1.1 Mini
   - Free Models Router
   - Gemma 4 26B A4b IT 20260403
   - Gemma 4 31B IT 20260402
-  - Inkling 2 Small
   - LFM2.5-2.6B
   - LFM3-1.7B
   - Nemotron 3 Nano Omni
   - Nemotron 3 Ultra
   - Nemotron 3.5 Lightning
   - Nemotron 3.5 Super VL
+  - Particle-1
 
-LICENSE INFO URL (10 models):
+LICENSE INFO URL (11 models):
+  - Apodex 1.1 Mini
   - Free Models Router
   - Gemma 4 26B A4b IT 20260403
   - Gemma 4 31B IT 20260402
-  - Inkling 2 Small
   - LFM2.5-2.6B
   - LFM3-1.7B
   - Nemotron 3 Nano Omni
   - Nemotron 3 Ultra
   - Nemotron 3.5 Lightning
   - Nemotron 3.5 Super VL
+  - Particle-1
 
-LICENSE NAME (2 models):
+LICENSE NAME (3 models):
+  - Apodex 1.1 Mini
   - Free Models Router
-  - Inkling 2 Small
+  - Particle-1
 
-LICENSE URL (2 models):
+LICENSE URL (3 models):
+  - Apodex 1.1 Mini
   - Free Models Router
-  - Inkling 2 Small
+  - Particle-1
 
 UNKNOWN OR 'NOT FOUND' VALUES:
 ------------------------------
 
-MODEL PROVIDER (3 models):
+MODEL PROVIDER (5 models):
+  - Apodex 1.1 Mini
   - Flint
   - Inkling 2 Small
   - North Mini Code
+  - Particle-1
 
 DATA QUALITY SUMMARY:
 ------------------------------
-Total models: 12
-Missing license info text: 10 (83.3%)
-Missing license info url: 10 (83.3%)
-Missing license name: 2 (16.7%)
-Missing license url: 2 (16.7%)
-Unknown model provider: 3 (25.0%)
+Total models: 14
+Missing license info text: 11 (78.6%)
+Missing license info url: 11 (78.6%)
+Missing license name: 3 (21.4%)
+Missing license url: 3 (21.4%)
+Unknown model provider: 5 (35.7%)
 
 ================================================================================
 
@@ -153,19 +159,9 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 10. Flint
+ 10. Apodex 1.1 Mini
      Provider           : Unknown (Unknown)
      Modalities         : Text → Text
-     License            : APACHE-2.0
-     License Info       : info
-     License URL        : https://www.apache.org/licenses/LICENSE-2.0
-     Official URL       : Unknown
-     Rate Limits        : 20 requests/min 50/day
-     Provider API Access: https://openrouter.ai/settings/keys
-
- 11. Inkling 2 Small
-     Provider           : Unknown (Unknown)
-     Modalities         : Text, Image → Text
      License            : 
      License Info       : 
      License URL        : 
@@ -173,12 +169,42 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 12. North Mini Code
+ 11. Flint
      Provider           : Unknown (Unknown)
      Modalities         : Text → Text
      License            : APACHE-2.0
      License Info       : info
      License URL        : https://www.apache.org/licenses/LICENSE-2.0
+     Official URL       : Unknown
+     Rate Limits        : 20 requests/min 50/day
+     Provider API Access: https://openrouter.ai/settings/keys
+
+ 12. Inkling 2 Small
+     Provider           : Unknown (Unknown)
+     Modalities         : Text, Image → Text
+     License            : APACHE-2.0
+     License Info       : info
+     License URL        : https://www.apache.org/licenses/LICENSE-2.0
+     Official URL       : Unknown
+     Rate Limits        : 20 requests/min 50/day
+     Provider API Access: https://openrouter.ai/settings/keys
+
+ 13. North Mini Code
+     Provider           : Unknown (Unknown)
+     Modalities         : Text → Text
+     License            : APACHE-2.0
+     License Info       : info
+     License URL        : https://www.apache.org/licenses/LICENSE-2.0
+     Official URL       : Unknown
+     Rate Limits        : 20 requests/min 50/day
+     Provider API Access: https://openrouter.ai/settings/keys
+
+ 14. Particle-1
+     Provider           : Unknown (Unknown)
+     Modalities         : Text, Image → Text
+     License            : 
+     License Info       : 
+     License URL        : 
      Official URL       : Unknown
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys

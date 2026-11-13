@@ -1,10 +1,10 @@
 ================================================================================
 FINAL CONSOLIDATED LICENSE LIST REPORT
-Generated: 2026-11-12 11:43:36 IST
+Generated: 2026-11-13 11:04:55 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 18
+  Total models        : 19
   Input sources       : 4 pipeline stage files
   Processor           : step_13_final_licenses.py
   Output              : 13_final_licenses.json
@@ -12,12 +12,12 @@ SUMMARY:
 SOURCE CATEGORY DISTRIBUTION:
   Custom: 6 models
   Google: 2 models
-  Opensource: 2 models
+  Opensource: 3 models
   Proprietary: 8 models
 
 FINAL LICENSE DISTRIBUTION:
+   3 models: APACHE-2.0
    3 models: OPENMDW-1.1
-   2 models: APACHE-2.0
    2 models: GEMMA
    2 models: LFM1.0
    2 models: QWEN
@@ -183,7 +183,22 @@ MODEL 10: recursive/flint-v1.0-20261021
 
 ================================================================================
 
-MODEL 11: amazon/nova-2-lite-v1
+MODEL 11: thinkingmachines/inkling-2-small-20261107
+--------------------------------------------------
+  ID: thinkingmachines/inkling-2-small:free
+  Original Name: Thinking Machines: Inkling 2 Small (free)
+  HuggingFace ID: thinkingmachines/Inkling-2-Small
+  Canonical Slug: thinkingmachines/inkling-2-small-20261107
+  Clean Model Name: Inkling 2 Small
+  License Info Text: info
+  License Info URL: https://huggingface.co/thinkingmachines/Inkling-2-Small/blob/main/README.md
+  License Name: APACHE-2.0
+  License URL: https://www.apache.org/licenses/LICENSE-2.0
+  Source Category: opensource
+
+================================================================================
+
+MODEL 12: amazon/nova-2-lite-v1
 --------------------------------------------------
   ID: amazon/nova-2-lite-v1:free
   Original Name: Amazon/Nova 2 Lite V1
@@ -198,7 +213,7 @@ MODEL 11: amazon/nova-2-lite-v1
 
 ================================================================================
 
-MODEL 12: kwaipilot/kat-coder-pro-v1
+MODEL 13: kwaipilot/kat-coder-pro-v1
 --------------------------------------------------
   ID: kwaipilot/kat-coder-pro-v1:free
   Original Name: Kwaipilot/Kat Coder Pro V1
@@ -213,7 +228,7 @@ MODEL 12: kwaipilot/kat-coder-pro-v1
 
 ================================================================================
 
-MODEL 13: mistralai/devstral-2512
+MODEL 14: mistralai/devstral-2512
 --------------------------------------------------
   ID: mistralai/devstral-2512:free
   Original Name: Mistralai/Devstral 2512
@@ -228,7 +243,7 @@ MODEL 13: mistralai/devstral-2512
 
 ================================================================================
 
-MODEL 14: qwen/qwen3.6-plus
+MODEL 15: qwen/qwen3.6-plus
 --------------------------------------------------
   ID: qwen/qwen3.6-plus:free
   Original Name: Qwen/Qwen3.6 Plus
@@ -243,7 +258,7 @@ MODEL 14: qwen/qwen3.6-plus
 
 ================================================================================
 
-MODEL 15: qwen/qwen3.6-plus-04-02
+MODEL 16: qwen/qwen3.6-plus-04-02
 --------------------------------------------------
   ID: qwen/qwen3.6-plus-04-02:free
   Original Name: Qwen/Qwen3.6 Plus 04 02
@@ -258,7 +273,7 @@ MODEL 15: qwen/qwen3.6-plus-04-02
 
 ================================================================================
 
-MODEL 16: upstage/solar-pro-3
+MODEL 17: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage/Solar Pro 3
@@ -273,7 +288,7 @@ MODEL 16: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 17: x-ai/grok-4-fast
+MODEL 18: x-ai/grok-4-fast
 --------------------------------------------------
   ID: x-ai/grok-4-fast:free
   Original Name: X Ai/Grok 4 Fast
@@ -288,7 +303,7 @@ MODEL 17: x-ai/grok-4-fast
 
 ================================================================================
 
-MODEL 18: x-ai/grok-4.1-fast
+MODEL 19: x-ai/grok-4.1-fast
 --------------------------------------------------
   ID: x-ai/grok-4.1-fast:free
   Original Name: X Ai/Grok 4.1 Fast

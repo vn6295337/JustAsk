@@ -1,22 +1,22 @@
 ================================================================================
 OPENSOURCE LICENSE URLS ENRICHMENT REPORT
-Generated: 2026-11-12 11:43:32 IST
+Generated: 2026-11-13 11:04:51 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 2
+  Total models : 3
   Input        : 08_opensource_licenses.json
   Reference    : opensource_license_urls.json
   Processor    : step_09_opensource_license_urls.py
   Output       : 09_opensource_license_urls.json
 
 URL MAPPING STATISTICS:
-  Successful URL mappings: 2
+  Successful URL mappings: 3
   Failed URL mappings: 0
   Success rate: 100.0%
 
 LICENSE URL DISTRIBUTION:
-  APACHE-2.0 → https://www.apache.org/licenses/LICENSE-2.0: 2 models
+  APACHE-2.0 → https://www.apache.org/licenses/LICENSE-2.0: 3 models
 
 Total mapping types: 1
 
@@ -38,6 +38,16 @@ MODEL 2: recursive/flint-v1.0-20261021
   ID                     : recursive/flint-v1.0:free
   Canonical Slug         : recursive/flint-v1.0-20261021
   HuggingFace ID         : RecursiveSI/flint
+  License Name           : APACHE-2.0
+  Official License URL   : https://www.apache.org/licenses/LICENSE-2.0
+
+================================================================================
+
+MODEL 3: thinkingmachines/inkling-2-small-20261107
+--------------------------------------------------
+  ID                     : thinkingmachines/inkling-2-small:free
+  Canonical Slug         : thinkingmachines/inkling-2-small-20261107
+  HuggingFace ID         : thinkingmachines/Inkling-2-Small
   License Name           : APACHE-2.0
   Official License URL   : https://www.apache.org/licenses/LICENSE-2.0
 

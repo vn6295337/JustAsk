@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-11-12 11:43:36 IST",
-    "total_models": 12,
+    "generated_at": "2026-11-13 11:04:55 IST",
+    "total_models": 14,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
@@ -9,7 +9,7 @@
       "id": "thinkingmachines/inkling-2-small:free",
       "canonical_slug": "thinkingmachines/inkling-2-small-20261107",
       "original_name": "Thinking Machines: Inkling 2 Small (free)",
-      "hugging_face_id": null,
+      "hugging_face_id": "thinkingmachines/Inkling-2-Small",
       "clean_model_name": "Inkling 2 Small",
       "raw_input_modalities": "text, image",
       "raw_output_modalities": "text"
@@ -21,6 +21,15 @@
       "hugging_face_id": "LiquidAI/LFM3-1.7B",
       "clean_model_name": "LFM3-1.7B",
       "raw_input_modalities": "text",
+      "raw_output_modalities": "text"
+    },
+    {
+      "id": "particle-ai/particle-1:free",
+      "canonical_slug": "particle-ai/particle-1-20261027",
+      "original_name": "Particle AI: Particle-1 (free)",
+      "hugging_face_id": null,
+      "clean_model_name": "Particle-1",
+      "raw_input_modalities": "text, image",
       "raw_output_modalities": "text"
     },
     {
@@ -39,6 +48,15 @@
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
       "clean_model_name": "Nemotron 3.5 Super VL",
       "raw_input_modalities": "text, image, video",
+      "raw_output_modalities": "text"
+    },
+    {
+      "id": "apodex/apodex-1.1-mini:free",
+      "canonical_slug": "apodex/apodex-1.1-mini-20261001",
+      "original_name": "Apodex: Apodex 1.1 Mini (free)",
+      "hugging_face_id": null,
+      "clean_model_name": "Apodex 1.1 Mini",
+      "raw_input_modalities": "text",
       "raw_output_modalities": "text"
     },
     {

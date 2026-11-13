@@ -1,39 +1,39 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-11-12 11:43:21 IST
+Generated: 2026-11-13 11:04:42 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 432
-  Models passed all filters: 12
-  Models excluded: 420
-  Success rate: 2.8%
+  Total models processed: 439
+  Models passed all filters: 14
+  Models excluded: 425
+  Success rate: 3.2%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 432 models
-    Excluded: 416 models (non-free pricing)
-    Remaining: 16 models
+    Input: 439 models
+    Excluded: 421 models (non-free pricing)
+    Remaining: 18 models
 
   Step 2 - Billing Description Filter:
-    Input: 16 models
+    Input: 18 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 16 models
+    Remaining: 18 models
 
   Step 3 - Keyword Filter:
-    Input: 16 models
+    Input: 18 models
     Excluded: 4 models (preview/experimental/beta)
-    Remaining: 12 models
+    Remaining: 14 models
 
   Step 4 - Deduplication Filter:
-    Input: 12 models
+    Input: 14 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 12 models
+    Final: 14 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
 ================================================================================
-Excluded 416 models with non-free pricing (details omitted due to volume)
+Excluded 421 models with non-free pricing (details omitted due to volume)
 
 ================================================================================
 STEP 2 - BILLING DESCRIPTION FILTER RESULTS (DETAILED)
@@ -107,10 +107,24 @@ PROVIDER: THINKING MACHINES (1 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
+PROVIDER: PARTICLE AI (1 models)
+--------------------------------------------------
+   1. Particle AI: Particle-1 (free)
+      ID: particle-ai/particle-1:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+
 PROVIDER: RECURSIVE (1 models)
 --------------------------------------------------
    1. Recursive: Flint (free)
       ID: recursive/flint-v1.0:free
+      Pricing: prompt=0, completion=0, request=N/A
+
+
+PROVIDER: APODEX (1 models)
+--------------------------------------------------
+   1. Apodex: Apodex 1.1 Mini (free)
+      ID: apodex/apodex-1.1-mini:free
       Pricing: prompt=0, completion=0, request=N/A
 
 
@@ -130,11 +144,11 @@ PROVIDER: OPENROUTER (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 7
-  Total models passed all filters: 12
-  Models excluded by pricing: 416
+  Total providers: 9
+  Total models passed all filters: 14
+  Models excluded by pricing: 421
   Models excluded by billing description: 0
   Models excluded by keywords: 4
   Models excluded by deduplication: 0
-  Total exclusions: 420
+  Total exclusions: 425
   ✓ All filtered models accounted for

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-11-12 11:43:37 IST",
-    "total_models": 12,
+    "generated_at": "2026-11-13 11:04:56 IST",
+    "total_models": 14,
     "pipeline_stage": "O_standardize_raw_modalities"
   },
   "models": [
@@ -9,7 +9,7 @@
       "id": "thinkingmachines/inkling-2-small:free",
       "canonical_slug": "thinkingmachines/inkling-2-small-20261107",
       "original_name": "Thinking Machines: Inkling 2 Small (free)",
-      "hugging_face_id": null,
+      "hugging_face_id": "thinkingmachines/Inkling-2-Small",
       "clean_model_name": "Inkling 2 Small",
       "raw_input_modalities": "text, image",
       "raw_output_modalities": "text",
@@ -30,6 +30,20 @@
       "enhanced_input_modalities": "text",
       "enhanced_output_modalities": "text",
       "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model"
+    },
+    {
+      "id": "particle-ai/particle-1:free",
+      "canonical_slug": "particle-ai/particle-1-20261027",
+      "original_name": "Particle AI: Particle-1 (free)",
+      "hugging_face_id": null,
+      "clean_model_name": "Particle-1",
+      "raw_input_modalities": "text, image",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text, image",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text, Image",
       "standardized_output_modalities": "Text",
       "google_enhancement_status": "no_google_model"
     },
@@ -58,6 +72,20 @@
       "enhanced_input_modalities": "text, image, video",
       "enhanced_output_modalities": "text",
       "standardized_input_modalities": "Text, Image, Video",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model"
+    },
+    {
+      "id": "apodex/apodex-1.1-mini:free",
+      "canonical_slug": "apodex/apodex-1.1-mini-20261001",
+      "original_name": "Apodex: Apodex 1.1 Mini (free)",
+      "hugging_face_id": null,
+      "clean_model_name": "Apodex 1.1 Mini",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
       "standardized_output_modalities": "Text",
       "google_enhancement_status": "no_google_model"
     },

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-11-12 11:43:36 IST",
-    "total_models": 18,
+    "generated_at": "2026-11-13 11:04:55 IST",
+    "total_models": 19,
     "pipeline_stage": "M_final_list_of_licenses"
   },
   "models": [
@@ -181,6 +181,18 @@
       "clean_model_name": "Flint",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/RecursiveSI/flint/blob/main/LICENSE",
+      "license_name": "APACHE-2.0",
+      "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "source_category": "opensource"
+    },
+    {
+      "id": "thinkingmachines/inkling-2-small:free",
+      "canonical_slug": "thinkingmachines/inkling-2-small-20261107",
+      "original_name": "Thinking Machines: Inkling 2 Small (free)",
+      "hugging_face_id": "thinkingmachines/Inkling-2-Small",
+      "clean_model_name": "Inkling 2 Small",
+      "license_info_text": "info",
+      "license_info_url": "https://huggingface.co/thinkingmachines/Inkling-2-Small/blob/main/README.md",
       "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
       "source_category": "opensource"

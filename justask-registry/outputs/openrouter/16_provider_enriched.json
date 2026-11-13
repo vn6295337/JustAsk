@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-11-12 11:43:37 IST",
-    "total_models": 12,
+    "generated_at": "2026-11-13 11:04:56 IST",
+    "total_models": 14,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
@@ -10,7 +10,7 @@
       "canonical_slug": "thinkingmachines/inkling-2-small-20261107",
       "provider_slug": "inkling-2-small-20261107",
       "original_name": "Thinking Machines: Inkling 2 Small (free)",
-      "hugging_face_id": null,
+      "hugging_face_id": "thinkingmachines/Inkling-2-Small",
       "clean_model_name": "Inkling 2 Small",
       "raw_input_modalities": "text, image",
       "raw_output_modalities": "text",
@@ -44,6 +44,26 @@
       "model_provider_country": "United States",
       "model_family": "liquid ai",
       "official_url": "https://www.liquid.ai/"
+    },
+    {
+      "id": "particle-ai/particle-1:free",
+      "canonical_slug": "particle-ai/particle-1-20261027",
+      "provider_slug": "particle-1-20261027",
+      "original_name": "Particle AI: Particle-1 (free)",
+      "hugging_face_id": null,
+      "clean_model_name": "Particle-1",
+      "raw_input_modalities": "text, image",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text, image",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text, Image",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "Unknown",
+      "model_provider_country": "Unknown",
+      "model_family": "particle-ai",
+      "official_url": "Unknown"
     },
     {
       "id": "recursive/flint-v1.0:free",
@@ -84,6 +104,26 @@
       "model_provider_country": "United States",
       "model_family": "nvidia",
       "official_url": "https://build.nvidia.com/"
+    },
+    {
+      "id": "apodex/apodex-1.1-mini:free",
+      "canonical_slug": "apodex/apodex-1.1-mini-20261001",
+      "provider_slug": "apodex-1.1-mini-20261001",
+      "original_name": "Apodex: Apodex 1.1 Mini (free)",
+      "hugging_face_id": null,
+      "clean_model_name": "Apodex 1.1 Mini",
+      "raw_input_modalities": "text",
+      "raw_output_modalities": "text",
+      "enhanced_input_modalities": "text",
+      "enhanced_output_modalities": "text",
+      "standardized_input_modalities": "Text",
+      "standardized_output_modalities": "Text",
+      "google_enhancement_status": "no_google_model",
+      "inference_provider": "OpenRouter",
+      "model_provider": "Unknown",
+      "model_provider_country": "Unknown",
+      "model_family": "apodex",
+      "official_url": "Unknown"
     },
     {
       "id": "liquid/lfm-2.5-2.6b:free",
