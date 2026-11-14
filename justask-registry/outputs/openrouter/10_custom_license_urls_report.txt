@@ -1,6 +1,6 @@
 ================================================================================
 CUSTOM LICENSE URLS ENRICHMENT REPORT
-Generated: 2026-11-13 11:04:54 IST
+Generated: 2026-11-14 10:55:55 IST
 ================================================================================
 
 SUMMARY:
@@ -11,38 +11,34 @@ SUMMARY:
   Output       : 10_custom_license_urls.json
 
 LICENSE URL TYPE DISTRIBUTION:
-  LICENSE file: 3 models
+  LICENSE file: 2 models
   README.md file: 3 models
+  Inaccessible: 1 models
 
-Total URL types: 2
+Total URL types: 3
 
 URL RESOLUTION STATISTICS:
-  Successful URL resolutions: 6
-  Failed URL resolutions: 0
-  Success rate: 100.0%
+  Successful URL resolutions: 5
+  Failed URL resolutions: 1
+  Success rate: 83.3%
 
 CUSTOM LICENSE DISTRIBUTION:
-  LFM1.0: 2 models
+  LFM1.0: 1 models
   NVIDIA: 1 models
   OPENMDW-1.1: 3 models
+  UNKNOWN: 1 models
 
-Total license types: 3
+Total license types: 4
+
+MODELS WITH FAILED URL RESOLUTION (1 models):
+  inclusionAI: Ling 3.2 Flash (free)
+    HF ID: inclusionAI/Ling-3.2-flash
+    Reason: Inaccessible
 
 DETAILED MODEL LICENSE URL MAPPINGS:
 ================================================================================
 
-MODEL 1: liquid/lfm-2.5-2.6b-20260811
---------------------------------------------------
-  ID                     : liquid/lfm-2.5-2.6b:free
-  Canonical Slug         : liquid/lfm-2.5-2.6b-20260811
-  HuggingFace ID         : LiquidAI/LFM2.5-2.6B
-  License Name           : LFM1.0
-  License URL            : https://huggingface.co/LiquidAI/LFM2.5-2.6B/blob/main/LICENSE
-  License URL Type       : LICENSE file
-
-================================================================================
-
-MODEL 2: liquid/lfm-3-1.7b-20261106
+MODEL 1: liquid/lfm-3-1.7b-20261106
 --------------------------------------------------
   ID                     : liquid/lfm-3-1.7b:free
   Canonical Slug         : liquid/lfm-3-1.7b-20261106
@@ -53,7 +49,7 @@ MODEL 2: liquid/lfm-3-1.7b-20261106
 
 ================================================================================
 
-MODEL 3: nvidia/nemotron-3.5-lightning-20260807
+MODEL 2: nvidia/nemotron-3.5-lightning-20260807
 --------------------------------------------------
   ID                     : nvidia/nemotron-3.5-lightning:free
   Canonical Slug         : nvidia/nemotron-3.5-lightning-20260807
@@ -64,7 +60,7 @@ MODEL 3: nvidia/nemotron-3.5-lightning-20260807
 
 ================================================================================
 
-MODEL 4: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 3: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID                     : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Canonical Slug         : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
@@ -75,7 +71,7 @@ MODEL 4: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 
 ================================================================================
 
-MODEL 5: nvidia/nemotron-3-ultra-550b-a55b-20260604
+MODEL 4: nvidia/nemotron-3-ultra-550b-a55b-20260604
 --------------------------------------------------
   ID                     : nvidia/nemotron-3-ultra-550b-a55b:free
   Canonical Slug         : nvidia/nemotron-3-ultra-550b-a55b-20260604
@@ -86,7 +82,7 @@ MODEL 5: nvidia/nemotron-3-ultra-550b-a55b-20260604
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-3.5-super-vl-20261015
+MODEL 5: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
   ID                     : nvidia/nemotron-3.5-super-vl:free
   Canonical Slug         : nvidia/nemotron-3.5-super-vl-20261015
@@ -94,4 +90,15 @@ MODEL 6: nvidia/nemotron-3.5-super-vl-20261015
   License Name           : OPENMDW-1.1
   License URL            : https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16/blob/main/README.md
   License URL Type       : README.md file
+
+================================================================================
+
+MODEL 6: inclusionai/ling-3.2-flash-20261113
+--------------------------------------------------
+  ID                     : inclusionai/ling-3.2-flash:free
+  Canonical Slug         : inclusionai/ling-3.2-flash-20261113
+  HuggingFace ID         : inclusionAI/Ling-3.2-flash
+  License Name           : UNKNOWN
+  License URL            : Unknown
+  License URL Type       : Inaccessible
 

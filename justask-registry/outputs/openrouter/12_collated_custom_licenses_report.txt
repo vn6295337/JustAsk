@@ -1,6 +1,6 @@
 ================================================================================
 COLLATED CUSTOM LICENSE INFORMATION REPORT
-Generated: 2026-11-13 11:04:55 IST
+Generated: 2026-11-14 10:55:56 IST
 ================================================================================
 
 SUMMARY:
@@ -11,35 +11,23 @@ SUMMARY:
 
 CUSTOM LICENSE DISTRIBUTION:
    3 models: OPENMDW-1.1
-   2 models: LFM1.0
+   1 models: LFM1.0
    1 models: NVIDIA
+   1 models: UNKNOWN
 
-Total unique license types: 3
+Total unique license types: 4
 
 LICENSE URL TYPE DISTRIBUTION:
-   3 models: LICENSE file
+   2 models: LICENSE file
    3 models: README.md file
+   1 models: Other
 
-Total URL types: 2
+Total URL types: 3
 
 DETAILED CUSTOM MODEL INFORMATION:
 ================================================================================
 
-MODEL 1: liquid/lfm-2.5-2.6b-20260811
---------------------------------------------------
-  ID: liquid/lfm-2.5-2.6b:free
-  Original Name: LiquidAI: LFM2.5-2.6B (free)
-  HuggingFace ID: LiquidAI/LFM2.5-2.6B
-  Canonical Slug: liquid/lfm-2.5-2.6b-20260811
-  Clean Model Name: LFM2.5-2.6B
-  License Info Text: 
-  License Info URL: 
-  License Name: LFM1.0
-  License URL: https://huggingface.co/LiquidAI/LFM2.5-2.6B/blob/main/LICENSE
-
-================================================================================
-
-MODEL 2: liquid/lfm-3-1.7b-20261106
+MODEL 1: liquid/lfm-3-1.7b-20261106
 --------------------------------------------------
   ID: liquid/lfm-3-1.7b:free
   Original Name: LiquidAI: LFM3-1.7B (free)
@@ -53,7 +41,7 @@ MODEL 2: liquid/lfm-3-1.7b-20261106
 
 ================================================================================
 
-MODEL 3: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 2: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Original Name: NVIDIA: Nemotron 3 Nano Omni (free)
@@ -67,7 +55,7 @@ MODEL 3: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 
 ================================================================================
 
-MODEL 4: nvidia/nemotron-3-ultra-550b-a55b-20260604
+MODEL 3: nvidia/nemotron-3-ultra-550b-a55b-20260604
 --------------------------------------------------
   ID: nvidia/nemotron-3-ultra-550b-a55b:free
   Original Name: NVIDIA: Nemotron 3 Ultra (free)
@@ -81,7 +69,7 @@ MODEL 4: nvidia/nemotron-3-ultra-550b-a55b-20260604
 
 ================================================================================
 
-MODEL 5: nvidia/nemotron-3.5-lightning-20260807
+MODEL 4: nvidia/nemotron-3.5-lightning-20260807
 --------------------------------------------------
   ID: nvidia/nemotron-3.5-lightning:free
   Original Name: NVIDIA: Nemotron 3.5 Lightning (free)
@@ -95,7 +83,7 @@ MODEL 5: nvidia/nemotron-3.5-lightning-20260807
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-3.5-super-vl-20261015
+MODEL 5: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
   ID: nvidia/nemotron-3.5-super-vl:free
   Original Name: NVIDIA: Nemotron 3.5 Super VL (free)
@@ -106,4 +94,18 @@ MODEL 6: nvidia/nemotron-3.5-super-vl-20261015
   License Info URL: 
   License Name: OPENMDW-1.1
   License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16/blob/main/README.md
+
+================================================================================
+
+MODEL 6: inclusionai/ling-3.2-flash-20261113
+--------------------------------------------------
+  ID: inclusionai/ling-3.2-flash:free
+  Original Name: inclusionAI: Ling 3.2 Flash (free)
+  HuggingFace ID: inclusionAI/Ling-3.2-flash
+  Canonical Slug: inclusionai/ling-3.2-flash-20261113
+  Clean Model Name: Ling 3.2 Flash
+  License Info Text: 
+  License Info URL: 
+  License Name: UNKNOWN
+  License URL: Unknown
 

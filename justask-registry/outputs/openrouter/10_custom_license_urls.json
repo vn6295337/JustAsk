@@ -1,10 +1,19 @@
 {
   "metadata": {
-    "generated_at": "2026-11-13 11:04:54 IST",
+    "generated_at": "2026-11-14 10:55:55 IST",
     "total_models": 6,
     "pipeline_stage": "J_custom_license_urls"
   },
   "models": [
+    {
+      "id": "inclusionai/ling-3.2-flash:free",
+      "canonical_slug": "inclusionai/ling-3.2-flash-20261113",
+      "name": "inclusionAI: Ling 3.2 Flash (free)",
+      "hugging_face_id": "inclusionAI/Ling-3.2-flash",
+      "license_name": "UNKNOWN",
+      "license_url": "Unknown",
+      "license_url_type": "Inaccessible"
+    },
     {
       "id": "liquid/lfm-3-1.7b:free",
       "canonical_slug": "liquid/lfm-3-1.7b-20261106",
@@ -22,15 +31,6 @@
       "license_name": "OPENMDW-1.1",
       "license_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16/blob/main/README.md",
       "license_url_type": "README.md file"
-    },
-    {
-      "id": "liquid/lfm-2.5-2.6b:free",
-      "canonical_slug": "liquid/lfm-2.5-2.6b-20260811",
-      "name": "LiquidAI: LFM2.5-2.6B (free)",
-      "hugging_face_id": "LiquidAI/LFM2.5-2.6B",
-      "license_name": "LFM1.0",
-      "license_url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B/blob/main/LICENSE",
-      "license_url_type": "LICENSE file"
     },
     {
       "id": "nvidia/nemotron-3.5-lightning:free",

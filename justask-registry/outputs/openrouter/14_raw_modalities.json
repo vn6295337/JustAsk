@@ -1,10 +1,19 @@
 {
   "metadata": {
-    "generated_at": "2026-11-13 11:04:55 IST",
-    "total_models": 14,
+    "generated_at": "2026-11-14 10:55:56 IST",
+    "total_models": 13,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
+    {
+      "id": "inclusionai/ling-3.2-flash:free",
+      "canonical_slug": "inclusionai/ling-3.2-flash-20261113",
+      "original_name": "inclusionAI: Ling 3.2 Flash (free)",
+      "hugging_face_id": "inclusionAI/Ling-3.2-flash",
+      "clean_model_name": "Ling 3.2 Flash",
+      "raw_input_modalities": "text, image",
+      "raw_output_modalities": "text"
+    },
     {
       "id": "thinkingmachines/inkling-2-small:free",
       "canonical_slug": "thinkingmachines/inkling-2-small-20261107",
@@ -48,24 +57,6 @@
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
       "clean_model_name": "Nemotron 3.5 Super VL",
       "raw_input_modalities": "text, image, video",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "apodex/apodex-1.1-mini:free",
-      "canonical_slug": "apodex/apodex-1.1-mini-20261001",
-      "original_name": "Apodex: Apodex 1.1 Mini (free)",
-      "hugging_face_id": null,
-      "clean_model_name": "Apodex 1.1 Mini",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "liquid/lfm-2.5-2.6b:free",
-      "canonical_slug": "liquid/lfm-2.5-2.6b-20260811",
-      "original_name": "LiquidAI: LFM2.5-2.6B (free)",
-      "hugging_face_id": "LiquidAI/LFM2.5-2.6B",
-      "clean_model_name": "LFM2.5-2.6B",
-      "raw_input_modalities": "text",
       "raw_output_modalities": "text"
     },
     {

@@ -1,6 +1,6 @@
 ================================================================================
 OTHER LICENSE INFO URLS REPORT
-Generated: 2026-11-13 11:04:46 IST
+Generated: 2026-11-14 10:55:48 IST
 ================================================================================
 
 SUMMARY:
@@ -11,23 +11,15 @@ SUMMARY:
 
 LICENSE INFO URL BREAKDOWN:
    5 models: README.md file
-   4 models: LICENSE file
+   3 models: LICENSE file
+   1 models: Unknown/Inaccessible
 
-Total categories: 2
+Total categories: 3
 
 DETAILED MODEL LICENSE INFO URLS:
 ================================================================================
 
-MODEL 1: liquid/lfm-2.5-2.6b-20260811
---------------------------------------------------
-  ID              : liquid/lfm-2.5-2.6b:free
-  Canonical Slug  : liquid/lfm-2.5-2.6b-20260811
-  HuggingFace ID  : LiquidAI/LFM2.5-2.6B
-  License Info URL: https://huggingface.co/LiquidAI/LFM2.5-2.6B/blob/main/LICENSE
-
-================================================================================
-
-MODEL 2: liquid/lfm-3-1.7b-20261106
+MODEL 1: liquid/lfm-3-1.7b-20261106
 --------------------------------------------------
   ID              : liquid/lfm-3-1.7b:free
   Canonical Slug  : liquid/lfm-3-1.7b-20261106
@@ -36,7 +28,7 @@ MODEL 2: liquid/lfm-3-1.7b-20261106
 
 ================================================================================
 
-MODEL 3: nvidia/nemotron-3.5-lightning-20260807
+MODEL 2: nvidia/nemotron-3.5-lightning-20260807
 --------------------------------------------------
   ID              : nvidia/nemotron-3.5-lightning:free
   Canonical Slug  : nvidia/nemotron-3.5-lightning-20260807
@@ -45,7 +37,7 @@ MODEL 3: nvidia/nemotron-3.5-lightning-20260807
 
 ================================================================================
 
-MODEL 4: recursive/flint-v1.0-20261021
+MODEL 3: recursive/flint-v1.0-20261021
 --------------------------------------------------
   ID              : recursive/flint-v1.0:free
   Canonical Slug  : recursive/flint-v1.0-20261021
@@ -54,7 +46,7 @@ MODEL 4: recursive/flint-v1.0-20261021
 
 ================================================================================
 
-MODEL 5: cohere/north-mini-code-20260617
+MODEL 4: cohere/north-mini-code-20260617
 --------------------------------------------------
   ID              : cohere/north-mini-code:free
   Canonical Slug  : cohere/north-mini-code-20260617
@@ -63,7 +55,7 @@ MODEL 5: cohere/north-mini-code-20260617
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 5: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID              : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Canonical Slug  : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
@@ -72,7 +64,7 @@ MODEL 6: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 
 ================================================================================
 
-MODEL 7: nvidia/nemotron-3-ultra-550b-a55b-20260604
+MODEL 6: nvidia/nemotron-3-ultra-550b-a55b-20260604
 --------------------------------------------------
   ID              : nvidia/nemotron-3-ultra-550b-a55b:free
   Canonical Slug  : nvidia/nemotron-3-ultra-550b-a55b-20260604
@@ -81,7 +73,7 @@ MODEL 7: nvidia/nemotron-3-ultra-550b-a55b-20260604
 
 ================================================================================
 
-MODEL 8: nvidia/nemotron-3.5-super-vl-20261015
+MODEL 7: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
   ID              : nvidia/nemotron-3.5-super-vl:free
   Canonical Slug  : nvidia/nemotron-3.5-super-vl-20261015
@@ -90,10 +82,19 @@ MODEL 8: nvidia/nemotron-3.5-super-vl-20261015
 
 ================================================================================
 
-MODEL 9: thinkingmachines/inkling-2-small-20261107
+MODEL 8: thinkingmachines/inkling-2-small-20261107
 --------------------------------------------------
   ID              : thinkingmachines/inkling-2-small:free
   Canonical Slug  : thinkingmachines/inkling-2-small-20261107
   HuggingFace ID  : thinkingmachines/Inkling-2-Small
   License Info URL: https://huggingface.co/thinkingmachines/Inkling-2-Small/blob/main/README.md
+
+================================================================================
+
+MODEL 9: inclusionai/ling-3.2-flash-20261113
+--------------------------------------------------
+  ID              : inclusionai/ling-3.2-flash:free
+  Canonical Slug  : inclusionai/ling-3.2-flash-20261113
+  HuggingFace ID  : inclusionAI/Ling-3.2-flash
+  License Info URL: Unknown
 

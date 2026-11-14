@@ -1,60 +1,46 @@
 ================================================================================
 STANDARDIZED MODALITIES REPORT
-Generated: 2026-11-13 11:04:56 IST
+Generated: 2026-11-14 10:55:56 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 14
+  Total models : 13
   Input        : 14_raw_modalities.json
   Config       : modality_standardization.json
   Processor    : step_15_standardize_modalities.py
   Output       : 15_standardized_modalities.json
 
 STANDARDIZED INPUT MODALITIES DISTRIBUTION:
-   7 models: Text
-   3 models: Text, Image
+   5 models: Text
+   4 models: Text, Image
    3 models: Text, Image, Video
    1 models: Text, Image, Audio, Video
 
 Total unique input types: 4
 
 STANDARDIZED OUTPUT MODALITIES DISTRIBUTION:
-  14 models: Text
+  13 models: Text
 
 Total unique output types: 1
 
 STANDARDIZED MODALITY COMBINATIONS (INPUT → OUTPUT):
-   7 models: Text → Text
-   3 models: Text, Image → Text
+   5 models: Text → Text
+   4 models: Text, Image → Text
    3 models: Text, Image, Video → Text
    1 models: Text, Image, Audio, Video → Text
 
 Total unique combinations: 4
 
 STANDARDIZATION IMPACT ANALYSIS:
-  Input modalities changed: 14 models
-  Output modalities changed: 14 models
+  Input modalities changed: 13 models
+  Output modalities changed: 13 models
   Input modalities unchanged: 0 models
   Output modalities unchanged: 0 models
 
 DETAILED STANDARDIZED MODALITY MODEL INFORMATION:
 ================================================================================
 
-MODEL 1: apodex/apodex-1.1-mini-20261001
---------------------------------------------------
-  ID: apodex/apodex-1.1-mini:free
-  Original Name: Apodex: Apodex 1.1 Mini (free)
-  HuggingFace ID: None
-  Canonical Slug: apodex/apodex-1.1-mini-20261001
-  Clean Model Name: Apodex 1.1 Mini
-  Raw Input Modalities: text
-  Raw Output Modalities: text
-  Standardized Input Modalities: Text
-  Standardized Output Modalities: Text
-
-================================================================================
-
-MODEL 2: recursive/flint-v1.0-20261021
+MODEL 1: recursive/flint-v1.0-20261021
 --------------------------------------------------
   ID: recursive/flint-v1.0:free
   Original Name: Recursive: Flint (free)
@@ -68,21 +54,7 @@ MODEL 2: recursive/flint-v1.0-20261021
 
 ================================================================================
 
-MODEL 3: liquid/lfm-2.5-2.6b-20260811
---------------------------------------------------
-  ID: liquid/lfm-2.5-2.6b:free
-  Original Name: LiquidAI: LFM2.5-2.6B (free)
-  HuggingFace ID: LiquidAI/LFM2.5-2.6B
-  Canonical Slug: liquid/lfm-2.5-2.6b-20260811
-  Clean Model Name: LFM2.5-2.6B
-  Raw Input Modalities: text
-  Raw Output Modalities: text
-  Standardized Input Modalities: Text
-  Standardized Output Modalities: Text
-
-================================================================================
-
-MODEL 4: liquid/lfm-3-1.7b-20261106
+MODEL 2: liquid/lfm-3-1.7b-20261106
 --------------------------------------------------
   ID: liquid/lfm-3-1.7b:free
   Original Name: LiquidAI: LFM3-1.7B (free)
@@ -96,7 +68,7 @@ MODEL 4: liquid/lfm-3-1.7b-20261106
 
 ================================================================================
 
-MODEL 5: nvidia/nemotron-3-ultra-550b-a55b-20260604
+MODEL 3: nvidia/nemotron-3-ultra-550b-a55b-20260604
 --------------------------------------------------
   ID: nvidia/nemotron-3-ultra-550b-a55b:free
   Original Name: NVIDIA: Nemotron 3 Ultra (free)
@@ -110,7 +82,7 @@ MODEL 5: nvidia/nemotron-3-ultra-550b-a55b-20260604
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-3.5-lightning-20260807
+MODEL 4: nvidia/nemotron-3.5-lightning-20260807
 --------------------------------------------------
   ID: nvidia/nemotron-3.5-lightning:free
   Original Name: NVIDIA: Nemotron 3.5 Lightning (free)
@@ -124,7 +96,7 @@ MODEL 6: nvidia/nemotron-3.5-lightning-20260807
 
 ================================================================================
 
-MODEL 7: cohere/north-mini-code-20260617
+MODEL 5: cohere/north-mini-code-20260617
 --------------------------------------------------
   ID: cohere/north-mini-code:free
   Original Name: Cohere: North Mini Code (free)
@@ -138,7 +110,7 @@ MODEL 7: cohere/north-mini-code-20260617
 
 ================================================================================
 
-MODEL 8: openrouter/free
+MODEL 6: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -152,7 +124,7 @@ MODEL 8: openrouter/free
 
 ================================================================================
 
-MODEL 9: thinkingmachines/inkling-2-small-20261107
+MODEL 7: thinkingmachines/inkling-2-small-20261107
 --------------------------------------------------
   ID: thinkingmachines/inkling-2-small:free
   Original Name: Thinking Machines: Inkling 2 Small (free)
@@ -166,7 +138,21 @@ MODEL 9: thinkingmachines/inkling-2-small-20261107
 
 ================================================================================
 
-MODEL 10: particle-ai/particle-1-20261027
+MODEL 8: inclusionai/ling-3.2-flash-20261113
+--------------------------------------------------
+  ID: inclusionai/ling-3.2-flash:free
+  Original Name: inclusionAI: Ling 3.2 Flash (free)
+  HuggingFace ID: inclusionAI/Ling-3.2-flash
+  Canonical Slug: inclusionai/ling-3.2-flash-20261113
+  Clean Model Name: Ling 3.2 Flash
+  Raw Input Modalities: text, image
+  Raw Output Modalities: text
+  Standardized Input Modalities: Text, Image
+  Standardized Output Modalities: Text
+
+================================================================================
+
+MODEL 9: particle-ai/particle-1-20261027
 --------------------------------------------------
   ID: particle-ai/particle-1:free
   Original Name: Particle AI: Particle-1 (free)
@@ -180,7 +166,7 @@ MODEL 10: particle-ai/particle-1-20261027
 
 ================================================================================
 
-MODEL 11: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 10: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Original Name: NVIDIA: Nemotron 3 Nano Omni (free)
@@ -194,7 +180,7 @@ MODEL 11: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 
 ================================================================================
 
-MODEL 12: google/gemma-4-26b-a4b-it-20260403
+MODEL 11: google/gemma-4-26b-a4b-it-20260403
 --------------------------------------------------
   ID: google/gemma-4-26b-a4b-it:free
   Original Name: Google: Gemma 4 26B A4B  (free)
@@ -208,7 +194,7 @@ MODEL 12: google/gemma-4-26b-a4b-it-20260403
 
 ================================================================================
 
-MODEL 13: google/gemma-4-31b-it-20260402
+MODEL 12: google/gemma-4-31b-it-20260402
 --------------------------------------------------
   ID: google/gemma-4-31b-it:free
   Original Name: Google: Gemma 4 31B (free)
@@ -222,7 +208,7 @@ MODEL 13: google/gemma-4-31b-it-20260402
 
 ================================================================================
 
-MODEL 14: nvidia/nemotron-3.5-super-vl-20261015
+MODEL 13: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
   ID: nvidia/nemotron-3.5-super-vl:free
   Original Name: NVIDIA: Nemotron 3.5 Super VL (free)

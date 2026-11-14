@@ -1,28 +1,28 @@
 Supabase OpenRouter Working Version Refresh Report
-Last Run: 2026-11-13 11:04:57 IST
+Last Run: 2026-11-14 10:55:57 IST
 ============================================================
 
-2026-11-13 05:34:57,354 - INFO - ============================================================
-2026-11-13 05:34:57,354 - INFO - SUPABASE OPENROUTER DATA REFRESH STARTED
-2026-11-13 05:34:57,354 - INFO - ============================================================
-2026-11-13 05:34:58,680 - INFO - ✅ Database connection established
-2026-11-13 05:34:58,680 - INFO -    Target table: justask."10_free-models-staging"
-2026-11-13 05:34:59,096 - INFO - 📁 Loading finalized JSON data from /home/runner/work/JustAsk/JustAsk/justask-registry/outputs/openrouter/18_validated_models.json...
-2026-11-13 05:34:59,097 - INFO - ✅ Loaded 14 valid OpenRouter models from JSON
-2026-11-13 05:34:59,097 - INFO - 🧹 Preparing data for database insertion...
-2026-11-13 05:34:59,097 - INFO - ✅ Prepared 14 models for insertion
-2026-11-13 05:34:59,097 - INFO - 📤 Atomically replacing 12 -> 14 OpenRouter rows in justask."10_free-models-staging"...
-2026-11-13 05:34:59,935 - INFO - ✅ Replaced and verified 14 models (committed)
-2026-11-13 05:34:59,935 - INFO - ============================================================
-2026-11-13 05:34:59,935 - INFO - 🎉 SUPABASE OPENROUTER DATA REFRESH COMPLETED SUCCESSFULLY
-2026-11-13 05:34:59,935 - INFO - ============================================================
-2026-11-13 05:34:59,935 - INFO - 📊 Summary:
-2026-11-13 05:34:59,935 - INFO -    • Initial OpenRouter records: 12
-2026-11-13 05:34:59,935 - INFO -    • Records deleted: 12
-2026-11-13 05:34:59,935 - INFO -    • New records inserted: 14
-2026-11-13 05:34:59,935 - INFO -    • Final record count: 14
-2026-11-13 05:34:59,935 - INFO -    • Model-AA mappings: Refreshed for OpenRouter
-2026-11-13 05:34:59,935 - INFO -    • Processing time: 0:00:02.581282
-2026-11-13 05:34:59,935 - INFO -    • Report file: /home/runner/work/JustAsk/JustAsk/justask-registry/outputs/openrouter/19_refresh_working_report.txt
-2026-11-13 05:34:59,935 - INFO - ============================================================
-2026-11-13 05:34:59,936 - INFO - Database connection closed
+2026-11-14 05:25:57,861 - INFO - ============================================================
+2026-11-14 05:25:57,861 - INFO - SUPABASE OPENROUTER DATA REFRESH STARTED
+2026-11-14 05:25:57,861 - INFO - ============================================================
+2026-11-14 05:25:59,361 - INFO - ✅ Database connection established
+2026-11-14 05:25:59,361 - INFO -    Target table: justask."10_free-models-staging"
+2026-11-14 05:25:59,865 - INFO - 📁 Loading finalized JSON data from /home/runner/work/JustAsk/JustAsk/justask-registry/outputs/openrouter/18_validated_models.json...
+2026-11-14 05:25:59,865 - INFO - ✅ Loaded 13 valid OpenRouter models from JSON
+2026-11-14 05:25:59,866 - INFO - 🧹 Preparing data for database insertion...
+2026-11-14 05:25:59,866 - INFO - ✅ Prepared 13 models for insertion
+2026-11-14 05:25:59,866 - INFO - 📤 Atomically replacing 14 -> 13 OpenRouter rows in justask."10_free-models-staging"...
+2026-11-14 05:26:00,860 - INFO - ✅ Replaced and verified 13 models (committed)
+2026-11-14 05:26:00,861 - INFO - ============================================================
+2026-11-14 05:26:00,861 - INFO - 🎉 SUPABASE OPENROUTER DATA REFRESH COMPLETED SUCCESSFULLY
+2026-11-14 05:26:00,861 - INFO - ============================================================
+2026-11-14 05:26:00,861 - INFO - 📊 Summary:
+2026-11-14 05:26:00,861 - INFO -    • Initial OpenRouter records: 14
+2026-11-14 05:26:00,861 - INFO -    • Records deleted: 14
+2026-11-14 05:26:00,861 - INFO -    • New records inserted: 13
+2026-11-14 05:26:00,861 - INFO -    • Final record count: 13
+2026-11-14 05:26:00,861 - INFO -    • Model-AA mappings: Refreshed for OpenRouter
+2026-11-14 05:26:00,861 - INFO -    • Processing time: 0:00:02.999687
+2026-11-14 05:26:00,861 - INFO -    • Report file: /home/runner/work/JustAsk/JustAsk/justask-registry/outputs/openrouter/19_refresh_working_report.txt
+2026-11-14 05:26:00,861 - INFO - ============================================================
+2026-11-14 05:26:00,861 - INFO - Database connection closed

@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-11-13 11:04:56 IST
+Generated: 2026-11-14 10:55:57 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -9,39 +9,35 @@ DATA QUALITY ISSUES:
 MISSING OR EMPTY VALUES:
 ------------------------------
 
-LICENSE INFO TEXT (11 models):
-  - Apodex 1.1 Mini
+LICENSE INFO TEXT (10 models):
   - Free Models Router
   - Gemma 4 26B A4b IT 20260403
   - Gemma 4 31B IT 20260402
-  - LFM2.5-2.6B
   - LFM3-1.7B
+  - Ling 3.2 Flash
   - Nemotron 3 Nano Omni
   - Nemotron 3 Ultra
   - Nemotron 3.5 Lightning
   - Nemotron 3.5 Super VL
   - Particle-1
 
-LICENSE INFO URL (11 models):
-  - Apodex 1.1 Mini
+LICENSE INFO URL (10 models):
   - Free Models Router
   - Gemma 4 26B A4b IT 20260403
   - Gemma 4 31B IT 20260402
-  - LFM2.5-2.6B
   - LFM3-1.7B
+  - Ling 3.2 Flash
   - Nemotron 3 Nano Omni
   - Nemotron 3 Ultra
   - Nemotron 3.5 Lightning
   - Nemotron 3.5 Super VL
   - Particle-1
 
-LICENSE NAME (3 models):
-  - Apodex 1.1 Mini
+LICENSE NAME (2 models):
   - Free Models Router
   - Particle-1
 
-LICENSE URL (3 models):
-  - Apodex 1.1 Mini
+LICENSE URL (2 models):
   - Free Models Router
   - Particle-1
 
@@ -49,20 +45,24 @@ UNKNOWN OR 'NOT FOUND' VALUES:
 ------------------------------
 
 MODEL PROVIDER (5 models):
-  - Apodex 1.1 Mini
   - Flint
   - Inkling 2 Small
+  - Ling 3.2 Flash
   - North Mini Code
   - Particle-1
 
+LICENSE NAME (1 models):
+  - Ling 3.2 Flash
+
 DATA QUALITY SUMMARY:
 ------------------------------
-Total models: 14
-Missing license info text: 11 (78.6%)
-Missing license info url: 11 (78.6%)
-Missing license name: 3 (21.4%)
-Missing license url: 3 (21.4%)
-Unknown model provider: 5 (35.7%)
+Total models: 13
+Missing license info text: 10 (76.9%)
+Missing license info url: 10 (76.9%)
+Missing license name: 2 (15.4%)
+Missing license url: 2 (15.4%)
+Unknown model provider: 5 (38.5%)
+Unknown license name: 1 (7.7%)
 
 ================================================================================
 
@@ -89,17 +89,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
-  3. LFM2.5-2.6B
-     Provider           : Liquid AI (United States)
-     Modalities         : Text → Text
-     License            : LFM1.0
-     License Info       : 
-     License URL        : https://huggingface.co/LiquidAI/LFM2.5-2.6B/blob/main/LICENSE
-     Official URL       : https://www.liquid.ai/
-     Rate Limits        : 20 requests/min 50/day
-     Provider API Access: https://openrouter.ai/settings/keys
-
-  4. LFM3-1.7B
+  3. LFM3-1.7B
      Provider           : Liquid AI (United States)
      Modalities         : Text → Text
      License            : LFM1.0
@@ -109,7 +99,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
-  5. Nemotron 3 Nano Omni
+  4. Nemotron 3 Nano Omni
      Provider           : NVIDIA (United States)
      Modalities         : Text, Image, Audio, Video → Text
      License            : NVIDIA
@@ -119,7 +109,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
-  6. Nemotron 3 Ultra
+  5. Nemotron 3 Ultra
      Provider           : NVIDIA (United States)
      Modalities         : Text → Text
      License            : OPENMDW-1.1
@@ -129,7 +119,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
-  7. Nemotron 3.5 Lightning
+  6. Nemotron 3.5 Lightning
      Provider           : NVIDIA (United States)
      Modalities         : Text → Text
      License            : OPENMDW-1.1
@@ -139,7 +129,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
-  8. Nemotron 3.5 Super VL
+  7. Nemotron 3.5 Super VL
      Provider           : NVIDIA (United States)
      Modalities         : Text, Image, Video → Text
      License            : OPENMDW-1.1
@@ -149,7 +139,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
-  9. Free Models Router
+  8. Free Models Router
      Provider           : OpenRouter (United States)
      Modalities         : Text, Image → Text
      License            : 
@@ -159,17 +149,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 10. Apodex 1.1 Mini
-     Provider           : Unknown (Unknown)
-     Modalities         : Text → Text
-     License            : 
-     License Info       : 
-     License URL        : 
-     Official URL       : Unknown
-     Rate Limits        : 20 requests/min 50/day
-     Provider API Access: https://openrouter.ai/settings/keys
-
- 11. Flint
+  9. Flint
      Provider           : Unknown (Unknown)
      Modalities         : Text → Text
      License            : APACHE-2.0
@@ -179,7 +159,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 12. Inkling 2 Small
+ 10. Inkling 2 Small
      Provider           : Unknown (Unknown)
      Modalities         : Text, Image → Text
      License            : APACHE-2.0
@@ -189,7 +169,17 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 13. North Mini Code
+ 11. Ling 3.2 Flash
+     Provider           : Unknown (Unknown)
+     Modalities         : Text, Image → Text
+     License            : UNKNOWN
+     License Info       : 
+     License URL        : Unknown
+     Official URL       : Unknown
+     Rate Limits        : 20 requests/min 50/day
+     Provider API Access: https://openrouter.ai/settings/keys
+
+ 12. North Mini Code
      Provider           : Unknown (Unknown)
      Modalities         : Text → Text
      License            : APACHE-2.0
@@ -199,7 +189,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 14. Particle-1
+ 13. Particle-1
      Provider           : Unknown (Unknown)
      Modalities         : Text, Image → Text
      License            : 
