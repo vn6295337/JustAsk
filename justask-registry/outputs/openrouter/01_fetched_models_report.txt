@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-11-15 10:52:28 IST
+Generated: 2026-11-16 10:50:29 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 435
+  Total models: 433
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI             :  81 models
@@ -157,7 +157,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3-next-80b-a3b-instruct
     - qwen3-vl-235b-a22b-instruct
     - qwen3-vl-30b-a3b-instruct
-    - qwen3-vl-30b-a3b-thinking
     - qwen3-vl-8b-instruct
     - qwen3.5-122b-a10b
     - qwen3.5-27b
@@ -183,6 +182,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - qwen3.8-max-0902:batch
     - qwen3.8-max-prime
     - qwen3.8-omni-flash
+    - qwen4-max
 
   Anthropic          :  26 models
     - claude-fable-5
@@ -334,8 +334,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - grok-4.7:batch
     - grok-build-0.1
 
-  Tencent            :   8 models
-    - hunyuan-a13b-instruct
+  Tencent            :   7 models
     - hy-mt2-1.8b
     - hy-mt2-30b-a3b
     - hy-mt2-7b
@@ -418,11 +417,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - lfm-3-1.7b
     - lfm-3-1.7b:free
 
-  StepFun            :   3 models
-    - step-3.5-flash
-    - step-3.7-flash
-    - step-5-preview
-
   Sakana             :   3 models
     - fugu-max
     - fugu-ultra
@@ -457,6 +451,10 @@ PROVIDER BREAKDOWN (Descending Order):
   ScaleDown          :   2 models
     - extract
     - summarize
+
+  StepFun            :   2 models
+    - step-3.7-flash
+    - step-5-preview
 
   Perceptron         :   2 models
     - perceptron-mk1
