@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-11-16 10:50:29 IST
+Generated: 2026-11-17 12:30:58 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 433
+  Total models: 435
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI             :  81 models
@@ -212,7 +212,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - claude-sonnet-5.5:batch
     - claude-sonnet-latest
 
-  Z.ai               :  21 models
+  Z.ai               :  22 models
     - glm-4.5
     - glm-4.5-air
     - glm-4.5v
@@ -224,6 +224,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - glm-5-turbo
     - glm-5.1
     - glm-5.2
+    - glm-5.2:batch
     - glm-5.3
     - glm-5.3-flash
     - glm-5.3-flash:batch
@@ -334,13 +335,14 @@ PROVIDER BREAKDOWN (Descending Order):
     - grok-4.7:batch
     - grok-build-0.1
 
-  Tencent            :   7 models
+  Tencent            :   8 models
     - hy-mt2-1.8b
     - hy-mt2-30b-a3b
     - hy-mt2-7b
     - hy3
     - hy3-preview
     - hy4
+    - hy4-flash
     - hy4-preview
 
   AionLabs           :   6 models
