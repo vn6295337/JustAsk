@@ -1,8 +1,6 @@
 === GOOGLE MODELS MODALITY SCRAPING REPORT ===
-Generated: 2026-11-17 12:28:47 IST
+Generated: 2026-11-18 11:52:23 IST
 
-Total Models: 3
+Total Models: 0
 
-gemma-3: text, image → text
-gemma-2: text → text, decoder-only
-gemma-3n: text, image, video, audio → text
+No modalities found - web scraping may have failed

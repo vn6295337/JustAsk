@@ -1,21 +1,8 @@
 {
   "metadata": {
-    "generated": "2026-11-17 12:28:47 IST",
-    "total_models": 3,
+    "generated": "2026-11-18 11:52:23 IST",
+    "total_models": 0,
     "scraping_source": "Google Documentation Web Scraper"
   },
-  "modalities": {
-    "gemma-3": {
-      "input_modalities": "text, image",
-      "output_modalities": "text"
-    },
-    "gemma-2": {
-      "input_modalities": "text",
-      "output_modalities": "text, decoder-only"
-    },
-    "gemma-3n": {
-      "input_modalities": "text, image, video, audio",
-      "output_modalities": "text"
-    }
-  }
+  "modalities": {}
 }
