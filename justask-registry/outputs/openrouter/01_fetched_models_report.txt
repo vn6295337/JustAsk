@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-11-18 11:54:17 IST
+Generated: 2026-11-19 11:55:51 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 443
+  Total models: 445
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI             :  89 models
@@ -98,7 +98,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - o3
     - o3-pro
 
-  Google             :  49 models
+  Google             :  51 models
     - gemini-2.5-flash
     - gemini-2.5-flash-image
     - gemini-2.5-flash-lite
@@ -133,6 +133,8 @@ PROVIDER BREAKDOWN (Descending Order):
     - gemini-4-carbon:batch
     - gemini-4-hydrogen
     - gemini-4-hydrogen:batch
+    - gemini-4-neon
+    - gemini-4-neon:batch
     - gemini-flash-latest
     - gemini-nano-banana-2.1
     - gemini-omni-1.1-flash
