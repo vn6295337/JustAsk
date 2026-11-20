@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-11-19 11:56:05 IST",
-    "total_models": 13,
+    "generated_at": "2026-11-20 11:41:16 IST",
+    "total_models": 11,
     "pipeline_stage": "N_extract_raw_modalities"
   },
   "models": [
@@ -11,15 +11,6 @@
       "original_name": "inclusionAI: Ling 3.2 Flash (free)",
       "hugging_face_id": "inclusionAI/Ling-3.2-flash",
       "clean_model_name": "Ling 3.2 Flash",
-      "raw_input_modalities": "text, image",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "thinkingmachines/inkling-2-small:free",
-      "canonical_slug": "thinkingmachines/inkling-2-small-20261107",
-      "original_name": "Thinking Machines: Inkling 2 Small (free)",
-      "hugging_face_id": "thinkingmachines/Inkling-2-Small",
-      "clean_model_name": "Inkling 2 Small",
       "raw_input_modalities": "text, image",
       "raw_output_modalities": "text"
     },
@@ -65,15 +56,6 @@
       "original_name": "NVIDIA: Nemotron 3.5 Lightning (free)",
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
       "clean_model_name": "Nemotron 3.5 Lightning",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text"
-    },
-    {
-      "id": "cohere/north-mini-code:free",
-      "canonical_slug": "cohere/north-mini-code-20260617",
-      "original_name": "Cohere: North Mini Code (free)",
-      "hugging_face_id": "CohereLabs/North-Mini-Code-1.0",
-      "clean_model_name": "North Mini Code",
       "raw_input_modalities": "text",
       "raw_output_modalities": "text"
     },

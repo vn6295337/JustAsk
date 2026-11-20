@@ -1,29 +1,15 @@
 {
   "metadata": {
-    "generated_at": "2026-11-19 11:56:01 IST",
-    "total_models": 3,
+    "generated_at": "2026-11-20 11:41:11 IST",
+    "total_models": 1,
     "pipeline_stage": "H_bucketize_other_license_names"
   },
   "models": [
-    {
-      "id": "thinkingmachines/inkling-2-small:free",
-      "canonical_slug": "thinkingmachines/inkling-2-small-20261107",
-      "name": "Thinking Machines: Inkling 2 Small (free)",
-      "hugging_face_id": "thinkingmachines/Inkling-2-Small",
-      "license_name": "APACHE-2.0"
-    },
     {
       "id": "recursive/flint-v1.0:free",
       "canonical_slug": "recursive/flint-v1.0-20261021",
       "name": "Recursive: Flint (free)",
       "hugging_face_id": "RecursiveSI/flint",
-      "license_name": "APACHE-2.0"
-    },
-    {
-      "id": "cohere/north-mini-code:free",
-      "canonical_slug": "cohere/north-mini-code-20260617",
-      "name": "Cohere: North Mini Code (free)",
-      "hugging_face_id": "CohereLabs/North-Mini-Code-1.0",
       "license_name": "APACHE-2.0"
     }
   ]

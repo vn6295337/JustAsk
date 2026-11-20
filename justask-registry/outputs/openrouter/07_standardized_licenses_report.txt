@@ -1,22 +1,22 @@
 ================================================================================
 STANDARDIZED OTHER LICENSE NAMES REPORT
-Generated: 2026-11-19 11:56:00 IST
+Generated: 2026-11-20 11:41:11 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 9
+  Total models : 7
   Input        : 06_hf_license_names.json
   Config       : license_standardization_rules.json
   Processor    : step_07_standardize_license_names.py
   Output       : 07_standardized_licenses.json
 
 STANDARDIZATION RESULTS:
-  Models with license transformations: 9
+  Models with license transformations: 7
   Models unchanged: 0
   Transformation rate: 100.0%
 
 STANDARDIZED LICENSE DISTRIBUTION:
-  APACHE-2.0: 3 models
+  APACHE-2.0: 1 models
   LFM1.0: 1 models
   NVIDIA: 1 models
   OPENMDW-1.1: 3 models
@@ -36,17 +36,7 @@ Total unique transformations: 5
 DETAILED MODEL STANDARDIZATION RESULTS:
 ================================================================================
 
-MODEL 1: cohere/north-mini-code-20260617
---------------------------------------------------
-  ID                     : cohere/north-mini-code:free
-  Canonical Slug         : cohere/north-mini-code-20260617
-  HuggingFace ID         : CohereLabs/North-Mini-Code-1.0
-  Raw License            : apache-2.0
-  Standardized License   : APACHE-2.0
-
-================================================================================
-
-MODEL 2: recursive/flint-v1.0-20261021
+MODEL 1: recursive/flint-v1.0-20261021
 --------------------------------------------------
   ID                     : recursive/flint-v1.0:free
   Canonical Slug         : recursive/flint-v1.0-20261021
@@ -56,17 +46,7 @@ MODEL 2: recursive/flint-v1.0-20261021
 
 ================================================================================
 
-MODEL 3: thinkingmachines/inkling-2-small-20261107
---------------------------------------------------
-  ID                     : thinkingmachines/inkling-2-small:free
-  Canonical Slug         : thinkingmachines/inkling-2-small-20261107
-  HuggingFace ID         : thinkingmachines/Inkling-2-Small
-  Raw License            : apache-2.0
-  Standardized License   : APACHE-2.0
-
-================================================================================
-
-MODEL 4: liquid/lfm-3-1.7b-20261106
+MODEL 2: liquid/lfm-3-1.7b-20261106
 --------------------------------------------------
   ID                     : liquid/lfm-3-1.7b:free
   Canonical Slug         : liquid/lfm-3-1.7b-20261106
@@ -76,7 +56,7 @@ MODEL 4: liquid/lfm-3-1.7b-20261106
 
 ================================================================================
 
-MODEL 5: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 3: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID                     : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Canonical Slug         : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
@@ -86,7 +66,7 @@ MODEL 5: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-3-ultra-550b-a55b-20260604
+MODEL 4: nvidia/nemotron-3-ultra-550b-a55b-20260604
 --------------------------------------------------
   ID                     : nvidia/nemotron-3-ultra-550b-a55b:free
   Canonical Slug         : nvidia/nemotron-3-ultra-550b-a55b-20260604
@@ -96,7 +76,7 @@ MODEL 6: nvidia/nemotron-3-ultra-550b-a55b-20260604
 
 ================================================================================
 
-MODEL 7: nvidia/nemotron-3.5-lightning-20260807
+MODEL 5: nvidia/nemotron-3.5-lightning-20260807
 --------------------------------------------------
   ID                     : nvidia/nemotron-3.5-lightning:free
   Canonical Slug         : nvidia/nemotron-3.5-lightning-20260807
@@ -106,7 +86,7 @@ MODEL 7: nvidia/nemotron-3.5-lightning-20260807
 
 ================================================================================
 
-MODEL 8: nvidia/nemotron-3.5-super-vl-20261015
+MODEL 6: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
   ID                     : nvidia/nemotron-3.5-super-vl:free
   Canonical Slug         : nvidia/nemotron-3.5-super-vl-20261015
@@ -116,7 +96,7 @@ MODEL 8: nvidia/nemotron-3.5-super-vl-20261015
 
 ================================================================================
 
-MODEL 9: inclusionai/ling-3.2-flash-20261113
+MODEL 7: inclusionai/ling-3.2-flash-20261113
 --------------------------------------------------
   ID                     : inclusionai/ling-3.2-flash:free
   Canonical Slug         : inclusionai/ling-3.2-flash-20261113

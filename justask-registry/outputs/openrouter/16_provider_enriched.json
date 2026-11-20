@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-11-19 11:56:05 IST",
-    "total_models": 13,
+    "generated_at": "2026-11-20 11:41:17 IST",
+    "total_models": 11,
     "pipeline_stage": "P_enrich_provider_info"
   },
   "models": [
@@ -23,26 +23,6 @@
       "model_provider": "Unknown",
       "model_provider_country": "Unknown",
       "model_family": "inclusionai",
-      "official_url": "Unknown"
-    },
-    {
-      "id": "thinkingmachines/inkling-2-small:free",
-      "canonical_slug": "thinkingmachines/inkling-2-small-20261107",
-      "provider_slug": "inkling-2-small-20261107",
-      "original_name": "Thinking Machines: Inkling 2 Small (free)",
-      "hugging_face_id": "thinkingmachines/Inkling-2-Small",
-      "clean_model_name": "Inkling 2 Small",
-      "raw_input_modalities": "text, image",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text, image",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text, Image",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model",
-      "inference_provider": "OpenRouter",
-      "model_provider": "Unknown",
-      "model_provider_country": "Unknown",
-      "model_family": "thinkingmachines",
       "official_url": "Unknown"
     },
     {
@@ -144,26 +124,6 @@
       "model_provider_country": "United States",
       "model_family": "nvidia",
       "official_url": "https://build.nvidia.com/"
-    },
-    {
-      "id": "cohere/north-mini-code:free",
-      "canonical_slug": "cohere/north-mini-code-20260617",
-      "provider_slug": "north-mini-code-20260617",
-      "original_name": "Cohere: North Mini Code (free)",
-      "hugging_face_id": "CohereLabs/North-Mini-Code-1.0",
-      "clean_model_name": "North Mini Code",
-      "raw_input_modalities": "text",
-      "raw_output_modalities": "text",
-      "enhanced_input_modalities": "text",
-      "enhanced_output_modalities": "text",
-      "standardized_input_modalities": "Text",
-      "standardized_output_modalities": "Text",
-      "google_enhancement_status": "no_google_model",
-      "inference_provider": "OpenRouter",
-      "model_provider": "Unknown",
-      "model_provider_country": "Unknown",
-      "model_family": "cohere",
-      "official_url": "Unknown"
     },
     {
       "id": "nvidia/nemotron-3-ultra-550b-a55b:free",

@@ -1,45 +1,27 @@
 ================================================================================
 OPENSOURCE LICENSE MODELS REPORT
-Generated: 2026-11-19 11:56:01 IST
+Generated: 2026-11-20 11:41:11 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 3
+  Total models : 1
   Input        : 07_standardized_licenses.json
   Reference    : opensource_license_urls.json
   Processor    : step_08_bucketize_licenses.py
   Output       : 08_opensource_licenses.json
 
 OPENSOURCE LICENSE DISTRIBUTION:
-  APACHE-2.0: 3 models
+  APACHE-2.0: 1 models
 
 Total license types: 1
 
 DETAILED OPENSOURCE MODEL LISTINGS:
 ================================================================================
 
-MODEL 1: cohere/north-mini-code-20260617
---------------------------------------------------
-  ID              : cohere/north-mini-code:free
-  Canonical Slug  : cohere/north-mini-code-20260617
-  HuggingFace ID  : CohereLabs/North-Mini-Code-1.0
-  License Name    : APACHE-2.0
-
-================================================================================
-
-MODEL 2: recursive/flint-v1.0-20261021
+MODEL 1: recursive/flint-v1.0-20261021
 --------------------------------------------------
   ID              : recursive/flint-v1.0:free
   Canonical Slug  : recursive/flint-v1.0-20261021
   HuggingFace ID  : RecursiveSI/flint
-  License Name    : APACHE-2.0
-
-================================================================================
-
-MODEL 3: thinkingmachines/inkling-2-small-20261107
---------------------------------------------------
-  ID              : thinkingmachines/inkling-2-small:free
-  Canonical Slug  : thinkingmachines/inkling-2-small-20261107
-  HuggingFace ID  : thinkingmachines/Inkling-2-Small
   License Name    : APACHE-2.0
 

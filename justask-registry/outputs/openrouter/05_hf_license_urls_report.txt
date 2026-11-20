@@ -1,17 +1,17 @@
 ================================================================================
 OTHER LICENSE INFO URLS REPORT
-Generated: 2026-11-19 11:55:56 IST
+Generated: 2026-11-20 11:41:06 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 9
+  Total models : 7
   Input        : 02_filtered_models.json
   Processor    : step_05_fetch_hf_license_urls.py
   Output       : 05_hf_license_urls.json
 
 LICENSE INFO URL BREAKDOWN:
-   5 models: README.md file
    3 models: LICENSE file
+   3 models: README.md file
    1 models: Unknown/Inaccessible
 
 Total categories: 3
@@ -46,16 +46,7 @@ MODEL 3: recursive/flint-v1.0-20261021
 
 ================================================================================
 
-MODEL 4: cohere/north-mini-code-20260617
---------------------------------------------------
-  ID              : cohere/north-mini-code:free
-  Canonical Slug  : cohere/north-mini-code-20260617
-  HuggingFace ID  : CohereLabs/North-Mini-Code-1.0
-  License Info URL: https://huggingface.co/CohereLabs/North-Mini-Code-1.0/blob/main/README.md
-
-================================================================================
-
-MODEL 5: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 4: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID              : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Canonical Slug  : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
@@ -64,7 +55,7 @@ MODEL 5: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-3-ultra-550b-a55b-20260604
+MODEL 5: nvidia/nemotron-3-ultra-550b-a55b-20260604
 --------------------------------------------------
   ID              : nvidia/nemotron-3-ultra-550b-a55b:free
   Canonical Slug  : nvidia/nemotron-3-ultra-550b-a55b-20260604
@@ -73,7 +64,7 @@ MODEL 6: nvidia/nemotron-3-ultra-550b-a55b-20260604
 
 ================================================================================
 
-MODEL 7: nvidia/nemotron-3.5-super-vl-20261015
+MODEL 6: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
   ID              : nvidia/nemotron-3.5-super-vl:free
   Canonical Slug  : nvidia/nemotron-3.5-super-vl-20261015
@@ -82,16 +73,7 @@ MODEL 7: nvidia/nemotron-3.5-super-vl-20261015
 
 ================================================================================
 
-MODEL 8: thinkingmachines/inkling-2-small-20261107
---------------------------------------------------
-  ID              : thinkingmachines/inkling-2-small:free
-  Canonical Slug  : thinkingmachines/inkling-2-small-20261107
-  HuggingFace ID  : thinkingmachines/Inkling-2-Small
-  License Info URL: https://huggingface.co/thinkingmachines/Inkling-2-Small/blob/main/README.md
-
-================================================================================
-
-MODEL 9: inclusionai/ling-3.2-flash-20261113
+MODEL 7: inclusionai/ling-3.2-flash-20261113
 --------------------------------------------------
   ID              : inclusionai/ling-3.2-flash:free
   Canonical Slug  : inclusionai/ling-3.2-flash-20261113

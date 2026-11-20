@@ -1,10 +1,10 @@
 ================================================================================
 PROVIDER ENRICHED MODELS REPORT
-Generated: 2026-11-19 11:56:05 IST
+Generated: 2026-11-20 11:41:17 IST
 ================================================================================
 
 SUMMARY:
-  Total models      : 13
+  Total models      : 11
   Input             : 15_standardized_modalities.json
   Config            : provider_enrichment.json
   Processor         : step_16_enrich_provider.py
@@ -12,27 +12,23 @@ SUMMARY:
 
 ACTION ITEMS - UNKNOWN MAPPINGS:
 ==================================================
-UNKNOWN PROVIDERS (5 models):
+UNKNOWN PROVIDERS (3 models):
   Add these provider mappings to provider_enrichment.json:
-    "cohere": ["Provider Name", "Country"],
     "inclusionai": ["Provider Name", "Country"],
     "particle-ai": ["Provider Name", "Country"],
     "recursive": ["Provider Name", "Country"],
-    "thinkingmachines": ["Provider Name", "Country"],
 
-UNKNOWN OFFICIAL URLS (5 unique families):
+UNKNOWN OFFICIAL URLS (3 unique families):
   Add these URL mappings to family_official_urls:
-    "cohere": "https://official-url-here",
     "inclusionai": "https://official-url-here",
     "particle-ai": "https://official-url-here",
     "recursive": "https://official-url-here",
-    "thinkingmachines": "https://official-url-here",
 
 ==================================================
 
 MODEL PROVIDER DISTRIBUTION:
-   5 models: Unknown
    4 models: NVIDIA
+   3 models: Unknown
    2 models: Google
    1 models: Liquid AI
    1 models: OpenRouter
@@ -41,41 +37,25 @@ Total unique model providers: 5
 
 MODEL PROVIDER COUNTRY DISTRIBUTION:
    8 models: United States
-   5 models: Unknown
+   3 models: Unknown
 
 Total unique countries: 2
 
 MODEL FAMILY DISTRIBUTION:
    4 models: nvidia
    2 models: gemma
-   1 models: cohere
    1 models: inclusionai
    1 models: liquid ai
    1 models: openrouter
    1 models: particle-ai
    1 models: recursive
-   1 models: thinkingmachines
 
-Total unique model families: 9
+Total unique model families: 7
 
 DETAILED PROVIDER ENRICHED MODEL INFORMATION:
 ================================================================================
 
-MODEL 1: cohere/north-mini-code-20260617
---------------------------------------------------
-  ID: cohere/north-mini-code:free
-  Original Name: Cohere: North Mini Code (free)
-  HuggingFace ID: CohereLabs/North-Mini-Code-1.0
-  Canonical Slug: cohere/north-mini-code-20260617
-  Clean Model Name: North Mini Code
-  Model Provider: Unknown
-  Model Provider Country: Unknown
-  Model Family: cohere
-  Official URL: Unknown
-
-================================================================================
-
-MODEL 2: google/gemma-4-26b-a4b-it-20260403
+MODEL 1: google/gemma-4-26b-a4b-it-20260403
 --------------------------------------------------
   ID: google/gemma-4-26b-a4b-it:free
   Original Name: Google: Gemma 4 26B A4B  (free)
@@ -89,7 +69,7 @@ MODEL 2: google/gemma-4-26b-a4b-it-20260403
 
 ================================================================================
 
-MODEL 3: google/gemma-4-31b-it-20260402
+MODEL 2: google/gemma-4-31b-it-20260402
 --------------------------------------------------
   ID: google/gemma-4-31b-it:free
   Original Name: Google: Gemma 4 31B (free)
@@ -103,7 +83,7 @@ MODEL 3: google/gemma-4-31b-it-20260402
 
 ================================================================================
 
-MODEL 4: inclusionai/ling-3.2-flash-20261113
+MODEL 3: inclusionai/ling-3.2-flash-20261113
 --------------------------------------------------
   ID: inclusionai/ling-3.2-flash:free
   Original Name: inclusionAI: Ling 3.2 Flash (free)
@@ -117,7 +97,7 @@ MODEL 4: inclusionai/ling-3.2-flash-20261113
 
 ================================================================================
 
-MODEL 5: liquid/lfm-3-1.7b-20261106
+MODEL 4: liquid/lfm-3-1.7b-20261106
 --------------------------------------------------
   ID: liquid/lfm-3-1.7b:free
   Original Name: LiquidAI: LFM3-1.7B (free)
@@ -131,7 +111,7 @@ MODEL 5: liquid/lfm-3-1.7b-20261106
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 5: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Original Name: NVIDIA: Nemotron 3 Nano Omni (free)
@@ -145,7 +125,7 @@ MODEL 6: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 
 ================================================================================
 
-MODEL 7: nvidia/nemotron-3-ultra-550b-a55b-20260604
+MODEL 6: nvidia/nemotron-3-ultra-550b-a55b-20260604
 --------------------------------------------------
   ID: nvidia/nemotron-3-ultra-550b-a55b:free
   Original Name: NVIDIA: Nemotron 3 Ultra (free)
@@ -159,7 +139,7 @@ MODEL 7: nvidia/nemotron-3-ultra-550b-a55b-20260604
 
 ================================================================================
 
-MODEL 8: nvidia/nemotron-3.5-lightning-20260807
+MODEL 7: nvidia/nemotron-3.5-lightning-20260807
 --------------------------------------------------
   ID: nvidia/nemotron-3.5-lightning:free
   Original Name: NVIDIA: Nemotron 3.5 Lightning (free)
@@ -173,7 +153,7 @@ MODEL 8: nvidia/nemotron-3.5-lightning-20260807
 
 ================================================================================
 
-MODEL 9: nvidia/nemotron-3.5-super-vl-20261015
+MODEL 8: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
   ID: nvidia/nemotron-3.5-super-vl:free
   Original Name: NVIDIA: Nemotron 3.5 Super VL (free)
@@ -187,7 +167,7 @@ MODEL 9: nvidia/nemotron-3.5-super-vl-20261015
 
 ================================================================================
 
-MODEL 10: openrouter/free
+MODEL 9: openrouter/free
 --------------------------------------------------
   ID: openrouter/free
   Original Name: Free Models Router
@@ -201,7 +181,7 @@ MODEL 10: openrouter/free
 
 ================================================================================
 
-MODEL 11: particle-ai/particle-1-20261027
+MODEL 10: particle-ai/particle-1-20261027
 --------------------------------------------------
   ID: particle-ai/particle-1:free
   Original Name: Particle AI: Particle-1 (free)
@@ -215,7 +195,7 @@ MODEL 11: particle-ai/particle-1-20261027
 
 ================================================================================
 
-MODEL 12: recursive/flint-v1.0-20261021
+MODEL 11: recursive/flint-v1.0-20261021
 --------------------------------------------------
   ID: recursive/flint-v1.0:free
   Original Name: Recursive: Flint (free)
@@ -225,19 +205,5 @@ MODEL 12: recursive/flint-v1.0-20261021
   Model Provider: Unknown
   Model Provider Country: Unknown
   Model Family: recursive
-  Official URL: Unknown
-
-================================================================================
-
-MODEL 13: thinkingmachines/inkling-2-small-20261107
---------------------------------------------------
-  ID: thinkingmachines/inkling-2-small:free
-  Original Name: Thinking Machines: Inkling 2 Small (free)
-  HuggingFace ID: thinkingmachines/Inkling-2-Small
-  Canonical Slug: thinkingmachines/inkling-2-small-20261107
-  Clean Model Name: Inkling 2 Small
-  Model Provider: Unknown
-  Model Provider Country: Unknown
-  Model Family: thinkingmachines
   Official URL: Unknown
 

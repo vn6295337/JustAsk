@@ -1,21 +1,10 @@
 {
   "metadata": {
-    "generated_at": "2026-11-19 11:56:04 IST",
-    "total_models": 3,
+    "generated_at": "2026-11-20 11:41:16 IST",
+    "total_models": 1,
     "pipeline_stage": "K_collate_opensource_licenses"
   },
   "models": [
-    {
-      "id": "cohere/north-mini-code:free",
-      "canonical_slug": "cohere/north-mini-code-20260617",
-      "original_name": "Cohere: North Mini Code (free)",
-      "hugging_face_id": "CohereLabs/North-Mini-Code-1.0",
-      "clean_model_name": "North Mini Code",
-      "license_info_text": "info",
-      "license_info_url": "https://huggingface.co/CohereLabs/North-Mini-Code-1.0/blob/main/README.md",
-      "license_name": "APACHE-2.0",
-      "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
-    },
     {
       "id": "recursive/flint-v1.0:free",
       "canonical_slug": "recursive/flint-v1.0-20261021",
@@ -24,17 +13,6 @@
       "clean_model_name": "Flint",
       "license_info_text": "info",
       "license_info_url": "https://huggingface.co/RecursiveSI/flint/blob/main/LICENSE",
-      "license_name": "APACHE-2.0",
-      "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
-    },
-    {
-      "id": "thinkingmachines/inkling-2-small:free",
-      "canonical_slug": "thinkingmachines/inkling-2-small-20261107",
-      "original_name": "Thinking Machines: Inkling 2 Small (free)",
-      "hugging_face_id": "thinkingmachines/Inkling-2-Small",
-      "clean_model_name": "Inkling 2 Small",
-      "license_info_text": "info",
-      "license_info_url": "https://huggingface.co/thinkingmachines/Inkling-2-Small/blob/main/README.md",
       "license_name": "APACHE-2.0",
       "license_url": "https://www.apache.org/licenses/LICENSE-2.0"
     }

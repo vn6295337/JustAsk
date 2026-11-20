@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-11-19 11:56:00 IST",
-    "total_models": 9,
+    "generated_at": "2026-11-20 11:41:11 IST",
+    "total_models": 7,
     "pipeline_stage": "G_standardize_other_license_names_from_hf"
   },
   "models": [
@@ -12,14 +12,6 @@
       "hugging_face_id": "inclusionAI/Ling-3.2-flash",
       "raw_extracted_license": "Unknown",
       "standardized_license_name": "UNKNOWN"
-    },
-    {
-      "id": "thinkingmachines/inkling-2-small:free",
-      "canonical_slug": "thinkingmachines/inkling-2-small-20261107",
-      "name": "Thinking Machines: Inkling 2 Small (free)",
-      "hugging_face_id": "thinkingmachines/Inkling-2-Small",
-      "raw_extracted_license": "apache-2.0",
-      "standardized_license_name": "APACHE-2.0"
     },
     {
       "id": "liquid/lfm-3-1.7b:free",
@@ -52,14 +44,6 @@
       "hugging_face_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
       "raw_extracted_license": "openmdw-1.1",
       "standardized_license_name": "OPENMDW-1.1"
-    },
-    {
-      "id": "cohere/north-mini-code:free",
-      "canonical_slug": "cohere/north-mini-code-20260617",
-      "name": "Cohere: North Mini Code (free)",
-      "hugging_face_id": "CohereLabs/North-Mini-Code-1.0",
-      "raw_extracted_license": "apache-2.0",
-      "standardized_license_name": "APACHE-2.0"
     },
     {
       "id": "nvidia/nemotron-3-ultra-550b-a55b:free",

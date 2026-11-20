@@ -1,42 +1,28 @@
 ================================================================================
 COLLATED OPENSOURCE LICENSE INFORMATION REPORT
-Generated: 2026-11-19 11:56:04 IST
+Generated: 2026-11-20 11:41:16 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 3
+  Total models        : 1
   Input sources       : 3 pipeline stage files
   Processor           : step_11_collate_opensource.py
   Output              : 11_collated_opensource_licenses.json
 
 PIPELINE STAGE COVERAGE:
-  Step 05 (License Info URLs)    : 3 models
-  Step 08 Opensource Names       : 3 models
-  Step 09 Opensource URLs        : 3 models
+  Step 05 (License Info URLs)    : 1 models
+  Step 08 Opensource Names       : 1 models
+  Step 09 Opensource URLs        : 1 models
 
 OPENSOURCE LICENSE DISTRIBUTION:
-   3 models: APACHE-2.0
+   1 models: APACHE-2.0
 
 Total unique license types: 1
 
 DETAILED OPENSOURCE MODEL INFORMATION:
 ================================================================================
 
-MODEL 1: cohere/north-mini-code-20260617
---------------------------------------------------
-  ID: cohere/north-mini-code:free
-  Original Name: Cohere: North Mini Code (free)
-  HuggingFace ID: CohereLabs/North-Mini-Code-1.0
-  Canonical Slug: cohere/north-mini-code-20260617
-  Clean Model Name: North Mini Code
-  License Info Text: info
-  License Info URL: https://huggingface.co/CohereLabs/North-Mini-Code-1.0/blob/main/README.md
-  License Name: APACHE-2.0
-  License URL: https://www.apache.org/licenses/LICENSE-2.0
-
-================================================================================
-
-MODEL 2: recursive/flint-v1.0-20261021
+MODEL 1: recursive/flint-v1.0-20261021
 --------------------------------------------------
   ID: recursive/flint-v1.0:free
   Original Name: Recursive: Flint (free)
@@ -45,20 +31,6 @@ MODEL 2: recursive/flint-v1.0-20261021
   Clean Model Name: Flint
   License Info Text: info
   License Info URL: https://huggingface.co/RecursiveSI/flint/blob/main/LICENSE
-  License Name: APACHE-2.0
-  License URL: https://www.apache.org/licenses/LICENSE-2.0
-
-================================================================================
-
-MODEL 3: thinkingmachines/inkling-2-small-20261107
---------------------------------------------------
-  ID: thinkingmachines/inkling-2-small:free
-  Original Name: Thinking Machines: Inkling 2 Small (free)
-  HuggingFace ID: thinkingmachines/Inkling-2-Small
-  Canonical Slug: thinkingmachines/inkling-2-small-20261107
-  Clean Model Name: Inkling 2 Small
-  License Info Text: info
-  License Info URL: https://huggingface.co/thinkingmachines/Inkling-2-Small/blob/main/README.md
   License Name: APACHE-2.0
   License URL: https://www.apache.org/licenses/LICENSE-2.0
 

@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-11-19 11:55:51 IST
+Generated: 2026-11-20 11:41:01 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 445
+  Total models: 442
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI             :  89 models
@@ -246,6 +246,28 @@ PROVIDER BREAKDOWN (Descending Order):
     - glm-flash-latest
     - glm-latest
 
+  Mistral            :  20 models
+    - codestral-2508
+    - devstral-2512
+    - ministral-14b-2512
+    - ministral-3b-2512
+    - ministral-8b-2512
+    - mistral-large-2512
+    - mistral-large-4-0
+    - mistral-medium-3
+    - mistral-medium-3-5
+    - mistral-medium-3-5:batch
+    - mistral-medium-3.1
+    - mistral-nemo
+    - mistral-saba
+    - mistral-small-24b-instruct-2501
+    - mistral-small-2603
+    - mistral-small-3.1-24b-instruct
+    - mistral-small-3.2-24b-instruct
+    - mixtral-8x22b-instruct
+    - pixtral-large-2502
+    - voxtral-small-24b-2507
+
   DeepSeek           :  20 models
     - deepseek-chat
     - deepseek-chat-v3-0324
@@ -268,31 +290,9 @@ PROVIDER BREAKDOWN (Descending Order):
     - deepseek-v4.1-flash-1017:batch
     - deepseek-v4.1-flash:batch
 
-  Mistral            :  19 models
-    - codestral-2508
-    - devstral-2512
-    - ministral-14b-2512
-    - ministral-3b-2512
-    - ministral-8b-2512
-    - mistral-large-2512
-    - mistral-large-4-0
-    - mistral-medium-3
-    - mistral-medium-3-5
-    - mistral-medium-3-5:batch
-    - mistral-medium-3.1
-    - mistral-nemo
-    - mistral-saba
-    - mistral-small-24b-instruct-2501
-    - mistral-small-2603
-    - mistral-small-3.1-24b-instruct
-    - mistral-small-3.2-24b-instruct
-    - mixtral-8x22b-instruct
-    - voxtral-small-24b-2507
-
-  Meta               :  16 models
+  Meta               :  15 models
     - llama-3.1-70b-instruct
     - llama-3.1-8b-instruct
-    - llama-3.2-1b-instruct
     - llama-3.2-3b-instruct
     - llama-3.3-70b-instruct
     - llama-4-maverick
@@ -333,7 +333,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - nemotron-3.5-super-vl:free
     - switchyard
 
-  SpaceXAI           :  10 models
+  SpaceXSI           :   9 models
     - grok-4.20
     - grok-4.20-multi-agent
     - grok-4.3
@@ -343,7 +343,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - grok-4.6:batch
     - grok-4.7
     - grok-4.7:batch
-    - grok-build-0.1
 
   Tencent            :   8 models
     - hy-mt2-1.8b
@@ -363,14 +362,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - aion-3.5-mini
     - aion-rp-llama-3.1-8b
 
-  Cohere             :   6 models
-    - command-a
-    - command-a-plus
-    - command-r-08-2024
-    - command-r-plus-08-2024
-    - command-r7b-12-2024
-    - north-mini-code:free
-
   inclusionAI        :   5 models
     - ling-3.0-flash
     - ling-3.0-flash-vl
@@ -378,19 +369,19 @@ PROVIDER BREAKDOWN (Descending Order):
     - ling-3.1-flash
     - ling-3.2-flash:free
 
-  Thinking Machines  :   5 models
-    - inkling
-    - inkling-2-small
-    - inkling-2-small:free
-    - inkling-small
-    - inkling-small:batch
-
   MiniMax            :   5 models
     - minimax-m2.5
     - minimax-m2.7
     - minimax-m3
     - minimax-m3.1-flash
     - minimax-m3:batch
+
+  Cohere             :   5 models
+    - command-a
+    - command-a-plus
+    - command-r-08-2024
+    - command-r-plus-08-2024
+    - command-r7b-12-2024
 
   Xiaomi             :   5 models
     - mimo-v2.5
@@ -412,6 +403,12 @@ PROVIDER BREAKDOWN (Descending Order):
     - sonar-pro
     - sonar-pro-search
     - sonar-reasoning-pro
+
+  Thinking Machines  :   4 models
+    - inkling
+    - inkling-2-small
+    - inkling-small
+    - inkling-small:batch
 
   Morph              :   4 models
     - morph-v3-fast

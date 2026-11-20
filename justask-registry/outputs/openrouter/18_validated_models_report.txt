@@ -1,11 +1,11 @@
 ================================================================================
 DATABASE DATA FINALIZATION REPORT
-Generated: 2026-11-19 11:56:06 IST
+Generated: 2026-11-20 11:41:18 IST
 ================================================================================
 
 SUMMARY:
-  Input models         : 13
-  Models kept          : 13
+  Input models         : 11
+  Models kept          : 11
   Models removed       : 0
   Input                : 17_normalized_models.json
   Config               : remove_models.json
@@ -23,8 +23,8 @@ FINALIZED DATABASE DATA SUMMARY:
 ================================================================================
 
 PROVIDER DISTRIBUTION (FINALIZED DATA):
-   5 models: Unknown
    4 models: NVIDIA
+   3 models: Unknown
    2 models: Google
    1 models: Liquid AI
    1 models: OpenRouter
@@ -32,6 +32,6 @@ PROVIDER DISTRIBUTION (FINALIZED DATA):
 Total providers: 5
 
 FAMILY DISTRIBUTION (FINALIZED DATA):
-  13 models: Unknown
+  11 models: Unknown
 
 Total families: 1

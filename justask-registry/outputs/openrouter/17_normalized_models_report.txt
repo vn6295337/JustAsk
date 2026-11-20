@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-11-19 11:56:06 IST
+Generated: 2026-11-20 11:41:17 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -44,11 +44,9 @@ LICENSE URL (2 models):
 UNKNOWN OR 'NOT FOUND' VALUES:
 ------------------------------
 
-MODEL PROVIDER (5 models):
+MODEL PROVIDER (3 models):
   - Flint
-  - Inkling 2 Small
   - Ling 3.2 Flash
-  - North Mini Code
   - Particle-1
 
 LICENSE NAME (1 models):
@@ -56,13 +54,13 @@ LICENSE NAME (1 models):
 
 DATA QUALITY SUMMARY:
 ------------------------------
-Total models: 13
-Missing license info text: 10 (76.9%)
-Missing license info url: 10 (76.9%)
-Missing license name: 2 (15.4%)
-Missing license url: 2 (15.4%)
-Unknown model provider: 5 (38.5%)
-Unknown license name: 1 (7.7%)
+Total models: 11
+Missing license info text: 10 (90.9%)
+Missing license info url: 10 (90.9%)
+Missing license name: 2 (18.2%)
+Missing license url: 2 (18.2%)
+Unknown model provider: 3 (27.3%)
+Unknown license name: 1 (9.1%)
 
 ================================================================================
 
@@ -159,17 +157,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 10. Inkling 2 Small
-     Provider           : Unknown (Unknown)
-     Modalities         : Text, Image → Text
-     License            : APACHE-2.0
-     License Info       : info
-     License URL        : https://www.apache.org/licenses/LICENSE-2.0
-     Official URL       : Unknown
-     Rate Limits        : 20 requests/min 50/day
-     Provider API Access: https://openrouter.ai/settings/keys
-
- 11. Ling 3.2 Flash
+ 10. Ling 3.2 Flash
      Provider           : Unknown (Unknown)
      Modalities         : Text, Image → Text
      License            : UNKNOWN
@@ -179,17 +167,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 12. North Mini Code
-     Provider           : Unknown (Unknown)
-     Modalities         : Text → Text
-     License            : APACHE-2.0
-     License Info       : info
-     License URL        : https://www.apache.org/licenses/LICENSE-2.0
-     Official URL       : Unknown
-     Rate Limits        : 20 requests/min 50/day
-     Provider API Access: https://openrouter.ai/settings/keys
-
- 13. Particle-1
+ 11. Particle-1
      Provider           : Unknown (Unknown)
      Modalities         : Text, Image → Text
      License            : 
