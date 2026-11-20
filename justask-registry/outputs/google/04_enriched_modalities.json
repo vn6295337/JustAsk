@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-11-19 11:54:09 IST",
-    "total_models": 32,
+    "generated": "2026-11-20 11:38:59 IST",
+    "total_models": 33,
     "enrichment_source": "Google Pipeline 04_enrich_modalities"
   },
   "models": [
@@ -692,6 +692,22 @@
       "maxTemperature": 2,
       "thinking": true,
       "provider_slug": "gemini-3.8-live-extended-thinking",
+      "input_modalities": "Unknown",
+      "output_modalities": "Unknown",
+      "modality_source": "unknown",
+      "match_priority": 0
+    },
+    {
+      "name": "models/genie-4",
+      "version": "001",
+      "displayName": "Genie 4",
+      "description": "Real-time audio-video generation model",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "bidiGenerateContent"
+      ],
+      "provider_slug": "genie-4",
       "input_modalities": "Unknown",
       "output_modalities": "Unknown",
       "modality_source": "unknown",

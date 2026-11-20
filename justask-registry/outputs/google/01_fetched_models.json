@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated": "2026-11-19 11:54:05 IST",
-    "total_models": 65,
+    "generated": "2026-11-20 11:38:55 IST",
+    "total_models": 66,
     "api_source": "Google Generative Language API"
   },
   "models": [
@@ -1047,6 +1047,17 @@
       "topK": 64,
       "maxTemperature": 2,
       "thinking": true
+    },
+    {
+      "name": "models/genie-4",
+      "version": "001",
+      "displayName": "Genie 4",
+      "description": "Real-time audio-video generation model",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "bidiGenerateContent"
+      ]
     },
     {
       "name": "models/gemini-robotics-er-2-streaming-preview",
