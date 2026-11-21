@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-11-20 11:41:01 IST
+Generated: 2026-11-21 11:31:40 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 442
+  Total models: 441
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI             :  89 models
@@ -344,12 +344,11 @@ PROVIDER BREAKDOWN (Descending Order):
     - grok-4.7
     - grok-4.7:batch
 
-  Tencent            :   8 models
+  Tencent            :   7 models
     - hy-mt2-1.8b
     - hy-mt2-30b-a3b
     - hy-mt2-7b
     - hy3
-    - hy3-preview
     - hy4
     - hy4-flash
     - hy4-preview
@@ -361,6 +360,13 @@ PROVIDER BREAKDOWN (Descending Order):
     - aion-3.5
     - aion-3.5-mini
     - aion-rp-llama-3.1-8b
+
+  Thinking Machines  :   5 models
+    - inkling
+    - inkling-2-mini
+    - inkling-2-small
+    - inkling-small
+    - inkling-small:batch
 
   inclusionAI        :   5 models
     - ling-3.0-flash
@@ -403,12 +409,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - sonar-pro
     - sonar-pro-search
     - sonar-reasoning-pro
-
-  Thinking Machines  :   4 models
-    - inkling
-    - inkling-2-small
-    - inkling-small
-    - inkling-small:batch
 
   Morph              :   4 models
     - morph-v3-fast
@@ -485,6 +485,9 @@ PROVIDER BREAKDOWN (Descending Order):
     - l3-lunaris-8b
     - l3.1-euryale-70b
 
+  RadixArk           :   1 models
+    - daisyrose-27b
+
   KT                 :   1 models
     - midm-k-3.0-pro
 
@@ -508,12 +511,6 @@ PROVIDER BREAKDOWN (Descending Order):
 
   IBM                :   1 models
     - granite-4.2-8b
-
-  Dots Studio        :   1 models
-    - dots-3-note-preview:free
-
-  Meituan            :   1 models
-    - longcat-2.0
 
   xAI                :   1 models
     - grok-latest
@@ -542,4 +539,4 @@ PROVIDER BREAKDOWN (Descending Order):
   OpenRouter         :   1 models
     - fusion
 
-Total providers: 56
+Total providers: 55
