@@ -1,11 +1,11 @@
 === GOOGLE MODELS FILTERING REPORT ===
-Generated: 2026-11-20 11:38:55 IST
+Generated: 2026-11-21 11:29:36 IST
 
 === SUMMARY ===
-Total Input Models: 66
+Total Input Models: 65
 Models Included: 33
-Models Excluded: 33
-Filtering Success Rate: 50.0%
+Models Excluded: 32
+Filtering Success Rate: 50.8%
 
 === EXCLUDED MODELS ===
  1. gemini-2.5-flash-preview-tts
@@ -32,15 +32,14 @@ Filtering Success Rate: 50.0%
 22. antigravity-preview-latest
 23. deep-research-max-preview-04-2026
 24. deep-research-preview-04-2026
-25. deep-research-pro-preview-12-2025
-26. gemini-embedding-2-preview
-27. gemini-2.5-flash-native-audio-latest
-28. gemini-2.5-flash-native-audio-preview-09-2025
-29. gemini-2.5-flash-native-audio-preview-12-2025
-30. gemini-3.1-flash-live-preview
-31. gemini-robotics-er-2-streaming-preview
-32. gemini-3.5-live-translate-preview
-33. lyria-realtime-exp
+25. gemini-embedding-2-preview
+26. gemini-2.5-flash-native-audio-latest
+27. gemini-2.5-flash-native-audio-preview-09-2025
+28. gemini-2.5-flash-native-audio-preview-12-2025
+29. gemini-3.1-flash-live-preview
+30. gemini-robotics-er-2-streaming-preview
+31. gemini-3.5-live-translate-preview
+32. lyria-realtime-exp
 
 === INCLUDED MODELS ===
  1. gemini-2.5-flash
@@ -78,7 +77,7 @@ Filtering Success Rate: 50.0%
 33. gemini-decision-1
 
 === EXCLUSION BREAKDOWN ===
-29 models: Experimental/Preview model - production-ready models only
+28 models: Experimental/Preview model - production-ready models only
  1 models: Preview model - gemini-2.5-flash-native-audio-preview-09-2025 (https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-live). Note: preview tag not mentioned in API response.
  1 models: Preview model - gemini-flash-latest is a preview pointer per Sep 25 2025 Google update (https://developers.googleblog.com/en/continuing-to-bring-you-our-latest-models-with-an-improved-gemini-2-5-flash-and-flash-lite-release/). Note: preview tag not mentioned in API response.
  1 models: Preview model - gemini-flash-lite-latest is a preview pointer per Sep 25 2025 Google update (https://developers.googleblog.com/en/continuing-to-bring-you-our-latest-models-with-an-improved-gemini-2-5-flash-and-flash-lite-release/). Note: preview tag not mentioned in API response.
