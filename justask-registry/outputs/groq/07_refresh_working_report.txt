@@ -1,28 +1,28 @@
 Supabase Groq Working Version Refresh Report
-Last Run: 2026-11-21 06:01:01
+Last Run: 2026-11-22 05:37:10
 ============================================================
 
-2026-11-21 06:01:01,149 - INFO - ============================================================
-2026-11-21 06:01:01,149 - INFO - SUPABASE GROQ DATA REFRESH STARTED
-2026-11-21 06:01:01,149 - INFO - ============================================================
-2026-11-21 06:01:02,609 - INFO - ✅ Database connection established
-2026-11-21 06:01:02,609 - INFO -    Target table: justask."10_free-models-staging"
-2026-11-21 06:01:03,084 - INFO - 📁 Loading finalized JSON data from /home/runner/work/JustAsk/JustAsk/justask-registry/outputs/groq/06_normalized_models.json...
-2026-11-21 06:01:03,084 - INFO - ✅ Loaded 6 valid Groq models from JSON
-2026-11-21 06:01:03,084 - INFO - 🧹 Preparing data for database insertion...
-2026-11-21 06:01:03,084 - INFO - ✅ Prepared 6 models for insertion
-2026-11-21 06:01:03,084 - INFO - 📤 Atomically replacing 6 -> 6 Groq rows in justask."10_free-models-staging"...
-2026-11-21 06:01:04,035 - INFO - ✅ Replaced and verified 6 models (committed)
-2026-11-21 06:01:04,035 - INFO - ============================================================
-2026-11-21 06:01:04,035 - INFO - 🎉 SUPABASE GROQ DATA REFRESH COMPLETED SUCCESSFULLY
-2026-11-21 06:01:04,035 - INFO - ============================================================
-2026-11-21 06:01:04,035 - INFO - 📊 Summary:
-2026-11-21 06:01:04,035 - INFO -    • Initial Groq records: 6
-2026-11-21 06:01:04,035 - INFO -    • Records deleted: 6
-2026-11-21 06:01:04,035 - INFO -    • New records inserted: 6
-2026-11-21 06:01:04,035 - INFO -    • Final record count: 6
-2026-11-21 06:01:04,035 - INFO -    • Model-AA mappings: Refreshed for Groq
-2026-11-21 06:01:04,035 - INFO -    • Processing time: 0:00:02.886432
-2026-11-21 06:01:04,035 - INFO -    • Report file: /home/runner/work/JustAsk/JustAsk/justask-registry/outputs/groq/07_refresh_working_report.txt
-2026-11-21 06:01:04,035 - INFO - ============================================================
-2026-11-21 06:01:04,036 - INFO - Database connection closed
+2026-11-22 05:37:10,790 - INFO - ============================================================
+2026-11-22 05:37:10,790 - INFO - SUPABASE GROQ DATA REFRESH STARTED
+2026-11-22 05:37:10,790 - INFO - ============================================================
+2026-11-22 05:37:12,221 - INFO - ✅ Database connection established
+2026-11-22 05:37:12,221 - INFO -    Target table: justask."10_free-models-staging"
+2026-11-22 05:37:12,761 - INFO - 📁 Loading finalized JSON data from /home/runner/work/JustAsk/JustAsk/justask-registry/outputs/groq/06_normalized_models.json...
+2026-11-22 05:37:12,762 - INFO - ✅ Loaded 6 valid Groq models from JSON
+2026-11-22 05:37:12,762 - INFO - 🧹 Preparing data for database insertion...
+2026-11-22 05:37:12,762 - INFO - ✅ Prepared 6 models for insertion
+2026-11-22 05:37:12,762 - INFO - 📤 Atomically replacing 6 -> 6 Groq rows in justask."10_free-models-staging"...
+2026-11-22 05:37:13,697 - INFO - ✅ Replaced and verified 6 models (committed)
+2026-11-22 05:37:13,697 - INFO - ============================================================
+2026-11-22 05:37:13,697 - INFO - 🎉 SUPABASE GROQ DATA REFRESH COMPLETED SUCCESSFULLY
+2026-11-22 05:37:13,697 - INFO - ============================================================
+2026-11-22 05:37:13,697 - INFO - 📊 Summary:
+2026-11-22 05:37:13,697 - INFO -    • Initial Groq records: 6
+2026-11-22 05:37:13,697 - INFO -    • Records deleted: 6
+2026-11-22 05:37:13,697 - INFO -    • New records inserted: 6
+2026-11-22 05:37:13,697 - INFO -    • Final record count: 6
+2026-11-22 05:37:13,697 - INFO -    • Model-AA mappings: Refreshed for Groq
+2026-11-22 05:37:13,697 - INFO -    • Processing time: 0:00:02.906657
+2026-11-22 05:37:13,697 - INFO -    • Report file: /home/runner/work/JustAsk/JustAsk/justask-registry/outputs/groq/07_refresh_working_report.txt
+2026-11-22 05:37:13,697 - INFO - ============================================================
+2026-11-22 05:37:13,697 - INFO - Database connection closed
