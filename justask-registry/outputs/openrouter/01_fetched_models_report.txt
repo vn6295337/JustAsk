@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-11-22 11:07:44 IST
+Generated: 2026-11-23 11:48:52 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 441
+  Total models: 442
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI             :  89 models
@@ -512,6 +512,9 @@ PROVIDER BREAKDOWN (Descending Order):
   IBM                :   1 models
     - granite-4.2-8b
 
+  Dots Studio        :   1 models
+    - dots-3-note-preview:free
+
   xAI                :   1 models
     - grok-latest
 
@@ -539,4 +542,4 @@ PROVIDER BREAKDOWN (Descending Order):
   OpenRouter         :   1 models
     - fusion
 
-Total providers: 55
+Total providers: 56
