@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-11-24 14:24:33 IST
+Generated: 2026-11-25 13:00:27 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 438
+  Total models: 437
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI             :  89 models
@@ -246,28 +246,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - glm-flash-latest
     - glm-latest
 
-  Mistral            :  20 models
-    - codestral-2508
-    - devstral-2512
-    - ministral-14b-2512
-    - ministral-3b-2512
-    - ministral-8b-2512
-    - mistral-large-2512
-    - mistral-large-4-0
-    - mistral-medium-3
-    - mistral-medium-3-5
-    - mistral-medium-3-5:batch
-    - mistral-medium-3.1
-    - mistral-nemo
-    - mistral-saba
-    - mistral-small-24b-instruct-2501
-    - mistral-small-2603
-    - mistral-small-3.1-24b-instruct
-    - mistral-small-3.2-24b-instruct
-    - mixtral-8x22b-instruct
-    - pixtral-large-2502
-    - voxtral-small-24b-2507
-
   DeepSeek           :  20 models
     - deepseek-chat
     - deepseek-chat-v3-0324
@@ -289,6 +267,26 @@ PROVIDER BREAKDOWN (Descending Order):
     - deepseek-v4.1-flash-1017
     - deepseek-v4.1-flash-1017:batch
     - deepseek-v4.1-flash:batch
+
+  Mistral            :  18 models
+    - codestral-2508
+    - devstral-2512
+    - ministral-14b-2512
+    - ministral-3b-2512
+    - ministral-8b-2512
+    - mistral-large-2512
+    - mistral-large-4-0
+    - mistral-medium-3-5
+    - mistral-medium-3-5:batch
+    - mistral-nemo
+    - mistral-saba
+    - mistral-small-24b-instruct-2501
+    - mistral-small-2603
+    - mistral-small-3.1-24b-instruct
+    - mistral-small-3.2-24b-instruct
+    - mixtral-8x22b-instruct
+    - pixtral-large-2502
+    - voxtral-small-24b-2507
 
   Meta               :  15 models
     - llama-3.1-70b-instruct
@@ -400,9 +398,15 @@ PROVIDER BREAKDOWN (Descending Order):
     - sonar-pro-search
     - sonar-reasoning-pro
 
+  Upstage            :   4 models
+    - solar-mini-4-5
+    - solar-mini4
+    - solar-pro-4-contributor
+    - solar-pro4
+
   Xiaomi             :   4 models
-    - mimo-v2.5
     - mimo-v2.6-flash
+    - mimo-v2.6-flash-mopd
     - mimo-v2.6-pro
     - mimo-v2.6-pro-ultraspeed
 
@@ -465,10 +469,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - perceptron-mk1
     - perceptron-mk1.5
 
-  Upstage            :   2 models
-    - solar-mini4
-    - solar-pro4
-
   Inference.net      :   2 models
     - schematron-v2-small
     - schematron-v2-turbo
@@ -508,9 +508,6 @@ PROVIDER BREAKDOWN (Descending Order):
   IBM                :   1 models
     - granite-4.2-8b
 
-  Dots Studio        :   1 models
-    - dots-3-note-preview:free
-
   xAI                :   1 models
     - grok-latest
 
@@ -538,4 +535,4 @@ PROVIDER BREAKDOWN (Descending Order):
   OpenRouter         :   1 models
     - fusion
 
-Total providers: 56
+Total providers: 55
