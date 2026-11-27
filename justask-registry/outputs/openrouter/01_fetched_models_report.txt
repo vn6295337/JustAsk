@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-11-26 12:48:48 IST
+Generated: 2026-11-27 12:45:14 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 438
+  Total models: 441
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI             :  89 models
@@ -322,6 +322,18 @@ PROVIDER BREAKDOWN (Descending Order):
     - nemotron-3.5-super-vl:free
     - switchyard
 
+  MoonshotAI         :  10 models
+    - kimi-k2
+    - kimi-k2-0905
+    - kimi-k2.5
+    - kimi-k2.6
+    - kimi-k2.7-code
+    - kimi-k3
+    - kimi-k3.1-pro
+    - kimi-k3.1-pro:batch
+    - kimi-k3:batch
+    - kimi-latest
+
   SpaceXSI           :   9 models
     - grok-4.20
     - grok-4.20-multi-agent
@@ -333,16 +345,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - grok-4.7
     - grok-4.7:batch
 
-  MoonshotAI         :   8 models
-    - kimi-k2.5
-    - kimi-k2.6
-    - kimi-k2.7-code
-    - kimi-k3
-    - kimi-k3.1-pro
-    - kimi-k3.1-pro:batch
-    - kimi-k3:batch
-    - kimi-latest
-
   Tencent            :   7 models
     - hy-mt2-1.8b
     - hy-mt2-30b-a3b
@@ -351,6 +353,14 @@ PROVIDER BREAKDOWN (Descending Order):
     - hy4
     - hy4-flash
     - hy4-preview
+
+  inclusionAI        :   6 models
+    - ling-3.0-flash
+    - ling-3.0-flash-vl
+    - ling-3.0-tiny
+    - ling-3.1-flash
+    - ling-3.2-flash:free
+    - lingsante-3.1-air-vl
 
   AionLabs           :   6 models
     - aion-2.0
@@ -366,13 +376,6 @@ PROVIDER BREAKDOWN (Descending Order):
     - inkling-2-small
     - inkling-small
     - inkling-small:batch
-
-  inclusionAI        :   5 models
-    - ling-3.0-flash
-    - ling-3.0-flash-vl
-    - ling-3.0-tiny
-    - ling-3.1-flash
-    - ling-3.2-flash:free
 
   MiniMax            :   5 models
     - minimax-m2.5
