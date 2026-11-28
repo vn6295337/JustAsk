@@ -1,6 +1,6 @@
 ================================================================================
 CREATED DATABASE SCHEMA - DATA QUALITY REPORT
-Generated: 2026-11-27 12:45:28 IST
+Generated: 2026-11-28 12:18:01 IST
 ================================================================================
 
 DATA QUALITY ISSUES:
@@ -9,24 +9,22 @@ DATA QUALITY ISSUES:
 MISSING OR EMPTY VALUES:
 ------------------------------
 
-LICENSE INFO TEXT (10 models):
+LICENSE INFO TEXT (9 models):
   - Free Models Router
   - Gemma 4 26B A4b IT 20260403
   - Gemma 4 31B IT 20260402
   - LFM3-1.7B
-  - Ling 3.2 Flash
   - Nemotron 3 Nano Omni
   - Nemotron 3 Ultra
   - Nemotron 3.5 Lightning
   - Nemotron 3.5 Super VL
   - Particle-1
 
-LICENSE INFO URL (10 models):
+LICENSE INFO URL (9 models):
   - Free Models Router
   - Gemma 4 26B A4b IT 20260403
   - Gemma 4 31B IT 20260402
   - LFM3-1.7B
-  - Ling 3.2 Flash
   - Nemotron 3 Nano Omni
   - Nemotron 3 Ultra
   - Nemotron 3.5 Lightning
@@ -44,23 +42,18 @@ LICENSE URL (2 models):
 UNKNOWN OR 'NOT FOUND' VALUES:
 ------------------------------
 
-MODEL PROVIDER (3 models):
+MODEL PROVIDER (2 models):
   - Flint
-  - Ling 3.2 Flash
   - Particle-1
-
-LICENSE NAME (1 models):
-  - Ling 3.2 Flash
 
 DATA QUALITY SUMMARY:
 ------------------------------
-Total models: 11
-Missing license info text: 10 (90.9%)
-Missing license info url: 10 (90.9%)
-Missing license name: 2 (18.2%)
-Missing license url: 2 (18.2%)
-Unknown model provider: 3 (27.3%)
-Unknown license name: 1 (9.1%)
+Total models: 10
+Missing license info text: 9 (90.0%)
+Missing license info url: 9 (90.0%)
+Missing license name: 2 (20.0%)
+Missing license url: 2 (20.0%)
+Unknown model provider: 2 (20.0%)
 
 ================================================================================
 
@@ -157,17 +150,7 @@ COMPLETE MODEL RECORDS:
      Rate Limits        : 20 requests/min 50/day
      Provider API Access: https://openrouter.ai/settings/keys
 
- 10. Ling 3.2 Flash
-     Provider           : Unknown (Unknown)
-     Modalities         : Text, Image → Text
-     License            : UNKNOWN
-     License Info       : 
-     License URL        : Unknown
-     Official URL       : Unknown
-     Rate Limits        : 20 requests/min 50/day
-     Provider API Access: https://openrouter.ai/settings/keys
-
- 11. Particle-1
+ 10. Particle-1
      Provider           : Unknown (Unknown)
      Modalities         : Text, Image → Text
      License            : 

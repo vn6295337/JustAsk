@@ -1,16 +1,16 @@
 ================================================================================
 FINAL CONSOLIDATED LICENSE LIST REPORT
-Generated: 2026-11-27 12:45:27 IST
+Generated: 2026-11-28 12:18:00 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 17
+  Total models        : 16
   Input sources       : 4 pipeline stage files
   Processor           : step_13_final_licenses.py
   Output              : 13_final_licenses.json
 
 SOURCE CATEGORY DISTRIBUTION:
-  Custom: 6 models
+  Custom: 5 models
   Google: 2 models
   Opensource: 1 models
   Proprietary: 8 models
@@ -26,10 +26,9 @@ FINAL LICENSE DISTRIBUTION:
    1 models: LFM1.0
    1 models: Modified MIT
    1 models: NVIDIA
-   1 models: UNKNOWN
    1 models: Upstage
 
-Total unique license types: 12
+Total unique license types: 11
 
 DETAILED FINAL MODEL INFORMATION:
 ================================================================================
@@ -109,22 +108,7 @@ MODEL 5: nvidia/nemotron-3.5-super-vl-20261015
 
 ================================================================================
 
-MODEL 6: inclusionai/ling-3.2-flash-20261113
---------------------------------------------------
-  ID: inclusionai/ling-3.2-flash:free
-  Original Name: inclusionAI: Ling 3.2 Flash (free)
-  HuggingFace ID: inclusionAI/Ling-3.2-flash
-  Canonical Slug: inclusionai/ling-3.2-flash-20261113
-  Clean Model Name: Ling 3.2 Flash
-  License Info Text: 
-  License Info URL: 
-  License Name: UNKNOWN
-  License URL: Unknown
-  Source Category: custom
-
-================================================================================
-
-MODEL 7: google/gemma-4-26b-a4b-it-20260403
+MODEL 6: google/gemma-4-26b-a4b-it-20260403
 --------------------------------------------------
   ID: google/gemma-4-26b-a4b-it:free
   Original Name: Google: Gemma 4 26B A4B  (free)
@@ -139,7 +123,7 @@ MODEL 7: google/gemma-4-26b-a4b-it-20260403
 
 ================================================================================
 
-MODEL 8: google/gemma-4-31b-it-20260402
+MODEL 7: google/gemma-4-31b-it-20260402
 --------------------------------------------------
   ID: google/gemma-4-31b-it:free
   Original Name: Google: Gemma 4 31B (free)
@@ -154,7 +138,7 @@ MODEL 8: google/gemma-4-31b-it-20260402
 
 ================================================================================
 
-MODEL 9: recursive/flint-v1.0-20261021
+MODEL 8: recursive/flint-v1.0-20261021
 --------------------------------------------------
   ID: recursive/flint-v1.0:free
   Original Name: Recursive: Flint (free)
@@ -169,7 +153,7 @@ MODEL 9: recursive/flint-v1.0-20261021
 
 ================================================================================
 
-MODEL 10: amazon/nova-2-lite-v1
+MODEL 9: amazon/nova-2-lite-v1
 --------------------------------------------------
   ID: amazon/nova-2-lite-v1:free
   Original Name: Amazon/Nova 2 Lite V1
@@ -184,7 +168,7 @@ MODEL 10: amazon/nova-2-lite-v1
 
 ================================================================================
 
-MODEL 11: kwaipilot/kat-coder-pro-v1
+MODEL 10: kwaipilot/kat-coder-pro-v1
 --------------------------------------------------
   ID: kwaipilot/kat-coder-pro-v1:free
   Original Name: Kwaipilot/Kat Coder Pro V1
@@ -199,7 +183,7 @@ MODEL 11: kwaipilot/kat-coder-pro-v1
 
 ================================================================================
 
-MODEL 12: mistralai/devstral-2512
+MODEL 11: mistralai/devstral-2512
 --------------------------------------------------
   ID: mistralai/devstral-2512:free
   Original Name: Mistralai/Devstral 2512
@@ -214,7 +198,7 @@ MODEL 12: mistralai/devstral-2512
 
 ================================================================================
 
-MODEL 13: qwen/qwen3.6-plus
+MODEL 12: qwen/qwen3.6-plus
 --------------------------------------------------
   ID: qwen/qwen3.6-plus:free
   Original Name: Qwen/Qwen3.6 Plus
@@ -229,7 +213,7 @@ MODEL 13: qwen/qwen3.6-plus
 
 ================================================================================
 
-MODEL 14: qwen/qwen3.6-plus-04-02
+MODEL 13: qwen/qwen3.6-plus-04-02
 --------------------------------------------------
   ID: qwen/qwen3.6-plus-04-02:free
   Original Name: Qwen/Qwen3.6 Plus 04 02
@@ -244,7 +228,7 @@ MODEL 14: qwen/qwen3.6-plus-04-02
 
 ================================================================================
 
-MODEL 15: upstage/solar-pro-3
+MODEL 14: upstage/solar-pro-3
 --------------------------------------------------
   ID: upstage/solar-pro-3:free
   Original Name: Upstage/Solar Pro 3
@@ -259,7 +243,7 @@ MODEL 15: upstage/solar-pro-3
 
 ================================================================================
 
-MODEL 16: x-ai/grok-4-fast
+MODEL 15: x-ai/grok-4-fast
 --------------------------------------------------
   ID: x-ai/grok-4-fast:free
   Original Name: X Ai/Grok 4 Fast
@@ -274,7 +258,7 @@ MODEL 16: x-ai/grok-4-fast
 
 ================================================================================
 
-MODEL 17: x-ai/grok-4.1-fast
+MODEL 16: x-ai/grok-4.1-fast
 --------------------------------------------------
   ID: x-ai/grok-4.1-fast:free
   Original Name: X Ai/Grok 4.1 Fast

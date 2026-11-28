@@ -1,10 +1,10 @@
 ================================================================================
 STANDARDIZED MODALITIES REPORT
-Generated: 2026-11-27 12:45:28 IST
+Generated: 2026-11-28 12:18:00 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 11
+  Total models : 10
   Input        : 14_raw_modalities.json
   Config       : modality_standardization.json
   Processor    : step_15_standardize_modalities.py
@@ -12,28 +12,28 @@ SUMMARY:
 
 STANDARDIZED INPUT MODALITIES DISTRIBUTION:
    4 models: Text
-   3 models: Text, Image
    3 models: Text, Image, Video
+   2 models: Text, Image
    1 models: Text, Image, Audio, Video
 
 Total unique input types: 4
 
 STANDARDIZED OUTPUT MODALITIES DISTRIBUTION:
-  11 models: Text
+  10 models: Text
 
 Total unique output types: 1
 
 STANDARDIZED MODALITY COMBINATIONS (INPUT → OUTPUT):
    4 models: Text → Text
-   3 models: Text, Image → Text
    3 models: Text, Image, Video → Text
+   2 models: Text, Image → Text
    1 models: Text, Image, Audio, Video → Text
 
 Total unique combinations: 4
 
 STANDARDIZATION IMPACT ANALYSIS:
-  Input modalities changed: 11 models
-  Output modalities changed: 11 models
+  Input modalities changed: 10 models
+  Output modalities changed: 10 models
   Input modalities unchanged: 0 models
   Output modalities unchanged: 0 models
 
@@ -110,21 +110,7 @@ MODEL 5: openrouter/free
 
 ================================================================================
 
-MODEL 6: inclusionai/ling-3.2-flash-20261113
---------------------------------------------------
-  ID: inclusionai/ling-3.2-flash:free
-  Original Name: inclusionAI: Ling 3.2 Flash (free)
-  HuggingFace ID: inclusionAI/Ling-3.2-flash
-  Canonical Slug: inclusionai/ling-3.2-flash-20261113
-  Clean Model Name: Ling 3.2 Flash
-  Raw Input Modalities: text, image
-  Raw Output Modalities: text
-  Standardized Input Modalities: Text, Image
-  Standardized Output Modalities: Text
-
-================================================================================
-
-MODEL 7: particle-ai/particle-1-20261027
+MODEL 6: particle-ai/particle-1-20261027
 --------------------------------------------------
   ID: particle-ai/particle-1:free
   Original Name: Particle AI: Particle-1 (free)
@@ -138,7 +124,7 @@ MODEL 7: particle-ai/particle-1-20261027
 
 ================================================================================
 
-MODEL 8: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 7: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Original Name: NVIDIA: Nemotron 3 Nano Omni (free)
@@ -152,7 +138,7 @@ MODEL 8: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 
 ================================================================================
 
-MODEL 9: google/gemma-4-26b-a4b-it-20260403
+MODEL 8: google/gemma-4-26b-a4b-it-20260403
 --------------------------------------------------
   ID: google/gemma-4-26b-a4b-it:free
   Original Name: Google: Gemma 4 26B A4B  (free)
@@ -166,7 +152,7 @@ MODEL 9: google/gemma-4-26b-a4b-it-20260403
 
 ================================================================================
 
-MODEL 10: google/gemma-4-31b-it-20260402
+MODEL 9: google/gemma-4-31b-it-20260402
 --------------------------------------------------
   ID: google/gemma-4-31b-it:free
   Original Name: Google: Gemma 4 31B (free)
@@ -180,7 +166,7 @@ MODEL 10: google/gemma-4-31b-it-20260402
 
 ================================================================================
 
-MODEL 11: nvidia/nemotron-3.5-super-vl-20261015
+MODEL 10: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
   ID: nvidia/nemotron-3.5-super-vl:free
   Original Name: NVIDIA: Nemotron 3.5 Super VL (free)

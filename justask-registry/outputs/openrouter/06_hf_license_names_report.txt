@@ -1,36 +1,26 @@
 ================================================================================
 OTHER MODEL LICENSE NAME EXTRACTIONS REPORT
-Generated: 2026-11-27 12:45:22 IST
+Generated: 2026-11-28 12:17:55 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 7
+  Total models : 6
   Input        : 05_hf_license_urls.json
   Processor    : step_06_fetch_hf_license_names.py
   Output       : 06_hf_license_names.json
 
 LICENSE DISTRIBUTION:
-  Unknown: 1
   apache-2.0: 1
   lfm1.0: 1
   nvidia-open-model-agreement: 1
   openmdw-1.1: 3
 
-Total license types: 5
+Total license types: 4
 
 DETAILED MODEL EXTRACTION RESULTS:
 ================================================================================
 
-MODEL 1: inclusionai/ling-3.2-flash-20261113
---------------------------------------------------
-  ID               : inclusionai/ling-3.2-flash:free
-  Canonical Slug   : inclusionai/ling-3.2-flash-20261113
-  HuggingFace ID   : inclusionAI/Ling-3.2-flash
-  Extracted License: Unknown
-
-================================================================================
-
-MODEL 2: liquid/lfm-3-1.7b-20261106
+MODEL 1: liquid/lfm-3-1.7b-20261106
 --------------------------------------------------
   ID               : liquid/lfm-3-1.7b:free
   Canonical Slug   : liquid/lfm-3-1.7b-20261106
@@ -39,7 +29,7 @@ MODEL 2: liquid/lfm-3-1.7b-20261106
 
 ================================================================================
 
-MODEL 3: recursive/flint-v1.0-20261021
+MODEL 2: recursive/flint-v1.0-20261021
 --------------------------------------------------
   ID               : recursive/flint-v1.0:free
   Canonical Slug   : recursive/flint-v1.0-20261021
@@ -48,7 +38,7 @@ MODEL 3: recursive/flint-v1.0-20261021
 
 ================================================================================
 
-MODEL 4: nvidia/nemotron-3.5-super-vl-20261015
+MODEL 3: nvidia/nemotron-3.5-super-vl-20261015
 --------------------------------------------------
   ID               : nvidia/nemotron-3.5-super-vl:free
   Canonical Slug   : nvidia/nemotron-3.5-super-vl-20261015
@@ -57,7 +47,7 @@ MODEL 4: nvidia/nemotron-3.5-super-vl-20261015
 
 ================================================================================
 
-MODEL 5: nvidia/nemotron-3.5-lightning-20260807
+MODEL 4: nvidia/nemotron-3.5-lightning-20260807
 --------------------------------------------------
   ID               : nvidia/nemotron-3.5-lightning:free
   Canonical Slug   : nvidia/nemotron-3.5-lightning-20260807
@@ -66,7 +56,7 @@ MODEL 5: nvidia/nemotron-3.5-lightning-20260807
 
 ================================================================================
 
-MODEL 6: nvidia/nemotron-3-ultra-550b-a55b-20260604
+MODEL 5: nvidia/nemotron-3-ultra-550b-a55b-20260604
 --------------------------------------------------
   ID               : nvidia/nemotron-3-ultra-550b-a55b:free
   Canonical Slug   : nvidia/nemotron-3-ultra-550b-a55b-20260604
@@ -75,7 +65,7 @@ MODEL 6: nvidia/nemotron-3-ultra-550b-a55b-20260604
 
 ================================================================================
 
-MODEL 7: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
+MODEL 6: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428
 --------------------------------------------------
   ID               : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
   Canonical Slug   : nvidia/nemotron-3-nano-omni-30b-a3b-reasoning-20260428

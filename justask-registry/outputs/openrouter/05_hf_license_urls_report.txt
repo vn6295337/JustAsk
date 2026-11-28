@@ -1,10 +1,10 @@
 ================================================================================
 OTHER LICENSE INFO URLS REPORT
-Generated: 2026-11-27 12:45:18 IST
+Generated: 2026-11-28 12:17:51 IST
 ================================================================================
 
 SUMMARY:
-  Total models : 7
+  Total models : 6
   Input        : 02_filtered_models.json
   Processor    : step_05_fetch_hf_license_urls.py
   Output       : 05_hf_license_urls.json
@@ -12,9 +12,8 @@ SUMMARY:
 LICENSE INFO URL BREAKDOWN:
    3 models: LICENSE file
    3 models: README.md file
-   1 models: Unknown/Inaccessible
 
-Total categories: 3
+Total categories: 2
 
 DETAILED MODEL LICENSE INFO URLS:
 ================================================================================
@@ -70,13 +69,4 @@ MODEL 6: nvidia/nemotron-3.5-super-vl-20261015
   Canonical Slug  : nvidia/nemotron-3.5-super-vl-20261015
   HuggingFace ID  : nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16
   License Info URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16/blob/main/README.md
-
-================================================================================
-
-MODEL 7: inclusionai/ling-3.2-flash-20261113
---------------------------------------------------
-  ID              : inclusionai/ling-3.2-flash:free
-  Canonical Slug  : inclusionai/ling-3.2-flash-20261113
-  HuggingFace ID  : inclusionAI/Ling-3.2-flash
-  License Info URL: Unknown
 

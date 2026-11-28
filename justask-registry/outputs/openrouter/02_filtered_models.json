@@ -1,74 +1,10 @@
 {
   "metadata": {
-    "generated_at": "2026-11-27 12:45:14 IST",
-    "total_models": 11,
+    "generated_at": "2026-11-28 12:17:46 IST",
+    "total_models": 10,
     "pipeline_stage": "B_filter_models"
   },
   "models": [
-    {
-      "id": "inclusionai/ling-3.2-flash:free",
-      "canonical_slug": "inclusionai/ling-3.2-flash-20261113",
-      "hugging_face_id": "inclusionAI/Ling-3.2-flash",
-      "name": "inclusionAI: Ling 3.2 Flash (free)",
-      "created": 1794591958,
-      "description": "Ling 3.2 Flash is a hybrid reasoning model from inclusionAI that accepts text and image input, with a 1M-token context window and up to 200 images per request. Thinking can...",
-      "context_length": 1048576,
-      "architecture": {
-        "modality": "text+image->text",
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tokenizer": "Other",
-        "instruct_type": null
-      },
-      "pricing": {
-        "prompt": "0",
-        "completion": "0"
-      },
-      "top_provider": {
-        "context_length": 1048576,
-        "max_completion_tokens": 262144,
-        "is_moderated": false
-      },
-      "per_request_limits": null,
-      "supported_parameters": [
-        "frequency_penalty",
-        "include_reasoning",
-        "max_tokens",
-        "presence_penalty",
-        "reasoning",
-        "response_format",
-        "seed",
-        "stop",
-        "structured_outputs",
-        "temperature",
-        "tool_choice",
-        "tools",
-        "top_k",
-        "top_p"
-      ],
-      "default_parameters": {},
-      "supported_voices": null,
-      "knowledge_cutoff": null,
-      "expiration_date": null,
-      "links": {
-        "details": "/api/v1/models/inclusionai/ling-3.2-flash-20261113/endpoints"
-      },
-      "endpoints": [
-        "/api/v1/chat/completions",
-        "/api/v1/completions",
-        "/api/v1/messages",
-        "/api/v1/responses"
-      ],
-      "reasoning": {
-        "mandatory": false,
-        "default_enabled": true
-      }
-    },
     {
       "id": "liquid/lfm-3-1.7b:free",
       "canonical_slug": "liquid/lfm-3-1.7b-20261106",
@@ -357,37 +293,37 @@
           {
             "arena": "agents",
             "category": "pdf",
-            "elo": 1070,
+            "elo": 1074,
             "win_rate": 34.7,
             "rank": 47
           },
           {
             "arena": "models",
             "category": "3d",
-            "elo": 1094,
-            "win_rate": 28.9,
-            "rank": 90
+            "elo": 1092,
+            "win_rate": 28.7,
+            "rank": 93
           },
           {
             "arena": "models",
             "category": "codecategories",
             "elo": 1190,
-            "win_rate": 32,
+            "win_rate": 31.9,
             "rank": 94
           },
           {
             "arena": "models",
             "category": "dataviz",
-            "elo": 1090,
-            "win_rate": 27.1,
-            "rank": 111
+            "elo": 1097,
+            "win_rate": 27.5,
+            "rank": 108
           },
           {
             "arena": "models",
             "category": "gamedev",
-            "elo": 1066,
-            "win_rate": 27,
-            "rank": 108
+            "elo": 1064,
+            "win_rate": 26.8,
+            "rank": 111
           },
           {
             "arena": "models",
@@ -399,7 +335,7 @@
           {
             "arena": "models",
             "category": "website",
-            "elo": 1206,
+            "elo": 1207,
             "win_rate": 34.6,
             "rank": 92
           }
@@ -563,16 +499,16 @@
           {
             "arena": "agents",
             "category": "pdf",
-            "elo": 1105,
-            "win_rate": 35.5,
-            "rank": 44
+            "elo": 1114,
+            "win_rate": 36.5,
+            "rank": 43
           },
           {
             "arena": "models",
             "category": "3d",
             "elo": 1094,
             "win_rate": 37.8,
-            "rank": 91
+            "rank": 90
           },
           {
             "arena": "models",
@@ -599,7 +535,7 @@
             "arena": "models",
             "category": "gamedev",
             "elo": 1108,
-            "win_rate": 35.3,
+            "win_rate": 35.2,
             "rank": 92
           },
           {

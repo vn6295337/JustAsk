@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-11-27 12:45:27 IST",
-    "total_models": 17,
+    "generated_at": "2026-11-28 12:18:00 IST",
+    "total_models": 16,
     "pipeline_stage": "M_final_list_of_licenses"
   },
   "models": [
@@ -40,18 +40,6 @@
       "license_name": "GEMMA",
       "license_url": "https://ai.google.dev/gemma/terms",
       "source_category": "google"
-    },
-    {
-      "id": "inclusionai/ling-3.2-flash:free",
-      "canonical_slug": "inclusionai/ling-3.2-flash-20261113",
-      "original_name": "inclusionAI: Ling 3.2 Flash (free)",
-      "hugging_face_id": "inclusionAI/Ling-3.2-flash",
-      "clean_model_name": "Ling 3.2 Flash",
-      "license_info_text": "",
-      "license_info_url": "",
-      "license_name": "UNKNOWN",
-      "license_url": "Unknown",
-      "source_category": "custom"
     },
     {
       "id": "kwaipilot/kat-coder-pro-v1:free",

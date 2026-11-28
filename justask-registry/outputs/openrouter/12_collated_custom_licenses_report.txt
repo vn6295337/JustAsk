@@ -1,10 +1,10 @@
 ================================================================================
 COLLATED CUSTOM LICENSE INFORMATION REPORT
-Generated: 2026-11-27 12:45:27 IST
+Generated: 2026-11-28 12:17:59 IST
 ================================================================================
 
 SUMMARY:
-  Total models        : 6
+  Total models        : 5
   Input sources       : 10_custom_license_urls.json + 05_hf_license_urls.json
   Processor           : step_12_collate_custom.py
   Output              : 12_collated_custom_licenses.json
@@ -13,16 +13,14 @@ CUSTOM LICENSE DISTRIBUTION:
    3 models: OPENMDW-1.1
    1 models: LFM1.0
    1 models: NVIDIA
-   1 models: UNKNOWN
 
-Total unique license types: 4
+Total unique license types: 3
 
 LICENSE URL TYPE DISTRIBUTION:
    2 models: LICENSE file
    3 models: README.md file
-   1 models: Other
 
-Total URL types: 3
+Total URL types: 2
 
 DETAILED CUSTOM MODEL INFORMATION:
 ================================================================================
@@ -94,18 +92,4 @@ MODEL 5: nvidia/nemotron-3.5-super-vl-20261015
   License Info URL: 
   License Name: OPENMDW-1.1
   License URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16/blob/main/README.md
-
-================================================================================
-
-MODEL 6: inclusionai/ling-3.2-flash-20261113
---------------------------------------------------
-  ID: inclusionai/ling-3.2-flash:free
-  Original Name: inclusionAI: Ling 3.2 Flash (free)
-  HuggingFace ID: inclusionAI/Ling-3.2-flash
-  Canonical Slug: inclusionai/ling-3.2-flash-20261113
-  Clean Model Name: Ling 3.2 Flash
-  License Info Text: 
-  License Info URL: 
-  License Name: UNKNOWN
-  License URL: Unknown
 

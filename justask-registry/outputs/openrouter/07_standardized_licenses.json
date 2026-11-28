@@ -1,18 +1,10 @@
 {
   "metadata": {
-    "generated_at": "2026-11-27 12:45:23 IST",
-    "total_models": 7,
+    "generated_at": "2026-11-28 12:17:55 IST",
+    "total_models": 6,
     "pipeline_stage": "G_standardize_other_license_names_from_hf"
   },
   "models": [
-    {
-      "id": "inclusionai/ling-3.2-flash:free",
-      "canonical_slug": "inclusionai/ling-3.2-flash-20261113",
-      "name": "inclusionAI: Ling 3.2 Flash (free)",
-      "hugging_face_id": "inclusionAI/Ling-3.2-flash",
-      "raw_extracted_license": "Unknown",
-      "standardized_license_name": "UNKNOWN"
-    },
     {
       "id": "liquid/lfm-3-1.7b:free",
       "canonical_slug": "liquid/lfm-3-1.7b-20261106",

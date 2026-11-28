@@ -1,10 +1,10 @@
 ================================================================================
 OPENROUTER API MODELS REPORT
-Generated: 2026-11-27 12:45:14 IST
+Generated: 2026-11-28 12:17:46 IST
 ================================================================================
 
 SUMMARY:
-  Total models: 441
+  Total models: 440
 
 PROVIDER BREAKDOWN (Descending Order):
   OpenAI             :  89 models
@@ -151,12 +151,11 @@ PROVIDER BREAKDOWN (Descending Order):
     - lyria-3-clip-preview
     - lyria-3-pro-preview
 
-  Qwen               :  41 models
+  Qwen               :  40 models
     - qwen-plus
     - qwen2.5-vl-72b-instruct
     - qwen3-14b
     - qwen3-235b-a22b-2507
-    - qwen3-235b-a22b-thinking-2507
     - qwen3-30b-a3b
     - qwen3-30b-a3b-instruct-2507
     - qwen3-32b
@@ -359,7 +358,7 @@ PROVIDER BREAKDOWN (Descending Order):
     - ling-3.0-flash-vl
     - ling-3.0-tiny
     - ling-3.1-flash
-    - ling-3.2-flash:free
+    - ling-3.2-flash
     - lingsante-3.1-air-vl
 
   AionLabs           :   6 models

@@ -1,34 +1,34 @@
 ================================================================================
 OPENROUTER MODELS SEQUENTIAL FILTER REPORT
-Generated: 2026-11-27 12:45:14 IST
+Generated: 2026-11-28 12:17:46 IST
 ================================================================================
 
 SEQUENTIAL FILTERING SUMMARY:
-  Total models processed: 441
-  Models passed all filters: 11
+  Total models processed: 440
+  Models passed all filters: 10
   Models excluded: 430
-  Success rate: 2.5%
+  Success rate: 2.3%
 
 STEP-BY-STEP FILTERING BREAKDOWN:
   Step 1 - Free Pricing Filter:
-    Input: 441 models
+    Input: 440 models
     Excluded: 427 models (non-free pricing)
-    Remaining: 14 models
+    Remaining: 13 models
 
   Step 2 - Billing Description Filter:
-    Input: 14 models
+    Input: 13 models
     Excluded: 0 models (billing requirements in description)
-    Remaining: 14 models
+    Remaining: 13 models
 
   Step 3 - Keyword Filter:
-    Input: 14 models
+    Input: 13 models
     Excluded: 3 models (preview/experimental/beta)
-    Remaining: 11 models
+    Remaining: 10 models
 
   Step 4 - Deduplication Filter:
-    Input: 11 models
+    Input: 10 models
     Excluded: 0 models (duplicates after (free) suffix normalization)
-    Final: 11 models
+    Final: 10 models
 
 ================================================================================
 STEP 1 - FREE PRICING FILTER RESULTS
@@ -88,13 +88,6 @@ PROVIDER: GOOGLE (2 models)
       Pricing: prompt=0, completion=0, request=N/A
 
 
-PROVIDER: INCLUSIONAI (1 models)
---------------------------------------------------
-   1. inclusionAI: Ling 3.2 Flash (free)
-      ID: inclusionai/ling-3.2-flash:free
-      Pricing: prompt=0, completion=0, request=N/A
-
-
 PROVIDER: LIQUIDAI (1 models)
 --------------------------------------------------
    1. LiquidAI: LFM3-1.7B (free)
@@ -125,8 +118,8 @@ PROVIDER: OPENROUTER (1 models)
 
 ================================================================================
 FINAL SUMMARY:
-  Total providers: 7
-  Total models passed all filters: 11
+  Total providers: 6
+  Total models passed all filters: 10
   Models excluded by pricing: 427
   Models excluded by billing description: 0
   Models excluded by keywords: 3
